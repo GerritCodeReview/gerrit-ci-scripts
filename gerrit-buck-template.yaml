@@ -1,0 +1,37 @@
+- job-template:
+    name: '{name}-{branch}'
+    project-type: freestyle
+    description: "{name} {branch} branch build with BUCK\n"
+    logrotate:
+      numToKeep: 5
+      artifactNumToKeep: 5
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         recursive-submodules: true
+    triggers:
+      - pollscm: 'H/5 * * * *'
+
+    builders:
+      - shell:
+         !include-raw-escape gerrit-buck-build.sh
+    publishers:
+      - archive:
+         artifacts: 'buck-out/gen/*.war,buck-out/gen/plugins/*/*.jar,buck-out/gen/*api/*api.jar'
+         excludes: 'buck-out/gen/plugins/core*/**/*.jar'
+
+- project:
+    name: Gerrit
+    branch:
+      - master
+      - stable-2.10
+    jobs:
+      - '{name}-{branch}'
