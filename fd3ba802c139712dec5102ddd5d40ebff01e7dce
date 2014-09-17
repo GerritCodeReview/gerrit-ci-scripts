@@ -70,6 +70,30 @@
       "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "30bf43e0_77883064",
+        "filename": "gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2014-09-17T05:39:27Z",
+      "side": 1,
+      "message": "Because Buck sucks on file removal:\n\n  $ buck build gerrit\n  $ rm buck-out/gen/gerrit.war\n  $ buck build gerrit\n  $ ls buck-out/gen/gerrit.war \n  ls: cannot access buck-out/gen/gerrit.war: No such file or directory",
+      "parentUuid": "90e54f1e_f24a0870",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 2
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
