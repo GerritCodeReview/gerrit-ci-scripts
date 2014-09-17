@@ -118,6 +118,30 @@
       "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "30bf43e0_3792b892",
+        "filename": "gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2014-09-17T05:55:09Z",
+      "side": 1,
+      "message": "... True, but note that on current master the cache is located in different directory: ~/.gerritcodereview/buck-cache/cache. See .buckconfig\n\n  [cache]\n    mode \u003d dir\n    dir \u003d ~/.gerritcodereview/buck-cache/cache\n\nSo to be 100% sure, that there is no staled cache related problem we could better wipe it out:\n\n  rm -Rf ~/.gerritcodereview/buck-cache/cache",
+      "parentUuid": "90e54f1e_b2448063",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 2
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
