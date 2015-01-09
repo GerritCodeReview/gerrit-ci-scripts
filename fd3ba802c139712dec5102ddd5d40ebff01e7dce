@@ -169,6 +169,30 @@
     },
     {
       "key": {
+        "uuid": "2ee36920_4c013f2e",
+        "filename": "gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-01-09T08:07:13Z",
+      "side": 1,
+      "message": "\u003e wipe out completely the ~/.gerritcodereview\n\nIs it possible for builds to run concurrently?  If so would be better to specify the cache directory per build rather than using the Jenkins user\u0027s home.\n\nAlso we probably don\u0027t want to wipe out the whole folder, only the buck build cache.  Wiping it out completely will mean it has to re-download the dependency jar files every time.",
+      "parentUuid": "ae0839ac_88d71753",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 2
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4edc1d30_bdea7fae",
         "filename": "gerrit-buck-template.yaml",
         "patchSetId": 1
