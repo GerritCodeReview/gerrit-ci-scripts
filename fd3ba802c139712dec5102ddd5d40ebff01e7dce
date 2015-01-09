@@ -241,6 +241,30 @@
     },
     {
       "key": {
+        "uuid": "ee0eb1b4_eaefa713",
+        "filename": "gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-01-09T08:25:27Z",
+      "side": 1,
+      "message": "Yes, we can ... but better safe than sorry ;-)\n\nWiping out the slave machine altogether and re-instantiating it through Puppet is actually a good idea indeed ;-) That would allow me to spawn different slaves as needed: additionally should new JDK fixes come around and our code breaking (for any reason !) we would notice that as well.\n\nP.S. I mean once a week, NOT every day for for every build.",
+      "parentUuid": "ee0eb1b4_2ae7ff3f",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 2
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4edc1d30_bdea7fae",
         "filename": "gerrit-buck-template.yaml",
         "patchSetId": 1
