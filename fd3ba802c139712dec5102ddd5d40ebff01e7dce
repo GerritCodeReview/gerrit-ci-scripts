@@ -313,6 +313,54 @@
     },
     {
       "key": {
+        "uuid": "ae0839ac_a8e9bb10",
+        "filename": "gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2015-01-09T08:43:49Z",
+      "side": 1,
+      "message": "| Is that really a likely situation though?\n\nNo.\n\n| the latter has only happened when we used the google bucket rather than a real maven repo.\n\nYes. I already commented in another change that Google bucket urgently needs to support publish/freeze an binary artifact, like it\u0027s the case on Maven Central.\n\nUntil this happens, we should try to avoid using it and either:\n\n* Don\u0027t create our custom binary packages at all, and use native libraries provided: CodeMirror is available twice: on GitHub and on Maven Central\n* Move libraries Gerrit depends on from bucket to Maven Central: There are only two left: gwtjsonrpc and gwtorm",
+      "parentUuid": "4ed6dd40_cd1f6985",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 2
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee0eb1b4_6a04d73f",
+        "filename": "gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2015-01-09T08:43:49Z",
+      "side": 1,
+      "message": "Nope, it cannot happen, if you use the right tool for the job, see my comment above.\n\nYour CI Server can be hit by a cosmos meteorite, right? What are you gong to do against that?",
+      "parentUuid": "ee0eb1b4_caf4e3e6",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 2
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4edc1d30_bdea7fae",
         "filename": "gerrit-buck-template.yaml",
         "patchSetId": 1
