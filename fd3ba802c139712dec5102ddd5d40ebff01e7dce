@@ -142,6 +142,75 @@
       "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4edc1d30_bdea7fae",
+        "filename": "gerrit-buck-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-01-09T03:05:28Z",
+      "side": 1,
+      "message": "-1 is the default, so doesn\u0027t need to be specified.",
+      "range": {
+        "startLine": 6,
+        "startChar": 6,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edf2124_7e2711a2",
+        "filename": "gerrit-buck-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-01-09T03:05:28Z",
+      "side": 1,
+      "message": "-1 is the default, so doesn\u0027t need to be specified.",
+      "range": {
+        "startLine": 8,
+        "startChar": 6,
+        "endLine": 8,
+        "endChar": 28
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edf2124_5e225593",
+        "filename": "gerrit-buck-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-01-09T03:05:28Z",
+      "side": 1,
+      "message": "There is no more development on stable-2.8, so that can be removed.\n\nAfter creating stable-2.11 I don\u0027t think we\u0027ll want to maintain stable-2.9 any more. I don\u0027t intend to make any more 2.9.x releases unless something critical comes up.",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 18
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
