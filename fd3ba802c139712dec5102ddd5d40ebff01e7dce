@@ -289,6 +289,30 @@
     },
     {
       "key": {
+        "uuid": "ee0eb1b4_caf4e3e6",
+        "filename": "gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-01-09T08:33:16Z",
+      "side": 1,
+      "message": "It is not a situation that is *likely* to happen: but *if* it happens we would like to detect it.\n\nOnce a week is not a big cost and will not be in this script anyway, but rather in my crontab :-) ... so we can take it off-line and avoid to wipe out cache (that was the topic of discussion on this thread).",
+      "parentUuid": "4ed6dd40_cd1f6985",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 2
+      },
+      "revId": "fd3ba802c139712dec5102ddd5d40ebff01e7dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4edc1d30_bdea7fae",
         "filename": "gerrit-buck-template.yaml",
         "patchSetId": 1
