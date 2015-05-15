@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4db515d9_9afdcdb0",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2015-05-15T07:25:30Z",
+      "side": 1,
+      "message": "Unnecessary verbose. release should depend on plugins:core. We have also `all` target, that does almost what you want, only `api_install` is missing. It should be extended, to:\n\n  genrule(\n    name \u003d \u0027all\u0027,\n    cmd \u003d \u0027echo done \u003e$OUT\u0027,\n    deps \u003d [\n      \u0027:api_install\u0027,\n      \u0027:release\u0027,\n    ],\n    out \u003d \u0027__fake.all__\u0027,\n\nThen you can just say:\n\n  buck build all",
+      "range": {
+        "startLine": 3,
+        "startChar": 38,
+        "endLine": 3,
+        "endChar": 50
+      },
+      "revId": "d6985323bb6a2a535e2aa0b9c76dc43e54aa29a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
