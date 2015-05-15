@@ -22,6 +22,30 @@
       "revId": "d6985323bb6a2a535e2aa0b9c76dc43e54aa29a3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4db515d9_bafa91b3",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-15T07:34:20Z",
+      "side": 1,
+      "message": "Good feedback ... but I guess is a different change ;-) \nThis change was only about renaming files to allow Christian to upload his scripts and then we can definitely amend the gerrit-buck-build.sh ;-)",
+      "parentUuid": "4db515d9_9afdcdb0",
+      "range": {
+        "startLine": 3,
+        "startChar": 38,
+        "endLine": 3,
+        "endChar": 50
+      },
+      "revId": "d6985323bb6a2a535e2aa0b9c76dc43e54aa29a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
