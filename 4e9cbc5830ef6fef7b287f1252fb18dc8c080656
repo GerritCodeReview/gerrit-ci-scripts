@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "cd75853f_ae43d771",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T14:57:14Z",
+      "side": 1,
+      "message": "Yes, I know... Go was not my first choice... but it was the path of least resistance for what I was trying to accomplish. I\u0027ll explain everything in one go (har har). :)",
+      "parentUuid": "ad705150_4d8b5921",
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ad705150_6d889523",
         "filename": "jenkins-docker/Dockerfile",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "cd75853f_4e59135d",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T14:57:14Z",
+      "side": 1,
+      "message": "Yep.",
+      "parentUuid": "ad705150_6d889523",
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4d827552_7202b8c6",
         "filename": "jenkins-docker/Dockerfile",
         "patchSetId": 1
@@ -47,6 +83,30 @@
       "writtenOn": "2015-05-20T13:32:44Z",
       "side": 1,
       "message": "What is this for?",
+      "range": {
+        "startLine": 18,
+        "startChar": 7,
+        "endLine": 18,
+        "endChar": 38
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd75853f_6e564f30",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T14:57:14Z",
+      "side": 1,
+      "message": "Will be clear with the full explanation. :)",
+      "parentUuid": "4d827552_7202b8c6",
       "range": {
         "startLine": 18,
         "startChar": 7,
@@ -82,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "2d854159_f149c893",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T14:57:14Z",
+      "side": 1,
+      "message": "True, I agree we don\u0027t need watchman.  It didn\u0027t seem to hurt to add it, but it can just as easily be taken out.  I wasn\u0027t sure if buckd would provide us any benefits, though.",
+      "parentUuid": "ad705150_cd96694b",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 16
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4d827552_d2f04465",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 1
@@ -93,6 +177,30 @@
       "writtenOn": "2015-05-20T13:32:44Z",
       "side": 1,
       "message": "nit: empty space at EOL",
+      "range": {
+        "startLine": 7,
+        "startChar": 38,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2d854159_913e3cdb",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T14:57:14Z",
+      "side": 1,
+      "message": "Oops!",
+      "parentUuid": "4d827552_d2f04465",
       "range": {
         "startLine": 7,
         "startChar": 38,
@@ -128,6 +236,30 @@
     },
     {
       "key": {
+        "uuid": "cd75853f_0e530b3f",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T14:57:14Z",
+      "side": 1,
+      "message": "Checked and jenkins-job-builder runs... Correct me if I\u0027m wrong, but even if it \"rebuilds\" the job with no changes, it effectively has no impact.  At least, with my testing, my build numbers don\u0027t get reset, and I\u0027ve not seen any unusual behavior this way.  I did it this way so we wouldn\u0027t have to cache the current state and compare what\u0027s been pushed into Jenkins yet.  It would also reset changes if someone changed a job configuration outside the YAML configurations.",
+      "parentUuid": "ad705150_ed9b2570",
+      "range": {
+        "startLine": 11,
+        "startChar": 26,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4d827552_520534cb",
         "filename": "jenkins-docker/startup.go",
         "patchSetId": 1
@@ -151,6 +283,30 @@
     },
     {
       "key": {
+        "uuid": "cd75853f_2e50472f",
+        "filename": "jenkins-docker/startup.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T14:57:14Z",
+      "side": 1,
+      "message": "Yep, that\u0027s correct.",
+      "parentUuid": "4d827552_520534cb",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 13
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ad705150_ad951d3d",
         "filename": "jenkins-docker/update-jobs.sh",
         "patchSetId": 1
@@ -162,6 +318,24 @@
       "writtenOn": "2015-05-20T13:32:44Z",
       "side": 1,
       "message": "Why not using this inside a Jenkins Job?\nWe\u0027ll automatically get traceability and logging of what\u0027s happening.",
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2d854159_b1434072",
+        "filename": "jenkins-docker/update-jobs.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T14:57:14Z",
+      "side": 1,
+      "message": "Technically, the output of this is fed into the Docker logging, but you\u0027re right, this is otherwise not retained.",
+      "parentUuid": "ad705150_ad951d3d",
       "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
