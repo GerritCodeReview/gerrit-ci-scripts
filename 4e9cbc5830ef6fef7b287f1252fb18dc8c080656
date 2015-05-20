@@ -214,6 +214,30 @@
     },
     {
       "key": {
+        "uuid": "2d854159_5159b45c",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T15:33:34Z",
+      "side": 1,
+      "message": "Yeah, I think I\u0027ve seen that.  CI goes faster, but is way more likely to fail with random errors, and if it does fail, it can be more peculiar to fix.\n\nI will probably comment this out to show how it can be enabled, but add a note that it is best to leave it disabled.",
+      "parentUuid": "4d827552_322e703a",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 16
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4d827552_d2f04465",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 1
@@ -320,6 +344,30 @@
       "side": 1,
       "message": "Are the build numbers getting reset? Didn\u0027t notice that ... let me check :-)\n\nI was hoping to use the gerrit-trigger-plugin to automatically fetch the changes under review on the YAML files and, if they fail because they aren\u0027t valid, it could automatically provide a feedback.\n\nNowadays the plugin can work with the RESTful API as well so it could be definitely possible to use it with gerrit-review.googlesource.com.\n\nIf we go with the crontab option ... we haven\u0027t all the Jenkins magic to support us ;-(",
       "parentUuid": "cd75853f_0e530b3f",
+      "range": {
+        "startLine": 11,
+        "startChar": 26,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd75853f_eeb23ffa",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-05-20T15:33:34Z",
+      "side": 1,
+      "message": "They don\u0027t reset -- at least, I\u0027ve not seen them. :)\n\nI agree, it would be really cool to have the trigger plugin help.  Obviously, we wouldn\u0027t want to do this on the \"live\" instance, but if it could run on a secondary testing interface, that instant feedback would be great!",
+      "parentUuid": "4d827552_d26b646f",
       "range": {
         "startLine": 11,
         "startChar": 26,
