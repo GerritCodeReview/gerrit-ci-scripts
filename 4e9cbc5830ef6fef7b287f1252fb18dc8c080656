@@ -1,0 +1,170 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ad705150_4d8b5921",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T13:32:44Z",
+      "side": 1,
+      "message": "do we really need GO language?",
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad705150_6d889523",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T13:32:44Z",
+      "side": 1,
+      "message": "As before :-)",
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d827552_7202b8c6",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T13:32:44Z",
+      "side": 1,
+      "message": "What is this for?",
+      "range": {
+        "startLine": 18,
+        "startChar": 7,
+        "endLine": 18,
+        "endChar": 38
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad705150_cd96694b",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T13:32:44Z",
+      "side": 1,
+      "message": "I don\u0027t think we actually strictly need watchman for the CI build. It is more related when you develop locally and you want to get differential info on what has changed.",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 16
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d827552_d2f04465",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T13:32:44Z",
+      "side": 1,
+      "message": "nit: empty space at EOL",
+      "range": {
+        "startLine": 7,
+        "startChar": 38,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad705150_ed9b2570",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T13:32:44Z",
+      "side": 1,
+      "message": "Why every 5 minutes? Or you mean that just they are \"checked\" every 5 minutes?",
+      "range": {
+        "startLine": 11,
+        "startChar": 26,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d827552_520534cb",
+        "filename": "jenkins-docker/startup.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T13:32:44Z",
+      "side": 1,
+      "message": "Ah ... I thought you were actually using a Jenkins job to update the jobs as you could get out-of-the-box the scheduling and execution when something changes.\n\nIf you do through a crontab job they you\u0027ll always update even if not needed.\n\nWhen job config changes will be difficult as well to understand why and when happened.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 13
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad705150_ad951d3d",
+        "filename": "jenkins-docker/update-jobs.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T13:32:44Z",
+      "side": 1,
+      "message": "Why not using this inside a Jenkins Job?\nWe\u0027ll automatically get traceability and logging of what\u0027s happening.",
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
