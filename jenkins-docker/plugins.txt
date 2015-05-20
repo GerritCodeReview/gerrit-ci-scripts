@@ -1,0 +1,4 @@
+git:latest
+git-client:latest
+scm-api:latest
+credentials:latest
