@@ -238,6 +238,30 @@
     },
     {
       "key": {
+        "uuid": "ad705150_4d2d998e",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T15:50:54Z",
+      "side": 1,
+      "message": "Yep",
+      "parentUuid": "2d854159_5159b45c",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 16
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4d827552_d2f04465",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 1
@@ -368,6 +392,30 @@
       "side": 1,
       "message": "They don\u0027t reset -- at least, I\u0027ve not seen them. :)\n\nI agree, it would be really cool to have the trigger plugin help.  Obviously, we wouldn\u0027t want to do this on the \"live\" instance, but if it could run on a secondary testing interface, that instant feedback would be great!",
       "parentUuid": "4d827552_d26b646f",
+      "range": {
+        "startLine": 11,
+        "startChar": 26,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "4e9cbc5830ef6fef7b287f1252fb18dc8c080656",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d827552_f270e85b",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-05-20T15:50:54Z",
+      "side": 1,
+      "message": "True, what about then to have:\ngerrit-ci.gerritforge.com \u003d\u003e the live CI instance\ngerrit-ci-review.gerritforge.com \u003d\u003e the review CI instance (for validating the changes of the jobs under review)",
+      "parentUuid": "cd75853f_eeb23ffa",
       "range": {
         "startLine": 11,
         "startChar": 26,
