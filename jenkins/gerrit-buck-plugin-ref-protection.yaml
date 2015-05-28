@@ -1,0 +1,11 @@
+!include gerrit-buck-plugin-template.yaml.inc
+
+- project:
+    plugin:
+      - ref-protection
+    branch:
+      - stable-2.11
+      - master
+    jobs:
+      - 'plugin-{plugin}-{branch}'
+
