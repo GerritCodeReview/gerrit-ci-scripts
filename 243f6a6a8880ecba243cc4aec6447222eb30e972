@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9347353e_8cb42723",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2015-07-06T18:37:02Z",
+      "side": 1,
+      "message": "missing a project name param here.  something like the following will work..\n\n  name: gerrit-plugins",
+      "revId": "243f6a6a8880ecba243cc4aec6447222eb30e972",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9347353e_acb9e31b",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2015-07-06T18:37:02Z",
+      "side": 1,
+      "message": "maybe better to call this \u0027plugin-name\u0027?",
+      "revId": "243f6a6a8880ecba243cc4aec6447222eb30e972",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d33d2da0_aeb9d71b",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2015-07-06T18:37:02Z",
+      "side": 1,
+      "message": "Wondering how you keep in sync with Gerrit Core?  Don\u0027t we want to build Gerrit core (master) as a dependency of building these plugins?",
+      "revId": "243f6a6a8880ecba243cc4aec6447222eb30e972",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
