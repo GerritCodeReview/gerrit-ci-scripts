@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5365bdc2_1a113d5a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-07-06T16:12:13Z",
+      "side": 1,
+      "message": "Any specific reason to change the author?",
+      "revId": "5a284c02610878778b7f5c20231cd8fd49c0f640",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
