@@ -1,0 +1,14 @@
+- job:
+    name: gerrit-ci-scripts
+    project-type: freestyle
+    description: Gerrit Jenkins Job Builder Scripts
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit-ci-scripts
+         branches:
+           - '*/master'
+    triggers:
+      - pollscm: 'H/15 * * * *'
+    builders:
+      - shell: jenkins-jobs update jenkins/.
+
