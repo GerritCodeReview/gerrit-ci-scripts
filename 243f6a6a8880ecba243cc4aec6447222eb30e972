@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "0d3082cc_e7d782eb",
+        "filename": "jenkins/gerrit-buck-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-29T19:28:41Z",
+      "side": 1,
+      "message": "Is this necessary? Especially if we wipe workspaces before build?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 15
+      },
+      "revId": "243f6a6a8880ecba243cc4aec6447222eb30e972",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd382ab3_6dc45533",
+        "filename": "jenkins/gerrit-buck-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-29T19:28:41Z",
+      "side": 1,
+      "message": "Suggestion: change to\n\n  export BUCK_CLEAN_REPO_IF_DIRTY\u003dy",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 28
+      },
+      "revId": "243f6a6a8880ecba243cc4aec6447222eb30e972",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9347353e_8cb42723",
         "filename": "jenkins/gerrit-buck-plugin-template.yaml",
         "patchSetId": 3
