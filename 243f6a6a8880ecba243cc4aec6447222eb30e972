@@ -36,6 +36,29 @@
     },
     {
       "key": {
+        "uuid": "cd382ab3_2dba4db9",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-29T19:27:28Z",
+      "side": 1,
+      "message": "All these (with the exception of the cookbook-plugin) are core plugins... and all of them are listed as a submodule in Gerrit core -- so they will build with main releases.  Not saying building these is a bad idea, but these will get built otherwise, as Gerrit is built...\n\nMaybe a different approach to these would be to trigger the main Gerrit job and update the submodule manually (similar to the first option I suggest below)?\n\nJust a thought; this is definitely in the land of \"no good solutions\" as a result of submodule. :(",
+      "range": {
+        "startLine": 31,
+        "startChar": 8,
+        "endLine": 36,
+        "endChar": 23
+      },
+      "revId": "243f6a6a8880ecba243cc4aec6447222eb30e972",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d33d2da0_aeb9d71b",
         "filename": "jenkins/gerrit-buck-plugin-template.yaml",
         "patchSetId": 3
@@ -47,6 +70,24 @@
       "writtenOn": "2015-07-06T18:37:02Z",
       "side": 1,
       "message": "Wondering how you keep in sync with Gerrit Core?  Don\u0027t we want to build Gerrit core (master) as a dependency of building these plugins?",
+      "revId": "243f6a6a8880ecba243cc4aec6447222eb30e972",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd382ab3_0dbd91b0",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-29T19:27:28Z",
+      "side": 1,
+      "message": "I was thinking about this, too... it looks like it would depend on the api_install step of the Gerrit Core.\n\nThere\u0027s a few approaches we could take to this, and none are particularly pretty, especially when it comes to building plugins on the bleeding edge.  One approach might be to clone the plugin inside gerrit core, but that has its own complications with the git SCM plugin.  Another approach might be to clone and build the Gerrit API before attempting to build the plugin (similar to the first idea).  With both of these, though you\u0027re still not guaranteed to get the right API version.",
+      "parentUuid": "d33d2da0_aeb9d71b",
       "revId": "243f6a6a8880ecba243cc4aec6447222eb30e972",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
