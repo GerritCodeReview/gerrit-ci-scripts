@@ -1,0 +1,35 @@
+- job-template:
+    name: 'plugin-{name}-{branch}'
+    project-type: freestyle
+    description: "Plugin {name} {branch} branch build with BUCK\n"
+    logrotate:
+      numToKeep: 5
+      artifactNumToKeep: 5
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/{name}
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+           tracking: true 
+
+    triggers:
+      - pollscm: 'H/5 * * * *'
+
+    builders:
+      - shell:
+         !include-raw gerrit-buck-build-plugin.sh
+    publishers:
+      - archive:
+         artifacts: 'buck-out/gen/plugins/{name}/{name}.jar'
