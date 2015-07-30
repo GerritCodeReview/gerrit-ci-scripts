@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa4cbc8b_44e06e09",
+        "filename": "jenkins/gerrit-buck-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2015-07-30T22:35:19Z",
+      "side": 1,
+      "message": "you already included an scm step in template so why do you need to git checkout here?  I think that\u0027s kinda confusing.  I would suggestion doing all checkouts either here or in the jenkins scm plugin.",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa4cbc8b_24d5722f",
+        "filename": "jenkins/gerrit-buck-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2015-07-30T22:35:19Z",
+      "side": 1,
+      "message": "Hmm, I\u0027m wondering if the same version of buck will work with all the different branches? What if buck needs updating?",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa4cbc8b_84cc26ac",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2015-07-30T22:35:19Z",
+      "side": 1,
+      "message": "this can be omitted, freestyle is the default",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa4cbc8b_64db6a65",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2015-07-30T22:35:19Z",
+      "side": 1,
+      "message": "i would suggest adding a timeout and timestamp wrapper:\n\n    wrappers:\n      - timeout:\n          timeout: 30\n          fail: true\n      - timestamps",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
