@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6a6d64ec_dac54584",
+        "filename": "jenkins/gerrit-buck-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-30T22:51:30Z",
+      "side": 1,
+      "message": "Yeah, the magic going on here is annoying, but it\u0027s because no plugin currently builds truly \"outside-tree\" -- even the cookbook-plugin, which has the dependencies for buck, doesn\u0027t include bucklets as a submodule, and thus fails to build standalone.\n\nSee the next two lines: I remove the plugin and use read-tree to graft the plugin at the correct commit onto the filesystem.",
+      "parentUuid": "aa4cbc8b_44e06e09",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aa4cbc8b_24d5722f",
         "filename": "jenkins/gerrit-buck-build-plugin.sh",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-07-30T22:35:19Z",
       "side": 1,
       "message": "Hmm, I\u0027m wondering if the same version of buck will work with all the different branches? What if buck needs updating?",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a6d64ec_fac28979",
+        "filename": "jenkins/gerrit-buck-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-30T22:51:30Z",
+      "side": 1,
+      "message": "BUCK_CLEAN_REPO_IF_DIRTY will cause it to rebuild buck. You\u0027re right; each branch is pretty particular about its version of buck.\n\nAlso, that\u0027s why the Docker image only allows one executor at a time, to prevent two projects from building different versions of buck at the same time.  I didn\u0027t find a good way to fix this, since it\u0027s not like you could have a \"buck-2.11\", \"buck-2.10\", etc. and have it always work right.",
+      "parentUuid": "aa4cbc8b_24d5722f",
       "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6a6d64ec_9acfcda0",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-30T22:51:30Z",
+      "side": 1,
+      "message": "True. I think it\u0027s done here because it\u0027s done on the gerrit template as well.",
+      "parentUuid": "aa4cbc8b_84cc26ac",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aa4cbc8b_64db6a65",
         "filename": "jenkins/gerrit-buck-plugin-template.yaml",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2015-07-30T22:35:19Z",
       "side": 1,
       "message": "i would suggest adding a timeout and timestamp wrapper:\n\n    wrappers:\n      - timeout:\n          timeout: 30\n          fail: true\n      - timestamps",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a6d64ec_bacc11ac",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-30T22:51:30Z",
+      "side": 1,
+      "message": "Probably not a bad idea (and would be suitable for another patch where it can be done on the Gerrit template as well).",
+      "parentUuid": "aa4cbc8b_64db6a65",
       "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
