@@ -16,7 +16,8 @@
          url: https://gerrit.googlesource.com/gerrit
          branches:
            - origin/{branch}
-         recursive-submodules: true
+         submodule:
+           recursive: true
     triggers:
       - pollscm: 'H/5 * * * *'
 
