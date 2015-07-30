@@ -1,7 +1,11 @@
 - job-template:
     name: '{name}-{branch}'
-    project-type: freestyle
     description: "{name} {branch} branch build with BUCK\n"
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
     logrotate:
       numToKeep: 5
       artifactNumToKeep: 5
@@ -16,7 +20,8 @@
          url: https://gerrit.googlesource.com/gerrit
          branches:
            - origin/{branch}
-         recursive-submodules: true
+         submodule:
+           recursive: true
     triggers:
       - pollscm: 'H/5 * * * *'
 
