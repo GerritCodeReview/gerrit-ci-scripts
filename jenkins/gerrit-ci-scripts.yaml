@@ -12,3 +12,41 @@
     builders:
       - shell: jenkins-jobs update jenkins/.
 
+- job:
+    name: gerrit-ci-scripts-manual
+    project-type: freestyle
+    description: Manually rebuild gerrit-ci-scripts from a specific Change ID and revision
+    parameters:
+      - string:
+         name: CHANGE_NUMBER
+         description: "Legacy Change ID of patch to build"
+      - string:
+         name: CHANGE_REVISION
+         default: '1'
+         description: "Revision number of patch to build"
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit-ci-scripts
+         refspec: +refs/changes/*:refs/remotes/origin/changes/*
+         branches:
+           - 'refs/remotes/origin/changes/*/${CHANGE_NUMBER}/${CHANGE_REVISION}'
+    builders:
+      - shell: jenkins-jobs update jenkins/.
+
+- job:
+    name: gerrit-ci-scripts-manual-bycommit
+    project-type: freestyle
+    description: Manually rebuild gerrit-ci-scripts from a specific Change ID and revision
+    parameters:
+      - string:
+         name: COMMIT_ID
+         description: "SHA-1 hash of patch to build"
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit-ci-scripts
+         refspec: +refs/changes/*:refs/remotes/origin/changes/*
+         branches:
+           - '${COMMIT_ID}'
+    builders:
+      - shell: jenkins-jobs update jenkins/.
+
