@@ -1,0 +1,7 @@
+- project:
+    name: commit-message-length-validator
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
