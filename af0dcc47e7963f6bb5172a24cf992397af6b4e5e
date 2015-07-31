@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "4abee091_49b2e136",
+        "filename": "jenkins/gerrit-buck-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-31T03:29:56Z",
+      "side": 1,
+      "message": "Agreed.",
+      "parentUuid": "6a6d64ec_5a00553e",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aa4cbc8b_24d5722f",
         "filename": "jenkins/gerrit-buck-build-plugin.sh",
         "patchSetId": 2
@@ -143,6 +161,24 @@
     },
     {
       "key": {
+        "uuid": "4abee091_69b7a525",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-31T03:29:56Z",
+      "side": 1,
+      "message": "Sure; I suppose we can do that here and clean up Gerrit in the follow-up patch (there\u0027s already one, so why not?)",
+      "parentUuid": "6a6d64ec_3ada415e",
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aa4cbc8b_64db6a65",
         "filename": "jenkins/gerrit-buck-plugin-template.yaml",
         "patchSetId": 2
@@ -207,6 +243,30 @@
       "writtenOn": "2015-07-30T23:05:52Z",
       "side": 1,
       "message": "A bit too small? I would say keep at least the last 20 builds.",
+      "range": {
+        "startLine": 6,
+        "startChar": 17,
+        "endLine": 6,
+        "endChar": 18
+      },
+      "revId": "af0dcc47e7963f6bb5172a24cf992397af6b4e5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4abee091_09bce904",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-07-31T03:29:56Z",
+      "side": 1,
+      "message": "Sounds good.",
+      "parentUuid": "6a6d64ec_faeb69e7",
       "range": {
         "startLine": 6,
         "startChar": 17,
