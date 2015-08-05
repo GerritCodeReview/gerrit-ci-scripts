@@ -22,6 +22,30 @@
       "revId": "7f6e461d203e37223a53dfcf4ca24e911d79a482",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a09acaf_a8bbfb0d",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-08-05T23:12:29Z",
+      "side": 1,
+      "message": "Yep.  Must\u0027ve forgotten to nuke it here, too. :(",
+      "parentUuid": "ca701052_8dbb810e",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 17,
+        "endChar": 27
+      },
+      "revId": "7f6e461d203e37223a53dfcf4ca24e911d79a482",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
