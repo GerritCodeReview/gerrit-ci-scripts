@@ -1,0 +1,7 @@
+- project:
+	name: its-phabricator
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
