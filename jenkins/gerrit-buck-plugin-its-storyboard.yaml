@@ -1,0 +1,7 @@
+- project:
+    name: storyboard
+    branch:
+      - master
+    jobs:
+      - 'plugin-its-{name}-{branch}'
+
