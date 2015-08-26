@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a4c4f5d2_04f3d6db",
+        "filename": "jenkins/gerrit-buck-build-its-plugin.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-08-26T10:24:42Z",
+      "side": 1,
+      "message": "Nit: to be removed",
+      "range": {
+        "startLine": 7,
+        "startChar": 20,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "6d4155e4a200ad7b748d94a166ab42d2960d6923",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4c4f5d2_6400ca3b",
+        "filename": "jenkins/gerrit-buck-build-its-plugin.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-08-26T10:24:42Z",
+      "side": 1,
+      "message": "Not needed as Alex pointed out :-)",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 32
+      },
+      "revId": "6d4155e4a200ad7b748d94a166ab42d2960d6923",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
