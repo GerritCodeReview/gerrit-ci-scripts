@@ -1,0 +1,8 @@
+- project:
+    name: admin-console
+    build: mvn
+    branch:
+      - stable-2.9
+    jobs:
+      - 'plugin-{name}-{build}-{branch}'
+
