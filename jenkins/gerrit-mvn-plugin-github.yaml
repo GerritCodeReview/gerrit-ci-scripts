@@ -1,0 +1,11 @@
+- project:
+    name: github-mvn
+    repo: github
+    branch:
+      - master
+      - stable-2.11
+      - stable-2.10
+      - stable-2.9
+    jobs:
+      - 'plugin-{repo}-mvn-{branch}'
+
