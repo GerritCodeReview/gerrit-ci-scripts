@@ -1,0 +1,8 @@
+- project:
+    name: its-base-mvn
+    repo: its-base
+    branch:
+      - stable-2.9
+    jobs:
+      - 'plugin-{repo}-mvn-{branch}'
+
