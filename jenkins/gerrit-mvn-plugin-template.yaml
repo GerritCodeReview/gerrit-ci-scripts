@@ -1,0 +1,36 @@
+- job-template:
+    name: 'plugin-{name}-mvn-{branch}'
+    description: "Plugin {name} {branch} branch build with Maven\n"
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+    logrotate:
+      numToKeep: 20
+      artifactNumToKeep: 20
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/{name}
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+
+    triggers:
+      - pollscm: 'H/5 * * * *'
+
+    builders:
+      - shell:
+         !include-raw gerrit-mvn-build-plugin.sh
+    publishers:
+      - archive:
+         artifacts: 'target/{name}*.jar'
