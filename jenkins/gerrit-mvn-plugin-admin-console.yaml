@@ -1,0 +1,7 @@
+- project:
+    name: admin-console-mvn
+    repo: admin-console
+    branch:
+      - stable-2.9
+    jobs:
+      - 'plugin-{repo}-mvn-{branch}'
