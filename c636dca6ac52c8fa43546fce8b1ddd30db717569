@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "24d1e58c_a83a9b80",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-08-27T08:45:55Z",
+      "side": 1,
+      "message": "Which latest version?  You mean latest upstream or latest we\u0027re using on Gerrit?",
+      "range": {
+        "startLine": 9,
+        "startChar": 4,
+        "endLine": 9,
+        "endChar": 32
+      },
+      "revId": "c636dca6ac52c8fa43546fce8b1ddd30db717569",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
