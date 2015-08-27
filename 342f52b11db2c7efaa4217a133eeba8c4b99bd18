@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "84bff131_a3e8fa74",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-08-27T20:37:11Z",
+      "side": 1,
+      "message": "This comment section may no longer apply. :)",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 26
+      },
+      "revId": "342f52b11db2c7efaa4217a133eeba8c4b99bd18",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
