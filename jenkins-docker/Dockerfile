@@ -32,6 +32,7 @@ RUN git clone https://github.com/facebook/buck /opt/buck && \
 #
 #RUN git clone https://github.com/facebook/watchman.git /opt/watchman && \
 #    cd /opt/watchman && \
+#    git checkout v3.7.0 && \
 #    ./autogen.sh && \
 #    ./configure && \
 #    make && \
