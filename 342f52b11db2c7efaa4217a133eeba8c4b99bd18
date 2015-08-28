@@ -22,6 +22,30 @@
       "revId": "342f52b11db2c7efaa4217a133eeba8c4b99bd18",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04d4e17b_876b460f",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-08-28T01:15:09Z",
+      "side": 1,
+      "message": "On a related note, this is going to build the head of the master branch.  The installation instructions [1] recommends to explicitly checkout the tagged release.\n\n[1] https://facebook.github.io/watchman/docs/install.html",
+      "parentUuid": "84bff131_a3e8fa74",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 26
+      },
+      "revId": "342f52b11db2c7efaa4217a133eeba8c4b99bd18",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
