@@ -1,0 +1,7 @@
+- project:
+    name: branch-network
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
