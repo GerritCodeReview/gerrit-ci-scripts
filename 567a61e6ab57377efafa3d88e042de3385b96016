@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "84dff222_7e0c717c",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-09-04T16:14:53Z",
+      "side": 1,
+      "message": "Question here: would it be better to just run \"mvn package\" here? Install would install the plugin to the CI system\u0027s local maven repository, right?",
+      "range": {
+        "startLine": 2,
+        "startChar": 4,
+        "endLine": 2,
+        "endChar": 11
+      },
+      "revId": "567a61e6ab57377efafa3d88e042de3385b96016",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
