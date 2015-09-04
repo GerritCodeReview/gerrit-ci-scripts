@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44fb3a86_0c56d7f7",
+        "filename": "jenkins/gerrit-buck-plugin-delete-project.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-09-04T16:01:12Z",
+      "side": 1,
+      "message": "Why not including stable-2.9 as well? There are still people running 2.9 in production",
+      "revId": "7e995624eee81d2883d615db052a8dc1c6191bf6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
