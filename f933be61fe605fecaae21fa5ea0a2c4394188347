@@ -16,6 +16,24 @@
       "revId": "f933be61fe605fecaae21fa5ea0a2c4394188347",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04fea26f_d20e2468",
+        "filename": "jenkins/gerrit-mvn-plugin-changemessage.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-09-07T07:17:18Z",
+      "side": 1,
+      "message": "In theory no, we don\u0027t ... BUT in case a mvn *and* BUCK build exist (possibly on different branches) then we do need to have different project names: that\u0027s why the name is suffixed with \"-mvn\" and the repo is a different variable.",
+      "parentUuid": "44fb3a86_ac47c315",
+      "revId": "f933be61fe605fecaae21fa5ea0a2c4394188347",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
