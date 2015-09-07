@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44fb3a86_ac47c315",
+        "filename": "jenkins/gerrit-mvn-plugin-changemessage.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-09-07T00:30:19Z",
+      "side": 1,
+      "message": "Do we need to have \u0027mvn\u0027 in the filename and job name?\n\nIf the plugin gets migrated to buck, then we need to change the filename and make a new job.",
+      "revId": "f933be61fe605fecaae21fa5ea0a2c4394188347",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
