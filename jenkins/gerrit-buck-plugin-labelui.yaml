@@ -1,0 +1,7 @@
+- project:
+    name: labelui
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
