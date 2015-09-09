@@ -28,7 +28,7 @@
            recursive: true
 
     triggers:
-      - pollscm: 'H/5 * * * *'
+      - pollscm: 'H/50 * * * *'
 
     builders:
       - shell:
