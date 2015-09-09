@@ -22,6 +22,30 @@
       "revId": "6528bf70958c2d8787fd723715e4d8ec1609a043",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4195610_57eaece4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-09-09T07:43:26Z",
+      "side": 1,
+      "message": "It is not a big issue :-) and in this case I think it makes sense to have a specific directory as these are not \"proper\" plugins but rather providers of new plugin languages.\n\nI am hoping new languages will pop-up :-) I was thinking about NodeJS, lots of people use it and would then start contributing JavaScript server-side plugins.",
+      "parentUuid": "a4f236e4_ef4a219b",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 7
+      },
+      "revId": "6528bf70958c2d8787fd723715e4d8ec1609a043",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
