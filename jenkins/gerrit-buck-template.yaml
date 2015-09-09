@@ -23,7 +23,7 @@
          submodule:
            recursive: true
     triggers:
-      - pollscm: 'H/5 * * * *'
+      - pollscm: 'H/20 * * * *'
 
     builders:
       - shell:
