@@ -7,8 +7,8 @@
           fail: true
       - timestamps
     logrotate:
-      numToKeep: 5
-      artifactNumToKeep: 5
+      numToKeep: 20
+      artifactNumToKeep: 20
     properties:
        - authorization:
            anonymous:
@@ -23,7 +23,7 @@
          submodule:
            recursive: true
     triggers:
-      - pollscm: 'H/20 * * * *'
+      - pollscm: 'H/10 * * * *'
 
     builders:
       - shell:
