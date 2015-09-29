@@ -22,6 +22,30 @@
       "revId": "1a50f23b3169a6e0dcb27d61c8b2c35247691035",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "18f7ebe2_23e04afb",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-09-29T10:37:23Z",
+      "side": 1,
+      "message": "Are you sure that source jar isn\u0027t included?\nLook at:\nhttps://gerrit-ci.gerritforge.com/job/Gerrit-master/",
+      "parentUuid": "18f7ebe2_23c96a95",
+      "range": {
+        "startLine": 35,
+        "startChar": 51,
+        "endLine": 35,
+        "endChar": 54
+      },
+      "revId": "1a50f23b3169a6e0dcb27d61c8b2c35247691035",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
