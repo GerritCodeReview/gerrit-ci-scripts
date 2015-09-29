@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "18f7ebe2_23c96a95",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1012155
+      },
+      "writtenOn": "2015-09-29T09:18:56Z",
+      "side": 1,
+      "message": "For the gerrit-acceptance-framework this direct copying would\n(currently):\n\n* miss the source jar, and also\n* result in artifact names like \"api.jar\" (which is at best misleading)\n\nSince I ran into the same issue on my CI server, I uploaded\na fix for the gerrit build at:\n\n  https://gerrit-review.googlesource.com/#/c/71148/",
+      "range": {
+        "startLine": 35,
+        "startChar": 51,
+        "endLine": 35,
+        "endChar": 54
+      },
+      "revId": "1a50f23b3169a6e0dcb27d61c8b2c35247691035",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
