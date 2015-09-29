@@ -70,6 +70,30 @@
       "revId": "1a50f23b3169a6e0dcb27d61c8b2c35247691035",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "38ce6fa4_d4fdbca4",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-09-29T11:56:38Z",
+      "side": 1,
+      "message": "Ah, good ... that\u0027s explains why :-)",
+      "parentUuid": "38ce6fa4_14dd7449",
+      "range": {
+        "startLine": 35,
+        "startChar": 51,
+        "endLine": 35,
+        "endChar": 54
+      },
+      "revId": "1a50f23b3169a6e0dcb27d61c8b2c35247691035",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
