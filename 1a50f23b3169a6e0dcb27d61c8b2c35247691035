@@ -46,6 +46,30 @@
       "revId": "1a50f23b3169a6e0dcb27d61c8b2c35247691035",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "38ce6fa4_14dd7449",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1012155
+      },
+      "writtenOn": "2015-09-29T11:27:29Z",
+      "side": 1,
+      "message": "Hahaha :-D\n\nYes sure. The build that includes my fix holds the source jar:\n\n  https://gerrit-ci.gerritforge.com/job/Gerrit-master/383/\n\nBut the one before my fix (from the time I wrote the above\ncomment) did not hold it:\n\n  https://gerrit-ci.gerritforge.com/job/Gerrit-master/382/\n\nThe 382 held a api.jar, and a javadoc.jar, but /no/ source jar.\n\nAnyways: The fix is merged. The artifacts are now exposed as\nintended. And your change here will now pick them up.",
+      "parentUuid": "18f7ebe2_23e04afb",
+      "range": {
+        "startLine": 35,
+        "startChar": 51,
+        "endLine": 35,
+        "endChar": 54
+      },
+      "revId": "1a50f23b3169a6e0dcb27d61c8b2c35247691035",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
