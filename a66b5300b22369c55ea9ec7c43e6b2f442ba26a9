@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "18f7ebe2_63bf62e2",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-09-29T08:58:16Z",
+      "side": 1,
+      "message": "nit: it might be better to wrap this line for readability.",
+      "revId": "a66b5300b22369c55ea9ec7c43e6b2f442ba26a9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
