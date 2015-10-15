@@ -31,7 +31,7 @@
     publishers:
       - archive:
          artifacts: >
-           buck-out/gen/*.war,buck-out/gen/plugins/*/*.jar,buck-out/gen/*api/*api.jar,
+           buck-out/gen/**/*.war,buck-out/gen/plugins/*/*.jar,buck-out/gen/*api/*api.jar,
            buck-out/gen/gerrit-acceptance-framework/*.jar
 
          excludes: 'buck-out/gen/plugins/core*/**/*.jar'
