@@ -16,6 +16,24 @@
       "revId": "54c9b41970cf9c8c98e828252f63949ac2051f3c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d92002e1_28c8eb87",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-10-15T20:26:19Z",
+      "side": 1,
+      "message": "Path is actually different now between the stable branches and master: wanted to avoid to have different scripts and I\u0027ve opted for a find of the file starting from buck-out/gen.\n\nMore than happy to simplify it if you have a bright idea :-)",
+      "parentUuid": "39a3de81_a3d29a2d",
+      "revId": "54c9b41970cf9c8c98e828252f63949ac2051f3c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
