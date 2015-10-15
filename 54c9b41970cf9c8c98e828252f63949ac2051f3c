@@ -52,6 +52,24 @@
       "revId": "54c9b41970cf9c8c98e828252f63949ac2051f3c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f92946cb_49c72176",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-10-15T22:16:44Z",
+      "side": 1,
+      "message": "Good to know that buck shows you the output of a target ... thanks !",
+      "parentUuid": "d92002e1_68c2e367",
+      "revId": "54c9b41970cf9c8c98e828252f63949ac2051f3c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
