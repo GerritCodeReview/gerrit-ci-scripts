@@ -34,6 +34,24 @@
       "revId": "54c9b41970cf9c8c98e828252f63949ac2051f3c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d92002e1_68c2e367",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2015-10-15T20:54:09Z",
+      "side": 1,
+      "message": "I see, you want one script to work on all old and new Buck versin ;-) Then the way to go is to ask ... Buck where it\u0027s:\n\n  buck targets --show_output //:gerrit | awk \u0027{print $2}\u0027\n  Using buckd.\n  [-] PARSING BUCK FILES...FINISHED 0,5s [100%]\n  buck-out/gen/gerrit/gerrit.war",
+      "parentUuid": "d92002e1_28c8eb87",
+      "revId": "54c9b41970cf9c8c98e828252f63949ac2051f3c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
