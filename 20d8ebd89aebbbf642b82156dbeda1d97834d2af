@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d9e9e22c_00fd6698",
+        "filename": "jenkins/gerrit-buck-plugin-reviewassistant.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-10-19T07:42:21Z",
+      "side": 1,
+      "message": "stable-2.10 is a maven build: you need to define a separate YAML file for this using the mvn template",
+      "range": {
+        "startLine": 6,
+        "startChar": 6,
+        "endLine": 6,
+        "endChar": 19
+      },
+      "revId": "20d8ebd89aebbbf642b82156dbeda1d97834d2af",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
