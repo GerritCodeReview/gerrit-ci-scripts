@@ -16,6 +16,24 @@
       "revId": "6c32e86b16fdaae26edfa3c1cd48b9fc15058782",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56a8615b_84bd26ee",
+        "filename": "jenkins/gerrit-buck-plugin-gh-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-10-23T07:30:06Z",
+      "side": 1,
+      "message": "Yeah, good idea :-)",
+      "parentUuid": "96973902_9ed6dd24",
+      "revId": "6c32e86b16fdaae26edfa3c1cd48b9fc15058782",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
