@@ -1,0 +1,8 @@
+- project:
+    name: owners
+    branch:
+      - stable-2.11
+      - stable-2.10
+    jobs:
+      - 'plugin-owners-{branch}'
+
