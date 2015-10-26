@@ -1,0 +1,9 @@
+- project:
+    name: automerge-plugin
+    organization: GerritForge
+    branch:
+      - stable-2.11
+      - stable-2.10
+    jobs:
+      - 'plugin-{name}-gh-{branch}'
+
