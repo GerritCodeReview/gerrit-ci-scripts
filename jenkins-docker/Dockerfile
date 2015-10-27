@@ -52,4 +52,4 @@ COPY gerrit-ci-scripts.xml /usr/share/jenkins/ref/jobs/gerrit-ci-scripts/config.
 RUN mkdir -p /usr/share/jenkins/ref/jobs/gerrit-ci-scripts-manual/
 COPY gerrit-ci-scripts-manual.xml /usr/share/jenkins/ref/jobs/gerrit-ci-scripts-manual/config.xml
 
-COPY gitconfig /usr/share/jenkins/ref/.gitconfig
+COPY gitconfig $HOME/.gitconfig
