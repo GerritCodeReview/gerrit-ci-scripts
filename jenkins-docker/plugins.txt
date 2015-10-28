@@ -3,3 +3,5 @@ git-client:latest
 scm-api:latest
 credentials:latest
 envinject:latest
+github-api:latest
+github-oauth:latest
