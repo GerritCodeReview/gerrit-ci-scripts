@@ -2,6 +2,10 @@ FROM jenkins
 
 USER root
 
+# Override Jenkins start-up script
+RUN mv /usr/local/bin/jenkins.sh /usr/local/bin/run-jenkins.sh
+COPY jenkins.sh /usr/local/bin/
+
 RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \
@@ -45,12 +49,21 @@ COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
 USER jenkins
 
-COPY plugins.txt /usr/share/jenkins/ref/
-RUN plugins.sh /usr/share/jenkins/ref/plugins.txt
-COPY number-executors.groovy /usr/share/jenkins/ref/init.groovy.d/
-RUN mkdir -p /usr/share/jenkins/ref/jobs/gerrit-ci-scripts/
-COPY gerrit-ci-scripts.xml /usr/share/jenkins/ref/jobs/gerrit-ci-scripts/config.xml
-RUN mkdir -p /usr/share/jenkins/ref/jobs/gerrit-ci-scripts-manual/
-COPY gerrit-ci-scripts-manual.xml /usr/share/jenkins/ref/jobs/gerrit-ci-scripts-manual/config.xml
+ENV JENKINS_REF /usr/share/jenkins/ref/
+ENV OAUTH_ID 326d197edb60653fdfcb
+ENV OAUTH_SECRET ae9177**********************************
+ENV JENKINS_API_USER lucamilanesio
+ENV JENKINS_API_PASSWORD abc*************************
 
-COPY gitconfig /usr/share/jenkins/ref/.gitconfig
+COPY config.xml $JENKINS_REF
+COPY config.sh /usr/local/bin/
+COPY plugins.txt $JENKINS_REF
+RUN plugins.sh $JENKINS_REF/plugins.txt
+COPY number-executors.groovy $JENKINS_REF/init.groovy.d/
+RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/
+COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
+RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts-manual/
+COPY gerrit-ci-scripts-manual.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
+
+COPY gitconfig $JENKINS_REF/.gitconfig
+
