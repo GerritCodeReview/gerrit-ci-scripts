@@ -1,0 +1,8 @@
+- project:
+    name: gerrit-oauth-provider
+    organization: thesamet
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-gh-{branch}'
+
