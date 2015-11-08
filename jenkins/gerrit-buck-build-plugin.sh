@@ -13,3 +13,10 @@ rm -Rf buck-out
 export BUCK_CLEAN_REPO_IF_DIRTY=y
 buck build -v 3 plugins/{name}
 
+# Extract version information
+PLUGIN_JAR=$(ls buck-out/gen/plugins/{name}/{name}.jar)
+tar xf $PLUGIN_JAR META-INF/MANIFEST.MF
+PLUGIN_VERSION=$(grep "Implementation-Version" META-INF/MANIFEST.MF | cut -d ' ' -f 2)
+
+echo "$PLUGIN_VERSION" > $PLUGIN_JAR-version
+
