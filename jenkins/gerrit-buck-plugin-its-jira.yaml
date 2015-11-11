@@ -1,8 +1,0 @@
-- project:
-    name: jira
-    branch:
-      - master
-      - stable-2.11
-    jobs:
-      - 'plugin-its-{name}-{branch}'
-

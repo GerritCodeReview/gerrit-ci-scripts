@@ -1,7 +1,0 @@
-- project:
-    name: motd
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-

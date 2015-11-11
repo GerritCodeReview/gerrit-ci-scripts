@@ -1,7 +1,0 @@
-- project:
-    name: websession-flatfile
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
