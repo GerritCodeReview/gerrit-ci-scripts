@@ -1,9 +1,0 @@
-- project:
-    name: gerrit-oauth-provider
-    organization: davido
-    branch:
-      - master
-      - stable-2.10
-    jobs:
-      - 'plugin-{name}-gh-{branch}'
-
