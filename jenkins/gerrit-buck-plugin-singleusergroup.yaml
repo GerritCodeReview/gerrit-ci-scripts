@@ -1,7 +1,0 @@
-- project:
-    name: singleusergroup
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
