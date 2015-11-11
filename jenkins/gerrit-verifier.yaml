@@ -1,0 +1,44 @@
+- job:
+    name: 'Gerrit-verifier'
+    description: "Gerrit build of open change with BUCK\n"
+    parameters:
+      - string:
+          name: REFSPEC
+          description: "Git refspec to use for fetching changes"
+      - string:
+          name: BRANCH
+          description: "Git branch or SHA1 to checkout"
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+    logrotate:
+      numToKeep: 20
+      artifactNumToKeep: 20
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         refspec: $REFSPEC
+         branches:
+           - $BRANCH
+         submodule:
+           recursive: true
+
+    builders:
+      - shell:
+         !include-raw-escape gerrit-buck-build.sh
+
+- job:
+    name: 'Gerrit-verifier-flow'
+- job:
+      name: test_job
+      project-type: flow
+      dsl: |
+       !include-raw-escale gerrit-verifier-flow.groovy
