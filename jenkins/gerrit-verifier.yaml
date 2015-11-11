@@ -1,0 +1,66 @@
+- job:
+    name: 'Gerrit-verifier'
+    description: "Gerrit build of open change with BUCK\n"
+    parameters:
+      - string:
+          name: CHANGE_URL
+          description: "Gerrit Change URL to build"
+      - string:
+          name: REFSPEC
+          description: "Git refspec to use for fetching changes"
+      - string:
+          name: BRANCH
+          description: "Git branch or SHA1 to checkout"
+    wrappers:
+      - timeout:
+          timeout: 60
+          fail: true
+      - timestamps
+
+    logrotate:
+      numToKeep: 4096
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         refspec: $REFSPEC
+         branches:
+           - $BRANCH
+         submodule:
+           recursive: true
+    builders:
+      - shell: |
+          set +x
+          echo "Building $CHANGE_URL"
+          echo '============================================================='
+          echo ''
+      - shell: |
+          set +x
+          echo 'Build'
+          echo '----------------------------------------------'
+          rm -Rf buck-out
+          export BUCK_CLEAN_REPO_IF_DIRTY=y
+          buck build api plugins:core release
+      - shell: |
+          set +x
+          echo 'Test'
+          echo '----------------------------------------------'
+          rm -Rf plugins/*
+          buck test --exclude flaky slow > test.out
+          set TEST_EXIT=$?
+          (cat test.out | grep -v com.google.inject.internal.util.Stopwatch) || true
+          echo '----------------------------------------------'
+          exit $TEST_EXIT
+
+- job:
+    name: 'Gerrit-verifier-flow'
+    project-type: flow
+    triggers:
+      - timed: 'H/10 * * * *'
+    dsl:
+       !include-raw: gerrit-verifier-flow.groovy
