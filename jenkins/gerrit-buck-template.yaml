@@ -1,6 +1,19 @@
 - job-template:
     name: '{name}-{branch}'
     description: "{name} {branch} branch build with BUCK\n"
+    parameters:
+      - string:
+          name: REFSPEC
+          default: "+refs/heads/*:refs/remotes/origin/*"
+          description: "Git refspec to use for fetching changes"
+      - string:
+          name: BRANCH
+          default: origin/{branch}
+          description: "Git branch or SHA1 to checkout"
+- string:
+        name: FOO
+        default: bar
+        description: "A parameter named FOO, defaults to 'bar'."
     wrappers:
       - timeout:
           timeout: 30
@@ -18,8 +31,9 @@
     scm:
       - git:
          url: https://gerrit.googlesource.com/gerrit
+         refspec: $REFSPEC
          branches:
-           - origin/{branch}
+           - $BRANCH
          submodule:
            recursive: true
     triggers:
