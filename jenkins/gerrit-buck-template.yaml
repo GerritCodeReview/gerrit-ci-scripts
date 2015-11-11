@@ -1,6 +1,10 @@
 - job-template:
     name: '{name}-{branch}'
     description: "{name} {branch} branch build with BUCK\n"
+    parameters:
+      - string:
+          refspec: +refs/heads/*:refs/remotes/origin/*
+          branch: origin/{branch}
     wrappers:
       - timeout:
           timeout: 30
@@ -18,8 +22,9 @@
     scm:
       - git:
          url: https://gerrit.googlesource.com/gerrit
+         refspec: $refspec
          branches:
-           - origin/{branch}
+           - $branch
          submodule:
            recursive: true
     triggers:
