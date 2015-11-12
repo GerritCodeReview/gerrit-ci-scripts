@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3b203791_75178826",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 25
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2015-11-12T02:44:15Z",
+      "side": 1,
+      "message": "Nit: trailing blank, here and below.",
+      "range": {
+        "startLine": 23,
+        "startChar": 57,
+        "endLine": 23,
+        "endChar": 58
+      },
+      "revId": "6fc65877809c3af2df5ddee5d9c6603e6f723090",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
