@@ -59,8 +59,9 @@ def gerritReview(buildUrl,changeNum, sha1, verified) {
     return addReviewerExit
   }
 
-  def jsonPayload = '{"labels":{"Code-Review":0,"Verified":' + verified +
-                    '}, "message": "Gerrit-CI Build: ' + buildUrl + '"}'
+  def jsonPayload = '{"labels":{"Code-Review":0,"Verified":' + verified + '},' + 
+                    ' "message": "Gerrit-CI Build: ' + buildUrl + '", ' +
+                    ' "notify" : "OWNER" }'
   def addVerifiedExit = gerritPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
                                    jsonPayload)
 
