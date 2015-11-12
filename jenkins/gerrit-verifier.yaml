@@ -12,7 +12,7 @@
           fi
           buck test --no-results-cache --exclude flaky > test.out
           set TEST_EXIT=$?
-          (cat test.out | grep -v com.google.inject.internal.util.Stopwatch) || true
+          (cat test.out | grep -v com.google.inject.internal) || true
           echo '----------------------------------------------'
           exit $TEST_EXIT
 
