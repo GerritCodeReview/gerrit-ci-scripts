@@ -18,6 +18,9 @@ RUN apt-get update && apt-get install -y \
     maven \
     && rm -rf /var/lib/apt/lists/*
 
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN sudo apt-get install -y nodejs
+
 RUN mkdir -p /opt/ && git clone https://git.openstack.org/openstack-infra/jenkins-job-builder /opt/jenkins_job_builder
 
 RUN pip install /opt/jenkins_job_builder
