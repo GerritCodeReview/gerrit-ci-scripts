@@ -70,11 +70,6 @@
           set +x
           echo "Building $CHANGE_URL"
           echo '============================================================='
-          echo ''
-      - shell: |
-          set +x
-          echo 'Build'
-          echo '----------------------------------------------'
           rm -Rf buck-out
           export BUCK_CLEAN_REPO_IF_DIRTY=y
           buck build api plugins:core release
