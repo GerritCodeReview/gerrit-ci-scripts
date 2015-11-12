@@ -10,9 +10,9 @@
           then
             export GERRIT_ENABLE_NOTEDB=TRUE
           fi
-          buck test --no-results-cache --exclude flaky > test.out
+          buck test --no-results-cache --exclude flaky > test.out 2>&1
           set TEST_EXIT=$?
-          (cat test.out | grep -v com.google.inject.internal.util.Stopwatch) || true
+          (cat test.out | grep -v com.google.inject.internal) || true
           echo '----------------------------------------------'
           exit $TEST_EXIT
 
