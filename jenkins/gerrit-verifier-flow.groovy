@@ -103,7 +103,7 @@ for (change in changesJson) {
 
   def b
   ignore(FAILURE) {
-    b = build("Gerrit-verifier", REFSPEC: refspec, BRANCH: sha1,
+    b = build("Gerrit-verifier-default", REFSPEC: refspec, BRANCH: sha1,
               CHANGE_URL: changeUrl)
   }
   def result = b.getResult()
