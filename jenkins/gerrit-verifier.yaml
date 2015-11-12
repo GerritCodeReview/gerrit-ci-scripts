@@ -8,13 +8,26 @@
           rm -Rf plugins/*
           if [ "{dbmode}" == "notedb" ]
           then
-            export GERRIT_ENABLE_NOTEDB=TRUE 
+          export GERRIT_ENABLE_NOTEDB=TRUE
           fi
           echo "NoteDB=$GERRIT_ENABLE_NOTEDB" && buck test --no-results-cache --exclude flaky > test.out
           set TEST_EXIT=$?
           (cat test.out | grep -v com.google.inject.internal) || true
           echo '----------------------------------------------'
           exit $TEST_EXIT
+
+- builder:
+    name: fetch-all-submodules
+    builders:
+      - shell: |
+          set +x
+          export SUBMODULES=$(git submodule status | awk '{print $2}')
+          for module in $SUBMODULES
+          do
+          pushd $module
+          git fetch -q origin +refs/changes/*:refs/changes/*
+          popd
+          done
 
 - job-template:
     name: '{name}-{dbmode}'
@@ -50,8 +63,9 @@
          branches:
            - $BRANCH
          submodule:
-           recursive: true
+           recursive: false
     builders:
+      - fetch-all-submodules
       - shell: |
           set +x
           echo "Building $CHANGE_URL"
