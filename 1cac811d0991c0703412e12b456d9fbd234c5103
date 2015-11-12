@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb6267ec_496081e5",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2015-11-12T18:44:20Z",
+      "side": 1,
+      "message": "License is missing.",
+      "revId": "1cac811d0991c0703412e12b456d9fbd234c5103",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
