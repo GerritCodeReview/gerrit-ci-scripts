@@ -10,7 +10,7 @@
           then
             export GERRIT_ENABLE_NOTEDB=TRUE 
           fi
-          echo "NoteDB=$GERRIT_ENABLE_NOTEDB" && buck test --no-results-cache --exclude flaky slow > test.out
+          echo "NoteDB=$GERRIT_ENABLE_NOTEDB" && buck test --no-results-cache --exclude flaky > test.out
           set TEST_EXIT=$?
           (cat test.out | grep -v com.google.inject.internal.util.Stopwatch) || true
           echo '----------------------------------------------'
