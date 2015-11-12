@@ -17,6 +17,23 @@
           echo '----------------------------------------------'
           exit $TEST_EXIT
 
+- builder:
+    name: fetch-all-submodules
+    builders:
+      - shell: |
+          set +x
+          git submodule init
+          export SUBMODULES=$(git submodule status | awk '{print $2}')
+          for module in $SUBMODULES
+          do
+            echo "Fetching all changes refs for $module ..."
+            pushd $module > /dev/null
+            git fetch -q origin +refs/changes/*:refs/changes/*
+            popd > /dev/null
+          done
+          echo "Updating all submodules ..."
+          git submodule update
+
 - job-template:
     name: '{name}-{dbmode}'
     description: "Gerrit build of open change with BUCK\n"
@@ -50,9 +67,10 @@
          refspec: $REFSPEC
          branches:
            - $BRANCH
-         submodule:
-           recursive: true
+         disable-submodules: true
+
     builders:
+      - fetch-all-submodules
       - shell: |
           set +x
           echo "Building $CHANGE_URL"
