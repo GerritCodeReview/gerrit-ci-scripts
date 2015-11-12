@@ -12,6 +12,27 @@
           fi
           buck test --no-results-cache --exclude flaky
 
+- builder:
+    name: fetch-all-submodules
+    builders:
+      - shell: |
+          set +x
+          function fetch_submodules {
+            export SUBMODULES=$(git submodule status | awk '{print $2}')
+            for module in $SUBMODULES
+            do
+              echo "Fetching all changes refs for $module ..."
+              pushd $module > /dev/null
+              git fetch -q origin +refs/changes/*:refs/changes/*
+              popd > /dev/null
+            done
+          }
+          git submodule init
+          # Fetch submodules ONLY if last commit included a change in a submodule
+          ((git log -p -1 | grep -q -i subproject) && fetch_submodules) || true
+          echo "Updating all submodules ..."
+          git submodule update
+
 - job-template:
     name: '{name}-{dbmode}'
     description: "Gerrit build of open change with BUCK\n"
@@ -45,9 +66,10 @@
          refspec: $REFSPEC
          branches:
            - $BRANCH
-         submodule:
-           recursive: true
+         disable-submodules: true
+
     builders:
+      - fetch-all-submodules
       - shell: |
           set +x
           echo "Building $CHANGE_URL"
