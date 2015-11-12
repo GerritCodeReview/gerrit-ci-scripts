@@ -1,5 +1,23 @@
-- job:
-    name: 'Gerrit-verifier'
+- builder:
+    name: test-gerrit
+    builders:
+      - shell: |
+          set +x
+          echo 'Test with DB={dbmode}'
+          echo '----------------------------------------------'
+          rm -Rf plugins/*
+          if [ "{dbmode}" == "notedb" ]
+          then
+            export GERRIT_ENABLE_NOTEDB=TRUE
+          fi
+          buck test --no-results-cache --exclude flaky > test.out
+          set TEST_EXIT=$?
+          (cat test.out | grep -v com.google.inject.internal.util.Stopwatch) || true
+          echo '----------------------------------------------'
+          exit $TEST_EXIT
+
+- job-template:
+    name: '{name}-{dbmode}'
     description: "Gerrit build of open change with BUCK\n"
     parameters:
       - string:
@@ -46,16 +64,17 @@
           rm -Rf buck-out
           export BUCK_CLEAN_REPO_IF_DIRTY=y
           buck build api plugins:core release
-      - shell: |
-          set +x
-          echo 'Test'
-          echo '----------------------------------------------'
-          rm -Rf plugins/*
-          buck test --exclude flaky slow > test.out
-          set TEST_EXIT=$?
-          (cat test.out | grep -v com.google.inject.internal.util.Stopwatch) || true
-          echo '----------------------------------------------'
-          exit $TEST_EXIT
+      - test-gerrit:
+          dbmode: "{dbmode}"
+
+- project:
+    name: Gerrit-verifier
+    dbmode:
+      - default
+      - notedb
+    jobs:
+      - '{name}-{dbmode}'
+
 
 - job:
     name: 'Gerrit-verifier-flow'
