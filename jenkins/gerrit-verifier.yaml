@@ -3,6 +3,7 @@
     builders:
       - shell: |
           set +x
+          set +e
           echo 'Test with DB={dbmode}'
           echo '----------------------------------------------'
           rm -Rf plugins/*
@@ -10,10 +11,11 @@
           then
             export GERRIT_ENABLE_NOTEDB=TRUE
           fi
-          buck test --no-results-cache --exclude flaky > test.out
+          buck test --no-results-cache --exclude flaky > test.out 2>&1
           set TEST_EXIT=$?
-          (cat test.out | grep -v com.google.inject.internal.util.Stopwatch) || true
+          cat test.out | grep -v com.google.inject.internal
           echo '----------------------------------------------'
+          set -e
           exit $TEST_EXIT
 
 - job-template:
