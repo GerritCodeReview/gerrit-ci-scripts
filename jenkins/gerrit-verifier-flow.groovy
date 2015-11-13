@@ -30,6 +30,7 @@ class Globals {
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
   static int maxChanges = 100
   static int numRetryBuilds = 3
+  static int myAccountId = 1022687
 }
 
 def gerritPost(url, jsonPayload) {
@@ -74,47 +75,8 @@ def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
   return addVerifiedExit
 }
 
-def lastBuild = build.getPreviousSuccessfulBuild()
-def logOut = new ByteArrayOutputStream()
-if(lastBuild != null) {
-  lastBuild.getLogText().writeLogTo(0,logOut)
-}
-
-def lastLog = new String(logOut.toByteArray())
-def lastBuildStartTimeMillis = lastBuild == null ?
-  (System.currentTimeMillis() - 1800000) : lastBuild.getStartTimeInMillis()
-def sinceMillis = lastBuildStartTimeMillis - 30000
-def since = Globals.tsFormat.format(new Date(sinceMillis))
-
-if(lastBuild != null) {
-  println "Last successful build was " + lastBuild.toString()
-}
-
-def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
-
-def requestedChangeId = params.get("CHANGE_ID")
-
-queryUrl = requestedChangeId.isEmpty() ? 
-  new URL(Globals.gerrit + "changes/?pp=0&O=3&n=" + Globals.maxChanges + "&q=" +
-                      gerritQuery.encodeURL()) :
-  new URL(Globals.gerrit + "changes/?pp=0&O=3&q=" + requestedChangeId)
-
-def changes = queryUrl.getText().substring(5)
-def jsonSlurper = new JsonSlurper()
-def changesJson = jsonSlurper.parseText(changes)
-int numChanges = changesJson.size()
-
-println "Gerrit has " + numChanges + " change(s) since " + since
-println "================================================================================"
-
-
-for (change in changesJson) {
+def buildChange(change) {
   def sha1 = change.current_revision
-  if(lastLog.contains(sha1)) {
-      println "Skipping SHA1 " + sha1 + " because has been already built by " + lastBuild
-      continue
-  }
-
   def changeNum = change._number
   def revision = change.revisions.get(sha1)
   def ref = revision.ref
@@ -122,6 +84,7 @@ for (change in changesJson) {
   def branch = change.branch
   def changeUrl = Globals.gerrit + "#/c/" + changeNum + "/" + patchNum
   def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
+
   println "Building Change " + changeUrl
 
   def b
@@ -143,7 +106,67 @@ for (change in changesJson) {
     }
 
     result = b.getResult()
-    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1, "NoteDB - ")    
+    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,
+      result == Result.SUCCESS ? +1:-1, "NoteDB - ")
   }
 }
+
+
+def lastBuild = build.getPreviousSuccessfulBuild()
+def logOut = new ByteArrayOutputStream()
+if(lastBuild != null) {
+  lastBuild.getLogText().writeLogTo(0,logOut)
+}
+
+def lastLog = new String(logOut.toByteArray())
+def lastBuildStartTimeMillis = lastBuild == null ?
+  (System.currentTimeMillis() - 1800000) : lastBuild.getStartTimeInMillis()
+def sinceMillis = lastBuildStartTimeMillis - 30000
+def since = Globals.tsFormat.format(new Date(sinceMillis))
+
+if(lastBuild != null) {
+  println "Last successful build was " + lastBuild.toString()
+}
+
+def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
+
+def requestedChangeId = params.get("CHANGE_ID")
+
+def processAll = requestedChangeId.equals("ALL")
+
+queryUrl = processAll ?
+  new URL(Globals.gerrit + "changes/?pp=0&O=3&n=" + Globals.maxChanges + "&q=" +
+                      gerritQuery.encodeURL()) :
+  new URL(Globals.gerrit + "changes/?pp=0&O=3&q=" + requestedChangeId)
+
+def changes = queryUrl.getText().substring(5)
+def jsonSlurper = new JsonSlurper()
+def changesJson = jsonSlurper.parseText(changes)
+int numChanges = changesJson.size()
+
+println "Gerrit has " + numChanges + " change(s) since " + since
+println "================================================================================"
+
+
+for (change in changesJson) {
+  def sha1 = change.current_revision
+  if(processAll && lastLog.contains(sha1)) {
+      println "Skipping SHA1 " + sha1 + " because has been already built by " + lastBuild
+      continue
+  }
+
+  def verified = change.labels.Verified
+  def approved = verified.approved
+  def rejected = verified.rejected 
+
+  if(processAll && approved != null && approved._account_id == Globals.myAccountId) {
+    println "I have already approved " + sha1 + " commit: SKIPPING"
+  } else if(processAll && rejected != null && rejected._account_id == Globals.myAccountId) {
+    println "I have already rejected " + sha1 + " commit: SKIPPING"
+  } else {
+    buildChange(change)
+  }
+}
+
+
 
