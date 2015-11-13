@@ -92,6 +92,11 @@
 - job:
     name: 'Gerrit-verifier-flow'
     project-type: flow
+    parameters:
+      - string:
+          name: CHANGE_ID
+          description: Gerrit Change-ID to build and verify
+          default: ""
     triggers:
       - timed: 'H/10 * * * *'
     dsl:
