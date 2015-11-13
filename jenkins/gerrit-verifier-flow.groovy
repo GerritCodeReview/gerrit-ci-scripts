@@ -30,6 +30,7 @@ class Globals {
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
   static int maxChanges = 100
   static int numRetryBuilds = 3
+  static int myAccountId = 1022687
 }
 
 def gerritPost(url, jsonPayload) {
@@ -74,6 +75,42 @@ def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
   return addVerifiedExit
 }
 
+def buildChange(change) {
+  def changeNum = change._number
+  def revision = change.revisions.get(sha1)
+  def ref = revision.ref
+  def patchNum = revision._number
+  def branch = change.branch
+  def changeUrl = Globals.gerrit + "#/c/" + changeNum + "/" + patchNum
+  def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
+
+  println "Building Change " + changeUrl
+
+  def b
+  ignore(FAILURE) {
+    retry ( Globals.numRetryBuilds ) {
+      b = build("Gerrit-verifier-default", REFSPEC: refspec, BRANCH: sha1,
+                CHANGE_URL: changeUrl)
+    }
+  }
+  def result = b.getResult()
+  gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1, "")
+
+  if(result == Result.SUCCESS && branch=="master") {
+    ignore(FAILURE) {
+      retry ( Globals.numRetryBuilds ) {
+        b = build("Gerrit-verifier-notedb", REFSPEC: refspec, BRANCH: sha1,
+                  CHANGE_URL: changeUrl)
+      }
+    }
+
+    result = b.getResult()
+    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,
+      result == Result.SUCCESS ? +1:-1, "NoteDB - ")
+  }
+}
+
+
 def lastBuild = build.getPreviousSuccessfulBuild()
 def logOut = new ByteArrayOutputStream()
 if(lastBuild != null) {
@@ -115,35 +152,18 @@ for (change in changesJson) {
       continue
   }
 
-  def changeNum = change._number
-  def revision = change.revisions.get(sha1)
-  def ref = revision.ref
-  def patchNum = revision._number
-  def branch = change.branch
-  def changeUrl = Globals.gerrit + "#/c/" + changeNum + "/" + patchNum
-  def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
-  println "Building Change " + changeUrl
+  def verified = change.labels.Verified
+  def approved = verified.approved
+  def rejected = verified.rejected 
 
-  def b
-  ignore(FAILURE) {
-    retry ( Globals.numRetryBuilds ) {
-      b = build("Gerrit-verifier-default", REFSPEC: refspec, BRANCH: sha1,
-                CHANGE_URL: changeUrl)
-    }
-  }
-  def result = b.getResult()
-  gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1, "")
-
-  if(result == Result.SUCCESS && branch=="master") {
-    ignore(FAILURE) {
-      retry ( Globals.numRetryBuilds ) {
-        b = build("Gerrit-verifier-notedb", REFSPEC: refspec, BRANCH: sha1,
-                  CHANGE_URL: changeUrl)
-      }
-    }
-
-    result = b.getResult()
-    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1, "NoteDB - ")    
+  if(approved != null && approved._account_id == Globals.myAccountId) {
+    println "I have already approved this change: SKIPPING"
+  } else if(rejected != null && rejected._account_id == Globals.myAccountId) {
+    println "I have already rejected this change: SKIPPING"
+  } else {
+    buildChange(change)
   }
 }
+
+
 
