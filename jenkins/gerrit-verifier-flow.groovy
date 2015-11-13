@@ -29,6 +29,7 @@ class Globals {
   static long curlTimeout = 10000
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
   static int maxChanges = 100
+  static int numRetryBuilds = 3
 }
 
 def gerritPost(url, jsonPayload) {
@@ -118,8 +119,10 @@ for (change in changesJson) {
 
   def b
   ignore(FAILURE) {
-    b = build("Gerrit-verifier-default", REFSPEC: refspec, BRANCH: sha1,
-              CHANGE_URL: changeUrl)
+    retry ( Globals.numRetryBuilds ) {
+      b = build("Gerrit-verifier-default", REFSPEC: refspec, BRANCH: sha1,
+                CHANGE_URL: changeUrl)
+    }
   }
   def result = b.getResult()
 
