@@ -92,8 +92,14 @@ if(lastBuild != null) {
 
 def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
 
-def changes = new URL(Globals.gerrit + "changes/?pp=0&O=3&n=" + Globals.maxChanges + "&q=" +
-                      gerritQuery.encodeURL()).getText().substring(5)
+def requestedChangeId = params.get("CHANGE_ID")
+
+queryUrl = requestedChangeId.isEmpty() ? 
+  new URL(Globals.gerrit + "changes/?pp=0&O=3&n=" + Globals.maxChanges + "&q=" +
+                      gerritQuery.encodeURL()) :
+  new URL(Globals.gerrit + "changes/?pp=0&O=3&q=" + requestedChangeId)
+
+def changes = queryUrl.getText().substring(5)
 def jsonSlurper = new JsonSlurper()
 def changesJson = jsonSlurper.parseText(changes)
 int numChanges = changesJson.size()
