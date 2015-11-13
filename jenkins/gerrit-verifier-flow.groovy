@@ -31,6 +31,7 @@ class Globals {
   static int maxChanges = 100
   static int numRetryBuilds = 3
   static int myAccountId = 1022687
+  static int waitForResultTimeout = 10000
 }
 
 def gerritPost(url, jsonPayload) {
@@ -75,6 +76,19 @@ def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
   return addVerifiedExit
 }
 
+def waitForResult(build) {
+  def result = null
+  def startWait = System.currentTimeMillis
+  while(result == null && (System.currentTimeMillis - startWait) < Globals.waitForResultTimeout) {
+    result = build.getResult()
+    if(result == null) {
+      Thread.sleep(100) {
+      }
+    }
+  }
+  return result == null ? Result.FAILURE : result
+}
+
 def buildChange(change) {
   def sha1 = change.current_revision
   def changeNum = change._number
@@ -94,7 +108,7 @@ def buildChange(change) {
                 CHANGE_URL: changeUrl)
     }
   }
-  def result = b.getResult()
+  def result = waitForResult(b)
   gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1, "")
 
   if(result == Result.SUCCESS && branch=="master") {
@@ -105,7 +119,7 @@ def buildChange(change) {
       }
     }
 
-    result = b.getResult()
+    result = waitForResult(b)
     gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,
       result == Result.SUCCESS ? +1:-1, "NoteDB - ")
   }
