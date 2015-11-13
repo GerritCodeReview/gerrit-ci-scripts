@@ -36,7 +36,7 @@ class Globals {
 
 def gerritPost(url, jsonPayload) {
   def gerritPostUrl = Globals.gerrit + url
-  def curl = ['curl', '-n',
+  def curl = ['curl', '-n', '-s', '-S',
     "-X", "POST", "-H", "Content-Type: application/json",
     "--data-binary", jsonPayload,
     gerritPostUrl ]
@@ -46,10 +46,15 @@ def gerritPost(url, jsonPayload) {
   proc.consumeProcessOutput(sout, serr)
   proc.waitForOrKill(Globals.curlTimeout)
   def curlExit = proc.exitValue()
-  println "--- OUTPUT ---"
-  println sout
-  println "--- ERROR ---"
-  println serr
+  if(!sout.toString().trim().isEmpty()) {
+    println "--- OUTPUT ---"
+    println sout
+  }
+  if(!sout.toString().trim().isEmpty()) {
+    println "--- ERROR ---"
+    println serr    
+  }
+
   println "--- EXIT: " + curlExit + " ---"
   return curlExit
 }
