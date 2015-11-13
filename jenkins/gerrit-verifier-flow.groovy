@@ -52,7 +52,7 @@ def gerritPost(url, jsonPayload) {
   return curlExit
 }
 
-def gerritReview(buildUrl,changeNum, sha1, verified) {
+def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
   def addReviewerExit = gerritPost("a/changes/" + changeNum + "/reviewers", '{ "reviewer" : "' +
                                    Globals.gerritReviewer + '" }')
   if(addReviewerExit != 0) {
@@ -60,8 +60,8 @@ def gerritReview(buildUrl,changeNum, sha1, verified) {
     return addReviewerExit
   }
 
-  def jsonPayload = '{"labels":{"Code-Review":0,"Verified":' + verified + '},' + 
-                    ' "message": "Gerrit-CI Build: ' + buildUrl + '", ' +
+  def jsonPayload = '{"labels":{"Code-Review":0,"Verified":' + verified + '},' +
+                    ' "message": "' + msgPrefix + "Gerrit-CI Build: " + buildUrl + '", ' +
                     ' "notify" : "' + (verified < 0 ? "OWNER":"NONE") + '" }'
   def addVerifiedExit = gerritPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
                                    jsonPayload)
@@ -131,7 +131,18 @@ for (change in changesJson) {
     }
   }
   def result = b.getResult()
+  gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1, "")
 
-  gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1)
+  if(result == Result.SUCCESS) {
+    ignore(FAILURE) {
+      retry ( Globals.numRetryBuilds ) {
+        b = build("Gerrit-verifier-notedb", REFSPEC: refspec, BRANCH: sha1,
+                  CHANGE_URL: changeUrl)
+      }
+    }
+
+    result = b.getResult()
+    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1, "NoteDB - ")    
+  }
 }
 
