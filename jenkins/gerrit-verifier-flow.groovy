@@ -60,6 +60,10 @@ def gerritPost(url, jsonPayload) {
 }
 
 def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
+  if(verified == 0) {
+    return;
+  }
+
   def addReviewerExit = gerritPost("a/changes/" + changeNum + "/reviewers", '{ "reviewer" : "' +
                                    Globals.gerritReviewer + '" }')
   if(addReviewerExit != 0) {
@@ -94,6 +98,21 @@ def waitForResult(build) {
   return result == null ? Result.FAILURE : result
 }
 
+def getVerified(result) {
+  if(result == null) {
+    return 0;
+  }
+
+  switch(result) {
+    case Result.SUCCESS:
+      return +1;
+    case Result.FAILURE:
+      return -1;
+    default:
+      return 0;
+  }
+}
+
 def buildChange(change) {
   def sha1 = change.current_revision
   def changeNum = change._number
@@ -114,7 +133,7 @@ def buildChange(change) {
     }
   }
   def result = waitForResult(b)
-  gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,result == Result.SUCCESS ? +1:-1, "")
+  gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,getVerified(result), "")
 
   if(result == Result.SUCCESS && branch=="master") {
     ignore(FAILURE) {
@@ -125,8 +144,7 @@ def buildChange(change) {
     }
 
     result = waitForResult(b)
-    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,
-      result == Result.SUCCESS ? +1:-1, "NoteDB - ")
+    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1, getVerified(result), "NoteDB - ")
   }
 }
 
