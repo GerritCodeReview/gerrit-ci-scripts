@@ -65,6 +65,7 @@
          submodule:
            recursive: false
     builders:
+      - shell: "git revert 3969b14ec9a3bbbb1aeda46191e59c3396761b44"
       - fetch-all-submodules
       - shell: |
           set +x
