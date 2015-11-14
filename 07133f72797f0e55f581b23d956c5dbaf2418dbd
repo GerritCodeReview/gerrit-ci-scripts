@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b4d3387_04b396c3",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-14T17:39:29Z",
+      "side": 1,
+      "message": "I think we only need to do this if the change under test includes a submodule update.",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 28,
+        "endChar": 14
+      },
+      "revId": "07133f72797f0e55f581b23d956c5dbaf2418dbd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
