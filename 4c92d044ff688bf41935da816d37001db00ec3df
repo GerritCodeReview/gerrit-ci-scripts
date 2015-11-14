@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b4d3387_24ae9259",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2015-11-14T16:56:14Z",
+      "side": 1,
+      "message": "There\u0027s also Result.UNSTABLE, right? Though, none of our jobs currently use it. (I guess the other two are ABORTED and NOT_BUILT.)  Don\u0027t know if you want to explicitly call them out in front of the default case.",
+      "range": {
+        "startLine": 111,
+        "startChar": 4,
+        "endLine": 111,
+        "endChar": 12
+      },
+      "revId": "4c92d044ff688bf41935da816d37001db00ec3df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
