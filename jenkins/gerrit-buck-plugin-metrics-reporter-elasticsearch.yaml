@@ -1,0 +1,7 @@
+- project:
+    name: metrics-reporter-elasticsearch
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+

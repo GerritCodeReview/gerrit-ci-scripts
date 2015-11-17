@@ -1,0 +1,7 @@
+- project:
+    name: metrics-reporter-graphite
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
