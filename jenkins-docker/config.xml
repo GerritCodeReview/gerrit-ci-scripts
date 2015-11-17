@@ -87,7 +87,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plugins-stable-2.10</name>
+      <name>Plugins-stable-2.12</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -104,7 +104,7 @@
         <hudson.views.LastDurationColumn/>
         <hudson.views.BuildButtonColumn/>
       </columns>
-      <includeRegex>plugin-.*-stable-2.10</includeRegex>
+      <includeRegex>plugin-.*-stable-2.12</includeRegex>
       <recurse>false</recurse>
     </listView>
     <listView>
@@ -127,6 +127,28 @@
         <hudson.views.BuildButtonColumn/>
       </columns>
       <includeRegex>plugin-.*-stable-2.11</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Plugins-stable-2.10</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <includeRegex>plugin-.*-stable-2.10</includeRegex>
       <recurse>false</recurse>
     </listView>
     <listView>
