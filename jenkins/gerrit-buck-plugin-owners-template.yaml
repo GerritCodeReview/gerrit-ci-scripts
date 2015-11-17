@@ -35,4 +35,4 @@
          !include-raw gerrit-buck-build-owners-plugin.sh
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/plugins/gerrit-owners/gerrit-owners/owners.jar,buck-out/gen/plugins/gerrit-owners/gerrit-owners-autoassign/owners-autoassign.jar'
+         artifacts: 'buck-out/gen/plugins/gerrit-owners/gerrit-owners/owners.jar*,buck-out/gen/plugins/gerrit-owners/gerrit-owners-autoassign/owners-autoassign.jar'
