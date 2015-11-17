@@ -22,6 +22,30 @@
       "revId": "e23b678c20cc7fc94d2bc8c30e44c048be8cf0b8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b67630e_9857d54f",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-17T16:23:18Z",
+      "side": 1,
+      "message": "That\u0027s right: if we trigger the build manually we ACTUALLY WANT the build to be executed on that change, even a verified state was already there.\n\nLet me fix that behaviour.",
+      "parentUuid": "bb6267ec_af8ffddb",
+      "range": {
+        "startLine": 160,
+        "startChar": 2,
+        "endLine": 163,
+        "endChar": 59
+      },
+      "revId": "e23b678c20cc7fc94d2bc8c30e44c048be8cf0b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
