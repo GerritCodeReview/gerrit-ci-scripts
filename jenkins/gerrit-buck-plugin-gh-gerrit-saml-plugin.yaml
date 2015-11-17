@@ -1,0 +1,8 @@
+- project:
+    name: gerrit-saml-plugin
+    organization: thesamet
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-gh-{branch}'
+
