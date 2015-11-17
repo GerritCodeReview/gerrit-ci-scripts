@@ -22,6 +22,30 @@
       "revId": "07133f72797f0e55f581b23d956c5dbaf2418dbd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b67630e_1844259c",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-17T16:06:17Z",
+      "side": 1,
+      "message": "True, let me check if I can write the logic into it.",
+      "parentUuid": "1b4d3387_04b396c3",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 28,
+        "endChar": 14
+      },
+      "revId": "07133f72797f0e55f581b23d956c5dbaf2418dbd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
