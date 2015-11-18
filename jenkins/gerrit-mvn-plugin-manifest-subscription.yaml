@@ -1,0 +1,7 @@
+- project:
+    name: manifest-subscription-mvn
+    repo: manifest-subscription
+    branch:
+      - master
+    jobs:
+      - 'plugin-{repo}-mvn-{branch}'
