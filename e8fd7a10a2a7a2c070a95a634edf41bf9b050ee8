@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7bdf0ff3_2f14498d",
+        "filename": "jenkins/gerrit-mvn-plugin-manifest-subscription.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-18T23:54:38Z",
+      "side": 1,
+      "message": "Typically the plugins generate a jar with the same name of the repo ... but yours doesn\u0027t have an hyphen between \u0027manifest\u0027 and \u0027subscription\u0027 and thus fails the build :-(\n\nSee https://gerrit-ci.gerritforge.com/job/plugin-manifest-subscription-mvn-master/2/\n\nCan you change the jar name to match the repo name?",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 31
+      },
+      "revId": "e8fd7a10a2a7a2c070a95a634edf41bf9b050ee8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
