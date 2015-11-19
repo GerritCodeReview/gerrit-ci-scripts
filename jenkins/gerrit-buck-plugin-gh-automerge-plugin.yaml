@@ -1,5 +1,6 @@
 - project:
     name: automerge-plugin
+    repo: automerge-plugin
     organization: GerritForge
     branch:
       - stable-2.11
