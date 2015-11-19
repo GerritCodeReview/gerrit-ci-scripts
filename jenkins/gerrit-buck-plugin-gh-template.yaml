@@ -19,7 +19,7 @@
       - git:
          remotes:
            - origin:
-               url: https://github.com/{organization}/{name}
+               url: https://github.com/{organization}/{repo}
            - gerrit:
                url: https://gerrit.googlesource.com/gerrit
          branches:
