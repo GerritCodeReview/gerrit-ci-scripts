@@ -51,9 +51,9 @@
           description: "Git branch or SHA1 to checkout"
     wrappers:
       - timeout:
-          timeout: 60
+          timeout: 40
+          type: absolute
           fail: true
-      - timestamps
 
     logrotate:
       numToKeep: 4096
