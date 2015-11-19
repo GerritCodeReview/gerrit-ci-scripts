@@ -6,3 +6,4 @@ envinject:latest
 github-api:latest
 github-oauth:latest
 build-flow-plugin:latest
+build-timeout:latest

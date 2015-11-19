@@ -50,10 +50,18 @@
           name: BRANCH
           description: "Git branch or SHA1 to checkout"
     wrappers:
-      - timeout:
-          timeout: 60
-          fail: true
       - timestamps
+      - raw:
+          xml: |
+            <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.15">
+              <strategy class="hudson.plugins.build_timeout.impl.NoActivityTimeOutStrategy">
+                <timeoutSecondsString>300</timeoutSecondsString>
+              </strategy>
+              <timeoutEnvVar>BUILD_TIMEOUT</timeoutEnvVar>
+              <operationList>
+                <hudson.plugins.build__timeout.operations.FailOperation/>
+              </operationList>
+            </hudson.plugins.build__timeout.BuildTimeoutWrapper>
 
     logrotate:
       numToKeep: 4096
