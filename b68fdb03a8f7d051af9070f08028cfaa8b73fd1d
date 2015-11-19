@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7bdf0ff3_0ff94571",
+        "filename": "jenkins/gerrit-buck-plugin-gh-gerrit-ci-plugin.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2015-11-19T15:29:02Z",
+      "side": 1,
+      "message": "The plugin must be abled to be built also on 2.11 branch, after two pending changes are merged. Can be added later, though.",
+      "revId": "b68fdb03a8f7d051af9070f08028cfaa8b73fd1d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
