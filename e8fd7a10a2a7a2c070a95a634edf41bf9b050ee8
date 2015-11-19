@@ -22,6 +22,30 @@
       "revId": "e8fd7a10a2a7a2c070a95a634edf41bf9b050ee8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9bdcc3fe_f005c056",
+        "filename": "jenkins/gerrit-mvn-plugin-manifest-subscription.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1021862
+      },
+      "writtenOn": "2015-11-19T00:12:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7bdf0ff3_2f14498d",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 31
+      },
+      "revId": "e8fd7a10a2a7a2c070a95a634edf41bf9b050ee8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
