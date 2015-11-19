@@ -73,6 +73,8 @@
 
     builders:
       - fetch-all-submodules
+      - shell:
+          !include-raw-escape gerrit-buck-cleanup.sh
       - shell: |
           set +x
           echo "Building $CHANGE_URL"
