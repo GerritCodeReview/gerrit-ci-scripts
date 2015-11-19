@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bbd507d1_71a9d84f",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-19T12:39:04Z",
+      "side": 1,
+      "message": "Doesn\u0027t JJB have support for the build-timeout plugin?",
+      "range": {
+        "startLine": 53,
+        "startChar": 6,
+        "endLine": 63,
+        "endChar": 64
+      },
+      "revId": "311fc494a39c4ec8e1741d07748e4f1abc83cead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
