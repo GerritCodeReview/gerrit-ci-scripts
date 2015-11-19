@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bbd507d1_11ae4c59",
+        "filename": "jenkins/gerrit-buck-cleanup.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-11-19T12:42:05Z",
+      "side": 1,
+      "message": "How much have you tested this?  I would be a bit wary of killing processes like this.",
+      "revId": "8bdf7c33c90b091a3e758c028e4bb04aeca9d788",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
