@@ -16,6 +16,24 @@
       "revId": "8bdf7c33c90b091a3e758c028e4bb04aeca9d788",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bc1171a_cddfc927",
+        "filename": "jenkins/gerrit-buck-cleanup.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-19T13:33:38Z",
+      "side": 1,
+      "message": "Bearing in mind that we are alone on the machine (this is intended to be executed in a Docker container) and we are the only ones starting buck processes ... then it should be OK :-)\n\nAnything better will be appreciated though :-)",
+      "parentUuid": "bbd507d1_11ae4c59",
+      "revId": "8bdf7c33c90b091a3e758c028e4bb04aeca9d788",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
