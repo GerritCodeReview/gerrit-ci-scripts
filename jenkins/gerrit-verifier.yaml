@@ -51,9 +51,10 @@
           description: "Git branch or SHA1 to checkout"
     wrappers:
       - timeout:
-          timeout: 60
+          timeout: 300
+          type: no-activity
+          timeout-var: BUILD_TIMEOUT
           fail: true
-      - timestamps
 
     logrotate:
       numToKeep: 4096
