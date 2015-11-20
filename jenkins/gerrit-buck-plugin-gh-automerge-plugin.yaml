@@ -3,6 +3,8 @@
     repo: automerge-plugin
     organization: GerritForge
     branch:
+      - master
+      - stable-2.12
       - stable-2.11
       - stable-2.10
     jobs:
