@@ -1,5 +1,6 @@
 - project:
     name: quota
+    targets: quota
     branch:
       - master
       - stable-2.11

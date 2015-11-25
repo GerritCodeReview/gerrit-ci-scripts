@@ -1,5 +1,6 @@
 - project:
     name: serviceuser
+    targets: serviceuser
     branch:
       - master
       - stable-2.11

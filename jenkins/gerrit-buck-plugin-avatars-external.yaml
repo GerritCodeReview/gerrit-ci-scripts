@@ -1,5 +1,6 @@
 - project:
     name: avatars-external
+    targets: avatars-external
     branch:
       - master
     jobs:

@@ -1,5 +1,6 @@
 - project:
     name: uploadvalidator
+    targets: uploadvalidator
     branch:
       - master
       - stable-2.11

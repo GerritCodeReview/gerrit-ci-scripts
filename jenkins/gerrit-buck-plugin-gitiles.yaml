@@ -1,5 +1,6 @@
 - project:
     name: gitiles
+    targets: gitiles
     branch:
       - master
       - stable-2.12

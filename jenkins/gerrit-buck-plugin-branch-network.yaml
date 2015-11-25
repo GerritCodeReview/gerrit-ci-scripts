@@ -1,5 +1,6 @@
 - project:
     name: branch-network
+    targets: branch-network
     branch:
       - master
     jobs:

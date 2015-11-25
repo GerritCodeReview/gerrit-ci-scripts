@@ -1,5 +1,6 @@
 - project:
     name: avatars-gravatar
+    targets: avatars-gravatar
     branch:
       - master
     jobs:

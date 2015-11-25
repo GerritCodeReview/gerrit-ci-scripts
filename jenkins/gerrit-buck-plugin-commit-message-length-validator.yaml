@@ -1,5 +1,6 @@
 - project:
     name: commit-message-length-validator
+    targets: commit-message-length-validator
     branch:
       - master
     jobs:
