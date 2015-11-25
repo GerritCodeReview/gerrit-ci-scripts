@@ -11,12 +11,16 @@ git read-tree -u --prefix=plugins/{name} origin/{branch}
 
 rm -Rf buck-out
 export BUCK_CLEAN_REPO_IF_DIRTY=y
-buck build -v 3 plugins/{name}
+
+for target in {targets}
+do
+  buck build -v 3 $target
+done
 
 # Extract version information
-PLUGIN_JAR=$(ls buck-out/gen/plugins/{name}/{name}.jar)
-jar xf $PLUGIN_JAR META-INF/MANIFEST.MF
-PLUGIN_VERSION=$(grep "Implementation-Version" META-INF/MANIFEST.MF | cut -d ' ' -f 2)
-
-echo "$PLUGIN_VERSION" > $PLUGIN_JAR-version
-
+for jar in $(find buck-out/gen/plugins -name *{name}*jar)
+do
+  jar xf $jar META-INF/MANIFEST.MF
+  PLUGIN_VERSION=$(grep "Implementation-Version" META-INF/MANIFEST.MF | cut -d ' ' -f 2)
+  echo "$PLUGIN_VERSION" > $jar-version
+done
