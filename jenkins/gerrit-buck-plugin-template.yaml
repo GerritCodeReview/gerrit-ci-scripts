@@ -1,5 +1,6 @@
 - job-template:
     name: 'plugin-{name}-{branch}'
+    targets: 'plugins/{name}:{name}'
     description: "Plugin {name} {branch} branch build with BUCK\n"
     wrappers:
       - timeout:
@@ -35,4 +36,4 @@
          !include-raw gerrit-buck-build-plugin.sh
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/plugins/{name}/{name}.jar*'
+         artifacts: 'buck-out/gen/plugins/**/{name}*.jar*'
