@@ -1,5 +1,6 @@
 - project:
     name: javamelody
+    targets: all
     branch:
       - master
       - stable-2.11
