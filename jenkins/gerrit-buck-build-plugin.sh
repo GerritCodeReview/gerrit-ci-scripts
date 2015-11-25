@@ -4,19 +4,22 @@
 # graft the plugin onto the Gerrit repo.  We do this by checking
 # out the proper version of Gerrit, removing the plugin if it
 # exists, then use git read-tree to put the plugin we're
-# building in place.  
+# building in place.
 git checkout gerrit/{branch}
 rm -rf plugins/{name}
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 
 rm -Rf buck-out
 export BUCK_CLEAN_REPO_IF_DIRTY=y
-buck build -v 3 plugins/{name}
+TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
-# Extract version information
-PLUGIN_JAR=$(ls buck-out/gen/plugins/{name}/{name}.jar)
-jar xf $PLUGIN_JAR META-INF/MANIFEST.MF
-PLUGIN_VERSION=$(grep "Implementation-Version" META-INF/MANIFEST.MF | cut -d ' ' -f 2)
+buck build -v 3 $TARGETS
 
-echo "$PLUGIN_VERSION" > $PLUGIN_JAR-version
-
+for JAR in $(buck targets --show_output $TARGETS | awk '{{print $2}}')
+do
+    jar xf $JAR META-INF/MANIFEST.MF
+    PLUGIN_VERSION=$(grep "Implementation-Version" META-INF/MANIFEST.MF | cut -d ' ' -f 2)
+    DEST_JAR=buck-out/gen/plugins/{name}/$(basename $JAR)
+    [ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
+    echo "$PLUGIN_VERSION" > buck-out/gen/plugins/{name}/$(basename $JAR-version)
+done

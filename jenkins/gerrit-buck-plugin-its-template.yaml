@@ -1,5 +1,6 @@
 - job-template:
     name: 'plugin-its-{name}-{branch}'
+    defaults: buck-plugin
     description: "Plugin its-{name} {branch} branch build with BUCK\n"
     wrappers:
       - timeout:
