@@ -1,7 +1,7 @@
 - project:
     name: gerrit-saml-plugin
-    repo: gerrit-saml-plugin
     organization: thesamet
+    repo: gerrit-saml-plugin
     branch:
       - master
     jobs:
