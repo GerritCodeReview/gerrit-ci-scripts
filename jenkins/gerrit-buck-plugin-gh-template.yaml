@@ -1,5 +1,6 @@
 - job-template:
     name: 'plugin-{name}-gh-{branch}'
+    targets: plugins/{name}:{name}
     description: "Plugin {name} {branch} branch build with BUCK owned by {organization} and hosted on GitHub\n"
     wrappers:
       - timeout:
