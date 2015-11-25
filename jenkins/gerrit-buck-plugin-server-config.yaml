@@ -1,5 +1,6 @@
 - project:
     name: server-config
+    targets: server-config
     branch:
       - master
     jobs:

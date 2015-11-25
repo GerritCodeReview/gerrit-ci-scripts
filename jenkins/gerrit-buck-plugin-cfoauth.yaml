@@ -1,5 +1,6 @@
 - project:
     name: cfoauth
+    targets: cfoauth
     branch:
       - master
       - stable-2.11

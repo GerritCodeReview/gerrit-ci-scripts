@@ -1,5 +1,6 @@
 - project:
     name: bugzilla
+    targets: bugzilla
     branch:
       - master
       - stable-2.11

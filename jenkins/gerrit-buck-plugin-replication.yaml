@@ -1,5 +1,6 @@
 - project:
     name: replication
+    targets: replication
     branch:
       - master
       - stable-2.11

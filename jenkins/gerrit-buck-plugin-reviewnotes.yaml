@@ -1,5 +1,6 @@
 - project:
     name: reviewnotes
+    targets: reviewnotes
     branch:
       - master
       - stable-2.11

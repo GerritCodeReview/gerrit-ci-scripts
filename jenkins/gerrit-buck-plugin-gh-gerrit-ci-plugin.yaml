@@ -1,6 +1,7 @@
 - project:
     name: ci
     repo: gerrit-ci-plugin
+    targets: gerrit-ci-plugin
     organization: davido
     branch:
       - master

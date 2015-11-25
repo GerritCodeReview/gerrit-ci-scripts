@@ -35,4 +35,4 @@
          !include-raw gerrit-buck-build-plugin.sh
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/plugins/{name}/{name}.jar*'
+         artifacts: 'buck-out/gen/plugins/{name}/**/{name}.jar*'

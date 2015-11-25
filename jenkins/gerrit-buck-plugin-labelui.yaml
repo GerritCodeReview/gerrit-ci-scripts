@@ -1,5 +1,6 @@
 - project:
     name: labelui
+    targets: labelui
     branch:
       - master
     jobs:

@@ -1,5 +1,6 @@
 - project:
     name: metrics-reporter-jmx
+    targets: metrics-reporter-jmx
     branch:
       - master
     jobs:

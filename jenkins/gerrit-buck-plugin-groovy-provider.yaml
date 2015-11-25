@@ -1,5 +1,6 @@
 - project:
     name: groovy-provider
+    targets: groovy-provider
     branch:
       - master
       - stable-2.11

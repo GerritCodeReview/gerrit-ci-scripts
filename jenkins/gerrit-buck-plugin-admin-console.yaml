@@ -1,5 +1,6 @@
 - project:
     name: admin-console
+    targets: admin-console
     branch:
       - master
       - stable-2.11

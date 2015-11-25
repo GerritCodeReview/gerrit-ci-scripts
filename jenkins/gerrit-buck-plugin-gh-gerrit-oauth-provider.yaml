@@ -1,6 +1,7 @@
 - project:
     name: gerrit-oauth-provider
     repo: gerrit-oauth-provider
+    targets: gerrit-oauth-provider
     organization: davido
     branch:
       - master

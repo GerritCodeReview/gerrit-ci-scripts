@@ -1,5 +1,6 @@
 - project:
     name: reparent
+    targets: reparent
     branch:
       - master
     jobs:

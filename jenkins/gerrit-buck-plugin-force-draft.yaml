@@ -1,5 +1,6 @@
 - project:
     name: force-draft
+    targets: force-draft
     branch:
       - master
       - stable-2.12
