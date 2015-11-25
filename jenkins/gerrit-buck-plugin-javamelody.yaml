@@ -1,5 +1,6 @@
 - project:
     name: javamelody
+    targets: 'plugins/javamelody:javamelody-nodep plugins/javamelody:javamelody-deps plugins/javamelody:javamelody-datasource-interceptor plugins/javamelody:javamelody'
     branch:
       - master
       - stable-2.11
