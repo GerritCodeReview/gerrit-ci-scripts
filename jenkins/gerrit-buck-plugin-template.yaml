@@ -1,3 +1,9 @@
+- job-group:
+    name: '{name}-{branch}'
+    targets: 'plugins/{name}:{name}'
+    jobs:
+      - 'plugin-{name}-{branch}'
+
 - job-template:
     name: 'plugin-{name}-{branch}'
     description: "Plugin {name} {branch} branch build with BUCK\n"
@@ -35,4 +41,4 @@
          !include-raw gerrit-buck-build-plugin.sh
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/plugins/{name}/{name}.jar*'
+         artifacts: 'buck-out/gen/plugins/**/{name}*.jar*'

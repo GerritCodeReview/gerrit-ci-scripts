@@ -4,5 +4,5 @@
       - master
       - stable-2.9
     jobs:
-      - 'plugin-{name}-{branch}'
+      - '{name}-{branch}'
 
