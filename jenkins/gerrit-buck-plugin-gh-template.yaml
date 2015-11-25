@@ -1,5 +1,6 @@
 - job-template:
     name: 'plugin-{name}-gh-{branch}'
+    defaults: buck-plugin
     description: "Plugin {name} {branch} branch build with BUCK owned by {organization} and hosted on GitHub\n"
     wrappers:
       - timeout:
