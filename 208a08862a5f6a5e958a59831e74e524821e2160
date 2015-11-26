@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb485fa2_1ecc298c",
+        "filename": "jenkins/gerrit-buck-plugin-javamelody.yaml",
+        "patchSetId": 21
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-26T16:17:46Z",
+      "side": 1,
+      "message": "With this target, the build fails on ALL branches.\nFor a BUCK issue on stable-2.11 and master are not working at all ... and the plugins/javamelody:all doesn\u0027t work anyway on stable-2.10.\n\nFalling back to the (ugly) list :-(",
+      "range": {
+        "startLine": 3,
+        "startChar": 13,
+        "endLine": 3,
+        "endChar": 35
+      },
+      "revId": "208a08862a5f6a5e958a59831e74e524821e2160",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
