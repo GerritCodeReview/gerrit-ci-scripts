@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb485fa2_bb6c274f",
+        "filename": "jenkins/gerrit-buck-plugin-javamelody.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2015-11-26T14:23:51Z",
+      "side": 1,
+      "message": "This is annoying. Can we require that these plugins offer :all build targets? That would depend on all, e.g.:\n\n  zip_file(\n    name \u003d \u0027all\u0027,\n    srcs \u003d [\n      \u0027javamelody-nodep\u0027,\n      \u0027javamelody-deps\u0027,\n      \u0027javamelody-datasource-interceptor\u0027,\n      \u0027javamelody\u0027,\n  ]\n\nIn which case this can just be:\n\n  targets: all",
+      "revId": "eeec9e61174dbd38d1d44443b63248988174b7bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
