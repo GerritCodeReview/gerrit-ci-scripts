@@ -34,6 +34,24 @@
       "revId": "eeec9e61174dbd38d1d44443b63248988174b7bf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb485fa2_db63f35a",
+        "filename": "jenkins/gerrit-buck-plugin-javamelody.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-26T14:39:20Z",
+      "side": 1,
+      "message": "Need to patch JavaMelody plugin as well right?",
+      "parentUuid": "fb485fa2_fb66af6c",
+      "revId": "eeec9e61174dbd38d1d44443b63248988174b7bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
