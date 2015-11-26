@@ -52,6 +52,24 @@
       "revId": "eeec9e61174dbd38d1d44443b63248988174b7bf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b53e354_187e05fc",
+        "filename": "jenkins/gerrit-buck-plugin-javamelody.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2015-11-26T14:41:21Z",
+      "side": 1,
+      "message": "Didn\u0027t work :-( \nCan a further improvement though, whilst the multiple targets functionality is going to be useful anyway :-)\n\nCan you follow-up this change with your proposed simplified \u0027all\u0027 for JavaMelody?",
+      "parentUuid": "fb485fa2_db63f35a",
+      "revId": "eeec9e61174dbd38d1d44443b63248988174b7bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
