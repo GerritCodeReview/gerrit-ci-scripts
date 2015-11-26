@@ -1,5 +1,6 @@
 - project:
     name: storyboard
+    targets: storyboard
     branch:
       - master
     jobs:

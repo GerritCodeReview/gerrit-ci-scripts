@@ -1,5 +1,6 @@
 - project:
     name: reviewers-by-blame
+    targets: reviewers-by-blame
     branch:
       - master
       - stable-2.11

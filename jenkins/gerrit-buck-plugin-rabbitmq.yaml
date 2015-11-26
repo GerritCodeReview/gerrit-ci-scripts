@@ -1,5 +1,6 @@
 - project:
     name: rabbitmq
+    targets: rabbitmq
     branch:
       - master
       - stable-2.11

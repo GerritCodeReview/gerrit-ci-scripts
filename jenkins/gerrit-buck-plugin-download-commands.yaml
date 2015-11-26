@@ -1,5 +1,6 @@
 - project:
     name: download-commands
+    targets: download-commands
     branch:
       - master
       - stable-2.11

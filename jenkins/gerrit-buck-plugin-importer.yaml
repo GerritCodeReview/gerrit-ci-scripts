@@ -1,5 +1,6 @@
 - project:
     name: importer
+    targets: importer
     branch:
       - master
       - stable-2.11

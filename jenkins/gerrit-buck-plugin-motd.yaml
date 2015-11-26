@@ -1,5 +1,6 @@
 - project:
     name: motd
+    targets: motd
     branch:
       - master
     jobs:

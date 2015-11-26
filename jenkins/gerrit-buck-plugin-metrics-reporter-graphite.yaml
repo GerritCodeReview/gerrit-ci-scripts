@@ -1,5 +1,6 @@
 - project:
     name: metrics-reporter-graphite
+    targets: metrics-reporter-graphite
     branch:
       - master
     jobs:

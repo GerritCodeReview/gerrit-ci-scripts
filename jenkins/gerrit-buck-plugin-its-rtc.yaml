@@ -1,5 +1,6 @@
 - project:
     name: rtc
+    targets: rtc
     branch:
       - master
       - stable-2.11

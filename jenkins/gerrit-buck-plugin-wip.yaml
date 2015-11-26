@@ -1,5 +1,6 @@
 - project:
     name: wip
+    targets: wip
     branch:
       - master
       - stable-2.9

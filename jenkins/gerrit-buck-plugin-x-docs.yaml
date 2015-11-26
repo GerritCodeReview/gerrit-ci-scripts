@@ -1,5 +1,6 @@
 - project:
     name: x-docs
+    targets: x-docs
     branch:
       - master
       - stable-2.11

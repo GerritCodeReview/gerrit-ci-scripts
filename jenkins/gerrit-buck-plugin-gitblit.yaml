@@ -1,5 +1,6 @@
 - project:
     name: gitblit
+    targets: gitblit
     branch:
       - master
       - stable-2.11

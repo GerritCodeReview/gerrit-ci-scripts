@@ -1,5 +1,6 @@
 - project:
     name: cookbook-plugin
+    targets: cookbook-plugin
     branch:
       - master
       - stable-2.11

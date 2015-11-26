@@ -1,5 +1,6 @@
 - project:
     name: ref-protection
+    targets: ref-protection
     branch:
       - master
       - stable-2.11
