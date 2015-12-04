@@ -2,6 +2,8 @@
     name: motd
     branch:
       - master
+      - stable-2.12
+      - stable-2.11
     jobs:
       - 'plugin-{name}-{branch}'
 
