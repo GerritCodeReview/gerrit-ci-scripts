@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "31986085_ccceaf86",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1015822
+      },
+      "writtenOn": "2016-02-04T14:05:04Z",
+      "side": 1,
+      "message": "Done. Sorry about that, editor snafu.",
+      "parentUuid": "913d8cf0_7ff3af8d",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 1
+      },
+      "revId": "2e0287ffa77fa2fd65275c043acb5eafc73473f9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d19d4471_113c4c0d",
         "filename": "jenkins/gerrit-mvn-plugin-slack-integration.yaml",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2016-02-04T06:09:08Z",
       "side": 1,
       "message": "nit: typically we order them from newest to oldest.",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 19
+      },
+      "revId": "2e0287ffa77fa2fd65275c043acb5eafc73473f9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "31986085_eccb6b73",
+        "filename": "jenkins/gerrit-mvn-plugin-slack-integration.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1015822
+      },
+      "writtenOn": "2016-02-04T14:05:04Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "d19d4471_113c4c0d",
       "range": {
         "startLine": 6,
         "startChar": 0,
