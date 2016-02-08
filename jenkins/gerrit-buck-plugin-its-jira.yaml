@@ -2,6 +2,7 @@
     name: jira
     branch:
       - master
+      - stable-2.12
       - stable-2.11
     jobs:
       - 'plugin-its-{name}-{branch}'
