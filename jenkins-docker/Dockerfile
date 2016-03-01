@@ -20,6 +20,27 @@ RUN apt-get update && apt-get install -y \
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 RUN apt-get install -y nodejs
+RUN npm install -g web-component-tester
+
+# Chrome pre-reqs
+RUN apt-get install -y \
+    libxss1 \
+    fonts-liberation \
+    libappindicator1 \
+    xdg-utils \
+    libpango1.0-0
+
+ADD https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb /tmp
+RUN dpkg -i /tmp/google-chrome-stable_current_amd64.deb
+
+ADD http://chromedriver.storage.googleapis.com/2.21/chromedriver_linux64.zip /opt/google/chrome
+RUN cd /opt/google/chrome && unzip chromedriver_linux64.zip
+RUN chmod a+rx /opt/google/chrome/chromedriver
+
+RUN ln -s /opt/google/chrome/chrome /opt/google/chrome/chromedriver /usr/bin
+
+# Unattended GUI testing
+RUN apt-get install -y xvfb
 
 RUN mkdir -p /opt/ && git clone https://git.openstack.org/openstack-infra/jenkins-job-builder /opt/jenkins_job_builder
 
