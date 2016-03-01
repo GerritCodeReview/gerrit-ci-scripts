@@ -135,6 +135,20 @@ def buildChange(change) {
   def result = waitForResult(b)
   gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,getVerified(result), "")
 
+  if(result == Result.SUCCESS && branch == "master") {
+    // TODO only run on change in folder polygerrit-ui/
+    ignore(FAILURE) {
+      retry(Globals.numRetryBuilds) {
+        b = build("Gerrit-verifier-polygerrit", REFSPEC: refspec, BRANCH: sha1,
+                  CHANGE_URL: changeUrl)
+      }
+    }
+
+    result = waitForResult(b)
+    gerritReview(b.getBuildUrl() + "consoleText", changeNum, sha1,
+              getVerified(result), "PolyGerrit - ")
+  }
+
   if(result == Result.SUCCESS && branch=="master") {
     ignore(FAILURE) {
       retry ( Globals.numRetryBuilds ) {

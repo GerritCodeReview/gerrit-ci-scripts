@@ -3,14 +3,24 @@
     builders:
       - shell: |
           set +x
-          echo 'Test with DB={dbmode}'
+          echo 'Test with mode={mode}'
           echo '----------------------------------------------'
           rm -Rf plugins/*
-          if [ "{dbmode}" == "notedb" ]
+          if [ "{mode}" == "notedb" ]
           then
             export GERRIT_ENABLE_NOTEDB=TRUE
           fi
-          buck test --no-results-cache --exclude flaky
+          if [ "{mode}" == "default" ] || [ "{mode}" == "notedb" ]
+          then
+            buck test --no-results-cache --exclude flaky
+          fi
+          if [ "{mode}" == "polygerrit" ]
+          then
+            Xvfb :1 -screen 0 1600x1200x16 &
+            export DISPLAY=:1.0
+            buck test --include web
+            kill $! # kill Xvfb
+          fi
 
 - builder:
     name: fetch-all-submodules
@@ -37,7 +47,7 @@
           git submodule update
 
 - job-template:
-    name: '{name}-{dbmode}'
+    name: '{name}-{mode}'
     description: "Gerrit build of open change with BUCK\n"
     parameters:
       - string:
@@ -83,15 +93,16 @@
           export BUCK_CLEAN_REPO_IF_DIRTY=y
           buck build api plugins:core release
       - test-gerrit:
-          dbmode: "{dbmode}"
+          mode: "{mode}"
 
 - project:
     name: Gerrit-verifier
-    dbmode:
+    mode:
       - default
+      - polygerrit
       - notedb
     jobs:
-      - '{name}-{dbmode}'
+      - '{name}-{mode}'
 
 
 - job:
