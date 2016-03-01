@@ -3,14 +3,21 @@
     builders:
       - shell: |
           set +x
-          echo 'Test with DB={dbmode}'
+          echo 'Test with mode={mode}'
           echo '----------------------------------------------'
           rm -Rf plugins/*
-          if [ "{dbmode}" == "notedb" ]
+          if [ "{mode}" == "notedb" ]
           then
             export GERRIT_ENABLE_NOTEDB=TRUE
           fi
-          buck test --no-results-cache --exclude flaky
+          if [ "{mode}" == "default" ] || [ "{mode}" == "notedb" ]
+          then
+            buck test --no-results-cache --exclude flaky
+          fi
+          if [ "{mode}" == "polygerrit" ]
+          then
+            WCT_ARGS='--plugin sauce --sauce "OSX 10.11/safari"' buck test --include web
+          fi
 
 - builder:
     name: fetch-all-submodules
@@ -37,7 +44,7 @@
           git submodule update
 
 - job-template:
-    name: '{name}-{dbmode}'
+    name: '{name}-{mode}'
     description: "Gerrit build of open change with BUCK\n"
     parameters:
       - string:
@@ -83,15 +90,16 @@
           export BUCK_CLEAN_REPO_IF_DIRTY=y
           buck build api plugins:core release
       - test-gerrit:
-          dbmode: "{dbmode}"
+          mode: "{mode}"
 
 - project:
     name: Gerrit-verifier
-    dbmode:
+    mode:
       - default
+      - polygerrit
       - notedb
     jobs:
-      - '{name}-{dbmode}'
+      - '{name}-{mode}'
 
 
 - job:
