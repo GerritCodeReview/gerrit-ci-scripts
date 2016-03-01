@@ -19,7 +19,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
-RUN apt-get install -y nodejs
+RUN apt-get install -y nodejs npm
+RUN apt-get install -y chromium-browser
+RUN npm install -g web-component-tester
 
 RUN mkdir -p /opt/ && git clone https://git.openstack.org/openstack-infra/jenkins-job-builder /opt/jenkins_job_builder
 
