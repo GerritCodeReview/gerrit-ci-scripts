@@ -113,6 +113,18 @@ def getVerified(result) {
   }
 }
 
+Boolean polygerritTouched(changeNum, sha1) {
+  URL filesUrl = new URL(String.format("%schanges/%s/revisions/%s/files/",
+      Globals.gerrit, changeNum, sha1))
+  def files = filesUrl.getText().substring(5)
+  def filesJson = new JsonSlurper().parseText(files)
+  filesJson.keySet().find {
+    if (it.startsWith("polygerrit-ui/")) {
+      return true;
+    }
+  } != null
+}
+
 def buildChange(change) {
   def sha1 = change.current_revision
   def changeNum = change._number
@@ -134,6 +146,19 @@ def buildChange(change) {
   }
   def result = waitForResult(b)
   gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,getVerified(result), "")
+
+  if (result == Result.SUCCESS && polygerritTouched(changeNum, sha1)) {
+    ignore(FAILURE) {
+      retry(Globals.numRetryBuilds) {
+        b = build("Gerrit-verifier-polygerrit", REFSPEC: refspec, BRANCH: sha1,
+            CHANGE_URL: changeUrl)
+      }
+    }
+
+    result = waitForResult(b)
+    gerritReview(b.getBuildUrl() + "consoleText", changeNum, sha1,
+        getVerified(result), "PolyGerrit - ")
+  }
 
   if(result == Result.SUCCESS && branch=="master") {
     ignore(FAILURE) {
