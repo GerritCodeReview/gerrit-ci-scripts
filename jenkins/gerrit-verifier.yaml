@@ -3,14 +3,28 @@
     builders:
       - shell: |
           set +x
-          echo 'Test with DB={dbmode}'
+          echo 'Test with mode={mode}'
           echo '----------------------------------------------'
           rm -Rf plugins/*
-          if [ "{dbmode}" == "notedb" ]
+          if [ "{mode}" == "notedb" ]
           then
             export GERRIT_ENABLE_NOTEDB=TRUE
           fi
-          buck test --no-results-cache --exclude flaky
+          if [ "{mode}" == "default" ] || [ "{mode}" == "notedb" ]
+          then
+            buck test --no-results-cache --exclude flaky
+          fi
+          if [ "{mode}" == "polygerrit" ]
+          then
+            buck test --include web
+            if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
+            then
+              echo 'Not running on Sauce Labs because env vars are not set.'
+            else
+              echo 'Running tests on Sauce Labs...'
+              WCT_ARGS='--plugin sauce' buck test --no-results-cache --include web
+            fi
+          fi
 
 - builder:
     name: fetch-all-submodules
@@ -37,7 +51,7 @@
           git submodule update
 
 - job-template:
-    name: '{name}-{dbmode}'
+    name: '{name}-{mode}'
     description: "Gerrit build of open change with BUCK\n"
     parameters:
       - string:
@@ -83,15 +97,28 @@
           export BUCK_CLEAN_REPO_IF_DIRTY=y
           buck build api plugins:core release
       - test-gerrit:
-          dbmode: "{dbmode}"
+          mode: "{mode}"
+    wrappers:
+      - xvfb:
+          installation-name: Xvfb
+          auto-display-name: true
+          assigned-labels: nodes-xxx
+          parallel-build: false
+          timeout: 10
+          screen: 1024x768x16
+          display-name-offset: 100
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
 
 - project:
     name: Gerrit-verifier
-    dbmode:
+    mode:
       - default
+      - polygerrit
       - notedb
     jobs:
-      - '{name}-{dbmode}'
+      - '{name}-{mode}'
 
 
 - job:
