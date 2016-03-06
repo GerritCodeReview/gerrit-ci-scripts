@@ -1,0 +1,23 @@
+- job:
+    name: gitiles-webapp
+    description: Builds gitiles webapp from master
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gitiles
+         refspec: +refs/changes/*:refs/remotes/origin/*
+         branches:
+           - master
+    builders:
+      - shell: |
+          set +x
+          echo "Building gitiles webapp master"
+          echo '============================================================='
+          rm -Rf buck-out
+          export BUCK_CLEAN_REPO_IF_DIRTY=y
+          git submodule update --init
+          buck build all
+          buck test
+          buck //:install
+    publishers:
+      - archive:
+         artifacts: 'buck-out/gen/all.zip'
