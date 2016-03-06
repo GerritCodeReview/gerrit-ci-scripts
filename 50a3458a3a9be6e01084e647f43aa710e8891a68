@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "623049ce_47e20eeb",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1021482
+      },
+      "writtenOn": "2016-03-06T17:56:01Z",
+      "side": 1,
+      "message": "This indentation seems off.",
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "623049ce_67df121e",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1021482
+      },
+      "writtenOn": "2016-03-06T17:56:01Z",
+      "side": 1,
+      "message": "This too",
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
