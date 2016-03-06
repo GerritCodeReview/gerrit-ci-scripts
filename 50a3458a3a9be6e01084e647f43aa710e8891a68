@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a236c1c5_a9e8fdcd",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1013702
+      },
+      "writtenOn": "2016-03-06T18:03:36Z",
+      "side": 1,
+      "message": "@Luca: Can you please comment on this? What do you prefer? Some lines seem to be indented this way.",
+      "parentUuid": "623049ce_47e20eeb",
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "623049ce_67df121e",
         "filename": "jenkins/gerrit-verifier-flow.groovy",
         "patchSetId": 7
