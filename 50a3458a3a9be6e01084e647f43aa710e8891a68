@@ -74,6 +74,29 @@
       "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "172511a9_adfb7d8c",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-07T10:07:54Z",
+      "side": 1,
+      "message": "This isn\u0027t actually just a \"plugin\" but relies on the fact that SauceLabs keeps on providing their service for free.\n\nI would prefer that we finalise the Xvfb + Chromium set-up in the Docker machine, so that our builds are independent of any 3rd party providers. Anyone could then build the Docker machine and get it working.",
+      "range": {
+        "startLine": 19,
+        "startChar": 22,
+        "endLine": 19,
+        "endChar": 36
+      },
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
