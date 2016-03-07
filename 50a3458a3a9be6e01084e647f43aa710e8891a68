@@ -97,6 +97,30 @@
       "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a236c1c5_29fecd7f",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1013702
+      },
+      "writtenOn": "2016-03-07T10:38:34Z",
+      "side": 1,
+      "message": "I think it\u0027s a good idea to also support builds without SauceLabs. But SauceLabs supports parallel testing on OSX Sarfari and Windows Edge (for the feature), which will not be easily be possible with our infrastructure.\n\nMy suggestion: support both local and SauceLabs testing. If the env vars SAUCE_USERNAME and SAUCE_ACCESS_KEY are available, we run build there. If they are not available, we start a local build.\n\nCan you please review PS 4? If you think that should work, I will incorporate Xvfb into this.",
+      "parentUuid": "172511a9_adfb7d8c",
+      "range": {
+        "startLine": 19,
+        "startChar": 22,
+        "endLine": 19,
+        "endChar": 36
+      },
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
