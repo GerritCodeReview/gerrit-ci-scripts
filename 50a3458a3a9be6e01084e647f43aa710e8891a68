@@ -121,6 +121,30 @@
       "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a236c1c5_69f8c591",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-07T12:19:12Z",
+      "side": 1,
+      "message": "Latest build worked without SauceLabs stuff :-)\nhttps://gerrit-ci.gerritforge.com/job/Gerrit-verifier-polygerrit/45/\n\nI will post the changes to the Docker machine a bit later.\n\nNo problem in getting Sauce into the picture with another change ... but let\u0027s get one thing done at a time !",
+      "parentUuid": "a236c1c5_29fecd7f",
+      "range": {
+        "startLine": 19,
+        "startChar": 22,
+        "endLine": 19,
+        "endChar": 36
+      },
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
