@@ -22,6 +22,30 @@
       "revId": "76197d1855c61c7221fd322f86098d257633c3a3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a236c1c5_092f49d3",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1013702
+      },
+      "writtenOn": "2016-03-07T21:15:42Z",
+      "side": 1,
+      "message": "@Luca: I have tried this solution in PS9. If it does not work / you do not like it it, please revert to your version.",
+      "parentUuid": "a236c1c5_0946699b",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 76
+      },
+      "revId": "76197d1855c61c7221fd322f86098d257633c3a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
