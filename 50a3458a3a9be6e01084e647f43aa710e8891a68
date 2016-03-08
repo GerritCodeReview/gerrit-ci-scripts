@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "7753ad55_18c1e54e",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-08T08:57:55Z",
+      "side": 1,
+      "message": "Oh yes ... according to our code formatting style in Gerrit :-)\n\nif (results \u003d\u003d ...)",
+      "parentUuid": "172511a9_6d18f5ba",
+      "range": {
+        "startLine": 148,
+        "startChar": 2,
+        "endLine": 148,
+        "endChar": 4
+      },
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "623049ce_67df121e",
         "filename": "jenkins/gerrit-verifier-flow.groovy",
         "patchSetId": 7
@@ -95,6 +119,24 @@
       "writtenOn": "2016-03-06T17:56:01Z",
       "side": 1,
       "message": "This too",
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17ed11ca_4dbbb9e8",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-08T08:57:55Z",
+      "side": 1,
+      "message": "Where is the if() here?",
+      "parentUuid": "623049ce_67df121e",
       "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
