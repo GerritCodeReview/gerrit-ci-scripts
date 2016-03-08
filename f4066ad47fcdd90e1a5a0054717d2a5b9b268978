@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17ed11ca_8dcc8185",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1013702
+      },
+      "writtenOn": "2016-03-08T22:10:08Z",
+      "side": 1,
+      "message": "check for variable \"DISPLAY\"",
+      "revId": "f4066ad47fcdd90e1a5a0054717d2a5b9b268978",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
