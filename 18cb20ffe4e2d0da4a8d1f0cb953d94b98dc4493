@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37c9357a_36ecd8e3",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1013702
+      },
+      "writtenOn": "2016-03-08T22:10:08Z",
+      "side": 1,
+      "message": "I have added this check now: I only runs local tests when a display is available (i.e. Xvfb is set up correctly).",
+      "revId": "18cb20ffe4e2d0da4a8d1f0cb953d94b98dc4493",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
