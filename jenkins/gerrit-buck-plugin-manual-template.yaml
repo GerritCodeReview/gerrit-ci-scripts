@@ -1,0 +1,62 @@
+- job-template:
+    name: 'pluginmanual-{name}-{branch}'
+    description: "Plugin {name} {branch} manual branch build with BUCK\n"
+    parameters:
+      - string:
+         name: REFS_CHANGE
+         description: "Refs change as provided by Download/Checkout eg: refs/changes/21/75721/1"
+    properties:
+      - inject:
+         properties-file: env.properties
+         script-content: |
+           echo "REFS_CHANGE=$REFS_CHANGE" > env.properties
+         override-build-parameters: true
+    defaults: buck-plugin
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+    logrotate:
+      numToKeep: 20
+      artifactNumToKeep: 20
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/{name}
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/${branch}'
+         submodule:
+           recursive: true
+
+    builders:
+      - shell: |
+         git checkout gerrit/{branch}
+         rm -rf plugins/{name}
+         git fetch https://gerrit.googlesource.com/plugins/{name} $REFS_CHANGE
+         git read-tree -u --prefix=plugins/{name} FETCH_HEAD
+         rm -Rf buck-out
+         export BUCK_CLEAN_REPO_IF_DIRTY=y
+         TARGETS=$(echo "plugins/{name}:{name}" | sed -e 's/{name}/gitiles/g')
+         buck build -v 3 $TARGETS
+         for JAR in $(buck targets --show_output $TARGETS | awk '{print $2}')
+         do
+            jar xf $JAR META-INF/MANIFEST.MF
+            PLUGIN_VERSION=$(grep "Implementation-Version" META-INF/MANIFEST.MF | cut -d ' ' -f 2)
+            DEST_JAR=buck-out/gen/plugins/gitiles/$(basename $JAR)
+            [ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
+            echo "$PLUGIN_VERSION" > buck-out/gen/plugins/gitiles/$(basename $JAR-version)
+         done
+
+    publishers:
+      - archive:
+         artifacts: 'buck-out/gen/plugins/{name}/*{name}*.jar*'
