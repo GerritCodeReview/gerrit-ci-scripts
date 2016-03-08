@@ -7,4 +7,4 @@
       - stable-2.10
     jobs:
       - 'plugin-{name}-{branch}'
-
+      - 'pluginmanual-{name}-{branch}'
