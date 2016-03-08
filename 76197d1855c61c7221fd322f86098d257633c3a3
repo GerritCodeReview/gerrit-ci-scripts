@@ -46,6 +46,30 @@
       "revId": "76197d1855c61c7221fd322f86098d257633c3a3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7753ad55_38bca9e2",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-08T08:57:55Z",
+      "side": 1,
+      "message": "I tried with Chromium but I had the impression that Selenium was not able to find it ... but I\u0027ll try again.\n\nHowever using the \"official Chrome\" would give us a more reliable feedback on the version of the browser that most users are dealing with. Not sure how many are using Chromium vs. Chrome.\n\nIt is the same code-base ... but different flavours / versions :-(",
+      "parentUuid": "a236c1c5_092f49d3",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 76
+      },
+      "revId": "76197d1855c61c7221fd322f86098d257633c3a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
