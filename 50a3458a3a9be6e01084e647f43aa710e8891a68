@@ -108,6 +108,30 @@
     },
     {
       "key": {
+        "uuid": "b79a8576_12bc4ce2",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1013702
+      },
+      "writtenOn": "2016-03-08T22:10:08Z",
+      "side": 1,
+      "message": "Done.\n\nI have tried to follow Gerrit coding style in other regions also.",
+      "parentUuid": "7753ad55_18c1e54e",
+      "range": {
+        "startLine": 148,
+        "startChar": 2,
+        "endLine": 148,
+        "endChar": 4
+      },
+      "revId": "50a3458a3a9be6e01084e647f43aa710e8891a68",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "623049ce_67df121e",
         "filename": "jenkins/gerrit-verifier-flow.groovy",
         "patchSetId": 7
