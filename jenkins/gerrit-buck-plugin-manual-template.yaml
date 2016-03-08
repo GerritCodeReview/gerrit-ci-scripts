@@ -1,0 +1,61 @@
+- job-template:
+    name: 'plugin-{name}-{branch}-manual'
+    description: "Plugin {name} {branch} manual branch build with BUCK\n"
+    parameters:
+      - string:
+         name: CHANGE_NUMBER
+         description: "Legacy Change ID of gitiles to include"
+      - string:
+         name: CHANGE_REVISION
+         default: '1'
+         description: "Revision number of gitiles patch to include"
+      - string:
+         name: CHANGE_COMMIT
+         description: "Optional SHA-1 hash of gitiles patch to include (takes precedence over Change ID)"
+    properties:
+      - inject:
+         properties-file: env.properties
+         script-content: |
+           if [ "$CHANGE_COMMIT" ]; then
+             echo "CHANGE_COMMIT=$CHANGE_COMMIT" > env.properties
+           else
+             CHANGE_NUMBER_SUFFIX=$(echo $CHANGE_NUMBER | grep -o '..$')
+             echo "CHANGE_COMMIT=refs/remotes/origin/$CHANGE_NUMBER_SUFFIX/$CHANGE_NUMBER/$CHANGE_REVISION" > env.properties
+           fi
+         override-build-parameters: true
+    defaults: buck-plugin
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+    logrotate:
+      numToKeep: 20
+      artifactNumToKeep: 20
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/{name}
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/${branch}'
+         submodule:
+           recursive: true
+
+    triggers:
+      - pollscm: 'H/50 * * * *'
+
+    builders:
+      - shell:
+         !include-raw gerrit-buck-build-plugin.sh
+    publishers:
+      - archive:
+         artifacts: 'buck-out/gen/plugins/{name}/*{name}*.jar*'
