@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37c9357a_9944ff95",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-10T22:30:29Z",
+      "side": 1,
+      "message": "Use imperative form: \"Add Gitiles ...\"",
+      "revId": "0a3f476c44e6ba6e6fcdc2fc09cfe47c0ab45a25",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "37c9357a_b941bb84",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-10T22:30:29Z",
+      "side": 1,
+      "message": "to build Gitiles master and invoke ad-hoc builds for a specific change/patch-set",
+      "revId": "0a3f476c44e6ba6e6fcdc2fc09cfe47c0ab45a25",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "371db51b_b63168ec",
+        "filename": "jenkins/gitiles-webapp-manual.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-10T22:30:29Z",
+      "side": 1,
+      "message": "This is ad-hoc invocation and doesn\u0027t need pollscm.\nMoreover ... Jenkins when a parameter is present on the Git clone settings, gets quite crazy about pollscm and thinks that everything is a new commit and starts building forever :-(",
+      "revId": "0a3f476c44e6ba6e6fcdc2fc09cfe47c0ab45a25",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
