@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "371db51b_56aa944b",
+        "filename": "jenkins/gitiles-webapp.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-03-10T16:40:15Z",
+      "side": 1,
+      "message": "What about:\n- pollscm\n- logrotate\n- timeout",
+      "revId": "95d1b8d23548dc4557e64bcfc65c7db3a2c3fb2a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
