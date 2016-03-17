@@ -23,7 +23,8 @@
          submodule:
            recursive: true
     triggers:
-      - pollscm: 'H/10 * * * *'
+      - pollscm:
+          cron: 'H/10 * * * *'
 
     builders:
       - shell:
