@@ -22,6 +22,30 @@
       "revId": "45c042684ec8b012f188c0bee869d6cea77615be",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc6d0aef_ddd9bf3a",
+        "filename": "jenkins/gerrit-app-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-03-17T12:56:06Z",
+      "side": 1,
+      "message": "Right, it\u0027s probably not needed (unless there\u0027s some magic going on in CI). It\u0027s a left-over from copying from gerrit-buck-plugin-template.yaml. I\u0027ll remove it.",
+      "parentUuid": "7c08f263_30dcc8fd",
+      "range": {
+        "startLine": 23,
+        "startChar": 11,
+        "endLine": 24,
+        "endChar": 58
+      },
+      "revId": "45c042684ec8b012f188c0bee869d6cea77615be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
