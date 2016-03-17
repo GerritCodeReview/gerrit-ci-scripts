@@ -1,0 +1,11 @@
+- project:
+    name: reviewit
+    branch:
+      - master
+    jobs:
+      - 'app-{name}-{branch}'
+    builders:
+      - shell: './gradlew assemble'
+    publishers:
+      - archive:
+         artifacts: 'app/build/outputs/apk/*.apk'
