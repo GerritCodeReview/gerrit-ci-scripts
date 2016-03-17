@@ -1,0 +1,33 @@
+- job-template:
+    name: 'app-{name}-{branch}'
+    description: "App {name} {branch} branch build\n"
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+    logrotate:
+      numToKeep: 20
+      artifactNumToKeep: 20
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/apps/{name}
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+    triggers:
+      - pollscm: 'H/50 * * * *'
+    builders:
+      - shell: '{commands}'
+    publishers:
+      - archive:
+         artifacts: '{artifacts}'
