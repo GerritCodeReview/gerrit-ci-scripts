@@ -16,6 +16,24 @@
       "revId": "311cf99516268831b174ff00189deb377c076ebe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1c937619_60948c5f",
+        "filename": "jenkins/gerrit-apps-reviewit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-03-17T12:33:44Z",
+      "side": 1,
+      "message": "Actually, that should not be necessary. \"gradlew\" is the gradle wrapper script that\u0027s checked into the reviewit repo, and the script bootstraps gradle if it\u0027s not installed. That\u0027s the beauty, it\u0027s completely self-contained.",
+      "parentUuid": "1c937619_bd6ddf42",
+      "revId": "311cf99516268831b174ff00189deb377c076ebe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
