@@ -28,6 +28,13 @@ RUN ln -s /usr/bin/chromium /usr/bin/chrome
 # Unattended GUI testing
 RUN apt-get install -y xvfb
 
+# Building of Android apps
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+RUN apt-get update
+RUN apt-get install -y ubuntu-make
+RUN [ -x ~/.android-sdk/tools/android ] || umake android android-sdk --accept-license ~/.android-sdk
+
 RUN mkdir -p /opt/ && git clone https://git.openstack.org/openstack-infra/jenkins-job-builder /opt/jenkins_job_builder
 
 RUN pip install /opt/jenkins_job_builder
