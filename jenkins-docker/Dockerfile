@@ -28,6 +28,10 @@ RUN ln -s /usr/bin/chromium /usr/bin/chrome
 # Unattended GUI testing
 RUN apt-get install -y xvfb
 
+# Allow Android SDK tools to run on a 64-bit system, see
+# http://stackoverflow.com/a/23201209/1127485
+RUN apt-get install -y lib32stdc++6 lib32z1
+
 RUN mkdir -p /opt/ && git clone https://git.openstack.org/openstack-infra/jenkins-job-builder /opt/jenkins_job_builder
 
 RUN pip install /opt/jenkins_job_builder
