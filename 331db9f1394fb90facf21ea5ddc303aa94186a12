@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ab4dc25b_d13244a0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-04-15T21:02:54Z",
+      "side": 1,
+      "message": "Fair enough, let\u0027s see how it goes :-)",
+      "parentUuid": "8b2d5e79_48169f2d",
+      "revId": "331db9f1394fb90facf21ea5ddc303aa94186a12",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2820f890_553c8cbc",
         "filename": "jenkins/gerrit-buck-cleanup.sh",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "Maybe just ~/.gerritcodereview/buck-cache/{cache,locally-built-artifacts} so you don\u0027t lose all the downloaded artifacts?",
       "parentUuid": "2820f890_553c8cbc",
+      "revId": "331db9f1394fb90facf21ea5ddc303aa94186a12",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2820f890_353110e5",
+        "filename": "jenkins/gerrit-buck-cleanup.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-04-15T21:02:54Z",
+      "side": 1,
+      "message": "Good point, let me try :-)",
+      "parentUuid": "8b2d5e79_28196b5e",
       "revId": "331db9f1394fb90facf21ea5ddc303aa94186a12",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
