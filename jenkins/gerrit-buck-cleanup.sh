@@ -10,3 +10,6 @@ echo "Setting up BUCK Java args"
 cat > .buckjavaargs <<EOF
   -XX:MaxPermSize=512m -Xms8000m -Xmx12000m
 EOF
+
+echo "Removing Buck cache"
+rm -Rf ~/.gerritcodereview/buck-cache
