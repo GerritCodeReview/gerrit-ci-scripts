@@ -1,9 +1,0 @@
-- project:
-    name: owners
-    targets: 'plugins/owners/gerrit-owners:owners plugins/owners/gerrit-owners-autoassign:owners-autoassign'
-    branch:
-      - stable-2.11
-      - stable-2.10
-    jobs:
-      - 'plugin-{name}-{branch}'
-

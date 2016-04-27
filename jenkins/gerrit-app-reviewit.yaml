@@ -1,8 +1,0 @@
-- project:
-    name: reviewit
-    branch:
-      - master
-    jobs:
-      - 'app-{name}-{branch}'
-    commands: './gradlew assemble'
-    artifacts: 'app/build/outputs/apk/*.apk'
