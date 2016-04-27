@@ -204,17 +204,13 @@ queryUrl = processAll ?
 def changes = queryUrl.getText().substring(5)
 def jsonSlurper = new JsonSlurper()
 def changesJson = jsonSlurper.parseText(changes)
-int numChanges = changesJson.size()
 
-println "Gerrit has " + numChanges + " change(s) since " + since
-println "================================================================================"
-
-
-for (change in changesJson) {
-  def sha1 = change.current_revision
+def acceptedChanges = changesJson.findAll {
+  change ->
+  sha1 = change.current_revision
   if(processAll && lastLog.contains(sha1)) {
       println "Skipping SHA1 " + sha1 + " because has been already built by " + lastBuild
-      continue
+      return false
   }
 
   def verified = change.labels.Verified
@@ -223,12 +219,18 @@ for (change in changesJson) {
 
   if(processAll && approved != null && approved._account_id == Globals.myAccountId) {
     println "I have already approved " + sha1 + " commit: SKIPPING"
+    return false
   } else if(processAll && rejected != null && rejected._account_id == Globals.myAccountId) {
     println "I have already rejected " + sha1 + " commit: SKIPPING"
+    return false
   } else {
-    buildChange(change)
+    return true
   }
 }
 
+println "Gerrit has " + acceptedChanges.size() + " change(s) since " + since
+println "================================================================================"
 
-
+for (change in acceptedChanges) {
+  buildChange(change)
+}
