@@ -40,22 +40,19 @@ def gerritPost(url, jsonPayload) {
     "-X", "POST", "-H", "Content-Type: application/json",
     "--data-binary", jsonPayload,
     gerritPostUrl ]
-  println "Executing '" + curl.join(" ") + "'"
   def proc = curl.execute()
   def sout = new StringBuffer(), serr = new StringBuffer()
   proc.consumeProcessOutput(sout, serr)
   proc.waitForOrKill(Globals.curlTimeout)
   def curlExit = proc.exitValue()
-  if(!sout.toString().trim().isEmpty()) {
-    println "--- OUTPUT ---"
-    println sout
+  if(curlExit != 0) {
+    println "$curl ** FAILED ** with exit code $curlExit"
   }
-  if(!sout.toString().trim().isEmpty()) {
+  if(!serr.toString().trim().isEmpty()) {
     println "--- ERROR ---"
     println serr    
   }
 
-  println "--- EXIT: " + curlExit + " ---"
   return curlExit
 }
 
