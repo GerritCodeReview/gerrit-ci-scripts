@@ -82,6 +82,11 @@ def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
   return addVerifiedExit
 }
 
+def gerritComment(buildUrl,changeNum, sha1, msgPrefix) {
+  return gerritPost("a/changes/$changeNum/revisions/$sha1/review",
+                    "{\"message\": \"$msgPrefix Gerrit-CI Flow: $buildUrl\", \"notify\" : \"NONE\" }")
+}
+
 def waitForResult(build) {
   def result = null
   def startWait = System.currentTimeMillis()
@@ -221,6 +226,7 @@ def acceptedChanges = changesJson.findAll {
     println "I have already rejected " + sha1 + " commit: SKIPPING"
     return false
   } else {
+    gerritComment(build.startJob.getBuildUrl() + "console",change._number,change.current_revision,"Verification queued on")
     return true
   }
 }
