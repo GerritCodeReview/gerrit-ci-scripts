@@ -1,0 +1,7 @@
+- project:
+    name: github-pullrequest
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
