@@ -2,8 +2,11 @@ git:latest
 git-client:latest
 scm-api:latest
 credentials:latest
+ssh-credentials:latest
+icon-shim:latest
 envinject:latest
 github-api:latest
 github-oauth:latest
 build-flow-plugin:latest
 build-timeout:latest
+token-macro:latest
