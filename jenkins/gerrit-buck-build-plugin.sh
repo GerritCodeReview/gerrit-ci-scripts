@@ -17,8 +17,9 @@ buck build -v 3 $TARGETS
 
 for JAR in $(buck targets --show_output $TARGETS | awk '{{print $2}}')
 do
-    jar xf $JAR META-INF/MANIFEST.MF
-    PLUGIN_VERSION=$(grep "Implementation-Version" META-INF/MANIFEST.MF | cut -d ' ' -f 2)
+    PLUGIN_VERSION=$(git describe  --always origin/{branch})
+    echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
+    jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=buck-out/gen/plugins/{name}/$(basename $JAR)
     [ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
     echo "$PLUGIN_VERSION" > buck-out/gen/plugins/{name}/$(basename $JAR-version)

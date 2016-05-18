@@ -5,8 +5,9 @@ mvn package
 PLUGIN_JARS=$(find . -name '{repo}*jar')
 for jar in $PLUGIN_JARS
 do
-  jar xf $jar META-INF/MANIFEST.MF
-  PLUGIN_VERSION=$(grep "Implementation-Version" META-INF/MANIFEST.MF | cut -d ' ' -f 2)
+  PLUGIN_VERSION=$(git describe  --always origin/{branch})
+  echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
+  jar ufm $jar MANIFEST.MF && rm MANIFEST.MF
 
   echo "$PLUGIN_VERSION" > $jar-version
 done
