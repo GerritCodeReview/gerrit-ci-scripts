@@ -24,6 +24,7 @@
            - origin/{branch}
          submodule:
            recursive: true
+         skip-tag: true
 
     triggers:
       - pollscm:

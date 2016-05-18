@@ -47,6 +47,7 @@
          refspec: +refs/changes/*:refs/remotes/origin/*
          branches:
            - '${CHANGE_COMMIT}'
+         skip-tag: true
 
     builders:
       - shell: |

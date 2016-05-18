@@ -37,6 +37,7 @@
            - origin/{branch}
          submodule:
            recursive: true
+         skip-tag: true
 
     builders:
       - shell:

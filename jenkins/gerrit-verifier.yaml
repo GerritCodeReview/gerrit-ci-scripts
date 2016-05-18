@@ -90,6 +90,7 @@
          branches:
            - $BRANCH
          disable-submodules: true
+         skip-tag: true
 
     builders:
       - fetch-all-submodules
