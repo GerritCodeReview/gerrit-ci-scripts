@@ -27,6 +27,7 @@
            - origin/{branch}
          submodule:
            disable: true
+         skip-tag: true
 
     triggers:
       - pollscm:

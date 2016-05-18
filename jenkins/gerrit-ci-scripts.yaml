@@ -6,6 +6,7 @@
          url: https://gerrit.googlesource.com/gerrit-ci-scripts
          branches:
            - '*/master'
+         skip-tag: true
     triggers:
       - pollscm:
           cron: 'H/15 * * * *'
@@ -43,6 +44,7 @@
          refspec: +refs/changes/*:refs/remotes/origin/*
          branches:
            - '${CHANGE_COMMIT}'
+         skip-tag: true
     builders:
       - shell: jenkins-jobs update jenkins/.
 
