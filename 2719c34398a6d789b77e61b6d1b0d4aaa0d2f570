@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c65f794_489fbf65",
+        "filename": "jenkins/gerrit-buck-plugins-release.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1012612
+      },
+      "writtenOn": "2016-05-25T14:05:45Z",
+      "side": 1,
+      "message": "One thought I\u0027ve had here is to switch this from using the Groovy plugin and instead use Jenkins Flow to do something like a parameterized build with a list of plugins to fetch/build.  Also, I think there might be a reason to provide an option to build a specific tag, and not just build the latest tags (I believe there are some open bugs with fetching tags as I do here).",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 65
+      },
+      "revId": "2719c34398a6d789b77e61b6d1b0d4aaa0d2f570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
