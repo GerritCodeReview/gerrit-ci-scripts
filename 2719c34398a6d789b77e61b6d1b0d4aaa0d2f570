@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "bc7a7331_ab8bc9f7",
+        "filename": "jenkins/gerrit-buck-build-plugin-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-25T21:33:13Z",
+      "side": 1,
+      "message": "Why reinventing the build of plugins? We have already all the jobs that have this \"knowledge\", why not invoking them?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 2
+      },
+      "revId": "2719c34398a6d789b77e61b6d1b0d4aaa0d2f570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5c65f794_489fbf65",
         "filename": "jenkins/gerrit-buck-plugins-release.yaml",
         "patchSetId": 1
