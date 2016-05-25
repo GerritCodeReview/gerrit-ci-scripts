@@ -1,5 +1,6 @@
 git:latest
 git-client:latest
+groovy:latest
 scm-api:latest
 credentials:latest
 ssh-credentials:latest

@@ -1,0 +1,25 @@
+- job:
+    name: 'Gerrit-buck-plugins-release'
+    triggers:
+      - pollscm:
+          cron: 'H/10 * * * *'
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         refspec: +refs/tags/*:refs/remotes/origin/tags/*
+         branches:
+           - origin/tags/*
+         submodule:
+           recursive: true
+    builders:
+      - shell: |
+          set +x
+          rm -Rf buck-out
+          export BUCK_CLEAN_REPO_IF_DIRTY=y
+          buck build release
+      - system-groovy:
+          command:
+            !include-raw: gerrit-buck-build-plugin-release.groovy
+    publishers:
+      - archive:
+          artifacts: buck-out/gen/plugins/*/*.jar
