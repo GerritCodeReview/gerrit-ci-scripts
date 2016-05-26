@@ -1,4 +1,4 @@
-FROM jenkins
+FROM jenkins:2.3
 
 USER root
 
@@ -64,6 +64,7 @@ RUN mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 USER jenkins
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
+ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 ENV JENKINS_REF /usr/share/jenkins/ref/
 ENV USE_SECURITY false
 ENV OAUTH_ID clientid
@@ -88,6 +89,10 @@ RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/
 COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts-manual/
 COPY gerrit-ci-scripts-manual.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
+
+RUN echo "2.0" > $JENKINS_REF/jenkins.install.UpgradeWizard.state
+RUN echo "2.0" > $JENKINS_REF/upgraded
+RUN echo "2.0" > $JENKINS_REF/.last_exec_version
 
 COPY gitconfig $JENKINS_REF/.gitconfig
 
