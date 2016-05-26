@@ -1,3 +1,0 @@
-[submodule "nightly"]
-	path = nightly
-	url = git://git.quelltextlich.at/gerrit/gerrit-builder
