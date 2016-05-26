@@ -1,4 +1,10 @@
 #!/bin/bash
+xsltproc \
+  --stringparam use-security true \
+  --stringparam oauth-client-id clientid \
+  --stringparam oauth-client-secret secret \
+  ./edit-config.xslt config.xml
+
 sed -i -e "s/#OAUTH_ID#/$OAUTH_ID/g" $JENKINS_REF/config.xml
 sed -i -e "s/#OAUTH_SECRET#/$OAUTH_SECRET/g" $JENKINS_REF/config.xml
 

@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     automake \
     maven \
+    xsltproc \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
@@ -64,12 +65,21 @@ USER jenkins
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
 ENV JENKINS_REF /usr/share/jenkins/ref/
-ENV OAUTH_ID 326d197edb60653fdfcb
-ENV OAUTH_SECRET ae9177**********************************
-ENV JENKINS_API_USER lucamilanesio
-ENV JENKINS_API_PASSWORD abc*************************
+ENV USE_SECURITY false
+ENV OAUTH_ID clientid
+ENV OAUTH_SECRET secret
+ENV JENKINS_API_USER user
+ENV JENKINS_API_PASSWORD pass
 
-COPY config.xml $JENKINS_REF
+COPY edit-config.xslt $JENKINS_REF
+COPY config.xml $JENKINS_REF/config-template.xml
+
+RUN xsltproc \
+  --stringparam use-security $USE_SECURITY \
+  --stringparam oauth-client-id $OAUTH_ID \
+  --stringparam oauth-client-secret $OAUTH_SECRET \
+  $JENKINS_REF/edit-config.xslt $JENKINS_REF/config-template.xml > $JENKINS_REF/config.xml
+
 COPY config.sh /usr/local/bin/
 COPY plugins.txt $JENKINS_REF
 RUN plugins.sh $JENKINS_REF/plugins.txt
