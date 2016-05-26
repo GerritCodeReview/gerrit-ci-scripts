@@ -2,6 +2,46 @@
   "comments": [
     {
       "key": {
+        "uuid": "bc7a7331_eb39d1e0",
+        "filename": "jenkins/gerrit-buck-build-plugin-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-26T15:53:39Z",
+      "side": 1,
+      "message": "Some plugins are on GitHub, others are on Gerrit-Review but have a different repo name.",
+      "revId": "2719c34398a6d789b77e61b6d1b0d4aaa0d2f570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc7a7331_cb3415ea",
+        "filename": "jenkins/gerrit-buck-build-plugin-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-26T15:53:39Z",
+      "side": 1,
+      "message": "Some plugins are not built with buck:\n- maven plugins\n- sbt plugins\n\n... and others have a different buck build command line anyway :-(",
+      "range": {
+        "startLine": 24,
+        "startChar": 9,
+        "endLine": 24,
+        "endChar": 18
+      },
+      "revId": "2719c34398a6d789b77e61b6d1b0d4aaa0d2f570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bc7a7331_ab8bc9f7",
         "filename": "jenkins/gerrit-buck-build-plugin-release.groovy",
         "patchSetId": 1
@@ -37,6 +77,30 @@
       "side": 1,
       "message": "I thought about it, but there\u0027s a few reasons I went this route.  One, I wanted to have one job, one giant archive of all plugins we could build at the time of a new release.  Another reason is speed: the current plugin jobs require individually building Gerrit, then building their plugin.  If we shared a workspace, this could potentially be better, but as it stands, there\u0027s a bit of a penalty for trying to kick off a large number of plugin builds.  Finally, I didn\u0027t want to enumerate plugins in two places; using Groovy to dynamically extract the list of plugins we can build in this way seemed feasible.\n\nCertainly, the workflow plugin would be excellent in this case: we could kick off a parameterized build to check out gerrit at the tagged version and apply the latest version of the plugin to it.\n\nMostly, this was some idle musing to see if I could derive a way to build a pseudo-\"release\" version of non-core plugins, and I was mostly right.  There\u0027s a lot of quirks, and I\u0027m not arguing this is the right way to do it... but I\u0027d at least like to start the discussion, and the example seemed to be the best way to show what I was going for. :)",
       "parentUuid": "bc7a7331_ab8bc9f7",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 2
+      },
+      "revId": "2719c34398a6d789b77e61b6d1b0d4aaa0d2f570",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc7a7331_2b59194e",
+        "filename": "jenkins/gerrit-buck-build-plugin-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-05-26T15:53:39Z",
+      "side": 1,
+      "message": "Understood, however the plugins\u0027 build is much more complex that a simple \"buck build plugins/xyz\" ...",
+      "parentUuid": "3c684370_c7ff1e74",
       "range": {
         "startLine": 7,
         "startChar": 0,
