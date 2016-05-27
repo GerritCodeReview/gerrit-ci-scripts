@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1c1d3f1b_16f13ca3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-05-27T00:39:00Z",
+      "side": 1,
+      "message": "box",
+      "range": {
+        "startLine": 13,
+        "startChar": 63,
+        "endLine": 13,
+        "endChar": 66
+      },
+      "revId": "b5ca77a50b03a925f86eb278b37bd063568f9feb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc178bf9_95042472",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-05-27T00:39:00Z",
+      "side": 1,
+      "message": "Do we need to set these if $USE_SECURITY is false?",
+      "range": {
+        "startLine": 79,
+        "startChar": 2,
+        "endLine": 80,
+        "endChar": 51
+      },
+      "revId": "b5ca77a50b03a925f86eb278b37bd063568f9feb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
