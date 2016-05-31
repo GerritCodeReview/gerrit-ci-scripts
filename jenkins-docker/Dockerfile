@@ -62,7 +62,13 @@ RUN git clone https://github.com/facebook/buck /opt/buck && \
 
 RUN mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
-USER jenkins
+RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+RUN echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list
+RUN apt-get update
+RUN apt-cache policy docker-engine
+RUN apt-get install -y docker-engine
+VOLUME /var/run/docker.sock
+
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.ParametersAction.keepUndefinedParameters=true
