@@ -47,6 +47,7 @@
       <command>jenkins-jobs update jenkins</command>
     </hudson.tasks.Shell>
   </builders>
+  <assignedNode>master</assignedNode>
   <publishers/>
   <buildWrappers/>
 </project>
