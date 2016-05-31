@@ -5,6 +5,7 @@ build-flow-plugin:0.19
 build-timeout:1.16
 cloudbees-folder:5.11
 credentials:2.0.6
+docker-plugin:0.16.0
 durable-task:1.10
 envinject:1.92.1
 git:2.4.4
@@ -33,6 +34,7 @@ plain-credentials:1.2
 scm-api:1.2
 script-security:1.19
 ssh-credentials:1.12
+ssh-slaves:1.11
 structs:1.1
 token-macro:1.12.1
 timestamper:1.8.2

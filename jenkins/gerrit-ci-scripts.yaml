@@ -1,6 +1,7 @@
 - job:
     name: gerrit-ci-scripts
     description: Gerrit Jenkins Job Builder Scripts
+    node: master
     scm:
       - git:
          url: https://gerrit.googlesource.com/gerrit-ci-scripts
@@ -16,6 +17,7 @@
 - job:
     name: gerrit-ci-scripts-manual
     description: Manually rebuild gerrit-ci-scripts from a specific Change ID and revision
+    node: master
     parameters:
       - string:
          name: CHANGE_NUMBER
