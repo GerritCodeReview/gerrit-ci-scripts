@@ -11,58 +11,18 @@ RUN apt-get update && apt-get install -y \
     python-pip \
     python-yaml \
     python-jenkins \
-    ant \
     default-jdk \
     autoconf \
     automake \
-    maven \
     xsltproc \
     openjdk-7-jdk \
     && rm -rf /var/lib/apt/lists/*
-
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
-RUN apt-get install -y nodejs
-RUN npm install -g web-component-tester
-
-RUN apt-get install -y chromium chromedriver
-RUN ln -s /usr/bin/chromium /usr/bin/chrome
-
-# Unattended GUI testing
-RUN apt-get install -y xvfb
-
-# Allow Android SDK tools to run on a 64-bit system, see
-# http://stackoverflow.com/a/23201209/1127485
-RUN apt-get install -y lib32stdc++6 lib32z1
 
 RUN mkdir -p /opt/ && git clone https://git.openstack.org/openstack-infra/jenkins-job-builder /opt/jenkins_job_builder
 
 RUN pip install /opt/jenkins_job_builder
 
-RUN git clone https://github.com/facebook/buck /opt/buck && \
-    cd /opt/buck && ant && \
-    mkdir -p /opt/buck/bin && \
-    ln -s `pwd`/bin/buck /usr/bin/ && \
-    ln -s `pwd`/bin/buckd /usr/bin/ && \
-    chown -R jenkins:jenkins /opt/buck
-
-## NOTE ##
-# Watchman can be enabled (to enable buckd) by uncommenting the following
-# lines.  Note that because this caches some build results, it can lead to
-# unpredictable behavior in a continuous integration setting.
-# ENABLE AT YOUR OWN RISK!
-#
-#RUN git clone https://github.com/facebook/watchman.git /opt/watchman && \
-#    cd /opt/watchman && \
-#    ./autogen.sh && \
-#    ./configure && \
-#    make && \
-#    make install
-#
-## END WATCHMAN SECTION ##
-
 RUN mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
-
-USER jenkins
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.ParametersAction.keepUndefinedParameters=true
@@ -73,9 +33,14 @@ ENV OAUTH_SECRET secret
 ENV JENKINS_API_USER user
 ENV JENKINS_API_PASSWORD pass
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+ENV DOCKER_HOST tcp://127.0.0.1:2375
 
 COPY edit-config.xslt $JENKINS_REF
 COPY config.xml $JENKINS_REF
+
+RUN mkdir $JENKINS_REF/.ssh
+RUN chown -R jenkins:jenkins $JENKINS_REF/.ssh
+RUN chmod -R 700 $JENKINS_REF/.ssh
 
 COPY config.sh /usr/local/bin/
 COPY plugins.txt $JENKINS_REF
@@ -91,4 +56,18 @@ RUN echo "2.0" > $JENKINS_REF/upgraded
 RUN echo "2.0" > $JENKINS_REF/.last_exec_version
 
 COPY gitconfig $JENKINS_REF/.gitconfig
+
+RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+RUN echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list
+RUN apt-get update
+RUN apt-cache policy docker-engine
+RUN apt-get install -y docker-engine
+
+COPY id_rsa* $JENKINS_REF/.ssh/
+RUN chown jenkins:jenkins $JENKINS_REF/.ssh/id_rsa*
+RUN chmod 600 $JENKINS_REF/.ssh/id_rsa
+
+USER jenkins
+
+
 
