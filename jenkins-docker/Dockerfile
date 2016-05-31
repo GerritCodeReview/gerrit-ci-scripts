@@ -61,6 +61,8 @@ RUN git clone https://github.com/facebook/buck /opt/buck && \
 
 RUN mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
+RUN chmod a+rw /etc/hosts
+
 USER jenkins
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
