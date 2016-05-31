@@ -1,10 +1,6 @@
-FROM jenkins:2.3
+FROM ubuntu:15.04
 
 USER root
-
-# Override Jenkins start-up script
-RUN mv /usr/local/bin/jenkins.sh /usr/local/bin/run-jenkins.sh
-COPY jenkins.sh /usr/local/bin/
 
 RUN apt-get update && apt-get install -y \
     python-dev \
@@ -18,14 +14,24 @@ RUN apt-get update && apt-get install -y \
     maven \
     xsltproc \
     openjdk-7-jdk \
+    openssh-server \ 
+    curl \
+    git-core \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g web-component-tester
 
-RUN apt-get install -y chromium chromedriver
+RUN apt-get install -y chromium-browser 
 RUN ln -s /usr/bin/chromium /usr/bin/chrome
+
+RUN apt-get install -y unzip wget
+RUN mkdir /tmp/chromedriver/ 
+ADD http://chromedriver.storage.googleapis.com/LATEST_RELEASE /tmp/chromedriver/LATEST_RELEASE
+RUN wget -O /tmp/chromedriver/chromedriver.zip 'http://chromedriver.storage.googleapis.com/'$(cat /tmp/chromedriver/LATEST_RELEASE)'/chromedriver_linux64.zip'
+RUN unzip /tmp/chromedriver/chromedriver.zip chromedriver -d /usr/local/bin/
+RUN chmod a+x /usr/local/bin/chromedriver
 
 # Unattended GUI testing
 RUN apt-get install -y xvfb
@@ -38,6 +44,15 @@ RUN mkdir -p /opt/ && git clone https://git.openstack.org/openstack-infra/jenkin
 
 RUN pip install /opt/jenkins_job_builder
 
+RUN useradd jenkins -d /home/jenkins -m -s /bin/bash
+RUN mkdir /home/jenkins/.ssh
+RUN chown -R jenkins:jenkins /home/jenkins/.ssh
+RUN chmod -R 700 /home/jenkins/.ssh
+
+COPY id_rsa.pub /home/jenkins/.ssh/authorized_keys
+RUN chown jenkins:jenkins /home/jenkins/.ssh/authorized_keys
+
+USER root
 RUN git clone https://github.com/facebook/buck /opt/buck && \
     cd /opt/buck && ant && \
     mkdir -p /opt/buck/bin && \
@@ -60,35 +75,23 @@ RUN git clone https://github.com/facebook/buck /opt/buck && \
 #
 ## END WATCHMAN SECTION ##
 
-RUN mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
-
-USER jenkins
-COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
-
-ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.ParametersAction.keepUndefinedParameters=true
-ENV JENKINS_REF /usr/share/jenkins/ref/
-ENV USE_SECURITY false
-ENV OAUTH_ID clientid
-ENV OAUTH_SECRET secret
-ENV JENKINS_API_USER user
-ENV JENKINS_API_PASSWORD pass
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
-COPY edit-config.xslt $JENKINS_REF
-COPY config.xml $JENKINS_REF
-
-COPY config.sh /usr/local/bin/
-COPY plugins.txt $JENKINS_REF
-RUN plugins.sh $JENKINS_REF/plugins.txt
-COPY number-executors.groovy $JENKINS_REF/init.groovy.d/
-RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/
-COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
-RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts-manual/
-COPY gerrit-ci-scripts-manual.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
-
-RUN echo "2.0" > $JENKINS_REF/jenkins.install.UpgradeWizard.state
-RUN echo "2.0" > $JENKINS_REF/upgraded
-RUN echo "2.0" > $JENKINS_REF/.last_exec_version
-
 COPY gitconfig $JENKINS_REF/.gitconfig
+
+RUN mkdir /var/run/sshd
+RUN echo 'root:screencast' | chpasswd
+RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+ENV NOTVISIBLE "in users profile"
+RUN echo "export VISIBLE=now" >> /etc/profile
+
+RUN /etc/init.d/ssh start
+
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-e", "-D"]
+ 
 
