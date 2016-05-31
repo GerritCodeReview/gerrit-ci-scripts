@@ -73,13 +73,7 @@ ENV JENKINS_API_USER user
 ENV JENKINS_API_PASSWORD pass
 
 COPY edit-config.xslt $JENKINS_REF
-COPY config.xml $JENKINS_REF/config-template.xml
-
-RUN xsltproc \
-  --stringparam use-security $USE_SECURITY \
-  --stringparam oauth-client-id $OAUTH_ID \
-  --stringparam oauth-client-secret $OAUTH_SECRET \
-  $JENKINS_REF/edit-config.xslt $JENKINS_REF/config-template.xml > $JENKINS_REF/config.xml
+COPY config.xml $JENKINS_REF
 
 COPY config.sh /usr/local/bin/
 COPY plugins.txt $JENKINS_REF

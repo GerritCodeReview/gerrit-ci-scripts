@@ -1,3 +1,18 @@
 #!/bin/bash
-sed -i -e "s/#JENKINS_API_USER#/$JENKINS_API_USER/g" /etc/jenkins_jobs/jenkins_jobs.ini
-sed -i -e "s/#JENKINS_API_PASSWORD#/$JENKINS_API_PASSWORD/g" /etc/jenkins_jobs/jenkins_jobs.ini
+
+if [ -f $JENKINS_HOME/config.xml ]
+then
+  CONFIG=$JENKINS_HOME/config.xml
+else
+  CONFIG=$JENKINS_REF/config.xml
+fi
+
+xsltproc \
+  --stringparam use-security $USE_SECURITY \
+  --stringparam oauth-client-id $OAUTH_ID \
+  --stringparam oauth-client-secret $OAUTH_SECRET \
+  $JENKINS_REF/edit-config.xslt $CONFIG > /tmp/config.xml.new
+mv /tmp/config.xml.new $CONFIG
+
+sed -i -e "s/user=.*/user=$JENKINS_API_USER/" /etc/jenkins_jobs/jenkins_jobs.ini
+sed -i -e "s/password=.*/password=$JENKINS_API_PASSWORD/" /etc/jenkins_jobs/jenkins_jobs.ini
