@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "192551a0_1643bc59",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1011624
+      },
+      "writtenOn": "2016-06-01T13:03:13Z",
+      "side": 1,
+      "message": "Seems like this upgrade broke something, probably related to\nsec-170: See https://jenkins.io/blog/2016/05/11/security-update/ for more information",
+      "revId": "185938f799a4d66d6433147fb8840ddad55cdb2a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
