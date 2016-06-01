@@ -64,7 +64,7 @@ RUN mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 USER jenkins
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
-ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
+ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.ParametersAction.keepUndefinedParameters=true
 ENV JENKINS_REF /usr/share/jenkins/ref/
 ENV USE_SECURITY false
 ENV OAUTH_ID clientid
