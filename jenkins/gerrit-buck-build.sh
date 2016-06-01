@@ -1,3 +1,5 @@
+#!/bin/bash
+
 rm -Rf buck-out
 find plugins -type l -exec rm -f {} \;
 export BUCK_CLEAN_REPO_IF_DIRTY=y

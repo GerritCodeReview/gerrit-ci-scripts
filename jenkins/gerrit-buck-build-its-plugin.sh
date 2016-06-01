@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # NOTE: All Gerrit plugins currently depend on, at a minimum
 # the bucklets repo, and most plugins don't build outside the
 # Gerrit tree, even with bucklets.  As a result, we need to
