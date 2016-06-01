@@ -70,6 +70,30 @@
       "revId": "7e0682a1bb7d3cdacbf8bcdc7cfbc865f8f6221c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9f6059c_0b8fdd36",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-06-01T19:43:33Z",
+      "side": 1,
+      "message": "I tried:\n   make FOO\u003dbar\n\n... and works for me.",
+      "parentUuid": "192551a0_d6d2e4e3",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "7e0682a1bb7d3cdacbf8bcdc7cfbc865f8f6221c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
