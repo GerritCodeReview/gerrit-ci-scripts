@@ -46,6 +46,30 @@
       "revId": "7e0682a1bb7d3cdacbf8bcdc7cfbc865f8f6221c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "192551a0_d6d2e4e3",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-06-01T06:20:51Z",
+      "side": 1,
+      "message": "By setting them with `\u003d` it\u0027s not possible to override the values from outside.\n\nSee:\n\n $ cat Makefile\n FOO\u003dbar\n all: test\n test:\n \t@echo $(FOO)\n \n $ make\n bar\n $ FOO\u003dbaz make\n bar                        \u003c\u003c\u003c expected to see \u0027baz\u0027 here\n\nCompared to using `\u003d?`:\n\n $ cat Makefile\n FOO?\u003dbar\n all: test\n test:\n \t@echo $(FOO)\n \n $ make\n bar\n $ FOO\u003dbaz make\n baz                        \u003c\u003c\u003c now it\u0027s as expected",
+      "parentUuid": "192551a0_76c2f018",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "7e0682a1bb7d3cdacbf8bcdc7cfbc865f8f6221c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
