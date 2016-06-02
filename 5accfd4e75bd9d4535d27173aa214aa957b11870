@@ -16,6 +16,24 @@
       "revId": "5accfd4e75bd9d4535d27173aa214aa957b11870",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "590989ae_e8b213f5",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-06-02T05:00:34Z",
+      "side": 1,
+      "message": "This change is still [WIP]: from Jenkins I need to know the external IP of my docker host. I was planning then to have /etc/hosts writeable and have the external IP injected at startup and stored on /etc/hosts as \u0027dockerhost\u0027",
+      "parentUuid": "590989ae_08a567ab",
+      "revId": "5accfd4e75bd9d4535d27173aa214aa957b11870",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
