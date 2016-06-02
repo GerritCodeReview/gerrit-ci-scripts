@@ -118,6 +118,30 @@
       "revId": "7e0682a1bb7d3cdacbf8bcdc7cfbc865f8f6221c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "590989ae_e889f332",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-06-02T04:33:32Z",
+      "side": 1,
+      "message": "Actually the trick is this one:\n\n  $ FOO\u003dbaz make\n  bar\n\n  $ make FOO\u003dbaz\n  baz\n\nWhen you pass variables to make as options in the command line, they always override the ones you se in the Makefile.\n\nIf you want to have the same behaviour with environment variables as well, just pass the -e flag.\n\n$ FOO\u003dbaz make -e\nbaz\n\nI wouldn\u0027t like to just simply blindly use env variables as you may have undesired side-effects. I would prefer to rely on explicit command line overrides, either passed via CLI or with \u0027-e\u0027.",
+      "parentUuid": "59bb49f2_d88e0d39",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "7e0682a1bb7d3cdacbf8bcdc7cfbc865f8f6221c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
