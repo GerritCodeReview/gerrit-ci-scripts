@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "590989ae_08a567ab",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-06-02T04:57:11Z",
+      "side": 1,
+      "message": "Why is this needed?",
+      "revId": "5accfd4e75bd9d4535d27173aa214aa957b11870",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
