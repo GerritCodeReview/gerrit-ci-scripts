@@ -34,6 +34,24 @@
       "revId": "5accfd4e75bd9d4535d27173aa214aa957b11870",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6118244_5a8ef53d",
+        "filename": "jenkins-docker/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-06-02T21:06:08Z",
+      "side": 1,
+      "message": "It seems that is not necessarily needed: I could use \"--add-host\" for docker run and I\u0027ll get the same result :-)",
+      "parentUuid": "590989ae_e8b213f5",
+      "revId": "5accfd4e75bd9d4535d27173aa214aa957b11870",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
