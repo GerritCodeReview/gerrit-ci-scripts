@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 rm -Rf buck-out
 find plugins -type l -exec rm -f {} \;

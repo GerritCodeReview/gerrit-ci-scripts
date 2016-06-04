@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # NOTE: All Gerrit plugins currently depend on, at a minimum
 # the bucklets repo, and most plugins don't build outside the

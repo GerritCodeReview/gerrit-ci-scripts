@@ -2,7 +2,7 @@
     name: test-gerrit
     builders:
       - shell: |
-          #!/bin/bash
+          #!/bin/bash -e
           set +x
           echo 'Test with mode={mode}'
           echo '----------------------------------------------'
@@ -37,7 +37,7 @@
     name: fetch-all-submodules
     builders:
       - shell: |
-          #!/bin/bash
+          #!/bin/bash -e
           set +x
           function fetch_submodules {
             # We do need to call update even if we know it will fail: the submodules git needs
@@ -99,7 +99,7 @@
       - shell:
           !include-raw-escape: gerrit-buck-cleanup.sh
       - shell: |
-          #!/bin/bash
+          #!/bin/bash -e
           set +x
           echo "Building $CHANGE_URL"
           echo '============================================================='

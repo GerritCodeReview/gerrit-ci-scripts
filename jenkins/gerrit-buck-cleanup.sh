@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 set +x
 ORPHAN_BUCK_PIDS=$(ps -o pid,command -e | grep -i java | grep -i buck | grep -v grep | awk '{print $1}')

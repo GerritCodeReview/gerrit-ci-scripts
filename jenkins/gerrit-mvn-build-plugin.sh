@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 find . -type d -name 'target' -delete
 mvn package
