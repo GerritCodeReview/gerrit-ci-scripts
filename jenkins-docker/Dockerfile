@@ -72,6 +72,7 @@ ENV OAUTH_ID clientid
 ENV OAUTH_SECRET secret
 ENV JENKINS_API_USER user
 ENV JENKINS_API_PASSWORD pass
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 COPY edit-config.xslt $JENKINS_REF
 COPY config.xml $JENKINS_REF
