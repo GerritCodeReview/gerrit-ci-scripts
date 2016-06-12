@@ -13,4 +13,4 @@ else
   # Up to Gerrit 2.12
   buck build -v 3 api_install
 fi
-mv $(buck targets --show_output release | awk '{print $2}') buck-out/gen/gerrit.war
+mv $(find buck-out -name '*.war') buck-out/gen/gerrit.war
