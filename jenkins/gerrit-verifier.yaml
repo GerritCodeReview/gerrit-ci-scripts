@@ -102,6 +102,7 @@
           #!/bin/bash -e
           set +x
           echo "Building $CHANGE_URL"
+          git log --oneline -1
           echo '============================================================='
           rm -Rf buck-out
           export BUCK_CLEAN_REPO_IF_DIRTY=y
