@@ -16,6 +16,24 @@
       "revId": "1828cacd205417a67cd0dee6cf2b285a50263979",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1427dd99_46bdb2c8",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 23
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-06-16T09:00:31Z",
+      "side": 1,
+      "message": "True, I should make a \"slave\" generic image and *THEN* derive from it. Building the image would become much quicker :-)\n\nIt isn\u0027t provisioned all the times though but just when you build the machine. Once published to DockerHub it would then just pull it when needed from Jenkins master.",
+      "parentUuid": "f4732992_d5f6bc9a",
+      "revId": "1828cacd205417a67cd0dee6cf2b285a50263979",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
