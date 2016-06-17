@@ -1,7 +1,0 @@
-- project:
-    name: avatars-gravatar
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
