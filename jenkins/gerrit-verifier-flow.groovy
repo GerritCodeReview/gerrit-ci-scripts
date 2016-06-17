@@ -210,6 +210,11 @@ def changesJson = jsonSlurper.parseText(changes)
 def acceptedChanges = changesJson.findAll {
   change ->
   sha1 = change.current_revision
+  if(sha1 == null) {
+      println "[WARNING] Skipping change " + change.change_id + " because it does not have any current revision or patch-set"
+      return false
+  }
+
   if(processAll && lastLog.contains(sha1)) {
       println "Skipping SHA1 " + sha1 + " because has been already built by " + lastBuild
       return false
