@@ -1,7 +1,0 @@
-- project:
-    name: review-strategy
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
