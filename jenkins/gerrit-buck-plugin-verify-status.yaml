@@ -1,7 +1,0 @@
-- project:
-    name: verify-status
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
