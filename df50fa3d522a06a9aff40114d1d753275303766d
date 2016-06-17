@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4940dc42_900fb426",
+        "filename": "jenkins/gerrit-buck-plugin-its-storyboard.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-06-17T10:46:48Z",
+      "side": 1,
+      "message": "Why not including stable-2.12 as well?",
+      "range": {
+        "startLine": 5,
+        "startChar": 8,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "df50fa3d522a06a9aff40114d1d753275303766d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
