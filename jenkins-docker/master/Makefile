@@ -25,7 +25,9 @@ id_rsa:
 	chmod a+r id_rsa*
 
 build: id_rsa
-	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
+	docker build --no-cache=$(NO_CACHE) \
+        --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
+        --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} -t ${IMAGE} .
 
 clean:
 	-docker rmi -f ${IMAGE}
