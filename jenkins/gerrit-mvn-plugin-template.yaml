@@ -36,3 +36,7 @@
     publishers:
       - archive:
          artifacts: '**/target/{repo}*.jar*'
+
+    wrappers:
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>

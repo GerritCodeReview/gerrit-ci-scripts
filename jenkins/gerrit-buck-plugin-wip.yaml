@@ -1,8 +1,0 @@
-- project:
-    name: wip
-    branch:
-      - master
-      - stable-2.9
-    jobs:
-      - 'plugin-{name}-{branch}'
-
