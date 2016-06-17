@@ -1,7 +1,0 @@
-- project:
-    name: emoticons
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-

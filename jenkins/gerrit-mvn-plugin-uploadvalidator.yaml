@@ -1,8 +1,0 @@
-- project:
-    name: uploadvalidator-mvn
-    repo: uploadvalidator
-    branch:
-      - stable-2.9
-    jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-

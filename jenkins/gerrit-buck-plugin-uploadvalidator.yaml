@@ -1,9 +1,0 @@
-- project:
-    name: uploadvalidator
-    branch:
-      - master
-      - stable-2.11
-      - stable-2.10
-    jobs:
-      - 'plugin-{name}-{branch}'
-
