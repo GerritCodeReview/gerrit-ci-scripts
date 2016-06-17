@@ -1,8 +1,0 @@
-- project:
-    name: changemessage-mvn
-    repo: changemessage
-    branch:
-      - master
-    jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-

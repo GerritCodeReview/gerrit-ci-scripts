@@ -44,6 +44,7 @@ ENV DOCKER_HOST tcp://127.0.0.1:2375
 
 COPY edit-config.xslt $JENKINS_REF
 COPY config.xml $JENKINS_REF
+COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 
 RUN mkdir $JENKINS_REF/.ssh
 RUN chown -R jenkins:jenkins $JENKINS_REF/.ssh
@@ -53,8 +54,8 @@ COPY config.sh /usr/local/bin/
 COPY plugins.txt $JENKINS_REF
 RUN plugins.sh $JENKINS_REF/plugins.txt
 COPY number-executors.groovy $JENKINS_REF/init.groovy.d/
-RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/
-COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
+#RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/
+#COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts-manual/
 COPY gerrit-ci-scripts-manual.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
 
