@@ -203,7 +203,10 @@ queryUrl = processAll ?
                       gerritQuery.encodeURL()) :
   new URL(Globals.gerrit + "changes/?pp=0&O=3&q=" + requestedChangeId)
 
+println "Querying Gerrit Changes: $queryUrl"
 def changes = queryUrl.getText().substring(5)
+
+println "Changes JSON: $changes"
 def jsonSlurper = new JsonSlurper()
 def changesJson = jsonSlurper.parseText(changes)
 
