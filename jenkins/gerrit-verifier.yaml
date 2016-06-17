@@ -117,6 +117,8 @@
           timeout: 40
           type: absolute
           fail: true
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
 
 - project:
     name: Gerrit-verifier

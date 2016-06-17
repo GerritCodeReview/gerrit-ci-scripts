@@ -17,6 +17,8 @@
           timeout: 30
           fail: true
       - timestamps
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     logrotate:
       numToKeep: 20
       artifactNumToKeep: 20
