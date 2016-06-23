@@ -38,5 +38,10 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 RUN /etc/init.d/ssh start
 
+
+RUN apt-get update && apt-get install -y software-properties-common
+RUN add-apt-repository ppa:git-core/ppa
+RUN apt-get update && apt-get install -y git
+
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-e", "-D"]
