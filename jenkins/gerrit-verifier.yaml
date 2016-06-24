@@ -71,11 +71,6 @@
       - string:
           name: BRANCH
           description: "Git branch or SHA1 to checkout"
-    wrappers:
-      - timeout:
-          timeout: 40
-          type: absolute
-          fail: true
 
     logrotate:
       numToKeep: 4096
@@ -120,6 +115,10 @@
           additional-options: -fbdir /tmp
           debug: true
           shutdown-with-build: false
+      - timeout:
+          timeout: 40
+          type: absolute
+          fail: true
 
 - project:
     name: Gerrit-verifier
