@@ -20,8 +20,12 @@ RUN apt-get install -y nodejs
 # PolyGerrit tests
 
 RUN npm install -g web-component-tester
-RUN apt-get install -y chromium-browser
-RUN ln -s /usr/bin/chromium /usr/bin/chrome
+RUN curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+RUN apt-get update && apt-get install -y google-chrome-stable
+
+COPY wct.conf.json /home/jenkins/
+RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
 RUN apt-get install -y unzip wget
 RUN mkdir /tmp/chromedriver/
