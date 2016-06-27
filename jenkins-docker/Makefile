@@ -1,4 +1,4 @@
-DIRS=master slave slave-buck
+DIRS=master slave slave-buck slave-mvn
 
 default: start
 
