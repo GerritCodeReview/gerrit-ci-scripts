@@ -12,6 +12,16 @@ RUN apt-get update && apt-get install -y \
     zip \
     && rm -rf /var/lib/apt/lists/*
 
+# Need a virtual display for Chromium-based tests
+RUN apt-get update && apt-get install -y \
+	xvfb \
+	x11-xkb-utils \
+	xfonts-100dpi \
+	xfonts-75dpi \
+	xfonts-scalable \
+	xfonts-cyrillic \
+	x11-apps
+
 # Node JS for PolyGerrit build
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
