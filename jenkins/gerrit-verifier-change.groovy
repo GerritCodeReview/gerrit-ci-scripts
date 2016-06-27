@@ -127,6 +127,55 @@ Boolean polygerritTouched(changeNum, sha1) {
   } != null
 }
 
+def buildChange(change) {
+  def sha1 = change.current_revision
+  def changeNum = change._number
+  def revision = change.revisions.get(sha1)
+  def ref = revision.ref
+  def patchNum = revision._number
+  def branch = change.branch
+  def changeUrl = Globals.gerrit + "#/c/" + changeNum + "/" + patchNum
+  def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
+
+  println "Building Change " + changeUrl
+
+  def b
+  ignore(FAILURE) {
+    retry ( Globals.numRetryBuilds ) {
+      b = build("Gerrit-verifier-default", REFSPEC: refspec, BRANCH: sha1,
+                CHANGE_URL: changeUrl)
+    }
+  }
+  def result = waitForResult(b)
+  gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,getVerified(result), "")
+
+  if (result == Result.SUCCESS && polygerritTouched(changeNum, sha1)) {
+    ignore(FAILURE) {
+      retry(Globals.numRetryBuilds) {
+        b = build("Gerrit-verifier-polygerrit", REFSPEC: refspec, BRANCH: sha1,
+            CHANGE_URL: changeUrl)
+      }
+    }
+
+    result = waitForResult(b)
+    gerritReview(b.getBuildUrl() + "consoleText", changeNum, sha1,
+        getVerified(result), "PolyGerrit - ")
+  }
+
+  if(result == Result.SUCCESS && branch=="master") {
+    ignore(FAILURE) {
+      retry ( Globals.numRetryBuilds ) {
+        b = build("Gerrit-verifier-notedb", REFSPEC: refspec, BRANCH: sha1,
+                  CHANGE_URL: changeUrl)
+      }
+    }
+
+    result = waitForResult(b)
+    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1, getVerified(result), "NoteDB - ")
+  }
+}
+
+
 def lastBuild = build.getPreviousSuccessfulBuild()
 def logOut = new ByteArrayOutputStream()
 if(lastBuild != null) {
@@ -143,15 +192,11 @@ if(lastBuild != null) {
   println "Last successful build was " + lastBuild.toString()
 }
 
-def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
-
 def requestedChangeId = params.get("CHANGE_ID")
 
-def processAll = requestedChangeId.equals("ALL")
+def processAll = false
 
-queryUrl = processAll ?
-  new URL(Globals.gerrit + "changes/?pp=0&O=3&n=" + Globals.maxChanges + "&q=" +
-                      gerritQuery.encodeURL()) :
+queryUrl = 
   new URL(Globals.gerrit + "changes/?pp=0&O=3&q=" + requestedChangeId)
 
 def changes = queryUrl.getText().substring(5)
@@ -166,29 +211,14 @@ def acceptedChanges = changesJson.findAll {
       return false
   }
 
-  if(processAll && lastLog.contains(sha1)) {
-      println "Skipping SHA1 " + sha1 + " because has been already built by " + lastBuild
-      return false
-  }
-
   def verified = change.labels.Verified
   def approved = verified.approved
   def rejected = verified.rejected 
 
-  if(processAll && approved != null && approved._account_id == Globals.myAccountId) {
-    println "I have already approved " + sha1 + " commit: SKIPPING"
-    return false
-  } else if(processAll && rejected != null && rejected._account_id == Globals.myAccountId) {
-    println "I have already rejected " + sha1 + " commit: SKIPPING"
-    return false
-  } else {
-    gerritComment(build.startJob.getBuildUrl() + "console",change._number,change.current_revision,"Verification queued on")
-    return true
-  }
+  gerritComment(build.startJob.getBuildUrl() + "console",change._number,change.current_revision,"Verification queued on")
+  return true
 }
 
-println "Gerrit has " + acceptedChanges.size() + " change(s) since " + since
-println "================================================================================"
-
-def builds = acceptedChanges.collect { change -> { x -> build("Gerrit-verifier-change", CHANGE_ID: x._number) } }
-parallel(builds)
+for (change in acceptedChanges) {
+  buildChange(change)
+}
