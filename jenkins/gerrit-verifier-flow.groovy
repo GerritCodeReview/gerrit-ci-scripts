@@ -72,6 +72,11 @@ def acceptedChanges = changesJson.findAll {
       return false
   }
 
+  if(change.hashtags.contains("skipci")) {
+      println "Skipping SHA1 $sha1 because is tagged with #skipci"
+      return false
+  }
+
   def verified = change.labels.Verified
   def approved = verified.approved
   def rejected = verified.rejected 
