@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c033c3f3_2c79d365",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-06-29T08:34:16Z",
+      "side": 1,
+      "message": "\"it is\"",
+      "range": {
+        "startLine": 76,
+        "startChar": 43,
+        "endLine": 76,
+        "endChar": 45
+      },
+      "revId": "669a873595009385c627e7f2ca016fc02d748b97",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
