@@ -35,12 +35,7 @@ class Globals {
 }
 
 def lastBuild = build.getPreviousSuccessfulBuild()
-def logOut = new ByteArrayOutputStream()
-if(lastBuild != null) {
-  lastBuild.getLogText().writeLogTo(0,logOut)
-}
 
-def lastLog = new String(logOut.toByteArray())
 def lastBuildStartTimeMillis = lastBuild == null ?
   (System.currentTimeMillis() - 1800000) : lastBuild.getStartTimeInMillis()
 def sinceMillis = lastBuildStartTimeMillis - 30000
@@ -64,11 +59,6 @@ def acceptedChanges = changesJson.findAll {
   sha1 = change.current_revision
   if(sha1 == null) {
       println "[WARNING] Skipping change " + change.change_id + " because it does not have any current revision or patch-set"
-      return false
-  }
-
-  if(lastLog.contains(sha1)) {
-      println "Skipping SHA1 " + sha1 + " because has been already built by " + lastBuild
       return false
   }
 
