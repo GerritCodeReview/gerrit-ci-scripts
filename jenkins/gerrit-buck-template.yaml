@@ -6,6 +6,16 @@
           timeout: 30
           fail: true
       - timestamps
+      - xvfb:
+          installation-name: Xvfb
+          auto-display-name: true
+          parallel-build: false
+          timeout: 10
+          screen: 1024x768x16
+          display-name-offset: 100
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
     logrotate:
       numToKeep: 20
       artifactNumToKeep: 20
@@ -32,6 +42,8 @@
          !include-raw-escape: gerrit-buck-cleanup.sh
       - shell:
          !include-raw-escape: gerrit-buck-build.sh
+      - shell:
+         !include-raw-escape: gerrit-buck-test.sh
     publishers:
       - archive:
          artifacts: >
