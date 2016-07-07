@@ -92,8 +92,6 @@
 
     builders:
       - fetch-all-submodules
-      - shell:
-          !include-raw-escape: gerrit-buck-cleanup.sh
       - shell: |
           #!/bin/bash -e
           set +x

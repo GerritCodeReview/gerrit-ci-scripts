@@ -29,8 +29,6 @@
 
     builders:
       - shell:
-         !include-raw-escape: gerrit-buck-cleanup.sh
-      - shell:
          !include-raw-escape: gerrit-buck-build.sh
     publishers:
       - archive:
