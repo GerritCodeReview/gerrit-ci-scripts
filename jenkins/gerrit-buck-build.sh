@@ -1,8 +1,5 @@
 #!/bin/bash -e
 
-rm -Rf buck-out
-find plugins -type l -exec rm -f {} \;
-export BUCK_CLEAN_REPO_IF_DIRTY=y
 buck build -v 3 api plugins:core release
 
 if [ -f tools/maven/api.sh ]
