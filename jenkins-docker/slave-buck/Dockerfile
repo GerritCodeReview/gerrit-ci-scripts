@@ -62,3 +62,12 @@ RUN git clone https://github.com/facebook/buck /opt/buck && \
 #
 ## END WATCHMAN SECTION ##
 
+# Buck cache warm-up with Gerrit master build
+
+USER jenkins
+RUN cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit
+RUN cd /tmp/gerrit && ( buck build gerrit api plugins:core || true )
+RUN cd /tmp/gerrit && ( buck test --dry-run --no-results-cache --exclude flaky || true )
+RUN rm -Rf /tmp/gerrit
+
+USER root
