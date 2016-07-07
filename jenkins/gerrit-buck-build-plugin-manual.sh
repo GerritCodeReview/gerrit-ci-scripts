@@ -12,8 +12,6 @@ rm -rf plugins/{name}
 git fetch https://gerrit.googlesource.com/plugins/{name} $REFS_CHANGE
 git read-tree -u --prefix=plugins/{name} FETCH_HEAD
 
-rm -Rf buck-out
-export BUCK_CLEAN_REPO_IF_DIRTY=y
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 buck build -v 3 $TARGETS
