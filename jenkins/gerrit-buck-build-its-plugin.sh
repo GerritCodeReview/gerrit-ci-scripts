@@ -14,7 +14,6 @@ git read-tree -u --prefix=plugins/its-{name} origin/{branch}
 git read-tree -u --prefix=plugins/its-base base/{branch}
 
 rm -Rf buck-out
-export BUCK_CLEAN_REPO_IF_DIRTY=y
 buck build -v 3 plugins/its-{name}
 
 # Extract version information
