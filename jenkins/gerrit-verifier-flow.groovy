@@ -71,11 +71,11 @@ def acceptedChanges = changesJson.findAll {
   def approved = verified.approved
   def rejected = verified.rejected 
 
-  if(approved != null && approved._account_id == Globals.myAccountId) {
-    println "I have already approved " + sha1 + " commit: SKIPPING"
+  if(approved != null) {
+    println "Change with commit $sha1 has been already approved: SKIPPING"
     return false
-  } else if(rejected != null && rejected._account_id == Globals.myAccountId) {
-    println "I have already rejected " + sha1 + " commit: SKIPPING"
+  } else if(rejected != null) {
+    println "Change with commit $sha1 has been already rejected: SKIPPING"
     return false
   } else {
     return true
