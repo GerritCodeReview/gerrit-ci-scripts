@@ -47,7 +47,7 @@ if(lastBuild != null) {
 
 def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
 
-queryUrl = new URL(Globals.gerrit + "changes/?pp=0&O=3&n=" + Globals.maxChanges + "&q=" +
+queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
                       gerritQuery.encodeURL())
 
 def changes = queryUrl.getText().substring(5)
@@ -67,18 +67,21 @@ def acceptedChanges = changesJson.findAll {
       return false
   }
 
-  def verified = change.labels.Verified
-  def approved = verified.approved
-  def rejected = verified.rejected 
+  def verified = change.labels.Verified.all
 
-  if(approved != null && approved._account_id == Globals.myAccountId) {
-    println "I have already approved " + sha1 + " commit: SKIPPING"
-    return false
-  } else if(rejected != null && rejected._account_id == Globals.myAccountId) {
-    println "I have already rejected " + sha1 + " commit: SKIPPING"
-    return false
+  if(verified == null) {
+    true
   } else {
-    return true
+    def myVerifications = verified.findAll {
+      verification -> verification._account_id == Globals.myAccountId
+    }
+
+    if(!myVerifications.isEmpty) {
+      println "I have already verified " + sha1 + " commit: SKIPPING"
+      false
+    } else {
+      true
+    }
   }
 }
 
