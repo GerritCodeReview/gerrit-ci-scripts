@@ -73,7 +73,9 @@
           description: "Git branch or SHA1 to checkout"
 
     logrotate:
-      numToKeep: 4096
+      numToKeep: 256
+      artifactNumToKeep: 1
+
     properties:
        - authorization:
            anonymous:
@@ -137,6 +139,8 @@
       - string:
           name: CHANGE_ID
           description: Gerrit Change-ID to build and verify
+    logrotate:
+      numToKeep: 256
     dsl:
        !include-raw: gerrit-verifier-change.groovy
 
@@ -145,5 +149,7 @@
     project-type: flow
     triggers:
       - timed: 'H/10 * * * *'
+    logrotate:
+      numToKeep: 20
     dsl:
        !include-raw: gerrit-verifier-flow.groovy
