@@ -73,7 +73,7 @@
           description: "Git branch or SHA1 to checkout"
 
     logrotate:
-      numToKeep: 4096
+      numToKeep: 20
     properties:
        - authorization:
            anonymous:
