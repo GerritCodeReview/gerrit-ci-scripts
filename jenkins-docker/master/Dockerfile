@@ -74,6 +74,9 @@ RUN apt-get install -y docker-engine
 COPY id_rsa* $JENKINS_REF/.ssh/
 RUN chown jenkins:jenkins $JENKINS_REF/.ssh/id_rsa*
 RUN chmod 600 $JENKINS_REF/.ssh/id_rsa
+ 
+# Set default JDK to 8
+RUN update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 USER jenkins
 
