@@ -2,8 +2,8 @@ FROM jenkins:2.3
 
 USER root
 
-ARG JENKINS_WAR_VER=2.11
-ARG JENKINS_WAR_SHA=35dcb66a4f4d43d9cbbb8109e57b079e1292ff5e
+ARG JENKINS_WAR_VER=2.15
+ARG JENKINS_WAR_SHA=9d9c237c4a573f415679f36421de7c0b57fc2d3e
 
 # could use ADD but this one does not check Last-Modified header
 # see https://github.com/docker/docker/issues/8331
