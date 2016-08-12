@@ -1,0 +1,6 @@
+- project:
+    name: project-download-commands
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
