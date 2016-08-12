@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe77910c_26f59683",
+        "filename": "jenkins/gerrit-buck-plugin-project-download-commands.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-08-12T14:06:57Z",
+      "side": 1,
+      "message": "I checked, and this project doesn\u0027t have a stable-2.12 or even a stable-2.11 branch.\n\nDoes it build against those API versions?  I wonder if we should create the branches.",
+      "revId": "390b5bfff4ab7688f9559965647f4c007b30bd88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
