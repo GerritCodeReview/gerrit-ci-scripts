@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fbac03b7_9ed63df9",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-08-17T07:55:17Z",
+      "side": 1,
+      "message": "unrelated to this change, but it might be worth checking if there\u0027s any performance difference if the github mirror is used instead.\n\nhttps://github.com/openstack-infra/jenkins-job-builder",
+      "range": {
+        "startLine": 29,
+        "startChar": 32,
+        "endLine": 29,
+        "endChar": 93
+      },
+      "revId": "e0b4107b3164bd374ab89f0cab2ab45bd602798c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
