@@ -22,6 +22,30 @@
       "revId": "e0b4107b3164bd374ab89f0cab2ab45bd602798c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b2397ed_87b8e6b7",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-08-17T07:59:43Z",
+      "side": 1,
+      "message": "Not really and GitHub is down at times ... better to get it from the source then :-)",
+      "parentUuid": "fbac03b7_9ed63df9",
+      "range": {
+        "startLine": 29,
+        "startChar": 32,
+        "endLine": 29,
+        "endChar": 93
+      },
+      "revId": "e0b4107b3164bd374ab89f0cab2ab45bd602798c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
