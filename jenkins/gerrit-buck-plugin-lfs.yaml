@@ -1,0 +1,7 @@
+- project:
+    name: lfs
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
