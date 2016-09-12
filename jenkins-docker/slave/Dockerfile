@@ -8,13 +8,14 @@ RUN apt-get update && apt-get install -y \
     default-jdk \
     maven \
     openjdk-7-jdk \
+    openjdk-8-jdk \
     openssh-server \
     curl \
     git-core \
     xvfb \
     && rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+RUN update-java-alternatives -v -s java-1.7.0-openjdk
 
 RUN useradd jenkins -d /home/jenkins -m -s /bin/bash
 RUN mkdir /home/jenkins/.ssh
