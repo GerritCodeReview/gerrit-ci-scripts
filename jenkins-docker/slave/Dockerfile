@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     default-jdk \
     maven \
     openjdk-7-jdk \
+    openjdk-8-jdk \
     openssh-server \
     curl \
     git-core \
@@ -15,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+ENV PATH $JAVA_HOME/bin:$JAVA_HOME/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN useradd jenkins -d /home/jenkins -m -s /bin/bash
 RUN mkdir /home/jenkins/.ssh
