@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2bec8e3b_25acfaa6",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-09-20T12:18:38Z",
+      "side": 1,
+      "message": "Xan you just always build with Java 8? In case source level is 7, it would work too, right?",
+      "revId": "aa12e9cf39ef216e800ee1c53a23a9aab3069954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
