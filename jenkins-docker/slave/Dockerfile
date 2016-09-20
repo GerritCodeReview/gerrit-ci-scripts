@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN update-java-alternatives -v -s java-1.7.0-openjdk
+COPY java8.sh /etc/profile.d/
 
 RUN useradd jenkins -d /home/jenkins -m -s /bin/bash
 RUN mkdir /home/jenkins/.ssh
