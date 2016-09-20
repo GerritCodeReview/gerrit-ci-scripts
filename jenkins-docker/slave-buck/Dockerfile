@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     zip \
     && rm -rf /var/lib/apt/lists/*
 
+RUN update-java-alternatives -v -s java-1.8.0-openjdk
+
 # Node JS for PolyGerrit build
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
