@@ -16,6 +16,24 @@
       "revId": "aa12e9cf39ef216e800ee1c53a23a9aab3069954",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2bec8e3b_c5a1cead",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-09-20T12:21:10Z",
+      "side": 1,
+      "message": "Not really what we want: if you post a patch on a stable branch (2.11, 2.12 or 2.13) we need to keep the Java 7 binary code right? ... or possibly you are right, just the Java8 will produce a Java7 bytecode.\n\nI will just remove the condition then ...",
+      "parentUuid": "2bec8e3b_25acfaa6",
+      "revId": "aa12e9cf39ef216e800ee1c53a23a9aab3069954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
