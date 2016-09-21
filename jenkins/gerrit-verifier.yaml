@@ -118,7 +118,7 @@
       - timeout:
           timeout: 40
           type: absolute
-          fail: true
+          fail: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
 

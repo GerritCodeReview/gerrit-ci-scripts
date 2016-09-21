@@ -3,8 +3,8 @@
     description: "{name} {branch} branch build with BUCK\n"
     wrappers:
       - timeout:
-          timeout: 60
-          fail: true
+          timeout: 40
+          fail: false
       - timestamps
       - xvfb:
           installation-name: Xvfb
