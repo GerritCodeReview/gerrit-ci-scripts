@@ -116,9 +116,9 @@
           debug: true
           shutdown-with-build: false
       - timeout:
-          timeout: 40
-          type: absolute
-          fail: true
+          timeout: 10
+          type: no-activity
+          fail: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
 
