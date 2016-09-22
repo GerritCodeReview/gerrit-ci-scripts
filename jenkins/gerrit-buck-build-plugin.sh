@@ -13,7 +13,7 @@ git read-tree -u --prefix=plugins/{name} origin/{branch}
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
-buck build -v 3 $TARGETS
+buck build --deep -v 3 $TARGETS
 
 for JAR in $(buck targets --show_output $TARGETS | awk '{{print $2}}')
 do
