@@ -14,7 +14,7 @@ git read-tree -u --prefix=plugins/its-{name} origin/{branch}
 git read-tree -u --prefix=plugins/its-base base/{branch}
 
 rm -Rf buck-out
-buck build -v 3 plugins/its-{name}
+buck build --deep -v 3 plugins/its-{name}
 
 # Extract version information
 PLUGIN_JAR=$(ls buck-out/gen/plugins/its-{name}/its-{name}*.jar)
