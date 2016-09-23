@@ -182,7 +182,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plugins-stable-2.13</name>
+      <name>Plugins-2.13</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -204,7 +204,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plugins-stable-2.12</name>
+      <name>Plugins-2.12</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -226,7 +226,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plugins-stable-2.11</name>
+      <name>Plugins-2.11</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -248,7 +248,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plugins-stable-2.10</name>
+      <name>Plugins-2.10</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -270,7 +270,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Plugins-stable-2.9</name>
+      <name>Plugins-2.9</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
