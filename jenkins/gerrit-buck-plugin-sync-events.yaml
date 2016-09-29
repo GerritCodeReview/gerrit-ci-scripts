@@ -1,0 +1,8 @@
+- project:
+    name: sync-events
+    branch:
+      - master
+      - stable-2.13
+    jobs:
+      - 'plugin-{name}-{branch}'
+
