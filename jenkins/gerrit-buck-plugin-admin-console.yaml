@@ -2,6 +2,7 @@
     name: admin-console
     branch:
       - master
+      - stable-2.13
       - stable-2.12
       - stable-2.11
       - stable-2.10
