@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4290c909_9f8fb328",
+        "filename": ".project",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-09-30T00:44:49Z",
+      "side": 1,
+      "message": "Why was this file added?",
+      "revId": "87cc2c7ea9d84f8285ff738ed3df1ab5542f9fc2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
