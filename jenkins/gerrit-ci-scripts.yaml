@@ -12,7 +12,7 @@
       - pollscm:
           cron: 'H/15 * * * *'
     builders:
-      - shell: jenkins-jobs update jenkins/.
+      - shell: jenkins-jobs update --delete-old jenkins/.
 
 - job:
     name: gerrit-ci-scripts-manual
@@ -48,5 +48,5 @@
            - '${CHANGE_COMMIT}'
          skip-tag: true
     builders:
-      - shell: jenkins-jobs update jenkins/.
+      - shell: jenkins-jobs update --delete-old jenkins/.
 
