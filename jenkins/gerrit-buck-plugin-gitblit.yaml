@@ -1,3 +1,51 @@
+- job-template:
+    name: 'plugin-gitblit-{branch}'
+    description: "GitBlit plugin {branch} branch build with BUCK\n"
+    defaults: buck-plugin
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    logrotate:
+      numToKeep: 20
+      artifactNumToKeep: 20
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/gitblit
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
+           - gitblit:
+               url: https://github.com/gitblit/gitblit.git
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+
+    triggers:
+      - pollscm:
+          cron: 'H/50 * * * *'
+
+    builders:
+      - shell:
+         !include-raw: gitblit-ant-build.sh
+      - shell:
+         !include-raw: gerrit-buck-build-plugin.sh
+    publishers:
+      - archive:
+         artifacts: 'buck-out/gen/plugins/gitblit/*gitblit*.jar*'
+
 - project:
     name: gitblit
     branch:
@@ -7,5 +55,5 @@
       - stable-2.10
       - stable-2.9
     jobs:
-      - 'plugin-{name}-{branch}'
+      - 'plugin-gitblit-{branch}'
 

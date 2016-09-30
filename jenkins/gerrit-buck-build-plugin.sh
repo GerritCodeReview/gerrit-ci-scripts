@@ -7,7 +7,7 @@
 # out the proper version of Gerrit, removing the plugin if it
 # exists, then use git read-tree to put the plugin we're
 # building in place.
-git checkout gerrit/{branch}
+git checkout -f gerrit/{branch}
 rm -rf plugins/{name}
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 
