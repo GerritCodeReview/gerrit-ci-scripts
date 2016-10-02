@@ -13,7 +13,7 @@
           fi
           if [ "{mode}" == "default" ] || [ "{mode}" == "notedb" ]
           then
-            buck test --no-results-cache --exclude flaky
+            buck test --num-threads 1 --no-results-cache --exclude flaky
           fi
           if [ "{mode}" == "polygerrit" ]
           then
