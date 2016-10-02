@@ -7,7 +7,7 @@ rm -Rf plugins/*
 
 echo 'Test in default DB mode'
 echo '----------------------------------------------'
-buck test --no-results-cache --exclude flaky
+buck test --no-results-cache --num-threads 1 --exclude flaky
 
 if [ "$HEAD_SHA1" != "$MASTER_SHA1" ]
 then
@@ -16,7 +16,7 @@ fi
 
 echo 'Test in Node DB mode'
 echo '----------------------------------------------'
-GERRIT_ENABLE_NOTEDB=TRUE buck test --no-results-cache --exclude flaky
+GERRIT_ENABLE_NOTEDB=TRUE buck test --num-threads 1 --no-results-cache --exclude flaky
 
 echo 'PolyGerrit UX tests'
 echo '----------------------------------------------'
