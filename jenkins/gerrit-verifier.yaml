@@ -116,7 +116,7 @@
           debug: true
           shutdown-with-build: false
       - timeout:
-          timeout: 40
+          timeout: 60
           type: absolute
           fail: false
       - raw:
