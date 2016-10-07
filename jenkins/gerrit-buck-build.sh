@@ -7,7 +7,7 @@ else
   . set-java.sh 7
 fi
 
-buck build --deep -v 3 api plugins:core release
+buck build -v 3 api plugins:core release
 
 if [ -f tools/maven/api.sh ]
 then
