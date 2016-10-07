@@ -1,0 +1,61 @@
+- job-template:
+    name: '{name}-{branch}-exp'
+    description: "{name} {branch} branch build with Bazel\n"
+    wrappers:
+      - timeout:
+          timeout: 60
+          type: absolute
+          fail: false
+      - timestamps
+      - xvfb:
+          installation-name: Xvfb
+          auto-display-name: true
+          parallel-build: false
+          timeout: 10
+          screen: 1024x768x16
+          display-name-offset: 100
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    logrotate:
+      numToKeep: 20
+      artifactNumToKeep: 20
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+    triggers:
+      - pollscm:
+          cron: 'H/10 * * * *'
+
+    builders:
+      - shell:
+         !include-raw-escape: gerrit-bazel-build.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-test.sh
+    publishers:
+      - archive:
+         artifacts: >
+           buck-out/gen/*.war,buck-out/gen/plugins/*/*.jar,buck-out/gen/*api/*api.jar,
+           buck-out/gen/gerrit-acceptance-framework/*.jar
+
+         excludes: 'buck-out/gen/plugins/core*/**/*.jar'
+
+- project:
+    name: Gerrit-bazel
+    branch:
+      - master
+    jobs:
+      - '{name}-{branch}-bazel-exp'
