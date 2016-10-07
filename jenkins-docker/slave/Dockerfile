@@ -4,11 +4,12 @@ USER root
 
 RUN echo "deb http://al.archive.ubuntu.com/ubuntu/ vivid universe" >> /etc/apt/sources.list
 
+RUN apt-get update && apt-get install -y default-jdk openjdk-7-jdk openjdk-8-jdk && \
+    update-java-alternatives -v -s java-1.8.0-openjdk-amd64
+COPY java.sh /usr/bin/set-java.sh
+
 RUN apt-get update && apt-get install -y \
-    default-jdk \
     maven \
-    openjdk-7-jdk \
-    openjdk-8-jdk \
     openssh-server \
     curl \
     git-core \
@@ -23,9 +24,6 @@ RUN apt-get update && apt-get install -y \
     xsltproc \
     zip \
     && rm -rf /var/lib/apt/lists/*
-
-RUN update-java-alternatives -v -s java-1.7.0-openjdk
-COPY java8.sh /etc/profile.d/
 
 RUN useradd jenkins -d /home/jenkins -m -s /bin/bash
 RUN mkdir /home/jenkins/.ssh
