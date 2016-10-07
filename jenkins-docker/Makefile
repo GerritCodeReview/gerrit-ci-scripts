@@ -1,4 +1,4 @@
-DIRS=master slave slave-buck slave-mvn
+DIRS=master slave slave-buck slave-mvn slave-bazel
 
 default: start
 
