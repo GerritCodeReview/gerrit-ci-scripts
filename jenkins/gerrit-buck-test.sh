@@ -1,15 +1,13 @@
 #!/bin/bash -e
 
-MASTER_SHA1=$(git rev-parse origin/master)
-HEAD_SHA1=$(git rev-parse HEAD)
-
-rm -Rf plugins/*
+SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
+. set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
 
 echo 'Test in default DB mode'
 echo '----------------------------------------------'
 buck test --no-results-cache --num-threads 1 --exclude flaky
 
-if [ "$HEAD_SHA1" != "$MASTER_SHA1" ]
+if [ ! -d gerrit-server/src/main/java/com/google/gerrit/server/notedb ]
 then
   exit 0
 fi
@@ -17,6 +15,11 @@ fi
 echo 'Test in Node DB mode'
 echo '----------------------------------------------'
 GERRIT_ENABLE_NOTEDB=TRUE buck test --num-threads 1 --no-results-cache --exclude flaky
+
+if [ ! -d polygerrit-ux ]
+then
+  exit 0
+fi
 
 echo 'PolyGerrit UX tests'
 echo '----------------------------------------------'
