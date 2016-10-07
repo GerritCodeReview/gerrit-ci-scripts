@@ -1,7 +1,12 @@
 #!/bin/bash -e
 
-MASTER_SHA1=$(git rev-parse origin/master)
-HEAD_SHA1=$(git rev-parse HEAD)
+function buckConfig {
+  grep "$1" .buckconfig  | cut -d '=' -f 2 | tr -d '[[:space:]]'
+}
+
+SOURCE_LEVEL=$(buckConfig "source_level")
+TARGET_LEVEL=$(buckConfig "target_level")
+. set-java.sh $(( $SOURCE_LEVEL > $TARGET_LEVEL ? $SOURCE_LEVEL : $TARGET_LEVEL ))
 
 rm -Rf plugins/*
 
