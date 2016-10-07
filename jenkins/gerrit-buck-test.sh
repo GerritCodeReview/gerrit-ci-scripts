@@ -3,6 +3,13 @@
 MASTER_SHA1=$(git rev-parse origin/master)
 HEAD_SHA1=$(git rev-parse HEAD)
 
+if [ "$HEAD_SHA1" == "$MASTER_SHA1" ]
+then
+  . set-java.sh 8
+else
+  . set-java.sh 7
+fi
+
 rm -Rf plugins/*
 
 echo 'Test in default DB mode'

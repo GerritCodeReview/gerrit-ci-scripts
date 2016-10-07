@@ -1,5 +1,12 @@
 #!/bin/bash -e
 
+if [ "$(git rev-parse HEAD)" == "$(git rev-parse origin/master)" ]
+then
+  . set-java.sh 8
+else
+  . set-java.sh 7
+fi
+
 buck build -v 3 api plugins:core release
 
 if [ -f tools/maven/api.sh ]
