@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
-MASTER_SHA1=$(git rev-parse origin/master)
-HEAD_SHA1=$(git rev-parse HEAD)
+SOURCE_LEVEL=$(grep "source_level" .buckconfig  | cut -d '=' -f 2 | tr -d '[[:space:]]')
+. set-java.sh $SOURCE_LEVEL
 
 rm -Rf plugins/*
 

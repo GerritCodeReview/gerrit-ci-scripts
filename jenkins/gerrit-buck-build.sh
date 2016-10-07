@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+SOURCE_LEVEL=$(grep "source_level" .buckconfig  | cut -d '=' -f 2 | tr -d '[[:space:]]')
+. set-java.sh $SOURCE_LEVEL
+
 buck build -v 3 api plugins:core release
 
 if [ -f tools/maven/api.sh ]
