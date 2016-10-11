@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f28ec68_86c24a2f",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-10-11T07:27:53Z",
+      "side": 1,
+      "message": "How does this work?\n\nHEAD won\u0027t be the same as origin/master if a change has been cherry-picked (or checked out) for testing.",
+      "revId": "d8fcf5f60ee3ef104d19e94731569cba7cfaac24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
