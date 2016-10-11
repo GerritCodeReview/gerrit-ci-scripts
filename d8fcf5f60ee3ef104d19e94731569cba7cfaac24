@@ -16,6 +16,24 @@
       "revId": "d8fcf5f60ee3ef104d19e94731569cba7cfaac24",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f28ec68_c6cc4265",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-10-11T07:39:32Z",
+      "side": 1,
+      "message": "Let me then do something different, just check if the source level is Java 8 from the BUCK build file",
+      "parentUuid": "1f28ec68_86c24a2f",
+      "revId": "d8fcf5f60ee3ef104d19e94731569cba7cfaac24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
