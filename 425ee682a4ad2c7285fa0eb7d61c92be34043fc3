@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f28ec68_e6e85ea4",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-10-11T08:12:37Z",
+      "side": 1,
+      "message": "Why would source_level and target_level be different?  Can\u0027t we just use the value of source_level?",
+      "revId": "425ee682a4ad2c7285fa0eb7d61c92be34043fc3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
