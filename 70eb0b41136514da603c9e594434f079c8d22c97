@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f28ec68_46c13225",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011624
+      },
+      "writtenOn": "2016-10-11T07:49:47Z",
+      "side": 1,
+      "message": "release should build plugins:core already, as they are ncluded. \n\nI would do:\n build api -\u003e build plugins -\u003e build release",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 24
+      },
+      "revId": "70eb0b41136514da603c9e594434f079c8d22c97",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
