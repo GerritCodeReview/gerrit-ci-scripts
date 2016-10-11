@@ -16,6 +16,24 @@
       "revId": "425ee682a4ad2c7285fa0eb7d61c92be34043fc3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f28ec68_06de5aff",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-10-11T08:17:08Z",
+      "side": 1,
+      "message": "source and target *can* be different: you could target a Java 8 with a source level of Java 7. Honestly the opposite may not work anyway: some Java 8 language syntax relies on the underlying bytecode improvements of the JVM 8.",
+      "parentUuid": "1f28ec68_e6e85ea4",
+      "revId": "425ee682a4ad2c7285fa0eb7d61c92be34043fc3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
