@@ -34,6 +34,24 @@
       "revId": "425ee682a4ad2c7285fa0eb7d61c92be34043fc3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f2f7072_07de56ff",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-10-11T08:35:07Z",
+      "side": 1,
+      "message": "I know they can be different, that\u0027s why there are different settings :)\n\nI just wonder if they will ever actually be different in this project?  If not, it would make this code a lot simpler to just use the value of one of them.\n\nIf there is concern that they might differ, add an assertion that they are the same?",
+      "parentUuid": "1f28ec68_06de5aff",
+      "revId": "425ee682a4ad2c7285fa0eb7d61c92be34043fc3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
