@@ -52,6 +52,24 @@
       "revId": "425ee682a4ad2c7285fa0eb7d61c92be34043fc3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f28ec68_a66bc617",
+        "filename": "jenkins/gerrit-buck-build.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-10-11T10:52:53Z",
+      "side": 1,
+      "message": "Yes, here possibly the only one that really matters is the source level. Will check only that one.",
+      "parentUuid": "3f2f7072_07de56ff",
+      "revId": "425ee682a4ad2c7285fa0eb7d61c92be34043fc3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
