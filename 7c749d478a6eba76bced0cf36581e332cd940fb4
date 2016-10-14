@@ -22,6 +22,30 @@
       "revId": "7c749d478a6eba76bced0cf36581e332cd940fb4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc6e0fe8_faa60995",
+        "filename": "jenkins/gerrit-buck-test.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-10-14T23:42:53Z",
+      "side": 1,
+      "message": "I need to replace to an alternative way to understand if polygerrit and notedb is there or not\n\n  if [ ! -d gerrit-server/src/main/java/com/google/gerrit/server/notedb ]\n  then\n    exit 0\n  fi\n\n  if [ ! -d polygerrit-ux ]\n  then\n    exit 0\n  fi\n\nSounds better?",
+      "parentUuid": "1c1c7aae_86a90a7d",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 2
+      },
+      "revId": "7c749d478a6eba76bced0cf36581e332cd940fb4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
