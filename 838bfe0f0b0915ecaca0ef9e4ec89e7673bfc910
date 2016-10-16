@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9cd86b0a_719b1851",
+        "filename": "jenkins/gerrit-buck-plugin-groovy-provider.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-10-16T23:22:35Z",
+      "side": 1,
+      "message": "nit: normally we order the builds with most recent first, i.e.\n\n - master\n - stable-2.13\n - stable-2.12\n - stable-2.11",
+      "revId": "838bfe0f0b0915ecaca0ef9e4ec89e7673bfc910",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
