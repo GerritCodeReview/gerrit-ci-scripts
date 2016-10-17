@@ -2,6 +2,7 @@
     name: lfs
     branch:
       - master
+      - stable-2.13
     jobs:
       - 'plugin-{name}-{branch}'
 
