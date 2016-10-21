@@ -4,6 +4,8 @@
       - shell: |
           #!/bin/bash -e
           set +x
+          SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
+          . set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
           echo 'Test with mode={mode}'
           echo '----------------------------------------------'
           rm -Rf plugins/*
@@ -99,6 +101,8 @@
           echo "Building $CHANGE_URL"
           git log --oneline -1
           echo '============================================================='
+          SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
+          . set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
           rm -Rf buck-out
           export BUCK_CLEAN_REPO_IF_DIRTY=y
           buck build api plugins:core release
