@@ -67,11 +67,11 @@ def acceptedChanges = changesJson.findAll {
       return false
   }
 
-  def verified = change.labels.Verified.all
-  if(verified == null) {
+  def verified = change.labels.Verified
+  if(verified == null || verified.all == null) {
     true
   } else {
-    def myVerifications = verified.findAll {
+    def myVerifications = verified.all.findAll {
       verification -> verification._account_id == Globals.myAccountId && verification.value != 0
     }
     if(!myVerifications.empty) {
