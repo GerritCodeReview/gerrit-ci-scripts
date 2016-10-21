@@ -10,3 +10,6 @@ fi
 
 export JAVA_HOME=/usr/lib/jvm/java-$1-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
+
+echo "Java set to: $(which java)"
+
