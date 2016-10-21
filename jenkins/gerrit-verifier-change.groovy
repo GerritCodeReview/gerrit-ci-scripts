@@ -207,10 +207,6 @@ def acceptedChanges = changesJson.findAll {
       return false
   }
 
-  def verified = change.labels.Verified
-  def approved = verified.approved
-  def rejected = verified.rejected 
-
   gerritComment(build.startJob.getBuildUrl() + "console",change._number,change.current_revision,"Verification queued on")
   return true
 }
