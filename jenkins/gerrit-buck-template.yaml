@@ -36,6 +36,7 @@
          submodule:
            recursive: true
          skip-tag: true
+         basedir: gerrit
     triggers:
       - pollscm:
           cron: 'H/10 * * * *'
