@@ -4,6 +4,7 @@
       - shell: |
           #!/bin/bash -e
           set +x
+          cd gerrit
           SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
           . set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
           echo 'Test with mode={mode}'
@@ -41,6 +42,7 @@
       - shell: |
           #!/bin/bash -e
           set +x
+          cd gerrit
           function fetch_submodules {
             # We do need to call update even if we know it will fail: the submodules git needs
             # to be initialised and made it pointing to the correct remote submodule URL
@@ -92,12 +94,14 @@
            - $BRANCH
          disable-submodules: true
          skip-tag: true
+         basedir: gerrit
 
     builders:
       - fetch-all-submodules
       - shell: |
           #!/bin/bash -e
           set +x
+          cd gerrit
           echo "Building $CHANGE_URL"
           git log --oneline -1
           echo '============================================================='

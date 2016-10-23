@@ -36,6 +36,7 @@
          submodule:
            recursive: true
          skip-tag: true
+         basedir: gerrit
     triggers:
       - pollscm:
           cron: 'H/10 * * * *'
@@ -48,10 +49,10 @@
     publishers:
       - archive:
          artifacts: >
-           buck-out/gen/*.war,buck-out/gen/plugins/*/*.jar,buck-out/gen/*api/*api.jar,
-           buck-out/gen/gerrit-acceptance-framework/*.jar
+           gerrit/buck-out/gen/*.war,gerrit/buck-out/gen/plugins/*/*.jar,gerrit/buck-out/gen/*api/*api.jar,
+           gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
 
-         excludes: 'buck-out/gen/plugins/core*/**/*.jar'
+         excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
 
 - project:
     name: Gerrit
