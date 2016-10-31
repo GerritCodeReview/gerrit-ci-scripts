@@ -23,6 +23,8 @@
          remotes:
            - origin:
                url: https://gerrit.googlesource.com/plugins/{repo}
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
          branches:
            - origin/{branch}
          submodule:
