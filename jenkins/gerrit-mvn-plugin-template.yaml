@@ -28,6 +28,14 @@
          submodule:
            recursive: true
          skip-tag: true
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: false
+         skip-tag: true
+         basedir: gerrit
 
     triggers:
       - pollscm:
