@@ -130,6 +130,12 @@
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     publishers:
+      - archive:
+         artifacts: >
+           gerrit/buck-out/gen/*.war,gerrit/buck-out/gen/plugins/*/*.jar,gerrit/buck-out/gen/*api/*api.jar,
+           gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
+
+         excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
       - groovy-postbuild:
           script: "manager.logContains('timed out') ? manager.buildAborted() : false"
 
