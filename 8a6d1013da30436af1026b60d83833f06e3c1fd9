@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2b5d77d4_25d2aee5",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-11-10T10:15:25Z",
+      "side": 1,
+      "message": "We have this already in tools/bazelrc. It was added in: [1].\n\n* [1] https://gerrit-review.googlesource.com/91212",
+      "range": {
+        "startLine": 5,
+        "startChar": 88,
+        "endLine": 5,
+        "endChar": 106
+      },
+      "revId": "8a6d1013da30436af1026b60d83833f06e3c1fd9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
