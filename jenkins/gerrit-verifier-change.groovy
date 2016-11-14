@@ -173,6 +173,18 @@ def buildChange(change) {
     result = waitForResult(b)
     gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1, getVerified(result), "NoteDB - ")
   }
+
+  if(result == Result.SUCCESS && branch=="master") {
+    ignore(FAILURE) {
+      retry ( Globals.numRetryBuilds ) {
+        b = build("Gerrit-verifier-bazel", REFSPEC: refspec, BRANCH: sha1,
+                  CHANGE_URL: changeUrl)
+      }
+    }
+
+    result = waitForResult(b)
+    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1, getVerified(result), "Bazel - ")
+  }
 }
 
 
