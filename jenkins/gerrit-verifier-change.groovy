@@ -134,16 +134,16 @@ def buildChange(change) {
   def ref = revision.ref
   def patchNum = revision._number
   def branch = change.branch
-  def changeUrl = Globals.gerrit + "#/c/" + changeNum + "/" + patchNum
   def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
 
-  println "Building Change " + changeUrl
+  println "Building Change $changeNum/$patchNum ..."
+  println "========================================"
 
   def b
   ignore(FAILURE) {
     retry ( Globals.numRetryBuilds ) {
       b = build("Gerrit-verifier-default", REFSPEC: refspec, BRANCH: sha1,
-                CHANGE_URL: changeUrl)
+                CHANGE_ID: changeNum, PATCH_NUM: patchNum)
     }
   }
   def result = waitForResult(b)
@@ -153,7 +153,7 @@ def buildChange(change) {
     ignore(FAILURE) {
       retry(Globals.numRetryBuilds) {
         b = build("Gerrit-verifier-polygerrit", REFSPEC: refspec, BRANCH: sha1,
-            CHANGE_URL: changeUrl)
+            CHANGE_ID: changeNum, PATCH_NUM: patchNum)
       }
     }
 
@@ -166,7 +166,7 @@ def buildChange(change) {
     ignore(FAILURE) {
       retry ( Globals.numRetryBuilds ) {
         b = build("Gerrit-verifier-notedb", REFSPEC: refspec, BRANCH: sha1,
-                  CHANGE_URL: changeUrl)
+                  CHANGE_ID: changeNum, PATCH_NUM: patchNum)
       }
     }
 
@@ -178,7 +178,7 @@ def buildChange(change) {
     ignore(FAILURE) {
       retry ( Globals.numRetryBuilds ) {
         b = build("Gerrit-verifier-bazel", REFSPEC: refspec, BRANCH: sha1,
-                  CHANGE_URL: changeUrl)
+                  CHANGE_ID: changeNum, PATCH_NUM: patchNum)
       }
     }
 
