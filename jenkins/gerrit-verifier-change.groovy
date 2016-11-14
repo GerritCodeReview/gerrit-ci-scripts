@@ -143,7 +143,7 @@ def buildChange(change) {
   ignore(FAILURE) {
     retry ( Globals.numRetryBuilds ) {
       b = build("Gerrit-verifier-default", REFSPEC: refspec, BRANCH: sha1,
-                CHANGE_URL: changeUrl)
+                CHANGE_ID: changeNum)
     }
   }
   def result = waitForResult(b)
@@ -153,7 +153,7 @@ def buildChange(change) {
     ignore(FAILURE) {
       retry(Globals.numRetryBuilds) {
         b = build("Gerrit-verifier-polygerrit", REFSPEC: refspec, BRANCH: sha1,
-            CHANGE_URL: changeUrl)
+            CHANGE_ID: changeNum)
       }
     }
 
@@ -166,7 +166,7 @@ def buildChange(change) {
     ignore(FAILURE) {
       retry ( Globals.numRetryBuilds ) {
         b = build("Gerrit-verifier-notedb", REFSPEC: refspec, BRANCH: sha1,
-                  CHANGE_URL: changeUrl)
+                  CHANGE_ID: changeNum)
       }
     }
 
