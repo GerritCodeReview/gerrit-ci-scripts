@@ -50,9 +50,13 @@ def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
 queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
                       gerritQuery.encodeURL())
 
+println("Executing REST-API " + queryUrl)
+
 def changes = queryUrl.getText().substring(5)
 def jsonSlurper = new JsonSlurper()
 def changesJson = jsonSlurper.parseText(changes)
+
+println("Result: " + changesJson)
 
 def acceptedChanges = changesJson.findAll {
   change ->
