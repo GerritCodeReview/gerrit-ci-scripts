@@ -129,6 +129,8 @@
           fail: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+      - build-name:
+          name: $CHANGE_URL
     publishers:
       - archive:
          artifacts: >
@@ -159,6 +161,9 @@
           description: Gerrit Change-ID to build and verify
     logrotate:
       numToKeep: 256
+    wrappers:
+      - build-name:
+          name: Change-${CHANGE_ID}
     dsl:
        !include-raw: gerrit-verifier-change.groovy
 
