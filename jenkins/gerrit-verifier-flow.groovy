@@ -67,18 +67,21 @@ def acceptedChanges = changesJson.findAll {
       return false
   }
 
-  def verified = change.labels.Verified.all
-  if(verified == null) {
-    true
-  } else {
-    def myVerifications = verified.findAll {
-      verification -> verification._account_id == Globals.myAccountId && verification.value != 0
-    }
-    if(!myVerifications.empty) {
-      println "I have already verified " + sha1 + " commit: SKIPPING"
-      false
-    } else {
+  def canBeVerified = change.labels.Verified
+  if(canBeVerified != null) {
+    def verified = canBeVerified.all
+    if(verified == null) {
       true
+    } else {
+      def myVerifications = verified.findAll {
+        verification -> verification._account_id == Globals.myAccountId && verification.value != 0
+      }
+      if(!myVerifications.empty) {
+        println "I have already verified " + sha1 + " commit: SKIPPING"
+        false
+      } else {
+        true
+      }
     }
   }
 }
