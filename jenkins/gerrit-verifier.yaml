@@ -67,8 +67,11 @@
     concurrent: true
     parameters:
       - string:
-          name: CHANGE_URL
-          description: "Gerrit Change URL to build"
+          name: CHANGE_ID
+          description: "Gerrit Change ID"
+      - string:
+          name: PATCH_NUM
+          description: "Gerrit Patch Number"
       - string:
           name: REFSPEC
           description: "Git refspec to use for fetching changes"
@@ -102,7 +105,7 @@
           #!/bin/bash -e
           set +x
           cd gerrit
-          echo "Building $CHANGE_URL"
+          echo "Building https://gerrit-review.googlesource.com/c/$CHANGE_ID/$PATCH_NUM"
           git log --oneline -1
           echo '============================================================='
           SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
@@ -129,6 +132,8 @@
           fail: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+      - build-name:
+          name: #$CHANGE_ID/$PATCH_NUM
     publishers:
       - archive:
          artifacts: >
@@ -146,8 +151,11 @@
     concurrent: true
     parameters:
       - string:
-          name: CHANGE_URL
-          description: "Gerrit Change URL to build"
+          name: CHANGE_ID
+          description: "Gerrit Change ID"
+      - string:
+          name: PATCH_NUM
+          description: "Gerrit Patch Number"
       - string:
           name: REFSPEC
           description: "Git refspec to use for fetching changes"
@@ -206,6 +214,8 @@
           timeout: 60
           type: absolute
           fail: false
+      - build-name:
+          name: #CHANGE_ID/$PATCH_NUM
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     publishers:
@@ -233,6 +243,9 @@
           description: Gerrit Change-ID to build and verify
     logrotate:
       numToKeep: 256
+    wrappers:
+      - build-name:
+          name: Change-$CHANGE_ID/$PATCH_NUM
     dsl:
        !include-raw: gerrit-verifier-change.groovy
 
