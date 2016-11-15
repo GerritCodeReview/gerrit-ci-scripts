@@ -17,8 +17,8 @@
           additional-options: -fbdir /tmp
           debug: true
           shutdown-with-build: false
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+#      - raw:
+#          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     logrotate:
       numToKeep: 20
       artifactNumToKeep: 20
