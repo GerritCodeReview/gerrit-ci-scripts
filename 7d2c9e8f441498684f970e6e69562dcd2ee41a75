@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b031d818_a5ec084b",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-11-15T20:05:50Z",
+      "side": 1,
+      "message": "Polygerrit tests are missing:\n\n  sh ./polygerrit-ui/app/run_test.sh",
+      "revId": "7d2c9e8f441498684f970e6e69562dcd2ee41a75",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
