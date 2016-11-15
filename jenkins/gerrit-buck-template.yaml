@@ -46,6 +46,10 @@
          !include-raw-escape: gerrit-buck-build.sh
       - shell:
          !include-raw-escape: gerrit-buck-test.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-build.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-test.sh
     publishers:
       - archive:
          artifacts: >

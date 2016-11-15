@@ -1,40 +1,12 @@
 - builder:
-    name: test-gerrit
+    name: test-gerrit-buck
     builders:
-      - shell: |
-          #!/bin/bash -e
-          set +x
-          cd gerrit
-          SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
-          . set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
-          echo 'Test with mode={mode}'
-          echo '----------------------------------------------'
-          rm -Rf plugins/*
-          if [ "{mode}" == "notedb" ]
-          then
-            export GERRIT_ENABLE_NOTEDB=TRUE
-          fi
-          if [ "{mode}" == "default" ] || [ "{mode}" == "notedb" ]
-          then
-            buck test --no-results-cache --exclude flaky
-          fi
-          if [ "{mode}" == "polygerrit" ]
-          then
-            if [ -z "$DISPLAY" ]
-            then
-              echo 'Not running local tests because env var "DISPLAY" is not set.'
-            else
-              echo 'Running local tests...'
-              buck test --include web
-            fi
-            if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
-            then
-              echo 'Not running on Sauce Labs because env vars are not set.'
-            else
-              echo 'Running tests on Sauce Labs...'
-              WCT_ARGS='--plugin sauce' buck test --no-results-cache --include web
-            fi
-          fi
+      - shell: !include-raw-escape: gerrit-buck-verifier-test.sh
+
+- builder:
+    name: test-gerrit-bazel
+    builders:
+      - shell: !include-raw-escape: gerrit-bazel-verifier-test.sh
 
 - builder:
     name: fetch-all-submodules
@@ -98,19 +70,11 @@
 
     builders:
       - fetch-all-submodules
-      - shell: |
-          #!/bin/bash -e
-          set +x
-          cd gerrit
-          echo "Building $CHANGE_URL"
-          git log --oneline -1
-          echo '============================================================='
-          SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
-          . set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
-          rm -Rf buck-out
-          export BUCK_CLEAN_REPO_IF_DIRTY=y
-          buck build api plugins:core release
-      - test-gerrit:
+      - shell: !include-raw-escape gerrit-buck-build.sh
+      - test-gerrit-buck:
+          mode: "{mode}"
+      - shell: !include-raw-escape gerrit-bazel-build.sh
+      - test-gerrit-bazel:
           mode: "{mode}"
     wrappers:
       - xvfb:
@@ -130,13 +94,6 @@
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     publishers:
-      - archive:
-         artifacts: >
-           gerrit/buck-out/gen/**/gerrit*.war,gerrit/buck-out/gen/**/release*war,
-           gerrit/buck-out/gen/plugins/*/*.jar,gerrit/buck-out/gen/*api/*api.jar,
-           gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
-
-         excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
       - groovy-postbuild:
           script: "manager.logContains('timed out') ? manager.buildAborted() : false"
 

@@ -1,7 +1,13 @@
 #!/bin/bash -e
 
-bazel build gerrit-plugin-api:plugin-api_deploy.jar gerrit-extension-api:extension-api_deploy.jar 
-bazel build plugins:core
-bazel build release
+if [ -f "gerrit/BUILD" ]
+then
+  cd gerrit
+  . set-java.sh 8
 
-tools/maven/api.sh install bazel
+  bazel build --ignore_unsupported_sandboxing  \
+        gerrit-plugin-api:plugin-api_deploy.jar \
+        gerrit-extension-api:extension-api_deploy.jar
+  bazel build --ignore_unsupported_sandboxing plugins:core
+  bazel build --ignore_unsupported_sandboxing release
+fi
