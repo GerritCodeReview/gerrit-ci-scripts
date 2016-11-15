@@ -87,24 +87,97 @@
           timeout: 60
           type: absolute
           fail: false
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+#      - raw:
+#          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     publishers:
       - groovy-postbuild:
           script: "manager.logContains('timed out') ? manager.buildAborted() : false"
 
 - job:
-    name: 'Gerrit-verifier-change'
-    project-type: flow
+    name: 'Gerrit-verifier-bazel'
+    description: "Gerrit build of open change with Bazel\n"
     concurrent: true
     parameters:
       - string:
           name: CHANGE_ID
-          description: Gerrit Change-ID to build and verify
+          description: "Gerrit Change ID"
+      - string:
+          name: PATCH_NUM
+          description: "Gerrit Patch Number"
+      - string:
+          name: REFSPEC
+          description: "Git refspec to use for fetching changes"
+      - string:
+          name: BRANCH
+          description: "Git branch or SHA1 to checkout"
+
     logrotate:
       numToKeep: 256
-    dsl:
-       !include-raw: gerrit-verifier-change.groovy
+      artifactNumToKeep: 1
+
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         refspec: $REFSPEC
+         branches:
+           - $BRANCH
+         disable-submodules: true
+         skip-tag: true
+         basedir: gerrit
+
+    builders:
+      - fetch-all-submodules
+      - shell: |
+          #!/bin/bash -e
+          set +x
+          cd gerrit
+          echo "Building $CHANGE_URL"
+          git log --oneline -1
+          echo '============================================================='
+          . set-java.sh 8
+          bazel build gerrit-plugin-api:plugin-api_deploy.jar gerrit-extension-api:extension-api_deploy.jar 
+          bazel build plugins:core
+          bazel build release
+          tools/maven/api.sh install bazel
+          bazel test --test_output errors --test_summary detailed --flaky_test_attempts 3 --test_verbose_timeout_warnings --build_tests_only //...
+
+    wrappers:
+      - xvfb:
+          installation-name: Xvfb
+          auto-display-name: true
+          parallel-build: false
+          timeout: 10
+          screen: 1024x768x16
+          display-name-offset: 100
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
+      - timeout:
+          timeout: 60
+          type: absolute
+          fail: false
+      - build-name:
+          name: C-$CHANGE_ID/$PATCH_NUM
+#      - raw:
+#          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    publishers:
+      - archive:
+         artifacts: bazel-bin/*.war,bazel-bin/plugins/**/*_deploy.jar,bazel-bin/*api/*api.jar, bazel-bin/gerrit-acceptance-framework/*.jar
+
+- project:
+    name: Gerrit-verifier
+    mode:
+      - default
+      - polygerrit
+      - notedb
+    jobs:
+      - '{name}-{mode}'
 
 - job:
     name: 'Gerrit-verifier-flow'
