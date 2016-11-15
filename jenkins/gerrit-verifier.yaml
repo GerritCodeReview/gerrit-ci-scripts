@@ -130,8 +130,8 @@
           timeout: 60
           type: absolute
           fail: false
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+#      - raw:
+#          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
       - build-name:
           name: C-$CHANGE_ID/$PATCH_NUM
     publishers:
@@ -214,8 +214,8 @@
           fail: false
       - build-name:
           name: C-$CHANGE_ID/$PATCH_NUM
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+#      - raw:
+#          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     publishers:
       - archive:
          artifacts: bazel-bin/*.war,bazel-bin/plugins/**/*_deploy.jar,bazel-bin/*api/*api.jar, bazel-bin/gerrit-acceptance-framework/*.jar
