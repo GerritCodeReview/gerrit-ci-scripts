@@ -25,9 +25,11 @@ then
     exit 0
   fi
 
-  echo 'PolyGerrit UX tests'
-  echo '----------------------------------------------'
-  buck test --include web
+# Tests disabled because of WCT/Chromedriver/Chrome crashes
+#
+#  echo 'PolyGerrit UX tests'
+#  echo '----------------------------------------------'
+#  buck test --include web
 fi
 
 exit 0

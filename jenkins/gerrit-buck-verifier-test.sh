@@ -21,21 +21,23 @@ then
     buck test --no-results-cache --exclude flaky
   fi
 
-  if [ "{mode}" == "polygerrit" ]
-  then
-    if [ -z "$DISPLAY" ]
-    then
-      echo 'Not running local tests because env var "DISPLAY" is not set.'
-    else
-      echo 'Running local tests...'
-      buck test --include web
-    fi
-    if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
-    then
-      echo 'Not running on Sauce Labs because env vars are not set.'
-    else
-      echo 'Running tests on Sauce Labs...'
-      WCT_ARGS='--plugin sauce' buck test --no-results-cache --include web
-    fi
-  fi
+# Tests disabled because of WCT/ChromeDriver/Chrome crashes
+#
+#  if [ "{mode}" == "polygerrit" ]
+#  then
+#    if [ -z "$DISPLAY" ]
+#    then
+#      echo 'Not running local tests because env var "DISPLAY" is not set.'
+#    else
+#      echo 'Running local tests...'
+#      buck test --include web
+#    fi
+#    if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
+#    then
+#      echo 'Not running on Sauce Labs because env vars are not set.'
+#    else
+#      echo 'Running tests on Sauce Labs...'
+#      WCT_ARGS='--plugin sauce' buck test --no-results-cache --include web
+#    fi
+#  fi
 fi
