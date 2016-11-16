@@ -8,23 +8,21 @@ then
   SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
   . set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
 
-  echo 'Test with mode={mode}'
+  echo 'Test with mode=$MODE'
   echo '----------------------------------------------'
 
-  if [ "{mode}" == "notedb" ]
+  if [ "$MODE" == "notedb" ]
   then
     export GERRIT_NOTEDB=READ_WRITE
   fi
 
-  if [ "{mode}" == "default" ] || [ "{mode}" == "notedb" ]
+  if [ "$MODE" == "default" ] || [ "$MODE" == "notedb" ]
   then
     buck test --no-results-cache --exclude flaky
   fi
 
-# Tests disabled because of WCT/ChromeDriver/Chrome crashes
-#
-#  if [ "{mode}" == "polygerrit" ]
-#  then
+  if [ "$MODE" == "polygerrit" ]
+  then
 #    if [ -z "$DISPLAY" ]
 #    then
 #      echo 'Not running local tests because env var "DISPLAY" is not set.'
@@ -39,5 +37,5 @@ then
 #      echo 'Running tests on Sauce Labs...'
 #      WCT_ARGS='--plugin sauce' buck test --no-results-cache --include web
 #    fi
-#  fi
+  fi
 fi
