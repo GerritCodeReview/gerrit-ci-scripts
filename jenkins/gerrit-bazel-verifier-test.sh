@@ -9,8 +9,6 @@ then
   echo 'Test with mode={mode}'
   echo '----------------------------------------------'
 
-  rm -Rf plugins/*
-
   if [ "{mode}" == "notedb" ]
   then
     GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=READ_WRITE"
