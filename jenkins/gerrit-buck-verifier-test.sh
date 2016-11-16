@@ -15,7 +15,7 @@ then
 
   if [ "{mode}" == "notedb" ]
   then
-    export GERRIT_ENABLE_NOTEDB=TRUE
+    export GERRIT_NOTEDB=read-write
   fi
 
   if [ "{mode}" == "default" ] || [ "{mode}" == "notedb" ]
