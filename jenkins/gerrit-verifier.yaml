@@ -1,14 +1,4 @@
 - builder:
-    name: test-gerrit-buck
-    builders:
-      - shell: !include-raw-escape: gerrit-buck-verifier-test.sh
-
-- builder:
-    name: test-gerrit-bazel
-    builders:
-      - shell: !include-raw-escape: gerrit-bazel-verifier-test.sh
-
-- builder:
     name: fetch-all-submodules
     builders:
       - shell: |
@@ -33,8 +23,8 @@
           echo "Updating all submodules ..."
           git submodule update || ( fetch_submodules && git submodule update )
 
-- job-template:
-    name: '{name}-{mode}'
+- job:
+    name: Gerrit-verifier
     description: "Gerrit build of open change with BUCK\n"
     concurrent: true
     parameters:
@@ -47,6 +37,13 @@
       - string:
           name: BRANCH
           description: "Git branch or SHA1 to checkout"
+      - choice:
+          name: MODE
+          choices:
+            - default
+            - notedb
+            - polygerrit
+          description: "Type of verification to execute"
 
     logrotate:
       numToKeep: 256
@@ -71,11 +68,10 @@
     builders:
       - fetch-all-submodules
       - shell: !include-raw-escape gerrit-buck-build.sh
-      - test-gerrit-buck:
-          mode: "{mode}"
+      - shell: !include-raw-escape gerrit-buck-verifier-test.sh
       - shell: !include-raw-escape gerrit-bazel-build.sh
-      - test-gerrit-bazel:
-          mode: "{mode}"
+      - shell: !include-raw-escape gerrit-bazel-verifier-test.sh
+
     wrappers:
       - xvfb:
           installation-name: Xvfb
@@ -96,92 +92,6 @@
     publishers:
       - groovy-postbuild:
           script: "manager.logContains('timed out') ? manager.buildAborted() : false"
-
-- job:
-    name: 'Gerrit-verifier-bazel'
-    description: "Gerrit build of open change with Bazel\n"
-    concurrent: true
-    parameters:
-      - string:
-          name: CHANGE_ID
-          description: "Gerrit Change ID"
-      - string:
-          name: PATCH_NUM
-          description: "Gerrit Patch Number"
-      - string:
-          name: REFSPEC
-          description: "Git refspec to use for fetching changes"
-      - string:
-          name: BRANCH
-          description: "Git branch or SHA1 to checkout"
-
-    logrotate:
-      numToKeep: 256
-      artifactNumToKeep: 1
-
-    properties:
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-    scm:
-      - git:
-         url: https://gerrit.googlesource.com/gerrit
-         refspec: $REFSPEC
-         branches:
-           - $BRANCH
-         disable-submodules: true
-         skip-tag: true
-         basedir: gerrit
-
-    builders:
-      - fetch-all-submodules
-      - shell: |
-          #!/bin/bash -e
-          set +x
-          cd gerrit
-          echo "Building $CHANGE_URL"
-          git log --oneline -1
-          echo '============================================================='
-          . set-java.sh 8
-          bazel build gerrit-plugin-api:plugin-api_deploy.jar gerrit-extension-api:extension-api_deploy.jar 
-          bazel build plugins:core
-          bazel build release
-          tools/maven/api.sh install bazel
-          bazel test --test_output errors --test_summary detailed --flaky_test_attempts 3 --test_verbose_timeout_warnings --build_tests_only //...
-
-    wrappers:
-      - xvfb:
-          installation-name: Xvfb
-          auto-display-name: true
-          parallel-build: false
-          timeout: 10
-          screen: 1024x768x16
-          display-name-offset: 100
-          additional-options: -fbdir /tmp
-          debug: true
-          shutdown-with-build: false
-      - timeout:
-          timeout: 60
-          type: absolute
-          fail: false
-      - build-name:
-          name: C-$CHANGE_ID/$PATCH_NUM
-#      - raw:
-#          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    publishers:
-      - archive:
-         artifacts: bazel-bin/*.war,bazel-bin/plugins/**/*_deploy.jar,bazel-bin/*api/*api.jar, bazel-bin/gerrit-acceptance-framework/*.jar
-
-- project:
-    name: Gerrit-verifier
-    mode:
-      - default
-      - polygerrit
-      - notedb
-    jobs:
-      - '{name}-{mode}'
 
 - job:
     name: 'Gerrit-verifier-change'
