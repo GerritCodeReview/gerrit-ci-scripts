@@ -11,8 +11,6 @@ then
   echo 'Test with mode={mode}'
   echo '----------------------------------------------'
 
-  rm -Rf plugins/*
-
   if [ "{mode}" == "notedb" ]
   then
     export GERRIT_ENABLE_NOTEDB=TRUE
