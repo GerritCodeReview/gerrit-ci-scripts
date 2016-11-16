@@ -22,21 +22,23 @@ then
                --test_verbose_timeout_warnings --build_tests_only //...
   fi
 
-  if [ "{mode}" == "polygerrit" ]
-  then
-    if [ -z "$DISPLAY" ]
-    then
-      echo 'Not running local tests because env var "DISPLAY" is not set.'
-    else
-      echo 'Running local tests...'
-      sh ./polygerrit-ui/app/run_test.sh
-    fi
-    if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
-    then
-      echo 'Not running on Sauce Labs because env vars are not set.'
-    else
-      echo 'Running tests on Sauce Labs...'
-      WCT_ARGS='--plugin sauce' sh ./polygerrit-ui/app/run_test.sh
-    fi
-  fi
+# Tests disabled because of WCT/Chromedriver/Chrome crashes
+#
+#  if [ "{mode}" == "polygerrit" ]
+#  then
+#    if [ -z "$DISPLAY" ]
+#    then
+#      echo 'Not running local tests because env var "DISPLAY" is not set.'
+#    else
+#      echo 'Running local tests...'
+#      sh ./polygerrit-ui/app/run_test.sh
+#    fi
+#    if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
+#    then
+#      echo 'Not running on Sauce Labs because env vars are not set.'
+#    else
+#      echo 'Running tests on Sauce Labs...'
+#      WCT_ARGS='--plugin sauce' sh ./polygerrit-ui/app/run_test.sh
+#    fi
+#  fi
 fi
