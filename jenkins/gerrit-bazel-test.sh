@@ -2,6 +2,8 @@
 
 if [ -f "gerrit/BUILD" ]
 then
+  cd gerrit
+
   echo 'Test in default DB mode'
   echo '----------------------------------------------'
   bazel test --ignore_unsupported_sandboxing --test_output errors \
