@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b031d818_a8da1fd2",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-11-16T01:29:50Z",
+      "side": 1,
+      "message": "Why is this needed?",
+      "range": {
+        "startLine": 14,
+        "startChar": 2,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "4291ff0177c01abcf02dddd892597dd64ab478a7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
