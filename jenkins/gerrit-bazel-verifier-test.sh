@@ -6,15 +6,15 @@ then
 
   . set-java.sh 8
 
-  echo 'Test with mode={mode}'
+  echo "Test with mode=$MODE"
   echo '----------------------------------------------'
 
-  if [ "{mode}" == "notedb" ]
+  if [ "$MODE" == "notedb" ]
   then
     GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=READ_WRITE"
   fi
 
-  if [ "{mode}" == "default" ] || [ "{mode}" == "notedb" ]
+  if [ "$MODE" == "default" ] || [ "$MODE" == "notedb" ]
   then
     bazel test $GERRIT_NOTEDB \
                --ignore_unsupported_sandboxing --test_output errors \
@@ -22,7 +22,7 @@ then
                --test_verbose_timeout_warnings --build_tests_only //...
   fi
 
-  if [ "{mode}" == "polygerrit" ]
+  if [ "$MODE" == "polygerrit" ]
   then
     if [ -z "$DISPLAY" ]
     then
