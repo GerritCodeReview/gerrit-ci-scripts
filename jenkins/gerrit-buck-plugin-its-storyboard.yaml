@@ -3,6 +3,7 @@
     branch:
       - master
       - stable-2.11
+      - stable-2.13
     jobs:
       - 'plugin-its-{name}-{branch}'
 
