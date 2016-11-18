@@ -1,0 +1,7 @@
+- project:
+    name: metrics-reporter-cloudwatch
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
