@@ -34,6 +34,24 @@
       "revId": "4dfb96eee113402c3e2cbc377a9bfe4b130fa627",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70a120aa_908d9455",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-11-21T19:06:40Z",
+      "side": 1,
+      "message": "yep, i\u0027ve verified that it\u0027s in gerrit-buck-test.sh",
+      "parentUuid": "b031d818_683017b1",
+      "revId": "4dfb96eee113402c3e2cbc377a9bfe4b130fa627",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
