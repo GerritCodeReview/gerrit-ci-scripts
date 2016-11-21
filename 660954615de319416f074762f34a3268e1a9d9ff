@@ -22,6 +22,47 @@
       "revId": "660954615de319416f074762f34a3268e1a9d9ff",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70a120aa_502b2c45",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-11-21T20:25:49Z",
+      "side": 1,
+      "message": "Good catch, It should probably be something like..\n\n echo \u0027Test with mode\u003d\u0027\"$MODE\"\n\nother references to MODE seem ok though.",
+      "parentUuid": "90bbf4d0_39be8f99",
+      "range": {
+        "startLine": 9,
+        "startChar": 23,
+        "endLine": 9,
+        "endChar": 28
+      },
+      "revId": "660954615de319416f074762f34a3268e1a9d9ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70a120aa_d0871c2f",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-11-21T20:25:49Z",
+      "side": 1,
+      "message": "This change is to make it just 1 job? Was wondering what the rational was for this?  I would think that it would be more flexible to keep the \u0027- project\u0027 section to generate multiple jobs?",
+      "revId": "660954615de319416f074762f34a3268e1a9d9ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
