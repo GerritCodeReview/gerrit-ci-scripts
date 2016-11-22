@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "d091ec62_2b1ab998",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-22T08:35:29Z",
+      "side": 1,
+      "message": "Yeath, need to use double-quotes here :-)",
+      "parentUuid": "70a120aa_502b2c45",
+      "range": {
+        "startLine": 9,
+        "startChar": 23,
+        "endLine": 9,
+        "endChar": 28
+      },
+      "revId": "660954615de319416f074762f34a3268e1a9d9ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "70a120aa_d0871c2f",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 6
