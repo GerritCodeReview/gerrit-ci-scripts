@@ -14,6 +14,9 @@ git read-tree -u --prefix=plugins/{name} FETCH_HEAD
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
+SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
+. set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
+
 buck build -v 3 $TARGETS
 
 for JAR in $(buck targets --show_output $TARGETS | awk '{{print $2}}')
