@@ -16,6 +16,24 @@
       "revId": "53eebe47022a6280059ba93766efbe26a9378359",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "104624f2_1d5b33a1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-22T08:21:58Z",
+      "side": 1,
+      "message": "\u003e Looking into it right now with GerritForge docker image:\n \u003e \n \u003e $ docker run -ti --privileged --entrypoint\u003d/bin/bash\n \u003e gerritforge/gerrit-ci-slave-bazel\n \nThe problem is the Chrome\u0027s sandboxing which requires more permissions, possibly only from the latest releases.\n\n--cap-add\u003dSYS_ADMIN would do the job:\n\n# docker run --entrypoint\u003d/bin/bash --cap-add\u003dSYS_ADMIN -ti gerrit-ci-slave-buck\nroot@b847e2f429af:/# su - jenkins\nBuck set to: /opt/buck-java8/bin/buck\njenkins@b847e2f429af:~$ export DISPLAY\u003d:0.0\njenkins@b847e2f429af:~$ Xvfb \u0026\n[1] 29\njenkins@b847e2f429af:~$ _XSERVTransmkdir: ERROR: euid !\u003d 0,directory /tmp/.X11-unix will not be created.\n\njenkins@b847e2f429af:~$ \njenkins@b847e2f429af:~$ \njenkins@b847e2f429af:~$ git clone https://gerrit.googlesource.com/gerrit\nCloning into \u0027gerrit\u0027...\nremote: Sending approximately 72.73 MiB ...\nremote: Counting objects: 4700, done\nremote: Finding sources: 100% (180/180)\nremote: Total 313877 (delta 162717), reused 313877 (delta 162717)\nReceiving objects: 100% (313877/313877), 72.71 MiB | 25.67 MiB/s, done.\nResolving deltas: 100% (162717/162717), done.\nChecking connectivity... done.\njenkins@b847e2f429af:~$ cd gerrit/\njenkins@b847e2f429af:~/gerrit$ buck test --include web\nNot using buckd because watchman isn\u0027t installed.\n[-] PROCESSING BUCK FILES...FINISHED 0.2s [100%] (SLOW) New buck daemon\n[-] DOWNLOADING... (0.00 B/S AVG, TOTAL: 0.00 B, 0 Artifacts)\n[-] BUILDING...FINISHED 10.1s [100%] (46/46 JOBS, 46 UPDATED, 38 [82.6%] CACHE MISS)\n[-] TESTING...FINISHED 2m 16.8s (1 PASS/0 FAIL)\nRESULTS FOR ALL TESTS\nPASS    136.7s  1 Passed   0 Skipped   0 Failed   //polygerrit-ui/app:polygerrit_tests\nTESTS PASSED\njenkins@b847e2f429af:~/gerrit$",
+      "parentUuid": "d091ec62_eb619117",
+      "revId": "53eebe47022a6280059ba93766efbe26a9378359",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
