@@ -14,6 +14,10 @@ git read-tree -u --prefix=plugins/its-{name} origin/{branch}
 git read-tree -u --prefix=plugins/its-base base/{branch}
 
 rm -Rf buck-out
+
+SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
+. set-java.sh $(echo $SOURCE_LEVEL | cut -d '=' -f 2 | tr -d '[[:space:]]')
+
 buck build -v 3 plugins/its-{name}
 
 # Extract version information
