@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d091ec62_eb619117",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-11-22T07:37:10Z",
+      "side": 1,
+      "message": "Looking into it right now with GerritForge docker image:\n\n  $ docker run -ti --privileged --entrypoint\u003d/bin/bash gerritforge/gerrit-ci-slave-bazel\n\nThen, important steps:\n\n  $ apt-get update\n  $ apt-get upgrade\n  The following packages will be upgraded:\n  bazel google-chrome-stable linux-libc-dev\n  3 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\n  Need to get 146 MB of archives.\n  After this operation, 4096 B disk space will be freed.\n  Do you want to continue? [Y/n] Y\n\nNow, the 3 packages above were upgraded:\n\n  Preparing to unpack .../google-chrome-stable_54.0.2840.100-1_amd64.deb ...\n  Unpacking google-chrome-stable (54.0.2840.100-1) over (54.0.2840.71-1) ...\n  Preparing to unpack .../archives/bazel_0.4.0_amd64.deb ...\n  Unpacking bazel (0.4.0) over (0.3.2) ...\n  Preparing to unpack .../linux-libc-dev_3.19.0-74.82_amd64.deb ...\n  Unpacking linux-libc-dev:amd64 (3.19.0-74.82) over (3.19.0-73.81) ...\n  [...]\n\nNow, after the setting up the DISPLAY:\n\n  $ export DISPLAY\u003d:0.0\n\nand running the X-Server:\n\n  $ Xvfb\u0026\n\nas root user, i su to jenkins:\n\n  $ su - jenkins\n\nFetch the gerrit master, running the PolyGerrit tests with:\n\n  $ sh ./polygerrit-ui/app/run_test.sh\n  ./polygerrit-ui/app/run_test.sh: 4: ./polygerrit-ui/app/run_test.sh: [[: not found\n  ./polygerrit-ui/app/run_test.sh: 10: ./polygerrit-ui/app/run_test.sh: [[: not found\n  Extracting Bazel installation...\n .\n  INFO: Found 1 test target...\n  Target //polygerrit-ui/app:wct_test up-to-date:\n  bazel-bin/polygerrit-ui/app/wct_test\n  INFO: Elapsed time: 163.856s, Critical Path: 158.31s\n  //polygerrit-ui/app:wct_test                                               \n  PASSED in 158.0s\n\n* Note to myself, look into \"run_test.sh: 4: ./polygerrit-ui/app/run_test.sh: [[: not found\" failures.",
+      "revId": "53eebe47022a6280059ba93766efbe26a9378359",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
