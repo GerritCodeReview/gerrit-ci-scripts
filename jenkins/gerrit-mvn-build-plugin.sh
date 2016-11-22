@@ -9,7 +9,7 @@ then
 
   pushd gerrit
   buck build api
-  ./tools/maven/api.sh install
+  ./tools/maven/api.sh install buck
   popd
 fi
 
