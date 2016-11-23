@@ -1,10 +1,33 @@
 - job-template:
-    name: 'Gerrit-{branch}'
-    project-type: flow
-    concurrent: false
-    needs-workspace: true
+    name: '{name}-{branch}'
+    description: "{name} {branch} branch build with BUCK or BUILD (bazel)\n"
+    wrappers:
+      - timeout:
+          timeout: 90
+          type: absolute
+          fail: false
+      - timestamps
+      - xvfb:
+          installation-name: Xvfb
+          auto-display-name: true
+          parallel-build: false
+          timeout: 10
+          screen: 1024x768x16
+          display-name-offset: 100
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     logrotate:
-      numToKeep: 256
+      numToKeep: 20
+      artifactNumToKeep: 20
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
     scm:
       - git:
          url: https://gerrit.googlesource.com/gerrit
@@ -17,113 +40,12 @@
     triggers:
       - pollscm:
           cron: 'H/10 * * * *'
-    properties:
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-    dsl: |
-      retries = 3
-      parallel (
-        {{ retry ( retries ) {{ build( "Gerrit-{branch}-buck" ) }} }},
-        {{ retry ( retries ) {{ build( "Gerrit-{branch}-bazel" ) }} }}
-      )
-
-- job-template:
-    name: 'Gerrit-{branch}-buck'
-    description: "{name} {branch} branch build with Buck\n"
-    wrappers:
-      - timeout:
-          timeout: 90
-          type: absolute
-          fail: false
-      - timestamps
-      - xvfb:
-          installation-name: Xvfb
-          auto-display-name: true
-          parallel-build: false
-          timeout: 10
-          screen: 1024x768x16
-          display-name-offset: 100
-          additional-options: -fbdir /tmp
-          debug: true
-          shutdown-with-build: false
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
-    properties:
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-    scm:
-      - git:
-         url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
-         basedir: gerrit
 
     builders:
       - shell:
          !include-raw-escape: gerrit-buck-build.sh
       - shell:
          !include-raw-escape: gerrit-buck-test.sh
-    publishers:
-      - archive:
-         artifacts: >
-           gerrit/buck-out/gen/*.war,gerrit/buck-out/gen/plugins/*/*.jar,gerrit/buck-out/gen/*api/*api.jar,
-           gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
-
-         excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
-
-- job-template:
-    name: 'Gerrit-{branch}-bazel'
-    description: "{name} {branch} branch build with Bazel\n"
-    wrappers:
-      - timeout:
-          timeout: 90
-          type: absolute
-          fail: false
-      - timestamps
-      - xvfb:
-          installation-name: Xvfb
-          auto-display-name: true
-          parallel-build: false
-          timeout: 10
-          screen: 1024x768x16
-          display-name-offset: 100
-          additional-options: -fbdir /tmp
-          debug: true
-          shutdown-with-build: false
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
-    properties:
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-    scm:
-      - git:
-         url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
-         basedir: gerrit
-
-    builders:
       - shell:
          !include-raw-escape: gerrit-bazel-build.sh
       - shell:
@@ -131,14 +53,20 @@
     publishers:
       - archive:
          artifacts: >
+           gerrit/buck-out/gen/*.war,
+           gerrit/buck-out/gen/plugins/*/*.jar,
+           gerrit/buck-out/gen/*api/*api.jar,
+           gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar,
            gerrit/bazel-bin/*.war,gerrit/bazel-genfiles/plugins/*/*.jar,
            gerrit/bazel-genfiles/*api/*api.jar,
            gerrit/bazel-genfiles/gerrit-acceptance-framework/*.jar
 
-         excludes: 'gerrit/bazel-genfiles/plugins/core*/**/*.jar'
+         excludes: >
+           gerrit/buck-out/gen/plugins/core*/**/*.jar,
+           gerrit/bazel-genfiles/plugins/core*/**/*.jar
 
 - project:
-    name: Gerrit-buck
+    name: Gerrit
     branch:
       - master
       - stable-2.13
@@ -146,18 +74,4 @@
       - stable-2.11
       - stable-2.10
     jobs:
-      - 'Gerrit-{branch}-buck'
-
-- project:
-    name: Gerrit-bazel
-    branch:
-      - master
-    jobs:
-      - 'Gerrit-{branch}-bazel'
-
-- project:
-    name: Gerrit-build-flow
-    branch:
-      - master
-    jobs:
-      - 'Gerrit-{branch}'
+      - '{name}-{branch}'
