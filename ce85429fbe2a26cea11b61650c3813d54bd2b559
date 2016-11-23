@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "101b842a_b5b840ae",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2016-11-23T23:48:44Z",
+      "side": 1,
+      "message": "nit: whitespace",
+      "range": {
+        "startLine": 9,
+        "startChar": 72,
+        "endLine": 9,
+        "endChar": 73
+      },
+      "revId": "ce85429fbe2a26cea11b61650c3813d54bd2b559",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
