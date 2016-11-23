@@ -1,0 +1,10 @@
+- project:
+    name: download-commands
+    jobs:
+      - 'plugin-{name}-{branch}-buck'
+        branch:
+          - master
+          - stable-2.11
+      - 'plugin-{name}-{branch}-bazel'
+        branch:
+          - master

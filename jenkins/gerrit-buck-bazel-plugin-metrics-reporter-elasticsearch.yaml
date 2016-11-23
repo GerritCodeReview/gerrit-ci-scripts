@@ -1,0 +1,7 @@
+- project:
+    name: metrics-reporter-elasticsearch
+    jobs:
+      - 'plugin-{name}-{branch}-buck'
+        branch:
+          - master
+          - stable-2.13

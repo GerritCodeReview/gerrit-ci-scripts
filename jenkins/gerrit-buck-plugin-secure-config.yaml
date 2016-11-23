@@ -1,7 +1,0 @@
-- project:
-    name: secure-config
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
