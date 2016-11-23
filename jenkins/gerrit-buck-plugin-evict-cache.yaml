@@ -3,5 +3,5 @@
     branch:
       - stable-2.13
     jobs:
-      - 'plugin-{name}-{branch}'
+      - 'plugin-{name}-{branch}-buck'
 
