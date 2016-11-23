@@ -1,0 +1,7 @@
+- project:
+    name: plugin-manager
+    jobs:
+      - 'plugin-{name}-{branch}-buck'
+        branch:
+          - master
+          - stable-2.13

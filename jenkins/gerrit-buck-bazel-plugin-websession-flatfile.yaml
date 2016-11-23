@@ -1,0 +1,8 @@
+- project:
+    name: websession-flatfile
+    jobs:
+      - 'plugin-{name}-{branch}-buck'
+        branch:
+          - master
+          - stable-2.13
+          - stable-2.12

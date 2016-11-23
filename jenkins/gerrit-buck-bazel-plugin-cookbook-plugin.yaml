@@ -1,0 +1,9 @@
+- project:
+    name: cookbook-plugin
+    jobs:
+      - 'plugin-{name}-{branch}-buck'
+        branch:
+          - master
+          - stable-2.12
+          - stable-2.11
+          - stable-2.10
