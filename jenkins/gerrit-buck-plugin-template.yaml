@@ -1,6 +1,6 @@
 - job-template:
     name: 'plugin-{name}-{branch}'
-    description: "Plugin {name} {branch} branch build with BUCK\n"
+    description: "Plugin {name} {branch} branch build with BUCK or Bazel\n"
     defaults: buck-plugin
     wrappers:
       - timeout:
@@ -37,7 +37,11 @@
 
     builders:
       - shell:
-         !include-raw: gerrit-buck-build-plugin.sh
+         !include-raw-escape: gerrit-buck-build-plugin.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-build-plugin.sh
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/plugins/{name}/*{name}*.jar*'
+         artifacts: >
+           gerrit/buck-out/gen/plugins/{name}/*{name}*.jar*,
+           gerrit/bazel-genfiles/plugins/{name}/*{name}*.jar*
