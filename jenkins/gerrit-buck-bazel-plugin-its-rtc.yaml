@@ -1,0 +1,8 @@
+- project:
+    name: rtc
+    jobs:
+      - 'plugin-its-{name}-{branch}-buck':
+           branch:
+             - master
+             - stable-2.11
+             - stable-2.10

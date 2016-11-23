@@ -1,0 +1,6 @@
+- project:
+    name: github-groups
+    jobs:
+      - 'plugin-{name}-{branch}-buck':
+           branch:
+             - master

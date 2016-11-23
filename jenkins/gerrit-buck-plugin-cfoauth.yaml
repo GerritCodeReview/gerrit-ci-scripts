@@ -1,8 +1,0 @@
-- project:
-    name: cfoauth
-    branch:
-      - master
-      - stable-2.11
-    jobs:
-      - 'plugin-{name}-{branch}'
-
