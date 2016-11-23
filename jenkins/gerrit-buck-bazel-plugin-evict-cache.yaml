@@ -1,0 +1,6 @@
+- project:
+    name: evict-cache
+    jobs:
+      - 'plugin-{name}-{branch}-buck':
+           branch:
+             - stable-2.13

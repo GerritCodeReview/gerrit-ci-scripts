@@ -1,7 +1,0 @@
-- project:
-    name: github-groups
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-

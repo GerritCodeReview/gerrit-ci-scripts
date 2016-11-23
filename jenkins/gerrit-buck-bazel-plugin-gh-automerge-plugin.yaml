@@ -1,0 +1,11 @@
+- project:
+    name: automerge-plugin
+    repo: automerge-plugin
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-gh-{branch}-buck':
+           branch:
+             - master
+             - stable-2.12
+             - stable-2.11
+             - stable-2.10

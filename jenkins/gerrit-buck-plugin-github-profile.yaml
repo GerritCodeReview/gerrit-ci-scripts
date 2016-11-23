@@ -1,7 +1,0 @@
-- project:
-    name: github-profile
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
