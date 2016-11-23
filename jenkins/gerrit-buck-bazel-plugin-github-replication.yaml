@@ -1,0 +1,6 @@
+- project:
+    name: github-replication
+    jobs:
+      - 'plugin-{name}-{branch}-buck'
+        branch:
+          - master
