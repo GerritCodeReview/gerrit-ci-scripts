@@ -1,7 +1,7 @@
 - job-template:
-    name: 'plugin-gitblit-{branch}-buck'
-    description: "GitBlit plugin {branch} branch build with Buck\n"
+    name: 'plugin-scripting-{name}-{branch}-buck'
     defaults: buck-plugin
+    description: "Plugin scripting/{name} {branch} branch build with Buck\n"
     wrappers:
       - timeout:
           timeout: 30
@@ -22,11 +22,9 @@
       - git:
          remotes:
            - origin:
-               url: https://gerrit.googlesource.com/plugins/gitblit
+               url: https://gerrit.googlesource.com/plugins/scripting/{name}
            - gerrit:
                url: https://gerrit.googlesource.com/gerrit
-           - gitblit:
-               url: https://github.com/gitblit/gitblit.git
          branches:
            - origin/{branch}
          submodule:
@@ -38,18 +36,16 @@
           cron: 'H/50 * * * *'
 
     builders:
-      - shell:
-         !include-raw: gitblit-ant-build.sh
       - shell:
          !include-raw: gerrit-buck-build-plugin.sh
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/plugins/gitblit/*gitblit*.jar*'
+         artifacts: 'buck-out/gen/plugins/{name}/{name}.jar*'
 
 - job-template:
-    name: 'plugin-gitblit-{branch}-bazel'
-    description: "GitBlit plugin {branch} branch build with Bazel\n"
+    name: 'plugin-scripting-{name}-{branch}-bazel'
     defaults: buck-plugin
+    description: "Plugin scripting/{name} {branch} branch build with Bazel\n"
     wrappers:
       - timeout:
           timeout: 30
@@ -70,11 +66,9 @@
       - git:
          remotes:
            - origin:
-               url: https://gerrit.googlesource.com/plugins/gitblit
+               url: https://gerrit.googlesource.com/plugins/scripting/{name}
            - gerrit:
                url: https://gerrit.googlesource.com/gerrit
-           - gitblit:
-               url: https://github.com/gitblit/gitblit.git
          branches:
            - origin/{branch}
          submodule:
@@ -86,28 +80,9 @@
           cron: 'H/50 * * * *'
 
     builders:
-      - shell:
-         !include-raw: gitblit-ant-build.sh
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/gitblit/*gitblit*.jar*
-
-- project:
-    name: gitblit-buck
-    branch:
-      - master
-      - stable-2.12
-      - stable-2.11
-      - stable-2.10
-    jobs:
-      - 'plugin-gitblit-{branch}-buck'
-
-- project:
-    name: gitblit-bazel
-    branch:
-      - master
-    jobs:
-      - 'plugin-gitblit-{branch}-bazel'
+           bazel-genfiles/plugins/{name}/{name}.jar*

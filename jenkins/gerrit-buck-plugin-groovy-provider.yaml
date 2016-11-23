@@ -6,5 +6,5 @@
       - stable-2.12
       - stable-2.11
     jobs:
-      - 'plugin-scripting-{name}-{branch}'
+      - 'plugin-scripting-{name}-{branch}-buck'
 
