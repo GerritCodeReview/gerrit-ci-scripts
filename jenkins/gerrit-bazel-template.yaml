@@ -1,9 +1,9 @@
 - job-template:
-    name: '{name}-{branch}-buck'
-    description: "{name} {branch} branch build with BUCK\n"
+    name: '{name}-{branch}-bazel'
+    description: "{name} {branch} branch build with bazel\n"
     wrappers:
       - timeout:
-          timeout: 90
+          timeout: 60
           type: absolute
           fail: false
       - timestamps
@@ -43,9 +43,9 @@
 
     builders:
       - shell:
-         !include-raw-escape: gerrit-buck-build.sh
+         !include-raw-escape: gerrit-bazel-build.sh
       - shell:
-         !include-raw-escape: gerrit-buck-test.sh
+         !include-raw-escape: gerrit-bazel-test.sh
     publishers:
       - archive:
          artifacts: >
@@ -58,9 +58,5 @@
     name: Gerrit
     branch:
       - master
-      - stable-2.13
-      - stable-2.12
-      - stable-2.11
-      - stable-2.10
     jobs:
-      - '{name}-{branch}-buck'
+      - '{name}-{branch}-bazel'
