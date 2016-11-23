@@ -1,0 +1,6 @@
+- project:
+    name: secure-config
+    jobs:
+      - 'plugin-{name}-{branch}-buck'
+        branch:
+          - master

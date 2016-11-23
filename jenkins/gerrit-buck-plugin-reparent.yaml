@@ -1,7 +1,0 @@
-- project:
-    name: reparent
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
