@@ -1,9 +1,9 @@
 - job-template:
-    name: '{name}-{branch}'
-    description: "{name} {branch} branch build with BUCK\n"
+    name: '{name}-{branch}-bazel'
+    description: "{name} {branch} branch build with bazel\n"
     wrappers:
       - timeout:
-          timeout: 90
+          timeout: 60
           type: absolute
           fail: false
       - timestamps
@@ -43,36 +43,20 @@
 
     builders:
       - shell:
-         !include-raw-escape: gerrit-buck-build.sh
-      - shell:
-         !include-raw-escape: gerrit-buck-test.sh
-      - shell:
          !include-raw-escape: gerrit-bazel-build.sh
       - shell:
          !include-raw-escape: gerrit-bazel-test.sh
     publishers:
       - archive:
          artifacts: >
-           # Buck
            gerrit/buck-out/gen/*.war,gerrit/buck-out/gen/plugins/*/*.jar,gerrit/buck-out/gen/*api/*api.jar,
            gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
-           # Bazel
-           gerrit/bazel-bin/*.war,gerrit/bazel-genfiles/plugins/*/*.jar,gerrit/bazel-genfiles/*api/*api.jar,
-           gerrit/bazel-genfiles/gerrit-acceptance-framework/*.jar
 
-         excludes: >
-           # Buck
-           gerrit/buck-out/gen/plugins/core*/**/*.jar
-           # Bazel
-           gerrit/bazel-genfiles/plugins/core*/**/*.jar
+         excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
 
 - project:
     name: Gerrit
     branch:
       - master
-      - stable-2.13
-      - stable-2.12
-      - stable-2.11
-      - stable-2.10
     jobs:
-      - '{name}-{branch}'
+      - '{name}-{branch}-bazel'
