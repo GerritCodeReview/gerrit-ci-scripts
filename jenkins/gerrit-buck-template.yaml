@@ -1,6 +1,6 @@
 - job-template:
     name: '{name}-{branch}'
-    description: "{name} {branch} branch build with BUCK\n"
+    description: "{name} {branch} branch build with BUCK or BUILD (bazel)\n"
     wrappers:
       - timeout:
           timeout: 90
@@ -53,10 +53,20 @@
     publishers:
       - archive:
          artifacts: >
-           gerrit/buck-out/gen/*.war,gerrit/buck-out/gen/plugins/*/*.jar,gerrit/buck-out/gen/*api/*api.jar,
-           gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
+           # BUCK
+           'gerrit/buck-out/gen/*.war,gerrit/buck-out/gen/plugins/*/*.jar',
+           'gerrit/buck-out/gen/*api/*api.jar',
+           'gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar',
+           # BUILD (bazel)
+           'gerrit/bazel-bin/*.war,gerrit/bazel-genfiles/plugins/*/*.jar',
+           'gerrit/bazel-genfiles/*api/*api.jar',
+           'gerrit/bazel-genfiles/gerrit-acceptance-framework/*.jar'
 
-         excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
+         excludes: >
+           # BUCK
+           'gerrit/buck-out/gen/plugins/core*/**/*.jar',
+           # BUILD (bazel)
+           'gerrit/bazel-genfiles/plugins/core*/**/*.jar'
 
 - project:
     name: Gerrit
