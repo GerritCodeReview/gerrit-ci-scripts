@@ -1,8 +1,8 @@
 - project:
-    name: avatars-gravatar
+    name: avatars-external
     branch:
       - master
       - stable-2.13
     jobs:
-      - 'plugin-{name}-{branch}'
+      - 'plugin-{name}-{branch}-buck'
 
