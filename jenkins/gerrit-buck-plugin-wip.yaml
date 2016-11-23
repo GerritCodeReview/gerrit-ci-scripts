@@ -1,7 +1,0 @@
-- project:
-    name: wip
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
