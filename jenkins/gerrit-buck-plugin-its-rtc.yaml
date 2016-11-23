@@ -5,5 +5,5 @@
       - stable-2.11
       - stable-2.10
     jobs:
-      - 'plugin-its-{name}-{branch}'
+      - 'plugin-its-{name}-{branch}-buck'
 

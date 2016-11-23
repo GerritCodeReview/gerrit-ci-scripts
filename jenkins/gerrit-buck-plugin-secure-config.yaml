@@ -3,5 +3,5 @@
     branch:
       - master
     jobs:
-      - 'plugin-{name}-{branch}'
+      - 'plugin-{name}-{branch}-buck'
 
