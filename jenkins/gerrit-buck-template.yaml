@@ -3,7 +3,7 @@
     description: "{name} {branch} branch build with BUCK\n"
     wrappers:
       - timeout:
-          timeout: 60
+          timeout: 90
           type: absolute
           fail: false
       - timestamps
