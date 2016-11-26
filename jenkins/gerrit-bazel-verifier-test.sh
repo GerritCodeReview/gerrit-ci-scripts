@@ -16,11 +16,13 @@ then
 
   if [ "$MODE" == "default" ] || [ "$MODE" == "notedb" ]
   then
-    bazel test $GERRIT_NOTEDB \
-               --ignore_unsupported_sandboxing --test_output errors \
-               --test_summary detailed --flaky_test_attempts 3 \
-               --test_verbose_timeout_warnings --build_tests_only \
-               --local_test_jobs 1 --nocache_test_results //...
+    export BAZEL_OPTS="--ignore_unsupported_sandboxing --test_output errors \
+                     --test_summary detailed --flaky_test_attempts 3 \
+                     --test_verbose_timeout_warnings --build_tests_only \
+                     --nocache_test_results \
+                     --test_tag_filters=-elastic,-cookbook-plugin,-flaky"
+
+    bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
   fi
 
   if [ "$MODE" == "polygerrit" ]
