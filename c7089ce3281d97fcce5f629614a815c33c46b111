@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "70e76057_a3964429",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-11-26T23:47:46Z",
+      "side": 1,
+      "message": "The same comment here.",
+      "revId": "c7089ce3281d97fcce5f629614a815c33c46b111",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70e76057_c391c835",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-11-26T23:47:46Z",
+      "side": 1,
+      "message": "This is too verbose. To exclude some tests, there is an option: [1]. So what you can do, is just filter the already defined tags for elasticsearch and cookbook-plugin tests, by adding \"-\" prefix in frot of the tags you want to exclude, something like:\n\n  $ bazel test --test_tag_filters\u003d-elastic,-cookbook-plugin //...\n\n* [1] https://www.bazel.io/versions/master/docs/command-line-reference.html#flag--test_tag_filters",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 130
+      },
+      "revId": "c7089ce3281d97fcce5f629614a815c33c46b111",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
