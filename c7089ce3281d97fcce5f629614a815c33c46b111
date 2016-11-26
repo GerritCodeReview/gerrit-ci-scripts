@@ -39,6 +39,30 @@
       "revId": "c7089ce3281d97fcce5f629614a815c33c46b111",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70e76057_038c5017",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-26T23:50:29Z",
+      "side": 1,
+      "message": "I tried the --test_tag_filters and didn\u0027t work for me.\nThe issue is: when you specify the test_tag_filters option you cannot just give the negative one, but you need to specify the positive filtering as well.\n\nWe don\u0027t have a common tag for all tests to include in the positive, unfortunately.",
+      "parentUuid": "70e76057_c391c835",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 130
+      },
+      "revId": "c7089ce3281d97fcce5f629614a815c33c46b111",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
