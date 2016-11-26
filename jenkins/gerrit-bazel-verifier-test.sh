@@ -16,11 +16,14 @@ then
 
   if [ "$MODE" == "default" ] || [ "$MODE" == "notedb" ]
   then
-    bazel test $GERRIT_NOTEDB \
-               --ignore_unsupported_sandboxing --test_output errors \
-               --test_summary detailed --flaky_test_attempts 3 \
-               --test_verbose_timeout_warnings --build_tests_only \
-               --local_test_jobs 1 --nocache_test_results //...
+    export BAZEL_NO_RUN='(elasticsearch|cookbook)'
+    export BAZEL_TESTS=$(bazel test --check_tests_up_to_date //... | grep "NO STATUS" | awk '{print $1}' | egrep -v $BAZEL_NO_RUN)
+    export BAZEL_OPTS="--ignore_unsupported_sandboxing --test_output errors \
+                     --test_summary detailed --flaky_test_attempts 3 \
+                     --test_verbose_timeout_warnings --build_tests_only \
+                     --nocache_test_results"
+
+    bazel test $GERRIT_NOTEDB $BAZEL_OPTS $BAZEL_TESTS
   fi
 
   if [ "$MODE" == "polygerrit" ]
