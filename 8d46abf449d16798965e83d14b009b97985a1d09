@@ -22,6 +22,30 @@
       "revId": "8d46abf449d16798965e83d14b009b97985a1d09",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70e76057_a3fac452",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-27T22:33:59Z",
+      "side": 1,
+      "message": "I don\u0027t list excluding explicitly tests: moving forward any test that isn\u0027t stable enough should be tagged as \"flaky\" so that can be skipped by the CI altogether :-)",
+      "parentUuid": "50ec1c3c_42de54ca",
+      "range": {
+        "startLine": 11,
+        "startChar": 40,
+        "endLine": 11,
+        "endChar": 72
+      },
+      "revId": "8d46abf449d16798965e83d14b009b97985a1d09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
