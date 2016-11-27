@@ -63,6 +63,30 @@
       "revId": "c7089ce3281d97fcce5f629614a815c33c46b111",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50ec1c3c_420ad48c",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-11-27T00:07:09Z",
+      "side": 1,
+      "message": "The behaviour you describe doesn\u0027t make any sence to me and would be a serious bug in Bazel. But I don\u0027t see it. Just tried:\n\n  $ bazel test --test_tag_filters\u003d-elastic,-cookbook-plugin //...\n\nAll tests are executed as expected: [1]. Well I upgraded to beta Bazel 0.4.1, but I don\u0027t think that this matters:\n\n  $ bazel version\n  Build label: 0.4.1rc2\n  Build time: Wed Nov 23 08:58:53 2016 (1479891533)\n\nReferences:\n\n* [1] http://paste.openstack.org/show/590553",
+      "parentUuid": "70e76057_038c5017",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 130
+      },
+      "revId": "c7089ce3281d97fcce5f629614a815c33c46b111",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
