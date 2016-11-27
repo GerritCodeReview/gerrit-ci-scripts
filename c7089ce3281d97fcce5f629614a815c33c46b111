@@ -87,6 +87,30 @@
       "revId": "c7089ce3281d97fcce5f629614a815c33c46b111",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70e76057_e3904c2f",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-27T00:41:44Z",
+      "side": 1,
+      "message": "This is what I\u0027ve got with \"--test_ta_filter\u003d-elastic,-cookbook-plugin\":\n    Executed 0 out of 39 tests: 1 test passes, 1 fails to build and 37 were skipped.",
+      "parentUuid": "50ec1c3c_420ad48c",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 130
+      },
+      "revId": "c7089ce3281d97fcce5f629614a815c33c46b111",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
