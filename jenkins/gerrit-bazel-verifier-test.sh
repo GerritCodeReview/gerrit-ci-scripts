@@ -18,7 +18,8 @@ then
   then
     export BAZEL_NO_RUN='(elasticsearch|cookbook)'
     export BAZEL_TESTS=$(bazel test --check_tests_up_to_date //... | grep "NO STATUS" | awk '{print $1}' | egrep -v $BAZEL_NO_RUN)
-    export BAZEL_OPTS="--ignore_unsupported_sandboxing --test_output errors \
+    export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
+                     --test_output errors \
                      --test_summary detailed --flaky_test_attempts 3 \
                      --test_verbose_timeout_warnings --build_tests_only \
                      --nocache_test_results"
