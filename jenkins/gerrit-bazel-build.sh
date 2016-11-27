@@ -5,7 +5,7 @@ then
   cd gerrit
   . set-java.sh 8
 
-  export BAZEL_OPTS=--ignore_unsupported_sandboxing
+  export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone"
 
   bazel build $BAZEL_OPTS \
         gerrit-plugin-api:plugin-api_deploy.jar \
