@@ -46,6 +46,30 @@
       "revId": "8d46abf449d16798965e83d14b009b97985a1d09",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50ec1c3c_428c94c6",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-11-28T07:06:26Z",
+      "side": 1,
+      "message": "Ok. Mention this in the commit message, or do it in different change?",
+      "parentUuid": "70e76057_a3fac452",
+      "range": {
+        "startLine": 11,
+        "startChar": 40,
+        "endLine": 11,
+        "endChar": 72
+      },
+      "revId": "8d46abf449d16798965e83d14b009b97985a1d09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
