@@ -4,5 +4,5 @@
       - master
     jobs:
       - 'app-{name}-{branch}'
-    commands: './gradlew assemble'
+    commands: 'mkdir -p ~/.android && ./gradlew assemble'
     artifacts: 'app/build/outputs/apk/*.apk'
