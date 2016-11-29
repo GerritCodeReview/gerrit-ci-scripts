@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50ec1c3c_e59692d8",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-29T22:03:04Z",
+      "side": 1,
+      "message": "Look at my latest change where I disable the sandboxing altogether",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 43
+      },
+      "revId": "467871545765115d8d8f9876c750fd88e15210ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50ec1c3c_458c9ec6",
+        "filename": "jenkins/gerrit-bazel-build-plugin-manual.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-29T22:03:04Z",
+      "side": 1,
+      "message": "Disable sandboxing.",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 43
+      },
+      "revId": "467871545765115d8d8f9876c750fd88e15210ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70e76057_26d1a2e7",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-29T22:03:04Z",
+      "side": 1,
+      "message": "Disable sandboxing please.",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 43
+      },
+      "revId": "467871545765115d8d8f9876c750fd88e15210ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70e76057_86ceae43",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-29T22:03:04Z",
+      "side": 1,
+      "message": "Instead of duplicating all the jobs, shall we do something similar to Gerrit?\n- If BUILD is there \u003d\u003e build with Bazel\n- if BUCK is there but no BUILD file \u003d\u003e build with Buck\n\nThat would allow a smooth migration and more clarity on the status of the jobs ... without spamming the screen with two builds of the same object :-)",
+      "revId": "467871545765115d8d8f9876c750fd88e15210ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50ec1c3c_25899ab6",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-29T22:03:04Z",
+      "side": 1,
+      "message": "Nope: the purpose is exactly to move to Bazel and get rid of the Buck build.\nSo \u003d\u003e we want to make sure that any Gerrit change works with *BOTH* Buck and Bazel :-)\n\nI know is painful, but that\u0027s the only way to get rid of Buck in the medium term.",
+      "revId": "467871545765115d8d8f9876c750fd88e15210ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
