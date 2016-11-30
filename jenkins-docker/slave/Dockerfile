@@ -67,6 +67,16 @@ RUN wget -O /tmp/chromedriver/chromedriver.zip 'http://chromedriver.storage.goog
 RUN unzip /tmp/chromedriver/chromedriver.zip chromedriver -d /usr/local/bin/
 RUN chmod a+x /usr/local/bin/chromedriver
 
+# Install the Android SDK via Ubuntu Make (https://wiki.ubuntu.com/ubuntu-make)
+RUN rm /etc/apt/sources.list.d/google.list && apt-get update && apt-get install -y software-properties-common && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+RUN add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+RUN apt-get update && apt-get install -y ubuntu-make
+
+RUN umake android android-sdk --accept-license /usr/local/share/umake/android/android-sdk
+ENV PATH $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+
 # Allow Android SDK tools to run on a 64-bit system, see
 # http://stackoverflow.com/a/23201209/1127485
 RUN apt-get install -y lib32stdc++6 lib32z1
