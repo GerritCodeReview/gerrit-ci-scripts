@@ -16,6 +16,24 @@
       "revId": "1c412691fbb39b0e0cdd2ab00dd30e171183474c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edcc5755_4c5c3f9c",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-11-30T23:23:01Z",
+      "side": 1,
+      "message": "Ok, let me remove it.",
+      "parentUuid": "70e76057_4642e67b",
+      "revId": "1c412691fbb39b0e0cdd2ab00dd30e171183474c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
