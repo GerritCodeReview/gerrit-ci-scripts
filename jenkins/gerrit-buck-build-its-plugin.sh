@@ -20,8 +20,13 @@ SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
 
 buck build -v 3 plugins/its-{name}
 
+# Remove duplicate entries
+PLUGIN_JAR=$(ls $(pwd)/buck-out/gen/plugins/its-{name}/its-{name}*.jar)
+mkdir jar-out && pushd jar-out
+jar xf $PLUGIN_JAR && jar cmf META-INF/MANIFEST.MF $PLUGIN_JAR .
+popd
+
 # Extract version information
-PLUGIN_JAR=$(ls buck-out/gen/plugins/its-{name}/its-{name}*.jar)
 PLUGIN_VERSION=$(git describe --always origin/{branch})
 echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
 jar ufm $PLUGIN_JAR MANIFEST.MF && rm MANIFEST.MF
