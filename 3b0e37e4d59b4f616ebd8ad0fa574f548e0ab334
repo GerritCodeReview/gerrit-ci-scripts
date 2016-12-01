@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2dc74f2e_ee3f1fe6",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 6
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-12-01T12:20:09Z",
+      "side": 1,
+      "message": "Does it make sense to use $ANDROID_HOME here after moving the ENV from line 78 before line 71? I.e. is $ANDROID_HOME immediately available for use?",
+      "range": {
+        "startLine": 77,
+        "startChar": 22,
+        "endLine": 77,
+        "endChar": 47
+      },
+      "revId": "3b0e37e4d59b4f616ebd8ad0fa574f548e0ab334",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
