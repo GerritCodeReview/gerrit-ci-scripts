@@ -105,6 +105,42 @@
       "revId": "336ab32c653c7f1a9ceed2ea612462e38378fe57",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edcc5755_ec564b48",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-01T11:32:47Z",
+      "side": 1,
+      "message": "Nope, didn\u0027t work at all ... PATH not updated.",
+      "parentUuid": "2dc74f2e_6e9ecff5",
+      "revId": "336ab32c653c7f1a9ceed2ea612462e38378fe57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edcc5755_8c630721",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-01T11:32:47Z",
+      "side": 1,
+      "message": "Didn\u0027t work :-( PATH wasn\u0027t updated.",
+      "parentUuid": "2dc74f2e_6e9ecff5",
+      "revId": "336ab32c653c7f1a9ceed2ea612462e38378fe57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
