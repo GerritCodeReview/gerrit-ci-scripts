@@ -22,6 +22,30 @@
       "revId": "83c5b60984c146a3dc102b3e8ce0a84d2dbfd6f5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dc74f2e_2e55273e",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-01T10:17:51Z",
+      "side": 1,
+      "message": "That\u0027s the group ownership.",
+      "parentUuid": "2dc74f2e_8e869ba4",
+      "range": {
+        "startLine": 77,
+        "startChar": 20,
+        "endLine": 77,
+        "endChar": 21
+      },
+      "revId": "83c5b60984c146a3dc102b3e8ce0a84d2dbfd6f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
