@@ -46,6 +46,30 @@
       "revId": "83c5b60984c146a3dc102b3e8ce0a84d2dbfd6f5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edcc5755_0c50774d",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-12-01T10:24:42Z",
+      "side": 1,
+      "message": "Sure, I\u0027m aware that chown can optionally change the group, but you\u0027re not specifying a group after the \u0027:\u0027 as we don\u0027t want to change it, so you can omit the \u0027:\u0027 altogether, no?",
+      "parentUuid": "2dc74f2e_2e55273e",
+      "range": {
+        "startLine": 77,
+        "startChar": 20,
+        "endLine": 77,
+        "endChar": 21
+      },
+      "revId": "83c5b60984c146a3dc102b3e8ce0a84d2dbfd6f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
