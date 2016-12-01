@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2dc74f2e_4e99930a",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-01T10:04:39Z",
+      "side": 1,
+      "message": "ah OK, didn\u0027t catch that detail that you actually wanted to be writeable by the jenkins user. Would you need then a chown / chmod afterwards?",
+      "parentUuid": "2dc74f2e_ee607f27",
+      "range": {
+        "startLine": 77,
+        "startChar": 47,
+        "endLine": 77,
+        "endChar": 89
+      },
+      "revId": "336ab32c653c7f1a9ceed2ea612462e38378fe57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "edcc5755_4c999f0a",
         "filename": "jenkins-docker/slave/Dockerfile",
         "patchSetId": 4
@@ -36,6 +60,24 @@
       "writtenOn": "2016-12-01T09:47:23Z",
       "side": 1,
       "message": "Well, my comment from the previous patch set also holds true for modifying the PATH environment variable, umake already does that a few lines below the line I linked to previously, see:\n\nhttps://github.com/ubuntu/ubuntu-make/blob/master/umake/frameworks/android.py#L135-L136",
+      "revId": "336ab32c653c7f1a9ceed2ea612462e38378fe57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dc74f2e_6e9ecff5",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-01T10:04:39Z",
+      "side": 1,
+      "message": "OK, let me try to disable that and see if the PATH gets updated.",
+      "parentUuid": "edcc5755_4c999f0a",
       "revId": "336ab32c653c7f1a9ceed2ea612462e38378fe57",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
