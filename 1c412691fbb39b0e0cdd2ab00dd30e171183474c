@@ -34,6 +34,24 @@
       "revId": "1c412691fbb39b0e0cdd2ab00dd30e171183474c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edcc5755_4c2f5fbb",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-01T11:33:27Z",
+      "side": 1,
+      "message": "didn\u0027t work: ANDROID_HOME wasn\u0027t defined automatically.",
+      "parentUuid": "edcc5755_4c5c3f9c",
+      "revId": "1c412691fbb39b0e0cdd2ab00dd30e171183474c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
