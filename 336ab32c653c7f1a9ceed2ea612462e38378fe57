@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2dc74f2e_ee607f27",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-12-01T09:47:23Z",
+      "side": 1,
+      "message": "Why there and not /home/jenkins/android-sdk/ which I had before? We\u0027d like to use the auto-download feature from recent Android Gradle plugins, which means the user running the build needs to have write access to the Android SDK directory. That would be the case with /home/jenkins/android-sdk/. Is it also the case with /usr/local/share/umake/android/android-sdk/?",
+      "range": {
+        "startLine": 77,
+        "startChar": 47,
+        "endLine": 77,
+        "endChar": 89
+      },
+      "revId": "336ab32c653c7f1a9ceed2ea612462e38378fe57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edcc5755_4c999f0a",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-12-01T09:47:23Z",
+      "side": 1,
+      "message": "Well, my comment from the previous patch set also holds true for modifying the PATH environment variable, umake already does that a few lines below the line I linked to previously, see:\n\nhttps://github.com/ubuntu/ubuntu-make/blob/master/umake/frameworks/android.py#L135-L136",
+      "revId": "336ab32c653c7f1a9ceed2ea612462e38378fe57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
