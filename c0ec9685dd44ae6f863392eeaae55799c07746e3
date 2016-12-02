@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "edcc5755_0c24f7c3",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-12-02T08:14:15Z",
+      "side": 1,
+      "message": "Ah, good point. Otherwise it would go to the root user\u0027s environment. I wonder whether that\u0027s the same reason why you did not see umake set up the environment properly by itself. Can\u0027t we just run umake as the \"jenkins\" user from here?",
+      "revId": "c0ec9685dd44ae6f863392eeaae55799c07746e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
