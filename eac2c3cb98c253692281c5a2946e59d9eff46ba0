@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d04bb4e_11026c26",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-12-02T07:10:12Z",
+      "side": 1,
+      "message": "any reason for extra space at begging of line?",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d04bb4e_71f7781c",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-12-02T07:10:12Z",
+      "side": 1,
+      "message": "I also see these scripts included in gerrit-buck-template.yaml  \n\nShould we remove them in the buck jjb definition?",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d04bb4e_51fcf4fc",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-12-02T07:10:12Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be referencing gerrit/bazel-bin/.. ?",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d04bb4e_b1f0c021",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-12-02T07:10:12Z",
+      "side": 1,
+      "message": "bazel instead of buck here as well?   gerrit/bazel-genfiles/..",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6d05c749_90565447",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-12-02T07:10:12Z",
+      "side": 1,
+      "message": "maybe this can be reduced if we remove bazel set of builds from this file?",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6d05c749_b059d879",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-12-02T07:10:12Z",
+      "side": 1,
+      "message": "shouldn\u0027t these be removed since this is already in the gerrit-bazel-template.yaml?",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d04bb4e_91edbc47",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1012623
+      },
+      "writtenOn": "2016-12-02T07:10:12Z",
+      "side": 1,
+      "message": "It is slightly confusing to create bazel jobs for all these non-master branches but not actually build them.  I guess it wouldn\u0027t be confusing if bazel was just removed from here.",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
