@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2dc74f2e_eeb71f1f",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-02T19:32:20Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "8d04bb4e_11026c26",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8d04bb4e_71f7781c",
         "filename": "jenkins/gerrit-bazel-template.yaml",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2016-12-02T07:10:12Z",
       "side": 1,
       "message": "I also see these scripts included in gerrit-buck-template.yaml  \n\nShould we remove them in the buck jjb definition?",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edcc5755_4cf51fd4",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-02T19:32:20Z",
+      "side": 1,
+      "message": "I forgot to delete this file, we need to do this in the buck file per Luca comment.",
+      "parentUuid": "8d04bb4e_71f7781c",
       "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "edcc5755_6cfa5bc5",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-02T19:32:20Z",
+      "side": 1,
+      "message": "Yes, fixed in the buck file.",
+      "parentUuid": "8d04bb4e_51fcf4fc",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8d04bb4e_b1f0c021",
         "filename": "jenkins/gerrit-bazel-template.yaml",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2016-12-02T07:10:12Z",
       "side": 1,
       "message": "bazel instead of buck here as well?   gerrit/bazel-genfiles/..",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dc74f2e_2ea687f5",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-02T19:32:20Z",
+      "side": 1,
+      "message": "Done in the buck file.",
+      "parentUuid": "8d04bb4e_b1f0c021",
       "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "2dc74f2e_ceba6308",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-02T19:32:20Z",
+      "side": 1,
+      "message": "We need to do this in this file for now per Luca comment.",
+      "parentUuid": "6d05c749_90565447",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6d05c749_b059d879",
         "filename": "jenkins/gerrit-buck-template.yaml",
         "patchSetId": 5
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "edcc5755_0cef1702",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-02T19:32:20Z",
+      "side": 1,
+      "message": "Nope i forgot to delete that file.",
+      "parentUuid": "6d05c749_b059d879",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8d04bb4e_91edbc47",
         "filename": "jenkins/gerrit-buck-template.yaml",
         "patchSetId": 5
@@ -115,6 +223,24 @@
       "writtenOn": "2016-12-02T07:10:12Z",
       "side": 1,
       "message": "It is slightly confusing to create bazel jobs for all these non-master branches but not actually build them.  I guess it wouldn\u0027t be confusing if bazel was just removed from here.",
+      "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edcc5755_2cf453d5",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-02T19:32:20Z",
+      "side": 1,
+      "message": "Bazel should not run on those branches as it detects if it can run bazel or buck.",
+      "parentUuid": "8d04bb4e_91edbc47",
       "revId": "eac2c3cb98c253692281c5a2946e59d9eff46ba0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
