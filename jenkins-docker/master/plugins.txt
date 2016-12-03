@@ -5,7 +5,7 @@ build-flow-plugin:0.19
 build-timeout:1.16
 cloudbees-folder:5.11
 credentials:2.0.6
-docker-plugin:0.16.0
+docker-plugin:0.16.2
 durable-task:1.10
 embeddable-build-status:1.9
 envinject:1.92.1
