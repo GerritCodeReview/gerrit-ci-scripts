@@ -9,9 +9,10 @@ RUN apt-get update && apt-get install -y bazel \
 
 # Bazel cache warm-up with Gerrit master build
 USER jenkins
-RUN cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit
-RUN cd /tmp/gerrit && ( bazel build release || true )
-RUN cd /tmp/gerrit && ( ./tools/download_all.py || true )
-RUN rm -Rf /tmp/gerrit
+RUN bash -c '. /usr/bin/set-java.sh 8 && \
+    cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit && \
+    cd /tmp/gerrit && ( bazel build release || true ) && \
+    cd /tmp/gerrit && ( ./tools/download_all.py || true ) && \
+    rm -Rf /tmp/gerrit'
 
 USER root
