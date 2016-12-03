@@ -69,7 +69,7 @@ RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 581
 RUN echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update
 RUN apt-cache policy docker-engine
-RUN apt-get install -y docker-engine
+RUN apt-get install -y docker-engine=1.11.2-0~jessie
 
 COPY id_rsa* $JENKINS_REF/.ssh/
 RUN chown jenkins:jenkins $JENKINS_REF/.ssh/id_rsa*
