@@ -22,6 +22,30 @@
       "revId": "aae61ab39f5933472640b2af058d3fa40ac70251",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dc74f2e_4ef513d4",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-03T01:25:34Z",
+      "side": 1,
+      "message": "Oh, thanks done.",
+      "parentUuid": "2dc74f2e_ae06f7fa",
+      "range": {
+        "startLine": 56,
+        "startChar": 11,
+        "endLine": 56,
+        "endChar": 17
+      },
+      "revId": "aae61ab39f5933472640b2af058d3fa40ac70251",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
