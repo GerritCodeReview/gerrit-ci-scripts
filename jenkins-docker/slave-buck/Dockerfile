@@ -37,11 +37,12 @@ COPY buckjavaargs /home/jenkins/.buckjavaargs
 
 # Buck cache warm-up with Gerrit master build
 USER jenkins
-RUN cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit
-RUN cd /tmp/gerrit && bash -c '. /usr/bin/set-buck.sh 8 && ( buck build gerrit api plugins:core || true )'
-RUN cd /tmp/gerrit && bash -c '. /usr/bin/set-buck.sh 8 && ( buck test --dry-run --no-results-cache --exclude flaky || true )'
-RUN rm -Rf /tmp/gerrit
-RUN rm -Rf /home/jenkins/.gerritcodereview/buck-cache/{cache,locally-built-artifacts}
+RUN bash -c '. /usr/bin/set-java.sh 8 && \
+    cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit && cd /tmp/gerrit && \
+    which buck && ./tools/download_all.py  && \
+    buck build gerrit api plugins:core || true  && \
+    buck test --dry-run --no-results-cache --exclude flaky || true  && \
+    rm -Rf /tmp/gerrit /home/jenkins/.gerritcodereview/buck-cache/{cache,locally-built-artifacts}'
 
 # Enable Buck rebuild
 ENV BUCK_CLEAN_REPO_IF_DIRTY y
