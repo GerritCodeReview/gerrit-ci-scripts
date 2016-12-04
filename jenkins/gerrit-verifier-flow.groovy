@@ -76,12 +76,7 @@ def acceptedChanges = changesJson.findAll {
       def myVerifications = verified.findAll {
         verification -> verification._account_id == Globals.myAccountId && verification.value != 0
       }
-      if(!myVerifications.empty) {
-        println "I have already verified " + sha1 + " commit: SKIPPING"
-        false
-      } else {
-        true
-      }
+      true
     }
   }
 }
