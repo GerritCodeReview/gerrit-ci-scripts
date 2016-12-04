@@ -1,6 +1,7 @@
 - job-template:
     name: 'plugin-{name}-{branch}'
     description: "Plugin {name} {branch} branch build with BUCK\n"
+    concurrent: true
     defaults: buck-plugin
     wrappers:
       - timeout:
@@ -32,8 +33,30 @@
          skip-tag: true
 
     triggers:
-      - pollscm:
-          cron: 'H/50 * * * *'
+      - gerrit:
+          trigger-on:
+            - change-merged-event
+          projects:
+            - project-compare-type: 'PLAIN'
+              project-pattern: 'plugins/{name}'
+              branches:
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'master'
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'stable-2.13'
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'stable-2.12'
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'stable-2.11'
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'stable-2.10'
+          skip-vote:
+              successful: true
+              failed: true
+              unstable: true
+              notbuilt: true
+          silent: true
+          silent-start: true
 
     builders:
       - shell:
