@@ -1,6 +1,7 @@
 - job-template:
     name: '{name}-{branch}'
     description: "{name} {branch} branch build with BUCK\n"
+    concurrent: true
     wrappers:
       - timeout:
           timeout: 90
@@ -38,9 +39,31 @@
          skip-tag: true
          basedir: gerrit
     triggers:
-      - pollscm:
-          cron: 'H/10 * * * *'
-
+      - gerrit:
+          trigger-on:
+            - change-merged-event
+          projects:
+            - project-compare-type: 'PLAIN'
+              project-pattern: 'gerrit'
+              branches:
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'master'
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'stable-2.13'
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'stable-2.12'
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'stable-2.11'
+                  - branch-compare-type: 'PLAIN'
+                    branch-pattern: 'stable-2.10'
+          skip-vote:
+              successful: true
+              failed: true
+              unstable: true
+              notbuilt: true
+          trigger-for-unreviewed-patches: true
+          silent: true
+          silent-start: true
     builders:
       - shell:
          !include-raw-escape: gerrit-buck-build.sh
