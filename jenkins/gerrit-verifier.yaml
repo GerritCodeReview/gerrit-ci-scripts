@@ -109,8 +109,23 @@
 - job:
     name: 'Gerrit-verifier-flow'
     project-type: flow
-    triggers:
-      - timed: 'H/10 * * * *'
+    concurrent: true
+    trigger-on:
+      - patchset-uploaded-event
+      - patchset-created-event
+      - draft-published-event
+      - ref-updated-event
+      - comment-added-contains-event:
+          comment-contains-value: 'recheck'
+      projects:
+        - project-compare-type: 'PLAIN'
+          project-pattern: 'gerrit'
+      skip-vote:
+          successful: true
+          failed: true
+          unstable: true
+          notbuilt: true
+      trigger-for-unreviewed-patches: true
     logrotate:
       numToKeep: 20
     dsl:
