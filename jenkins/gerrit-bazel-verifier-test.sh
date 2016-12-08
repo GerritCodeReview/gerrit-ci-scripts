@@ -21,7 +21,7 @@ then
                      --test_summary detailed --flaky_test_attempts 3 \
                      --test_verbose_timeout_warnings --build_tests_only \
                      --nocache_test_results \
-                     --test_tag_filters=-elastic,-cookbook-plugin,-flaky"
+                     --test_tag_filters=-elastic,-flaky"
 
     bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
   fi
