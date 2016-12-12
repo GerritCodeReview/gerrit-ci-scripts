@@ -25,8 +25,9 @@ then
     exit 0
   fi
 
-  echo 'PolyGerrit UX tests'
+  echo 'PolyGerrit UX tests (on Java8)'
   echo '----------------------------------------------'
+  . set-java.sh 8
   buck test --include web
 fi
 
