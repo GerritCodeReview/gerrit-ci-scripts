@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a04f34e_b1528080",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-13T22:38:56Z",
+      "side": 1,
+      "message": "I don\u0027t see this shell script include anywhere :-O\nDid you forget to include it in the ITS plugin YAML template?",
+      "revId": "ffb7b93bcdcc292d7dc090f1e6b0b983ef80dd74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
