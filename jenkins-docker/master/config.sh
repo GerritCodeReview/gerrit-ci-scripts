@@ -7,6 +7,10 @@ else
   CONFIG=$JENKINS_REF/config.xml
 fi
 
+echo "Make Docker socket accessible by Jenkins"
+groupadd -g 993 dockergroup
+usermod -g 993 jenkins
+
 xsltproc \
   --stringparam use-security $USE_SECURITY \
   --stringparam oauth-client-id $OAUTH_ID \
@@ -18,5 +22,6 @@ mv /tmp/config.xml.new $CONFIG
 sed -i -e "s/user=.*/user=$JENKINS_API_USER/" /etc/jenkins_jobs/jenkins_jobs.ini
 sed -i -e "s/password=.*/password=$JENKINS_API_PASSWORD/" /etc/jenkins_jobs/jenkins_jobs.ini
 
-cp -R $JENKINS_REF/.ssh ~/.
-chmod 600 ~/.ssh/id_rsa
+cp -R $JENKINS_REF/.ssh ~jenkins/.
+chown -R jenkins:dockergroup ~jenkins
+chmod 600 ~jenkins/.ssh/id_rsa
