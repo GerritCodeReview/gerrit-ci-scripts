@@ -50,7 +50,6 @@ RUN mkdir $JENKINS_REF/.ssh
 RUN chown -R jenkins:jenkins $JENKINS_REF/.ssh
 RUN chmod -R 700 $JENKINS_REF/.ssh
 
-COPY config.sh /usr/local/bin/
 COPY plugins.txt $JENKINS_REF
 RUN plugins.sh $JENKINS_REF/plugins.txt
 COPY number-executors.groovy $JENKINS_REF/init.groovy.d/
@@ -75,10 +74,25 @@ COPY id_rsa* $JENKINS_REF/.ssh/
 RUN chown jenkins:jenkins $JENKINS_REF/.ssh/id_rsa*
 RUN chmod 600 $JENKINS_REF/.ssh/id_rsa
  
+COPY config.sh /usr/local/bin/
+
+# Install gosu
+ENV GOSU_VERSION 1.9
+RUN set -x \
+    && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
+    && wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch" \
+    && wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc" \
+    && export GNUPGHOME="$(mktemp -d)" \
+    && gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
+    && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu \
+    && rm -r "$GNUPGHOME" /usr/local/bin/gosu.asc \
+    && chmod +x /usr/local/bin/gosu \
+    && gosu nobody true
+
 # Set default JDK to 8
+RUN apt-get install -y openjdk-8-jdk
 RUN update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
-USER jenkins
-
+USER root
 
 

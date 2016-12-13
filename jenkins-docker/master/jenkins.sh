@@ -2,4 +2,6 @@
 
 /usr/local/bin/config.sh
 rm -Rf /var/jenkins_home/nodes
-/usr/local/bin/run-jenkins.sh $*
+
+chown -R jenkins:dockergroup /var/jenkins_home
+gosu jenkins /usr/local/bin/run-jenkins.sh $*
