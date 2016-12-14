@@ -16,6 +16,24 @@
       "revId": "ffb7b93bcdcc292d7dc090f1e6b0b983ef80dd74",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a057f49_b0527880",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-14T00:49:41Z",
+      "side": 1,
+      "message": "Oh, sorry. Added it now. But i doint see gerrit-buck-build-its-plugin.sh added anywhere in that yaml file either but i also added that too.",
+      "parentUuid": "9a04f34e_b1528080",
+      "revId": "ffb7b93bcdcc292d7dc090f1e6b0b983ef80dd74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
