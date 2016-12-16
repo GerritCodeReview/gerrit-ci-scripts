@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "fa132f0f_94638457",
+        "filename": "jenkins/gerrit-buck-plugin-template.yaml",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-16T09:07:26Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "fa132f0f_54cd6c48",
+      "revId": "d6ddb5fbe43c3cf5c68ff24fcb44faca7f5219d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1af0039f_ed33854e",
         "filename": "jenkins/gerrit-buck-template.yaml",
         "patchSetId": 19
@@ -155,6 +173,24 @@
       "side": 1,
       "message": "gerrit-buck-bazel-template.yaml?",
       "parentUuid": "9a04f34e_91b13c93",
+      "revId": "d6ddb5fbe43c3cf5c68ff24fcb44faca7f5219d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa132f0f_f468f834",
+        "filename": "jenkins/gerrit-buck-template.yaml",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-16T09:07:26Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "fa132f0f_b40cc0b5",
       "revId": "d6ddb5fbe43c3cf5c68ff24fcb44faca7f5219d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
