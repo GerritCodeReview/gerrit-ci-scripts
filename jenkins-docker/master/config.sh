@@ -15,7 +15,6 @@ xsltproc \
   --stringparam use-security $USE_SECURITY \
   --stringparam oauth-client-id $OAUTH_ID \
   --stringparam oauth-client-secret $OAUTH_SECRET \
-  --stringparam docker-url $DOCKER_HOST \
   $JENKINS_REF/edit-config.xslt $CONFIG > /tmp/config.xml.new
 mv /tmp/config.xml.new $CONFIG
 
