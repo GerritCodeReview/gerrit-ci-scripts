@@ -22,6 +22,54 @@
       "revId": "46ed501fe430e125b02cd20a086bffee3dafc6a3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_350b904b",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-template.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-17T23:55:56Z",
+      "side": 1,
+      "message": "Hi, yep, how do i do that please?",
+      "parentUuid": "1a1ba32a_951b849a",
+      "range": {
+        "startLine": 42,
+        "startChar": 30,
+        "endLine": 42,
+        "endChar": 61
+      },
+      "revId": "46ed501fe430e125b02cd20a086bffee3dafc6a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_d525fcd1",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-template.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-17T23:55:56Z",
+      "side": 1,
+      "message": "Yep, how would i do that please?",
+      "parentUuid": "1a1ba32a_951b849a",
+      "range": {
+        "startLine": 42,
+        "startChar": 30,
+        "endLine": 42,
+        "endChar": 61
+      },
+      "revId": "46ed501fe430e125b02cd20a086bffee3dafc6a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
