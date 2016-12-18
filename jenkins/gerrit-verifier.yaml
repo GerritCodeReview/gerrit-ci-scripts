@@ -24,8 +24,8 @@
           git submodule update || ( fetch_submodules && git submodule update )
 
 - job:
-    name: Gerrit-verifier
-    description: "Gerrit build of open change with BUCK\n"
+    name: Gerrit-verifier-buck
+    description: "Gerrit build of open change with Buck\n"
     concurrent: true
     parameters:
       - string:
@@ -69,6 +69,72 @@
       - fetch-all-submodules
       - shell: !include-raw-escape gerrit-buck-build.sh
       - shell: !include-raw-escape gerrit-buck-verifier-test.sh
+
+    wrappers:
+      - xvfb:
+          installation-name: Xvfb
+          auto-display-name: true
+          parallel-build: false
+          timeout: 10
+          screen: 1024x768x16
+          display-name-offset: 100
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
+      - timeout:
+          timeout: 90
+          type: absolute
+          fail: false
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    publishers:
+      - groovy-postbuild:
+          script: "manager.logContains('timed out') ? manager.buildAborted() : false"
+
+- job:
+    name: Gerrit-verifier-bazel
+    description: "Gerrit build of open change with Bazel\n"
+    concurrent: true
+    parameters:
+      - string:
+          name: CHANGE_URL
+          description: "Gerrit Change URL to build"
+      - string:
+          name: REFSPEC
+          description: "Git refspec to use for fetching changes"
+      - string:
+          name: BRANCH
+          description: "Git branch or SHA1 to checkout"
+      - choice:
+          name: MODE
+          choices:
+            - default
+            - notedb
+            - polygerrit
+          description: "Type of verification to execute"
+
+    logrotate:
+      numToKeep: 256
+      artifactNumToKeep: 1
+
+    properties:
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         refspec: $REFSPEC
+         branches:
+           - $BRANCH
+         disable-submodules: true
+         skip-tag: true
+         basedir: gerrit
+
+    builders:
+      - fetch-all-submodules
       - shell: !include-raw-escape gerrit-bazel-build.sh
       - shell: !include-raw-escape gerrit-bazel-verifier-test.sh
 
@@ -94,7 +160,7 @@
           script: "manager.logContains('timed out') ? manager.buildAborted() : false"
 
 - job:
-    name: 'Gerrit-verifier-change'
+    name: 'Gerrit-verifier-change-bazel'
     project-type: flow
     concurrent: true
     parameters:
@@ -104,7 +170,20 @@
     logrotate:
       numToKeep: 256
     dsl:
-       !include-raw: gerrit-verifier-change.groovy
+       !include-raw: gerrit-verifier-change-buck.groovy
+
+- job:
+    name: 'Gerrit-verifier-change-bazel'
+    project-type: flow
+    concurrent: true
+    parameters:
+      - string:
+          name: CHANGE_ID
+          description: Gerrit Change-ID to build and verify
+    logrotate:
+      numToKeep: 256
+    dsl:
+       !include-raw: gerrit-verifier-change-bazel.groovy
 
 - job:
     name: 'Gerrit-verifier-flow'
