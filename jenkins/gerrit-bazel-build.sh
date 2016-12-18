@@ -7,10 +7,13 @@ then
 
   export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone"
 
-  bazel build $BAZEL_OPTS \
-        gerrit-plugin-api:plugin-api_deploy.jar \
-        gerrit-extension-api:extension-api_deploy.jar
+  bazel build $BAZEL_OPTS -v 3 api plugins:core release
 
-  bazel build $BAZEL_OPTS plugins:core
-  bazel build $BAZEL_OPTS release
+  if [ -f tools/maven/api.sh ]
+  then
+    # From Gerrit 2.13 onwards
+    tools/maven/api.sh install bazel
+  fi
+
+  mv $(find bazel-genfiles -name '*.war') bazel-genfiles/gerrit.war
 fi
