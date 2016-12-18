@@ -5,7 +5,6 @@
   <xsl:param name="use-security"/>
   <xsl:param name="oauth-client-id"/>
   <xsl:param name="oauth-client-secret"/>
-  <xsl:param name="docker-url"/>
 
   <xsl:template match="*" priority="-1">
     <xsl:element name="{name()}">
@@ -29,10 +28,6 @@
         <xsl:element name="clientId"><xsl:value-of select="$oauth-client-id"/></xsl:element>
         <xsl:element name="clientSecret"><xsl:value-of select="$oauth-client-secret"/></xsl:element>
      </xsl:element>
-  </xsl:template>
-
-  <xsl:template match="hudson/clouds/com.nirima.jenkins.plugins.docker.DockerCloud/serverUrl">
-    <xsl:element name="serverUrl"><xsl:value-of select="$docker-url"/></xsl:element>
   </xsl:template>
 
 </xsl:stylesheet>
