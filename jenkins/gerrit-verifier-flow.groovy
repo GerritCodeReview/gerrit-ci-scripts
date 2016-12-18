@@ -93,6 +93,7 @@ acceptedChanges.each { change ->
   println(Globals.gerrit + change._number +
           " [" + change.current_revision + "] " + change.subject) }
 
-def builds = acceptedChanges.collect { change -> { -> build("Gerrit-verifier-change", CHANGE_ID: change._number) } }
-parallel(builds)
-
+def builds-buck = acceptedChanges.collect { change -> { -> build("Gerrit-verifier-change-buck", CHANGE_ID: change._number) } }
+def builds-bazel = acceptedChanges.collect { change -> { -> build("Gerrit-verifier-change-bazel", CHANGE_ID: change._number) } }
+parallel(builds-buck)
+parallel(builds-bazel)
