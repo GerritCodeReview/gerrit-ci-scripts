@@ -67,10 +67,14 @@
 
     builders:
       - fetch-all-submodules
-      - shell: !include-raw-escape gerrit-buck-build.sh
-      - shell: !include-raw-escape gerrit-buck-verifier-test.sh
-      - shell: !include-raw-escape gerrit-bazel-build.sh
-      - shell: !include-raw-escape gerrit-bazel-verifier-test.sh
+      - shell:
+         !include-raw-escape: gerrit-buck-build.sh
+      - shell:
+         !include-raw-escape: gerrit-buck-verifier-test.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-build.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-verifier-test.sh
 
     wrappers:
       - xvfb:
