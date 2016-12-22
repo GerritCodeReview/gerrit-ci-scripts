@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1ba32a_b86af5cb",
+        "filename": "jenkins/gerrit-buck-plugin-verify-status.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-22T23:06:08Z",
+      "side": 1,
+      "message": "Dosen\u0027t this need to be under \u0027plugin-{name}-{branch}\u0027 ?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "44caf86b7e3d26ce3dcd47f917df5aef2494615b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
