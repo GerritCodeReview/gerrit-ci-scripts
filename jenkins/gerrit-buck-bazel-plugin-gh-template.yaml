@@ -43,7 +43,8 @@
          artifacts: 'buck-out/gen/plugins/{name}/{name}.jar*'
 
 - job-template:
-    name: 'plugin-{name}-gh-{branch}-bazel'
+    name: 'plugin-{name}-bazel-gh-{branch}'
+    node: bazel
     defaults: buck-plugin
     description: "Plugin {name} {branch} branch build with Bazel owned by {organization} and hosted on GitHub\n"
     wrappers:

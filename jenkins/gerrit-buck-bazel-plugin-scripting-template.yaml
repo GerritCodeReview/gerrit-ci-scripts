@@ -45,6 +45,7 @@
 - job-template:
     name: 'plugin-scripting-{name}-{branch}-bazel'
     defaults: buck-plugin
+    node: bazel
     description: "Plugin scripting/{name} {branch} branch build with Bazel\n"
     wrappers:
       - timeout:
