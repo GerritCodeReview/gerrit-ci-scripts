@@ -26,12 +26,12 @@
     dsl: |
       retries = 3
       parallel (
-        {{ retry ( retries ) {{ build( "Gerrit-{branch}-buck" ) }} }},
-        {{ retry ( retries ) {{ build( "Gerrit-{branch}-bazel" ) }} }}
+        {{ retry ( retries ) {{ build( "Gerrit-buck-{branch}" ) }} }},
+        {{ retry ( retries ) {{ build( "Gerrit-bazel-{branch}" ) }} }}
       )
 
 - job-template:
-    name: 'Gerrit-{branch}-buck'
+    name: 'Gerrit-buck-{branch}'
     description: "{name} {branch} branch build with Buck\n"
     wrappers:
       - timeout:
@@ -84,7 +84,7 @@
          excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
 
 - job-template:
-    name: 'Gerrit-{branch}-bazel'
+    name: 'Gerrit-bazel-{branch}'
     description: "{name} {branch} branch build with Bazel\n"
     node: bazel
     wrappers:
@@ -147,14 +147,14 @@
       - stable-2.11
       - stable-2.10
     jobs:
-      - 'Gerrit-{branch}-buck'
+      - 'Gerrit-buck-{branch}'
 
 - project:
     name: Gerrit-bazel
     branch:
       - master
     jobs:
-      - 'Gerrit-{branch}-bazel'
+      - 'Gerrit-bazel-{branch}'
 
 - project:
     name: Gerrit-build-flow
