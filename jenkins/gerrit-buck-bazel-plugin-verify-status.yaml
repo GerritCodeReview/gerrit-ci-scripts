@@ -6,6 +6,9 @@
     jobs:
       - 'plugin-{name}-{branch}'
 
-      - 'plugin-{name}-{branch}-bazel':
-           branch:
-             - master
+- project:
+    name: verify-status-bazel
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-bazel-{branch}'
