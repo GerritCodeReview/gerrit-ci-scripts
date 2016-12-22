@@ -44,7 +44,7 @@
            buck-out/gen/plugins/{name}/*{name}*.jar*,
 
 - job-template:
-    name: 'plugin-{name}-{branch}-bazel'
+    name: 'plugin-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} branch build with Bazel\n"
     node: bazel
     defaults: buck-plugin
