@@ -50,7 +50,7 @@
          artifacts: 'buck-out/gen/plugins/{name}/*{name}*.jar*'
 
 - job-template:
-    name: 'pluginmanual-{name}-{branch}-bazel'
+    name: 'pluginmanual-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} manual branch build with Bazel\n"
     parameters:
       - string:
