@@ -43,7 +43,7 @@
          artifacts: 'buck-out/gen/plugins/{name}/{name}.jar*'
 
 - job-template:
-    name: 'plugin-scripting-{name}-{branch}-bazel'
+    name: 'plugin-scripting-{name}-bazel-{branch}'
     defaults: buck-plugin
     node: bazel
     description: "Plugin scripting/{name} {branch} branch build with Bazel\n"
