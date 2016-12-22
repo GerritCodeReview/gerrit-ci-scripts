@@ -37,7 +37,7 @@
 
     builders:
       - shell:
-         !include-raw-escape: gerrit-buck-build-plugin.sh
+         !include-raw: gerrit-buck-build-plugin.sh
     publishers:
       - archive:
          artifacts: >
@@ -82,7 +82,7 @@
 
     builders:
       - shell:
-         !include-raw-escape: gerrit-bazel-build-plugin.sh
+         !include-raw: gerrit-bazel-build-plugin.sh
     publishers:
       - archive:
          artifacts: >

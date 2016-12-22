@@ -72,9 +72,9 @@
 
     builders:
       - shell:
-         !include-raw-escape: gerrit-buck-build.sh
+         !include-raw: gerrit-buck-build.sh
       - shell:
-         !include-raw-escape: gerrit-buck-test.sh
+         !include-raw: gerrit-buck-test.sh
     publishers:
       - archive:
          artifacts: >
@@ -125,9 +125,9 @@
 
     builders:
       - shell:
-         !include-raw-escape: gerrit-bazel-build.sh
+         !include-raw: gerrit-bazel-build.sh
       - shell:
-         !include-raw-escape: gerrit-bazel-test.sh
+         !include-raw: gerrit-bazel-test.sh
     publishers:
       - archive:
          artifacts: >
