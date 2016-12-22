@@ -6,3 +6,6 @@
     jobs:
       - 'plugin-{name}-{branch}'
 
+      - 'plugin-{name}-{branch}-bazel':
+           branch:
+             - master
