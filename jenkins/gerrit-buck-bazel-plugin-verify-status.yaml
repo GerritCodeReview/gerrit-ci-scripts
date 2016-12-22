@@ -1,0 +1,11 @@
+- project:
+    name: verify-status
+    jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - master
+            - stable-2.13
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
