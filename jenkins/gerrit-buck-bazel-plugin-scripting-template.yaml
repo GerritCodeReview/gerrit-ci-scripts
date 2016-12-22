@@ -46,6 +46,7 @@
     name: 'plugin-scripting-{name}-{branch}-bazel'
     defaults: buck-plugin
     description: "Plugin scripting/{name} {branch} branch build with Bazel\n"
+    node: bazel
     wrappers:
       - timeout:
           timeout: 30
