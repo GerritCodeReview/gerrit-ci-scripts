@@ -23,9 +23,8 @@
           echo "Updating all submodules ..."
           git submodule update || ( fetch_submodules && git submodule update )
 
-- job:
-    name: Gerrit-verifier
-    description: "Gerrit build of open change with BUCK\n"
+- defaults:
+    name: verifier-defaults
     concurrent: true
     parameters:
       - string:
@@ -41,14 +40,12 @@
           name: MODE
           choices:
             - default
-            - notedb
+            - notedbReadWrite
             - polygerrit
           description: "Type of verification to execute"
-
     logrotate:
       numToKeep: 256
       artifactNumToKeep: 1
-
     properties:
        - authorization:
            anonymous:
@@ -64,18 +61,6 @@
          disable-submodules: true
          skip-tag: true
          basedir: gerrit
-
-    builders:
-      - fetch-all-submodules
-      - shell:
-         !include-raw-escape: gerrit-buck-build.sh
-      - shell:
-         !include-raw-escape: gerrit-buck-verifier-test.sh
-      - shell:
-         !include-raw-escape: gerrit-bazel-build.sh
-      - shell:
-         !include-raw-escape: gerrit-bazel-verifier-test.sh
-
     wrappers:
       - xvfb:
           installation-name: Xvfb
@@ -96,6 +81,32 @@
     publishers:
       - groovy-postbuild:
           script: "manager.logContains('timed out') ? manager.buildAborted() : false"
+
+
+- job:
+    name: Gerrit-verifier-buck
+    description: "Gerrit build of open change with BUCK\n"
+    defaults: verifier-defaults
+
+    builders:
+      - fetch-all-submodules
+      - shell:
+         !include-raw-escape: gerrit-buck-build.sh
+      - shell:
+         !include-raw-escape: gerrit-buck-verifier-test.sh
+
+- job:
+    name: Gerrit-verifier-bazel
+    description: "Gerrit build of open change with BUCK\n"
+    defaults: verifier-defaults
+    node: bazel
+
+    builders:
+      - fetch-all-submodules
+      - shell:
+         !include-raw-escape: gerrit-bazel-build.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-verifier-test.sh
 
 - job:
     name: 'Gerrit-verifier-change'

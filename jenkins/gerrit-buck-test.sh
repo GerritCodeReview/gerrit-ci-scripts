@@ -18,7 +18,8 @@ then
 
   echo 'Test in Node DB mode'
   echo '----------------------------------------------'
-  GERRIT_ENABLE_NOTEDB=TRUE buck test --no-results-cache --exclude flaky
+  export GERRIT_NOTEDB=READ_WRITE
+  buck test --no-results-cache --exclude flaky
 
   if [ ! -d polygerrit-ui ]
   then
