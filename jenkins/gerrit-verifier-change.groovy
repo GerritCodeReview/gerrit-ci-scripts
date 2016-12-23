@@ -141,10 +141,16 @@ def buildChange(change) {
 
   def b
   ignore(FAILURE) {
-    retry ( Globals.numRetryBuilds ) {
-      b = build("Gerrit-verifier", REFSPEC: refspec, BRANCH: sha1,
-                CHANGE_URL: changeUrl, MODE: "default")
-    }
+    parallel (
+      retry ( Globals.numRetryBuilds ) {
+        b = build("Gerrit-verifier-buck", REFSPEC: refspec, BRANCH: sha1,
+                  CHANGE_URL: changeUrl, MODE: "default")
+      },
+      retry ( Globals.numRetryBuilds ) {
+        b = build("Gerrit-verifier-bazel", REFSPEC: refspec, BRANCH: sha1,
+                  CHANGE_URL: changeUrl, MODE: "default")
+      }
+    )
   }
   def result = waitForResult(b)
   gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,getVerified(result), "")
