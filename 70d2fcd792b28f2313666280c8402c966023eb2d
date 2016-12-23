@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa132f0f_57660e02",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 38
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-23T00:00:38Z",
+      "side": 1,
+      "message": "Where is this -v coming from? Are you applying the Buck syntax to Bazel?",
+      "range": {
+        "startLine": 11,
+        "startChar": 70,
+        "endLine": 11,
+        "endChar": 74
+      },
+      "revId": "70d2fcd792b28f2313666280c8402c966023eb2d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
