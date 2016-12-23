@@ -15,7 +15,8 @@ bazel test $BAZEL_OPTS //...
 
 echo 'Test in Note DB mode'
 echo '----------------------------------------------'
-GERRIT_ENABLE_NOTEDB=TRUE bazel test $BAZEL_OPTS //...
+export GERRIT_NOTEDB=READ_WRITE
+bazel test $BAZEL_OPTS //...
 
 echo 'Test PolyGerrit locally'
 echo '----------------------------------------------'
