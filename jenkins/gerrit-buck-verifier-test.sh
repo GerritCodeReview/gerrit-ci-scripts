@@ -11,17 +11,18 @@ then
   echo "Test with mode=$MODE"
   echo '----------------------------------------------'
 
-  if [ "$MODE" == "notedb" ]
-  then
-    export GERRIT_NOTEDB=READ_WRITE
-  fi
-
-  if [ "$MODE" == "default" ] || [ "$MODE" == "notedb" ]
+  if [[ "$MODE" == *"reviewdb"* ]]
   then
     buck test --no-results-cache --exclude flaky
   fi
 
-  if [ "$MODE" == "polygerrit" ]
+  if [[ "$MODE" == *"notedbReadWrite"* ]]
+  then
+    export GERRIT_NOTEDB=READ_WRITE
+    buck test --no-results-cache --exclude flaky
+  fi
+
+  if [[ "$MODE" == *"polygerrit"* ]]
   then
     if [ -z "$DISPLAY" ]
     then

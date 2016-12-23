@@ -7,24 +7,25 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
-if [ "$MODE" == "notedb" ]
+export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
+                 --test_output errors \
+                 --test_summary detailed --flaky_test_attempts 3 \
+                 --test_verbose_timeout_warnings --build_tests_only \
+                 --nocache_test_results \
+                 --test_tag_filters=-elastic,-flaky"
+
+if [[ "$MODE" == *"reviewdb"* ]]
 then
-  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=READ_WRITE"
+  bazel test $BAZEL_OPTS //...
 fi
 
-if [ "$MODE" == "default" ] || [ "$MODE" == "notedb" ]
+if [[ "$MODE" == *"notedbReadWrite"* ]]
 then
-  export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
-                   --test_output errors \
-                   --test_summary detailed --flaky_test_attempts 3 \
-                   --test_verbose_timeout_warnings --build_tests_only \
-                   --nocache_test_results \
-                   --test_tag_filters=-elastic,-flaky"
-
+  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=READ_WRITE"
   bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
-if [ "$MODE" == "polygerrit" ]
+if [[ "$MODE" == *"polygerrit"* ]]
 then
   if [ -z "$DISPLAY" ]
   then
