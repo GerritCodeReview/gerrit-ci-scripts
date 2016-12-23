@@ -88,30 +88,32 @@ def gerritComment(buildUrl,changeNum, sha1, msgPrefix) {
 }
 
 def waitForResult(build) {
-  def result = null
+  def res = null
   def startWait = System.currentTimeMillis()
-  while(result == null && (System.currentTimeMillis() - startWait) < Globals.waitForResultTimeout) {
-    result = build.getResult()
-    if(result == null) {
+  while(res == null && (System.currentTimeMillis() - startWait) < Globals.waitForResultTimeout) {
+    res = build.getResult()
+    if(res == null) {
       Thread.sleep(100) {
       }
     }
   }
-  return result == null ? Result.FAILURE : result
+  return res == null ? Result.FAILURE : res
 }
 
-def getVerified(result) {
-  if(result == null) {
-    return 0;
-  }
+def getVerified(acc, res) {
+  switch(acc) {
+        case 0: return 0
+        case 1:
+          if(res == null) {
+            return 0;
+          }
 
-  switch(result) {
-    case Result.SUCCESS:
-      return +1;
-    case Result.FAILURE:
-      return -1;
-    default:
-      return 0;
+          switch(res) {
+            case Result.SUCCESS: return +1;
+            case Result.FAILURE: return -1;
+            default: return 0;
+          }
+        case -1: return -1
   }
 }
 
@@ -127,6 +129,21 @@ Boolean polygerritTouched(changeNum, sha1) {
   } != null
 }
 
+def buildsForMode(refspec,sha1,changeUrl,mode) {
+    def builds = []
+    for (tool in ["buck","bazel"]) {
+      def buildName = "Gerrit-verifier-$tool"
+      builds += {
+                  retry ( Globals.numRetryBuilds ) {
+                    println "Building $buildName ($mode)"
+                    build(buildName, REFSPEC: refspec, BRANCH: sha1,
+                          CHANGE_URL: changeUrl, MODE: mode)
+                  }
+                }
+    }
+    return builds
+}
+
 def buildChange(change) {
   def sha1 = change.current_revision
   def changeNum = change._number
@@ -139,40 +156,24 @@ def buildChange(change) {
 
   println "Building Change " + changeUrl
 
-  def b
+  builds = buildsForMode(refspec,sha1,changeUrl,"default")
+
+  if(branch == "master") {
+    builds += buildsForMode(refspec,sha1,changeUrl,"notedb")
+  }
+
+  if(polygerritTouched(changeNum, sha1)) {
+    builds += buildsForMode(refspec,sha1,changeUrl,"polygerrit")
+  }
+
   ignore(FAILURE) {
-    retry ( Globals.numRetryBuilds ) {
-      b = build("Gerrit-verifier", REFSPEC: refspec, BRANCH: sha1,
-                CHANGE_URL: changeUrl, MODE: "default")
-    }
-  }
-  def result = waitForResult(b)
-  gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1,getVerified(result), "")
-
-  if (result == Result.SUCCESS && polygerritTouched(changeNum, sha1)) {
-    ignore(FAILURE) {
-      retry(Globals.numRetryBuilds) {
-        b = build("Gerrit-verifier", REFSPEC: refspec, BRANCH: sha1,
-            CHANGE_URL: changeUrl, MODE: "polygerrit")
-      }
-    }
-
-    result = waitForResult(b)
-    gerritReview(b.getBuildUrl() + "consoleText", changeNum, sha1,
-        getVerified(result), "PolyGerrit - ")
+    parallel (builds)
   }
 
-  if(result == Result.SUCCESS && branch=="master") {
-    ignore(FAILURE) {
-      retry ( Globals.numRetryBuilds ) {
-        b = build("Gerrit-verifier", REFSPEC: refspec, BRANCH: sha1,
-                  CHANGE_URL: changeUrl, MODE: "notedb")
-      }
-    }
+  results = builds.collect { waitForResult(it) }
+  res = results.inject(1) { acc, buildResult -> getVerified(acc, buildResult) }
 
-    result = waitForResult(b)
-    gerritReview(b.getBuildUrl() + "consoleText",changeNum,sha1, getVerified(result), "NoteDB - ")
-  }
+  gerritReview(build.getBuildUrl() + "consoleText", changeNum, sha1, res, "")
 }
 
 
