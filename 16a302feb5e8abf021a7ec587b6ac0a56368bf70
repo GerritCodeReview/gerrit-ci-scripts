@@ -22,6 +22,24 @@
       "revId": "16a302feb5e8abf021a7ec587b6ac0a56368bf70",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_18b5e914",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-verify-status.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-23T06:59:51Z",
+      "side": 1,
+      "message": "I believe so !",
+      "parentUuid": "fa132f0f_f718fa5e",
+      "revId": "16a302feb5e8abf021a7ec587b6ac0a56368bf70",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
