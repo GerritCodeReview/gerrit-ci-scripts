@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa132f0f_d7f4ded4",
+        "filename": "jenkins/gerrit-verifier-change-bazel.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-23T07:35:54Z",
+      "side": 1,
+      "message": "Do we really need to copy\u0026paste the change Groovy file? Is the shell script that is different not everything else around it",
+      "revId": "990f16af42e9a28c359c8e6dd8e5fbdbcd2c498b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa132f0f_f7ef5a01",
+        "filename": "jenkins/gerrit-verifier-flow.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-23T07:35:54Z",
+      "side": 1,
+      "message": "Nope, the flow should stay as-it is today.\nIt the single change verification that needs to change.",
+      "revId": "990f16af42e9a28c359c8e6dd8e5fbdbcd2c498b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
