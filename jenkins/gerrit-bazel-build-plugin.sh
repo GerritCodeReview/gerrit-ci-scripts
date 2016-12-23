@@ -8,9 +8,9 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 . set-java.sh 8
 
-bazel build --spawn_strategy=standalone --genrule_strategy=standalone -v 3 $TARGETS
+bazel build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
-for JAR in $(bazel targets --show_output $TARGETS | awk '{{print $2}}')
+for JAR in $(find bazel-genfiles/plugins/{name} -name {name}*.jar)
 do
     PLUGIN_VERSION=$(git describe  --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
