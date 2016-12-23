@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa132f0f_f718fa5e",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-verify-status.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-23T06:04:22Z",
+      "side": 1,
+      "message": "Bazel build was only implemented on master?",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "16a302feb5e8abf021a7ec587b6ac0a56368bf70",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
