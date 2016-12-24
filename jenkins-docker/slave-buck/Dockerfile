@@ -1,4 +1,4 @@
-FROM gerrit-ci-slave
+FROM gerritforge/gerrit-ci-slave
 
 # Buck build
 

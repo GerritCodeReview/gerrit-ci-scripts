@@ -1,5 +1,5 @@
 NO_CACHE=false
-IMAGE=gerrit-ci-slave
+IMAGE=gerritforge/gerrit-ci-slave
 
 build:  id_rsa.pub
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .

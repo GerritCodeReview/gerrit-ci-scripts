@@ -1,4 +1,4 @@
-FROM gerrit-ci-slave-buck
+FROM gerritforge/gerrit-ci-slave-buck
 
 USER jenkins
 
