@@ -1,0 +1,7 @@
+- project:
+    name: menuextender
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-{branch}'
+
