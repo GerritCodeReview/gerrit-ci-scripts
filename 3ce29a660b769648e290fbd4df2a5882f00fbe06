@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37f322ad_ee853ff4",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2016-12-24T12:46:02Z",
+      "side": 0,
+      "message": "This wont work either as i carn\u0027t find _deploy under these folders.",
+      "range": {
+        "startLine": 9,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 51
+      },
+      "revId": "3ce29a660b769648e290fbd4df2a5882f00fbe06",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
