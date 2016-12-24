@@ -1,12 +1,10 @@
 NO_CACHE=false
-IMAGE=gerrit-ci
+IMAGE=gerritforge/gerrit-ci
 USE_SECURITY=false
 OAUTH_ID=clientid
 OAUTH_SECRET=secret
 JENKINS_API_USER=user
 JENKINS_API_PASSWORD=pass
-DOCKER_PORT=$(shell lsof -i tcp | grep LISTEN | grep docker | cut -d ':' -f 2 \
-              | cut -d ' ' -f 1)
 
 # Targets
 
@@ -17,7 +15,6 @@ start: build
           -e OAUTH_SECRET=${OAUTH_SECRET} \
           -e JENKINS_API_USER=${JENKINS_API_USER} \
           -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
-          -e DOCKER_HOST="http://127.0.0.1:${DOCKER_PORT}" \
           --net=host ${IMAGE}
 
 id_rsa:

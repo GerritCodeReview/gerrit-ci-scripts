@@ -1,5 +1,5 @@
 NO_CACHE=false
-IMAGE=gerrit-ci-slave-buck
+IMAGE=gerritforge/gerrit-ci-slave-buck
 
 # Targets
 
