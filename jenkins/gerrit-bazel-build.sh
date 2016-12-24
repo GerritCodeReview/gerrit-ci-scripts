@@ -6,8 +6,19 @@ cd gerrit
 export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone"
 
 bazel build $BAZEL_OPTS \
-      gerrit-plugin-api:plugin-api_deploy.jar \
-      gerrit-extension-api:extension-api_deploy.jar
+      gerrit-acceptance-framework:acceptance-framework \
+      gerrit-acceptance-framework:acceptance-framework-src \
+      gerrit-acceptance-framework:acceptance-framework-javadoc \
+      gerrit-extension-api:extension-api \
+      gerrit-extension-api:extension-api-src \
+      gerrit-extension-api:extension-api-javadoc \
+      gerrit-plugin-api:plugin-api \
+      gerrit-plugin-api:plugin-api-src \
+      gerrit-plugin-api:plugin-api-javadoc \
+      gerrit-plugin-gwtui:gwtui-api \
+      gerrit-plugin-gwtui:gwtui-api-src \
+      gerrit-plugin-gwtui:gwtui-api-javadoc
+      plugins:core \
+      release
 
-bazel build $BAZEL_OPTS plugins:core
-bazel build $BAZEL_OPTS release
+mv $(find bazel-genfiles -name '*.war') bazel-genfiles/gerrit.war
