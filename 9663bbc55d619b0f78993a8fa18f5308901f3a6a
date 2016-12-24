@@ -22,6 +22,30 @@
       "revId": "9663bbc55d619b0f78993a8fa18f5308901f3a6a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_f8a74da0",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-24T08:45:14Z",
+      "side": 1,
+      "message": "https://gerrit-review.googlesource.com/93391",
+      "parentUuid": "37f322ad_0e6d2b73",
+      "range": {
+        "startLine": 9,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 45
+      },
+      "revId": "9663bbc55d619b0f78993a8fa18f5308901f3a6a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
