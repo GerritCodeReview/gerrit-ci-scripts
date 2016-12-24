@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37f322ad_0e6d2b73",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-24T08:42:45Z",
+      "side": 1,
+      "message": "This is very wrong thing to do for two reasons.\n\nFor one this is broken, as you copied rules from Buck driven build and expect they would just work in Bazel context. That raises immediately the following question: Why you do *not* test your changes? Especially if you are touching CI bits, it would be more then annoying, to screw up the CI. OOr are you expecting that we are going to test your changes? Where this expectation is coming from? We are all very busy people her, ...\n\nFor another, even if you would get the depenencies right, btw, they can be found in tools/maven/BUILD, it would be still wrong to expose that intern details of the build implementation in the CI. We don#t want to maintain that Gerrit build details on the CI side. Wenn new API artifacts are added or old discontinued, for example, because GRI UI is abandoned, we do not want to touch any bits on the CI side.\n\nSo the correct approach to do what you want is to add missing build rule in Bazel build: :api. Once it\u0027s merged, you can replace all this mess above with just bazel build :api.",
+      "range": {
+        "startLine": 9,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 45
+      },
+      "revId": "9663bbc55d619b0f78993a8fa18f5308901f3a6a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
