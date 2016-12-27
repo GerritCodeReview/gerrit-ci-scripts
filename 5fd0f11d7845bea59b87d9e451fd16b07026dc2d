@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1ba32a_5b859b97",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 22
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-27T22:08:23Z",
+      "side": 1,
+      "message": "Nit: trailing blank.",
+      "range": {
+        "startLine": 140,
+        "startChar": 47,
+        "endLine": 140,
+        "endChar": 48
+      },
+      "revId": "5fd0f11d7845bea59b87d9e451fd16b07026dc2d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17f0de9e_4d53b958",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 22
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-27T22:08:23Z",
+      "side": 1,
+      "message": "There is another notedb mode that we would like to add the CI job for: primary storage NoteDb: [1]. The difference between this ReadWrite NoteDb mode is:\n\n* NoteDb ReadWrite -\u003e Still writes in ReviewDb\n* NoteDb Primary -\u003e ReviewDb is untouched\n\nSo may be we should reflect that fact in the name of this mode and call it NoteDbReadWrite or similar.\n\n* [1] https://gerrit-review.googlesource.com/93318",
+      "range": {
+        "startLine": 172,
+        "startChar": 4,
+        "endLine": 172,
+        "endChar": 21
+      },
+      "revId": "5fd0f11d7845bea59b87d9e451fd16b07026dc2d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
