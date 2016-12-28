@@ -130,7 +130,7 @@ Boolean polygerritTouched(changeNum, sha1) {
   } != null
 }
 
-def buildsForMode(refspec,sha1,changeUrl,mode,tools) {
+def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch) {
     def builds = []
     for (tool in tools) {
       def buildName = "Gerrit-verifier-$tool"
@@ -139,7 +139,7 @@ def buildsForMode(refspec,sha1,changeUrl,mode,tools) {
                   retry ( Globals.numRetryBuilds ) {
                     Globals.buildsList.put(key, 
                       build(buildName, REFSPEC: refspec, BRANCH: sha1,
-                            CHANGE_URL: changeUrl, MODE: mode))
+                            CHANGE_URL: changeUrl, MODE: mode, TARGET_BRANCH: targetBranch))
                     println "Builds status:"
                     Globals.buildsList.each {
                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "console"})"
@@ -176,7 +176,7 @@ def buildChange(change) {
     }
   }
 
-  def builds = buildsForMode(refspec,sha1,changeUrl,mode,tools)
+  def builds = buildsForMode(refspec,sha1,changeUrl,mode,tools,branch)
 
   ignore(FAILURE) {
     parallel (builds)
