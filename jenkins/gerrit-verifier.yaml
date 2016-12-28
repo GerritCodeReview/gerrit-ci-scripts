@@ -1,4 +1,12 @@
 - builder:
+    name: merge-target-branch
+    builders:
+      - shell: |
+          #!/bin/bash -e
+          cd gerrit
+          git merge --no-commit --no-edit --no-ff $TARGET_BRANCH
+
+- builder:
     name: fetch-all-submodules
     builders:
       - shell: |
@@ -35,7 +43,10 @@
           description: "Git refspec to use for fetching changes"
       - string:
           name: BRANCH
-          description: "Git branch or SHA1 to checkout"
+          description: "Git SHA1 of the path-set to verify"
+      - string:
+          name: TARGET_BRANCH
+          description: "Git target branch of the change"
       - choice:
           name: MODE
           choices:
@@ -90,6 +101,7 @@
 
     builders:
       - fetch-all-submodules
+      - merge-target-branch
       - shell:
          !include-raw-escape: gerrit-buck-build.sh
       - shell:
@@ -103,6 +115,7 @@
 
     builders:
       - fetch-all-submodules
+      - merge-target-branch
       - shell:
          !include-raw-escape: gerrit-bazel-build.sh
       - shell:
