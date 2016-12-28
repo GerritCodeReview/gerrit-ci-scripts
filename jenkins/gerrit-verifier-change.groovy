@@ -118,16 +118,12 @@ def getVerified(acc, res) {
   }
 }
 
-Boolean polygerritTouched(changeNum, sha1) {
+def getChangedFiles(changeNum, sha1) {
   URL filesUrl = new URL(String.format("%schanges/%s/revisions/%s/files/",
       Globals.gerrit, changeNum, sha1))
   def files = filesUrl.getText().substring(5)
   def filesJson = new JsonSlurper().parseText(files)
-  filesJson.keySet().find {
-    if (it.startsWith("polygerrit-ui/")) {
-      return true;
-    }
-  } != null
+  filesJson.keySet().findAll { it != "/COMMIT_MSG" }
 }
 
 def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch) {
@@ -171,8 +167,15 @@ def buildChange(change) {
   if(branch == "master") {
     mode += " notedb"
 
-    if(polygerritTouched(changeNum, sha1)) {
-      mode += " polygerrit"
+    def changedFiles = getChangedFiles(changeNum, sha1)
+    def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") }
+
+    if(polygerritFiles.size() > 0) {
+      if(changedFiles.size() == polygerritFiles.size()) {
+        mode = "polygerrit"
+      } else {
+        mode += " polygerrit"
+      }
     }
   }
 
