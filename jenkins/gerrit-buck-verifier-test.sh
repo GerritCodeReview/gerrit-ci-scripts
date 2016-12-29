@@ -1,6 +1,17 @@
 #!/bin/bash -e
 set +x
 
+function runTests {
+  echo ''
+  echo 'Running slow tests serialized ...'
+  echo ''
+  buck test --no-results-cache --labels slow -j 1
+  echo ''
+  echo 'Running fast tests in parallel ...'
+  buck test --no-results-cache --exclude flaky slow -j 3
+  echo ''  
+}
+
 if [ -f "gerrit/BUCK" ]
 then
   cd gerrit
@@ -13,13 +24,13 @@ then
 
   if [[ "$MODE" == *"reviewdb"* ]]
   then
-    buck test --no-results-cache --exclude flaky
+    runTests
   fi
 
   if [[ "$MODE" == *"notedbReadWrite"* ]]
   then
     export GERRIT_NOTEDB=READ_WRITE
-    buck test --no-results-cache --exclude flaky
+    runTests
   fi
 
   if [[ "$MODE" == *"polygerrit"* ]]

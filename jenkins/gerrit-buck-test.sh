@@ -1,5 +1,16 @@
 #!/bin/bash -e
 
+function runTests {
+  echo ''
+  echo 'Running slow tests serialized ...'
+  echo ''
+  buck test --no-results-cache --labels slow -j 1
+  echo ''
+  echo 'Running fast tests in parallel ...'
+  buck test --no-results-cache --exclude flaky slow -j 3
+  echo ''  
+}
+
 if [ -f "gerrit/BUCK" ]
 then
   cd gerrit
@@ -9,7 +20,7 @@ then
 
   echo 'Test in default DB mode'
   echo '----------------------------------------------'
-  buck test --no-results-cache --exclude flaky
+  runTests
 
   if [ ! -d gerrit-server/src/main/java/com/google/gerrit/server/notedb ]
   then
@@ -19,7 +30,7 @@ then
   echo 'Test in Node DB mode'
   echo '----------------------------------------------'
   export GERRIT_NOTEDB=READ_WRITE
-  buck test --no-results-cache --exclude flaky
+  runTests
 
   if [ ! -d polygerrit-ui ]
   then
