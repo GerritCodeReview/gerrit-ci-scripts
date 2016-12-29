@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17f0de9e_edc38545",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T20:08:46Z",
+      "side": 1,
+      "message": "Is this really needed?",
+      "range": {
+        "startLine": 15,
+        "startChar": 47,
+        "endLine": 15,
+        "endChar": 48
+      },
+      "revId": "60021f4daa749016c226bc6de09b94cbd28c2300",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_dbd52bfc",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T20:08:46Z",
+      "side": 1,
+      "message": "Nit: trailing spaces.",
+      "range": {
+        "startLine": 19,
+        "startChar": 9,
+        "endLine": 19,
+        "endChar": 11
+      },
+      "revId": "60021f4daa749016c226bc6de09b94cbd28c2300",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17f0de9e_cdc0493c",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T20:08:46Z",
+      "side": 1,
+      "message": "same here.",
+      "range": {
+        "startLine": 21,
+        "startChar": 9,
+        "endLine": 21,
+        "endChar": 11
+      },
+      "revId": "60021f4daa749016c226bc6de09b94cbd28c2300",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_1bb843c5",
+        "filename": "jenkins/gerrit-buck-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T20:08:46Z",
+      "side": 1,
+      "message": "Is this a new option? I know only --include.",
+      "range": {
+        "startLine": 7,
+        "startChar": 31,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "60021f4daa749016c226bc6de09b94cbd28c2300",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17f0de9e_2daf4d7e",
+        "filename": "jenkins/gerrit-buck-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T20:08:46Z",
+      "side": 1,
+      "message": "Wouldn\u0027t this  option causes Buck to \"forget\" that the slow tests were already run seconds before?",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "60021f4daa749016c226bc6de09b94cbd28c2300",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_3bbb7fc5",
+        "filename": "jenkins/gerrit-buck-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T20:08:46Z",
+      "side": 1,
+      "message": "same here.",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "60021f4daa749016c226bc6de09b94cbd28c2300",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
