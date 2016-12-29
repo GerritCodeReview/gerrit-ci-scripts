@@ -45,6 +45,30 @@
       "revId": "5fd0f11d7845bea59b87d9e451fd16b07026dc2d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_3bd1bf5e",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 22
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-29T07:43:22Z",
+      "side": 1,
+      "message": "Yes, makes sense.\nWill post as a separate change the \"NoteDb primary\" mode",
+      "parentUuid": "17f0de9e_4d53b958",
+      "range": {
+        "startLine": 172,
+        "startChar": 4,
+        "endLine": 172,
+        "endChar": 21
+      },
+      "revId": "5fd0f11d7845bea59b87d9e451fd16b07026dc2d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
