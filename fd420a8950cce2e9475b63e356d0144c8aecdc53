@@ -22,6 +22,30 @@
       "revId": "fd420a8950cce2e9475b63e356d0144c8aecdc53",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_7be4d721",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-29T10:26:33Z",
+      "side": 1,
+      "message": "One thing is \"syntactically mergeable\" another thing is \"semantically mergeable\" and working :-)\n\nIf two changes, not in conflicts, are modifying two different part of the code-base and one is referencing the other (e.g. change A calls a method which has been modified in change B) ... then the Gerrit mergeability check would say \"that\u0027s good !\" but in reality after the merge the master build will be broken :-(",
+      "parentUuid": "17f0de9e_cdafa9c4",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 71
+      },
+      "revId": "fd420a8950cce2e9475b63e356d0144c8aecdc53",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
