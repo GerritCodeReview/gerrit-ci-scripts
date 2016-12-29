@@ -16,6 +16,24 @@
       "revId": "ba240a3ae1693bcab7ee51e84208ed07e8088de2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_dbf40bd5",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-12-29T10:20:31Z",
+      "side": 1,
+      "message": "Not sure I understand where should I put it :-(\nThis is already the global default Jenkins job settings",
+      "parentUuid": "17f0de9e_6d9f959d",
+      "revId": "ba240a3ae1693bcab7ee51e84208ed07e8088de2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
