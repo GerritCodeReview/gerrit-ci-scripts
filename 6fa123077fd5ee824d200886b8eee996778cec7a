@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1ba32a_7bb2172e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T10:09:54Z",
+      "side": 1,
+      "message": "PolyGerrit, here and below.",
+      "range": {
+        "startLine": 7,
+        "startChar": 10,
+        "endLine": 7,
+        "endChar": 20
+      },
+      "revId": "6fa123077fd5ee824d200886b8eee996778cec7a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17f0de9e_0daa51bb",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T10:09:54Z",
+      "side": 1,
+      "message": "Would it work correct on merge commits, where we must not perform any optimization and run *all* test modes.",
+      "range": {
+        "startLine": 174,
+        "startChar": 6,
+        "endLine": 174,
+        "endChar": 57
+      },
+      "revId": "6fa123077fd5ee824d200886b8eee996778cec7a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1ba32a_bb0e6f1b",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-29T10:09:54Z",
+      "side": 1,
+      "message": "To avoid confusion, can be issue a hint or even a warning, visible in the CI log, something like:\n\n  Only PolyGerrit UI changes detected, skipping other test modes...",
+      "range": {
+        "startLine": 177,
+        "startChar": 8,
+        "endLine": 177,
+        "endChar": 29
+      },
+      "revId": "6fa123077fd5ee824d200886b8eee996778cec7a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
