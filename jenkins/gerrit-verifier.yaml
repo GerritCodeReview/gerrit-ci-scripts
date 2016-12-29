@@ -86,10 +86,16 @@
           additional-options: -fbdir /tmp
           debug: true
           shutdown-with-build: false
-      - timeout:
-          timeout: 90
-          type: absolute
-          fail: false
+      - raw:
+          xml: |
+            <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.16">
+              <strategy class="hudson.plugins.build_timeout.impl.NoActivityTimeOutStrategy">
+                 <timeoutSecondsString>600</timeoutSecondsString>
+              </strategy>
+              <operationList>
+                 <hudson.plugins.build__timeout.operations.AbortOperation/>
+              </operationList>
+            </hudson.plugins.build__timeout.BuildTimeoutWrapper>
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     publishers:
