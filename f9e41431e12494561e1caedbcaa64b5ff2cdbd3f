@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1ba32a_1eb2f195",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2016-12-31T16:04:51Z",
+      "side": 1,
+      "message": "Would this effectively mean:\n\n  (verified \u003c 0 ? \"OWNER\":\"OWNER_REVIEWERS\")\n\nas there is no vote VRFY\u003d0\n?",
+      "range": {
+        "startLine": 75,
+        "startChar": 38,
+        "endLine": 75,
+        "endChar": 105
+      },
+      "revId": "f9e41431e12494561e1caedbcaa64b5ff2cdbd3f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
