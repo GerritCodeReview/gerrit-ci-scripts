@@ -33,6 +33,9 @@
           export DOCKER_HOST=tcp://127.0.0.1:2375
           cd jenkins-docker
           make NO_CACHE=true build
+          docker ps -qf status=exited | while read id; do docker rm -f $id; done
+          docker volume ls -qf dangling=true | while read id; do docker volume rm $id; done
+          docker rmi -f $(docker images --filter "dangling=true" -q)
 
 - job:
     name: gerrit-ci-scripts-manual
