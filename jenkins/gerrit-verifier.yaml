@@ -100,7 +100,7 @@
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     publishers:
       - groovy-postbuild:
-          script: "manager.logContains('timed out') ? manager.buildAborted() : false"
+          script: "(manager.logContains('timed out') || manager.logContains('TIMEOUT in ')) ? manager.buildAborted() : false"
 
 
 - job:
