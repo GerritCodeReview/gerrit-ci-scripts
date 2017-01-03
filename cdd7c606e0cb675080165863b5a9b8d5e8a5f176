@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17f0de9e_1098aac3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-03T09:08:47Z",
+      "side": 1,
+      "message": "So, can we now differentiate between fail and abort? In which case we should only retry, if the outcome was aort, but not fail. Say compile error, or test failures, no retry, but in cayse of timeouts, retry.",
+      "revId": "cdd7c606e0cb675080165863b5a9b8d5e8a5f176",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
