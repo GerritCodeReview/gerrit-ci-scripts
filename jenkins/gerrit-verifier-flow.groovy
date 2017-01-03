@@ -32,6 +32,7 @@ class Globals {
   static int numRetryBuilds = 3
   static int myAccountId = 1022687
   static int waitForResultTimeout = 10000
+  static int maxBuilds = 2
 }
 
 def lastBuild = build.getPreviousSuccessfulBuild()
@@ -87,9 +88,12 @@ def acceptedChanges = changesJson.findAll {
 }
 
 println "Gerrit has " + acceptedChanges.size() + " change(s) since " + since
+if(acceptedChanges.size() > Globals.maxBuilds) {
+  println "  but I'm building only ${Globals.maxBuilds} of them at the moment"
+}
 println "================================================================================"
 
-acceptedChanges.each { change ->
+acceptedChanges.take(Globals.maxBuilds).each { change ->
   println(Globals.gerrit + change._number +
           " [" + change.current_revision + "] " + change.subject) }
 
