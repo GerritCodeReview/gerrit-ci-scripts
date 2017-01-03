@@ -32,13 +32,14 @@ class Globals {
   static int numRetryBuilds = 3
   static int myAccountId = 1022687
   static int waitForResultTimeout = 10000
+  static int maxBuilds = 3
 }
 
 def lastBuild = build.getPreviousSuccessfulBuild()
 
 def lastBuildStartTimeMillis = lastBuild == null ?
   (System.currentTimeMillis() - 1800000) : lastBuild.getStartTimeInMillis()
-def sinceMillis = lastBuildStartTimeMillis - 30000
+def sinceMillis = lastBuildStartTimeMillis - (24 * 3600 * 1000)
 def since = Globals.tsFormat.format(new Date(sinceMillis))
 
 if(lastBuild != null) {
@@ -87,12 +88,16 @@ def acceptedChanges = changesJson.findAll {
 }
 
 println "Gerrit has " + acceptedChanges.size() + " change(s) since " + since
+if(acceptedChanges.size() > Globals.maxBuilds) {
+  println "  but I'm building only ${Globals.maxBuilds} of them at the moment"
+}
 println "================================================================================"
 
-acceptedChanges.each { change ->
+def changesTodo = acceptedChanges.reverse().take(Globals.maxBuilds)
+changesTodo.each { change ->
   println(Globals.gerrit + change._number +
           " [" + change.current_revision + "] " + change.subject) }
 
-def builds = acceptedChanges.collect { change -> { -> build("Gerrit-verifier-change", CHANGE_ID: change._number) } }
+def builds = changesTodo.collect { change -> { -> build("Gerrit-verifier-change", CHANGE_ID: change._number) } }
 parallel(builds)
 
