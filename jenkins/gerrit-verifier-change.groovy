@@ -103,6 +103,10 @@ def waitForResult(b) {
 }
 
 def getVerified(acc, res) {
+  if(res == null || res == Result.ABORTED) {
+    return 0
+  }
+
   switch(acc) {
         case 0: return 0
         case 1:
