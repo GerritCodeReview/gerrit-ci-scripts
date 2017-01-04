@@ -33,6 +33,7 @@ class Globals {
   static int myAccountId = 1022687
   static int waitForResultTimeout = 10000
   static int maxBuilds = 3
+  static String verifierJobName = "Gerrit-verifier-change"
 }
 
 def lastBuild = build.getPreviousSuccessfulBuild()
@@ -54,6 +55,18 @@ queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED
 def changes = queryUrl.getText().substring(5)
 def jsonSlurper = new JsonSlurper()
 def changesJson = jsonSlurper.parseText(changes)
+
+def getBuildRunsInProgress() {
+  def verifierChangeJob = Hudson.instance.getJob(Globals.verifierJobName)
+  def verifierRuns = verifierChangeJob.builds
+  def pendingBuilds = verifierRuns.findAll { it.building }
+  return pendingBuilds
+}
+
+def changeOfBuildRun(run) {
+  def params = run.allActions.findAll { it in hudson.model.ParametersAction }
+  return params.collect { it.getParameter("CHANGE_ID").value }
+}
 
 def acceptedChanges = changesJson.findAll {
   change ->
@@ -77,27 +90,35 @@ def acceptedChanges = changesJson.findAll {
       def myVerifications = verified.findAll {
         verification -> verification._account_id == Globals.myAccountId && verification.value != 0
       }
-      if(!myVerifications.empty) {
-        println "I have already verified " + sha1 + " commit: SKIPPING"
-        false
-      } else {
-        true
-      }
+      return myVerifications.empty
     }
   }
 }
 
-println "Gerrit has " + acceptedChanges.size() + " change(s) since " + since
-if(acceptedChanges.size() > Globals.maxBuilds) {
+def inProgress = getBuildRunsInProgress()
+if(!inProgress.empty) {
+  println "Changes currently in progress: "
+  inProgress.each {
+    b -> println("Change ${changeOfBuildRun(b)}: $b")
+  }
+}
+
+def inProgressChangesNums = inProgress.collect { changeOfBuildRun(it) }.flatten()
+def todoChangesNums = acceptedChanges.collect { "${it._number}" }
+def filteredChanges = todoChangesNums - inProgressChangesNums
+
+def buildsBandwith = Globals.maxBuilds - inProgressChangesNums.size
+
+println "Gerrit has " + filteredChanges.size() + " change(s) since " + since
+if(filteredChanges.size() > buildsBandwith) {
   println "  but I'm building only ${Globals.maxBuilds} of them at the moment"
 }
 println "================================================================================"
 
-def changesTodo = acceptedChanges.reverse().take(Globals.maxBuilds)
-changesTodo.each { change ->
-  println(Globals.gerrit + change._number +
-          " [" + change.current_revision + "] " + change.subject) }
+def changesTodo = filteredChanges.reverse().take(buildsBandwith)
 
-def builds = changesTodo.collect { change -> { -> build("Gerrit-verifier-change", CHANGE_ID: change._number) } }
+println "Building changes: $changesTodo ..."
+
+def builds = changesTodo.collect { change -> { -> build(Globals.verifierJobName, CHANGE_ID: change) } }
 parallel(builds)
 
