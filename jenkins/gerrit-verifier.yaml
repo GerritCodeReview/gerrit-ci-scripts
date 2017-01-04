@@ -145,9 +145,10 @@
 
 - job:
     name: 'Gerrit-verifier-flow'
+    concurrent: true
     project-type: flow
     triggers:
-      - timed: 'H/10 * * * *'
+      - timed: 'H/5 * * * *'
     logrotate:
       numToKeep: 20
     dsl:
