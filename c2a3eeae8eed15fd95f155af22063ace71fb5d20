@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b7847225_ea58a7a0",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-04T10:03:34Z",
+      "side": 1,
+      "message": "Alternative would be to remove the code for that entirely?",
+      "revId": "c2a3eeae8eed15fd95f155af22063ace71fb5d20",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
