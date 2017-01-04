@@ -29,7 +29,6 @@ class Globals {
   static long curlTimeout = 10000
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
   static int maxChanges = 100
-  static int numRetryBuilds = 3
   static int myAccountId = 1022687
   static int waitForResultTimeout = 10000
   static Map buildsList = [:]
@@ -136,7 +135,6 @@ def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch) {
       def buildName = "Gerrit-verifier-$tool"
       def key = "$tool/$mode"
       builds += {
-                  retry ( Globals.numRetryBuilds ) {
                     Globals.buildsList.put(key, 
                       build(buildName, REFSPEC: refspec, BRANCH: sha1,
                             CHANGE_URL: changeUrl, MODE: mode, TARGET_BRANCH: targetBranch))
@@ -144,7 +142,6 @@ def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch) {
                     Globals.buildsList.each {
                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "console"})"
                     }
-                  }
                 }
     }
     return builds
