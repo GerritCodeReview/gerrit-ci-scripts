@@ -29,7 +29,7 @@ class Globals {
   static long curlTimeout = 10000
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
   static int maxChanges = 100
-  static int numRetryBuilds = 3
+  static int numRetryBuilds = 1
   static int myAccountId = 1022687
   static int waitForResultTimeout = 10000
   static Map buildsList = [:]
