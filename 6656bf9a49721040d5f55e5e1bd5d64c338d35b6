@@ -52,6 +52,24 @@
       "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17d8de6b_adc3fd2a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-05T10:52:11Z",
+      "side": 1,
+      "message": "Actually I\u0027m already planning to push them to HDFS and keep them forever, that\u0027a why I stream them via logstash",
+      "parentUuid": "77b83af6_58a2fd81",
+      "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
