@@ -34,6 +34,24 @@
       "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77b83af6_58a2fd81",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-05T10:46:35Z",
+      "side": 1,
+      "message": "Actually i want to keep the build logs forever. And I realized just now, that Dave commented in this change on the same topic here: [1]. So let us face it: Jenkins sucks. So the question is whether we should find a workaround for this problem, like backup and retrieve logs, or we just replace the tool that totally sucks, like OpenStack guys did.\n\n* [1] https://gerrit-review.googlesource.com/93354",
+      "parentUuid": "77b83af6_988f750d",
+      "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
