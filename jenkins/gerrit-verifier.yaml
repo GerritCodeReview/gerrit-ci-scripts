@@ -57,15 +57,15 @@
             - notedbReadWrite
             - polygerrit
           description: "Type of verification to execute"
-    logrotate:
-      numToKeep: 256
-      artifactNumToKeep: 1
     properties:
        - authorization:
            anonymous:
              - job-discover
              - job-read
              - job-extended-read
+       - build-discarder:
+           days-to-keep: 7
+
     scm:
       - git:
          url: https://gerrit.googlesource.com/gerrit
