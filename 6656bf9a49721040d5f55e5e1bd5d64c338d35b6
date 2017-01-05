@@ -106,6 +106,24 @@
       "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17d8de6b_4dab7954",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-05T11:35:35Z",
+      "side": 1,
+      "message": "Yes, exactly :-)\n\nMy intention is to keep the correlation to the changes to start creating insights which could be very useful. One for all, the cause-effects on different aspects of the code:\n- speed\n- quality\n- flakiness\n- etc ...\n\nAll is going to be on-line and browsable ... all free from GerritForge\u0027s servers.",
+      "parentUuid": "17d8de6b_8dc84146",
+      "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
