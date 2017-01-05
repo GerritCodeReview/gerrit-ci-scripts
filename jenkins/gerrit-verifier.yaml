@@ -57,15 +57,15 @@
             - notedbReadWrite
             - polygerrit
           description: "Type of verification to execute"
-    logrotate:
-      numToKeep: 256
-      artifactNumToKeep: 1
     properties:
        - authorization:
            anonymous:
              - job-discover
              - job-read
              - job-extended-read
+       - build-discarder:
+           days-to-keep: 7
+
     scm:
       - git:
          url: https://gerrit.googlesource.com/gerrit
@@ -137,10 +137,11 @@
       - string:
           name: CHANGE_ID
           description: Gerrit Change-ID to build and verify
-    logrotate:
-      numToKeep: 256
     dsl:
        !include-raw: gerrit-verifier-change.groovy
+    properties:
+      - build-discarder:
+           days-to-keep: 7
 
 - job:
     name: 'Gerrit-verifier-flow'
@@ -148,7 +149,8 @@
     project-type: flow
     triggers:
       - timed: 'H/5 * * * *'
-    logrotate:
-      numToKeep: 20
     dsl:
        !include-raw: gerrit-verifier-flow.groovy
+    properties:
+      - build-discarder:
+           days-to-keep: 1
