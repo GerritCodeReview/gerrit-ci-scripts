@@ -25,6 +25,7 @@ String.metaClass.encodeURL = {
 
 class Globals {
   static String gerrit = "https://gerrit-review.googlesource.com/"
+  static String jenkins = "https://gerrit-ci.gerritforge.com/"
   static String gerritReviewer = "GerritForge CI <gerritforge@gmail.com>"
   static long curlTimeout = 10000
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
@@ -46,6 +47,9 @@ def since = Globals.tsFormat.format(new Date(sinceMillis))
 if(lastBuild != null) {
   println "Last successful build was " + lastBuild.toString()
 }
+
+println ""
+println "Querying Gerrit for last modified changes since ${since} ..."
 
 def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
 
@@ -76,7 +80,7 @@ def acceptedChanges = changesJson.findAll {
   change ->
   sha1 = change.current_revision
   if(sha1 == null) {
-      println "[WARNING] Skipping change " + change.change_id + " because it does not have any current revision or patch-set"
+      println "[WARNING] Skipping change ${changeUrl(change._number)} because it does not have any current revision or patch-set"
       return false
   }
 
@@ -86,7 +90,7 @@ def acceptedChanges = changesJson.findAll {
   }
 
   if(change.hashtags.contains("skipci")) {
-      println "Skipping SHA1 $sha1 because it is tagged with #skipci"
+      println "[WARNING] Skipping change ${changeUrl(change._number)} because it is tagged with #skipci"
       return false
   }
 
@@ -106,9 +110,10 @@ def acceptedChanges = changesJson.findAll {
 
 def inProgress = getBuildRunsInProgress()
 if(!inProgress.empty) {
+  println ""
   println "Changes currently in progress: "
   inProgress.each {
-    b -> println("Change ${changeOfBuildRun(b)}: $b")
+    b -> println("Change ${changeUrl(changeOfBuildRun(b)[0])}: ${Globals.jenkins}${b.url}")
   }
 }
 
@@ -118,13 +123,14 @@ def filteredChanges = todoChangesNums - inProgressChangesNums
 
 def buildsBandwith = Globals.maxBuilds - inProgressChangesNums.size
 
-println "Gerrit has " + filteredChanges.size() + " change(s) since " + since
+println ""
+println "Gerrit has " + filteredChanges.size() + " change(s) since " + since + " (filteredChanges)"
 if(buildsBandwith <= 0) {
-  println "  but there is NO bandwidth for further builds yet"
+  println "... but there is NO bandwidth for further builds yet"
 }
 else {
   if(filteredChanges.size() > buildsBandwith) {
-    println "  but I'm building only ${buildsBandwith} of them at the moment"
+    println "... but I've got bandwidth for only ${buildsBandwith} of them at the moment"
   }
 }
 println "================================================================================"
@@ -132,7 +138,9 @@ println "=======================================================================
 if(buildsBandwith > 0) {
   def changesTodo = filteredChanges.reverse().take(buildsBandwith)
 
-  println "Building changes: $changesTodo ..."
+  changesTodo.each {
+    println "Building change: ${changeUrl(it)} ..."
+  }
 
   def builds = changesTodo.collect { change -> { -> build(Globals.verifierJobName, CHANGE_ID: change) } }
   parallel(builds)
