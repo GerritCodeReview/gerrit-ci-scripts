@@ -16,6 +16,24 @@
       "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77b83af6_988f750d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-05T07:46:02Z",
+      "side": 1,
+      "message": "\"Sucks\" is a compliment ... basically Jenkins stops working if you keep builds for weeks or months. Up to 7 days should be enough to avoid slowness.",
+      "parentUuid": "77b83af6_d895ed1e",
+      "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
