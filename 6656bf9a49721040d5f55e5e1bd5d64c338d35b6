@@ -70,6 +70,24 @@
       "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17d8de6b_8dc84146",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-05T10:57:09Z",
+      "side": 1,
+      "message": "Cool! So that the link can be preserved find will work forever too?",
+      "parentUuid": "17d8de6b_adc3fd2a",
+      "revId": "6656bf9a49721040d5f55e5e1bd5d64c338d35b6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
