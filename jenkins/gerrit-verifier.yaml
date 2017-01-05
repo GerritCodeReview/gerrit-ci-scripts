@@ -78,11 +78,10 @@
     wrappers:
       - xvfb:
           installation-name: Xvfb
-          auto-display-name: true
+          display-name: 1
           parallel-build: false
-          timeout: 10
+          timeout: 30
           screen: 1024x768x16
-          display-name-offset: 100
           additional-options: -fbdir /tmp
           debug: true
           shutdown-with-build: false
