@@ -68,11 +68,20 @@ def changeOfBuildRun(run) {
   return params.collect { it.getParameter("CHANGE_ID").value }
 }
 
+def changeUrl(change) {
+  "${Globals.gerrit}${change}"
+}
+
 def acceptedChanges = changesJson.findAll {
   change ->
   sha1 = change.current_revision
   if(sha1 == null) {
       println "[WARNING] Skipping change " + change.change_id + " because it does not have any current revision or patch-set"
+      return false
+  }
+
+  if(!change.mergeable) {
+      println "[WARNING] Skipping change ${changeUrl(change._number)} because has merge conflicts"
       return false
   }
 
