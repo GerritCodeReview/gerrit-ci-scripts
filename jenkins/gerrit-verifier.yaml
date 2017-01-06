@@ -80,7 +80,7 @@
           installation-name: Xvfb
           display-name: 1
           parallel-build: false
-          timeout: 30
+          timeout: 60
           screen: 1024x768x16
           additional-options: -fbdir /tmp
           debug: true
