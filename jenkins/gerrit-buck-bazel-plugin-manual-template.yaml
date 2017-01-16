@@ -19,10 +19,10 @@
       - timestamps
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
     properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
        - authorization:
            anonymous:
              - job-discover
@@ -43,7 +43,7 @@
 
     builders:
       - shell:
-         !include-raw gerrit-buck-build-plugin-manual.sh
+         !include-raw: gerrit-buck-build-plugin-manual.sh
 
     publishers:
       - archive:
@@ -71,10 +71,10 @@
       - timestamps
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
     properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
        - authorization:
            anonymous:
              - job-discover
@@ -95,7 +95,7 @@
 
     builders:
       - shell:
-         !include-raw gerrit-bazel-build-plugin-manual.sh
+         !include-raw: gerrit-bazel-build-plugin-manual.sh
 
     publishers:
       - archive:
