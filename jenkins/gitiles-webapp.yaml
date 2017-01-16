@@ -8,15 +8,15 @@
       - timestamps
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
     properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
        - authorization:
            anonymous:
              - job-discover
              - job-read
-             - job-extended-read    
+             - job-extended-read
     scm:
       - git:
          url: https://gerrit.googlesource.com/gitiles
@@ -27,7 +27,7 @@
 
     triggers:
       - pollscm: 'H/50 * * * *'
-           
+
     builders:
       - shell: |
           set +x
