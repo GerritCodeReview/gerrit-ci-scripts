@@ -3,8 +3,6 @@
     project-type: flow
     concurrent: false
     needs-workspace: true
-    logrotate:
-      numToKeep: 256
     scm:
       - git:
          url: https://gerrit.googlesource.com/gerrit
@@ -18,6 +16,9 @@
       - pollscm:
           cron: 'H/10 * * * *'
     properties:
+    properties:
+       - build-discarder:
+           days-to-keep: 256
        - authorization:
            anonymous:
              - job-discover
@@ -50,10 +51,10 @@
           shutdown-with-build: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
     properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
        - authorization:
            anonymous:
              - job-discover
@@ -103,10 +104,10 @@
           shutdown-with-build: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
     properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
        - authorization:
            anonymous:
              - job-discover

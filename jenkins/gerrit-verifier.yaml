@@ -72,7 +72,8 @@
          refspec: $REFSPEC
          branches:
            - $BRANCH
-         disable-submodules: true
+         submodule:
+           disable: true
          skip-tag: true
          basedir: gerrit
     wrappers:
