@@ -10,9 +10,10 @@
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
 
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
+    properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
 
     parameters:
       - string:
