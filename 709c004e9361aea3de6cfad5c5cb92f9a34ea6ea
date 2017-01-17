@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "63d6bd38_b6e12812",
+        "filename": "jenkins/gerrit-app-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-17T08:52:44Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "range": {
+        "startLine": 14,
+        "startChar": 10,
+        "endLine": 14,
+        "endChar": 11
+      },
+      "revId": "709c004e9361aea3de6cfad5c5cb92f9a34ea6ea",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e3c2ad70_3a21811c",
         "filename": "jenkins/gitiles-webapp.yaml",
         "patchSetId": 5
@@ -36,6 +59,29 @@
       "writtenOn": "2017-01-17T00:14:41Z",
       "side": 1,
       "message": "remove this whitespace while you\u0027re in here?",
+      "range": {
+        "startLine": 19,
+        "startChar": 32,
+        "endLine": 19,
+        "endChar": 36
+      },
+      "revId": "709c004e9361aea3de6cfad5c5cb92f9a34ea6ea",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63d6bd38_96e62c26",
+        "filename": "jenkins/gitiles-webapp.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-17T08:52:44Z",
+      "side": 1,
+      "message": "Thanks, done.",
       "range": {
         "startLine": 19,
         "startChar": 32,
