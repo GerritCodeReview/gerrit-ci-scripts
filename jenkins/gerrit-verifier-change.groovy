@@ -156,11 +156,28 @@ def buildChange(change) {
   def branch = change.branch
   def changeUrl = Globals.gerrit + "#/c/" + changeNum + "/" + patchNum
   def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
-  def tools = ["buck"]
+  def tools = []
   def modes = ["reviewdb"]
 
   if(branch == "master") {
-    tools += ["bazel"]
+    def sout = new StringBuilder(), serr = new StringBuilder()
+    def fetch = "git fetch origin $ref".execute()
+    fetch.consumeProcessOutput(sout, serr)
+    fetch.waitForOrKill(1000)
+
+    def co = "git checkout FETCH_HEAD".execute()
+    co.consumeProcessOutput(sout, serr)
+    co.waitForOrKill(1000)
+
+    if(new java.io.File("BUCK").exists()) {
+      tools += ["buck"]
+    }
+
+    if(new java.io.File("BUILD").exists()) {
+      tools += ["bazel"]
+    }
+  } else {
+    tools += ["buck"]
   }
 
   println "Building Change " + changeUrl
