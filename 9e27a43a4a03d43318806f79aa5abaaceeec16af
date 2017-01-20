@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "486b96ff_151b7490",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-20T10:32:34Z",
+      "side": 1,
+      "message": "When we create stable-2.14 this would need to be adjusted?",
+      "revId": "9e27a43a4a03d43318806f79aa5abaaceeec16af",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
