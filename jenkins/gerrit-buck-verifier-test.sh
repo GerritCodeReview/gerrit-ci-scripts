@@ -22,6 +22,12 @@ then
     buck test --no-results-cache --exclude flaky
   fi
 
+  if [[ "$MODE" == *"notedbPrimary"* ]]
+  then
+    export GERRIT_NOTEDB=PRIMARY
+    buck test --no-results-cache --exclude flaky
+  fi
+
   if [[ "$MODE" == *"polygerrit"* ]]
   then
     if [ -z "$DISPLAY" ]

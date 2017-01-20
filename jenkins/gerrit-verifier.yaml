@@ -55,6 +55,7 @@
           choices:
             - reviewdb
             - notedbReadWrite
+            - notedbPrimary
             - polygerrit
           description: "Type of verification to execute"
     properties:

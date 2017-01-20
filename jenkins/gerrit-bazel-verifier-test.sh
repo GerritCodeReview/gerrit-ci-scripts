@@ -26,6 +26,12 @@ then
   bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
+if [[ "$MODE" == *"notedbPrimary"* ]]
+then
+  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=PRIMARY"
+  bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
+fi
+
 if [[ "$MODE" == *"polygerrit"* ]]
 then
   if [ -z "$DISPLAY" ]
