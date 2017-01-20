@@ -167,6 +167,7 @@ def buildChange(change) {
 
   if(branch == "master") {
     modes += "notedbReadWrite"
+    modes += "notedbPrimary"
 
     def changedFiles = getChangedFiles(changeNum, sha1)
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") }
