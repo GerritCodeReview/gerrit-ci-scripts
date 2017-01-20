@@ -156,11 +156,44 @@ def buildChange(change) {
   def branch = change.branch
   def changeUrl = Globals.gerrit + "#/c/" + changeNum + "/" + patchNum
   def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
-  def tools = ["buck"]
+  def tools = []
   def modes = ["reviewdb"]
+  def workspace = build.environment.get("WORKSPACE")
+  println "workspace: $workspace"
+  def cwd = new File("$workspace")
+  println "cwd: $cwd"
+  println "ref: $ref"
 
   if(branch == "master") {
-    tools += ["bazel"]
+    def sout = new StringBuilder(), serr = new StringBuilder()
+    def fetchCmd = "git fetch origin $ref"
+    println "CMD: $fetchCmd"
+    def fetch = fetchCmd.execute([],cwd)
+    fetch.consumeProcessOutput(sout, serr)
+    fetch.waitForOrKill(30000)
+    println "OUT: $sout"
+    println "ERR: $serr"
+
+    def coCmd = "git checkout FETCH_HEAD"
+    println "CMD: $coCmd"
+    def co = coCmd.execute([],cwd)
+    sout = new StringBuilder()
+    serr = new StringBuilder()
+    co.consumeProcessOutput(sout, serr)
+    co.waitForOrKill(30000)
+    println "OUT: $sout"
+    println "ERR: $serr"
+
+    if(new java.io.File("$cwd/BUCK").exists()) {
+      tools += ["buck"]
+    }
+
+    if(new java.io.File("$cwd/BUILD").exists()) {
+      tools += ["bazel"]
+    }
+  }
+  else {
+    tools += ["buck"]
   }
 
   println "Building Change " + changeUrl
