@@ -147,6 +147,16 @@ def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch) {
     return builds
 }
 
+def sh(cwd, command) {
+    def sout = new StringBuilder(), serr = new StringBuilder()
+    println "SH: $command"
+    def shell = command.execute([],cwd)
+    shell.consumeProcessOutput(sout, serr)
+    shell.waitForOrKill(30000)
+    println "OUT: $sout"
+    println "ERR: $serr"
+}
+
 def buildChange(change) {
   def sha1 = change.current_revision
   def changeNum = change._number
@@ -165,24 +175,12 @@ def buildChange(change) {
   println "ref: $ref"
 
   if(branch == "master") {
-    def sout = new StringBuilder(), serr = new StringBuilder()
-    def fetchCmd = "git fetch origin $ref"
-    println "CMD: $fetchCmd"
-    def fetch = fetchCmd.execute([],cwd)
-    fetch.consumeProcessOutput(sout, serr)
-    fetch.waitForOrKill(30000)
-    println "OUT: $sout"
-    println "ERR: $serr"
-
-    def coCmd = "git checkout FETCH_HEAD"
-    println "CMD: $coCmd"
-    def co = coCmd.execute([],cwd)
-    sout = new StringBuilder()
-    serr = new StringBuilder()
-    co.consumeProcessOutput(sout, serr)
-    co.waitForOrKill(30000)
-    println "OUT: $sout"
-    println "ERR: $serr"
+    sh(cwd, "git fetch origin $ref")
+    sh(cwd, "git checkout FETCH_HEAD")
+    sh(cwd, "git fetch origin $branch")
+    sh(cwd, 'git config user.name "Jenkins Build"')
+    sh(cwd, 'git config user.email "jenkins@gerritforge.com"')
+    sh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 
     if(new java.io.File("$cwd/BUCK").exists()) {
       tools += ["buck"]
