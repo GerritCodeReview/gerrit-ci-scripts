@@ -27,7 +27,7 @@
     dsl: |
       retries = 3
       parallel (
-        {{ retry ( retries ) {{ build( "Gerrit-buck-{branch}" ) }} }},
+        {{ if("{branch}" != "master") {{ retry ( retries ) {{ build( "Gerrit-buck-{branch}" ) }} }} }},
         {{ if("{branch}" == "master") {{ retry ( retries ) {{ build( "Gerrit-bazel-{branch}" ) }} }} }}
       )
 
@@ -140,7 +140,6 @@
 - project:
     name: Gerrit-buck
     branch:
-      - master
       - stable-2.13
       - stable-2.12
       - stable-2.11
