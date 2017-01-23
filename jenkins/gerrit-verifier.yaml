@@ -129,7 +129,6 @@
     name: Gerrit-verifier-bazel
     description: "Gerrit build of open change with BUCK\n"
     defaults: verifier-defaults
-    node: bazel
 
     builders:
       - merge-target-branch
