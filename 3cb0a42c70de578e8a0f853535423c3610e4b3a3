@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9fcab4fe_ac264bee",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-24T10:11:34Z",
+      "side": 1,
+      "message": "Again, this will not work after we create stable-2.14. I would prefer to solve it now and not wait until CI wouldn\u0027t suddenly work, after cutting of stable branch from master.",
+      "revId": "3cb0a42c70de578e8a0f853535423c3610e4b3a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
