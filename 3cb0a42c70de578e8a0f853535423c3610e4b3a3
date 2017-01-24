@@ -33,6 +33,23 @@
       "revId": "3cb0a42c70de578e8a0f853535423c3610e4b3a3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1847c6de_41e485b7",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-24T12:02:26Z",
+      "side": 1,
+      "message": "Add a TODO then?",
+      "revId": "3cb0a42c70de578e8a0f853535423c3610e4b3a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
