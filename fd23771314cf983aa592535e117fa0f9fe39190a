@@ -33,6 +33,23 @@
       "revId": "fd23771314cf983aa592535e117fa0f9fe39190a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2bcb4447_784b941c",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-26T13:01:20Z",
+      "side": 1,
+      "message": "Hi, those plugins are defined in different shell file. For example its-base is https://gerrit.googlesource.com/gerrit-ci-scripts/+/master/jenkins/gerrit-buck-build-its-plugin.sh",
+      "revId": "fd23771314cf983aa592535e117fa0f9fe39190a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
