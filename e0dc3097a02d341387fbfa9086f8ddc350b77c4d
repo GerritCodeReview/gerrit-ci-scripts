@@ -22,6 +22,29 @@
       "revId": "e0dc3097a02d341387fbfa9086f8ddc350b77c4d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fdaa09bb_41e1070b",
+        "filename": "jenkins/gerrit-buck-plugin-sync-index.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-26T09:05:29Z",
+      "side": 0,
+      "message": "It is already. See the new template I renamed it to.",
+      "range": {
+        "startLine": 5,
+        "startChar": 6,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "e0dc3097a02d341387fbfa9086f8ddc350b77c4d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
