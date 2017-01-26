@@ -4,6 +4,11 @@ git checkout -f gerrit/{branch}
 rm -rf plugins/{name}
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 
+if [ -f plugins/{name}/WORKSPACE.in_gerrit_tree ]
+then
+  cat plugins/{name}/WORKSPACE.in_gerrit_tree >> WORKSPACE
+fi
+
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 . set-java.sh 8
