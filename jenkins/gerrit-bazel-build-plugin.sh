@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 git checkout -f gerrit/{branch}
+git fetch https://gerrit.googlesource.com/gerrit refs/changes/75/95375/7 && git cherry-pick FETCH_HEAD
 rm -rf plugins/{name}
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 
