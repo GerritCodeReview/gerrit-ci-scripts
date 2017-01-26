@@ -4,9 +4,9 @@ git checkout -f gerrit/{branch}
 rm -rf plugins/{name}
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 
-if [ -f plugins/{name}/WORKSPACE.in_gerrit_tree ]
+if [ -f plugins/{name}/external_plugin_deps.bzl ]
 then
-  cat plugins/{name}/WORKSPACE.in_gerrit_tree >> WORKSPACE
+  cp -f plugins/{name}/external_plugin_deps.bzl plugins/
 fi
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
