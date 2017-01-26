@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "f3f66295_dd95cd5e",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-sync-index.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-26T09:04:51Z",
+      "side": 1,
+      "message": "Hi, yep this is correct. Please see for example https://gerrit.googlesource.com/gerrit-ci-scripts/+/master/jenkins/gerrit-buck-bazel-plugin-verify-status.yaml\n\nAlso see https://gerrit-ci.gerritforge.com/job/plugin-verify-status-bazel-master/ please",
+      "revId": "8dbe4643332386a488bd2c6a79e374ca44419e15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3bdee7be_5f9a118f",
         "filename": "jenkins/gerrit-buck-bazel-plugin-sync-index.yaml",
         "patchSetId": 3
@@ -30,6 +47,29 @@
       "writtenOn": "2017-01-26T06:10:43Z",
       "side": 1,
       "message": "Is there a build for this plugin on this branch?",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "8dbe4643332386a488bd2c6a79e374ca44419e15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e0e468f3_1939ee19",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-sync-index.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-26T09:04:51Z",
+      "side": 1,
+      "message": "This one is buck, yep there\u0027s a stable-2.13 branch see https://gerrit-review.googlesource.com/#/admin/projects/plugins/sync-index,branches please.\n\nThe one below is bazel.",
       "range": {
         "startLine": 7,
         "startChar": 14,
