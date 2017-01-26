@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cede0680_56c0cb20",
+        "filename": "jenkins/gerrit-buck-plugin-sync-index.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-26T06:10:43Z",
+      "side": 0,
+      "message": "Should it be preserved for this branch?",
+      "range": {
+        "startLine": 5,
+        "startChar": 6,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "e0dc3097a02d341387fbfa9086f8ddc350b77c4d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
