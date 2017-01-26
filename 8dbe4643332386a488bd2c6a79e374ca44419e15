@@ -36,6 +36,29 @@
     },
     {
       "key": {
+        "uuid": "f7212eca_88790f57",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-sync-index.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-26T20:42:24Z",
+      "side": 1,
+      "message": "Doesn\u0027t make sense anymore to build with Buck on master, isn\u0027t it?",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "8dbe4643332386a488bd2c6a79e374ca44419e15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3bdee7be_5f9a118f",
         "filename": "jenkins/gerrit-buck-bazel-plugin-sync-index.yaml",
         "patchSetId": 3
