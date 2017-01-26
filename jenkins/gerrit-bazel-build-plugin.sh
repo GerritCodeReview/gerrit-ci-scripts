@@ -9,6 +9,12 @@ then
   cat plugins/{name}/WORKSPACE.in_gerrit_tree >> WORKSPACE
 fi
 
+if [ -f plugins/{name}/external_plugin_deps.bzl ]
+then
+  rm plugins/external_plugin_deps.bzl
+  ln -s plugins/{name}/external_plugin_deps.bzl plugins/external_plugin_deps.bzl
+fi
+
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 . set-java.sh 8
