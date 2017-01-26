@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6958b509_63676f19",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-sync-index.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-26T06:10:43Z",
+      "side": 1,
+      "message": "Is this template does the right thing? See: [1]. Gerrit\u0027s own WORKSPACE and the WORKSPACE.in_gerrit_tree must be merged for the build to work.\n\n* [1] https://gerrit.googlesource.com/plugins/sync-index/+/master/WORKSPACE.in_gerrit_tree",
+      "revId": "8dbe4643332386a488bd2c6a79e374ca44419e15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bdee7be_5f9a118f",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-sync-index.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-26T06:10:43Z",
+      "side": 1,
+      "message": "Is there a build for this plugin on this branch?",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "8dbe4643332386a488bd2c6a79e374ca44419e15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
