@@ -16,6 +16,23 @@
       "revId": "fd23771314cf983aa592535e117fa0f9fe39190a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87ef5f61_c0e596d8",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-01-26T10:06:07Z",
+      "side": 1,
+      "message": "No I wonder how its-base and friends are built? You need both its-base and say its-jar in gerrit tree for those to build, right? Where(how CI is handling this?",
+      "revId": "fd23771314cf983aa592535e117fa0f9fe39190a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
