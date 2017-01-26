@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d47cb749_7a981d29",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-base.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-26T20:43:13Z",
+      "side": 1,
+      "message": "Builds on master should only be done with Bazel",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "2b126418858cf6ee8774ea6c3fe4e62c4fa32fe7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
