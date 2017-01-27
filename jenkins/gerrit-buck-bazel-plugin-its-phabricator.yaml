@@ -1,0 +1,10 @@
+- project:
+    name: phabricator
+    jobs:
+      - 'plugin-its-{name}-{branch}':
+          branch:
+            - stable-2.13
+            - stable-2.12
+      - 'plugin-its-{name}-bazel-{branch}':
+          branch:
+            - master

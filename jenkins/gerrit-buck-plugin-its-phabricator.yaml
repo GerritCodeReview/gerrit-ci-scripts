@@ -1,9 +1,0 @@
-- project:
-    name: phabricator
-    branch:
-      - master
-      - stable-2.13
-      - stable-2.12
-    jobs:
-      - 'plugin-its-{name}-{branch}'
-
