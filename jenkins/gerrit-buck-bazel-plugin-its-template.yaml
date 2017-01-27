@@ -1,7 +1,6 @@
-- job-template:
-    name: 'plugin-its-{name}-{branch}'
-    defaults: buck-plugin
-    description: "Plugin its-{name} {branch} branch build with BUCK\n"
+- defaults:
+    name: plugin-its-template
+    targets: 'plugins/its-{name}:its-{name}'
     wrappers:
       - timeout:
           timeout: 30
@@ -37,6 +36,10 @@
       - pollscm:
           cron: 'H/50 * * * *'
 
+- job-template:
+    name: 'plugin-its-{name}-{branch}'
+    description: "Plugin its-{name} {branch} branch build with BUCK\n"
+    defaults: plugin-its-template
     builders:
       - shell:
          !include-raw: gerrit-buck-build-its-plugin.sh
@@ -47,44 +50,8 @@
 
 - job-template:
     name: 'plugin-its-{name}-bazel-{branch}'
-    defaults: buck-plugin
     description: "Plugin its-{name} {branch} branch build with Bazel\n"
-    node: bazel
-    wrappers:
-      - timeout:
-          timeout: 30
-          fail: true
-      - timestamps
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    logrotate:
-      numToKeep: 20
-      artifactNumToKeep: 20
-    properties:
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-    scm:
-      - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/its-{name}
-           - gerrit:
-               url: https://gerrit.googlesource.com/gerrit
-           - base:
-               url: https://gerrit.googlesource.com/plugins/its-base
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
-
-    triggers:
-      - pollscm:
-          cron: 'H/50 * * * *'
-
+    defaults: plugin-its-template
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-its-plugin.sh

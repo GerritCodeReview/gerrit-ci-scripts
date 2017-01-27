@@ -52,7 +52,6 @@
 - job-template:
     name: 'pluginmanual-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} manual branch build with Bazel\n"
-    node: bazel
     parameters:
       - string:
          name: REFS_CHANGE
