@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4eb9994_1467dd89",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "Jan 27, 2017 11:26:22 PM",
+      "side": 1,
+      "message": "Why is this needed at all and why it was in the bease version?\n\n  $ bazel build plugins/its-phabricator\n  INFO: Found 1 target...\n  Target //plugins/its-phabricator:its-phabricator up-to-date:\n    bazel-genfiles/plugins/its-phabricator/its-phabricator.jar\n  INFO: Elapsed time: 1.889s, Critical Path: 1.33s\n  $ jar -xf bazel-genfiles/plugins/its-phabricator/its-phabricator.jar META-INF/MANIFEST.MF\n  $ cat META-INF/MANIFEST.MF\n  Implementation-Version: 052af9e\n  [...]",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
