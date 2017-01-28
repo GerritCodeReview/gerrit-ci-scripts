@@ -1,6 +1,6 @@
 - project:
     name: owners
-    targets: 'plugins/owners/gerrit-owners:owners plugins/owners/gerrit-owners-autoassign:owners-autoassign'
+    targets: 'plugins/owners/owners:owners plugins/owners/owners-autoassign:owners-autoassign'
     jobs:
       - 'plugin-{name}-{branch}':
           branch:
