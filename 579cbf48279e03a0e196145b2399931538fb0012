@@ -22,6 +22,29 @@
       "revId": "579cbf48279e03a0e196145b2399931538fb0012",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d414febd_b9101acc",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "Jan 28, 2017 5:04:40 AM",
+      "side": 1,
+      "message": "Not sure, im only following how it was done for gerrit\u0027s plugins. But gerrit ci is failing with permission denied https://gerrit-ci.gerritforge.com/job/plugin-its-phabricator-bazel-master/1/console",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
