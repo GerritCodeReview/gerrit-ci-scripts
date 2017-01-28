@@ -26,9 +26,9 @@
              - job-extended-read
     dsl: |
       retries = 3
-      build = "{branch}" == "master" ? "bazel" : "buck"
+      type = "{branch}" == "master" ? "bazel" : "buck"
       parallel (
-        {{ retry ( retries ) {{ build( "Gerrit-$build-{branch}" ) }} }}
+        {{ retry ( retries ) {{ build( "Gerrit-$type-{branch}" ) }} }}
       )
 
 - job-template:
