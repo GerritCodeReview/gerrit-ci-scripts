@@ -17,15 +17,10 @@ fi
 
 bazel build --spawn_strategy=standalone --genrule_strategy=standalone plugins/its-{name}
 
-# Remove duplicate entries
-PLUGIN_JAR=$(ls $(pwd)/bazel-genfiles/plugins/its-{name}/its-{name}*.jar)
-mkdir jar-out && pushd jar-out
-jar xf $PLUGIN_JAR && jar cmf META-INF/MANIFEST.MF $PLUGIN_JAR .
-popd
-
-# Extract version information
-PLUGIN_VERSION=$(git describe --always origin/{branch})
+JAR=$(ls $(pwd)/bazel-genfiles/plugins/its-{name}/its-{name}*.jar)
+PLUGIN_VERSION=$(git describe  --always origin/{branch})
 echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
-jar ufm $PLUGIN_JAR MANIFEST.MF && rm MANIFEST.MF
-
-echo "$PLUGIN_VERSION" > $PLUGIN_JAR-version
+jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
+DEST_JAR=bazel-genfiles/plugins/its-{name}/$(basename $JAR)
+[ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
+echo "$PLUGIN_VERSION" > bazel-genfiles/plugins/its-{name}/$(basename $JAR-version)
