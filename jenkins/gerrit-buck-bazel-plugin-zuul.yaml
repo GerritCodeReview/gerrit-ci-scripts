@@ -1,0 +1,9 @@
+- project:
+    name: zuul
+    jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - stable-2.13
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
