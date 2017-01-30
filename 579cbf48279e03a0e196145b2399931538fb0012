@@ -137,6 +137,52 @@
       "revId": "579cbf48279e03a0e196145b2399931538fb0012",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3596923_80af17f6",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "Jan 30, 2017 8:49:13 AM",
+      "side": 1,
+      "message": "I do not see this poblem here:\n  \n$ bazel build plugins/uploadvalidator\nINFO: Found 1 target...\nuses or overrides a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\nNote: Some input files use unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\nTarget //plugins/uploadvalidator:uploadvalidator up-to-date:\nbazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar\nINFO: Elapsed time: 27.225s, Critical Path: 22.00s\n\n$ jar -xf bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar META-INF/MANIFEST.MF\n\n$ cat META-INF/MANIFEST.MF\nImplementation-Version: ef08747\nManifest-Version: 1.0\nGerrit-ApiVersion: 2.14-SNAPSHOT\nGerrit-ApiType: plugin\nGerrit-Module: com.googlesource.gerrit.plugins.uploadvalidator.Module\nGerrit-PluginName: uploadvalidator\nCreated-By: blaze-singlejar\nMain-Class: Dummy\nImplementation-Vendor: Gerrit Code Review\n\n$ cd ../uploadvalidator/\n$ git describe --always --match \"v[0-9].*\" --dirty\nef08747\n\nEvidently, it correctly retrieved the git vresion for uploadvalidator repository: ef08747.",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3d8e9dbb_c6f5929d",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "Jan 30, 2017 8:49:13 AM",
+      "side": 1,
+      "message": "I do not see this problem here:\n\n  $ jar -xf bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar META-INF/MANIFEST.MF\ndavido@linux-ucwl:~/projects/gerrit (master *%\u003e)$ cat META-INF/MANIFEST.MF\nImplementation-Version: 88182a6\nManifest-Version: 1.0\nGerrit-ApiVersion: 2.14-SNAPSHOT\nGerrit-ApiType: plugin\nGerrit-Module: com.googlesource.gerrit.plugins.uploadvalidator.Module\nGerrit-PluginName: uploadvalidator\nCreated-By: blaze-singlejar\nMain-Class: Dummy\nImplementation-Vendor: Gerrit Code Review",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
