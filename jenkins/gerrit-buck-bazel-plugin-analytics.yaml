@@ -1,0 +1,6 @@
+- project:
+    name: analytics
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
