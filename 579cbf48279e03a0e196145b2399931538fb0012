@@ -252,6 +252,29 @@
       "revId": "579cbf48279e03a0e196145b2399931538fb0012",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7b85ace6_a16073e6",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "Jan 30, 2017 2:11:16 PM",
+      "side": 1,
+      "message": "I believe the problem is that when you have the \"tree\" mode, Jenkins defines job with two Git sources: origin and gerrit.\n\nThat scenario is different from your one with the symbolic link and that\u0027s why works for you but doesn\u0027t on the CI.",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
