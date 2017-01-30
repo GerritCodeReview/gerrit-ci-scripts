@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4559cf72_2020a33a",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "Jan 30, 2017 1:00:01 AM",
+      "side": 1,
+      "message": "Shouldn\u0027t this be:\ngerrit-plugin-api:plugin-api_deploy.jar gerrit-extension-api:extension-api_deploy.jar",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "7daebaffc69838d1a761b38382965fc3350a54ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
