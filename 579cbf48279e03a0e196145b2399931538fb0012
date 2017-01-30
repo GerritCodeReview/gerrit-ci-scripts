@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "418629a5_bf989b6b",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "Jan 30, 2017 1:37:29 AM",
+      "side": 1,
+      "message": "Why a for loop? How many jars are you expecting to be produced?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 74
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c4eb9994_1467dd89",
         "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
         "patchSetId": 3
