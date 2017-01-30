@@ -22,6 +22,29 @@
       "revId": "7daebaffc69838d1a761b38382965fc3350a54ca",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aecf0858_89f3f09c",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "Jan 30, 2017 2:51:34 AM",
+      "side": 1,
+      "message": "Nope. I think @David Ostrovsky fixed that so we could do that.",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "7daebaffc69838d1a761b38382965fc3350a54ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
