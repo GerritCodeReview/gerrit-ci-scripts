@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "85f3d82e_da9f6cae",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "Jan 30, 2017 3:05:57 PM",
+      "side": 0,
+      "message": "@DavidO the workaround specify exactly which remote needs to be described. Possibly the logic in Bazel doesn\u0027t.",
+      "range": {
+        "startLine": 20,
+        "startChar": 44,
+        "endLine": 20,
+        "endChar": 50
+      },
+      "revId": "fb5b84695382667d2c3ccce13df117006699e101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
