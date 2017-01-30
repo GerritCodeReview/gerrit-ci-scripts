@@ -10,4 +10,8 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
+              builders:
+          builders:
+            - shell:
+               !include-raw: gerrit-bazel-build-owners-plugin.sh
 
