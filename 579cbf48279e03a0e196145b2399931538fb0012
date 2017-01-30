@@ -206,6 +206,29 @@
       "revId": "579cbf48279e03a0e196145b2399931538fb0012",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0299e58e_41e95d5c",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "Jan 30, 2017 9:34:29 AM",
+      "side": 1,
+      "message": "\u003e Define \"here\" :-)\n\nOn my machine ;-)\n\n* 1. clone gerrit.\n* 2. clone plugin foo to any directory\n* 3. link plugin \"foo\" to gerrit/plugins/\n* 4. bazel build plugins/foo\n\nshould just work. I see, that menuextender on GerritForge CI has the right version. How was this created?\n\n* https://gerrit-ci.gerritforge.com/view/Plugins-master/job/plugin-menuextender-bazel-master/1/\n* https://gerrit-ci.gerritforge.com/view/Plugins-master/job/plugin-menuextender-bazel-master/1/\n* https://gerrit-ci.gerritforge.com/view/Plugins-master/job/plugin-menuextender-bazel-master/1/console\n\nSo let me do it locally: [1]. As you see it works.\n\n* [1] http://paste.openstack.org/show/596922/",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
