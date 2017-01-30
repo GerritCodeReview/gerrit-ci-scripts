@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "68e2a216_1c964c1d",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-owners.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "Jan 30, 2017 1:02:51 AM",
+      "side": 1,
+      "message": "Nope, this is wrong.\nIt should be:\nplugins/owners and plugins/owners-autoassign",
+      "range": {
+        "startLine": 11,
+        "startChar": 20,
+        "endLine": 11,
+        "endChar": 99
+      },
+      "revId": "4265da0e7f451dc10ccc1ae3d764d5199730d58e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
