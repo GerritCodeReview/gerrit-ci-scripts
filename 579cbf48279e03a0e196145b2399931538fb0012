@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "bf6d8df5_a938e546",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "Jan 30, 2017 2:55:06 AM",
+      "side": 1,
+      "message": "I was only following how it was done for the plugins shell script.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 74
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c4eb9994_1467dd89",
         "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
         "patchSetId": 3
