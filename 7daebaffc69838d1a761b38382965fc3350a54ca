@@ -45,6 +45,29 @@
       "revId": "7daebaffc69838d1a761b38382965fc3350a54ca",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9800f4a2_dc684603",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "Jan 30, 2017 2:52:52 AM",
+      "side": 1,
+      "message": "Please see https://github.com/gerrit-review/gerrit/commit/26f8da8f4d4bf66d5bb3ef84c24ee4a6296ede09",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "7daebaffc69838d1a761b38382965fc3350a54ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
