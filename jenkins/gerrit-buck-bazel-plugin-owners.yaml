@@ -1,3 +1,15 @@
+- job-template:
+    name: 'plugin-owners-bazel-{branch}'
+    description: "Plugin owners {branch} branch build with Bazel\n"
+    defaults: plugin-template
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build-owners-plugin.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/{name}*/*{name}*.jar*
+
 - project:
     name: owners
     jobs:
@@ -7,8 +19,7 @@
             - stable-2.13
             - stable-2.11
             - stable-2.10
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-owners-bazel-{branch}':
           targets: 'plugins/owners plugins/owners-autoassign'
           branch:
             - master
-
