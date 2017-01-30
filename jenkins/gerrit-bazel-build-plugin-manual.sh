@@ -1,6 +1,10 @@
 #!/bin/bash -e
 
 git checkout gerrit/{branch}
+git config user.name "Gerrit CI"
+git config user.email "jenkins@gerritforge.com"
+git fetch https://gerrit.googlesource.com/gerrit refs/changes/10/95610/1 && git cherry-pick FETCH_HEAD
+
 rm -rf plugins/{name}
 git fetch https://gerrit.googlesource.com/plugins/{name} $REFS_CHANGE
 git read-tree -u --prefix=plugins/{name} FETCH_HEAD
