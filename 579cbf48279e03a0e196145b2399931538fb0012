@@ -45,6 +45,29 @@
       "revId": "579cbf48279e03a0e196145b2399931538fb0012",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b410ada7_c068ef3f",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "Jan 30, 2017 1:10:09 AM",
+      "side": 1,
+      "message": "This was historically needed with Buck builds because the automatic generation of the version number took the Gerrit version instead of the plugin one.\n\nLet me check if now with the Bazel build it is still the same or not.",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "579cbf48279e03a0e196145b2399931538fb0012",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
