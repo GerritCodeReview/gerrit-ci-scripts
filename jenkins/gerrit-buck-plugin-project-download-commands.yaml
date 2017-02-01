@@ -1,8 +1,0 @@
-- project:
-    name: project-download-commands
-    branch:
-      - master
-      - stable-2.13
-      - stable-2.12
-    jobs:
-      - 'plugin-{name}-{branch}'
