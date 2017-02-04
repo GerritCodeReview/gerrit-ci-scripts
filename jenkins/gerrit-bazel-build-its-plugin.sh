@@ -7,7 +7,7 @@ git read-tree -u --prefix=plugins/its-{name} origin/{branch}
 git read-tree -u --prefix=plugins/its-base base/{branch}
 
 rm -Rf bazel-genfiles
-'
+
 if [ -f plugins/its-{name}/external_plugin_deps.bzl ]
 then
   cp -f plugins/its-{name}/external_plugin_deps.bzl plugins/
