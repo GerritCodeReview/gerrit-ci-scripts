@@ -1,0 +1,6 @@
+- project:
+    name: changemessage
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
