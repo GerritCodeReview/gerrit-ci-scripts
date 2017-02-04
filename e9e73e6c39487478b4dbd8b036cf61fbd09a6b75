@@ -22,6 +22,30 @@
       "revId": "e9e73e6c39487478b4dbd8b036cf61fbd09a6b75",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e58a33c_2cf60724",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "Feb 4, 2017 1:29:30 PM",
+      "side": 1,
+      "message": "Woops sorry, just I presume pushd does this?",
+      "parentUuid": "9349999e_027b3392",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 11
+      },
+      "revId": "e9e73e6c39487478b4dbd8b036cf61fbd09a6b75",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
