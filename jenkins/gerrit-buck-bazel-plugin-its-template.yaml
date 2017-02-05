@@ -46,7 +46,7 @@
     publishers:
       - archive:
          artifacts: >
-           buck-out/gen/plugins/its-{name}/its-{name}.jar*
+           buck-out/gen/plugins/its-{name}/*its-{name}*.jar*,
 
 - job-template:
     name: 'plugin-its-{name}-bazel-{branch}'
@@ -58,4 +58,4 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/its-{name}/its-{name}.jar*
+           bazel-genfiles/plugins/its-{name}/*its-{name}*.jar*

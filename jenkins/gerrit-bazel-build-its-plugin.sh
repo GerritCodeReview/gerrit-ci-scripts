@@ -18,7 +18,7 @@ fi
 bazel build --spawn_strategy=standalone --genrule_strategy=standalone plugins/its-{name}
 
 # Remove duplicate entries
-PLUGIN_JAR=$(ls $(pwd)/bazel-genfiles/plugins/its-{name}/its-{name}*.jar)
+PLUGIN_JAR=$(find bazel-genfiles/plugins/ -name its-{name}*.jar)
 mkdir jar-out && pushd jar-out
 jar xf $PLUGIN_JAR && jar cmf META-INF/MANIFEST.MF $PLUGIN_JAR .
 popd
