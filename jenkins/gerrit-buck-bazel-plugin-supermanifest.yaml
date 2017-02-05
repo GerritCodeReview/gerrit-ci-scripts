@@ -1,0 +1,6 @@
+- project:
+    name: supermanifest
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
