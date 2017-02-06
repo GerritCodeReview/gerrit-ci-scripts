@@ -22,6 +22,30 @@
       "revId": "f45897031abc6901e07649f78a990412e849fbee",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2291f8f3_52b2f2e3",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitles.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "Feb 6, 2017 12:19:34 AM",
+      "side": 1,
+      "message": "I think this allows any user who has access to ci to manually run these tests. Just moving it from how it was in the deleted file.",
+      "parentUuid": "2f63fd1f_36ae2143",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 39
+      },
+      "revId": "f45897031abc6901e07649f78a990412e849fbee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
