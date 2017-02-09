@@ -1,0 +1,6 @@
+- project:
+    name: reparent
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
