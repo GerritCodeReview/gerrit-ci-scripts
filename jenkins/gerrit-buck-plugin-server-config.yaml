@@ -1,7 +1,0 @@
-- project:
-    name: server-config
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-
