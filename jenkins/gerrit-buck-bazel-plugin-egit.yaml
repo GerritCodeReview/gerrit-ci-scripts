@@ -1,0 +1,6 @@
+- project:
+    name: egit
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
