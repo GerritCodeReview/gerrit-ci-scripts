@@ -22,6 +22,30 @@
       "revId": "3a77e03d9bf86255f3c79a432dbcecf245872b34",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23955996_e11b11ee",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-02-10T15:21:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dc688dea_7fc3613e",
+      "range": {
+        "startLine": 9,
+        "startChar": 16,
+        "endLine": 9,
+        "endChar": 19
+      },
+      "revId": "3a77e03d9bf86255f3c79a432dbcecf245872b34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
