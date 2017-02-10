@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6c206956_9a6d0d54",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitblit.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-02-10T15:20:47Z",
+      "side": 1,
+      "message": "There\u0027s no gitblit branch for gerrit 2.13. One should be created for it though.",
+      "range": {
+        "startLine": 74,
+        "startChar": 23,
+        "endLine": 74,
+        "endChar": 25
+      },
+      "revId": "62b26428b9c8f25038e4825aa2a6f982d6ffc26d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7257fc98_8dce2d56",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-02-10T15:20:47Z",
+      "side": 1,
+      "message": "Needs to be refs and the same fore all of the below please.",
+      "range": {
+        "startLine": 9,
+        "startChar": 16,
+        "endLine": 9,
+        "endChar": 19
+      },
+      "revId": "62b26428b9c8f25038e4825aa2a6f982d6ffc26d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
