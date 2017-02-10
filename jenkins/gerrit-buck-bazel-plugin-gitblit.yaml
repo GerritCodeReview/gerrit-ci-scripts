@@ -1,5 +1,5 @@
-- job-template:
-    name: 'plugin-gitblit-{branch}'
+- defaults:
+    name: 'plugin-gitblit'
     description: "GitBlit plugin {branch} branch build with BUCK\n"
     defaults: buck-plugin
     wrappers:
@@ -38,6 +38,10 @@
       - pollscm:
           cron: 'H/50 * * * *'
 
+- job-template:
+    name: 'plugin-gitblit-{branch}'
+    description: "GitBlit plugin {branch} branch build with BUCK\n"
+    defaults: plugin-gitblit
     builders:
       - shell:
          !include-raw: gitblit-ant-build.sh
@@ -47,13 +51,32 @@
       - archive:
          artifacts: 'buck-out/gen/plugins/gitblit/*gitblit*.jar*'
 
+- job-template:
+    name: 'plugin-gitblit-bazel-{branch}'
+    description: "GitBlit plugin {branch} branch build with Bazel\n"
+    defaults: plugin-gitblit
+    builders:
+      - shell:
+         !include-raw: gitblit-ant-build.sh
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin.sh
+    publishers:
+      - archive:
+         artifacts: 'bazel-genfiles/plugins/gitblit/*gitblit*.jar*'
+
+
 - project:
     name: gitblit
-    branch:
-      - master
-      - stable-2.12
-      - stable-2.11
-      - stable-2.10
     jobs:
-      - 'plugin-gitblit-{branch}'
+      - 'plugin-gitblit-{branch}':
+          targets: gitblit
+          branch:
+            - stable-2.13
+            - stable-2.12
+            - stable-2.11
+            - stable-2.10
+      - 'plugin-gitblit-bazel-{branch}':
+          targets: gitblit
+          branch:
+            - master
 
