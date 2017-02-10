@@ -1,8 +1,0 @@
-- project:
-    name: oauth
-    branch:
-      - master
-      - stable-2.10
-    jobs:
-      - 'plugin-{name}-{branch}'
-

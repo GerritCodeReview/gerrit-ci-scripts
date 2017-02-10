@@ -1,0 +1,9 @@
+- project:
+    name: oauth
+    jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - stable-2.10
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
