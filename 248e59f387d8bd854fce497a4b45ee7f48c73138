@@ -22,6 +22,30 @@
       "revId": "248e59f387d8bd854fce497a4b45ee7f48c73138",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "626689c5_fcbc123d",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-02-10T18:44:49Z",
+      "side": 0,
+      "message": "Maybe, not relly sure though. But the other plugins that do what this patchset is doing work then it may be fixed by this patch. But im not really sure.",
+      "parentUuid": "7928b7b9_eda7f7bc",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 4
+      },
+      "revId": "248e59f387d8bd854fce497a4b45ee7f48c73138",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
