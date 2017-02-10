@@ -22,6 +22,30 @@
       "revId": "99da14e2e8ce23c48f1acebbd2ac8ccfb2b7ae63",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2d6ed967_d76fc2f5",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitblit.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-02-10T15:12:06Z",
+      "side": 1,
+      "message": "Fixed, thanks",
+      "parentUuid": "e975cc68_1b587381",
+      "range": {
+        "startLine": 65,
+        "startChar": 21,
+        "endLine": 65,
+        "endChar": 33
+      },
+      "revId": "99da14e2e8ce23c48f1acebbd2ac8ccfb2b7ae63",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
