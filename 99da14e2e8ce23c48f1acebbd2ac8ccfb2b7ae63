@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e975cc68_1b587381",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitblit.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-02-10T14:45:35Z",
+      "side": 1,
+      "message": "Is this correct?",
+      "range": {
+        "startLine": 65,
+        "startChar": 21,
+        "endLine": 65,
+        "endChar": 33
+      },
+      "revId": "99da14e2e8ce23c48f1acebbd2ac8ccfb2b7ae63",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
