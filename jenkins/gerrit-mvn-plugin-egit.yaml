@@ -1,8 +1,0 @@
-- project:
-    name: egit-mvn
-    repo: egit
-    branch:
-      - master
-    jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-
