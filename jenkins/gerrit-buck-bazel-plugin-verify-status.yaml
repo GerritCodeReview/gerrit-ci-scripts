@@ -3,7 +3,6 @@
     jobs:
       - 'plugin-{name}-{branch}':
           branch:
-            - master
             - stable-2.13
       - 'plugin-{name}-bazel-{branch}':
           branch:
