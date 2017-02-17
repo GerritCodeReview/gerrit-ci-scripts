@@ -22,6 +22,30 @@
       "revId": "89285c56d311fb519e43c4c1f5b8f52c4b36be9b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2a42d21_9d0cf35f",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-rtc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-02-17T12:44:30Z",
+      "side": 0,
+      "message": "Done in https://gerrit-review.googlesource.com/#/c/97675/",
+      "parentUuid": "5dd08beb_f36dfd58",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 36
+      },
+      "revId": "89285c56d311fb519e43c4c1f5b8f52c4b36be9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
