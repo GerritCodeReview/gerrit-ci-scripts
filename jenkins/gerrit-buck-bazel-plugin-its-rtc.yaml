@@ -1,14 +1,5 @@
 - project:
     name: rtc
-    branch:
-      - master
-      - stable-2.11
-      - stable-2.10
-    jobs:
-      - 'plugin-its-{name}-{branch}'
-
-- project:
-    name: rtc
     jobs:
       - 'plugin-its-{name}-{branch}':
           branch:
