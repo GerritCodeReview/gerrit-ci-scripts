@@ -129,19 +129,21 @@ def getChangedFiles(changeNum, sha1) {
   filesJson.keySet().findAll { it != "/COMMIT_MSG" }
 }
 
-def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch) {
+def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes) {
     def builds = []
     for (tool in tools) {
       def buildName = "Gerrit-verifier-$tool"
       def key = "$tool/$mode"
       builds += {
-                    Globals.buildsList.put(key, 
-                      build(buildName, REFSPEC: refspec, BRANCH: sha1,
-                            CHANGE_URL: changeUrl, MODE: mode, TARGET_BRANCH: targetBranch))
-                    println "Builds status:"
-                    Globals.buildsList.each {
-                      n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "console"})"
-                    }
+                   retry (retryTimes) {
+                     Globals.buildsList.put(key,
+                       build(buildName, REFSPEC: refspec, BRANCH: sha1,
+                             CHANGE_URL: changeUrl, MODE: mode, TARGET_BRANCH: targetBranch))
+                     println "Builds status:"
+                     Globals.buildsList.each {
+                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "console"})"
+                     }
+                   }
                 }
     }
     return builds
@@ -216,14 +218,27 @@ def buildChange(change) {
 
   def builds = []
   println "Running validation jobs using $tools builds for $modes ..."
-  modes.collect { buildsForMode(refspec,sha1,changeUrl,it,tools,branch) }.each { builds += it }
+  modes.collect { buildsForMode(refspec,sha1,changeUrl,it,tools,branch,1) }.each { builds += it }
 
-  ignore(FAILURE) {
-    parallel (builds)
+  def buildsWithResults = parallelBuilds(builds)
+
+  flaky = flakyBuilds(buildsWithResults)
+  if(flaky.size > 0) {
+    println "** FLAKY Builds detected: ${flaky}"
+
+    def retryBuilds = []
+    def toolsAndModes = flaky.collect { it.split("/") }
+
+    toolsAndModes.each {
+      def tool = it[0]
+      def mode = it[1]
+      Globals.buildsList.remove(it)
+      retryBuilds += buildsForMode(refspec,sha1,changeUrl,mode,[tool],branch,3)
+    }
+    buildsWithResults = parallelBuilds(retryBuilds)    
   }
 
-  def results = Globals.buildsList.values().collect { waitForResult(it) }
-  def res = results.inject(1) { acc, buildResult -> getVerified(acc, buildResult) }
+  def res = buildsWithResults.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
 
   gerritReview(build.startJob.getBuildUrl() + "console", changeNum, sha1, res, "")
 
@@ -237,6 +252,27 @@ def buildChange(change) {
   }
 }
 
+def parallelBuilds(builds) {
+  ignore(FAILURE) {
+    parallel (builds)
+  }
+  def results = Globals.buildsList.values().collect { waitForResult(it) }
+  def buildsWithResults = []
+
+  Globals.buildsList.keySet().eachWithIndex { 
+    key,index -> buildsWithResults.add(new Tuple(key, results[index]))
+  }
+  return buildsWithResults
+}
+
+def flakyBuilds(buildsWithResults) {
+  def flaky = buildsWithResults.findAll { it[1] == null || it[1] != SUCCESS }
+  if(flaky.size == buildsWithResults.size) {
+    return []
+  }
+
+  return flaky.collect { it[0] }
+}
 
 def lastBuild = build.getPreviousSuccessfulBuild()
 def logOut = new ByteArrayOutputStream()
