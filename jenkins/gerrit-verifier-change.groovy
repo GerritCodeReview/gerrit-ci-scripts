@@ -32,6 +32,7 @@ class Globals {
   static int myAccountId = 1022687
   static int waitForResultTimeout = 10000
   static Map buildsList = [:]
+  static String ciTag = '"tag" : "gerrit-ci"'
 }
 
 
@@ -63,7 +64,7 @@ def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
   }
 
   def addReviewerExit = gerritPost("a/changes/" + changeNum + "/reviewers", '{ "reviewer" : "' +
-                                   Globals.gerritReviewer + '" }')
+                                   Globals.gerritReviewer + '" , ${Globals.ciTag} }')
   if(addReviewerExit != 0) {
     println "**** ERROR: cannot add myself as reviewer of change " + changeNum + " *****"
     return addReviewerExit
@@ -71,7 +72,7 @@ def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
 
   def jsonPayload = '{"labels":{"Code-Review":0,"Verified":' + verified + '},' +
                     ' "message": "' + msgPrefix + 'Gerrit-CI Build: ' + buildUrl + '", ' +
-                    ' "notify" : "' + (verified < 0 ? "OWNER": "OWNER_REVIEWERS") + '" }'
+                    ' "notify" : "' + (verified < 0 ? "OWNER": "OWNER_REVIEWERS") + '" , ${Globals.ciTag} }'
   def addVerifiedExit = gerritPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
                                    jsonPayload)
 
@@ -85,7 +86,7 @@ def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
 
 def gerritComment(buildUrl,changeNum, sha1, msgPrefix) {
   return gerritPost("a/changes/$changeNum/revisions/$sha1/review",
-                    "{\"message\": \"$msgPrefix Gerrit-CI Flow: $buildUrl\", \"notify\" : \"NONE\" }")
+                    "{\"message\": \"$msgPrefix Gerrit-CI Flow: $buildUrl\", \"notify\" : \"NONE\", ${Globals.ciTag} }")
 }
 
 def waitForResult(b) {
