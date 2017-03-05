@@ -12,15 +12,15 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
 
 echo 'Test in default DB mode'
 echo '----------------------------------------------'
-bazel test $BAZEL_OPTS //...
+bazel test $BAZEL_OPTS //... || touch TEST_FAILED
 
 echo 'Test in Note DB mode'
 echo '----------------------------------------------'
-bazel test --test_env=GERRIT_NOTEDB=READ_WRITE $BAZEL_OPTS //...
+bazel test --test_env=GERRIT_NOTEDB=READ_WRITE $BAZEL_OPTS //... || touch TEST_FAILED
 
 echo 'Test PolyGerrit locally'
 echo '----------------------------------------------'
-bash ./polygerrit-ui/app/run_test.sh
+bash ./polygerrit-ui/app/run_test.sh || touch TEST_FAILED
 
 if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
 then
@@ -28,7 +28,7 @@ then
 else
   echo 'Test PolyGerrit on Sauce Labs'
   echo '----------------------------------------------'
-  WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh
+  WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch TEST_FAILED
 fi
 
 exit 0
