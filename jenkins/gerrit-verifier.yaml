@@ -137,6 +137,8 @@
          !include-raw-escape: gerrit-bazel-build.sh
       - shell:
          !include-raw-escape: gerrit-bazel-verifier-test.sh
+      - shell:
+         !include-raw-escale: gerrit-bazel-cat-test-log.sh
 
     publishers:
       - archive:
