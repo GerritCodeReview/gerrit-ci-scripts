@@ -22,6 +22,8 @@ echo 'Test PolyGerrit locally'
 echo '----------------------------------------------'
 bash ./polygerrit-ui/app/run_test.sh
 
+echo /home/jenkins/.cache/bazel/_bazel_jenkins/**/execroot/gerrit/bazel-out/local-fastbuild/testlogs/polygerrit-ui/app/wct_test/test.log
+
 if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
 then
   echo 'Not running on Sauce Labs because env vars are not set.'
@@ -29,6 +31,7 @@ else
   echo 'Test PolyGerrit on Sauce Labs'
   echo '----------------------------------------------'
   WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh
+  echo /home/jenkins/.cache/bazel/_bazel_jenkins/**/execroot/gerrit/bazel-out/local-fastbuild/testlogs/polygerrit-ui/app/wct_test/test.log
 fi
 
 exit 0
