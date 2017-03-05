@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "401dc4d6_6e72aa4e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-03-05T23:24:29Z",
+      "side": 1,
+      "message": "I don\u0027t think it\u0027s necessary to include this line",
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8f18dce3_cb792785",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-03-05T23:24:29Z",
+      "side": 1,
+      "message": "Let\u0027s",
+      "range": {
+        "startLine": 13,
+        "startChar": 32,
+        "endLine": 13,
+        "endChar": 36
+      },
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eba495fc_e29be1b8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-03-05T23:24:29Z",
+      "side": 1,
+      "message": "can\u0027t",
+      "range": {
+        "startLine": 13,
+        "startChar": 8,
+        "endLine": 13,
+        "endChar": 14
+      },
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd1fef17_4425c827",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-03-05T23:24:29Z",
+      "side": 1,
+      "message": "Do we want to always cat it, or only on failures?",
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
