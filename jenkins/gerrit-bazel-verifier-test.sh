@@ -17,19 +17,19 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
 
 if [[ "$MODE" == *"reviewdb"* ]]
 then
-  bazel test $BAZEL_OPTS //...
+  bazel test $BAZEL_OPTS //... || touch TEST_FAILED
 fi
 
 if [[ "$MODE" == *"notedbReadWrite"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=READ_WRITE"
-  bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
+  bazel test $GERRIT_NOTEDB $BAZEL_OPTS //... || touch TEST_FAILED
 fi
 
 if [[ "$MODE" == *"notedbPrimary"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=PRIMARY"
-  bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
+  bazel test $GERRIT_NOTEDB $BAZEL_OPTS //... || touch TEST_FAILED
 fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
@@ -39,13 +39,13 @@ then
     echo 'Not running local tests because env var "DISPLAY" is not set.'
   else
     echo 'Running local tests...'
-    bash ./polygerrit-ui/app/run_test.sh
+    bash ./polygerrit-ui/app/run_test.sh || touch TEST_FAILED
   fi
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then
     echo 'Not running on Sauce Labs because env vars are not set.'
   else
     echo 'Running tests on Sauce Labs...'
-    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh
+    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch TEST_FAILED
   fi
 fi
