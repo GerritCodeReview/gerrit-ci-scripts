@@ -32,6 +32,19 @@ then
   bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
+if [ -f ./polygerrit_log.sh ];
+then
+    rm polygerrit_log.sh
+fi
+
+echo -e '#!/bin/bash' > polygerrit_log.sh
+echo -e 'if [[ -n $(find ~/.cache/bazel/ -name "test.log") ]];' >> polygerrit_log.sh
+echo -e 'then' >> polygerrit_log.sh
+echo -e '	find ~/.cache/bazel/ -name 'test.log' -exec cat {} \; && exit -1;' >> polygerrit_log.sh
+echo -e 'fi' >> polygerrit_log.sh
+
+chmod +x ./polygerrit_log.sh
+
 if [[ "$MODE" == *"polygerrit"* ]]
 then
   if [ -z "$DISPLAY" ]
@@ -39,13 +52,13 @@ then
     echo 'Not running local tests because env var "DISPLAY" is not set.'
   else
     echo 'Running local tests...'
-    bash ./polygerrit-ui/app/run_test.sh
+    bash ./polygerrit-ui/app/run_test.sh || ./polygerrit_log.sh
   fi
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then
     echo 'Not running on Sauce Labs because env vars are not set.'
   else
     echo 'Running tests on Sauce Labs...'
-    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh
+    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || ./polygerrit_log.sh
   fi
 fi
