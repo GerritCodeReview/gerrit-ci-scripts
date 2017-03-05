@@ -40,6 +40,10 @@ then
   else
     echo 'Running local tests...'
     bash ./polygerrit-ui/app/run_test.sh
+
+    if [ -f cat /home/jenkins/.cache/bazel/_bazel_jenkins/*/execroot/gerrit/bazel-out/local-fastbuild/testlogs/polygerrit-ui/app/wct_test/test.log ]; then
+      cat /home/jenkins/.cache/bazel/_bazel_jenkins/*/execroot/gerrit/bazel-out/local-fastbuild/testlogs/polygerrit-ui/app/wct_test/test.log
+    fi
   fi
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then
@@ -47,5 +51,8 @@ then
   else
     echo 'Running tests on Sauce Labs...'
     WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh
+    if [ -f cat /home/jenkins/.cache/bazel/_bazel_jenkins/*/execroot/gerrit/bazel-out/local-fastbuild/testlogs/polygerrit-ui/app/wct_test/test.log ]; then
+      cat /home/jenkins/.cache/bazel/_bazel_jenkins/*/execroot/gerrit/bazel-out/local-fastbuild/testlogs/polygerrit-ui/app/wct_test/test.log
+    fi
   fi
 fi
