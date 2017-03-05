@@ -22,6 +22,30 @@
       "revId": "299b74a92e8129be612624ffc9dfbfbce0970ad9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "03cfcb41_86de097f",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-05T21:41:34Z",
+      "side": 1,
+      "message": "I thought you need double to show it\u0027s a folder.\n\nBut testing it with one seems to work.",
+      "parentUuid": "846cb3bf_b29dfeb5",
+      "range": {
+        "startLine": 25,
+        "startChar": 46,
+        "endLine": 25,
+        "endChar": 48
+      },
+      "revId": "299b74a92e8129be612624ffc9dfbfbce0970ad9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
