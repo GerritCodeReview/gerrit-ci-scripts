@@ -22,9 +22,22 @@ echo 'Test in Note DB mode (Primary)'
 echo '----------------------------------------------'
 bazel test --test_env=GERRIT_NOTEDB=PRIMARY $BAZEL_OPTS //...
 
+if [ -f ./polygerrit_log.sh ];
+then
+    rm ./polygerrit_log.sh
+fi
+
+echo -e '#!/bin/bash' > polygerrit_log.sh
+echo -e 'if [[ -n $(find ~/.cache/bazel/ -name "test.log") ]];' >> polygerrit_log.sh
+echo -e 'then' >> polygerrit_log.sh
+echo -e '	find ~/.cache/bazel/ -name 'test.log' -exec cat {} \; && exit -1;' >> polygerrit_log.sh
+echo -e 'fi' >> polygerrit_log.sh
+
+chmod +x ./polygerrit_log.sh
+
 echo 'Test PolyGerrit locally'
 echo '----------------------------------------------'
-bash ./polygerrit-ui/app/run_test.sh
+bash ./polygerrit-ui/app/run_test.sh || ./polygerrit_log.sh
 
 if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
 then
@@ -32,7 +45,7 @@ then
 else
   echo 'Test PolyGerrit on Sauce Labs'
   echo '----------------------------------------------'
-  WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh
+  WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || ./polygerrit_log.sh
 fi
 
 exit 0
