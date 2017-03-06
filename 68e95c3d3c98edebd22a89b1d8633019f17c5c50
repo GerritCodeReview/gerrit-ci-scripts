@@ -163,6 +163,24 @@
       "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "434a91ac_a8b5c3e1",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-06T00:27:31Z",
+      "side": 1,
+      "message": "I followed http://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash :)",
+      "parentUuid": "e058274c_31d13ea3",
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
