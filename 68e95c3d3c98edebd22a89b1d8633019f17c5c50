@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6a01a351_b02997d3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-06T00:13:37Z",
+      "side": 1,
+      "message": "Thanks, Done",
+      "parentUuid": "401dc4d6_6e72aa4e",
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8f18dce3_cb792785",
         "filename": "/COMMIT_MSG",
         "patchSetId": 5
@@ -65,6 +83,54 @@
     },
     {
       "key": {
+        "uuid": "0b8742ff_6a3596f9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-06T00:13:37Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "8f18dce3_cb792785",
+      "range": {
+        "startLine": 13,
+        "startChar": 32,
+        "endLine": 13,
+        "endChar": 36
+      },
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1eae1ce6_3fc23454",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-06T00:13:37Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "eba495fc_e29be1b8",
+      "range": {
+        "startLine": 13,
+        "startChar": 8,
+        "endLine": 13,
+        "endChar": 14
+      },
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cd1fef17_4425c827",
         "filename": "jenkins/gerrit-bazel-test.sh",
         "patchSetId": 5
@@ -76,6 +142,24 @@
       "writtenOn": "2017-03-05T23:24:29Z",
       "side": 1,
       "message": "Do we want to always cat it, or only on failures?",
+      "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e058274c_31d13ea3",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-06T00:13:37Z",
+      "side": 1,
+      "message": "Yep it would be better if it would only cat the file on failures but I\u0027m not sure how to do that.",
+      "parentUuid": "cd1fef17_4425c827",
       "revId": "68e95c3d3c98edebd22a89b1d8633019f17c5c50",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
