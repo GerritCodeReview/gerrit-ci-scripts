@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "56956104_bf811be6",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-03-07T08:56:29Z",
+      "side": 1,
+      "message": "If the shell in the previous block exits with error, will this one even be executed?",
+      "range": {
+        "startLine": 130,
+        "startChar": 6,
+        "endLine": 131,
+        "endChar": 58
+      },
+      "revId": "e3094018001ce3b83a0421b831051ad8ea16b14d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
