@@ -16,15 +16,15 @@ then
     buck test --no-results-cache --exclude flaky
   fi
 
-  if [[ "$MODE" == *"notedbReadWrite"* ]]
-  then
-    export GERRIT_NOTEDB=READ_WRITE
-    buck test --no-results-cache --exclude flaky
-  fi
-
   if [[ "$MODE" == *"notedbPrimary"* ]]
   then
     export GERRIT_NOTEDB=PRIMARY
+    buck test --no-results-cache --exclude flaky
+  fi
+
+  if [[ "$MODE" == *"disableChangeReviewDb"* ]]
+  then
+    export GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB
     buck test --no-results-cache --exclude flaky
   fi
 
