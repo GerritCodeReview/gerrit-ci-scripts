@@ -220,7 +220,7 @@ def buildChange(change) {
   println "Building Change " + changeUrl
 
   if(branch == "master") {
-    modes += "notedbReadWrite"
+    modes += "disableChangeReviewDb"
     modes += "notedbPrimary"
 
     def changedFiles = getChangedFiles(changeNum, sha1)

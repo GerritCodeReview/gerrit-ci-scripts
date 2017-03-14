@@ -14,9 +14,13 @@ echo 'Test in default DB mode'
 echo '----------------------------------------------'
 bazel test $BAZEL_OPTS //...
 
-echo 'Test in Note DB mode'
+echo 'Test in Note DB mode (Disable ReviewDB)'
 echo '----------------------------------------------'
-bazel test --test_env=GERRIT_NOTEDB=READ_WRITE $BAZEL_OPTS //...
+bazel test --test_env=GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB $BAZEL_OPTS //...
+
+echo 'Test in Note DB mode (Primary)'
+echo '----------------------------------------------'
+bazel test --test_env=GERRIT_NOTEDB=PRIMARY $BAZEL_OPTS //...
 
 echo 'Test PolyGerrit locally'
 echo '----------------------------------------------'
