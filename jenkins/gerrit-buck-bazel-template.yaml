@@ -127,6 +127,8 @@
          !include-raw: gerrit-bazel-build.sh
       - shell:
          !include-raw: gerrit-bazel-test.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-cat-test-log.sh
     publishers:
       - archive:
          artifacts: >
