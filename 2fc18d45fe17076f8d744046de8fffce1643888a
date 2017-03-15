@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4a1c89eb_26a334d3",
+        "filename": "jenkins/gerrit-bazel-cat-test-log.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-15T23:58:15Z",
+      "side": 1,
+      "message": "Why that? Why not\n\nif [[ -n $(find ~/.cache/bazel/ -name \"test.log\") ]]; ?",
+      "range": {
+        "startLine": 3,
+        "startChar": 8,
+        "endLine": 3,
+        "endChar": 26
+      },
+      "revId": "2fc18d45fe17076f8d744046de8fffce1643888a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
