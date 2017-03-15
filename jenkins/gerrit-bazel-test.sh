@@ -24,7 +24,7 @@ bazel test --test_env=GERRIT_NOTEDB=PRIMARY $BAZEL_OPTS //...
 
 echo 'Test PolyGerrit locally'
 echo '----------------------------------------------'
-bash ./polygerrit-ui/app/run_test.sh
+bash ./polygerrit-ui/app/run_test.sh || touch polygerrit-failed
 
 if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
 then
@@ -32,7 +32,7 @@ then
 else
   echo 'Test PolyGerrit on Sauce Labs'
   echo '----------------------------------------------'
-  WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh
+  WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch polygerrit-failed
 fi
 
 exit 0
