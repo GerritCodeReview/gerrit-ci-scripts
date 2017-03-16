@@ -22,6 +22,30 @@
       "revId": "7953fe154fe14d2fe388710fa8d7043498b9000c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b56fa128_4bb20fec",
+        "filename": "jenkins/gerrit-bazel-cat-test-log.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-16T09:31:21Z",
+      "side": 1,
+      "message": "Yes, every build is a brand-new docker image, without any previous state recorded, starting always from the same blank image.",
+      "parentUuid": "808cf4d4_b7879934",
+      "range": {
+        "startLine": 3,
+        "startChar": 8,
+        "endLine": 3,
+        "endChar": 10
+      },
+      "revId": "7953fe154fe14d2fe388710fa8d7043498b9000c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
