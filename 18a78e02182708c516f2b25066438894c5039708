@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "04bba09f_d2e1f9b0",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-18T22:36:28Z",
+      "side": 1,
+      "message": "How can a plugin change the Gerrit\u0027s Jetty container already started?",
+      "parentUuid": "c4c67f20_9fc32517",
+      "range": {
+        "startLine": 25,
+        "startChar": 30,
+        "endLine": 25,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "529e40d8_b88a415f",
         "filename": "jenkins/gitblit-ant-build.sh",
         "patchSetId": 2
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "Oh do we? Wont gitblit overide gerrit\u0027s version?",
       "parentUuid": "529e40d8_b88a415f",
+      "range": {
+        "startLine": 26,
+        "startChar": 30,
+        "endLine": 26,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bedabd9_4ed8b896",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-18T22:36:28Z",
+      "side": 1,
+      "message": "https://gerrit.googlesource.com/plugins/gitblit/+/master/BUILD\nBazel deps aren\u0027t transitive and we don\u0027t include any older JGit version.",
+      "parentUuid": "762341b1_ab8be5e3",
       "range": {
         "startLine": 26,
         "startChar": 30,
@@ -143,6 +191,30 @@
     },
     {
       "key": {
+        "uuid": "acaa433a_5184d08d",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-18T22:36:28Z",
+      "side": 1,
+      "message": "See as below: we don\u0027t use transitive deps in Bazel.",
+      "parentUuid": "eea4989c_949e2cca",
+      "range": {
+        "startLine": 27,
+        "startChar": 30,
+        "endLine": 27,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ac93ce04_dea67c6c",
         "filename": "jenkins/gitblit-ant-build.sh",
         "patchSetId": 2
@@ -190,6 +262,30 @@
     },
     {
       "key": {
+        "uuid": "580d47c8_ea2afc59",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-18T22:36:28Z",
+      "side": 1,
+      "message": "Same as above.",
+      "parentUuid": "b7eb06e9_80eb8632",
+      "range": {
+        "startLine": 28,
+        "startChar": 30,
+        "endLine": 28,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dd4bcffa_54a61ccd",
         "filename": "jenkins/gitblit-ant-build.sh",
         "patchSetId": 2
@@ -225,6 +321,30 @@
       "side": 1,
       "message": "It will make gerrit use an older version when using this plugin.",
       "parentUuid": "dd4bcffa_54a61ccd",
+      "range": {
+        "startLine": 29,
+        "startChar": 30,
+        "endLine": 29,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6d55648_f8104fb3",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-18T22:36:28Z",
+      "side": 1,
+      "message": "The plugin renders code on the screen, doesn\u0027t send any e-mail.",
+      "parentUuid": "3cef08e5_4bba1ba2",
       "range": {
         "startLine": 29,
         "startChar": 30,
