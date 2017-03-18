@@ -22,6 +22,11 @@ then
   git config user.name "Gerrit CI"
   git config user.email "jenkins@gerritforge.com"
   git fetch gitblit refs/pull/1168/head && git merge --no-edit FETCH_HEAD
+  git fetch gitblit refs/pull/1213/head && git merge --no-edit FETCH_HEAD
+  git fetch gitblit refs/pull/1214/head && git merge --no-edit FETCH_HEAD
+  git fetch gitblit refs/pull/1215/head && git merge --no-edit FETCH_HEAD
+  git fetch gitblit refs/pull/1216/head && git merge --no-edit FETCH_HEAD
+  git fetch gitblit refs/pull/1217/head && git merge --no-edit FETCH_HEAD
 fi
 
 ant -DresourceFolderPrefix=static installMaven
