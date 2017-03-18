@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c4c67f20_9fc32517",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-18T22:25:53Z",
+      "side": 1,
+      "message": "Since gitblit 9.2 will overide 9.3 in gerrit. So basically gitblit will force gerrit to use an older version.",
+      "parentUuid": "08aac772_eb5f6427",
+      "range": {
+        "startLine": 25,
+        "startChar": 30,
+        "endLine": 25,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "529e40d8_b88a415f",
         "filename": "jenkins/gitblit-ant-build.sh",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2017-03-18T22:09:12Z",
       "side": 1,
       "message": "We already enforce the version used by Gerrit, your PR doesn\u0027t include code changes for JGit isn\u0027t it?",
+      "range": {
+        "startLine": 26,
+        "startChar": 30,
+        "endLine": 26,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "762341b1_ab8be5e3",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-18T22:25:53Z",
+      "side": 1,
+      "message": "Oh do we? Wont gitblit overide gerrit\u0027s version?",
+      "parentUuid": "529e40d8_b88a415f",
       "range": {
         "startLine": 26,
         "startChar": 30,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "eea4989c_949e2cca",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-18T22:25:53Z",
+      "side": 1,
+      "message": "But we still build against gitblit so even though we doint use it the dep in gitblit will overide gerrit\u0027s.",
+      "parentUuid": "e733fe3d_7ad5ab48",
+      "range": {
+        "startLine": 27,
+        "startChar": 30,
+        "endLine": 27,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ac93ce04_dea67c6c",
         "filename": "jenkins/gitblit-ant-build.sh",
         "patchSetId": 2
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "b7eb06e9_80eb8632",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-18T22:25:53Z",
+      "side": 1,
+      "message": "But we still build against gitblit so even though we doint use it the dep in gitblit will overide gerrit\u0027s.",
+      "parentUuid": "ac93ce04_dea67c6c",
+      "range": {
+        "startLine": 28,
+        "startChar": 30,
+        "endLine": 28,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dd4bcffa_54a61ccd",
         "filename": "jenkins/gitblit-ant-build.sh",
         "patchSetId": 2
@@ -105,6 +201,30 @@
       "writtenOn": "2017-03-18T22:09:12Z",
       "side": 1,
       "message": "Why do we care about JavaMail?",
+      "range": {
+        "startLine": 29,
+        "startChar": 30,
+        "endLine": 29,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3cef08e5_4bba1ba2",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-18T22:25:53Z",
+      "side": 1,
+      "message": "It will make gerrit use an older version when using this plugin.",
+      "parentUuid": "dd4bcffa_54a61ccd",
       "range": {
         "startLine": 29,
         "startChar": 30,
