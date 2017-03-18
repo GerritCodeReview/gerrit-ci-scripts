@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "88aa00ba_8438c14f",
+        "filename": "jenkins/gitblit-ant-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-18T22:38:08Z",
+      "side": 1,
+      "message": "Because it carn\u0027t use both versions of the same dep. It\u0027s like the its-jira problem. We coulden\u0027t use a older version of the dep in the plugin. It was forced to use the newer one.",
+      "parentUuid": "04bba09f_d2e1f9b0",
+      "range": {
+        "startLine": 25,
+        "startChar": 30,
+        "endLine": 25,
+        "endChar": 34
+      },
+      "revId": "18a78e02182708c516f2b25066438894c5039708",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "529e40d8_b88a415f",
         "filename": "jenkins/gitblit-ant-build.sh",
         "patchSetId": 2
