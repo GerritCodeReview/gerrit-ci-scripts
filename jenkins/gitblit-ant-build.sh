@@ -21,7 +21,6 @@ if [ "$GITBLIT_REF" == "refs/heads/master" ]
 then
   git config user.name "Gerrit CI"
   git config user.email "jenkins@gerritforge.com"
-  git fetch gitblit refs/pull/1168/head && git merge --no-edit FETCH_HEAD
 fi
 
 ant -DresourceFolderPrefix=static installMaven
