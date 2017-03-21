@@ -10,16 +10,31 @@
          artifacts: >
            bazel-genfiles/plugins/{name}*/*{name}*.jar*
 
+- job-template:
+    name: 'plugin-owners-{branch}'
+    description: "Plugin owners stable-2.13 branch build with BUCK\n"
+    defaults: plugin-template
+    builders:
+      - shell:
+         !include-raw: gerrit-buck-build-owners-plugin.sh
+    publishers:
+      - archive:
+         artifacts: >
+           buck-out/gen/plugins/owners*/owners*.jar*,
+
 - project:
     name: owners
     jobs:
       - 'plugin-{name}-{branch}':
           targets: 'plugins/owners/gerrit-owners:owners plugins/owners/gerrit-owners-autoassign:owners-autoassign'
           branch:
-            - stable-2.13
             - stable-2.11
             - stable-2.10
       - 'plugin-owners-bazel-{branch}':
           targets: 'plugins/owners plugins/owners-autoassign'
           branch:
             - master
+      - 'plugin-owners-{branch}':
+          targets: 'plugins/owners plugins/owners-autoassign'
+          branch:
+            - stable-2.13
