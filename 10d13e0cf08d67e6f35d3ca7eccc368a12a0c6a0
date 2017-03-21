@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8da3692_6e09ba1e",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-03-21T23:42:57Z",
+      "side": 1,
+      "message": "Should the mode change be part of this commit?",
+      "revId": "10d13e0cf08d67e6f35d3ca7eccc368a12a0c6a0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1519c7ba_e162f847",
+        "filename": "jenkins/gerrit-buck-build-owners-plugin.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-03-21T23:42:57Z",
+      "side": 1,
+      "message": "Should be Java 7 for stable-2.13",
+      "range": {
+        "startLine": 17,
+        "startChar": 14,
+        "endLine": 17,
+        "endChar": 15
+      },
+      "revId": "10d13e0cf08d67e6f35d3ca7eccc368a12a0c6a0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
