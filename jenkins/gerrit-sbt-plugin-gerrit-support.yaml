@@ -1,0 +1,20 @@
+- project:
+    name: gerrit-support-sbt
+    repo: gerrit-support
+    giturl: https://github.com/GerritForge
+    branch:
+      - master
+    jobs:
+      - 'plugin-{repo}-sbt-{branch}':
+        scm:
+          - git:
+              remotes:
+                - origin:
+                    url: https://github.com/GerritForge/{repo}
+                - gerrit:
+                    url: https://gerrit.googlesource.com/gerrit
+              branches:
+                - origin/{branch}
+              submodule:
+                recursive: true
+              skip-tag: true
