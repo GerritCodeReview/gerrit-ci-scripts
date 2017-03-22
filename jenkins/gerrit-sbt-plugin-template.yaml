@@ -1,0 +1,47 @@
+- job-template:
+    name: 'plugin-{name}-sbt-{branch}'
+    description: "Plugin {name} {branch} branch build with Sbt\n"
+    node: sbt
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/{name}
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+
+    triggers:
+      - pollscm:
+          cron: 'H/50 * * * *'
+
+    builders:
+      - shell:
+         !include-raw: gerrit-sbt-build-plugin.sh
+    publishers:
+      - archive:
+         artifacts: '**/target/**/{name}*.jar*'
+
+    wrappers:
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
