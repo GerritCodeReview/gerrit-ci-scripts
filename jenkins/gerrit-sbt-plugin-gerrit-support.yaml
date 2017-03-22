@@ -1,0 +1,8 @@
+- project:
+    name: gerrit-support-sbt
+    repo: gerrit-support
+    giturl: https://github.com/GerritForge
+    branch:
+      - master
+    jobs:
+      - 'plugin-{repo}-sbt-{branch}'
