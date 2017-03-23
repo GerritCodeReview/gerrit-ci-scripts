@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "101550f8_8decfc86",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-03-23T11:57:59Z",
+      "side": 1,
+      "message": "We should also use bazel on stable-2.14",
+      "range": {
+        "startLine": 29,
+        "startChar": 27,
+        "endLine": 29,
+        "endChar": 54
+      },
+      "revId": "6a8ca20fb4db074a1468ede7ac166506b9f02f1c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
