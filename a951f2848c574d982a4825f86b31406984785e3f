@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ab32043_ffe3f0a0",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2017-03-23T13:36:08Z",
+      "side": 1,
+      "message": "Would this also work?\n\n\"{branch}\" \u003d\u003d \"stable-2.14\" || \"{branch}\" \u003d\u003d \"master\" ? \"bazel\" : \"buck\"\n\nShould we use single quotes here as well? Seems to be the pattern in this file.",
+      "range": {
+        "startLine": 29,
+        "startChar": 13,
+        "endLine": 29,
+        "endChar": 94
+      },
+      "revId": "a951f2848c574d982a4825f86b31406984785e3f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
