@@ -46,6 +46,30 @@
       "revId": "6a8ca20fb4db074a1468ede7ac166506b9f02f1c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ae98cef_d9a4684d",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-03-23T13:04:09Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "01ea1747_c2f20be2",
+      "range": {
+        "startLine": 29,
+        "startChar": 27,
+        "endLine": 29,
+        "endChar": 54
+      },
+      "revId": "6a8ca20fb4db074a1468ede7ac166506b9f02f1c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
