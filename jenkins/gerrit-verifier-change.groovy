@@ -197,24 +197,17 @@ def buildChange(change) {
   println "cwd: $cwd"
   println "ref: $ref"
 
-  if(branch == "master") {
-    sh(cwd, "git fetch origin $ref")
-    sh(cwd, "git checkout FETCH_HEAD")
-    sh(cwd, "git fetch origin $branch")
-    sh(cwd, 'git config user.name "Jenkins Build"')
-    sh(cwd, 'git config user.email "jenkins@gerritforge.com"')
-    sh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
+  sh(cwd, "git fetch origin $ref")
+  sh(cwd, "git checkout FETCH_HEAD")
+  sh(cwd, "git fetch origin $branch")
+  sh(cwd, 'git config user.name "Jenkins Build"')
+  sh(cwd, 'git config user.email "jenkins@gerritforge.com"')
+  sh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 
-    if(new java.io.File("$cwd/BUCK").exists()) {
-      tools += ["buck"]
-    }
-
-    if(new java.io.File("$cwd/BUILD").exists()) {
-      tools += ["bazel"]
-    }
-  }
-  else {
+  if(new java.io.File("$cwd/BUCK").exists()) {
     tools += ["buck"]
+  } else if(new java.io.File("$cwd/BUILD").exists()) {
+    tools += ["bazel"]
   }
 
   println "Building Change " + changeUrl
