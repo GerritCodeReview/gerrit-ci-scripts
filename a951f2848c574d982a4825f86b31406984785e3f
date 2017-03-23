@@ -22,6 +22,30 @@
       "revId": "a951f2848c574d982a4825f86b31406984785e3f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d2d7149f_5216cd97",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-23T13:47:45Z",
+      "side": 1,
+      "message": "Best and most readable would be:\n\n  type \u003d \u0027{branch}\u0027 in [ \u0027master\u0027, \u0027stable-2.14\u0027 ] ? \u0027bazel\u0027 : \u0027buck\u0027",
+      "parentUuid": "1ab32043_ffe3f0a0",
+      "range": {
+        "startLine": 29,
+        "startChar": 13,
+        "endLine": 29,
+        "endChar": 94
+      },
+      "revId": "a951f2848c574d982a4825f86b31406984785e3f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
