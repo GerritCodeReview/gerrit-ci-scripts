@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "0dae30aa_301483b2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-23T23:47:41Z",
+      "side": 1,
+      "message": "Yes, we should fix Buck :-( but as we moved on to Bazel, which doesn\u0027t have the problem at all, it is best to just workaround here the problem.",
+      "parentUuid": "45da5c02_0c7f6d9f",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 35
+      },
+      "revId": "d72478a56eb64ce157ffeb7ee8768b7490551b67",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb92acaf_d05a3ffb",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
