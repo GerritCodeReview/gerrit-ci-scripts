@@ -22,6 +22,7 @@ for JAR in $(find buck-out/gen/plugins/ -regex '.*/owners\(-autoassign\)*\.jar')
 do
     PLUGIN_VERSION=$(git describe  --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
+    zip -d $JAR META-INF/services/com.fasterxml.jackson.core.JsonFactory
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=buck-out/gen/plugins/{name}/$(basename $JAR)
     [ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
