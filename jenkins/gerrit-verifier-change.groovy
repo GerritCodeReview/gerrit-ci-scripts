@@ -71,17 +71,23 @@ def gerritPost(url, jsonPayload) {
     throw new IOException(error)
   }
 
-  if(!serr.toString().trim().isEmpty()) {
+  if(!serr.toString().trim().isEmpty() && verbose) {
     println "CURL/OUTPUT> $serr"
   }
 
   return 0
 }
 
-def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
+def gerritReview(changeNum, sha1, verified) {
   if(verified == 0) {
     return;
   }
+
+  def resTicks = [ 'ABORTED':'\u26aa', 'SUCCESS':'\u2705', 'FAILURE':'\u274c' ]
+
+  def msgBody = Globals.buildsList.collect {
+    n, v -> "${resTicks[v.getResult().toString()]} $n : ${v.getResult()}\n    (${v.getBuildUrl() + "console"})"
+  } .join('\n')
 
   def addReviewerExit = gerritPost("a/changes/" + changeNum + "/reviewers", '{ "reviewer" : "' +
                                    Globals.gerritReviewer + "\" , ${Globals.addReviewerTag} }")
@@ -91,7 +97,7 @@ def gerritReview(buildUrl,changeNum, sha1, verified, msgPrefix) {
   }
 
   def jsonPayload = '{"labels":{"Code-Review":0,"Verified":' + verified + '},' +
-                    ' "message": "' + msgPrefix + 'Gerrit-CI Build: ' + buildUrl + '", ' +
+                    ' "message": "' + msgBody + '", ' +
                     ' "notify" : "' + (verified < 0 ? "OWNER": "OWNER_REVIEWERS") + "\" , ${Globals.addVerifiedTag} }"
   def addVerifiedExit = gerritPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
                                    jsonPayload)
@@ -254,7 +260,7 @@ def buildChange(change) {
 
   def res = buildsWithResults.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
 
-  gerritReview(build.startJob.getBuildUrl() + "console", changeNum, sha1, res, "")
+  gerritReview(changeNum, sha1, res)
 
   switch(res) {
     case 0: build.state.result = ABORTED
