@@ -48,9 +48,7 @@ class Globals {
 def gerritPost(url, jsonPayload) {
   def error = ""
   def gerritPostUrl = Globals.gerrit + url
-  def curl = ['curl', '--silent',
-  '--output', '/dev/stderr',
-  '--write-out', '%{http_code}',
+  def curl = ['curl',
   '-n', '-s', '-S',
   '-X', 'POST', '-H', 'Content-Type: application/json',
   '--data-binary', jsonPayload,
@@ -66,15 +64,12 @@ def gerritPost(url, jsonPayload) {
     println error
     throw new IOException(error)
   }
-  def httpStatus = sout.toString().trim()
-  if(httpStatus != "200") {
-    error = "$curl **FAILED** with HTTP STATUS = $httpStatus"
-    println error
-    throw new IOException(error)
-  }
 
+  if(!sout.toString().trim().isEmpty() && verbose) {
+    println "CURL/OUTPUT> $sout"
+  }
   if(!serr.toString().trim().isEmpty() && verbose) {
-    println "CURL/OUTPUT> $serr"
+    println "CURL/ERROR> $serr"
   }
 
   return 0
@@ -92,7 +87,7 @@ def gerritReview(changeNum, sha1, verified) {
   } sort { a,b -> a['res'].compareTo(b['res']) }
 
   def msgBody = msgList.collect {
-    "${resTicks[it.res]} ${it.type} : ${it.res}\n    (${v.url})"
+    "${resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
   } .join('\n')
 
   def addReviewerExit = gerritPost("a/changes/" + changeNum + "/reviewers", '{ "reviewer" : "' +
