@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d17c976b_9ad33e7f",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-03-27T15:51:58Z",
+      "side": 1,
+      "message": "Oops, this wasn\u0027t related ... let me fix in on the previous change.",
+      "range": {
+        "startLine": 90,
+        "startChar": 56,
+        "endLine": 90,
+        "endChar": 58
+      },
+      "revId": "91cdf3e2b2cf0783806637c4ade3047bcf4e3c74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
