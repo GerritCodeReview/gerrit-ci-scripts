@@ -15,6 +15,11 @@ echo 'Test in default DB mode'
 echo '----------------------------------------------'
 bazel test $BAZEL_OPTS //...
 
+if [ "{branch}"!="master" ]
+then
+  exit 0
+fi
+
 echo 'Test in Note DB mode (Disable ReviewDB)'
 echo '----------------------------------------------'
 bazel test --test_env=GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB $BAZEL_OPTS //...
