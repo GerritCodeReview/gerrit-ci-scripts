@@ -11,7 +11,7 @@ then
   echo '----------------------------------------------'
   buck test --no-results-cache --exclude flaky
 
-  if [ ! -d gerrit-server/src/main/java/com/google/gerrit/server/notedb ]
+  if [ "{branch}"!="master" ]
   then
     exit 0
   fi
