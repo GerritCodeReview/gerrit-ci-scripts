@@ -1,0 +1,6 @@
+- project:
+    name: analytics
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-sbt-{branch}'
