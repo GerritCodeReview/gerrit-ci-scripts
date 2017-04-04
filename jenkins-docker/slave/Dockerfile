@@ -1,11 +1,12 @@
-FROM ubuntu:15.04
+FROM ubuntu:16.04
 
 USER root
 
-RUN echo "deb http://al.archive.ubuntu.com/ubuntu/ vivid universe" >> /etc/apt/sources.list
-
-RUN apt-get update && apt-get install -y default-jdk openjdk-7-jdk openjdk-8-jdk && \
+RUN echo "deb http://al.archive.ubuntu.com/ubuntu/ xenial universe" >> /etc/apt/sources.list
+RUN apt-get update && apt-get install -y software-properties-common default-jdk openjdk-8-jdk && \
     update-java-alternatives -v -s java-1.8.0-openjdk-amd64
+# Needed to support java 7 for older gerrit versions that used buck.
+RUN add-apt-repository ppa:openjdk-r/ppa && apt-get update && apt-get install -y openjdk-7-jdk
 COPY set-java.sh /usr/bin/
 
 RUN apt-get update && apt-get install -y \
@@ -58,7 +59,9 @@ RUN apt-get install -y nodejs
 
 RUN npm install -g web-component-tester eslint eslint-config-google eslint-plugin-html polylint
 RUN curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+RUN sh -c 'rm -f /etc/apt/sources.list.d/google-chrome.list'
+RUN sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
 RUN apt-get update && apt-get install -y google-chrome-stable
 
 COPY wct.conf.json /home/jenkins/
