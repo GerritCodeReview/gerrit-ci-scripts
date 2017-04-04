@@ -7,9 +7,12 @@ build:  id_rsa.pub
 id_rsa.pub: ../master/id_rsa.pub
 	cp $? $@
 
+publish:
+	docker push ${IMAGE}
+
 clean:
 	docker rmi -f ${IMAGE}
 	-rm -f id_rsa*
 
-.PHONY: clean id_rsa.pub
+.PHONY: clean id_rsa.pub publish
 

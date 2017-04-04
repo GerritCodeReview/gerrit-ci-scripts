@@ -6,8 +6,11 @@ IMAGE=gerritforge/gerrit-ci-slave-bazel-sbt
 build:
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
 
+publish:
+	docker push ${IMAGE}
+
 clean:
 	docker rmi -f ${IMAGE}
 
-.PHONY: clean image
+.PHONY: clean image publish
 
