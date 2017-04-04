@@ -26,6 +26,9 @@ build: id_rsa
         --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
         --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} -t ${IMAGE} .
 
+publish:
+	docker push ${IMAGE}
+
 clean:
 	-docker rmi -f ${IMAGE}
 	-rm -f id_rsa*
@@ -40,5 +43,5 @@ status:
           echo -e "\n${IMAGE} is *STOPPED*\n") || \
           echo -e "\n${IMAGE} is *RUNNING*\n"
 
-.PHONY: clean image
+.PHONY: clean image publish
 
