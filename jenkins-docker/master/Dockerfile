@@ -2,8 +2,8 @@ FROM jenkins:latest
 
 USER root
 
-ARG JENKINS_WAR_VER=2.15
-ARG JENKINS_WAR_SHA=9d9c237c4a573f415679f36421de7c0b57fc2d3e
+ARG JENKINS_WAR_VER=2.46.1
+ARG JENKINS_WAR_SHA=e551de2aa557071a69bf31b61f74d77ea6cba0c7
 
 # could use ADD but this one does not check Last-Modified header
 # see https://github.com/docker/docker/issues/8331
@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y \
     \
     mkdir -p /opt/ && \
     git clone https://git.openstack.org/openstack-infra/jenkins-job-builder /opt/jenkins_job_builder && \
-    cd /opt/jenkins_job_builder && git checkout 1.6.1 && \
+    cd /opt/jenkins_job_builder && git checkout 1.6.2 && \
     pip install /opt/jenkins_job_builder && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
@@ -100,5 +100,4 @@ RUN apt-get install -y openjdk-8-jdk && \
     update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 USER root
-
 
