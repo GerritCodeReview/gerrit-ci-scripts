@@ -1,8 +1,8 @@
-FROM ubuntu:15.04
+FROM ubuntu:16.04
 
 USER root
 
-RUN echo "deb http://al.archive.ubuntu.com/ubuntu/ vivid universe" >> /etc/apt/sources.list
+RUN echo "deb http://al.archive.ubuntu.com/ubuntu/ xenial universe" >> /etc/apt/sources.list
 
 RUN apt-get update && apt-get install -y default-jdk openjdk-7-jdk openjdk-8-jdk && \
     update-java-alternatives -v -s java-1.8.0-openjdk-amd64
