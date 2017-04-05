@@ -46,6 +46,30 @@
       "revId": "adeff48870af59e7c898df6ca2d437aa00805283",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "718c1f19_b9bbf548",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-04-05T22:50:18Z",
+      "side": 1,
+      "message": "I was meaning to check ./tools/maven/api.sh deploy if that can run. As does the deploy command exist in ./tools/maven/api.sh?",
+      "parentUuid": "70e15ad9_1169d220",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "adeff48870af59e7c898df6ca2d437aa00805283",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
