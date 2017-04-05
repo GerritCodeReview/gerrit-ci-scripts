@@ -219,7 +219,7 @@ def buildChange(change) {
 
   println "Building Change " + changeUrl
 
-  if(branch == "master") {
+  if(branch == "master" || branch == "stable-2.14") {
     modes += "disableChangeReviewDb"
     modes += "notedbPrimary"
 
