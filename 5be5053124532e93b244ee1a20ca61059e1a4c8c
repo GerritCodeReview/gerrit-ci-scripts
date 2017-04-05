@@ -22,6 +22,30 @@
       "revId": "5be5053124532e93b244ee1a20ca61059e1a4c8c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "911ac9c4_4a8dcc35",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-automerger.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-04-05T21:11:55Z",
+      "side": 1,
+      "message": "I will drop it for 2.13 for now.",
+      "parentUuid": "d067a474_4542cd6d",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 25
+      },
+      "revId": "5be5053124532e93b244ee1a20ca61059e1a4c8c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
