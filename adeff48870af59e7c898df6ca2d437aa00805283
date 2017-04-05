@@ -22,6 +22,30 @@
       "revId": "adeff48870af59e7c898df6ca2d437aa00805283",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70e15ad9_1169d220",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-05T22:48:38Z",
+      "side": 1,
+      "message": "Why shouldn\u0027t be there?",
+      "parentUuid": "eb2f38c1_67c260d2",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "adeff48870af59e7c898df6ca2d437aa00805283",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
