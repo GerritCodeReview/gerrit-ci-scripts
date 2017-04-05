@@ -1,0 +1,6 @@
+- project:
+    name: automerger
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
