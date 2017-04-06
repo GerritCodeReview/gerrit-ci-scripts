@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eec73da2_0adb6df4",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-reparent.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-06T07:07:20Z",
+      "side": 1,
+      "message": "Gerrit was on Buck on 2.13 and there is no BUCK file for reparent :-(",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 25
+      },
+      "revId": "795af0389be8465d47bc648a60d5d83677a0a3ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e82b113a_55fc92d5",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-wip.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-06T07:07:20Z",
+      "side": 1,
+      "message": "Not compatible with 2.13:\n00:02:54.926 /home/jenkins/workspace/plugin-wip-stable-2.13/plugins/wip/src/main/java/com/googlesource/gerrit/plugins/wip/BaseAction.java:109: error: cannot find symbol\n00:02:54.926             ChangeUtil.messageUuid()),",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 25
+      },
+      "revId": "795af0389be8465d47bc648a60d5d83677a0a3ff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
