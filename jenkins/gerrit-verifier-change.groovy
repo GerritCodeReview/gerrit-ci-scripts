@@ -218,6 +218,7 @@ def buildChange(change) {
   }
 
   println "Building Change " + changeUrl
+  build.setDescription("""<a href='$changeUrl' target='_blank'>Change #$changeNum</a>""")
 
   if(branch == "master" || branch == "stable-2.14") {
     modes += "disableChangeReviewDb"
