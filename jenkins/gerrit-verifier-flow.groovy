@@ -33,7 +33,7 @@ class Globals {
   static int numRetryBuilds = 3
   static int myAccountId = 1022687
   static int waitForResultTimeout = 10000
-  static int maxBuilds = 4
+  static int maxBuilds = 15
   static String verifierJobName = "Gerrit-verifier-change"
 }
 
