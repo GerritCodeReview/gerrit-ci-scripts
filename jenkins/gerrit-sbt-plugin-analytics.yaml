@@ -2,5 +2,6 @@
     name: analytics
     branch:
       - master
+      - stable-2.14
     jobs:
       - 'plugin-{name}-sbt-{branch}'
