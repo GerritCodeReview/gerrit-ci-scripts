@@ -8,4 +8,5 @@
             - stable-2.11
       - 'plugin-its-{name}-bazel-{branch}':
           branch:
+            - stable-2.14
             - master
