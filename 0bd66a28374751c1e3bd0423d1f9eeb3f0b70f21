@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "28637692_db407116",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-26T15:47:09Z",
+      "side": 1,
+      "message": "Where is this getting generated? Can\u0027t find it in the bazel output directory:\n\n  $ find bazel-genfiles -name \u0027javamelody-deps_deploy.jar\u0027",
+      "range": {
+        "startLine": 20,
+        "startChar": 31,
+        "endLine": 20,
+        "endChar": 57
+      },
+      "revId": "0bd66a28374751c1e3bd0423d1f9eeb3f0b70f21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
