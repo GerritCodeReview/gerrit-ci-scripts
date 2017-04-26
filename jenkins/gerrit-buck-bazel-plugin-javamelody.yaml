@@ -18,5 +18,4 @@
             - stable-2.14
           targets: >
             plugins/javamelody:javamelody-deps
-            plugins/javamelody:javamelody-datasource-interceptor
             plugins/javamelody:javamelody \
