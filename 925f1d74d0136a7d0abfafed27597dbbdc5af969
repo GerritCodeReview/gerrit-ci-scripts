@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54fea437_09082738",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-04-26T15:10:40Z",
+      "side": 1,
+      "message": "This should be:\n\n  plugins/javamelody:javamelody-deps_deploy.jar",
+      "range": {
+        "startLine": 20,
+        "startChar": 12,
+        "endLine": 20,
+        "endChar": 46
+      },
+      "revId": "925f1d74d0136a7d0abfafed27597dbbdc5af969",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0c460e89_eecb6993",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-04-26T15:10:40Z",
+      "side": 1,
+      "message": "This doesn\u0027t exist any more.",
+      "range": {
+        "startLine": 21,
+        "startChar": 12,
+        "endLine": 21,
+        "endChar": 68
+      },
+      "revId": "925f1d74d0136a7d0abfafed27597dbbdc5af969",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
