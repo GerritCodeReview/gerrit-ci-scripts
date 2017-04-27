@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1badf811_6fe56b32",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-27T12:40:54Z",
+      "side": 1,
+      "message": "This is causing the plugin to be rebuilt too often, even when it isn\u0027t needed. Ideally it should depend on {gerrit-branch} but Jenkins doesn\u0027t support multiple SCMs definitions.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 58
+      },
+      "revId": "974fc71b40d102c53ef46e255f0b02cb16aa0529",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
