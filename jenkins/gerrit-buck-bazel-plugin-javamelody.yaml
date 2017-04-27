@@ -1,3 +1,15 @@
+- job-template:
+    name: 'plugin-javamelody-bazel-{branch}'
+    description: "JavaMelody plugin {branch} branch build with Bazel\n"
+    defaults: plugin-template
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/javamelody/javamelody.jar*,bazel-bin/plugins/javamelody/javamelody-deps.jar
+
 - project:
     name: javamelody
     jobs:
@@ -12,11 +24,10 @@
             plugins/javamelody:javamelody-deps
             plugins/javamelody:javamelody-datasource-interceptor
             plugins/javamelody:javamelody \
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-javamelody-bazel-{branch}':
           branch:
             - master
             - stable-2.14
           targets: >
-            plugins/javamelody:javamelody-deps
-            plugins/javamelody:javamelody-datasource-interceptor
+            plugins/javamelody:javamelody-deps_deploy.jar
             plugins/javamelody:javamelody \
