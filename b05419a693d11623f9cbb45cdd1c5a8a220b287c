@@ -22,6 +22,53 @@
       "revId": "b05419a693d11623f9cbb45cdd1c5a8a220b287c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "52085b78_bc5ceb27",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-04-28T05:22:26Z",
+      "side": 1,
+      "message": "Oh, this is wrong. it should be:\n\n  bazel-bin/plugins/javamelody/javamelody-deps_deploy.jar",
+      "parentUuid": "be780f69_4ce19a22",
+      "range": {
+        "startLine": 11,
+        "startChar": 61,
+        "endLine": 11,
+        "endChar": 90
+      },
+      "revId": "b05419a693d11623f9cbb45cdd1c5a8a220b287c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14762783_f922ef8a",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-04-28T05:22:26Z",
+      "side": 1,
+      "message": "This is wrong. This should be:\n\n  plugins/javamelody:javamelody-deps_deploy.jar\n\nThe original rule would build shell script and not shaded JAR.",
+      "range": {
+        "startLine": 32,
+        "startChar": 12,
+        "endLine": 32,
+        "endChar": 46
+      },
+      "revId": "b05419a693d11623f9cbb45cdd1c5a8a220b287c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
