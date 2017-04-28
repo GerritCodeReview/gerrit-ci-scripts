@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f51b7e6_9bc09740",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-04-28T22:49:02Z",
+      "side": 1,
+      "message": "I had to do this as i was getting this warnning\n\n\nProcessing triggers for libc-bin (2.23-0ubuntu7) ...\nW: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/google-chrome.list:3 and /etc/apt/sources.list.d/google.list:1\nW: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/google-chrome.list:3 and /etc/apt/sources.list.d/google.list:1\n\n\nwhen apt-getting",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 57
+      },
+      "revId": "08ac9d78bf6acc6a61b66b5b90031dd6565f9f11",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
