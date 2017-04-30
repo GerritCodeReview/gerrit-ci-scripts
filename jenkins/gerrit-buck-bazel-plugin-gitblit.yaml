@@ -52,14 +52,26 @@
          artifacts: 'buck-out/gen/plugins/gitblit/*gitblit*.jar*'
 
 - job-template:
-    name: 'plugin-gitblit-bazel-{branch}'
-    description: "GitBlit plugin {branch} branch build with Bazel\n"
+    name: 'plugin-gitblit-bazel-{branch}-{gerrit-branch}'
+    description: "GitBlit plugin {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
     defaults: plugin-gitblit
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/gitblit
+           - gitblit:
+               url: https://github.com/gitblit/gitblit.git
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
     builders:
       - shell:
          !include-raw: gitblit-ant-build.sh
       - shell:
-         !include-raw: gerrit-bazel-build-plugin.sh
+         !include-raw: gerrit-bazel-build-plugin-branch.sh
     publishers:
       - archive:
          artifacts: 'bazel-genfiles/plugins/gitblit/*gitblit*.jar*'
@@ -75,8 +87,11 @@
             - stable-2.12
             - stable-2.11
             - stable-2.10
-      - 'plugin-gitblit-bazel-{branch}':
+      - 'plugin-gitblit-bazel-{branch}-{gerrit-branch}':
           targets: plugins/gitblit
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-2.14
 
