@@ -1,6 +1,9 @@
 - project:
     name: egit
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-2.14
