@@ -1,9 +1,18 @@
 - project:
     name: oauth
     jobs:
-      - 'plugin-{name}-{branch}':
+      - 'plugin-{name}-{branch}-{gerrit-branch}':
           branch:
             - stable-2.10
-      - 'plugin-{name}-bazel-{branch}':
+          targets: plugins/oauth:gerrit-oauth-provider
+          gerrit-branch:
+            - stable-2.10
+            - stable-2.11
+            - stable-2.12
+            - stable-2.13
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-2.14
