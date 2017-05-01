@@ -22,6 +22,30 @@
       "revId": "7ec56b685240d2766adc5e28d4295581a7f7a030",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "134adac8_d95a6689",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-oauth.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-05-01T08:44:29Z",
+      "side": 1,
+      "message": "This means: use master branch for building both master and stable-2.14",
+      "parentUuid": "7e707670_e885c792",
+      "range": {
+        "startLine": 18,
+        "startChar": 12,
+        "endLine": 18,
+        "endChar": 25
+      },
+      "revId": "7ec56b685240d2766adc5e28d4295581a7f7a030",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
