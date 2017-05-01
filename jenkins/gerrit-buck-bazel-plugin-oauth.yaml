@@ -4,6 +4,28 @@
       - 'plugin-{name}-{branch}':
           branch:
             - stable-2.10
-      - 'plugin-{name}-bazel-{branch}':
+          targets: plugins/oauth:gerrit-oauth-provider
+      - 'plugin-{name}-{tag}-{gerrit-branch}':
+          tag:
+            - v2.11.3
+          gerrit-branch:
+            - stable-2.11
+          targets: plugins/oauth:gerrit-oauth-provider
+      - 'plugin-{name}-{tag}-{gerrit-branch}':
+          tag:
+            - v2.12.4
+          gerrit-branch:
+            - stable-2.12
+          targets: plugins/oauth:gerrit-oauth-provider
+      - 'plugin-{name}-{tag}-{gerrit-branch}':
+          tag:
+            - v2.13.2
+          gerrit-branch:
+            - stable-2.13
+          targets: plugins/oauth:gerrit-oauth-provider
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-2.14
