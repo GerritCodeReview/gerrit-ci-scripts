@@ -48,6 +48,26 @@
            buck-out/gen/plugins/{name}/*{name}*.jar*,
 
 - job-template:
+    name: 'plugin-{name}-{branch}-{gerrit-branch}'
+    description: "Plugin {name} {branch} branch BUCK build for Gerrit {gerrit-branch}\n"
+    defaults: plugin-template
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/{name}
+         branches:
+           - origin/{branch}
+         skip-tag: true
+    builders:
+      - shell:
+         !include-raw: gerrit-buck-build-plugin-branch.sh
+    publishers:
+      - archive:
+         artifacts: >
+           buck-out/gen/plugins/{name}/*{name}*.jar*,
+
+- job-template:
     name: 'plugin-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} branch build with Bazel\n"
     defaults: plugin-template
