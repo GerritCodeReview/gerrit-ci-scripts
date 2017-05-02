@@ -15,7 +15,15 @@ fi
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
-bazel build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+BUILD_TARGETS=$(echo "$TARGETS" | grep -v test)
+TEST_TARGETS=$(echo "$TARGETS" | grep test)
+
+bazel build --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_TARGETS
+
+if [ "$TEST_TARGETS" != "" ]
+then
+    bazel test --spawn_strategy=standalone --genrule_strategy=standalone $TEST_TARGETS
+fi
 
 for JAR in $(find bazel-genfiles/plugins/{name} -name {name}*.jar)
 do
