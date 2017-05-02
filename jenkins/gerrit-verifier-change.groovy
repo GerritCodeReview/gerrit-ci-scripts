@@ -222,7 +222,7 @@ def buildChange(change) {
 
   if(branch == "master" || branch == "stable-2.14") {
     modes += "disableChangeReviewDb"
-    modes += "notedbPrimary"
+    modes += "fused"
 
     def changedFiles = getChangedFiles(changeNum, sha1)
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") }
