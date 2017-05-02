@@ -10,17 +10,17 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_timeout 3600 \
                    --test_tag_filters=-elastic,-flaky"
 
-echo 'Test in default DB mode'
+echo 'Test in ReviewDb mode'
 echo '----------------------------------------------'
 bazel test $BAZEL_OPTS //...
 
-echo 'Test in Note DB mode (Disable ReviewDB)'
+echo 'Test in NoteDb mode (Disable ReviewDb)'
 echo '----------------------------------------------'
 bazel test --test_env=GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB $BAZEL_OPTS //...
 
-echo 'Test in Note DB mode (Primary)'
+echo 'Test in NoteDb mode (Fused)'
 echo '----------------------------------------------'
-bazel test --test_env=GERRIT_NOTEDB=PRIMARY $BAZEL_OPTS //...
+bazel test --test_env=GERRIT_NOTEDB=FUSED $BAZEL_OPTS //...
 
 echo 'Test PolyGerrit locally'
 echo '----------------------------------------------'

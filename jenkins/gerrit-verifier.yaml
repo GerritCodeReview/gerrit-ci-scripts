@@ -54,8 +54,8 @@
           name: MODE
           choices:
             - reviewdb
-            - notedbPrimary
             - disableChangeReviewDb
+            - fused
             - polygerrit
           description: "Type of verification to execute"
     properties:
