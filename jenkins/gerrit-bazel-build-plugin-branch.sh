@@ -20,7 +20,14 @@ bazel build --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_TAR
 
 if TEST_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep test)
 then
-    bazel test --spawn_strategy=standalone --genrule_strategy=standalone $TEST_TARGETS
+    BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
+                   --test_output errors \
+                   --test_summary detailed --flaky_test_attempts 3 \
+                   --test_verbose_timeout_warnings --build_tests_only \
+                   --nocache_test_results \
+                   --test_timeout 3600 \
+                   --test_tag_filters=-elastic,-flaky"
+    bazel test $BAZEL_OPTS $TEST_TARGETS
 fi
 
 for JAR in $(find bazel-genfiles/plugins/{name} -name {name}*.jar)
