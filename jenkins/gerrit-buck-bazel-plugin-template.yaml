@@ -54,7 +54,9 @@
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-plugin-info.sh
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/{name}/*{name}*.jar*
+           bazel-genfiles/plugins/{name}/*{name}*.jar*,bazel-genfiles/plugins/{name}/{name}.json
