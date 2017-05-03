@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ca9230b_919ed32c",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-phabricator.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-05-03T09:50:38Z",
+      "side": 1,
+      "message": "Do we still want to do that with it doing it below?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "2236b7352bf12f7cb577022366e78ce273b465f9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
