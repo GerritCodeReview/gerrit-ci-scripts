@@ -55,10 +55,12 @@
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-its-plugin.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-its-plugin-info.sh
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/its-{name}/its-{name}.jar*
+           bazel-genfiles/plugins/its-{name}/its-{name}.jar*, bazel-genfiles/plugins/its-{name}/its-{name}.json
 
 - job-template:
     name: 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}'
@@ -77,7 +79,9 @@
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-its-plugin-branch.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-its-plugin-info.sh
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/its-{name}/its-{name}.jar*
+           bazel-genfiles/plugins/its-{name}/its-{name}.jar*, bazel-genfiles/plugins/its-{name}/its-{name}.json
