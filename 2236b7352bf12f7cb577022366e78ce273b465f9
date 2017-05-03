@@ -22,6 +22,30 @@
       "revId": "2236b7352bf12f7cb577022366e78ce273b465f9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a12403e_749fe273",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-phabricator.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-05-03T19:48:52Z",
+      "side": 1,
+      "message": "You have to specify the two coordinates of matrix:\n- plugins versions\n- gerrit versions\n\nThen JJB will compute all the possible combinations :-)",
+      "parentUuid": "4ca9230b_919ed32c",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "2236b7352bf12f7cb577022366e78ce273b465f9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
