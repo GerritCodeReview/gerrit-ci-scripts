@@ -14,13 +14,11 @@ then
 fi
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
-
 BUILD_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep -v test)
-TEST_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep test)
 
 bazel build --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_TARGETS
 
-if [ "$TEST_TARGETS" != "" ]
+if TEST_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep test)
 then
     bazel test --spawn_strategy=standalone --genrule_strategy=standalone $TEST_TARGETS
 fi
