@@ -23,4 +23,8 @@ do
   jar ufm $jar MANIFEST.MF && rm MANIFEST.MF
 
   echo "$PLUGIN_VERSION" > $jar-version
+
+  curl -L https://gerrit-review.googlesource.com/projects/plugins%2F{repo}/config | \
+     tail -n +2 > $(dirname $jar)/$(basename $jar .jar).json
+
 done

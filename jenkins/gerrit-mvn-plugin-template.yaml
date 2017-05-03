@@ -40,7 +40,7 @@
          !include-raw: gerrit-mvn-build-plugin.sh
     publishers:
       - archive:
-         artifacts: '**/target/{repo}*.jar*'
+         artifacts: '**/target/{repo}*.jar*,**/target/{repo}*.json'
 
     wrappers:
       - raw:
