@@ -1,0 +1,9 @@
+- project:
+    name: out-of-the-box
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - master
+            - stable-2.14
