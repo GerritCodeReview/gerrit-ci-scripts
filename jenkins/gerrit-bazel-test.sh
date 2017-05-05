@@ -14,13 +14,16 @@ echo 'Test in ReviewDb mode'
 echo '----------------------------------------------'
 bazel test $BAZEL_OPTS //...
 
-echo 'Test in NoteDb mode (Disable ReviewDb)'
-echo '----------------------------------------------'
-bazel test --test_env=GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB $BAZEL_OPTS //...
+if [ "{branch}" == master ]
+then
+  echo 'Test in NoteDb mode (Disable ReviewDb)'
+  echo '----------------------------------------------'
+  bazel test --test_env=GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB $BAZEL_OPTS //...
 
-echo 'Test in NoteDb mode (Fused)'
-echo '----------------------------------------------'
-bazel test --test_env=GERRIT_NOTEDB=FUSED $BAZEL_OPTS //...
+  echo 'Test in NoteDb mode (Fused)'
+  echo '----------------------------------------------'
+  bazel test --test_env=GERRIT_NOTEDB=FUSED $BAZEL_OPTS //...
+fi
 
 echo 'Test PolyGerrit locally'
 echo '----------------------------------------------'
