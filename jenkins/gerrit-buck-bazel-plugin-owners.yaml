@@ -11,6 +11,20 @@
            bazel-genfiles/plugins/{name}*/*{name}*.jar*
 
 - job-template:
+    name: 'plugin-owners-bazel-{branch}-{gerrit-branch}'
+    description: "Plugin owners {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
+    defaults: plugin-template
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build-owners-plugin-branch.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-plugin-info.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/{name}*/*{name}*.jar*
+
+- job-template:
     name: 'plugin-owners-{branch}'
     description: "Plugin owners stable-2.13 branch build with BUCK\n"
     defaults: plugin-template
@@ -30,11 +44,14 @@
           branch:
             - stable-2.11
             - stable-2.10
-      - 'plugin-owners-bazel-{branch}':
-          targets: 'plugins/owners plugins/owners-autoassign'
-          branch:
-            - master
       - 'plugin-owners-{branch}':
           targets: 'plugins/owners plugins/owners-autoassign'
           branch:
             - stable-2.13
+      - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
+          targets: 'plugins/owners plugins/owners-autoassign'
+          branch:
+            - master
+          gerrit-branch:
+            - master
+            - stable-2.14
