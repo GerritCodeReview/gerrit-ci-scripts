@@ -8,7 +8,7 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/javamelody/javamelody.jar*,bazel-bin/plugins/javamelody/javamelody-deps.jar
+           bazel-genfiles/plugins/javamelody/javamelody.jar*,bazel-bin/plugins/javamelody/javamelody-deps_deploy.jar
 
 - project:
     name: javamelody
