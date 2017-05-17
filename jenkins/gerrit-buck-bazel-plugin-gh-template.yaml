@@ -57,3 +57,23 @@
       - archive:
          artifacts: >
            bazel-genfiles/plugins/{name}/{name}.jar*
+
+- job-template:
+    name: 'plugin-{name}-gh-{branch}-bazel-{gerrit-branch}'
+    description: "Plugin {name} {branch} branch build with Bazel for Gerrit {gerrit-branch}\n(plugin owned by {organization} and hosted on GitHub)\n"
+    defaults: plugin-gh-template
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://github.com/{organization}/{repo}
+         branches:
+           - origin/{branch}
+         skip-tag: true
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin-branch.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/{name}/{name}.jar*
