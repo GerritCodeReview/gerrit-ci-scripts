@@ -47,13 +47,15 @@
            buck-out/gen/plugins/{name}/{name}.jar*
 
 - job-template:
-    name: 'plugin-{name}-gh-{branch}-bazel'
+    name: 'plugin-{name}-gh-bazel-{branch}'
     description: "Plugin {name} {branch} branch build with Bazel owned by {organization} and hosted on GitHub\n"
     defaults: plugin-gh-template
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-plugin-info.sh
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/{name}/{name}.jar*
+           bazel-genfiles/plugins/{name}/{name}.jar*,bazel-genfiles/plugins/{name}/{name}.json
