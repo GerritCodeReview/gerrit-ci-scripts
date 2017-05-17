@@ -2,11 +2,17 @@
     name: automerge-plugin
     repo: automerge-plugin
     organization: GerritForge
-    branch:
-      - master
-      - stable-2.12
-      - stable-2.11
-      - stable-2.10
     jobs:
-      - 'plugin-{name}-gh-{branch}'
+      - 'plugin-{name}-gh-{branch}':
+          branch:
+            - master
+            - stable-2.12
+            - stable-2.11
+            - stable-2.10
+      - 'plugin-{name}-gh-{branch}-bazel-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - master
+            - stable-2.14
 
