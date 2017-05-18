@@ -34,6 +34,9 @@ fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
 then
+  echo 'Running lint tests...'
+  bazel test polygerrit-ui/app:lint_test
+
   if [ -z "$DISPLAY" ]
   then
     echo 'Not running local tests because env var "DISPLAY" is not set.'
