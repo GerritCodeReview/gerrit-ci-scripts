@@ -39,6 +39,7 @@ then
     echo 'Not running local tests because env var "DISPLAY" is not set.'
   else
     echo 'Running local tests...'
+    bazel test //polygerrit-ui/app:lint_test
     bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
   fi
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
