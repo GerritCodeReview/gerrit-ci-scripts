@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e309dfc_70b4aa51",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2017-05-19T16:37:01Z",
+      "side": 1,
+      "message": "This needs to be //polygerrit-ui/app:lint_test, no?",
+      "range": {
+        "startLine": 38,
+        "startChar": 13,
+        "endLine": 38,
+        "endChar": 40
+      },
+      "revId": "a769dffd8e83f25c84e95ff803019243672c5efc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
