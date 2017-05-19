@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65845e72_e466423c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-05-19T07:52:36Z",
+      "side": 1,
+      "message": "Is it guaranteed to always exist?  Maybe change the script to create only if it doesn\u0027t exist?  See other inline comment.",
+      "revId": "9887f2cd05256fd09d3a8e6c9d9dfd5962e1cb49",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
