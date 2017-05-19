@@ -47,7 +47,7 @@ COPY edit-config.xslt $JENKINS_REF
 COPY config.xml $JENKINS_REF
 COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 
-RUN mkdir $JENKINS_REF/.ssh && \
+RUN \
     chown -R jenkins:jenkins $JENKINS_REF/.ssh && \
     chmod -R 700 $JENKINS_REF/.ssh
 
