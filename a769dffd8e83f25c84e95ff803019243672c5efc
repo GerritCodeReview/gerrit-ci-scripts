@@ -22,6 +22,30 @@
       "revId": "a769dffd8e83f25c84e95ff803019243672c5efc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6037c63a_a99073f0",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-05-19T16:40:46Z",
+      "side": 1,
+      "message": "Oh, i though we could do it without //.",
+      "parentUuid": "6e309dfc_70b4aa51",
+      "range": {
+        "startLine": 38,
+        "startChar": 13,
+        "endLine": 38,
+        "endChar": 40
+      },
+      "revId": "a769dffd8e83f25c84e95ff803019243672c5efc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
