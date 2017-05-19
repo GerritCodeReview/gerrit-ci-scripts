@@ -46,6 +46,30 @@
       "revId": "568aa4beb7bf2c05a1f9672ef33c8581976a9f41",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "89fe12c2_39a98104",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-05-19T07:55:37Z",
+      "side": 0,
+      "message": "changing to mkdir -p will ensure that:\n\n- it gets created if it doesn\u0027t exist\n- it will not fail if it does already exist",
+      "parentUuid": "288f768a_e8c6d6aa",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 27
+      },
+      "revId": "568aa4beb7bf2c05a1f9672ef33c8581976a9f41",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
