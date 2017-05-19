@@ -39,7 +39,6 @@ COPY buckjavaargs /home/jenkins/.buckjavaargs
 USER jenkins
 RUN bash -c '. /usr/bin/set-java.sh 8 && \
     cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit && cd /tmp/gerrit && \
-    which buck && ./tools/download_all.py  && \
     buck build gerrit api plugins:core || true  && \
     buck test --dry-run --no-results-cache --exclude flaky || true  && \
     rm -Rf /tmp/gerrit /home/jenkins/.gerritcodereview/buck-cache/{cache,locally-built-artifacts}'
