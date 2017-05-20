@@ -47,7 +47,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 # Node JS for PolyGerrit build
 
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 
 # PolyGerrit tests
