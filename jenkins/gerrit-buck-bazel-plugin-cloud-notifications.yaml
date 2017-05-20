@@ -1,0 +1,11 @@
+- project:
+    name: cloud-notifications
+    jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - stable-2.13
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          gerrit-branch:
+            - master
+          branch:
+            - master
