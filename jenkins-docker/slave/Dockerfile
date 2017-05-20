@@ -47,7 +47,10 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 # Node JS for PolyGerrit build
 
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN sh -c 'rm /etc/apt/sources.list.d/nodesource.list'
+RUN sh -c 'echo "deb https://deb.nodesource.com/node_6.x trusty main" >> /etc/apt/sources.list.d/google.list'
+RUN sh -c 'echo "deb-src https://deb.nodesource.com/node_6.x trusty main" >> /etc/apt/sources.list.d/google.list'
 RUN apt-get install -y nodejs
 
 # PolyGerrit tests
