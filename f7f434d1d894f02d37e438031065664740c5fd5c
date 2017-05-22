@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "31d3ad5f_7e05efb8",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-05-22T21:27:47Z",
+      "side": 1,
+      "message": "Reason why is to remove vivid and use trusty\u0027s source which luckly still allows us to install nodejs without breaking anything.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 54
+      },
+      "revId": "f7f434d1d894f02d37e438031065664740c5fd5c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
