@@ -25,17 +25,20 @@ then
   bazel test --test_env=GERRIT_NOTEDB=FUSED $BAZEL_OPTS //...
 fi
 
-echo 'Test PolyGerrit locally'
-echo '----------------------------------------------'
-bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
-
-if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
+if [ "{branch}" == "master" || "{branch}" == "stable-2.14" ]
 then
-  echo 'Not running on Sauce Labs because env vars are not set.'
-else
-  echo 'Test PolyGerrit on Sauce Labs'
+  echo 'Test PolyGerrit locally'
   echo '----------------------------------------------'
-  WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+  bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+
+  if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
+  then
+    echo 'Not running on Sauce Labs because env vars are not set.'
+  else
+    echo 'Test PolyGerrit on Sauce Labs'
+    echo '----------------------------------------------'
+    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+  fi
 fi
 
 exit 0
