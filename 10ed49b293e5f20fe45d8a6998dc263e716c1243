@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a2e26e8_41f2a4c9",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-05-24T01:25:15Z",
+      "side": 1,
+      "message": "This causes the verification job to fail on stable-2.14 because app:lint_test is not defined.\n\nhttps://gerrit-ci.gerritforge.com/job/Gerrit-verifier-bazel/16840/console\n\nWe should either add that target on stable-2.14 or add a condition here to only run this on master.  I prefer the latter since adding the lint tests will mean we also need to backport all the lint fixes.",
+      "revId": "10ed49b293e5f20fe45d8a6998dc263e716c1243",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
