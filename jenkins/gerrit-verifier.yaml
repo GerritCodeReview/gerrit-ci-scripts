@@ -162,6 +162,14 @@
          cd gerrit
          echo 'Running google-java-format check...'
          git show --diff-filter=AM --name-only HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
+      - shell: |
+         #!/bin/bash -xe
+         cd gerrit
+         if $(git show --diff-filter=AM --name-only HEAD | grep polygerrit_ui)
+         then
+           bazel test //polygerrit-ui/app:lint_test --test_output errors
+           bazel test //polygerrit-ui/app:polylint_test --test_output errors
+         fi
 
 - job:
     name: 'Gerrit-verifier-change'
