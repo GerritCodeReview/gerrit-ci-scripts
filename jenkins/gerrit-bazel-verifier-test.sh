@@ -40,6 +40,7 @@ then
     then
       echo 'Running lint tests...'
       bazel test //polygerrit-ui/app:lint_test --test_output errors
+      bazel test //polygerrit-ui/app:polylint_test --test_output errors
     fi
 
     if [ -z "$DISPLAY" ]
