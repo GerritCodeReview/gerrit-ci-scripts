@@ -36,12 +36,6 @@ if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-2.14" ]]
 then
   if [[ "$MODE" == *"polygerrit"* ]]
   then
-    if [[ "$TARGET_BRANCH" == "master" ]]
-    then
-      echo 'Running lint tests...'
-      bazel test //polygerrit-ui/app:lint_test --test_output errors
-    fi
-
     if [ -z "$DISPLAY" ]
     then
       echo 'Not running local tests because env var "DISPLAY" is not set.'
