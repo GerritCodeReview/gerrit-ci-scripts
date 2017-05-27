@@ -16,6 +16,7 @@
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+            - stable-2.14
           gerrit-branch:
             - master
             - stable-2.14
