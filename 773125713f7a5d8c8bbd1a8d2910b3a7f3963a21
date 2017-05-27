@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efd6cc0_0086f736",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitiles.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-05-27T22:52:04Z",
+      "side": 1,
+      "message": "Why should we compile Gitiles 2.14 with Gerrit master?",
+      "range": {
+        "startLine": 19,
+        "startChar": 14,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "773125713f7a5d8c8bbd1a8d2910b3a7f3963a21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
