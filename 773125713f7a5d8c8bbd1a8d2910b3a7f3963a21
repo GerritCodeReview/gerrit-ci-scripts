@@ -70,6 +70,30 @@
       "revId": "773125713f7a5d8c8bbd1a8d2910b3a7f3963a21",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5558bfc6_0da64577",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitiles.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-05-27T23:01:13Z",
+      "side": 1,
+      "message": "Oh, i see. Woops, there should be a stable-2.14 at the bottom too.",
+      "parentUuid": "e9765029_63ed0f88",
+      "range": {
+        "startLine": 19,
+        "startChar": 14,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "773125713f7a5d8c8bbd1a8d2910b3a7f3963a21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
