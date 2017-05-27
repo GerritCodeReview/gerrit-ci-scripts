@@ -46,6 +46,30 @@
       "revId": "773125713f7a5d8c8bbd1a8d2910b3a7f3963a21",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e9765029_63ed0f88",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitiles.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-05-27T22:56:50Z",
+      "side": 1,
+      "message": "I will rephrase my question: Gitiles on stable-2.14 should be built with Gerrit on stable-2.14, not with Gerrit master, isn\u0027t it ?",
+      "parentUuid": "4c511c54_5eaaaf5a",
+      "range": {
+        "startLine": 19,
+        "startChar": 14,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "773125713f7a5d8c8bbd1a8d2910b3a7f3963a21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
