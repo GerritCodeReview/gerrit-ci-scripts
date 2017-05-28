@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "46d33472_7a5bb7c7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-05-28T23:33:32Z",
+      "side": 1,
+      "message": "project-download-commands",
+      "range": {
+        "startLine": 7,
+        "startChar": 23,
+        "endLine": 7,
+        "endChar": 40
+      },
+      "revId": "114ec87fcd115e8b1dfa82fe7cf5837c42c980fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a0ba07d8_13977b4d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-05-28T23:33:32Z",
+      "side": 1,
+      "message": "pom.xml still exists on stable-2.11 and stable-2.10.\n\nThe question is do we still need to build for those branches?",
+      "revId": "114ec87fcd115e8b1dfa82fe7cf5837c42c980fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
