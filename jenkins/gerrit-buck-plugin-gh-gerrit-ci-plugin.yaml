@@ -1,9 +1,0 @@
-- project:
-    name: ci
-    repo: gerrit-ci-plugin
-    organization: davido
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-gh-{branch}'
-
