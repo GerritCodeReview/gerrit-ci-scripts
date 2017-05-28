@@ -1,8 +1,0 @@
-- project:
-    name: menuextender-mvn
-    repo: menuextender
-    branch:
-      - master
-    jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-
