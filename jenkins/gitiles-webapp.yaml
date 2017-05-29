@@ -34,12 +34,11 @@
           set +x
           echo "Building gitiles webapp master"
           echo '============================================================='
-          rm -Rf buck-out
-          export BUCK_CLEAN_REPO_IF_DIRTY=y
+          rm -Rf bazel-out
           git submodule update --init
-          buck build all
-          buck test
-          buck build //:install
+          bazel build all
+          bazel test
+          bazel build //:install
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/all.zip'
+         artifacts: 'bazel-genfiles/all.zip'
