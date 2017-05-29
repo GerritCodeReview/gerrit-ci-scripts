@@ -22,6 +22,30 @@
       "revId": "71c624aa90c74a7c30792bd96a0ad33d5a105a98",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17769138_97db25e0",
+        "filename": "jenkins/gitiles-webapp.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-05-29T23:45:37Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "b7be14db_4259cf0d",
+      "range": {
+        "startLine": 38,
+        "startChar": 10,
+        "endLine": 38,
+        "endChar": 37
+      },
+      "revId": "71c624aa90c74a7c30792bd96a0ad33d5a105a98",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
