@@ -26,7 +26,8 @@
          skip-tag: true
 
     triggers:
-      - pollscm: 'H/50 * * * *'
+      - pollscm:
+          cron: 'H/50 * * * *'
 
     builders:
       - shell: |
