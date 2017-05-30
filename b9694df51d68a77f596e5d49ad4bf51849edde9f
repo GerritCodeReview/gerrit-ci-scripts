@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "c123475a_f32208e5",
+        "filename": "jenkins/gitiles-webapp-manual.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-05-30T20:27:02Z",
+      "side": 1,
+      "message": "Gitiles-webapp-manual isn\u0027t needed anymore. We could just get rid of it.",
+      "revId": "b9694df51d68a77f596e5d49ad4bf51849edde9f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2feb8b88_97cb603a",
         "filename": "jenkins/gitiles-webapp.yaml",
         "patchSetId": 1
