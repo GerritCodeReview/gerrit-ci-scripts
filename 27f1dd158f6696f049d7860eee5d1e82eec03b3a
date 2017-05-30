@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d418dc36_bcc4f376",
+        "filename": "jenkins/gitiles-webapp.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-05-30T01:28:49Z",
+      "side": 1,
+      "message": "better to run bazel clean which will remove build output.",
+      "range": {
+        "startLine": 37,
+        "startChar": 10,
+        "endLine": 37,
+        "endChar": 31
+      },
+      "revId": "27f1dd158f6696f049d7860eee5d1e82eec03b3a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "37f7e240_62d3ad82",
+        "filename": "jenkins/gitiles-webapp.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-05-30T01:28:49Z",
+      "side": 1,
+      "message": "This will pick up only  bazel-genfiles/gitiles-servlet/webassets.zip which is not much use because it only contains the css files.",
+      "range": {
+        "startLine": 42,
+        "startChar": 20,
+        "endLine": 42,
+        "endChar": 43
+      },
+      "revId": "27f1dd158f6696f049d7860eee5d1e82eec03b3a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
