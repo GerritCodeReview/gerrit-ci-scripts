@@ -61,6 +61,4 @@
 
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/all.zip'
-
-
+         artifacts: 'bazel-bin/gitiles.war'

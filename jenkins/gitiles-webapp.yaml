@@ -37,4 +37,4 @@
          !include-raw: build-gitiles.sh
     publishers:
       - archive:
-         artifacts: 'buck-out/gen/all.zip'
+         artifacts: 'bazel-bin/gitiles.war'
