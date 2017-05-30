@@ -22,6 +22,30 @@
       "revId": "b9694df51d68a77f596e5d49ad4bf51849edde9f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b0639249_13777b05",
+        "filename": "jenkins/gitiles-webapp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-05-30T01:44:20Z",
+      "side": 1,
+      "message": "I left it here because it\u0027s a different output here and when building manually.  I could move it there with a condition, but thought it was too much effort.\n\nIf you want, you can do it as a followup change.",
+      "parentUuid": "2feb8b88_97cb603a",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 10
+      },
+      "revId": "b9694df51d68a77f596e5d49ad4bf51849edde9f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
