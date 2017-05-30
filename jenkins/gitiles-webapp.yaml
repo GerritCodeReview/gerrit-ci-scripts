@@ -20,7 +20,6 @@
     scm:
       - git:
          url: https://gerrit.googlesource.com/gitiles
-         refspec: +refs/changes/*:refs/remotes/origin/*
          branches:
            - master
          skip-tag: true
