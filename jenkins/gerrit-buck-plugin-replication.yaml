@@ -1,0 +1,6 @@
+- project:
+    name: replication
+    branch:
+      - stable-2.13
+    jobs:
+      - 'plugin-{name}-{branch}'
