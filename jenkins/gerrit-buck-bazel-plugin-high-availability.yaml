@@ -1,0 +1,10 @@
+- project:
+    name: high-availability
+    jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - stable-2.13
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.14
