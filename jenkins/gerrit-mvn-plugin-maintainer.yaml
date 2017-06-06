@@ -1,0 +1,9 @@
+- project:
+    name: maintainer-mvn
+    repo: maintainer
+    organization: cisco
+    branch:
+      - master
+    jobs:
+      - 'plugin-{repo}-mvn-{branch}'
+
