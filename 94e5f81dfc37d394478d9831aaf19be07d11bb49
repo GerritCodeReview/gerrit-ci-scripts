@@ -22,6 +22,30 @@
       "revId": "94e5f81dfc37d394478d9831aaf19be07d11bb49",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5680acf4_1fa9b795",
+        "filename": "jenkins/gerrit-mvn-plugin-maintainer.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1043242
+      },
+      "writtenOn": "2017-06-08T07:45:25Z",
+      "side": 1,
+      "message": "I have no idea to be honest, i\u0027ve just followed the example of other plugins, does that field has other that informative purpose ?",
+      "parentUuid": "68cf7723_e218f809",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 23
+      },
+      "revId": "94e5f81dfc37d394478d9831aaf19be07d11bb49",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
