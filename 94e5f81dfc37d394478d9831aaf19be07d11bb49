@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "68cf7723_e218f809",
+        "filename": "jenkins/gerrit-mvn-plugin-maintainer.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-06-08T07:42:35Z",
+      "side": 1,
+      "message": "Is this needed when not building off github?",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 23
+      },
+      "revId": "94e5f81dfc37d394478d9831aaf19be07d11bb49",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
