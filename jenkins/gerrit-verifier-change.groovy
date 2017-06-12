@@ -42,6 +42,7 @@ class Globals {
   static String addReviewerTag = ciTag("addReviewer")
   static String addVerifiedTag = ciTag("addVerified")
   static String addCommentTag = ciTag("comment")
+  static Set<String> codeStyleBranches = ["master", "stable-2.14"]
 }
 
 
@@ -75,11 +76,12 @@ def gerritPost(url, jsonPayload) {
   return 0
 }
 
-def gerritReview(changeNum, sha1, verified) {
+def gerritReview(change, sha1, verified) {
   if(verified == 0) {
     return;
   }
 
+  def changeNum = change._number
   def resTicks = [ 'ABORTED':'\u26aa', 'SUCCESS':'\u2705', 'FAILURE':'\u274c' ]
 
   def msgList = Globals.buildsList.collect { type,build ->
@@ -97,18 +99,32 @@ def gerritReview(changeNum, sha1, verified) {
     return addReviewerExit
   }
 
-  def jsonPayload = '{"labels":{"Code-Review":0,"Verified":' + verified + '},' +
-                    ' "message": "' + msgBody + '", ' +
-                    ' "notify" : "' + (verified < 0 ? "OWNER": "OWNER_REVIEWERS") + "\" , ${Globals.addVerifiedTag} }"
-  def addVerifiedExit = gerritPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
-                                   jsonPayload)
-
+  def addVerifiedExit = gerritLabel(changeNum, sha1, 'Verified', verified, msgBody)
   if(addVerifiedExit == 0) {
     println "----------------------------------------------------------------------------"
     println "Gerrit Review: Verified=" + verified + " to change " + changeNum + "/" + sha1
     println "----------------------------------------------------------------------------"
   }
+
+  if(Globals.codeStyleBranches.contains(change.branch)) {
+    def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', verified)
+    if(addVerifiedExit == 0) {
+      println "----------------------------------------------------------------------------"
+      println "Gerrit Review: Code-Style=" + verified + " to change " + changeNum + "/" + sha1
+      println "----------------------------------------------------------------------------"
+    }
+  }
+
   return addVerifiedExit
+}
+
+def gerritLabel(changeNum, sha1, label, score, msgBody = "") {
+  def jsonPayload = '{"labels":{"' + label + '":' + score + '},' +
+                    ' "message": "' + msgBody + '", ' +
+                    ' "notify" : "' + (score < 0 ? "OWNER": "OWNER_REVIEWERS") + "\" , ${Globals.addVerifiedTag} }"
+
+  return gerritPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
+                    jsonPayload)
 }
 
 def gerritComment(buildUrl,changeNum, sha1, msgPrefix) {
@@ -264,7 +280,7 @@ def buildChange(change) {
 
   def res = buildsWithResults.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
 
-  gerritReview(changeNum, sha1, res)
+  gerritReview(change, sha1, res)
 
   switch(res) {
     case 0: build.state.result = ABORTED
