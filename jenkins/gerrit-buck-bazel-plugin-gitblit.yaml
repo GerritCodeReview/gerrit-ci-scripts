@@ -47,8 +47,6 @@
          !include-raw: gitblit-ant-build.sh
       - shell:
          !include-raw: gerrit-buck-build-plugin.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-plugin-info.sh
     publishers:
       - archive:
          artifacts: 'buck-out/gen/plugins/gitblit/*gitblit*.jar*,buck-out/gen/plugins/gitblit/*gitblit*.json'
@@ -78,7 +76,7 @@
          !include-raw: gerrit-bazel-get-plugin-info.sh
     publishers:
       - archive:
-         artifacts: 'bazel-genfiles/plugins/gitblit/*gitblit*.jar*,buck-out/gen/plugins/gitblit/*gitblit*.json'
+         artifacts: 'bazel-genfiles/plugins/gitblit/*gitblit*.jar*,bazel-genfiles/plugins/gitblit/*gitblit*.json'
 
 
 - project:
@@ -98,4 +96,3 @@
           gerrit-branch:
             - master
             - stable-2.14
-
