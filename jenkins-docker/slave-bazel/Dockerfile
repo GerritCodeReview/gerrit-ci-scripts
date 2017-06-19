@@ -7,6 +7,9 @@ RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8
 RUN apt-get update && apt-get install -y bazel \
     && rm -rf /var/lib/apt/lists/*
 
+# Install buildifier utility
+RUN go get github.com/bazelbuild/buildtools/buildifier
+
 # Bazel cache warm-up with Gerrit master build
 USER jenkins
 RUN bash -c '. /usr/bin/set-java.sh 8 && \
