@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "81ad67d6_a4509317",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-importer.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-06-21T04:35:53Z",
+      "side": 1,
+      "message": "missing colon",
+      "revId": "767687388f21fab501da07ec7a54dc2a8907cc0e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
