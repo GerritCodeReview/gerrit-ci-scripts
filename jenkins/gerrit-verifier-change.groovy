@@ -119,9 +119,10 @@ def gerritReview(change, sha1, verified) {
 }
 
 def gerritLabel(changeNum, sha1, label, score, msgBody = "") {
+  def notify = score < 0 ? ', "notify" : "OWNER"' : '';
   def jsonPayload = '{"labels":{"' + label + '":' + score + '},' +
-                    ' "message": "' + msgBody + '", ' +
-                    ' "notify" : "' + (score < 0 ? "OWNER": "OWNER_REVIEWERS") + "\" , ${Globals.addVerifiedTag} }"
+                    ' "message": "' + msgBody + '"' +
+                    notify + ", ${Globals.addVerifiedTag} }"
 
   return gerritPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
                     jsonPayload)
