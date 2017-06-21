@@ -1,7 +1,7 @@
 - project:
     name: importer
     jobs:
-      - 'plugin-{name}-{branch}'
+      - 'plugin-{name}-{branch}':
           branch:
             - stable-2.13
             - stable-2.12
