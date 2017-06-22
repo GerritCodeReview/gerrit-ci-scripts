@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6da3c6e5_adca797e",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitblit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2017-06-22T05:59:39Z",
+      "side": 1,
+      "message": "[optional] Maybe put a comment here about why there is no stable-2.13, otherwise somebody may try to add it again.",
+      "revId": "1362b2e388513dbc0f5410da5be3fc049e0bd525",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
