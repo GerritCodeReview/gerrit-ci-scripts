@@ -1,0 +1,8 @@
+- project:
+    name: virtualhost
+    jobs:
+      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - master
