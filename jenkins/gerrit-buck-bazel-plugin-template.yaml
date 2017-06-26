@@ -55,7 +55,7 @@
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh
       - shell:
-         !include-raw: gerrit-bazel-get-plugin-info.sh
+         !include-raw: gerrit-bazel-get-project-info.sh plugins%2F{name}
     publishers:
       - archive:
          artifacts: >
