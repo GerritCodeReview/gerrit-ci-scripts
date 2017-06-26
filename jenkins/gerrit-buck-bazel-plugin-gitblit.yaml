@@ -73,7 +73,7 @@
       - shell:
          !include-raw: gerrit-bazel-build-plugin-branch.sh
       - shell:
-         !include-raw: gerrit-bazel-get-plugin-info.sh
+         !include-raw: gerrit-bazel-get-project-info.sh plugins%2F{name}
     publishers:
       - archive:
          artifacts: 'bazel-genfiles/plugins/gitblit/*gitblit*.jar*,bazel-genfiles/plugins/gitblit/*gitblit*.json'
