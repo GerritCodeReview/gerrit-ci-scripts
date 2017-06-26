@@ -51,11 +51,13 @@
     name: 'plugin-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} branch build with Bazel\n"
     defaults: plugin-template
+    class: plugins
+    project-name: plugins%2F{name}
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh
       - shell:
-         !include-raw: gerrit-bazel-get-plugin-info.sh
+         !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
          artifacts: >

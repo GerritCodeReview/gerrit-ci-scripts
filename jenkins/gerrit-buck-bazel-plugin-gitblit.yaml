@@ -55,6 +55,8 @@
     name: 'plugin-gitblit-bazel-{branch}-{gerrit-branch}'
     description: "GitBlit plugin {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
     defaults: plugin-gitblit
+    project-name: plugins%2Fgitblit
+    class: plugins
     scm:
       - git:
          remotes:
@@ -73,7 +75,7 @@
       - shell:
          !include-raw: gerrit-bazel-build-plugin-branch.sh
       - shell:
-         !include-raw: gerrit-bazel-get-plugin-info.sh
+         !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
          artifacts: 'bazel-genfiles/plugins/gitblit/*gitblit*.jar*,bazel-genfiles/plugins/gitblit/*gitblit*.json'
