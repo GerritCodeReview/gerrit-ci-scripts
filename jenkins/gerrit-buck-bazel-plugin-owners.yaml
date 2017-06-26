@@ -14,11 +14,12 @@
     name: 'plugin-owners-bazel-{branch}-{gerrit-branch}'
     description: "Plugin owners {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
     defaults: plugin-template
+    project-name: plugins%2Fowners
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-owners-plugin-branch.sh
       - shell:
-         !include-raw: gerrit-bazel-get-plugin-info.sh
+         !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
          artifacts: >

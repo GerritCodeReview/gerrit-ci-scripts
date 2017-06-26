@@ -17,14 +17,6 @@
              - job-discover
              - job-read
              - job-extended-read
-    scm:
-      - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/{name}
-         branches:
-           - '*/{branch}'
-         skip-tag: true
 
     triggers:
       - pollscm:
@@ -33,13 +25,45 @@
 
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
+    project-name: plugins%2F{name}
     description: "Plugin {name} {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
     defaults: plugin-template-bazel
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/{name}
+         branches:
+           - '*/{branch}'
+         skip-tag: true
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin-branch.sh
       - shell:
-         !include-raw: gerrit-bazel-get-plugin-info.sh
+         !include-raw: gerrit-bazel-get-project-info.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/{name}/*{name}*.jar*, bazel-genfiles/plugins/{name}/{name}.json
+
+- job-template:
+    name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
+    project-name: modules%2F{name}
+    description: "Lib module {name} {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
+    defaults: plugin-template-bazel
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/modules/{name}
+         branches:
+           - '*/{branch}'
+         skip-tag: true
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin-branch.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
          artifacts: >
