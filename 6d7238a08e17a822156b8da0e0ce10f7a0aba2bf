@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "df5029ca_45bd05a4",
+        "filename": "jenkins/gerrit-bazel-get-project-info.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-06-27T07:06:47Z",
+      "side": 1,
+      "message": "Thought it was more appropriate, but if you prefer project lets keep that.",
+      "parentUuid": "1648cda1_2541b839",
+      "revId": "6d7238a08e17a822156b8da0e0ce10f7a0aba2bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "70dd3e06_477e93a1",
         "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
         "patchSetId": 4
