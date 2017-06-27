@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1648cda1_2541b839",
+        "filename": "jenkins/gerrit-bazel-get-project-info.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-06-27T06:55:02Z",
+      "side": 1,
+      "message": "Why subproject?",
+      "parentUuid": "53f8a4e8_c9f8083c",
+      "revId": "6d7238a08e17a822156b8da0e0ce10f7a0aba2bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "70dd3e06_477e93a1",
         "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
         "patchSetId": 4
@@ -30,6 +48,30 @@
       "writtenOn": "2017-06-26T23:12:52Z",
       "side": 1,
       "message": "rename this script?  s/plugin/subproject/",
+      "range": {
+        "startLine": 64,
+        "startChar": 42,
+        "endLine": 64,
+        "endChar": 48
+      },
+      "revId": "6d7238a08e17a822156b8da0e0ce10f7a0aba2bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb84f029_22f0ea47",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-06-27T06:55:02Z",
+      "side": 1,
+      "message": "I would keep project :-)",
+      "parentUuid": "70dd3e06_477e93a1",
       "range": {
         "startLine": 64,
         "startChar": 42,
