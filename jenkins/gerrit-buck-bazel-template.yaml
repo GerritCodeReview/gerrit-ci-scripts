@@ -1,39 +1,5 @@
-- job-template:
-    name: 'Gerrit-{branch}'
-    project-type: flow
-    concurrent: false
-    needs-workspace: true
-    scm:
-      - git:
-         url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
-         basedir: gerrit
-    triggers:
-      - pollscm:
-          cron: 'H/10 * * * *'
-    properties:
-    properties:
-       - build-discarder:
-           days-to-keep: 256
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-    dsl: |
-      retries = 3
-      type = '{branch}' in ['stable-2.14','master'] ? 'bazel' : 'buck'
-      parallel (
-        {{ retry ( retries ) {{ build( "Gerrit-$type-{branch}" ) }} }}
-      )
-
-- job-template:
-    name: 'Gerrit-buck-{branch}'
-    description: "{name} {branch} branch build with Buck\n"
+- defaults:
+    name: gerrit-buck-defaults
     wrappers:
       - timeout:
           timeout: 90
@@ -82,6 +48,54 @@
            gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
 
          excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
+
+- job-template:
+    name: 'Gerrit-{branch}'
+    project-type: flow
+    concurrent: false
+    needs-workspace: true
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+         basedir: gerrit
+    triggers:
+      - pollscm:
+          cron: 'H/10 * * * *'
+    properties:
+    properties:
+       - build-discarder:
+           days-to-keep: 256
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    dsl: |
+      retries = 3
+      type = '{branch}' in ['stable-2.14','master'] ? 'bazel' : 'buck'
+      parallel (
+        {{ retry ( retries ) {{ build( "Gerrit-$type-{branch}" ) }} }}
+      )
+
+- job-template:
+    name: 'Gerrit-buck-{branch}'
+    description: "{name} {branch} branch build with Buck\n"
+    defaults: gerrit-buck-defaults
+
+- project:
+    name: Gerrit-buck-2.9
+    description: "Gerrit 2.9 branch build with Buck\n"
+    defaults: gerrit-buck-defaults
+    builders:
+      - shell:
+         !include-raw: gerrit-buck-build.sh
+      - shell:
+         !include-raw: gerrit-buck-test-2.9.sh
 
 - job-template:
     name: 'Gerrit-bazel-{branch}'
@@ -149,6 +163,7 @@
       - stable-2.10
     jobs:
       - 'Gerrit-buck-{branch}'
+
 
 - project:
     name: Gerrit-bazel
