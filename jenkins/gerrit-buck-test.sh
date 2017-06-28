@@ -9,7 +9,7 @@ then
 
   echo 'Test in default DB mode'
   echo '----------------------------------------------'
-  buck test --no-results-cache --exclude flaky
+  buck test --exclude flaky
 
   if [ ! -d gerrit-server/src/main/java/com/google/gerrit/server/notedb ]
   then
