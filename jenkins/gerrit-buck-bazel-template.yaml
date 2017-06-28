@@ -147,6 +147,7 @@
       - stable-2.12
       - stable-2.11
       - stable-2.10
+      - stable-2.9
     jobs:
       - 'Gerrit-buck-{branch}'
 
@@ -167,5 +168,6 @@
       - stable-2.12
       - stable-2.11
       - stable-2.10
+      - stable-2.9
     jobs:
       - 'Gerrit-{branch}'
