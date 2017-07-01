@@ -57,6 +57,7 @@
             - disableChangeReviewDb
             - fused
             - polygerrit
+            - codestyle
           description: "Type of verification to execute"
     properties:
        - authorization:
