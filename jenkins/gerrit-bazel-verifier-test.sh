@@ -58,3 +58,9 @@ then
     fi
   fi
 fi
+
+if [[ "$MODE" == *"codestyle"* ]]
+then
+  echo 'Running google-java-format check...'
+  git show --diff-filter=AM --name-only HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
+fi
