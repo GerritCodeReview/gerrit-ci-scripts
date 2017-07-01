@@ -76,7 +76,7 @@ def gerritPost(url, jsonPayload) {
   return 0
 }
 
-def gerritReview(change, sha1, verified) {
+def gerritReview(change, sha1, verified, cs) {
   if(verified == 0) {
     return;
   }
@@ -107,10 +107,10 @@ def gerritReview(change, sha1, verified) {
   }
 
   if(Globals.codeStyleBranches.contains(change.branch)) {
-    def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', verified)
-    if(addVerifiedExit == 0) {
+    def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', cs)
+    if(addCodeStyleExit == 0) {
       println "----------------------------------------------------------------------------"
-      println "Gerrit Review: Code-Style=" + verified + " to change " + changeNum + "/" + sha1
+      println "Gerrit Review: Code-Style=" + cs + " to change " + changeNum + "/" + sha1
       println "----------------------------------------------------------------------------"
     }
   }
@@ -242,6 +242,10 @@ def buildChange(change) {
     modes += "fused"
   }
 
+  if(Globals.codeStyleBranches.contains(branch)) {
+    modes += "codestyle"
+  }
+
   if(branch == "master" || branch == "stable-2.14") {
     def changedFiles = getChangedFiles(changeNum, sha1)
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") }
@@ -279,11 +283,17 @@ def buildChange(change) {
     buildsWithResults = parallelBuilds(retryBuilds)
   }
 
-  def res = buildsWithResults.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
+  def resAll = buildsWithResults.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
 
-  gerritReview(change, sha1, res)
+  def resVerify = buildsWithResults.inject(1) { acc, buildResult ->
+      buildResult[0].endsWidth("codestyle") ? getVerified(acc, 1) : getVerified(acc, buildResult[1]) }
 
-  switch(res) {
+  def resCodeStyle = buildsWithResults.inject(1) { acc, buildResult ->
+      buildResult[0].endsWidth("codestyle") ? getVerified(acc, buildResult[1]) : getVerified(acc, 1) }
+
+  gerritReview(change, sha1, resVerify, resCodeStyle)
+
+  switch(resAll) {
     case 0: build.state.result = ABORTED
             break
     case 1: build.state.result = SUCCESS
