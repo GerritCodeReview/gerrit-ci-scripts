@@ -150,6 +150,20 @@
          excludes: 'gerrit/bazel-genfiles/plugins/core*/**/*.jar'
 
 - job:
+    name: Gerrit-codestyle
+    description: "Gerrit code-style checker for an open change\n"
+    defaults: verifier-defaults
+
+    builders:
+      - merge-target-branch
+      - fetch-all-submodules
+      - shell: |
+         #!/bin/bash -xe
+         cd gerrit
+         echo 'Running google-java-format check...'
+         git show --diff-filter=AM --name-only HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
+
+- job:
     name: 'Gerrit-verifier-change'
     project-type: flow
     concurrent: true
