@@ -16,11 +16,16 @@ RUN cd /usr/local && \
     go get github.com/bazelbuild/buildtools/buildifier
 
 # Bazel cache warm-up with Gerrit master build
+# Set-up google-java-format utility to ~/format/google-java-format
+# TODO(davido): Switch to upstream, when this PR (or similar) is merged upstream:
+# https://github.com/google/google-java-format/pull/154
 USER jenkins
 RUN bash -c '. /usr/bin/set-java.sh 8 && \
     cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit && \
     cd /tmp/gerrit && ( bazel build release || true ) && \
     cd /tmp/gerrit && ( ./tools/download_all.py || true ) && \
-    rm -Rf /tmp/gerrit'
+    cd /tmp/gerrit && ./tools/setup_gjf.sh && \
+    cd /tmp/gerrit && mv tools/format ~ && \
+    cd /tmp/gerrit && ./tools/download_file.py -o ~/format/google-java-format-1.3-all-deps.jar -u https://github.com/davido/google-java-format/releases/download/1.3-1-gec5ce10/google-java-format-1.3-1-gec5ce10-all-deps.jar -v "65f060dc238bdd81ef029354d8e6dad6dd742ef4" && \
 
 USER root
