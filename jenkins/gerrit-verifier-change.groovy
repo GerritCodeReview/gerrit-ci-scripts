@@ -76,7 +76,7 @@ def gerritPost(url, jsonPayload) {
   return 0
 }
 
-def gerritReview(change, sha1, verified) {
+def gerritReview(change, sha1, verified, cs) {
   if(verified == 0) {
     return;
   }
@@ -107,10 +107,10 @@ def gerritReview(change, sha1, verified) {
   }
 
   if(Globals.codeStyleBranches.contains(change.branch)) {
-    def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', verified)
-    if(addVerifiedExit == 0) {
+    def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', cs)
+    if(addCodeStyleExit == 0) {
       println "----------------------------------------------------------------------------"
-      println "Gerrit Review: Code-Style=" + verified + " to change " + changeNum + "/" + sha1
+      println "Gerrit Review: Code-Style=" + cs + " to change " + changeNum + "/" + sha1
       println "----------------------------------------------------------------------------"
     }
   }
@@ -174,8 +174,20 @@ def getChangedFiles(changeNum, sha1) {
   filesJson.keySet().findAll { it != "/COMMIT_MSG" }
 }
 
-def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes) {
+def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,codestyle) {
     def builds = []
+    if(codestyle) {
+      builds += {
+        Globals.buildsList.put("codestyle", build("Gerrit-codestyle",
+                               REFSPEC: refspec, BRANCH: sha1, CHANGE_URL: changeUrl, MODE: mode,
+                               TARGET_BRANCH: targetBranch))
+                     println "Builds status:"
+                     Globals.buildsList.each {
+                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "console"})"
+                     }
+      }
+    }
+
     for (tool in tools) {
       def buildName = "Gerrit-verifier-$tool"
       def key = "$tool/$mode"
@@ -259,9 +271,13 @@ def buildChange(change) {
 
   def builds = []
   println "Running validation jobs using $tools builds for $modes ..."
-  modes.collect { buildsForMode(refspec,sha1,changeUrl,it,tools,branch,1) }.each { builds += it }
+  modes.collect {
+    buildsForMode(refspec,sha1,changeUrl,it,tools,branch,1,Globals.codeStyleBranches.contains(branch)) 
+  }.each { builds += it }
 
   def buildsWithResults = parallelBuilds(builds)
+  def codestyleResult = buildsWithResults.find{ it[0] == "codestyle" }
+  def resCodeStyle = getVerified(1, codestyleResult[1])
 
   flaky = flakyBuilds(buildsWithResults)
   if(flaky.size > 0) {
@@ -279,11 +295,13 @@ def buildChange(change) {
     buildsWithResults = parallelBuilds(retryBuilds)
   }
 
-  def res = buildsWithResults.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
+  def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
 
-  gerritReview(change, sha1, res)
+  def resAll = getVerified(resVerify, codestyleResult[1])
 
-  switch(res) {
+  gerritReview(change, sha1, resVerify, resCodeStyle)
+
+  switch(resAll) {
     case 0: build.state.result = ABORTED
             break
     case 1: build.state.result = SUCCESS
