@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7f354b_40f7946d",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-05T07:35:13Z",
+      "side": 1,
+      "message": "Do we really need a full build if we requested just a \"codestyle\" check?",
+      "range": {
+        "startLine": 246,
+        "startChar": 4,
+        "endLine": 246,
+        "endChar": 24
+      },
+      "revId": "1417daf6c6118f388d31f50e22c6b61385c2d330",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01221d22_2cebbbb5",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-05T07:35:13Z",
+      "side": 1,
+      "message": "I would avoid repeating the inject block so many times. Just compose the resAll with three steps:\n- get the codestyle result by simple list filtering\n- get the resVerify result\n- compose them together\n\nLet me propose this in the next PS",
+      "range": {
+        "startLine": 286,
+        "startChar": 6,
+        "endLine": 286,
+        "endChar": 12
+      },
+      "revId": "1417daf6c6118f388d31f50e22c6b61385c2d330",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7c6845c8_d0fafb18",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-05T07:35:13Z",
+      "side": 1,
+      "message": "A bit too complex, why not simply finding the codestyle and getting the associated result?",
+      "range": {
+        "startLine": 291,
+        "startChar": 20,
+        "endLine": 292,
+        "endChar": 102
+      },
+      "revId": "1417daf6c6118f388d31f50e22c6b61385c2d330",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
