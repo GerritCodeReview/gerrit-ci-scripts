@@ -46,6 +46,30 @@
       "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e9bad60_f1838923",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-07-06T07:07:25Z",
+      "side": 0,
+      "message": "We should be able to say something like:\n\n  git show --diff-filter\u003dAM --name-only HEAD | grep java$ | \\\n   sed \u0027s@^@\u0027\"$PWD\"/\u0027@\u0027 | xargs -r bazel run tools:gjf -- --dry-run\n\nbut later, we could add even more code-style checks, like PMD, checkstyle, Eclipse warning checks, JavaScript lint checks and do it through\n\n  bazel test foo",
+      "parentUuid": "aa3936ec_a8fd2690",
+      "range": {
+        "startLine": 87,
+        "startChar": 16,
+        "endLine": 87,
+        "endChar": 34
+      },
+      "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
