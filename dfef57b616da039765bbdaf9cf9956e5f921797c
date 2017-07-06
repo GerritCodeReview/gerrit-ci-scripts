@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8d188f10_c660286e",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 9
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-07-06T08:08:25Z",
+      "side": 1,
+      "message": "Oh, nice. We parse the output to include these files in the gerrit report? I assumed it would be sufficient to just say, that Code-Style check failed, and the change owner would check the logs? Later if we add BUILD format checker, we could become problem parsons the output and uniquely identify what kind of files contributed to the problem?",
+      "revId": "dfef57b616da039765bbdaf9cf9956e5f921797c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f143ef03_b568d0f4",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 9
