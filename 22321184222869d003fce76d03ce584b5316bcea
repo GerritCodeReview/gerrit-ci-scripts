@@ -22,6 +22,30 @@
       "revId": "22321184222869d003fce76d03ce584b5316bcea",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad94d64d_0eee52c0",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 13
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T13:14:06Z",
+      "side": 1,
+      "message": "Right, if cs \u003d\u003d 1 then the message should be different.",
+      "parentUuid": "b1cffeca_6dee4b99",
+      "range": {
+        "startLine": 125,
+        "startChar": 16,
+        "endLine": 125,
+        "endChar": 53
+      },
+      "revId": "22321184222869d003fce76d03ce584b5316bcea",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
