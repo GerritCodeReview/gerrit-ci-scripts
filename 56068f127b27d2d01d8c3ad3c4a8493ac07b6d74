@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1bb48b6f_8ebf5111",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-07-06T13:28:16Z",
+      "side": 1,
+      "message": "Why \u003c 0? We are using `... | xargs gjf --dry-run`, so that the return code would be 123? or some such, in case gjf would return non-zero code, what it would do, if files were wrong formatted.",
+      "range": {
+        "startLine": 125,
+        "startChar": 22,
+        "endLine": 125,
+        "endChar": 28
+      },
+      "revId": "56068f127b27d2d01d8c3ad3c4a8493ac07b6d74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
