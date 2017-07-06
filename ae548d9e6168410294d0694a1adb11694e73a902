@@ -70,6 +70,54 @@
       "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7ea73fe_e6452760",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T07:25:03Z",
+      "side": 0,
+      "message": "Does this mean that we need to make a full build before running CodeStyle? And tests as well? Does it really make sense? Would it just make it slower?",
+      "parentUuid": "aa3936ec_a8fd2690",
+      "range": {
+        "startLine": 87,
+        "startChar": 16,
+        "endLine": 87,
+        "endChar": 34
+      },
+      "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e26f2caa_493c8c37",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T07:25:03Z",
+      "side": 0,
+      "message": "Yes, but they are static code analysis, they do not require a Bazel code and tests build, isn\u0027t it?",
+      "parentUuid": "1e9bad60_f1838923",
+      "range": {
+        "startLine": 87,
+        "startChar": 16,
+        "endLine": 87,
+        "endChar": 34
+      },
+      "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
