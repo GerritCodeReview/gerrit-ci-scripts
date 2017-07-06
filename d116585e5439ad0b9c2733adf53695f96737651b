@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df4ad58b_70a303f7",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T06:54:22Z",
+      "side": 1,
+      "message": "would be useful to add as body the list of files with the incorrect syntax, isn\u0027t it?",
+      "range": {
+        "startLine": 110,
+        "startChar": 72,
+        "endLine": 110,
+        "endChar": 73
+      },
+      "revId": "d116585e5439ad0b9c2733adf53695f96737651b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
