@@ -22,6 +22,29 @@
       "revId": "d116585e5439ad0b9c2733adf53695f96737651b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d4f1d60_510d0a5a",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-07-06T07:00:40Z",
+      "side": 1,
+      "message": "Nit: trailing space.",
+      "range": {
+        "startLine": 275,
+        "startChar": 102,
+        "endLine": 275,
+        "endChar": 103
+      },
+      "revId": "d116585e5439ad0b9c2733adf53695f96737651b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
