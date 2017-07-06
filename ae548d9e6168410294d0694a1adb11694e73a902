@@ -22,6 +22,30 @@
       "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa3936ec_a8fd2690",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-07-06T07:00:40Z",
+      "side": 0,
+      "message": "Wait, but we would like to turn it to Bazel build, actually, later? That why my thinking to make it from the beginning the standard build mode. With this change merged: [1], we would remove gjf tool chain again from the Docker image and would use hazel run command. Further `bazel test foo`rules can be added to the tool chain.\n\n+ [1] https://gerrit-review.googlesource.com/#/c/108188",
+      "parentUuid": "517e051f_3f6a95e1",
+      "range": {
+        "startLine": 87,
+        "startChar": 16,
+        "endLine": 87,
+        "endChar": 34
+      },
+      "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
