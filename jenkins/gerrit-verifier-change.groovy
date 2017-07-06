@@ -102,10 +102,10 @@ def gerritLabelVerify(change, sha1, verified, builds) {
   return addVerifiedExit
 }
 
-def findCodestyleFilesInLog() {
+def findCodestyleFilesInLog(build) {
   def codestyleFiles = []
   def needsFormatting = false
-  def codestyleLogReader = Globals.buildsList["codestyle"].getLogReader()
+  def codestyleLogReader = build.getLogReader()
   codestyleLogReader.eachLine {
     needsFormatting = needsFormatting || (it ==~ /.*Need Formatting.*/)
     if(needsFormatting && it ==~ /\[.*\]/) {
@@ -116,13 +116,14 @@ def findCodestyleFilesInLog() {
   return codestyleFiles
 }
 
-def gerritLabelCodestyle(change, sha1, cs, files) {
+def gerritLabelCodestyle(change, sha1, cs, files, build) {
   if(cs == 0) {
     return
   }
 
   def changeNum = change._number
-  def msgBody = "The following files need formatting:\n" + files.join('\n')
+  def formattingMsg = cs < 0 ? ("The following files need formatting:\n" + files.join('\n')) : "All files are correctly formatted."
+  def msgBody = formattingMsg + "\n\nSee: " + build.getBuildUrl() + "console"
 
   def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', cs, msgBody)
   if(addCodeStyleExit == 0) {
@@ -295,7 +296,8 @@ def buildChange(change) {
   def codestyleResult = buildsWithResults.find{ it[0] == "codestyle" }
   if(codestyleResult) {
     def resCodeStyle = getVerified(1, codestyleResult[1])
-    gerritLabelCodestyle(change, sha1, resCodeStyle, findCodestyleFilesInLog())
+    def codestyleBuild = Globals.buildsList["codestyle"]
+    gerritLabelCodestyle(change, sha1, resCodeStyle, findCodestyleFilesInLog(build), build.startJob)
   }
 
   flaky = flakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
