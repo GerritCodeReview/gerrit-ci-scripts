@@ -142,6 +142,30 @@
       "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e9088674_1ab536c4",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T08:18:11Z",
+      "side": 0,
+      "message": "Makes sense, so we\u0027ll just change the Gerrit-verifier job and run bazel ... but the rest of the \"structure\" of the build flow can stay the same",
+      "parentUuid": "ababe907_2389b0db",
+      "range": {
+        "startLine": 87,
+        "startChar": 16,
+        "endLine": 87,
+        "endChar": 34
+      },
+      "revId": "ae548d9e6168410294d0694a1adb11694e73a902",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }

@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2458fdad_2462db2a",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 9
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T08:18:11Z",
+      "side": 1,
+      "message": "What could be actually be better is to create a list of files in the job itself and make it available as artifact.\n\nThat would decouple the build definition from the collection of its results.\n\nPossibly a follow-up?",
+      "parentUuid": "8d188f10_c660286e",
+      "revId": "dfef57b616da039765bbdaf9cf9956e5f921797c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f143ef03_b568d0f4",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 9
