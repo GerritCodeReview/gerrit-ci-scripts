@@ -22,6 +22,30 @@
       "revId": "56068f127b27d2d01d8c3ad3c4a8493ac07b6d74",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8abaf4b_12aec9ef",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T13:29:35Z",
+      "side": 1,
+      "message": "This is the review score for codestyle label, see below how it is used.",
+      "parentUuid": "1bb48b6f_8ebf5111",
+      "range": {
+        "startLine": 125,
+        "startChar": 22,
+        "endLine": 125,
+        "endChar": 28
+      },
+      "revId": "56068f127b27d2d01d8c3ad3c4a8493ac07b6d74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
