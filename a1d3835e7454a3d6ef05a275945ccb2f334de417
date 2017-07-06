@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a3a7b52_44e7f12a",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T06:41:26Z",
+      "side": 1,
+      "message": "codestyle isn\u0027t a \"Bazel build mode\" ... actually the build has nothing to do with Bazel at all and doesn\u0027t even build the code but only checks the Java style syntax.",
+      "range": {
+        "startLine": 180,
+        "startChar": 22,
+        "endLine": 180,
+        "endChar": 40
+      },
+      "revId": "a1d3835e7454a3d6ef05a275945ccb2f334de417",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4fcc401f_faf2febb",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T06:41:26Z",
+      "side": 1,
+      "message": "This is wrong: it is not a full Gerrit build with another \"execution mode\"",
+      "range": {
+        "startLine": 246,
+        "startChar": 4,
+        "endLine": 246,
+        "endChar": 24
+      },
+      "revId": "a1d3835e7454a3d6ef05a275945ccb2f334de417",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69b37119_9f7fe2c2",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-06T06:41:26Z",
+      "side": 1,
+      "message": "This is bad, because a failing codestyle build gets retried which is a non-sense: if the style of the code is wrong, trying it again wouldn\u0027t help at all.",
+      "range": {
+        "startLine": 270,
+        "startChar": 10,
+        "endLine": 270,
+        "endChar": 40
+      },
+      "revId": "a1d3835e7454a3d6ef05a275945ccb2f334de417",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
