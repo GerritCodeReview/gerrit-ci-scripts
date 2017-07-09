@@ -162,6 +162,36 @@
          cd gerrit
          echo 'Running google-java-format check...'
          git show --diff-filter=AM --name-only HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
+      - shell: |
+         #!/bin/bash -xe
+         cd gerrit
+         if [ "$TARGET_BRANCH" == "master" ] && git show --diff-filter=AM --name-only HEAD | grep polygerrit-ui
+         then
+           echo 'Running PolyGerrit lint check...'
+           bazel test //polygerrit-ui/app:lint_test --test_output errors
+           bazel test //polygerrit-ui/app:polylint_test --test_output errors
+         fi
+      - shell: |
+         #!/bin/bash -xe
+         cd gerrit
+         BUILD_FILES=$(git show --diff-filter=AM --name-only HEAD | grep --regex "WORKSPACE\|BUILD")
+         if [[ -s ${BUILD_FILES} ]]; then
+             NUM_BUILD_FILES=$(echo ${BUILD_FILES} | wc -w)
+             echo "Running buildifier on ${NUM_BUILD_FILES} files"
+             BUILDIFIER_OUTPUT_FILE="$(mktemp)_buildifier_output.log"
+             rm -rf ${BUILDIFIER_OUTPUT_FILE}
+             buildifier -showlog -v -mode=check ${BUILD_FILES} 2>&1 | tee ${BUILDIFIER_OUTPUT_FILE}
+             if [[ -s ${BUILDIFIER_OUTPUT_FILE} ]]; then
+                 echo "FAIL: buildifier found errors and/or warnings in above BUILD files."
+                 echo "buildifier suggested the following changes:"
+                 buildifier -showlog -v -mode=diff ${BUILD_FILES}
+                 echo "Please fix manually or run buildifier <file> to auto-fix."
+                 return 1
+             else
+                 echo "PASS: No buildifier errors or warnings were found"
+                 return 0
+             fi
+         fi
 
 - job:
     name: 'Gerrit-verifier-change'
