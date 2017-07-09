@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9637b7fd_b541122a",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-07-09T09:30:11Z",
+      "side": 1,
+      "message": "Note for the reviewers:\n\nThis is entirely not tested. I\u0027ve shamelessly stolen the approach from tensorflow project: [1]. I thinks that on the CI side we do some parsing and expect that the output is written by google-java-format --dry-mode program. In case, there were no gjf errors, buildifier would run and could potentially report errors.\n\nShould we separate then codestyle to multiple jobs? To be able easily to parse the output? \n\n* a) name: Gerrit-codestyle-google-java-format\n* b) name: Gerrit-codestyle-buildifier?\n* ...\n\n* [1] https://github.com/tensorflow/tensorflow/blob/ce717be4a2966a268e9a4831c39254b611f1c9e7/tensorflow/tools/ci_build/ci_sanity.sh#L264-L294",
+      "revId": "ff9bad7c6a99ed4ad5d3141fa2cbddf815d88dfb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
