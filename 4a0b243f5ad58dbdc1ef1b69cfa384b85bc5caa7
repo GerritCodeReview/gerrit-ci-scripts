@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "02dbdfaf_61a72828",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-07-12T13:32:33Z",
+      "side": 1,
+      "message": "Needs to be limited to the master branch.",
+      "range": {
+        "startLine": 166,
+        "startChar": 0,
+        "endLine": 172,
+        "endChar": 11
+      },
+      "revId": "4a0b243f5ad58dbdc1ef1b69cfa384b85bc5caa7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
