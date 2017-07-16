@@ -314,7 +314,7 @@ def buildChange(change) {
       def tool = it[0]
       def mode = it[1]
       Globals.buildsList.remove(it)
-      retryBuilds += buildsForMode(refspec,sha1,changeUrl,mode,[tool],branch,3)
+      retryBuilds += buildsForMode(refspec,sha1,changeUrl,mode,[tool],branch,3, false)
     }
     buildsWithResults = parallelBuilds(retryBuilds)
   }
