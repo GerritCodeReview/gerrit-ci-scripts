@@ -374,28 +374,17 @@ def requestedChangeId = params.get("CHANGE_ID")
 def processAll = false
 
 queryUrl = 
-  new URL(Globals.gerrit + "changes/?pp=0&O=3&q=" + requestedChangeId)
+  new URL("${Globals.gerrit}changes/$requestedChangeId/?pp=0&O=3")
 
-def changes = queryUrl.getText().substring(5)
+def change = queryUrl.getText().substring(5)
 def jsonSlurper = new JsonSlurper()
-def changesJson = jsonSlurper.parseText(changes)
+def changeJson = jsonSlurper.parseText(change)
 
-def acceptedChanges = changesJson.findAll {
-  change ->
-  sha1 = change.current_revision
-  if(sha1 == null) {
-      println "[WARNING] Skipping change " + change.change_id + " because it does not have any current revision or patch-set"
-      return false
-  }
-
-  def verified = change.labels.Verified
-  def approved = verified.approved
-  def rejected = verified.rejected 
-
-  gerritComment(build.startJob.getBuildUrl() + "console",change._number,change.current_revision,"Verification queued on")
-  return true
+sha1 = changeJson.current_revision
+if(sha1 == null) {
+  println "[WARNING] Skipping change " + changeJson.change_id + " because it does not have any current revision or patch-set"
+} else {
+  gerritComment(build.startJob.getBuildUrl() + "console",changeJson._number,changeJson.current_revision,"Verification queued on")
+  buildChange(changeJson)
 }
 
-for (change in acceptedChanges) {
-  buildChange(change)
-}
