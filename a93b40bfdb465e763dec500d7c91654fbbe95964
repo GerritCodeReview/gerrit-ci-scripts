@@ -22,6 +22,30 @@
       "revId": "a93b40bfdb465e763dec500d7c91654fbbe95964",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8fa5177a_5b89d8da",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-07-31T13:53:53Z",
+      "side": 1,
+      "message": "I think, it\u0027s not officially supported in the latest available buildifier version.",
+      "parentUuid": "260b1f1f_1f288c1a",
+      "range": {
+        "startLine": 177,
+        "startChar": 73,
+        "endLine": 177,
+        "endChar": 99
+      },
+      "revId": "a93b40bfdb465e763dec500d7c91654fbbe95964",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
