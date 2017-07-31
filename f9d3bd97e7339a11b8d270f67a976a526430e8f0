@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "88f361af_96507464",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-07-31T10:36:27Z",
+      "side": 1,
+      "message": "should probably be \"exit\"",
+      "range": {
+        "startLine": 189,
+        "startChar": 17,
+        "endLine": 189,
+        "endChar": 23
+      },
+      "revId": "f9d3bd97e7339a11b8d270f67a976a526430e8f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
