@@ -46,6 +46,30 @@
       "revId": "ebba8bd7d21189b7d96228e4a39fb92b11ba91b8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f46d46a_e3490302",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-07-31T12:53:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "83cc94c3_9101f6d6",
+      "range": {
+        "startLine": 186,
+        "startChar": 17,
+        "endLine": 186,
+        "endChar": 98
+      },
+      "revId": "ebba8bd7d21189b7d96228e4a39fb92b11ba91b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
