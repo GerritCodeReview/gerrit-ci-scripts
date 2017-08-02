@@ -46,6 +46,30 @@
       "revId": "7fcbcaee5a299a8684368b9d027ab16ca95b96cc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "219e06af_8577f845",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-08-02T08:32:32Z",
+      "side": 1,
+      "message": "Right. Because jenkins user cannot access root\u0027s stuff. So we need to adapt the Docker, set GOPATH to something sane and add $HOME/go/bin to the jenkins PATH?",
+      "parentUuid": "694bd611_5caf3494",
+      "range": {
+        "startLine": 183,
+        "startChar": 13,
+        "endLine": 183,
+        "endChar": 26
+      },
+      "revId": "7fcbcaee5a299a8684368b9d027ab16ca95b96cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
