@@ -13,7 +13,8 @@ RUN cd /usr/local && \
     tar xvfz /tmp/golang.tar.gz && \
     cd /usr/local/bin && \
     ln -s /usr/local/go/bin/* . && \
-    go get github.com/bazelbuild/buildtools/buildifier
+    GOPATH=/usr go get github.com/bazelbuild/buildtools/buildifier && \
+    chmod a+rx /usr/bin/buildifier
 
 # Bazel cache warm-up with Gerrit master build
 # Set-up google-java-format utility to ~/format/google-java-format
