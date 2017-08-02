@@ -22,6 +22,30 @@
       "revId": "7fcbcaee5a299a8684368b9d027ab16ca95b96cc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "694bd611_5caf3494",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-08-02T08:16:05Z",
+      "side": 1,
+      "message": "Seems like we need to do it now .... still doesn\u0027t work:\n/root/go/bin/buildifier: Permission denied",
+      "parentUuid": "1eb7adff_fbdaa370",
+      "range": {
+        "startLine": 183,
+        "startChar": 13,
+        "endLine": 183,
+        "endChar": 26
+      },
+      "revId": "7fcbcaee5a299a8684368b9d027ab16ca95b96cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
