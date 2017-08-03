@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cf9abf9a_b57a139a",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-08-03T06:23:55Z",
+      "side": 1,
+      "message": "No, that doesn\u0027t work if the grep fails because the commit doesn\u0027t contain any change :-(",
+      "range": {
+        "startLine": 178,
+        "startChar": 111,
+        "endLine": 178,
+        "endChar": 119
+      },
+      "revId": "d069677e6e0c0f45d61fa28a61313aa607f045a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0adf5a2d_45840567",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-08-03T06:23:55Z",
+      "side": 1,
+      "message": "Output doesn\u0027t follow the regex pattern recognized by the verifier flow: the list of files won\u0027t then be captured in the code style verification message.",
+      "range": {
+        "startLine": 184,
+        "startChar": 17,
+        "endLine": 184,
+        "endChar": 46
+      },
+      "revId": "d069677e6e0c0f45d61fa28a61313aa607f045a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
