@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "cc815fd4_b079cd27",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-08-03T06:21:13Z",
+      "side": 1,
+      "message": "Two reasons:\n1) we don\u0027t want to fail where the change doesn\u0027t contain any BUILD / WORKSPACE file\n2) we want to list each one of them that is not compliant with a syntax recognized by the verifier flow. \n\nPoint 2) allows to have the list of files in the comment and e-mail associated to a failed code style verification.",
+      "parentUuid": "dbf21a2d_16d933a3",
+      "revId": "0788329ff49101b0c87618cdc9af9a79ed529a7f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "125d2f9c_44910807",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 12
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "995c270d_8f031443",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-08-03T06:21:13Z",
+      "side": 1,
+      "message": "Was too late last night :-) lines 181 and 182 need to be swapped",
+      "parentUuid": "125d2f9c_44910807",
+      "range": {
+        "startLine": 182,
+        "startChar": 13,
+        "endLine": 182,
+        "endChar": 45
+      },
+      "revId": "0788329ff49101b0c87618cdc9af9a79ed529a7f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ea119f7e_a0453461",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 12
@@ -53,6 +95,30 @@
       "writtenOn": "2017-08-03T05:22:00Z",
       "side": 1,
       "message": "This doesn\u0027t work here, tkdiff is missing. Even after installing it, it doesn\u0027t work, and saying that the invocation was wrong: [1]. Remove for now.\n\n* [1] http://paste.openstack.org/show/617360/",
+      "range": {
+        "startLine": 187,
+        "startChar": 17,
+        "endLine": 187,
+        "endChar": 61
+      },
+      "revId": "0788329ff49101b0c87618cdc9af9a79ed529a7f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fef036ee_23084c64",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-08-03T06:21:13Z",
+      "side": 1,
+      "message": "Strange because it is working on the CI :-O",
+      "parentUuid": "ea119f7e_a0453461",
       "range": {
         "startLine": 187,
         "startChar": 17,
