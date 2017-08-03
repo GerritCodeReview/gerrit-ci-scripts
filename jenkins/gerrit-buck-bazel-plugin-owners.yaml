@@ -49,11 +49,6 @@
       - 'plugin-owners-{branch}':
           targets: 'plugins/owners plugins/owners-autoassign'
           branch:
-            - stable-2.13
-      - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
-          targets: 'plugins/owners plugins/owners-autoassign'
-          branch:
-            - master
-          gerrit-branch:
             - master
             - stable-2.14
+            - stable-2.13
