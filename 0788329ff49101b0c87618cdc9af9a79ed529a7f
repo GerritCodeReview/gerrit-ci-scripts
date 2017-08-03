@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dbf21a2d_16d933a3",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-08-03T05:22:00Z",
+      "side": 1,
+      "message": "Why we need a loop here? buildifier can process multiple files.",
+      "revId": "0788329ff49101b0c87618cdc9af9a79ed529a7f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "125d2f9c_44910807",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-08-03T05:22:00Z",
+      "side": 1,
+      "message": "We should not remove the file, until we check for it content.",
+      "range": {
+        "startLine": 182,
+        "startChar": 13,
+        "endLine": 182,
+        "endChar": 45
+      },
+      "revId": "0788329ff49101b0c87618cdc9af9a79ed529a7f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ea119f7e_a0453461",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-08-03T05:22:00Z",
+      "side": 1,
+      "message": "This doesn\u0027t work here, tkdiff is missing. Even after installing it, it doesn\u0027t work, and saying that the invocation was wrong: [1]. Remove for now.\n\n* [1] http://paste.openstack.org/show/617360/",
+      "range": {
+        "startLine": 187,
+        "startChar": 17,
+        "endLine": 187,
+        "endChar": 61
+      },
+      "revId": "0788329ff49101b0c87618cdc9af9a79ed529a7f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
