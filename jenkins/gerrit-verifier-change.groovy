@@ -321,7 +321,7 @@ def buildChange(change) {
 
   def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
 
-  def resAll = getVerified(resVerify, codestyleResult[1])
+  def resAll = codestyleResult ? getVerified(resVerify, codestyleResult[1]) : resVerify
 
   gerritLabelVerify(change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
 
