@@ -384,7 +384,6 @@ sha1 = changeJson.current_revision
 if(sha1 == null) {
   println "[WARNING] Skipping change " + changeJson.change_id + " because it does not have any current revision or patch-set"
 } else {
-  gerritComment(build.startJob.getBuildUrl() + "console",changeJson._number,changeJson.current_revision,"Verification queued on")
   buildChange(changeJson)
 }
 
