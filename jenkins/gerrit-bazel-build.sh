@@ -5,9 +5,6 @@ cd gerrit
 
 export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone"
 
-bazel build $BAZEL_OPTS \
-      gerrit-plugin-api:plugin-api_deploy.jar \
-      gerrit-extension-api:extension-api_deploy.jar
-
 bazel build $BAZEL_OPTS plugins:core
 bazel build $BAZEL_OPTS release
+bazel build $BAZEL_OPTS api
