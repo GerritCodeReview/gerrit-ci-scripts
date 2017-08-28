@@ -22,6 +22,30 @@
       "revId": "182c1e9f678e087adcd47e49581a426907454de1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f5b3dc18_d3c60868",
+        "filename": "jenkins/gerrit-bazel-plugin-find-owners.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1032487
+      },
+      "writtenOn": "2017-08-28T22:30:51Z",
+      "side": 1,
+      "message": "The plugin depends on gerrit new API, so both the plugin and gerrit must come from the same master branch, or the same stable-2.14 branch.",
+      "parentUuid": "d7c4c6aa_d8ede993",
+      "range": {
+        "startLine": 8,
+        "startChar": 10,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "182c1e9f678e087adcd47e49581a426907454de1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
