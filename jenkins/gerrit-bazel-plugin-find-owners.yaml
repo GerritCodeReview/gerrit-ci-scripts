@@ -1,0 +1,11 @@
+- project:
+    name: find-owners
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - stable-2.14
+          gerrit-branch:
+            - stable-2.14
