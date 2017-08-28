@@ -1,0 +1,7 @@
+- project:
+    name: find-owners
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.14
