@@ -20,15 +20,9 @@ then
   bazel test $BAZEL_OPTS //...
 fi
 
-if [[ "$MODE" == *"disableChangeReviewDb"* ]]
+if [[ "$MODE" == *"notedb"* ]]
 then
-  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB"
-  bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
-fi
-
-if [[ "$MODE" == *"fused"* ]]
-then
-  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=FUSED"
+  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=NOTE_DB"
   bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
