@@ -16,9 +16,9 @@ then
     buck test --no-results-cache --exclude flaky
   fi
 
-  if [[ "$MODE" == *"disableChangeReviewDb"* ]]
+  if [[ "$MODE" == *"notedb"* ]]
   then
-    export GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB
+    export GERRIT_NOTEDB=ON
     buck test --no-results-cache --exclude flaky
   fi
 
