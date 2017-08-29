@@ -16,13 +16,9 @@ bazel test $BAZEL_OPTS //...
 
 if [ "{branch}" == "master" ]
 then
-  echo 'Test in NoteDb mode (Disable ReviewDb)'
+  echo 'Test in NoteDb mode'
   echo '----------------------------------------------'
-  bazel test --test_env=GERRIT_NOTEDB=DISABLE_CHANGE_REVIEW_DB $BAZEL_OPTS //...
-
-  echo 'Test in NoteDb mode (Fused)'
-  echo '----------------------------------------------'
-  bazel test --test_env=GERRIT_NOTEDB=FUSED $BAZEL_OPTS //...
+  bazel test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
 fi
 
 if [ "{branch}" == "master" || "{branch}" == "stable-2.14" ]
