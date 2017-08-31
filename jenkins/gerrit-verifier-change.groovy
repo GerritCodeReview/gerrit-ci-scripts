@@ -85,7 +85,7 @@ def gerritLabelVerify(change, sha1, verified, builds) {
   def changeNum = change._number
 
   def msgList = builds.collect { type,build ->
-    [ 'type': type, 'res': build.getResult().toString(), 'url': build.getBuildUrl() + "console" ]
+    [ 'type': type, 'res': build.getResult().toString(), 'url': build.getBuildUrl() + "consoleText" ]
   } sort { a,b -> a['res'].compareTo(b['res']) }
 
   def msgBody = msgList.collect {
@@ -124,7 +124,7 @@ def gerritLabelCodestyle(change, sha1, cs, files, build) {
   def changeNum = change._number
   def formattingMsg = cs < 0 ? ('The following files need formatting:\n    ' + files.join('\n    ')) : 'All files are correctly formatted'
   def res = build.getResult().toString()
-  def url = build.getBuildUrl() + "console"
+  def url = build.getBuildUrl() + "consoleText"
 
   def msgBody = "${Globals.resTicks[res]} $formattingMsg\n    (${url})"
 
@@ -203,7 +203,7 @@ def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,code
                                TARGET_BRANCH: targetBranch))
                      println "Builds status:"
                      Globals.buildsList.each {
-                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "console"})"
+                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
                      }
       }
     }
@@ -218,7 +218,7 @@ def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,code
                              CHANGE_URL: changeUrl, MODE: mode, TARGET_BRANCH: targetBranch))
                      println "Builds status:"
                      Globals.buildsList.each {
-                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "console"})"
+                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
                      }
                    }
                 }
