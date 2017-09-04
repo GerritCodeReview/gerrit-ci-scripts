@@ -160,11 +160,11 @@
          #!/bin/bash -xe
          cd gerrit
          echo 'Running google-java-format check...'
-         git show --diff-filter=AM --name-only HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
+         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
       - shell: |
          #!/bin/bash -xe
          cd gerrit
-         if [ "$TARGET_BRANCH" == "master" ] && git show --diff-filter=AM --name-only HEAD | grep polygerrit-ui
+         if [ "$TARGET_BRANCH" == "master" ] && git show --diff-filter=AM --name-only --pretty="" HEAD | grep polygerrit-ui
          then
            echo 'Running PolyGerrit lint check...'
            bazel test //polygerrit-ui/app:lint_test --test_output errors
@@ -173,7 +173,7 @@
       - shell: |
          #!/bin/bash -xe
          cd gerrit
-         if [ "$TARGET_BRANCH" == "master" ] && git show --diff-filter=AM --name-only HEAD | grep polygerrit-ui
+         if [ "$TARGET_BRANCH" == "master" ] && git show --diff-filter=AM --name-only --pretty="" HEAD | grep polygerrit-ui
          then
            echo 'Running PolyGerrit template test...'
            bazel test //polygerrit-ui/app:all --test_tag_filters=template --test_output errors
