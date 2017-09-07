@@ -26,7 +26,7 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     cd /tmp/gerrit && ( bazel build release || true ) && \
     cd /tmp/gerrit && ./tools/setup_gjf.sh && \
     cd /tmp/gerrit && mv tools/format ~ && \
-    cd /tmp/gerrit && ./tools/download_file.py -o ~/format/google-java-format-1.3-all-deps.jar -u https://github.com/davido/google-java-format/releases/download/1.3-1-gec5ce10/google-java-format-1.3-1-gec5ce10-all-deps.jar -v "65f060dc238bdd81ef029354d8e6dad6dd742ef4" && \
+    cd /tmp/gerrit && ./tools/download_file.py -o ~/format/google-java-format-1.4-all-deps.jar -u https://github.com/davido/google-java-format/releases/download/1.4-1-ge22b66d/google-java-format-1.4-1-ge22b66d-all-deps.jar -v "ecc173841ee5794cd09a0a15db82a8c89357561c" && \
     rm -Rf /tmp/gerrit'
 
 USER root
