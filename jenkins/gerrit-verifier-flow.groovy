@@ -101,7 +101,9 @@ def acceptedChanges = changesJson.findAll {
       true
     } else {
       def myVerifications = verified.findAll {
-        verification -> verification._account_id == Globals.myAccountId && verification.value != 0
+        verification -> verification._account_id == Globals.myAccountId // FIXME: It seems gerrit-review.googlesource.com
+                                                                        // does not return a reliable verification value:
+                                                                        // it was with  '&& verification.value != 0'
       }
       return myVerifications.empty
     }
