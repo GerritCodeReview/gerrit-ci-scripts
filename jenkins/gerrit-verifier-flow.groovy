@@ -53,12 +53,22 @@ println "Querying Gerrit for last modified changes since ${since} ..."
 
 def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
 
-queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
+queryUrl = new URL(Globals.gerrit + "changes/?pp=0&n=" + Globals.maxChanges + "&q=" +
                       gerritQuery.encodeURL())
 
 def changes = queryUrl.getText().substring(5)
 def jsonSlurper = new JsonSlurper()
-def changesJson = jsonSlurper.parseText(changes)
+def changesListJson = jsonSlurper.parseText(changes)
+
+def changesJson = changesListJson.collect {
+  changeItem ->
+  changeId = changeItem.id
+  changeUrl = new URL(Globals.gerrit + "changes/" + changeId + "/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS")
+  println "HTTP GET $changeUrl"
+  changeJson = jsonSlurper.parseText(changeUrl.getText().substring(5))
+  println "Changer JSON: $changeJson"
+  return changeJson
+}
 
 def getBuildRunsInProgress() {
   def verifierChangeJob = Hudson.instance.getJob(Globals.verifierJobName)
@@ -102,6 +112,10 @@ def acceptedChanges = changesJson.findAll {
     } else {
       def myVerifications = verified.findAll {
         verification -> verification._account_id == Globals.myAccountId && verification.value != 0
+      }
+
+      if(!myVerifications.empty) {
+        println "[WARNING] Skipping change ${changeUrl(change._number)} because it has been already validated by the CI"
       }
       return myVerifications.empty
     }
