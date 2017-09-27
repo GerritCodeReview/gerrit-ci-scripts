@@ -29,7 +29,7 @@ class Globals {
   static String gerritReviewer = "GerritForge CI <gerritforge@gmail.com>"
   static long curlTimeout = 10000
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
-  static int maxChanges = 100
+  static int maxChanges = 50
   static int numRetryBuilds = 3
   static int myAccountId = 1022687
   static int waitForResultTimeout = 10000
@@ -51,14 +51,21 @@ if(lastBuild != null) {
 println ""
 println "Querying Gerrit for last modified changes since ${since} ..."
 
-def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
+def gerritQuery = "status:open project:gerrit"
 
-queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
+queryUrl = new URL(Globals.gerrit + "changes/?pp=0&n=" + Globals.maxChanges + "&q=" +
                       gerritQuery.encodeURL())
 
 def changes = queryUrl.getText().substring(5)
 def jsonSlurper = new JsonSlurper()
-def changesJson = jsonSlurper.parseText(changes)
+def changesListJson = jsonSlurper.parseText(changes)
+
+def changesJson = changesListJson.collect {
+  changeItem ->
+  changeUrl = new URL(Globals.gerrit + "changes/" + changeItem.id +
+                      "/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS")
+  return jsonSlurper.parseText(changeUrl.getText().substring(5))
+}
 
 def getBuildRunsInProgress() {
   def verifierChangeJob = Hudson.instance.getJob(Globals.verifierJobName)
@@ -102,6 +109,10 @@ def acceptedChanges = changesJson.findAll {
     } else {
       def myVerifications = verified.findAll {
         verification -> verification._account_id == Globals.myAccountId && verification.value != 0
+      }
+
+      if(!myVerifications.empty) {
+        println "[WARNING] Skipping change ${changeUrl(change._number)} because it has been already validated by the CI"
       }
       return myVerifications.empty
     }
