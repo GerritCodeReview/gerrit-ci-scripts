@@ -41,17 +41,15 @@ def lastBuild = build.getPreviousSuccessfulBuild()
 
 def lastBuildStartTimeMillis = lastBuild == null ?
   (System.currentTimeMillis() - 1800000) : lastBuild.getStartTimeInMillis()
-def sinceMillis = lastBuildStartTimeMillis - (24 * 3600 * 1000)
-def since = Globals.tsFormat.format(new Date(sinceMillis))
 
 if(lastBuild != null) {
   println "Last successful build was " + lastBuild.toString()
 }
 
 println ""
-println "Querying Gerrit for last modified changes since ${since} ..."
+println "Querying Gerrit for non verified changes ..."
 
-def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
+def gerritQuery = "status:open project:gerrit NOT label:verified+1 NOT label:verified-1"
 
 queryUrl = new URL(Globals.gerrit + "changes/?pp=0&n=" + Globals.maxChanges + "&q=" +
                       gerritQuery.encodeURL())
