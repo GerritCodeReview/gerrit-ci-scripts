@@ -42,7 +42,7 @@ class Globals {
   static String addReviewerTag = ciTag("addReviewer")
   static String addVerifiedTag = ciTag("addVerified")
   static String addCommentTag = ciTag("comment")
-  static Set<String> codeStyleBranches = ["master", "stable-2.14"]
+  static Set<String> codeStyleBranches = ["master", "stable-2.14", "stable-2.15"]
   static resTicks = [ 'ABORTED':'\u26aa', 'SUCCESS':'\u2705', 'FAILURE':'\u274c' ]
 }
 
