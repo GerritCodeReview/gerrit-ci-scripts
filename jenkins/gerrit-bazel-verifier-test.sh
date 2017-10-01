@@ -26,7 +26,7 @@ then
   bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
-if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-2.14" ]]
+if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-2.15" || "$TARGET_BRANCH" == "stable-2.14" ]]
 then
   if [[ "$MODE" == *"polygerrit"* ]]
   then
