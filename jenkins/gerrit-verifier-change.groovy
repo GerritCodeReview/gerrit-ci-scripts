@@ -42,7 +42,7 @@ class Globals {
   static String addReviewerTag = ciTag("addReviewer")
   static String addVerifiedTag = ciTag("addVerified")
   static String addCommentTag = ciTag("comment")
-  static Set<String> codeStyleBranches = ["master", "stable-2.14"]
+  static Set<String> codeStyleBranches = ["master", "stable-2.14", "stable-2.15"]
   static resTicks = [ 'ABORTED':'\u26aa', 'SUCCESS':'\u2705', 'FAILURE':'\u274c' ]
 }
 
@@ -269,11 +269,11 @@ def buildChange(change) {
   println "Building Change " + changeUrl
   build.setDescription("""<a href='$changeUrl' target='_blank'>Change #$changeNum</a>""")
 
-  if(branch == "master") {
+  if(branch == "master" || branch == "stable-2.15") {
     modes += "notedb"
   }
 
-  if(branch == "master" || branch == "stable-2.14") {
+  if(branch == "master" || branch == "stable-2.15" || branch == "stable-2.14") {
     def changedFiles = getChangedFiles(changeNum, sha1)
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") }
 
@@ -372,7 +372,7 @@ def requestedChangeId = params.get("CHANGE_ID")
 
 def processAll = false
 
-queryUrl = 
+queryUrl =
   new URL("${Globals.gerrit}changes/$requestedChangeId/?pp=0&O=3")
 
 def change = queryUrl.getText().substring(5)
