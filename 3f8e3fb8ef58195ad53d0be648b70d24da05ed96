@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4862cff3_42df5b36",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2017-10-02T10:14:29Z",
+      "side": 1,
+      "message": "Should we drop testing for 2.14 to no overwhelm the CI?",
+      "range": {
+        "startLine": 24,
+        "startChar": 84,
+        "endLine": 24,
+        "endChar": 88
+      },
+      "revId": "3f8e3fb8ef58195ad53d0be648b70d24da05ed96",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
