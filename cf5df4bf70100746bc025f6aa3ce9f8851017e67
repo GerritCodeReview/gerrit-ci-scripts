@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8378edb_e469e8f4",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-10-02T04:23:27Z",
+      "side": 1,
+      "message": "15",
+      "range": {
+        "startLine": 185,
+        "startChar": 17,
+        "endLine": 185,
+        "endChar": 19
+      },
+      "revId": "cf5df4bf70100746bc025f6aa3ce9f8851017e67",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
