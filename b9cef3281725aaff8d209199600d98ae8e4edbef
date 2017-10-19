@@ -34,6 +34,24 @@
       "revId": "b9cef3281725aaff8d209199600d98ae8e4edbef",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7606a72f_7c2a765d",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-10-19T05:48:20Z",
+      "side": 1,
+      "message": "Yes: [1].\n\n* [1] https://github.com/google/google-java-format/pull/154/commits/e22b66dd76b108f6fd2b05a9fe9e426aa0b45d73#diff-e2a1fb24af1354460a3ee75611e8a298R182",
+      "parentUuid": "aaccadcb_5e0ce1ce",
+      "revId": "b9cef3281725aaff8d209199600d98ae8e4edbef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
