@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "15b90fcc_e522b34a",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-10-19T05:01:58Z",
+      "side": 1,
+      "message": "This change: [1] added --dry-run, but also introduced --set-exit-if-changed  to return exit code 1 if there are any formatting changes. This should be reflected in the gjf invocationm right?\n\n* [1] https://github.com/google/google-java-format/pull/106",
+      "revId": "b9cef3281725aaff8d209199600d98ae8e4edbef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
