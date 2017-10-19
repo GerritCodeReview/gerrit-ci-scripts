@@ -52,6 +52,24 @@
       "revId": "b9cef3281725aaff8d209199600d98ae8e4edbef",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebb76f0_ebfeb1a9",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-10-19T06:40:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7606a72f_7c2a765d",
+      "revId": "b9cef3281725aaff8d209199600d98ae8e4edbef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
