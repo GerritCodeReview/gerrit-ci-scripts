@@ -16,6 +16,24 @@
       "revId": "b9cef3281725aaff8d209199600d98ae8e4edbef",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aaccadcb_5e0ce1ce",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-10-19T05:24:43Z",
+      "side": 1,
+      "message": "Yes, I was wondering if we should add that in the invocation.  It uses xargs to invoke on potentially more than one file though, so wouldn\u0027t this cause it to exit at the first file that needs formatting?\n\nOr does the --dry-mode implementation in your fork already exit with non-zero?",
+      "parentUuid": "15b90fcc_e522b34a",
+      "revId": "b9cef3281725aaff8d209199600d98ae8e4edbef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
