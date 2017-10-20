@@ -159,8 +159,8 @@
       - shell: |
          #!/bin/bash -xe
          cd gerrit
-         echo 'Running google-java-format check...'
-         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
+         echo 'Running google-java-format-1.5 check...'
+         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format-1.5 --dry-run --set-exit-if-changed
       - shell: |
          #!/bin/bash -xe
          cd gerrit
