@@ -159,8 +159,16 @@
       - shell: |
          #!/bin/bash -xe
          cd gerrit
-         echo 'Running google-java-format check...'
-         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
+         if ([ "$TARGET_BRANCH" == "stable-2.14" ] || [ "$TARGET_BRANCH" == "stable-2.15" ])
+         then
+           GJF_VERSION=1.3
+           GJF_OPTION=""
+         else
+           GJF_VERSION=1.5
+           GJF_OPTION="--set-exit-if-changed"
+         fi
+         echo 'Running google-java-format-$GJF_VERSION check...'
+         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format-$GJF_VERSION --dry-run $GJF_OPTION
       - shell: |
          #!/bin/bash -xe
          cd gerrit
