@@ -153,6 +153,7 @@
     name: Gerrit-codestyle
     description: "Gerrit code-style checker for an open change\n"
     defaults: verifier-defaults
+    node: bazel-debian
 
     builders:
       - merge-target-branch
@@ -160,8 +161,15 @@
       - shell: |
          #!/bin/bash -xe
          cd gerrit
-         echo 'Running google-java-format check...'
-         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format --dry-run
+         export `grep 'VERSION=' tools/setup_gjf.sh | sed -e 's/"//g'`
+         if [ "$VERSION" == "1.3" ]
+         then
+           GJF_OPTION=""
+         else
+           GJF_OPTION="--set-exit-if-changed"
+         fi
+         echo 'Running google-java-format-$VERSION check...'
+         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format-$VERSION --dry-run $GJF_OPTION
       - shell: |
          #!/bin/bash -xe
          cd gerrit
