@@ -8,7 +8,7 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_verbose_timeout_warnings --build_tests_only \
                    --nocache_test_results \
                    --test_timeout 3600 \
-                   --test_tag_filters=-elastic,-flaky"
+                   --test_tag_filters=-elastic,-flaky,-template"
 
 echo 'Test in ReviewDb mode'
 echo '----------------------------------------------'
