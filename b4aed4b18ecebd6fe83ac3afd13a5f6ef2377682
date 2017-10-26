@@ -34,6 +34,24 @@
       "revId": "b4aed4b18ecebd6fe83ac3afd13a5f6ef2377682",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "177adcbb_191c62f2",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-base.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-10-26T10:29:40Z",
+      "side": 1,
+      "message": "I did not see any velocity support removed on the its-base master branch. What commit are you referring to?",
+      "parentUuid": "5c394b47_7ad5a3f0",
+      "revId": "b4aed4b18ecebd6fe83ac3afd13a5f6ef2377682",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
