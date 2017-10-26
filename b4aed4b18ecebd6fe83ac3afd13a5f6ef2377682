@@ -52,6 +52,24 @@
       "revId": "b4aed4b18ecebd6fe83ac3afd13a5f6ef2377682",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9f7f54a_abeb018c",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-base.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-10-26T10:31:05Z",
+      "side": 1,
+      "message": "This one https://gerrit.googlesource.com/plugins/its-base/+/f6f8c7c644514e7d6cd9b906d339bd4b0672eb00",
+      "parentUuid": "177adcbb_191c62f2",
+      "revId": "b4aed4b18ecebd6fe83ac3afd13a5f6ef2377682",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
