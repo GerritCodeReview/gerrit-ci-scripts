@@ -16,6 +16,24 @@
       "revId": "b4aed4b18ecebd6fe83ac3afd13a5f6ef2377682",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5c394b47_7ad5a3f0",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-base.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-10-26T10:14:42Z",
+      "side": 1,
+      "message": "See comment outside :).\n\nIt\u0027s because velocity support was removed.",
+      "parentUuid": "48eae3ba_7dd97db6",
+      "revId": "b4aed4b18ecebd6fe83ac3afd13a5f6ef2377682",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
