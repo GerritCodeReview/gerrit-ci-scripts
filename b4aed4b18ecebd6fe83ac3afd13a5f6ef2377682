@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "48eae3ba_7dd97db6",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-base.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-10-26T10:13:00Z",
+      "side": 1,
+      "message": "Why do we need a stable-2.15 branch? The master version works well with 2.15 as well.",
+      "revId": "b4aed4b18ecebd6fe83ac3afd13a5f6ef2377682",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
