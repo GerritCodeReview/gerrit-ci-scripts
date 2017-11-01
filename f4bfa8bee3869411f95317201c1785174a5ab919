@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "512e1972_8070867c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-01T06:40:13Z",
+      "side": 1,
+      "message": "In light of: [1], should this change be reverted?\n\n* [1] https://groups.google.com/d/topic/repo-discuss/D_Z8uZhyC5c/discussion",
+      "revId": "f4bfa8bee3869411f95317201c1785174a5ab919",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
