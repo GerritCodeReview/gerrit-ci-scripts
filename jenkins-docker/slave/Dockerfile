@@ -57,10 +57,10 @@ RUN apt-get install -y nodejs
 # PolyGerrit tests
 
 RUN npm install -g web-component-tester eslint eslint-config-google eslint-plugin-html polylint polymer-cli typescript fried-twinkie
-RUN curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-RUN apt-get update && apt-get install -y google-chrome-stable
-
+RUN apt-get update
+RUN wget -O /tmp/chrome64_60.0.3112.90.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_60.0.3112.90.deb
+RUN apt-get install -y gdebi
+RUN gdebi --non-interactive /tmp/chrome64_60.0.3112.90.deb
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
