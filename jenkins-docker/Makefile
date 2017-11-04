@@ -1,4 +1,4 @@
-DIRS=master slave slave-buck slave-mvn slave-bazel slave-sbt
+DIRS=master ubuntu-chrome slave slave-buck slave-mvn slave-bazel slave-sbt
 
 default: start
 

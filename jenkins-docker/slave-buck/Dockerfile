@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave
+FROM gerritforge/gerrit-ci-slave:ubuntu15.04-chrome60
 
 # Buck build
 
