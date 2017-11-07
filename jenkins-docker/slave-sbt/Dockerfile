@@ -12,7 +12,7 @@ RUN apt-get update && \
 
 # SBT warm-up
 RUN cd /tmp && echo hello | sbt new sbt/scala-seed.g8
-RUN echo 'addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.4")' >> /tmp/hello/project/plugins.sbt
+RUN echo 'addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.5")' >> /tmp/hello/project/plugins.sbt
 RUN chown -R jenkins: /tmp/hello
 
 USER jenkins
