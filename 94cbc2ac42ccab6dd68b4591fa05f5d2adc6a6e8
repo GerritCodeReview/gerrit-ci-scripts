@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c4e78ebc_8ba3b6f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T09:27:28Z",
+      "side": 1,
+      "message": "deffitly works then as when I kept on 0.14.4 it was failing to build.",
+      "parentUuid": "3b04430f_cf64cfbc",
+      "range": {
+        "startLine": 12,
+        "startChar": 19,
+        "endLine": 12,
+        "endChar": 32
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d8cc047a_19d2007e",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2017-11-08T09:17:33Z",
       "side": 1,
       "message": "Can you explain why and what fails with Ubuntu 16.04?",
+      "range": {
+        "startLine": 14,
+        "startChar": 10,
+        "endLine": 14,
+        "endChar": 51
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b1ef80d3_9ee2ba84",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T09:27:28Z",
+      "side": 1,
+      "message": "Well we need to be able to build the image, if we carnt build it we carnt update ;).\n\nI’m not sure if Ubuntu 14.04 has the same problem.\n\nWould you be able to try and build Ubuntu 14.04 locally and build slave-any without downloading the already built image on docker please?",
+      "parentUuid": "d8cc047a_19d2007e",
       "range": {
         "startLine": 14,
         "startChar": 10,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "7a9f0137_55c8d5b9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T09:27:28Z",
+      "side": 1,
+      "message": "Because when building I found it was failing with bc command unknown.",
+      "parentUuid": "dd97263f_f540314e",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 40
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "34481969_4fe0b828",
         "filename": "jenkins-docker/slave-sbt/Dockerfile",
         "patchSetId": 3
@@ -82,6 +154,30 @@
       "writtenOn": "2017-11-08T09:17:33Z",
       "side": 1,
       "message": "Why is BC needed here?",
+      "range": {
+        "startLine": 5,
+        "startChar": 43,
+        "endLine": 5,
+        "endChar": 46
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9b55d0f2_f0512054",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T09:27:28Z",
+      "side": 1,
+      "message": "When I was building slave-sbt it failed with bc command unknown.\n\nNot sure if that’s because of the Ubuntu update.",
+      "parentUuid": "34481969_4fe0b828",
       "range": {
         "startLine": 5,
         "startChar": 43,
@@ -111,6 +207,23 @@
         "endLine": 15,
         "endChar": 64
       },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9ac7e10_0a850621",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T09:27:28Z",
+      "side": 1,
+      "message": "I doint think so as other users have had the problem. Using 0.14.5 worked though.",
       "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
