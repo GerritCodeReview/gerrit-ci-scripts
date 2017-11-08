@@ -28,3 +28,9 @@ failures of the VM or build errors.
 
 For more information on enlarging the boot2docker volume, please see:
 https://docs.docker.com/articles/b2d_volume_resize/
+
+## Building all the images with one command
+
+make build
+
+please follow the instruction in each of these images to get them running.
