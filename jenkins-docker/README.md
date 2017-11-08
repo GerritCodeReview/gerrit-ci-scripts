@@ -28,3 +28,30 @@ failures of the VM or build errors.
 
 For more information on enlarging the boot2docker volume, please see:
 https://docs.docker.com/articles/b2d_volume_resize/
+
+## Building all the images with one command
+
+make build
+
+## Running the images
+
+To run the images please do the following
+
+* docker images
+
+* docker run --security-opt seccomp:unconfined <image>
+
+* you need to open a seperate console
+
+4. docker ps
+
+5. using the number from docker ps for <image> do the following:
+   docker exec -i -t <ps_num> bash -i
+
+6. to exit a container type the following, exit.
+
+   If for some reason the container did not stop, you can do
+   docker container stop <ps_num>
+
+Note: If you want to delete images, please follow
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
