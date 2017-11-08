@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "04d40a5f_6533083a",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T23:05:26Z",
+      "side": 1,
+      "message": "Hmm, good point\n\nThanks, done.",
+      "parentUuid": "d02d57de_55e1f13a",
+      "range": {
+        "startLine": 6,
+        "startChar": 19,
+        "endLine": 6,
+        "endChar": 29
+      },
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "87e4d7f1_98f7178f",
         "filename": "jenkins-docker/slave/README.md",
         "patchSetId": 6
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "bf845e23_e50d8d0b",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T23:05:26Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "87e4d7f1_98f7178f",
+      "range": {
+        "startLine": 16,
+        "startChar": 39,
+        "endLine": 16,
+        "endChar": 50
+      },
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f3d8a377_171619c5",
         "filename": "jenkins-docker/slave/README.md",
         "patchSetId": 6
@@ -59,6 +107,24 @@
       "writtenOn": "2017-11-08T22:55:20Z",
       "side": 1,
       "message": "Why not just say exit from the running container?",
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fa72255b_e5caa001",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T23:05:26Z",
+      "side": 1,
+      "message": "Hi, not sure what you mean by exit?\n\nI have to do docker container stop \u003cps_num\u003e for it to stop the container for me.",
+      "parentUuid": "f3d8a377_171619c5",
       "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
