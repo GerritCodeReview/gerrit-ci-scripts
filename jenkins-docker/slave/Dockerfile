@@ -1,11 +1,16 @@
-FROM ubuntu:15.04
+FROM debian:stretch
 
 USER root
 
-RUN echo "deb http://al.archive.ubuntu.com/ubuntu/ vivid universe" >> /etc/apt/sources.list
+RUN echo "deb http://http.debian.net/debian/ stretch contrib" >> /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -y default-jdk openjdk-7-jdk openjdk-8-jdk && \
+RUN apt-get update && apt-get install -y default-jdk openjdk-8-jdk && \
     update-java-alternatives -v -s java-1.8.0-openjdk-amd64
+
+# Needed to support java 7 for older gerrit versions that used buck.
+RUN add-apt-repository ppa:openjdk-r/ppa && \
+    apt-get update && apt-get install -y openjdk-7-jdk
+
 COPY set-java.sh /usr/bin/
 
 RUN apt-get update && apt-get install -y \
@@ -47,18 +52,14 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 # Node JS for PolyGerrit build
 
-RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-RUN sh -c 'echo "deb http://deb.nodesource.com/node_6.x trusty main" >> /etc/apt/sources.list.d/nodesource.list'
-RUN sh -c 'echo "deb-src http://deb.nodesource.com/node_6.x trusty main" >> /etc/apt/sources.list.d/nodesource.list'
-RUN apt-get update
-RUN apt-get install -y apt-utils
-RUN apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get update && apt-get install -y nodejs
 
 # PolyGerrit tests
 
 RUN npm install -g web-component-tester eslint eslint-config-google eslint-plugin-html polylint polymer-cli typescript fried-twinkie
 RUN curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+RUN sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 RUN apt-get update && apt-get install -y google-chrome-stable
 
 COPY wct.conf.json /home/jenkins/
