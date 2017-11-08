@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3b04430f_cf64cfbc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-08T09:17:33Z",
+      "side": 1,
+      "message": "Seems or Works? And why wasn\u0027t working before?",
+      "range": {
+        "startLine": 12,
+        "startChar": 19,
+        "endLine": 12,
+        "endChar": 32
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d8cc047a_19d2007e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-08T09:17:33Z",
+      "side": 1,
+      "message": "Can you explain why and what fails with Ubuntu 16.04?",
+      "range": {
+        "startLine": 14,
+        "startChar": 10,
+        "endLine": 14,
+        "endChar": 51
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd97263f_f540314e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-08T09:17:33Z",
+      "side": 1,
+      "message": "Can you give more background on why it is needed?",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 40
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34481969_4fe0b828",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-08T09:17:33Z",
+      "side": 1,
+      "message": "Why is BC needed here?",
+      "range": {
+        "startLine": 5,
+        "startChar": 43,
+        "endLine": 5,
+        "endChar": 46
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "03f29d37_6e5f17ce",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-08T09:17:33Z",
+      "side": 1,
+      "message": "Could possibly the problem be different? e.g. we do not pin the SBT version?",
+      "range": {
+        "startLine": 15,
+        "startChar": 63,
+        "endLine": 15,
+        "endChar": 64
+      },
+      "revId": "94cbc2ac42ccab6dd68b4591fa05f5d2adc6a6e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
