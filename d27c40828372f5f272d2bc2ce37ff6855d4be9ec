@@ -69,6 +69,24 @@
       "revId": "d27c40828372f5f272d2bc2ce37ff6855d4be9ec",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e5bab958_11b314cf",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-08T18:03:08Z",
+      "side": 1,
+      "message": "Slim fails.\n\nWhen trying the image it is failing with\n\ndpkg: dependency problems prevent configuration of openjdk-8-jdk-headless:amd64:\n openjdk-8-jdk-headless:amd64 depends on openjdk-8-jre-headless (\u003d 8u151-b12-1~deb9u1); however:\n  Package openjdk-8-jre-headless:amd64 is not configured yet.\n\ndpkg: error processing package openjdk-8-jdk-headless:amd64 (--configure):\n dependency problems - leaving unconfigured\ndpkg: dependency problems prevent configuration of openjdk-8-jdk:amd64:\n openjdk-8-jdk:amd64 depends on openjdk-8-jdk-headless (\u003d 8u151-b12-1~deb9u1); however:\n  Package openjdk-8-jdk-headless:amd64 is not configured yet.\n\ndpkg: error processing package openjdk-8-jdk:amd64 (--configure):\n dependency problems - leaving unconfigured\ndpkg: dependency problems prevent configuration of openjdk-8-jre:amd64:\n openjdk-8-jre:amd64 depends on openjdk-8-jre-headless (\u003d 8u151-b12-1~deb9u1); however:\n  Package openjdk-8-jre-headless:amd64 is not configured yet.\n\ndpkg: error processing package openjdk-8-jre:amd64 (--configure):\n dependency problems - leaving unconfigured\nSetting up systemd (232-25+deb9u1) ...\nCreated symlink /etc/systemd/system/getty.target.wants/getty@tty1.service → /lib/systemd/system/getty@.service.\nCreated symlink /etc/systemd/system/multi-user.target.wants/remote-fs.target → /lib/systemd/system/remote-fs.target.\nCreated symlink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service → /lib/systemd/system/systemd-timesyncd.service.\nAdding group `systemd-journal\u0027 (GID 104) ...",
+      "parentUuid": "8826279c_93ed9763",
+      "revId": "d27c40828372f5f272d2bc2ce37ff6855d4be9ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
