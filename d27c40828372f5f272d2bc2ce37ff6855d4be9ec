@@ -16,6 +16,23 @@
       "revId": "d27c40828372f5f272d2bc2ce37ff6855d4be9ec",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb3abd92_dd4ebb25",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-08T17:56:24Z",
+      "side": 1,
+      "message": "Why not stretch-slim?",
+      "revId": "d27c40828372f5f272d2bc2ce37ff6855d4be9ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
