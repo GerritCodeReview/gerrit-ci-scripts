@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-if [ "{branch}" == "master" ]
+if [ "{branch}" == "master" || "{branch}" == "stable-2.15" || "{branch}" == "stable-2.14" ]
 then
   git read-tree -u --prefix=gerrit gerrit/{branch}
   . set-java.sh 8
