@@ -1,4 +1,4 @@
-DIRS=master slave slave-buck slave-mvn slave-bazel slave-sbt
+DIRS=master slave slave-debian slave-buck slave-mvn slave-bazel slave-sbt
 
 default: start
 
