@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d02d57de_55e1f13a",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-08T22:55:20Z",
+      "side": 1,
+      "message": "gerritforge/gerrit-ci-slave\n\nWhy not just:\n\n  make build\n\n?",
+      "range": {
+        "startLine": 6,
+        "startChar": 19,
+        "endLine": 6,
+        "endChar": 29
+      },
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "87e4d7f1_98f7178f",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-08T22:55:20Z",
+      "side": 1,
+      "message": "gerritforge/gerrit-ci-slave",
+      "range": {
+        "startLine": 16,
+        "startChar": 39,
+        "endLine": 16,
+        "endChar": 50
+      },
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f3d8a377_171619c5",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-08T22:55:20Z",
+      "side": 1,
+      "message": "Why not just say exit from the running container?",
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
