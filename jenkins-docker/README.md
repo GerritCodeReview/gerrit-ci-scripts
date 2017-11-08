@@ -28,3 +28,27 @@ failures of the VM or build errors.
 
 For more information on enlarging the boot2docker volume, please see:
 https://docs.docker.com/articles/b2d_volume_resize/
+
+## Building all the images with one command
+
+make build
+
+## Images
+
+Images available are:
+
+* gerritforge/gerrit-ci-slave - This installs the os and other prequisits.
+
+* gerritforge/gerrit-ci-slave-buck - installs buck and used for gerrit 2.13 or lower.
+
+* gerritforge/gerrit-ci-slave-bazel - installs bazel and runs polygerrit's tests.
+
+* gerritforge/gerrit-ci-slave-bazel-sbt - Installs scala and uses scala commands.
+
+* gerritforge/gerrit-ci-slave-mvn - installs mvn and runs mvn specific commands.
+
+## Running the container
+
+* docker run --privileged <image_name> --entrypoint=bash -ti
+
+If your not familar with docker please follow https://docs.docker.com/get-started/
