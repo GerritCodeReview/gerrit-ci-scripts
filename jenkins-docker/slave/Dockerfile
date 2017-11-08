@@ -1,11 +1,27 @@
-FROM ubuntu:15.04
+FROM debian:stretch
 
 USER root
 
-RUN echo "deb http://al.archive.ubuntu.com/ubuntu/ vivid universe" >> /etc/apt/sources.list
+RUN echo "deb http://http.debian.net/debian/ stretch contrib" >> /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -y default-jdk openjdk-7-jdk openjdk-8-jdk && \
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && apt-get install -y wget gpg software-properties-common default-jdk openjdk-8-jdk && \
     update-java-alternatives -v -s java-1.8.0-openjdk-amd64
+
+# Needed to support java 7 for older gerrit versions that used buck.
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 86F44E2A
+RUN sh -c 'echo "deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu xenial main" > /etc/apt/sources.list.d/java.list'
+
+# TODO remove once we no longer need to run tests under java 7
+# this is a hack as java 7 is not in debian stretch
+RUN cd /tmp && wget http://security.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig-config_2.11.94-0ubuntu1.1_all.deb && dpkg -i fontconfig-config_2.11.94-0ubuntu1.1_all.deb
+RUN cd /tmp && wget http://security.ubuntu.com/ubuntu/pool/main/f/fontconfig/libfontconfig1_2.11.94-0ubuntu1.1_amd64.deb && dpkg -i libfontconfig1_2.11.94-0ubuntu1.1_amd64.deb
+RUN cd /tmp && wget http://mirrors.kernel.org/ubuntu/pool/main/libj/libjpeg-turbo/libjpeg-turbo8_1.4.2-0ubuntu3_amd64.deb && dpkg -i libjpeg-turbo8_1.4.2-0ubuntu3_amd64.deb
+RUN cd /tmp && wget http://mirrors.kernel.org/ubuntu/pool/main/libj/libjpeg8-empty/libjpeg8_8c-2ubuntu8_amd64.deb && dpkg -i libjpeg8_8c-2ubuntu8_amd64.deb
+RUN cd /tmp && wget http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb && dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+RUN apt-get update && apt-get install -y openjdk-7-jdk
+
 COPY set-java.sh /usr/bin/
 
 RUN apt-get update && apt-get install -y \
@@ -47,19 +63,16 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 # Node JS for PolyGerrit build
 
-RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-RUN sh -c 'echo "deb http://deb.nodesource.com/node_6.x trusty main" >> /etc/apt/sources.list.d/nodesource.list'
-RUN sh -c 'echo "deb-src http://deb.nodesource.com/node_6.x trusty main" >> /etc/apt/sources.list.d/nodesource.list'
-RUN apt-get update
-RUN apt-get install -y apt-utils
-RUN apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get update && apt-get install -y nodejs
 
 # PolyGerrit tests
 
-RUN npm install -g web-component-tester eslint eslint-config-google eslint-plugin-html polylint polymer-cli typescript fried-twinkie
 RUN curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+RUN sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 RUN apt-get update && apt-get install -y google-chrome-stable
+
+RUN npm install -g web-component-tester eslint eslint-config-google eslint-plugin-html polylint polymer-cli typescript fried-twinkie
 
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
