@@ -43,6 +43,8 @@ Images available are:
 
 * gerritforge/gerrit-ci-slave-bazel: Bazel build for gerrit 2.14+.
 
+* gerritforge/gerrit-ci-slave-bazel-debian: Bazel build for gerrit 2.14+.
+
 * gerritforge/gerrit-ci-slave-bazel-sbt: Setups scala for plugins that use scala.
 
 * gerritforge/gerrit-ci-slave-mvn - Setups maven for plugins that use maven.

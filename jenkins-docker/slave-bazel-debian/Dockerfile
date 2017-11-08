@@ -31,3 +31,4 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     rm -Rf /tmp/gerrit'
 
 USER root
+
