@@ -164,6 +164,24 @@
       "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "281e53e2_ac62ad73",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T08:47:29Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "a6e6f227_4221d736",
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
