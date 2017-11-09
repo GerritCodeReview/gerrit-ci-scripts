@@ -146,6 +146,24 @@
       "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a6e6f227_4221d736",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-09T06:38:01Z",
+      "side": 1,
+      "message": "Just type \"exit\" in container: [1]?\n\n* [1] http://paste.openstack.org/show/625884",
+      "parentUuid": "7c4c1473_d80f602f",
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
