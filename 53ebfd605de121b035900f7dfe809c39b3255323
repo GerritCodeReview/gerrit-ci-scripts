@@ -1,0 +1,176 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cc5d18b6_1a95536a",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T14:06:52Z",
+      "side": 1,
+      "message": "It is a bit generic: are you referring how to run interactively an image with a shell scriot?",
+      "range": {
+        "startLine": 38,
+        "startChar": 3,
+        "endLine": 38,
+        "endChar": 17
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "38064efc_b84981b9",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T14:06:52Z",
+      "side": 1,
+      "message": "Better to just say the images that we produce and what are their purposes.",
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4752ccb3_70857a21",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T14:06:52Z",
+      "side": 1,
+      "message": "Better to just include --privileged if the purpose is to execute the PolyGerrit tests with Chrome",
+      "range": {
+        "startLine": 42,
+        "startChar": 13,
+        "endLine": 42,
+        "endChar": 46
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b6668ea7_1f7f0123",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T14:06:52Z",
+      "side": 1,
+      "message": "Why? Just run with --entrypoint\u003dbash -ti",
+      "range": {
+        "startLine": 44,
+        "startChar": 2,
+        "endLine": 44,
+        "endChar": 37
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5f19f853_8f2b8c6a",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T14:06:52Z",
+      "side": 1,
+      "message": "Are you telling how to use Docker here? Why not including a link to a Docker tutorial? I do not see the point of including a mini-course here.",
+      "range": {
+        "startLine": 46,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 0
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "026e4825_34c3332f",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T14:06:52Z",
+      "side": 1,
+      "message": "Too complicated: just run the entrypoint with bash",
+      "range": {
+        "startLine": 49,
+        "startChar": 3,
+        "endLine": 49,
+        "endChar": 37
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "df109325_27e832cb",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T14:06:52Z",
+      "side": 1,
+      "message": "If you run with --entrypoint, you don\u0027t need to stop anything",
+      "range": {
+        "startLine": 54,
+        "startChar": 3,
+        "endLine": 54,
+        "endChar": 33
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "31a141f0_1bc18c49",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T14:06:52Z",
+      "side": 1,
+      "message": "Why not pointing to an official Docker tutorial at the beginning and saying: \"if you are not familiar with Docker, follow the tutorial XYZ\"",
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
