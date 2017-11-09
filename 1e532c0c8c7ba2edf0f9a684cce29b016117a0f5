@@ -16,6 +16,24 @@
       "revId": "1e532c0c8c7ba2edf0f9a684cce29b016117a0f5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca369314_1897d7a0",
+        "filename": "jenkins/gerrit-sbt-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T08:41:20Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "bf826d36_105d076e",
+      "revId": "1e532c0c8c7ba2edf0f9a684cce29b016117a0f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
