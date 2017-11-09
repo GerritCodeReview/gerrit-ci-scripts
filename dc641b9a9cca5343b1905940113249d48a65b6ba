@@ -128,6 +128,24 @@
       "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7c4c1473_d80f602f",
+        "filename": "jenkins-docker/slave/README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-11-09T05:49:06Z",
+      "side": 1,
+      "message": "For example if you\u0027re using a docker UI it can be exited from there.  I\u0027m using Kitematic on OSX, for example.",
+      "parentUuid": "fa72255b_e5caa001",
+      "revId": "dc641b9a9cca5343b1905940113249d48a65b6ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
