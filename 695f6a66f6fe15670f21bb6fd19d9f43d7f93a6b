@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d3bd444_039c13e7",
+        "filename": "jenkins-docker/slave-bazel/README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T07:17:51Z",
+      "side": 1,
+      "message": "All images are built in the same way: does it really make sense to have so many Readme?",
+      "revId": "695f6a66f6fe15670f21bb6fd19d9f43d7f93a6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
