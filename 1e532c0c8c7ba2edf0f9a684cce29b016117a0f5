@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf826d36_105d076e",
+        "filename": "jenkins/gerrit-sbt-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-09T07:19:32Z",
+      "side": 1,
+      "message": "Can we just check that is buildable with Bazel instead?",
+      "revId": "1e532c0c8c7ba2edf0f9a684cce29b016117a0f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
