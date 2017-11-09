@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "56014510_f3e22545",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T17:32:24Z",
+      "side": 1,
+      "message": "Yep.",
+      "parentUuid": "cc5d18b6_1a95536a",
+      "range": {
+        "startLine": 38,
+        "startChar": 3,
+        "endLine": 38,
+        "endChar": 17
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "38064efc_b84981b9",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 10
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "ea49e1c6_4fd9cbde",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T17:32:24Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "38064efc_b84981b9",
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4752ccb3_70857a21",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 10
@@ -53,6 +95,30 @@
       "writtenOn": "2017-11-09T14:06:52Z",
       "side": 1,
       "message": "Better to just include --privileged if the purpose is to execute the PolyGerrit tests with Chrome",
+      "range": {
+        "startLine": 42,
+        "startChar": 13,
+        "endLine": 42,
+        "endChar": 46
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4cbb9ee_2a26ec72",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T17:32:24Z",
+      "side": 1,
+      "message": "Ah thanks, done.",
+      "parentUuid": "4752ccb3_70857a21",
       "range": {
         "startLine": 42,
         "startChar": 13,
@@ -88,6 +154,30 @@
     },
     {
       "key": {
+        "uuid": "f24ecd3e_354a7f9b",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T17:32:24Z",
+      "side": 1,
+      "message": "Ah thanks.",
+      "parentUuid": "b6668ea7_1f7f0123",
+      "range": {
+        "startLine": 44,
+        "startChar": 2,
+        "endLine": 44,
+        "endChar": 37
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5f19f853_8f2b8c6a",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 10
@@ -99,6 +189,30 @@
       "writtenOn": "2017-11-09T14:06:52Z",
       "side": 1,
       "message": "Are you telling how to use Docker here? Why not including a link to a Docker tutorial? I do not see the point of including a mini-course here.",
+      "range": {
+        "startLine": 46,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 0
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f86aaacb_a8ace1b5",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T17:32:24Z",
+      "side": 1,
+      "message": "I am just including the steps for users to test out the image. This will hopefully help new users get involved and help you maintain this :).",
+      "parentUuid": "5f19f853_8f2b8c6a",
       "range": {
         "startLine": 46,
         "startChar": 2,
@@ -134,6 +248,30 @@
     },
     {
       "key": {
+        "uuid": "c981841e_cc0de736",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T17:32:24Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "026e4825_34c3332f",
+      "range": {
+        "startLine": 49,
+        "startChar": 3,
+        "endLine": 49,
+        "endChar": 37
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "df109325_27e832cb",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 10
@@ -157,6 +295,30 @@
     },
     {
       "key": {
+        "uuid": "3fe123c2_b2b09493",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T17:32:24Z",
+      "side": 1,
+      "message": "ah thanks.",
+      "parentUuid": "df109325_27e832cb",
+      "range": {
+        "startLine": 54,
+        "startChar": 3,
+        "endLine": 54,
+        "endChar": 33
+      },
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "31a141f0_1bc18c49",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 10
@@ -168,6 +330,24 @@
       "writtenOn": "2017-11-09T14:06:52Z",
       "side": 1,
       "message": "Why not pointing to an official Docker tutorial at the beginning and saying: \"if you are not familiar with Docker, follow the tutorial XYZ\"",
+      "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6fa827f4_adc22767",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 10
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-09T17:32:24Z",
+      "side": 1,
+      "message": "Thanks, done.\n\nBut i doint see any docs on deleting images in docker.",
+      "parentUuid": "31a141f0_1bc18c49",
       "revId": "53ebfd605de121b035900f7dfe809c39b3255323",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
