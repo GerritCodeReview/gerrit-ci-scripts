@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9db5aea_d20189a7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2017-11-20T08:25:13Z",
+      "side": 1,
+      "message": "On master (1df0328c38c1f68cc7834499ccd0474911203a57) they are not succeeding for me :(\n\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_changes_test  TIMEOUT in 901.1s\n  /usr/local/google/home/ekempin/.cache/bazel/_bazel_ekempin/04250bee69fe54b0ca9e02f8a8931c32/execroot/gerrit/bazel-out/local-fastbuild/testlogs/javatests/com/google/gerrit/elasticsearch/elasticsearch_changes_test/test.log\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_accounts_test  FAILED in 304.3s\n  /usr/local/google/home/ekempin/.cache/bazel/_bazel_ekempin/04250bee69fe54b0ca9e02f8a8931c32/execroot/gerrit/bazel-out/local-fastbuild/testlogs/javatests/com/google/gerrit/elasticsearch/elasticsearch_accounts_test/test.log\n\nThe failures in ElasticQueryAccountsTest both were:\njava.net.SocketTimeoutException: Read timed out",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 50
+      },
+      "revId": "1cf16160b8f92ae61f95d14ca8824a69ffdb460f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
