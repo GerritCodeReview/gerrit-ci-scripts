@@ -46,6 +46,30 @@
       "revId": "1cf16160b8f92ae61f95d14ca8824a69ffdb460f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "429f95dc_7fb084ca",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-11-20T08:37:52Z",
+      "side": 1,
+      "message": "\u003e On master (1df0328c38c1f68cc7834499ccd0474911203a57) they are not\n \u003e succeeding for me :(\n[...]\n \u003e The failures in ElasticQueryAccountsTest both were:\n \u003e java.net.SocketTimeoutException: Read timed out\n\nAlso for me, I\u0027m seeing very often (not always) exactly the same failure. When I repeat the ES test again with `bazel build //...` it mostly succeed.",
+      "parentUuid": "c9db5aea_d20189a7",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 50
+      },
+      "revId": "1cf16160b8f92ae61f95d14ca8824a69ffdb460f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
