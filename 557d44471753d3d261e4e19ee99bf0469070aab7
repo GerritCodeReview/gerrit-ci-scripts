@@ -422,6 +422,24 @@
     },
     {
       "key": {
+        "uuid": "d5a492dd_18171939",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T22:43:12Z",
+      "side": 1,
+      "message": "Or what about this\n\nwget http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_62.0.3202.94-1_amd64.deb\n\ndpkg -i google-chrome-stable_62.0.3202.94-1_amd64.deb\n\n?",
+      "parentUuid": "4dfb0879_ef920ef0",
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a7ad4613_5809589e",
         "filename": "jenkins-docker/slave/Dockerfile",
         "patchSetId": 12
