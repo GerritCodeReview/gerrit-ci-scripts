@@ -309,6 +309,30 @@
     },
     {
       "key": {
+        "uuid": "953c45ff_3242c2b0",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T11:10:06Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "8a1454b4_70a132e3",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 54
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "70471276_86402fc0",
         "filename": "jenkins-docker/slave/Dockerfile",
         "patchSetId": 12
@@ -391,6 +415,24 @@
       "side": 1,
       "message": "Any reason for that?",
       "parentUuid": "0ad9809d_7eb62cc5",
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ddfbe6e8_69239411",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T11:10:06Z",
+      "side": 1,
+      "message": "For consistency as one of the npm packages installs a chrome driver so I want to make sure that it dosent break because it requires chrome installed first.",
+      "parentUuid": "113fe004_9c317f16",
       "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
