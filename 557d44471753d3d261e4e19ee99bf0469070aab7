@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "4c530d5c_5e18631b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:38:05Z",
+      "side": 1,
+      "message": "Not relevant IMHO",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 33
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab6acdd8_f9222761",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:38:05Z",
+      "side": 1,
+      "message": "Why are you upgrading SBT as well? one commit \u003d one thing.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 44
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1bb5ab65_8c6b6939",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:38:05Z",
+      "side": 1,
+      "message": "As below: keep the same SBT release and do the upgrade in a separate commit.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 65
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c47724de_9d1f6bdf",
         "filename": "jenkins-docker/slave-sbt/Dockerfile",
         "patchSetId": 12
@@ -49,6 +118,30 @@
     },
     {
       "key": {
+        "uuid": "8eb39933_cc9ccdc4",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:38:05Z",
+      "side": 1,
+      "message": "Ah, true. I\u0027ve answered on the commit message.",
+      "parentUuid": "b64d4fd0_e67fe1ac",
+      "range": {
+        "startLine": 15,
+        "startChar": 63,
+        "endLine": 15,
+        "endChar": 64
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d8d4b08c_ac508917",
         "filename": "jenkins-docker/slave/Dockerfile",
         "patchSetId": 12
@@ -84,6 +177,30 @@
       "side": 1,
       "message": "For this one do you mean create a new docker  file that includes this hack and will be used only for buck?",
       "parentUuid": "d8d4b08c_ac508917",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 54
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8a1454b4_70a132e3",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:38:05Z",
+      "side": 1,
+      "message": "We keep the old image for old builds and this new image for all \u003e\u003d 2.14 builds.",
+      "parentUuid": "9a756a5c_d218a124",
       "range": {
         "startLine": 12,
         "startChar": 0,
@@ -160,6 +277,24 @@
       "side": 1,
       "message": "Yep so that it is done after chrome is installed.",
       "parentUuid": "a7ad4613_5809589e",
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "113fe004_9c317f16",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:38:05Z",
+      "side": 1,
+      "message": "Any reason for that?",
+      "parentUuid": "0ad9809d_7eb62cc5",
       "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
