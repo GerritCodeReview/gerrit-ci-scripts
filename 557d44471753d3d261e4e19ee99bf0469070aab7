@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c47724de_9d1f6bdf",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:03:12Z",
+      "side": 1,
+      "message": "This seems unrelated to this change. Have I posted already this comment? Dejavu?",
+      "range": {
+        "startLine": 15,
+        "startChar": 63,
+        "endLine": 15,
+        "endChar": 64
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d8d4b08c_ac508917",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:03:12Z",
+      "side": 1,
+      "message": "Rather than carrying over this Hack, I would just define a different slave for Java8 builds on Debian. Bear in mind that quite soon we\u0027ll just drop the builds for older Gerrit versions as soon as Gerrit 3.0 and 3.1 will be out.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 54
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70471276_86402fc0",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:03:12Z",
+      "side": 1,
+      "message": "I believe we are still running here the same risk of breaking without notice :-(\nMy understanding is that \u0027google-chrome-stable\u0027 is NOT pinnable, that means that one day they\u0027ll just break the binary compatibility without notice and without checking the OS pre-reqs.\n\nCan we download a pinned version please?",
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a7ad4613_5809589e",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T09:03:12Z",
+      "side": 1,
+      "message": "Just moved position?",
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
