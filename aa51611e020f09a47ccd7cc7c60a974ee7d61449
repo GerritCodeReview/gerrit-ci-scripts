@@ -46,6 +46,30 @@
       "revId": "aa51611e020f09a47ccd7cc7c60a974ee7d61449",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "584e4052_a0cadbd6",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T17:03:57Z",
+      "side": 1,
+      "message": "You still say for each one: \"installs ...\". Just get rid of it and say what each image contains.\n\nExample:\ngerritforge/gerrit-ci-slave: Base Jenkins slave with OS and prerequisites.\ngerritforge/gerrit-ci-slave-buck: Buck build for older Gerrit until 2.13\n...",
+      "parentUuid": "75d3dabe_16aacc26",
+      "range": {
+        "startLine": 40,
+        "startChar": 48,
+        "endLine": 40,
+        "endChar": 56
+      },
+      "revId": "aa51611e020f09a47ccd7cc7c60a974ee7d61449",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
