@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49ec195d_0a5031c8",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T08:54:02Z",
+      "side": 1,
+      "message": "The purpose of a Dockerfile is to install software: possibly it is a bit redundant saying all the time \"installs\" for every image.",
+      "range": {
+        "startLine": 40,
+        "startChar": 48,
+        "endLine": 40,
+        "endChar": 56
+      },
+      "revId": "aa51611e020f09a47ccd7cc7c60a974ee7d61449",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
