@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7d9d9d26_6a6c5a6f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T11:06:11Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "4c530d5c_5e18631b",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 33
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ab6acdd8_f9222761",
         "filename": "/COMMIT_MSG",
         "patchSetId": 12
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "2d92e366_3fb04f3b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T11:06:11Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "ab6acdd8_f9222761",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 44
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1bb5ab65_8c6b6939",
         "filename": "/COMMIT_MSG",
         "patchSetId": 12
@@ -59,6 +107,30 @@
       "writtenOn": "2017-11-22T09:38:05Z",
       "side": 1,
       "message": "As below: keep the same SBT release and do the upgrade in a separate commit.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 65
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab31cfd0_aa811bea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T11:06:11Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "1bb5ab65_8c6b6939",
       "range": {
         "startLine": 19,
         "startChar": 0,
@@ -130,6 +202,30 @@
       "side": 1,
       "message": "Ah, true. I\u0027ve answered on the commit message.",
       "parentUuid": "b64d4fd0_e67fe1ac",
+      "range": {
+        "startLine": 15,
+        "startChar": 63,
+        "endLine": 15,
+        "endChar": 64
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad522927_fb02be6a",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T11:06:11Z",
+      "side": 1,
+      "message": "Moved to a separate change now.\n\nThanks, done.",
+      "parentUuid": "8eb39933_cc9ccdc4",
       "range": {
         "startLine": 15,
         "startChar": 63,
