@@ -404,6 +404,24 @@
     },
     {
       "key": {
+        "uuid": "4dfb0879_ef920ef0",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T22:02:26Z",
+      "side": 1,
+      "message": "THanks, done.\n\nBuilding this locally and found no errors building this.",
+      "parentUuid": "07e38956_30771c31",
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a7ad4613_5809589e",
         "filename": "jenkins-docker/slave/Dockerfile",
         "patchSetId": 12
