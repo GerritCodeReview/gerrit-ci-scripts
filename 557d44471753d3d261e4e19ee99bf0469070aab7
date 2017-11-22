@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9a756a5c_d218a124",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T09:21:14Z",
+      "side": 1,
+      "message": "For this one do you mean create a new docker  file that includes this hack and will be used only for buck?",
+      "parentUuid": "d8d4b08c_ac508917",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 54
+      },
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "70471276_86402fc0",
         "filename": "jenkins-docker/slave/Dockerfile",
         "patchSetId": 12
