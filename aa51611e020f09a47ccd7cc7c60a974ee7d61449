@@ -22,6 +22,30 @@
       "revId": "aa51611e020f09a47ccd7cc7c60a974ee7d61449",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "75d3dabe_16aacc26",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-11-22T13:04:39Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "49ec195d_0a5031c8",
+      "range": {
+        "startLine": 40,
+        "startChar": 48,
+        "endLine": 40,
+        "endChar": 56
+      },
+      "revId": "aa51611e020f09a47ccd7cc7c60a974ee7d61449",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
