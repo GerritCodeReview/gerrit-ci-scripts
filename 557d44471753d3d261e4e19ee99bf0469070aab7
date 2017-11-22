@@ -368,6 +368,24 @@
     },
     {
       "key": {
+        "uuid": "c46d2f82_7561b22b",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 12
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-11-22T17:11:06Z",
+      "side": 1,
+      "message": "Are you planning to add the pinning of Chrome version?",
+      "parentUuid": "e5faab1b_626910f3",
+      "revId": "557d44471753d3d261e4e19ee99bf0469070aab7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a7ad4613_5809589e",
         "filename": "jenkins-docker/slave/Dockerfile",
         "patchSetId": 12
