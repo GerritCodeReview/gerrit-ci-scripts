@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "76bed6b5_4c116d1d",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 16
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-12-05T14:28:43Z",
+      "side": 1,
+      "message": "Will this work?\n\nI get this error on the mac\n\ndocker run --privileged gerritforge/gerrit-ci-slave-bazel  --entrypoint\u003dbash -ti\ncontainer_linux.go:265: starting container process caused \"exec: \\\"--entrypoint\u003dbash\\\": executable file not found in $PATH\"\ndocker: Error response from daemon: oci runtime error: container_linux.go:265: starting container process caused \"exec: \\\"--entrypoint\u003dbash\\\": executable file not found in $PATH\".",
+      "range": {
+        "startLine": 52,
+        "startChar": 2,
+        "endLine": 52,
+        "endChar": 60
+      },
+      "revId": "c2ba0123438924dbdc4cd3450ed5df8c43845d4b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
