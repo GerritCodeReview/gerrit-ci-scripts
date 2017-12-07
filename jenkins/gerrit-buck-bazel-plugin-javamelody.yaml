@@ -29,6 +29,7 @@
           branch:
             - master
             - stable-2.14
+            - stable-2.15
           targets: >
             plugins/javamelody:javamelody-deps_deploy.jar
             plugins/javamelody:javamelody \
