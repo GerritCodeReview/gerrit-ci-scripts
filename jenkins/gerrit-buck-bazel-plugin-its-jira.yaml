@@ -11,4 +11,5 @@
             - master
           gerrit-branch:
             - master
+            - stable-2.15
             - stable-2.14
