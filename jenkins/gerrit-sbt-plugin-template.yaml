@@ -1,6 +1,6 @@
 - job-template:
-    name: 'plugin-{name}-sbt-{branch}'
-    description: "Plugin {name} {branch} branch build with Sbt\n"
+    name: 'plugin-{name}-sbt-{branch}-{gerrit-branch}'
+    description: "Plugin {name} {branch} branch build with Sbt on top of Gerrit {gerrit-branch}\n"
     node: sbt
     wrappers:
       - timeout:
