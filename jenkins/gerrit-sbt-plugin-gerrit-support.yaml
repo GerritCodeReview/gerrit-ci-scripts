@@ -1,6 +1,11 @@
 - project:
     name: gerrit-support
-    branch:
-      - master
     jobs:
-      - 'plugin-{name}-sbt-{branch}':
+      - 'plugin-{name}-sbt-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - master
+            - stable-2.15
+            - stable-2.14
+            - stable-2.13
