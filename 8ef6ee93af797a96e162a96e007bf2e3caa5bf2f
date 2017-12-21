@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4dbecfc5_13c9e090",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin-branch.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-12-21T14:51:30Z",
+      "side": 1,
+      "message": "just change it to owners-plugin/{owners,owners-autoassign}",
+      "range": {
+        "startLine": 6,
+        "startChar": 23,
+        "endLine": 6,
+        "endChar": 43
+      },
+      "revId": "8ef6ee93af797a96e162a96e007bf2e3caa5bf2f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca1916bc_47da6335",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-12-21T14:51:30Z",
+      "side": 1,
+      "message": "Just change it to owners-plugin/{owners,owners-autoassign}",
+      "range": {
+        "startLine": 6,
+        "startChar": 23,
+        "endLine": 6,
+        "endChar": 43
+      },
+      "revId": "8ef6ee93af797a96e162a96e007bf2e3caa5bf2f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
