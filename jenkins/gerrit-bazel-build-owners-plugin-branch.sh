@@ -2,7 +2,8 @@
 
 git checkout -f gerrit/{gerrit-branch}
 git read-tree -u --prefix=plugins/{name}-plugin origin/{branch}
-pushd plugins && ln -s owners-plugin/owners* . && popd
+ln -s owners-plugin/owners-common .
+pushd plugins && ln -s owners-plugin/{owners,owners-autoassign} . && popd
 
 if [ -f plugins/{name}-plugin/external_plugin_deps.bzl ]
 then
