@@ -69,7 +69,7 @@ RUN wget -O /tmp/chromedriver/chromedriver.zip 'http://chromedriver.storage.goog
 RUN unzip /tmp/chromedriver/chromedriver.zip chromedriver -d /usr/local/bin/
 RUN chmod a+x /usr/local/bin/chromedriver
 
-RUN npm install -g eslint eslint-config-google eslint-plugin-html typescript fried-twinkie polylint polymer-cli web-component-tester
+RUN npm install -g eslint eslint-config-google eslint-plugin-html typescript fried-twinkie polylint polymer-cli web-component-tester wct-headless
 
 # Allow Android SDK tools to run on a 64-bit system, see
 # http://stackoverflow.com/a/23201209/1127485
