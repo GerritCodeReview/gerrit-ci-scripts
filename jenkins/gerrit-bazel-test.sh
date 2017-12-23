@@ -25,7 +25,7 @@ if [ "{branch}" == "master" ] || [ "{branch}" == "stable-2.15" ] || [ "{branch}"
 then
   echo 'Test PolyGerrit locally'
   echo '----------------------------------------------'
-  bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+  WCT_HEADLESS_MODE=1 bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
 
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then
@@ -33,7 +33,7 @@ then
   else
     echo 'Test PolyGerrit on Sauce Labs'
     echo '----------------------------------------------'
-    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+    WCT_ARGS='--plugin sauce' WCT_HEADLESS_MODE=1 bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
   fi
 fi
 
