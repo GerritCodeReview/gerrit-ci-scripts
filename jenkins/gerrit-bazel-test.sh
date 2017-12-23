@@ -10,6 +10,7 @@ export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=st
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
+export WCT_HEADLESS_MODE=1
 
 java -fullversion
 bazelisk version
