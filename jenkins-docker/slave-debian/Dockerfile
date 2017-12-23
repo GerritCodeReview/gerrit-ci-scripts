@@ -6,6 +6,8 @@ RUN echo "deb http://http.debian.net/debian/ stretch contrib" >> /etc/apt/source
 
 ENV DEBIAN_FRONTEND noninteractive
 
+ENV BROWSER_OPTIONS [\'start-maximized\',\'headless\',\'disable-gpu\',\'no-sandbox\']
+
 RUN apt-get update && apt-get install -y wget gpg software-properties-common default-jdk openjdk-8-jdk && \
     update-java-alternatives -v -s java-1.8.0-openjdk-amd64
 
