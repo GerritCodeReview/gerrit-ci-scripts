@@ -22,6 +22,7 @@ export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=st
                  --test_timeout 3600 \
                  --test_tag_filters=$TEST_TAG_FILTER \
                  --test_env DOCKER_HOST=$DOCKER_HOST"
+export WCT_HEADLESS_MODE=1
 
 java -fullversion
 bazelisk version
@@ -44,13 +45,8 @@ then
   echo 'Running Documentation tests...'
   bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
-  if [ -z "$DISPLAY" ]
-  then
-    echo 'Not running local tests because env var "DISPLAY" is not set.'
-  else
-    echo 'Running local tests...'
-    bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
-  fi
+  echo 'Running local tests...'
+  bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
 
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then
