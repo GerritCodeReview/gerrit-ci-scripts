@@ -1,0 +1,7 @@
+- project:
+    name: codemirror-editor
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+
