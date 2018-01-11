@@ -22,6 +22,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "944a2967_e2c497be",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-11T10:54:10Z",
+      "side": 1,
+      "message": "Because chrome was removing all old release (only had the latest release) so pining this would break building this if chrome was updated after we pinned it.\n\nI doint see chrome breaking a lot for us now, I am adding support for chrome headless in wct (basing it on wct-headless (made for ci))\n\nHeadless mode works for me and anyone that doesn’t have a display needs to use headless to.",
+      "parentUuid": "51cf0c5b_f9661971",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
