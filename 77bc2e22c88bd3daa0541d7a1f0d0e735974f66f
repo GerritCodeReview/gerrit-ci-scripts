@@ -46,6 +46,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d56d02e2_f2736163",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-01-15T14:53:50Z",
+      "side": 1,
+      "message": "Actually, the reason for this change is a broken Chrome :-) so my point was: as this is what this change is about to fix, we shouldn\u0027t fall into the same \"latest version\" trap again.\n\nOtherwise we may find ourselves in a few months time again in the same position as we are today, with the inability to rebuild the existing Docker image :-(",
+      "parentUuid": "944a2967_e2c497be",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
