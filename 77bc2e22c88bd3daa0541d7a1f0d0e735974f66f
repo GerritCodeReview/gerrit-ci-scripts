@@ -70,6 +70,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dec469d9_02d9bded",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-15T14:55:48Z",
+      "side": 1,
+      "message": "Yep but there\u0027s no trust worthy sites that have the version we want to stay at and upgrade manually.",
+      "parentUuid": "d56d02e2_f2736163",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
