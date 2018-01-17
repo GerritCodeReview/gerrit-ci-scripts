@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "51c0d853_3d7e9d86",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 21
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-17T16:52:54Z",
+      "side": 1,
+      "message": "Maybe we can try to install the latest version from slimjet but manually update it? What do you think @Luca? I would prefer to do that in a seperate change.",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 61
+      },
+      "revId": "bcaed440773d81ab3de792a5bd85d2f1db3c849c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ec87345_4079a0ab",
         "filename": "jenkins-docker/slave-debian/Dockerfile",
         "patchSetId": 21
