@@ -118,6 +118,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf894067_e8b0753d",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-19T17:22:48Z",
+      "side": 1,
+      "message": "Yep, question though can gerrit forge host this deb so that when we upgrade we can delete it and then re add the new version? It shoulden\u0027t use alot of storage like in the mb rage but then it would allow us to download from a trusted source and upgrade manually?",
+      "parentUuid": "39f9dd67_5614aff7",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
