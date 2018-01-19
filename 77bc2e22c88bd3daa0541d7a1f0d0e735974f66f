@@ -94,6 +94,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "39f9dd67_5614aff7",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-01-19T17:20:10Z",
+      "side": 1,
+      "message": "We download the current version (e.g. 63) from Google, which is trustworthy, archive the Deb file and then use it to build this Docker image consistently.",
+      "parentUuid": "dec469d9_02d9bded",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
