@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79cdbd7f_415770ee",
+        "filename": "jenkins-docker/ubuntu-chrome/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-24T09:37:12Z",
+      "side": 1,
+      "message": "Nice idea with the docker base image!",
+      "revId": "ff9be4af18ac12d17e68b5c48f7931da585433c6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
