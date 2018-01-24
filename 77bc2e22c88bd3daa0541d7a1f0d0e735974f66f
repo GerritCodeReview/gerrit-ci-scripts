@@ -142,6 +142,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9a64e217_f94ddcf0",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-01-24T07:54:28Z",
+      "side": 1,
+      "message": "I have a much better idea: why don\u0027t we create some \"base images\" on Dockerhub which contain the OS + Chrome version bundled?\n\nWe would then decouple the problem altogether and all the rebuild of the machines would never change the Chrome version anymore.",
+      "parentUuid": "bf894067_e8b0753d",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
