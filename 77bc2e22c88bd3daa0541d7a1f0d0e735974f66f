@@ -166,6 +166,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b6378b41_4d25635c",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-24T08:02:13Z",
+      "side": 1,
+      "message": "According to Debian LTS schedule: https://wiki.debian.org/LTS:\n\n  Debian 9 “Stretch\" i386, amd64, armel and armhf (?) 2020 to June 2022\n\nSo that I expect that all chromium updates and dependent packages are going to be provided until June 2022. Wouldn\u0027t it be sufficient to always upgrade docker image during rebuild to the latest Chromium version and dependent libraries say until June 2021 (more then 3 years from now) and start to worry about compatibility and upgrade to newer debian versions (or another OSs like Alpine Linux or what not) starting from June 2021?",
+      "parentUuid": "9a64e217_f94ddcf0",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
