@@ -190,6 +190,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "82a3ea1a_c7e7dbd9",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-01-24T08:28:58Z",
+      "side": 1,
+      "message": "A successful upgrade doesn\u0027t mean a successful build :-(\nIf we always upgrade Chrome, we may break the tests because of crashes with the new release.\n\nBear in mind that our focus is NOT validating the stability of Chrome but only to check if our code works. Keeping \"everything else stable\" minimises the probability of a false positive.",
+      "parentUuid": "b6378b41_4d25635c",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
