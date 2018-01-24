@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "dd42be0f_97190b5a",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 21
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-24T19:59:29Z",
+      "side": 1,
+      "message": "Check how Luca is using base Docker image with pinned Chrome version: chrome64_60.0.3112.90 in the latest ps here: [1]. My suggestion would be to figure out what is the latest chrome version today on debian stretch and pin that version in the base docker image, by fetching this pinned version from slimjet.\n\nThen other docker images would inherit from that pinned chrome version image. When we decide to bump chrome version then we would just rebuild the base image and all images would be updated as they inherit from the base image.\n\n* [1] https://gerrit-review.googlesource.com/#/c/gerrit-ci-scripts/+/138834/4/jenkins-docker/ubuntu-chrome/Dockerfile",
+      "parentUuid": "51c0d853_3d7e9d86",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 61
+      },
+      "revId": "bcaed440773d81ab3de792a5bd85d2f1db3c849c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ec87345_4079a0ab",
         "filename": "jenkins-docker/slave-debian/Dockerfile",
         "patchSetId": 21
