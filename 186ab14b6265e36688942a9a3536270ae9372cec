@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a54ec7f_d182a62c",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 22
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-24T20:33:36Z",
+      "side": 1,
+      "message": "Please, mention in the commit message, that Chrome version is pinned to the current stable version: chrome64_63.0.3239.108. \n\nMoreover, can you add a comment on line 57 above, something like:\n\n# Pin Chrome version to 63.0.3239.108, stable chrome version on: 2018-01-24.",
+      "range": {
+        "startLine": 61,
+        "startChar": 17,
+        "endLine": 61,
+        "endChar": 39
+      },
+      "revId": "186ab14b6265e36688942a9a3536270ae9372cec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
