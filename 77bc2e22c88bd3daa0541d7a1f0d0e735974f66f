@@ -238,6 +238,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4b95a9d8_cf626e74",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-01-24T08:58:54Z",
+      "side": 1,
+      "message": "\u003e OTOH too outdated Chrome version is bad as well. Say we pin to Chrome 60 for the next years, and our user base will report breakages on Chrome 100, in year 2025. \n\nYeah, I agree that testing on Mosaic or Netscape Navigator would not make any sense anyway :-)\n\n\u003e So I think there should be a compromise:\n\u003e \n\u003e * 1. we should be able to rebuild docker image without chrome upgrade\n\n*That\u0027s exactly my point* : we should not *have to upgrade* Chrome every single time.\n\n\u003e * 2. once pre year (or even more often) we rebuild docker image with chrome upgrade + deps\n\n*Yep* or even ad-hoc as soon as new major features become available in Chrome. But it should be a conscious and revertible decision. \n\n\n\u003e So the question is can we define that we are at 2. now and create Stretch based image with Chrome upgrade option only, and will take care for scenario 1. above later? ;-)\n\nDebian 9 stretch + Chrome latest breaks our PolyGerrit tests. Paladox is working on fixing this but it isn\u0027t done AFAIK. It will work eventually, but we\u0027re not there yet.",
+      "parentUuid": "c9438dc2_4e12589b",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
