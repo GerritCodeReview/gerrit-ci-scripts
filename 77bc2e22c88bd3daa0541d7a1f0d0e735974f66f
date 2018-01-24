@@ -262,6 +262,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8c24f287_d8b0f7db",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-24T11:03:14Z",
+      "side": 1,
+      "message": "I’ve fixed it. The latest wct release includes chrome headleas support.\n\nNeeds someone to review https://gerrit-review.googlesource.com/?polygerrit\u003d0#/c/gerrit/+/152792/ please.",
+      "parentUuid": "4b95a9d8_cf626e74",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
