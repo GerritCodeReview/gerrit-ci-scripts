@@ -214,6 +214,30 @@
       "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c9438dc2_4e12589b",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-24T08:54:12Z",
+      "side": 1,
+      "message": "OTOH too outdated Chrome version is bad as well. Say we pin to Chrome 60 for the next years, and our user base will report breakages on Chrome 100, in year 2025. So I think there should be a compromise:\n\n* 1. we should be able to rebuild docker image without chrome upgrade\n* 2. once pre year (or even more often) we rebuild docker image with chrome upgrade + deps\n\nSo the question is can we define that we are at 2. now and create Stretch based image with Chrome upgrade option only, and will take care for scenario 1. above later? ;-)",
+      "parentUuid": "82a3ea1a_c7e7dbd9",
+      "range": {
+        "startLine": 60,
+        "startChar": 61,
+        "endLine": 60,
+        "endChar": 76
+      },
+      "revId": "77bc2e22c88bd3daa0541d7a1f0d0e735974f66f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
