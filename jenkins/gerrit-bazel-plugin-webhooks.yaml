@@ -3,11 +3,8 @@
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           branch:
-            - stable-2.13
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
             - master
-          gerrit-branch:
-            - master
+            - stable-2.15
             - stable-2.14
+            - stable-2.13
 
