@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d500ae9_a40debf7",
+        "filename": "jenkins/gerrit-bazel-plugin-webhooks.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-01-26T21:43:25Z",
+      "side": 1,
+      "message": "Missing ending colon.",
+      "range": {
+        "startLine": 7,
+        "startChar": 38,
+        "endLine": 7,
+        "endChar": 0
+      },
+      "revId": "09f369f567b85516b30e1163dbc9f606d63760c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
