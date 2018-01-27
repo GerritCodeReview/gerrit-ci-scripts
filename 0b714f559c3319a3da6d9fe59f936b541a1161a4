@@ -16,6 +16,24 @@
       "revId": "0b714f559c3319a3da6d9fe59f936b541a1161a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96848236_59a75995",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T21:48:34Z",
+      "side": 1,
+      "message": "Fixed by adding it to the running script ie WCT_HEADLESS_MODE\u003d1 \u003cscript\u003e",
+      "parentUuid": "cdd73745_9fc311ab",
+      "revId": "0b714f559c3319a3da6d9fe59f936b541a1161a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
