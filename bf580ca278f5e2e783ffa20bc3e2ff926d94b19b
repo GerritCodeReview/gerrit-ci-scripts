@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "12bbdadd_c921689c",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T21:59:44Z",
+      "side": 1,
+      "message": "Swap the order between bash and WCT_HEADLESS_MODE\u003d1:\n\n  WCT_HEADLESS_MODE\u003d1 bash [...]",
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bab405b_c4e8cf47",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T21:59:44Z",
+      "side": 1,
+      "message": "Blank is missing between 1 and .",
+      "range": {
+        "startLine": 36,
+        "startChar": 35,
+        "endLine": 36,
+        "endChar": 54
+      },
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca2e1311_aed0a5c9",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T21:59:44Z",
+      "side": 1,
+      "message": "Put:\n\n  WCT_HEADLESS_MODE\u003d1\n\nbefore bash, like WCT_ARGS, something like:\n\n  WCT_ARGS\u003d\u0027--plugin sauce\u0027 WCT_HEADLESS_MODE\u003d1 bash ...",
+      "range": {
+        "startLine": 36,
+        "startChar": 30,
+        "endLine": 36,
+        "endChar": 34
+      },
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2c72c5c_9b13c009",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T21:59:44Z",
+      "side": 1,
+      "message": "Same here.",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 38,
+        "endChar": 30
+      },
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3381fff_e3d2e1bc",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T21:59:44Z",
+      "side": 1,
+      "message": "And here.",
+      "range": {
+        "startLine": 45,
+        "startChar": 6,
+        "endLine": 45,
+        "endChar": 56
+      },
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
