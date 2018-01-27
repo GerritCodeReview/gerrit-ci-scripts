@@ -93,6 +93,46 @@
       "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc4f1df8_8bb1038a",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T06:58:30Z",
+      "side": 1,
+      "message": "It\u0027s saying here, that both are already installed:\n\n  Step 27/37 : RUN apt-get install -y unzip wget\n  ---\u003e Running in a1a240a043b6\n  Reading package lists...\n  Building dependency tree...\n  Reading state information...\n  unzip is already the newest version (6.0-21).\n  unzip set to manually installed.\n  wget is already the newest version (1.18-5+deb9u1).\n  0 upgraded, 0 newly installed, 0 to remove and 1 not \n  upgraded.\n  ---\u003e 914e50ede4da",
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8c43c2b_aabb5b03",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T06:58:30Z",
+      "side": 1,
+      "message": "Why is the manual installation of chromedriver is needed? I think it is not used, at all. While installing web-component-tester the different (older version of driver is installed and used by wct):\n\n  Step 30/37 : RUN wget -O \n   /tmp/chromedriver/chromedriver.zip \u0027http://chromedriver.storage.googleapis.com/\u0027$(cat /tmp/chromedriver/LATEST_RELEASE)\u0027/chromedriver_linux64.zip\u0027\n  ---\u003e Running in 7c2e27568cd5\n  --2018-01-27 06:50:24--  \n  http://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip\n\nWhile wct installed version is:\n\n  Step 33/37 : RUN npm install -g eslint eslint-config-google eslint-plugin-html typescript fried-twinkie polylint polymer-cli web-component-tester\n  ---\u003e Running in b86d4093f877\n  [...]\n  ---\n  chrome install:\n  from: \n  https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip\n  to: /usr/lib/node_modules/web-component-tester/node_modules/selenium-\n  standalone/.selenium/chromedriver/2.33-x64-chromedriver\n  ---",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 41
+      },
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
