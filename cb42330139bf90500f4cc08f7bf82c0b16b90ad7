@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa42321a_7d99ff47",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 26
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T14:31:38Z",
+      "side": 1,
+      "message": "The test case for Goland upgrade would be:\n\n* replace go1.8.3 with go1.9.3\n* build image\n* run image\n* clone gerrit\n* check that the buildifier tool still works\n\n(Optionally this could be done in follow change).",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 34
+      },
+      "revId": "cb42330139bf90500f4cc08f7bf82c0b16b90ad7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
