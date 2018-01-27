@@ -247,6 +247,30 @@
       "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "075e2fad_21066173",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T14:22:26Z",
+      "side": 1,
+      "message": "Thanks. I would be really surprized, if this standalone Chromedrive install would be used for something. Just remove lines 70-74.",
+      "parentUuid": "a111c775_44b647c2",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 41
+      },
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
