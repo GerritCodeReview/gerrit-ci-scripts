@@ -199,6 +199,30 @@
       "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a111c775_44b647c2",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T14:17:15Z",
+      "side": 1,
+      "message": "Ok, i will do the testing now. :)",
+      "parentUuid": "519db50f_62c1874e",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 41
+      },
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
