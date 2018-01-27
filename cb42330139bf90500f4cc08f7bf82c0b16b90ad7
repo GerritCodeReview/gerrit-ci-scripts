@@ -46,6 +46,30 @@
       "revId": "cb42330139bf90500f4cc08f7bf82c0b16b90ad7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56ea4ead_4cb38b3e",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 26
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T15:04:14Z",
+      "side": 1,
+      "message": "Thanks, for testing. As you tested that part, i doin\u0027t need to test goland right? :)\n\nI can do the other test like wct.",
+      "parentUuid": "444fb56d_5bd2ebf5",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 34
+      },
+      "revId": "cb42330139bf90500f4cc08f7bf82c0b16b90ad7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
