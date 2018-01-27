@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ccb1bf04_11efea95",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T22:13:59Z",
+      "side": 1,
+      "message": "Ah ok, thanks, done.",
+      "parentUuid": "12bbdadd_c921689c",
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3bab405b_c4e8cf47",
         "filename": "jenkins/gerrit-bazel-test.sh",
         "patchSetId": 10
@@ -65,6 +83,54 @@
     },
     {
       "key": {
+        "uuid": "aabaaf8a_7480b8d3",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T22:13:59Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "ca2e1311_aed0a5c9",
+      "range": {
+        "startLine": 36,
+        "startChar": 30,
+        "endLine": 36,
+        "endChar": 34
+      },
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "875f4011_fd5a35aa",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T22:13:59Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "3bab405b_c4e8cf47",
+      "range": {
+        "startLine": 36,
+        "startChar": 35,
+        "endLine": 36,
+        "endChar": 54
+      },
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f2c72c5c_9b13c009",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 10
@@ -88,6 +154,30 @@
     },
     {
       "key": {
+        "uuid": "d4840aae_6a590976",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T22:13:59Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "f2c72c5c_9b13c009",
+      "range": {
+        "startLine": 38,
+        "startChar": 6,
+        "endLine": 38,
+        "endChar": 30
+      },
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e3381fff_e3d2e1bc",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 10
@@ -99,6 +189,30 @@
       "writtenOn": "2018-01-27T21:59:44Z",
       "side": 1,
       "message": "And here.",
+      "range": {
+        "startLine": 45,
+        "startChar": 6,
+        "endLine": 45,
+        "endChar": 56
+      },
+      "revId": "bf580ca278f5e2e783ffa20bc3e2ff926d94b19b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28fa5cb1_3474a384",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T22:13:59Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "e3381fff_e3d2e1bc",
       "range": {
         "startLine": 45,
         "startChar": 6,
