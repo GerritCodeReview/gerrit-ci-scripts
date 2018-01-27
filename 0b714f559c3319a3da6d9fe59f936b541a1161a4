@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cdd73745_9fc311ab",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T19:24:38Z",
+      "side": 1,
+      "message": "I wouldn\u0027t really rely on this. I guess it doesn\u0027t work for me, because I\u0027m, using:\n\n  $ su - jenkins\n\nto switch, see this discussion: [1]. May be we should just set ~/.profile or ~/.bashrc for jenkins user? Let\u0027s wait for Luca\u0027s advice, as I\u0027m not sure, how Jenkins\u0027s docker plugin actually switch to the jenkins user.\n\n* [1] https://github.com/moby/moby/issues/15383",
+      "revId": "0b714f559c3319a3da6d9fe59f936b541a1161a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
