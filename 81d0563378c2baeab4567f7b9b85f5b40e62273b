@@ -223,6 +223,30 @@
       "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "15d38c29_278bc1cf",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T14:17:54Z",
+      "side": 1,
+      "message": "Also im helping someone on irc with puppet setup so i will be doing two things at the same time so it may take a bit of time :).",
+      "parentUuid": "a111c775_44b647c2",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 41
+      },
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
