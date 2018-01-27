@@ -22,6 +22,30 @@
       "revId": "1fa7331ccdea82b67b7b6704a72cd13daa00e63b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d028922e_1e840f42",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-27T15:19:35Z",
+      "side": 1,
+      "message": "Hmm how should we do it?",
+      "parentUuid": "0d7e2de9_d3961fb8",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "1fa7331ccdea82b67b7b6704a72cd13daa00e63b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
