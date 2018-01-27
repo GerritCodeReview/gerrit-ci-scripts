@@ -175,6 +175,30 @@
       "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "519db50f_62c1874e",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T14:14:06Z",
+      "side": 1,
+      "message": "Well, we are able to test it, right? I didn\u0027t test it, though, but the test case would be:\n\n* remove those lines above\n* rebuild the docker image\n* run nthe image\n* clone gerrit\n* apply the fixed (posix issue) change for WCT_HEADLESS_MODE support\n* execute the PG test with:\n\n  WCT_HEADLESS_MODE\u003d1 gerrit2/polygerrit-ui/app/run_test.sh\n\nIf it still passes, we know, it should be fine.",
+      "parentUuid": "f72a2281_6cce63e0",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 41
+      },
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
