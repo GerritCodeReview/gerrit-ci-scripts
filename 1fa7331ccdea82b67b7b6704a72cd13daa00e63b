@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d7e2de9_d3961fb8",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T07:32:16Z",
+      "side": 1,
+      "message": "I don\u0027t think this has any effect, as it would set up this env variable for root user, while all tests are executed as jenkins user. If i build docker image with this series, and run it, I will get this:\n\n  $ docker run --privileged -it gerritforge/gerrit-ci-slave-bazel bash\n  $ id\n  uid\u003d0(root) gid\u003d0(root) groups\u003d0(root)\n  $ echo $WCT_HEADLESS_MODE\n  1\n  $ su - jenkins\n  $ id\n  uid\u003d1000(jenkins) gid\u003d1000(jenkins) groups\u003d1000(jenkins)\n  $ echo $WCT_HEADLESS_MODE\n  \u003cno value set, as expected\u003e",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "1fa7331ccdea82b67b7b6704a72cd13daa00e63b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
