@@ -46,6 +46,30 @@
       "revId": "1fa7331ccdea82b67b7b6704a72cd13daa00e63b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7fa55599_5866ad30",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-27T15:30:54Z",
+      "side": 1,
+      "message": "I think we have number of options:\n\n1:\n\nIt must not be a part of Docker image. We can adapt the CI script and just say there (so just abandon this change?):\n\n  WCT_HEADLESS_MODE\u003d1 polygerrit-ui/app/run_tests.sh\n\n2:\n\nUntested: You can setup this environment for the user jenkins. For example, in slave-bazel we do stuff for that user, like building gerrit to warm up the download-artifacts cache and installing google-java-format utility, so that you could move it there:\n\n  USER jenkins\n  ENV WCT_HEADLESS_MODE 1",
+      "parentUuid": "d028922e_1e840f42",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "1fa7331ccdea82b67b7b6704a72cd13daa00e63b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
