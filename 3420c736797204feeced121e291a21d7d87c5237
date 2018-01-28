@@ -22,6 +22,29 @@
       "revId": "3420c736797204feeced121e291a21d7d87c5237",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca17d051_d29ffe37",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-28T06:52:28Z",
+      "side": 1,
+      "message": "This was done to accelerate docker image build, as GWT is way too slow on my laptop, and should be reverted.",
+      "range": {
+        "startLine": 29,
+        "startChar": 36,
+        "endLine": 29,
+        "endChar": 44
+      },
+      "revId": "3420c736797204feeced121e291a21d7d87c5237",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
