@@ -22,9 +22,14 @@ RUN cd /usr/local && \
 # https://github.com/google/google-java-format/pull/154
 USER jenkins
 RUN bash -c '. /usr/bin/set-java.sh 8 && \
-    cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit && \
-    cd /tmp/gerrit && ( bazel build release || true ) && \
-    cd /tmp/gerrit && ./tools/setup_gjf.sh && \
+    git config --global user.email "you@example.com" && \
+    git config --global user.name "Your Name" && \
+    cd /tmp && git clone --recursive https://gerrit.googlesource.com/gerrit && \
+    cd /tmp/gerrit && git fetch https://gerrit.googlesource.com/gerrit refs/changes/30/155330/1 && git cherry-pick FETCH_HEAD && \
+    cd /tmp/gerrit && ( bazel build headless || true ) && \
+    cd /tmp/gerrit && ./tools/setup_gjf.sh 1.3 && \
+    cd /tmp/gerrit && ./tools/setup_gjf.sh 1.5 && \
+    cd /tmp/gerrit/tools/format && ln -s google-java-format-1.3 google-java-format && \
     cd /tmp/gerrit && mv tools/format ~ && \
     cd /tmp/gerrit && ./tools/download_file.py -o ~/format/google-java-format-1.3-all-deps.jar -u https://github.com/davido/google-java-format/releases/download/1.3-1-gec5ce10/google-java-format-1.3-1-gec5ce10-all-deps.jar -v "65f060dc238bdd81ef029354d8e6dad6dd742ef4" && \
     rm -Rf /tmp/gerrit'
