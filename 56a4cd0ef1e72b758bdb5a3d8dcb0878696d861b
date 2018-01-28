@@ -16,6 +16,24 @@
       "revId": "56a4cd0ef1e72b758bdb5a3d8dcb0878696d861b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec4d5a9_9303ab20",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 29
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-28T12:22:35Z",
+      "side": 1,
+      "message": "Thanks, done. And i think those are the only tools we updated in this change?",
+      "parentUuid": "17c2314b_9f5b81f2",
+      "revId": "56a4cd0ef1e72b758bdb5a3d8dcb0878696d861b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
