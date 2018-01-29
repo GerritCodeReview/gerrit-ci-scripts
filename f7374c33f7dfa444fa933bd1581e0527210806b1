@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d545836c_b9cc92c0",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-29T05:51:12Z",
+      "side": 1,
+      "message": "Id we only adapt the code on master, then we have to differentiate the invoked scripts and the options according to the checked branch:\n\n* stable-2.14 and stable-2.15:\n  ~/format/google-java-format-1.3 --dry-run \n* master:\n  ~/format/google-java-format-1.5 --dry-run --set-exit-if-changed",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 163,
+        "endChar": 151
+      },
+      "revId": "f7374c33f7dfa444fa933bd1581e0527210806b1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
