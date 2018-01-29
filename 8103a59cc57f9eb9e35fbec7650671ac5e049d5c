@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ecf78a6b_370fa001",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-29T05:47:05Z",
+      "side": 1,
+      "message": "The symbolic link can be remove later, when we changed all occurrences in CI scripts were migrated to suffixed scripts.",
+      "revId": "8103a59cc57f9eb9e35fbec7650671ac5e049d5c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
