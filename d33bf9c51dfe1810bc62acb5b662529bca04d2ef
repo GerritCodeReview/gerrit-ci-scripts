@@ -22,6 +22,30 @@
       "revId": "d33bf9c51dfe1810bc62acb5b662529bca04d2ef",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "15518501_d63346d4",
+        "filename": "jenkins/gerrit-bazel-plugin-webhooks.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-01-29T08:15:47Z",
+      "side": 1,
+      "message": "Doh.\n\nThanks for fixing it.",
+      "parentUuid": "93db728b_d4f89151",
+      "range": {
+        "startLine": 7,
+        "startChar": 6,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "d33bf9c51dfe1810bc62acb5b662529bca04d2ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
