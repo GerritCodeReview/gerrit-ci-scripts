@@ -6,7 +6,9 @@ git checkout gerrit/{gerrit-branch}
 rm -rf plugins/its-{name}
 rm -rf plugins/its-base
 git read-tree -u --prefix=plugins/its-{name} origin/{branch}
-git read-tree -u --prefix=plugins/its-base base/{branch}
+
+# Try first the Gerrit-specific branch of its-base and then fallback to the one of the plugin
+git read-tree -u --prefix=plugins/its-base base/{gerrit-branch} || git read-tree -u --prefix=plugins/its-base base/{branch}
 
 rm -Rf bazel-genfiles
 
