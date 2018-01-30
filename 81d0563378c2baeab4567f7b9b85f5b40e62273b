@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "acc34c7a_2257ed32",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-01-30T16:15:51Z",
+      "side": 1,
+      "message": "I think we should try this out in prod now that we have tested it locally and we really need to update.",
+      "parentUuid": "4f832fd1_611b31ae",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 87
+      },
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7963bafb_6816d3ef",
         "filename": "jenkins-docker/slave-bazel/Dockerfile",
         "patchSetId": 25
