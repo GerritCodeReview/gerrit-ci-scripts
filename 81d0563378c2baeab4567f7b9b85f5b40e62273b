@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "90db513b_678bf0b6",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-01-30T13:52:42Z",
+      "side": 1,
+      "message": "Yes, separate change?",
+      "parentUuid": "a8f5304f_abbeb56d",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 87
+      },
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7963bafb_6816d3ef",
         "filename": "jenkins-docker/slave-bazel/Dockerfile",
         "patchSetId": 25
@@ -83,6 +107,30 @@
       "writtenOn": "2018-01-25T08:36:43Z",
       "side": 1,
       "message": "We should do this after we update the image only to make sure we doint have to roll back due to a failure cause by me :)",
+      "parentUuid": "7963bafb_6816d3ef",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 23
+      },
+      "revId": "81d0563378c2baeab4567f7b9b85f5b40e62273b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2ab185_4d6ebb18",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 25
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-01-30T13:52:42Z",
+      "side": 1,
+      "message": "yes, we do need to upgrade. However, I would like to split different things into different changes. Once rebuilding Docker machines becomes safe again, making another build is not an issue anymore.",
       "parentUuid": "7963bafb_6816d3ef",
       "range": {
         "startLine": 19,
