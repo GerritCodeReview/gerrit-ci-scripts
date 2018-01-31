@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5204375c_67dc4ea3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 31
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-01-31T09:29:51Z",
+      "side": 1,
+      "message": "It looks like Bazel 0.10.0 will break related today or tomorrow. I already tested gerrit with Bazel 0.10rc8 and all was working. So we should adjust the commit message, once it is released.",
+      "range": {
+        "startLine": 20,
+        "startChar": 29,
+        "endLine": 20,
+        "endChar": 60
+      },
+      "revId": "6ec5f2583b6798b9068c2ea6a69e91024c81c902",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
