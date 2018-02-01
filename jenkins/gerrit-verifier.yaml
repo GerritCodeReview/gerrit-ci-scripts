@@ -77,15 +77,6 @@
          skip-tag: true
          basedir: gerrit
     wrappers:
-      - xvfb:
-          installation-name: Xvfb
-          display-name: 1
-          parallel-build: false
-          timeout: 60
-          screen: 1024x768x16
-          additional-options: -fbdir /tmp
-          debug: true
-          shutdown-with-build: false
       - raw:
           xml: |
             <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.16">

@@ -6,15 +6,6 @@
           type: absolute
           fail: false
       - timestamps
-      - xvfb:
-          installation-name: Xvfb
-          display-name: 1
-          parallel-build: false
-          timeout: 30
-          screen: 1024x768x16
-          additional-options: -fbdir /tmp
-          debug: true
-          shutdown-with-build: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     properties:
@@ -119,15 +110,6 @@
           type: absolute
           fail: false
       - timestamps
-      - xvfb:
-          installation-name: Xvfb
-          display-name: 1
-          parallel-build: false
-          timeout: 30
-          screen: 1024x768x16
-          additional-options: -fbdir /tmp
-          debug: true
-          shutdown-with-build: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     properties:
