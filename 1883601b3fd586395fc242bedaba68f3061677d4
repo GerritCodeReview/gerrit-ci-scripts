@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "411f6011_71598b2c",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 35
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-02-04T21:19:53Z",
+      "side": 1,
+      "message": "I say lets merge as is as David O has a fix for this https://gerrit-review.googlesource.com/#/c/gerrit/+/156974/",
+      "parentUuid": "66fb1b55_81b138dc",
+      "revId": "1883601b3fd586395fc242bedaba68f3061677d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ad39927_e9d78917",
         "filename": "jenkins-docker/slave-bazel/Dockerfile",
         "patchSetId": 35
