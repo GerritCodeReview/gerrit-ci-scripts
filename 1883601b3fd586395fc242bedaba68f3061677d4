@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d254fa27_37907451",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 35
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-02-04T21:01:44Z",
+      "side": 1,
+      "message": "I wouldn\u0027t change the slave-bazel image directoy, but rather creating a slave-bazel-debian image to be used with Gerrit master, waiting to fully support the stable branches as well.",
+      "revId": "1883601b3fd586395fc242bedaba68f3061677d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ad39927_e9d78917",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 35
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-02-04T21:01:44Z",
+      "side": 1,
+      "message": "Is Bazel upgrade *really* part of this VM udpate?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 41
+      },
+      "revId": "1883601b3fd586395fc242bedaba68f3061677d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36d6ea73_c00f1705",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 35
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-02-04T21:01:44Z",
+      "side": 1,
+      "message": "Is the GO Language upgrade *really* part of this VM update?",
+      "range": {
+        "startLine": 9,
+        "startChar": 46,
+        "endLine": 9,
+        "endChar": 47
+      },
+      "revId": "1883601b3fd586395fc242bedaba68f3061677d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
