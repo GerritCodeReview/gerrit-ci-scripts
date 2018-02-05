@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "540f3107_f4dde26e",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 44
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-02-05T14:41:12Z",
+      "side": 0,
+      "message": "Because of Buck not being included anymore, we would need to change as well all the jobs definitions on the CI to use a different slave image. At the moment we were relying on the fact that Bazel image *includes* Buck as well.\n\nAs we are already at PS44, takes this Dockerfile change out of the series so that we can merge the Debian bit in isolation.",
+      "range": {
+        "startLine": 1,
+        "startChar": 33,
+        "endLine": 1,
+        "endChar": 37
+      },
+      "revId": "ccc9c9736ae728a21400d462989bfdffcfe024df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
