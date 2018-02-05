@@ -6,9 +6,10 @@ RUN wget -O /tmp/bazel_0.10.1-linux-x86_64.deb https://github.com/bazelbuild/baz
     rm /tmp/bazel_0.10.1-linux-x86_64.deb
 
 # Install buildifier utility
-ADD https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz /tmp/golang.tar.gz
+ADD https://storage.googleapis.com/golang/go1.9.3.linux-amd64.tar.gz /tmp/golang.tar.gz
 RUN cd /usr/local && \
     tar xvfz /tmp/golang.tar.gz && \
+    rm /tmp/golang.tar.gz && \
     cd /usr/local/bin && \
     ln -s /usr/local/go/bin/* . && \
     GOPATH=/usr go get github.com/bazelbuild/buildtools/buildifier && \
