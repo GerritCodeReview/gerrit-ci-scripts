@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c2506ec5_d75876bd",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-02-06T21:20:29Z",
+      "side": 1,
+      "message": "Yep, but this change is more complete.",
+      "parentUuid": "15b26cbd_d11cf7e1",
+      "range": {
+        "startLine": 1,
+        "startChar": 33,
+        "endLine": 1,
+        "endChar": 39
+      },
+      "revId": "5f474f424f8cea82ef975174adf4ef2907615244",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e1df75a1_4cfa56d3",
         "filename": "jenkins-docker/slave-bazel/Makefile",
         "patchSetId": 2
