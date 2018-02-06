@@ -112,6 +112,7 @@
 - job-template:
     name: 'Gerrit-bazel-{branch}'
     description: "{name} {branch} branch build with Bazel\n"
+    node: bazel-debian
     wrappers:
       - timeout:
           timeout: 90
