@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "16191bfa_b913c3b0",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-02-06T17:19:04Z",
+      "side": 1,
+      "message": "That isn\u0027t enough as the rebuild would overwrite the current bazel image.",
+      "range": {
+        "startLine": 1,
+        "startChar": 33,
+        "endLine": 1,
+        "endChar": 39
+      },
+      "revId": "c39bdb1e4efcdbbe249241f6d2f978f3f56a6f05",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
