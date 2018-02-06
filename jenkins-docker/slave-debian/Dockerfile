@@ -56,14 +56,14 @@ RUN apt-get update && apt-get install -y nodejs
 
 # PolyGerrit tests
 
-# pin Chrome version to 63.0.3239.108, stable chrome version on: 2018-01-24.
+# pin Chrome version to 64.0.3282.140, stable chrome version on: 2018-02-6.
 RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y wget curl zip && \
-    wget -O /tmp/chrome64_63.0.3239.108.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_63.0.3239.108.deb && \
+    wget -O /tmp/chrome64_64.0.3282.140.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_64.0.3282.140.deb && \
     apt-get install -y gdebi && \
-    gdebi --non-interactive /tmp/chrome64_63.0.3239.108.deb && \
-    rm /tmp/chrome64_63.0.3239.108.deb
+    gdebi --non-interactive /tmp/chrome64_64.0.3282.140.deb && \
+    rm /tmp/chrome64_64.0.3282.140.deb
 
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
