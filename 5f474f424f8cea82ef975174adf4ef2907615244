@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "15b26cbd_d11cf7e1",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-02-06T17:15:02Z",
+      "side": 1,
+      "message": "Also i did this in https://gerrit-review.googlesource.com/#/c/gerrit-ci-scripts/+/157311/",
+      "range": {
+        "startLine": 1,
+        "startChar": 33,
+        "endLine": 1,
+        "endChar": 39
+      },
+      "revId": "5f474f424f8cea82ef975174adf4ef2907615244",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1df75a1_4cfa56d3",
+        "filename": "jenkins-docker/slave-bazel/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-02-06T17:15:02Z",
+      "side": 1,
+      "message": "Not needed?",
+      "range": {
+        "startLine": 2,
+        "startChar": 39,
+        "endLine": 2,
+        "endChar": 46
+      },
+      "revId": "5f474f424f8cea82ef975174adf4ef2907615244",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
