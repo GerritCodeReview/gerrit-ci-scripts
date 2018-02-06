@@ -204,6 +204,57 @@
           <removeVolumes>false</removeVolumes>
           <pullStrategy>PULL_LATEST</pullStrategy>
         </com.nirima.jenkins.plugins.docker.DockerTemplate>
+        <com.nirima.jenkins.plugins.docker.DockerTemplate>
+          <configVersion>2</configVersion>
+          <labelString>bazel-debian</labelString>
+          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
+            <sshConnector plugin="ssh-slaves@1.11">
+              <port>22</port>
+              <credentialsId>67b30007-8017-47c9-af5f-7bac55e4a437</credentialsId>
+              <jvmOptions></jvmOptions>
+              <javaPath></javaPath>
+              <maxNumRetries>0</maxNumRetries>
+              <retryWaitTime>0</retryWaitTime>
+            </sshConnector>
+          </launcher>
+          <remoteFsMapping>/var/jenkins_home</remoteFsMapping>
+          <remoteFs>/home/jenkins</remoteFs>
+          <instanceCap>4</instanceCap>
+          <mode>EXCLUSIVE</mode>
+          <retentionStrategy class="com.nirima.jenkins.plugins.docker.strategy.DockerOnceRetentionStrategy">
+            <idleMinutes>1</idleMinutes>
+            <idleMinutes defined-in="com.nirima.jenkins.plugins.docker.strategy.DockerOnceRetentionStrategy">1</idleMinutes>
+          </retentionStrategy>
+          <numExecutors>1</numExecutors>
+          <dockerTemplateBase>
+            <image>gerritforge/jenkins-slave-bazel:debian</image>
+            <dockerCommand>bash -x /bin/start.sh</dockerCommand>
+            <lxcConfString></lxcConfString>
+            <hostname></hostname>
+            <dnsHosts>
+              <string>8.8.8.8</string>
+              <string>8.8.4.4</string>
+            </dnsHosts>
+            <network></network>
+            <volumes/>
+            <volumesFrom2/>
+            <environment>
+              <string>GPG_PASSPHRASE</string>
+              <string>SONATYPE_USERNAME</string>
+              <string>SONATYPE_PASSWORD</string>
+            </environment>
+            <bindPorts></bindPorts>
+            <bindAllPorts>false</bindAllPorts>
+            <privileged>true</privileged>
+            <tty>false</tty>
+            <extraHosts class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+              <c class="list"/>
+              <list reference="../c"/>
+            </extraHosts>
+          </dockerTemplateBase>
+          <removeVolumes>false</removeVolumes>
+          <pullStrategy>PULL_LATEST</pullStrategy>
+        </com.nirima.jenkins.plugins.docker.DockerTemplate>
       </templates>
       <serverUrl>unix:///var/run/docker.sock</serverUrl>
       <connectTimeout>30</connectTimeout>
