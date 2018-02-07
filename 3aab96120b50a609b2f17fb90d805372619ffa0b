@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc7142b6_c20d7193",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-02-07T07:53:35Z",
+      "side": 1,
+      "message": "Can we \"layer\" Chrome on top of the plain debian distribution? So that it could be much simpler to rebuild our OS without having to re-download Chrome every single time.\n\nExample:\ndebian-chrome:64\nslave-debian starts FROM debian-chrome:64\n\nSimilarly when upgrading Chrome, we would always generate a new version of the base image and it would be far less risky to rebuild the \"whole thing\"",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 38
+      },
+      "revId": "3aab96120b50a609b2f17fb90d805372619ffa0b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
