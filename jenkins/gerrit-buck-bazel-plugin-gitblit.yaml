@@ -51,8 +51,8 @@
          artifacts: 'buck-out/gen/plugins/gitblit/*gitblit*.jar*,buck-out/gen/plugins/gitblit/*gitblit*.json'
 
 - job-template:
-    name: 'plugin-gitblit-bazel-{branch}-{gerrit-branch}'
-    description: "GitBlit plugin {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
+    name: 'plugin-gitblit-bazel-{branch}'
+    description: "GitBlit plugin Bazel build for Gerrit {branch}\n"
     defaults: plugin-gitblit
     project-name: plugins%2Fgitblit
     class: plugins
@@ -73,7 +73,7 @@
       - shell:
          !include-raw: gitblit-ant-build.sh
       - shell:
-         !include-raw: gerrit-bazel-build-plugin-branch.sh
+         !include-raw: gerrit-bazel-build-plugin.sh
       - shell:
          !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
@@ -91,10 +91,8 @@
             - stable-2.12
             - stable-2.11
             - stable-2.10
-      - 'plugin-gitblit-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-gitblit-bazel-{branch}':
           targets: plugins/gitblit
           branch:
             - master
-          gerrit-branch:
-            - master
-            - stable-2.14
+            - stable-2.15
