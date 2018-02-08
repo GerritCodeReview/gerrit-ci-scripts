@@ -51,6 +51,7 @@
     name: 'plugin-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} branch build with Bazel\n"
     defaults: plugin-template
+    node: bazel-debian
     class: plugins
     project-name: plugins%2F{name}
     builders:
