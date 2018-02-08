@@ -57,6 +57,7 @@
     defaults: plugin-gitblit
     project-name: plugins%2Fgitblit
     class: plugins
+    node: bazel-debian
     scm:
       - git:
          remotes:

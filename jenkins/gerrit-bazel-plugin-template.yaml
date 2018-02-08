@@ -26,6 +26,7 @@
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
     class: plugins
+    node: bazel-debian
     description: "Plugin {name} {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
     defaults: plugin-template-bazel
     scm:
@@ -49,6 +50,7 @@
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
     class: modules
+    node: bazel-debian
     description: "Lib module {name} {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
     defaults: plugin-template-bazel
     scm:
