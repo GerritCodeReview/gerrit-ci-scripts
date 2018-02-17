@@ -22,6 +22,30 @@
       "revId": "3aab96120b50a609b2f17fb90d805372619ffa0b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e1ece561_d072ec94",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-02-17T23:33:14Z",
+      "side": 1,
+      "message": "Would it even be possible to do that?\n\nDo you mean debian-chrome starts from slave-debian?\n\nThe other way around would not be possible as it would have no base os to install so it could not install chrome.",
+      "parentUuid": "fc7142b6_c20d7193",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 38
+      },
+      "revId": "3aab96120b50a609b2f17fb90d805372619ffa0b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
