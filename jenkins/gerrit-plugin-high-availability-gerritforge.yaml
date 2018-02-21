@@ -1,0 +1,30 @@
+- job-template:
+    name: 'plugin-{name}-gerritforge-{branch}'
+    class: plugins
+    node: bazel-debian
+    description: "Plugin {name} {branch} branch for Gerrit {branch} - GerritForge fork\n"
+    defaults: plugin-template-bazel
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://github.com/GerritForge/plugins_{name}
+         branches:
+           - '*/{branch}'
+         skip-tag: true
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin-branch.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-project-info.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/{name}/*{name}*.jar*, bazel-genfiles/plugins/{name}/{name}.json
+
+- project:
+    name: high-availability
+    jobs:
+      - 'plugin-high-availability-gerritforge-{branch}':
+          branch:
+            - stable-2.14
