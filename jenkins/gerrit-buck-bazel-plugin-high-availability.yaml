@@ -8,3 +8,6 @@
           branch:
             - master
             - stable-2.14
+      - 'plugin-high-availability-gerritforge-{branch}':
+          branch:
+            - stable-2.14
