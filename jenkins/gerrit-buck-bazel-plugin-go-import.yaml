@@ -1,0 +1,12 @@
+- project:
+    name: go-import
+    jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - stable-2.13
+            - stable-2.12
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.15
+            - stable-2.14
