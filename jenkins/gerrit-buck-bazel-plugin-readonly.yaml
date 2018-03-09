@@ -1,0 +1,9 @@
+- project:
+    name: readonly
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - master
+            - stable-2.15
