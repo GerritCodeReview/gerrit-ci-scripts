@@ -1,0 +1,6 @@
+- project:
+    name: readonly
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
