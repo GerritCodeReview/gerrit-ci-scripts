@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4b58afd3_0e08fe38",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-readonly.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1024846
+      },
+      "writtenOn": "2018-03-12T17:59:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "65194016_0f059639",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 38
+      },
+      "revId": "1b1bac45b599249a84ddb43a28aaa01faad437d9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2a96e013_98d56e0e",
         "filename": "jenkins/gerrit-buck-bazel-plugin-readonly.yaml",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2018-03-09T23:51:20Z",
       "side": 1,
       "message": "Add then:\n  gerrit-branch:\n    - master\n    - stable-2.15\n    - stable-2.14",
+      "revId": "1b1bac45b599249a84ddb43a28aaa01faad437d9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "03fa341b_e20d8604",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-readonly.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1024846
+      },
+      "writtenOn": "2018-03-12T17:59:48Z",
+      "side": 1,
+      "message": "Done, but I didn\u0027t include stable-2.14 since we know (from the thread) that it doesn\u0027t work as this with the \u0027master\u0027 branch of the plugin.",
+      "parentUuid": "2a96e013_98d56e0e",
       "revId": "1b1bac45b599249a84ddb43a28aaa01faad437d9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
