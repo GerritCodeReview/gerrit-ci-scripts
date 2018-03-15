@@ -1,0 +1,7 @@
+- project:
+    name: metrics-reporter-prometheus-mvn
+    repo: metrics-reporter-prometheus
+    branch:
+      - stable-2.14
+    jobs:
+      - 'plugin-{repo}-mvn-{branch}'
