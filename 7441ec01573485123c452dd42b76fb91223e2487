@@ -16,6 +16,24 @@
       "revId": "7441ec01573485123c452dd42b76fb91223e2487",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14272d8f_8dad3890",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-03-19T23:42:46Z",
+      "side": 1,
+      "message": "Oh, though it still builds with 2.14 though, 2.15+ it breaks.",
+      "parentUuid": "1a140da9_993446ba",
+      "revId": "7441ec01573485123c452dd42b76fb91223e2487",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
