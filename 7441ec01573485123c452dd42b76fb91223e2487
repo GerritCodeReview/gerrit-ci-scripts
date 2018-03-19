@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a140da9_993446ba",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-03-19T23:38:20Z",
+      "side": 1,
+      "message": "The plugin is actually deprecated since 2.14, because 2.14 allows to delete changes.",
+      "revId": "7441ec01573485123c452dd42b76fb91223e2487",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
