@@ -68,7 +68,7 @@ RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
-RUN npm install -g eslint eslint-config-google eslint-plugin-html typescript fried-twinkie polylint polymer-cli web-component-tester
+RUN npm install -g eslint eslint-config-google eslint-plugin-html typescript fried-twinkie@">0.2.0" polylint polymer-cli web-component-tester
 
 # Allow Android SDK tools to run on a 64-bit system, see
 # http://stackoverflow.com/a/23201209/1127485
