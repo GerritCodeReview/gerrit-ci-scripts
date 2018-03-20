@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "236961f2_c33dc077",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1024846
+      },
+      "writtenOn": "2018-03-20T14:06:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f68c03bd_ef0a2724",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 13
+      },
+      "revId": "f01c18990d616015bcf5cd92ad8540017268ca4f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ea4cf986_22776532",
         "filename": "jenkins/gerrit-buck-bazel-plugin-readonly.yaml",
         "patchSetId": 2
