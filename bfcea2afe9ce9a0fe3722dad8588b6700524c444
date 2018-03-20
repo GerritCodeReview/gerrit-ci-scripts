@@ -16,6 +16,24 @@
       "revId": "bfcea2afe9ce9a0fe3722dad8588b6700524c444",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5667dac_c76bdf12",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029297
+      },
+      "writtenOn": "2018-03-20T16:25:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3121fcb5_ef183bea",
+      "revId": "bfcea2afe9ce9a0fe3722dad8588b6700524c444",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
