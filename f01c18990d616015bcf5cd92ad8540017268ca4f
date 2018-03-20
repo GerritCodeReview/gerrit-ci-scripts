@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "f68c03bd_ef0a2724",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-03-20T11:39:19Z",
+      "side": 1,
+      "message": "The stable-2.14 branch exists now.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 13
+      },
+      "revId": "f01c18990d616015bcf5cd92ad8540017268ca4f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ea4cf986_22776532",
         "filename": "jenkins/gerrit-buck-bazel-plugin-readonly.yaml",
         "patchSetId": 2
@@ -13,6 +36,24 @@
       "writtenOn": "2018-03-20T09:10:46Z",
       "side": 1,
       "message": "- stable-2.14",
+      "revId": "f01c18990d616015bcf5cd92ad8540017268ca4f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1466a042_791f0d82",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-readonly.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-03-20T11:39:19Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "ea4cf986_22776532",
       "revId": "f01c18990d616015bcf5cd92ad8540017268ca4f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
