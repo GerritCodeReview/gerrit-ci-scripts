@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f4fe07f_0a636874",
+        "filename": "jenkins/gerrit-mvn-plugin-metrics-reporter-prometheus.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-03-21T23:41:02Z",
+      "side": 1,
+      "message": "Do we need a maven build in addition to bazel?",
+      "revId": "b715f72ca627b1b907d5f0cf42ae0494fc9db669",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
