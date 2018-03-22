@@ -16,6 +16,24 @@
       "revId": "b715f72ca627b1b907d5f0cf42ae0494fc9db669",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2729ce32_5e1923d4",
+        "filename": "jenkins/gerrit-mvn-plugin-metrics-reporter-prometheus.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1017568
+      },
+      "writtenOn": "2018-03-22T14:46:46Z",
+      "side": 1,
+      "message": "the plugin supports building with Maven as well (since it\u0027s kind of easier than pulling the gerrit repo, getting the plugin inside, and replacing the external deps).\n\nSo I though it would be better to have an associated CI job.\nBut I am indeed not sure there is much interest in keeping the artifacts for both Bazel and Maven builds.",
+      "parentUuid": "7f4fe07f_0a636874",
+      "revId": "b715f72ca627b1b907d5f0cf42ae0494fc9db669",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
