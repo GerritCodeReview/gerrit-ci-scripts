@@ -12,18 +12,17 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                  --test_summary detailed --flaky_test_attempts 3 \
                  --test_verbose_timeout_warnings --build_tests_only \
                  --nocache_test_results \
-                 --test_timeout 3600 \
-                 --test_tag_filters=-elastic,-flaky"
+                 --test_timeout 3600"
 
 if [[ "$MODE" == *"reviewdb"* ]]
 then
-  bazel test $BAZEL_OPTS //...
+  bazel test $BAZEL_OPTS --test_tag_filters=-elastic,-flaky,-template //...
 fi
 
 if [[ "$MODE" == *"notedb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=ON"
-  bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
+  bazel test $GERRIT_NOTEDB $BAZEL_OPTS --test_tag_filters=-elastic,-flaky,-template //...
 fi
 
 if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-2.15" || "$TARGET_BRANCH" == "stable-2.14" ]]
@@ -43,6 +42,10 @@ then
     else
       echo 'Running tests on Sauce Labs...'
       WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+    fi
+    if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-2.15"
+    then
+      bazel test $BAZEL_OPTS --test_tag_filters=template //...
     fi
   fi
 fi
