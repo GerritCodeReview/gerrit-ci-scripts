@@ -172,14 +172,6 @@
            bazel test //polygerrit-ui/app:polylint_test --test_output errors
          fi
       - shell: |
-         #!/bin/bash -xe
-         cd gerrit
-         if ([ "$TARGET_BRANCH" == "master" ] || [ "$TARGET_BRANCH" == "stable-2.15" ]) && git show --diff-filter=AM --name-only --pretty="" HEAD | grep polygerrit-ui
-         then
-           echo 'Running PolyGerrit template test...'
-           bazel test //polygerrit-ui/app:all --test_tag_filters=template --test_output errors
-         fi
-      - shell: |
          #!/bin/bash -e
          cd gerrit
          EXITCODE=0

@@ -13,7 +13,7 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                  --test_verbose_timeout_warnings --build_tests_only \
                  --nocache_test_results \
                  --test_timeout 3600 \
-                 --test_tag_filters=-elastic,-flaky"
+                 --test_tag_filters=-elastic,-flaky,-template"
 
 if [[ "$MODE" == *"reviewdb"* ]]
 then
@@ -37,12 +37,19 @@ then
       echo 'Running local tests...'
       bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
     fi
+
     if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
     then
       echo 'Not running on Sauce Labs because env vars are not set.'
     else
       echo 'Running tests on Sauce Labs...'
       WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+    fi
+
+    if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-2.15" ]]
+    then
+      echo 'Running PolyGerrit template test...'
+      bash ./polygerrit-ui/app/run_template_test.sh
     fi
   fi
 fi
