@@ -93,6 +93,52 @@
       "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cf067297_430fdf7e",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-03-28T12:24:05Z",
+      "side": 1,
+      "message": "Are you telling me that this is a PolyGerrit-only test? Why doesn\u0027t have anything that relates to PolyGerrit? (name for instance?)",
+      "range": {
+        "startLine": 19,
+        "startChar": 60,
+        "endLine": 19,
+        "endChar": 69
+      },
+      "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "848305b1_ebdb3ed1",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-03-28T12:24:05Z",
+      "side": 1,
+      "message": "Why can\u0027t we include this in the run_test.sh script?",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 49,
+        "endChar": 6
+      },
+      "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
