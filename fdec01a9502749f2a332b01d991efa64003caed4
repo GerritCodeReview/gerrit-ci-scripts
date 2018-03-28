@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62969b4f_01a32d54",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-03-28T11:46:40Z",
+      "side": 1,
+      "message": "I see a lot more changes than the ones related to PolyGerrit ;-)",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 40
+      },
+      "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4efc1c34_c7c6a1b9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-03-28T11:46:40Z",
+      "side": 1,
+      "message": "We run the PolyGerrit script that should do all the tests ... why do we need to run another target again?\nIsn\u0027t this a bug to fix in the run_test.sh in PolyGerrit?",
+      "range": {
+        "startLine": 9,
+        "startChar": 27,
+        "endLine": 9,
+        "endChar": 58
+      },
+      "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
