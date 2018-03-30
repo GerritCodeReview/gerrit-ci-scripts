@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "ea5238e3_805aa1eb",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-03-30T00:03:42Z",
+      "side": 1,
+      "message": "Gotcha, yes renaming it would be best. However, I see your point to exclude it here for the time being.",
+      "parentUuid": "f427106e_ad6f2822",
+      "range": {
+        "startLine": 19,
+        "startChar": 60,
+        "endLine": 19,
+        "endChar": 69
+      },
+      "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "848305b1_ebdb3ed1",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 4
@@ -178,6 +202,30 @@
       "side": 1,
       "message": "I guess we could, though how would we get the info that it\u0027s master or 2.15 in the script?",
       "parentUuid": "848305b1_ebdb3ed1",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 49,
+        "endChar": 6
+      },
+      "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5056c2e3_188156ad",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-03-30T00:03:42Z",
+      "side": 1,
+      "message": "Just modify this in Gerrit stable-2.15 and then merge it to master: simple isn\u0027t it?",
+      "parentUuid": "13504f1b_ab2262c6",
       "range": {
         "startLine": 46,
         "startChar": 4,
