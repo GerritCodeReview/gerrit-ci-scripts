@@ -46,6 +46,30 @@
       "revId": "e3cea5d545ffffe3cdccd7d078c60eb15051aea1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "38bb4f95_8d454809",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-03-30T00:03:42Z",
+      "side": 0,
+      "message": "\u0027-\u0027 excludes, that means having the option there, just exclude elasticsearch and flaky tests.",
+      "parentUuid": "8ab610a4_9fb5e7e3",
+      "range": {
+        "startLine": 16,
+        "startChar": 36,
+        "endLine": 16,
+        "endChar": 51
+      },
+      "revId": "e3cea5d545ffffe3cdccd7d078c60eb15051aea1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
