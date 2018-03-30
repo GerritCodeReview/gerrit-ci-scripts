@@ -235,6 +235,30 @@
       "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7e428856_0a52d089",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-03-30T16:36:15Z",
+      "side": 1,
+      "message": "Oh i see what you mean. introduce a new shell script in polygerrit that runs this test, then call it here.",
+      "parentUuid": "5056c2e3_188156ad",
+      "range": {
+        "startLine": 46,
+        "startChar": 4,
+        "endLine": 49,
+        "endChar": 6
+      },
+      "revId": "fdec01a9502749f2a332b01d991efa64003caed4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }

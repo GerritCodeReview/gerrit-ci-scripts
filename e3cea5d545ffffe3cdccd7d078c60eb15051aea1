@@ -70,6 +70,30 @@
       "revId": "e3cea5d545ffffe3cdccd7d078c60eb15051aea1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8acd9aac_6c6a27c0",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-03-30T16:36:15Z",
+      "side": 0,
+      "message": "Thanks, done.",
+      "parentUuid": "38bb4f95_8d454809",
+      "range": {
+        "startLine": 16,
+        "startChar": 36,
+        "endLine": 16,
+        "endChar": 51
+      },
+      "revId": "e3cea5d545ffffe3cdccd7d078c60eb15051aea1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
