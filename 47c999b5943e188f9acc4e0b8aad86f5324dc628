@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "94661870_8bea26c4",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin-branch.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-04T21:07:37Z",
+      "side": 1,
+      "message": "as before.",
+      "range": {
+        "startLine": 5,
+        "startChar": 6,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "47c999b5943e188f9acc4e0b8aad86f5324dc628",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "912398ee_738a11b7",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-04T21:07:37Z",
+      "side": 1,
+      "message": "this should only be \u0027plugins\u0027",
+      "range": {
+        "startLine": 5,
+        "startChar": 6,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "47c999b5943e188f9acc4e0b8aad86f5324dc628",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
