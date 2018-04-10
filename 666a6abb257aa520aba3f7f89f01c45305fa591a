@@ -46,6 +46,30 @@
       "revId": "666a6abb257aa520aba3f7f89f01c45305fa591a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "534a039a_d6a2c4a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 16
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2018-04-10T09:49:04Z",
+      "side": 1,
+      "message": "+1 this makes sense in any case :)",
+      "parentUuid": "fd4a2d0c_6954c755",
+      "range": {
+        "startLine": 9,
+        "startChar": 62,
+        "endLine": 11,
+        "endChar": 23
+      },
+      "revId": "666a6abb257aa520aba3f7f89f01c45305fa591a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
