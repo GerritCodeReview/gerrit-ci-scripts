@@ -22,6 +22,30 @@
       "revId": "ee61f02a78656e6ab5ddfddc73bf708de07fc2f7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6719eaeb_fe1531d2",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-04-10T04:34:27Z",
+      "side": 1,
+      "message": "I think it will be less complicated if we just bump to 1.5 for all branches.",
+      "parentUuid": "e3b730fb_e8b9a6f2",
+      "range": {
+        "startLine": 163,
+        "startChar": 0,
+        "endLine": 170,
+        "endChar": 11
+      },
+      "revId": "ee61f02a78656e6ab5ddfddc73bf708de07fc2f7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
