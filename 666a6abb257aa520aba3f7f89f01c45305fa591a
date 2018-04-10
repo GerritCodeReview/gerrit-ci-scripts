@@ -22,6 +22,30 @@
       "revId": "666a6abb257aa520aba3f7f89f01c45305fa591a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fd4a2d0c_6954c755",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 16
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-10T09:47:27Z",
+      "side": 1,
+      "message": "Why don\u0027t we just include in Gerrit the version of GJF to use? The CI would then just look at the GJF version file and, if it is there, use it :-)",
+      "parentUuid": "1afd89e6_4df406bb",
+      "range": {
+        "startLine": 9,
+        "startChar": 62,
+        "endLine": 11,
+        "endChar": 23
+      },
+      "revId": "666a6abb257aa520aba3f7f89f01c45305fa591a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
