@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "46001000_a7a54bfb",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 17
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-04-10T10:09:52Z",
+      "side": 1,
+      "message": "This could be removed at some point, right? When all change were merged, there wouldn\u0027t be any need fir this differentiation.",
+      "range": {
+        "startLine": 165,
+        "startChar": 9,
+        "endLine": 165,
+        "endChar": 35
+      },
+      "revId": "d00f3b7b61d4c7c9899af54a1637752920864251",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ce4da1b_c2976840",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 17
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-04-10T10:09:52Z",
+      "side": 1,
+      "message": "Same here, just add the constant below.",
+      "range": {
+        "startLine": 169,
+        "startChar": 11,
+        "endLine": 169,
+        "endChar": 45
+      },
+      "revId": "d00f3b7b61d4c7c9899af54a1637752920864251",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
