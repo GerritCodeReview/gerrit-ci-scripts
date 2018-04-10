@@ -46,6 +46,30 @@
       "revId": "ee61f02a78656e6ab5ddfddc73bf708de07fc2f7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f26220e_23e41609",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-04-10T04:52:08Z",
+      "side": 1,
+      "message": "What has changed since this discussion: [1]? Consider a theoretical possibility, that gjf_x is used since gerit 1.0. How the upgrade to gjf_x would look like? I am not ruling out total upgrade because there are only 3 branches involved in the end, but we should support pinning gjf version in the code base. We did it already with Buck version in the past (that was Buck a feature, though).\n\n* [1] https://gerrit-review.googlesource.com/?polygerrit\u003d0#/c/gerrit/+/125050/4/tools/setup_gjf.sh@21",
+      "parentUuid": "6719eaeb_fe1531d2",
+      "range": {
+        "startLine": 163,
+        "startChar": 0,
+        "endLine": 170,
+        "endChar": 11
+      },
+      "revId": "ee61f02a78656e6ab5ddfddc73bf708de07fc2f7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
