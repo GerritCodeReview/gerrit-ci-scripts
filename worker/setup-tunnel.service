@@ -1,0 +1,8 @@
+[Unit]
+After=network.target
+
+[Service]
+ExecStart=/root/gerrit-ci-scripts/worker/tunnel.sh
+
+[Install]
+WantedBy=default.target
