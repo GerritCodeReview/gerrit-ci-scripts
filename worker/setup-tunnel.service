@@ -2,7 +2,7 @@
 After=network.target
 
 [Service]
-ExecStart=/root/gerrit-ci-scripts/worker/tunnel.sh
+ExecStart=/root/tunnel.sh
 Restart=always
 RestartSec=10
 
