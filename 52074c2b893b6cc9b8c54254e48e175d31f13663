@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "057ed969_182dda68",
+        "filename": "worker/setup.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2018-04-18T10:04:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b60009bc_a47cc65b",
+      "range": {
+        "startLine": 10,
+        "startChar": 443,
+        "endLine": 10,
+        "endChar": 444
+      },
+      "revId": "52074c2b893b6cc9b8c54254e48e175d31f13663",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e4e9bcd_dfdc789f",
         "filename": "worker/setup.sh",
         "patchSetId": 2
@@ -45,6 +69,30 @@
       "revId": "52074c2b893b6cc9b8c54254e48e175d31f13663",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "876e195b_644c8d20",
+        "filename": "worker/setup.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2018-04-18T10:04:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e4e9bcd_dfdc789f",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 4
+      },
+      "revId": "52074c2b893b6cc9b8c54254e48e175d31f13663",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
