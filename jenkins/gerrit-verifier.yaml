@@ -153,6 +153,7 @@
     name: Gerrit-codestyle
     description: "Gerrit code-style checker for an open change\n"
     defaults: verifier-defaults
+    node: bazel-debian
 
     builders:
       - merge-target-branch
