@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f6238e9c_b7427c35",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-metrics-reporter-graphite.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-18T15:44:12Z",
+      "side": 1,
+      "message": "This is wrong: should have been gerrit-branch.",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "265c5ebb54fc7dd113c1f1d0c28692dbabb93eb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
