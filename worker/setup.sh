@@ -1,9 +1,14 @@
 #!/bin/bash
+cd /root
 
 # install reqs.
-yum install -y docker ppp telnet
+
+yum install -y docker ppp telnet git
 
 mkdir -p .ssh
+
+src=$(dirname $0)
+cp $src/id_ecdsa .ssh/
 
 # recognize gerritforge.
 if ! grep --quiet 'gerrit-ci' .ssh/known_hosts ; then
@@ -20,7 +25,8 @@ if ! grep --quiet net.ipv4.ip_forward=1 /etc/sysctl.conf; then
     sysctl net.ipv4.ip_forward=1
 fi
 
-cp $(dirname $0)/setup-tunnel.service /etc/systemd/system/
+cp ${src}/setup-tunnel.service /etc/systemd/system/
+cp ${src}/tunnel.sh /root
 
 systemctl daemon-reload
 systemctl start docker

@@ -35,21 +35,12 @@ gcloud compute ssh city-hackathon-44 --command='echo KEY >> .ssh/authorized_keys
 
 Steps:
 
-1. Become root `sudo su -`
+1. DEST=<IP address>
 
-1. `yum install -y git`
-
-1. Install the private key under .ssh/id_ecdsa, available to gerritcodereview-team members.
-
-1. Download:
+1. Transfer files.
 
     ```
-    git clone https://gerrit.googlesource.com/gerrit-ci-scripts/
+    scp $HOME/.ssh/gerritforge/id_ecdsa ${DEST}:
+    scp worker/* ${DEST}:
+    ssh ${DEST} 'sudo sh -x $(pwd)/setup.sh'
     ```
-
-1. Run setup.sh (one time)
-
-    ```
-    sh gerrit-ci-scripts/worker/setup.sh
-    ```
-
