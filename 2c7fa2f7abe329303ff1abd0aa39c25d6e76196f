@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6177846f_23d1e592",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-18T10:07:46Z",
+      "side": 1,
+      "message": "Can we say a bit more on why we do it and what it concerns?",
+      "revId": "2c7fa2f7abe329303ff1abd0aa39c25d6e76196f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
