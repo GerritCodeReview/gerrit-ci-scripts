@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "081bf6e0_77ae2482",
+        "filename": "worker/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-18T09:14:36Z",
+      "side": 1,
+      "message": "nit: whitespace",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 1
+      },
+      "revId": "d38f11e80f5703644db2bcd6bdf2b00a869e40c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8808ed4_df552c1a",
+        "filename": "worker/README.md",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-18T09:14:36Z",
+      "side": 1,
+      "message": "nit: whitespace",
+      "range": {
+        "startLine": 38,
+        "startChar": 41,
+        "endLine": 38,
+        "endChar": 42
+      },
+      "revId": "d38f11e80f5703644db2bcd6bdf2b00a869e40c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
