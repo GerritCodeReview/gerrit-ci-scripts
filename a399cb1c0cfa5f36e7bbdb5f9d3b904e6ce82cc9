@@ -46,6 +46,30 @@
       "revId": "a399cb1c0cfa5f36e7bbdb5f9d3b904e6ce82cc9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca41a95d_8d23ea37",
+        "filename": "worker/setup.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-19T07:35:02Z",
+      "side": 1,
+      "message": "Yes, I meant if that would need a separate change or not. The commit description talks about the use of SCP for the keys, not to the setup of the tunneling script as system service.",
+      "parentUuid": "caf6d52d_e1c71df1",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 25
+      },
+      "revId": "a399cb1c0cfa5f36e7bbdb5f9d3b904e6ce82cc9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
