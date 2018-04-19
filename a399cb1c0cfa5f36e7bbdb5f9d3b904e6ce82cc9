@@ -22,6 +22,30 @@
       "revId": "a399cb1c0cfa5f36e7bbdb5f9d3b904e6ce82cc9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "caf6d52d_e1c71df1",
+        "filename": "worker/setup.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2018-04-19T07:32:27Z",
+      "side": 1,
+      "message": "yes, it\u0027s related to changes in instructions in README.md",
+      "parentUuid": "b7a075c0_e9218276",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 25
+      },
+      "revId": "a399cb1c0cfa5f36e7bbdb5f9d3b904e6ce82cc9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
