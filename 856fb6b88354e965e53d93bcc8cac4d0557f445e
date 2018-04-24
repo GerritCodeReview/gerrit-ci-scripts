@@ -22,6 +22,30 @@
       "revId": "856fb6b88354e965e53d93bcc8cac4d0557f445e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ea844a0_46b8c8c4",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-cloud-notifications.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1029647
+      },
+      "writtenOn": "2018-04-24T15:40:21Z",
+      "side": 1,
+      "message": "Yes, sure. Thanks",
+      "parentUuid": "87bd10b1_390a3021",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "856fb6b88354e965e53d93bcc8cac4d0557f445e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
