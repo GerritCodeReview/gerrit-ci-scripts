@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87bd10b1_390a3021",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-cloud-notifications.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-24T15:34:37Z",
+      "side": 1,
+      "message": "This means: build the branch \u0027master\u0027 with all the gerrit branches mentioned above: master, stable-2.14 and stable-2.15.\n\nAs you have specific branches for each individual version of gerrit, you may want to remove the gerrit-granch part altogether.\n\nCan I propose a PS2?",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "856fb6b88354e965e53d93bcc8cac4d0557f445e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
