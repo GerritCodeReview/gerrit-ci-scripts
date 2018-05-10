@@ -1,0 +1,10 @@
+- project:
+    name: account
+    repo: account
+    organization: GerritForge
+    branch:
+      - master
+      - stable-2.15
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}'
+
