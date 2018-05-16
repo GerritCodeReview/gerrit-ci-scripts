@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b95abd9_27304966",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-05-16T07:47:00Z",
+      "side": 1,
+      "message": "Does this mean that \u0027master\u0027 branch would compile and work against stable-2.15?",
+      "range": {
+        "startLine": 9,
+        "startChar": 62,
+        "endLine": 10,
+        "endChar": 22
+      },
+      "revId": "b30ba11dce26b283e5c72eb41bd5455561d5e31d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
