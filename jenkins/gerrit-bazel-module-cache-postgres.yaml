@@ -1,0 +1,7 @@
+- project:
+    name: cache-postgres
+    jobs:
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.14
