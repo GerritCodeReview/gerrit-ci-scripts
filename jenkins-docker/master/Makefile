@@ -9,6 +9,7 @@ JENKINS_API_USER=user
 JENKINS_API_PASSWORD=pass
 JENKINS_WAR_VER=2.25
 JENKINS_WAR_SHA=1c4a750b7d7102c5fc9b78550fd3dcc93d7374da
+JENKINS_HOME?=~/jenkins_home
 
 # Targets
 
@@ -19,6 +20,8 @@ start: build
           -e OAUTH_SECRET=${OAUTH_SECRET} \
           -e JENKINS_API_USER=${JENKINS_API_USER} \
           -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          -v ${JENKINS_HOME}:/var/jenkins_home \
           --net=host ${IMAGE}
 
 id_rsa:
@@ -36,6 +39,7 @@ publish:
 clean:
 	-docker rmi -f ${IMAGE}
 	-rm -f id_rsa*
+	-rm -r $JENKINS_HOME
 
 stop:
 	for img in $$(docker ps -q -f name=${NAME}); do docker kill $$img; done
