@@ -7,6 +7,9 @@ OAUTH_SECRET=secret
 JENKINS_API_USER=user
 JENKINS_API_PASSWORD=pass
 
+JENKINS_WAR_VER=2.107.3
+JENKINS_WAR_SHA=fc2d2eac8d3a04ffe6b4dc14eac52b2412f6c212
+
 # Targets
 
 start: build
