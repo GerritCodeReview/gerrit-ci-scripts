@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7b95cc17_ec60cf05",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-05-29T18:15:43Z",
+      "side": 1,
+      "message": "Looks like an inconsistent mix of spaces and tabs, compared to the other\nlines in this file.",
+      "revId": "2f2da1079ae6a8c61deae84ccee122ce248a3e9c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
