@@ -5,6 +5,7 @@ OAUTH_ID=clientid
 OAUTH_SECRET=secret
 JENKINS_API_USER=user
 JENKINS_API_PASSWORD=pass
+JENKINS_HOME=~/jenkins_home
 
 # Targets
 
@@ -16,6 +17,17 @@ start: build
           -e JENKINS_API_USER=${JENKINS_API_USER} \
           -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
           --net=host ${IMAGE}
+
+start-dev: build
+	-docker rm ${CONTAINER_NAME}
+	docker run --name ${CONTAINER_NAME} -it -e USE_SECURITY=${USE_SECURITY} \
+          -e OAUTH_ID=${OAUTH_ID} \
+          -e OAUTH_SECRET=${OAUTH_SECRET} \
+          -e JENKINS_API_USER=${JENKINS_API_USER} \
+          -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
+          -p 8080:8080 \
+	  -v /var/run/docker.sock:/var/run/docker.sock \
+	  -v ${JENKINS_HOME}:/var/jenkins_home ${IMAGE}
 
 id_rsa:
 	ssh-keygen -f id_rsa -t rsa -b 2048 -N ''
