@@ -1,7 +1,6 @@
 ace-editor:latest
 antisamy-markup-formatter:latest
 branch-api:latest
-build-flow-plugin:latest
 build-timeout:latest
 cloudbees-folder:latest
 credentials:latest
