@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f184c6cf_f3cc8b31",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-05-29T08:25:29Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we leave it to the make tool to build and follow the dependency graph?\nInstead of explicitly building id_rsa we should make sure that all make -C ... build\ntargets depend on id_rsa (which they already do) and make sure that make is able to\nbuild id_rsa when not already built. I think that the problem is in the latter step.",
+      "revId": "f110e549be06d6902b753116019a82d0a8c70b45",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
