@@ -28,8 +28,8 @@
       - timed: "@midnight"
     builders:
       - shell: |
-          export JENKINS_WAR_VER=2.25
-          export JENKINS_WAR_SHA=1c4a750b7d7102c5fc9b78550fd3dcc93d7374da
+          export JENKINS_WAR_VER=2.107.3
+          export JENKINS_WAR_SHA=fc2d2eac8d3a04ffe6b4dc14eac52b2412f6c212
           export DOCKER_HOST=tcp://127.0.0.1:2375
           cd jenkins-docker
           make NO_CACHE=true build
