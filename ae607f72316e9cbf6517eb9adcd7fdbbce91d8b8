@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd8f248b_151e6471",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-05-29T18:21:43Z",
+      "side": 1,
+      "message": "IMAGE\u003dgerritforge/${CONTAINER_NAME}\n\nand swap the order of the lines 2 and 3",
+      "revId": "ae607f72316e9cbf6517eb9adcd7fdbbce91d8b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
