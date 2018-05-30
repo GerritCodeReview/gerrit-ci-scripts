@@ -16,6 +16,24 @@
       "revId": "ae607f72316e9cbf6517eb9adcd7fdbbce91d8b8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3320f2f8_cf604ea0",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-05-30T07:31:25Z",
+      "side": 1,
+      "message": "Although not supported by the Makefile so far, it is possible to run the same image multiple times with different names for the containers (actually it is impossible to have two containers with the same name). Thus, I would plead for keeping these variables independent of each other.",
+      "parentUuid": "fd8f248b_151e6471",
+      "revId": "ae607f72316e9cbf6517eb9adcd7fdbbce91d8b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
