@@ -16,6 +16,24 @@
       "revId": "2f2da1079ae6a8c61deae84ccee122ce248a3e9c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2442bd27_d2cc9bda",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-05-30T07:35:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7b95cc17_ec60cf05",
+      "revId": "2f2da1079ae6a8c61deae84ccee122ce248a3e9c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
