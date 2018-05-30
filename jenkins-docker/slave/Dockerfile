@@ -4,6 +4,9 @@ USER root
 
 RUN echo "deb http://al.archive.ubuntu.com/ubuntu/ xenial universe" >> /etc/apt/sources.list
 
+RUN apt-get update && apt-get install -y software-properties-common
+RUN add-apt-repository ppa:openjdk-r/ppa
+
 RUN apt-get update && apt-get install -y default-jdk openjdk-7-jdk openjdk-8-jdk && \
     update-java-alternatives -v -s java-1.8.0-openjdk-amd64
 COPY set-java.sh /usr/bin/
