@@ -41,10 +41,6 @@
       - archive:
          artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json'
 
-    wrappers:
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-
 - project:
     name: analytics-etl
     jobs:
