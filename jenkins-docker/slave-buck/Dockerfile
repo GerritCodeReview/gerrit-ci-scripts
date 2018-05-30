@@ -4,8 +4,8 @@ FROM gerritforge/gerrit-ci-slave
 
 RUN git clone https://github.com/facebook/buck /opt/buck-java8 && \
     cp -r /opt/buck-java8 /opt/buck-java7 && \
-    cd /opt/buck-java8 && ant && \
-    chown -R jenkins:jenkins /opt/buck-java8 && \
+    cd /opt/buck-java8 && git checkout e64a2e2ada022f81e42be750b774024469551398 && \
+    ant && chown -R jenkins:jenkins /opt/buck-java8 && \
     cd /opt/buck-java7 && git checkout 6a42de3b4b7989d9c042c5524d765bf4a462dcb8 && \
     bash -c '. /usr/bin/set-java.sh 7 && ant' && \
     chown -R jenkins:jenkins /opt/buck-java7
@@ -34,10 +34,12 @@ RUN echo ". /usr/bin/set-buck.sh $1" >> /usr/bin/set-java.sh
 # Buck JVM options setup
 COPY buckjavaargs /home/jenkins/.buckjavaargs
 
-# Buck cache warm-up with Gerrit master build
+# Buck cache warm-up with Gerrit 2.13 build
 USER jenkins
-RUN bash -c '. /usr/bin/set-java.sh 8 && \
-    cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit && cd /tmp/gerrit && \
+RUN bash -c '. /usr/bin/set-java.sh 8 && cd /tmp &&  \
+    git clone --recursive https://gerrit.googlesource.com/gerrit && cd /tmp/gerrit && \
+    git checkout stable-2.13 && git submodule sync && git submodule update --init && \
+    git clean -fdx && \
     buck build gerrit api plugins:core || true  && \
     buck test --dry-run --no-results-cache --exclude flaky || true  && \
     rm -Rf /tmp/gerrit /home/jenkins/.gerritcodereview/buck-cache/{cache,locally-built-artifacts}'
