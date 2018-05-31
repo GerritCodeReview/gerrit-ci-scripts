@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "533c5713_80d620a4",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-05-31T04:49:01Z",
+      "side": 1,
+      "message": "Optional: Now, that we moved to 1.5, remove 1.3 from docker image.",
+      "revId": "6e280375a1d43419bd9d1c6fd60bab4b43ddd203",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
