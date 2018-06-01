@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b20f8f73_a7ccff3e",
+        "filename": "jenkins-docker/slave-buck/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-01T23:25:03Z",
+      "side": 1,
+      "message": "2.13",
+      "range": {
+        "startLine": 39,
+        "startChar": 33,
+        "endLine": 39,
+        "endChar": 37
+      },
+      "revId": "82cfa50ce2f4ad22bd235369134879d73fbeebe8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2454c68e_90b7d2b9",
+        "filename": "jenkins-docker/slave-buck/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-01T23:25:03Z",
+      "side": 1,
+      "message": "2.13",
+      "range": {
+        "startLine": 43,
+        "startChar": 24,
+        "endLine": 43,
+        "endChar": 28
+      },
+      "revId": "82cfa50ce2f4ad22bd235369134879d73fbeebe8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
