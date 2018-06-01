@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1591aef0_44430b11",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-01T23:18:47Z",
+      "side": 1,
+      "message": "Why don\u0027t you just fix the start target then?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 9
+      },
+      "revId": "83e8d516e327d1e0ee9bd06f4be736b95f336d5d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "57ff310b_ba3337f1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-01T23:18:47Z",
+      "side": 1,
+      "message": "The start target in the Makefile was designed for development purposes: just amend that one.",
+      "range": {
+        "startLine": 15,
+        "startChar": 20,
+        "endLine": 15,
+        "endChar": 30
+      },
+      "revId": "83e8d516e327d1e0ee9bd06f4be736b95f336d5d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad566f86_d72deaa3",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-01T23:18:47Z",
+      "side": 1,
+      "message": "Just fix the start target, if you believe that was incorrect or not fit for purpose :-) In production I don\u0027t use the start target at all, because I have a docker-compose.yaml.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 9
+      },
+      "revId": "83e8d516e327d1e0ee9bd06f4be736b95f336d5d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
