@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bd541710_559be978",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-01T23:16:06Z",
+      "side": 1,
+      "message": "?\u003d",
+      "range": {
+        "startLine": 10,
+        "startChar": 15,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "9e43e3f1cb8b268628bcecdecf53b6246317be92",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40b62ae6_74ab387a",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-01T23:16:06Z",
+      "side": 1,
+      "message": "Why don\u0027t you start defining the current ones as non-breaking change?",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 56
+      },
+      "revId": "9e43e3f1cb8b268628bcecdecf53b6246317be92",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
