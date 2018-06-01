@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "74f77789_7a64c33b",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-01T23:20:04Z",
+      "side": 1,
+      "message": "I would rather get rid of the \"old\" slave image altogether, because we have a slave-debian now :-)",
+      "revId": "afa01bf20cc1c87641885fb924720343109dee54",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
