@@ -16,6 +16,24 @@
       "revId": "afa01bf20cc1c87641885fb924720343109dee54",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b429ca5_79a6956b",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-02T07:17:53Z",
+      "side": 1,
+      "message": "I am all for it.\nIs there still any need for Java7 in a build slave? Then I could try whether I get Java7 working in the debian slave to stay compatible with legacy build jobs.",
+      "parentUuid": "74f77789_7a64c33b",
+      "revId": "afa01bf20cc1c87641885fb924720343109dee54",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
