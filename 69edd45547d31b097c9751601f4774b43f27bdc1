@@ -70,6 +70,75 @@
       "revId": "69edd45547d31b097c9751601f4774b43f27bdc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "add18f94_84395c5c",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-02T07:59:47Z",
+      "side": 1,
+      "message": "This will become:\n\n  ORGANISATION\u003dgerritforge\n  NAME\u003dgerrit-ci\n  IMAGE\u003d$(ORGANISATION)/$(IMAGE)",
+      "range": {
+        "startLine": 2,
+        "startChar": 6,
+        "endLine": 2,
+        "endChar": 27
+      },
+      "revId": "69edd45547d31b097c9751601f4774b43f27bdc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a6644213_ed9e1844",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-02T07:59:47Z",
+      "side": 1,
+      "message": "Just split the IMAGE into ORGANISATION and NAME",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 24
+      },
+      "revId": "69edd45547d31b097c9751601f4774b43f27bdc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1463db78_ce058bbd",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-02T07:59:47Z",
+      "side": 1,
+      "message": "Use NAME here",
+      "range": {
+        "startLine": 13,
+        "startChar": 14,
+        "endLine": 13,
+        "endChar": 28
+      },
+      "revId": "69edd45547d31b097c9751601f4774b43f27bdc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
