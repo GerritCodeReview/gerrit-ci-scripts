@@ -22,6 +22,30 @@
       "revId": "69edd45547d31b097c9751601f4774b43f27bdc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a46af356_c9555c0f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-02T07:08:34Z",
+      "side": 1,
+      "message": "We have to differentiate between the image name and the container name:\n\n\u003e docker build -t \u003cimage_name\u003e .\n\u003e docker run --name \u003ccontainer_name\u003e \u003cimage_name\u003e\n\nWhile you are certainly right that images have the typical naming scheme organization/image:version, which I would leave untouched, the container names, which are a way to name containers to not have to use hashes, when referencing them, are not allowed to contain slashes:\n\n\u003e docker run --name\u003dgerritforge/gerrit-ci:1 gerritforge/gerrit-ci\ndocker: Error response from daemon: Invalid container name (gerritforge/gerrit-ci:1), only [a-zA-Z0-9][a-zA-Z0-9_.-] are allowed.\nSee \u0027docker run --help\u0027.",
+      "parentUuid": "2e103980_ea46c71d",
+      "range": {
+        "startLine": 9,
+        "startChar": 60,
+        "endLine": 10,
+        "endChar": 53
+      },
+      "revId": "69edd45547d31b097c9751601f4774b43f27bdc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
