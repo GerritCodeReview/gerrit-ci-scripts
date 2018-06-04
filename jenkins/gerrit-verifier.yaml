@@ -182,6 +182,8 @@
          fi
       - shell: |
          #!/bin/bash -e
+         echo 'Running buildifier check...'
+         buildifier --version
          cd gerrit
          EXITCODE=0
          for buildfile in $((git show --diff-filter=AM --name-only --pretty="" HEAD | grep --regex "WORKSPACE\|BUILD") || true)
