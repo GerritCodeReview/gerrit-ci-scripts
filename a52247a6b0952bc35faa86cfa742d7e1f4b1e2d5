@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f720a83_7bea8014",
+        "filename": "jenkins/gerrit-bazel-plugin-autosubmitter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-04T06:49:09Z",
+      "side": 1,
+      "message": "This branch doesn\u0027t exist yet: [1].\n\n* [1] https://gerrit-review.googlesource.com/#/admin/projects/plugins/autosubmitter,branches",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "a52247a6b0952bc35faa86cfa742d7e1f4b1e2d5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
