@@ -94,6 +94,30 @@
       "revId": "a52247a6b0952bc35faa86cfa742d7e1f4b1e2d5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "793cbfb6_beae23ab",
+        "filename": "jenkins/gerrit-bazel-plugin-autosubmitter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-04T11:08:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b5b89ed2_e48ca79b",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "a52247a6b0952bc35faa86cfa742d7e1f4b1e2d5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
