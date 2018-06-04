@@ -22,6 +22,30 @@
       "revId": "a52247a6b0952bc35faa86cfa742d7e1f4b1e2d5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "124b1a89_749afd93",
+        "filename": "jenkins/gerrit-bazel-plugin-autosubmitter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2018-06-04T08:49:46Z",
+      "side": 1,
+      "message": "yes, didn\u0027t notice that. \nI tried to build autosubmitter master against stable-2.15 Gerrit API and this seems to work fine.\nShould we then create the stable-2.15 branch based on current master? If yes, could you do that ?",
+      "parentUuid": "1f720a83_7bea8014",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "a52247a6b0952bc35faa86cfa742d7e1f4b1e2d5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
