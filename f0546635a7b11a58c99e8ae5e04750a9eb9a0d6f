@@ -70,6 +70,30 @@
       "revId": "f0546635a7b11a58c99e8ae5e04750a9eb9a0d6f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3568af73_b651e962",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 21
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-04T11:58:38Z",
+      "side": 1,
+      "message": "OK, but what Bazel version? The old one 0.9.0? The problem we are facing, that with apt-get approach and the issue I mentioned, we can only get one single version, that is currently release. 0.14.0 now.",
+      "parentUuid": "835f8eff_07c363bb",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 41
+      },
+      "revId": "f0546635a7b11a58c99e8ae5e04750a9eb9a0d6f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
