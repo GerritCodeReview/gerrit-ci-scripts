@@ -1,5 +1,7 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci
+ORGANISATION=gerritforge
+NAME=gerrit-ci
+IMAGE=${ORGANISATION}/${NAME}
 USE_SECURITY=false
 OAUTH_ID=clientid
 OAUTH_SECRET=secret
@@ -9,8 +11,8 @@ JENKINS_API_PASSWORD=pass
 # Targets
 
 start: build
-	-docker rm ${IMAGE}
-	docker run --name ${IMAGE} -d -e USE_SECURITY=${USE_SECURITY} \
+	-docker rm ${NAME}
+	docker run --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
           -e OAUTH_ID=${OAUTH_ID} \
           -e OAUTH_SECRET=${OAUTH_SECRET} \
           -e JENKINS_API_USER=${JENKINS_API_USER} \
@@ -34,14 +36,14 @@ clean:
 	-rm -f id_rsa*
 
 stop:
-	for img in $$(docker ps -q -f name=${IMAGE}); do docker kill $$img; done
+	for img in $$(docker ps -q -f name=${NAME}); do docker kill $$img; done
 
 restart: stop start
 
 status:
-	([ "$$(docker ps -q -f name=${IMAGE})" == "" ] && \
-          echo -e "\n${IMAGE} is *STOPPED*\n") || \
-          echo -e "\n${IMAGE} is *RUNNING*\n"
+	([ "$$(docker ps -q -f name=${NAME})" == "" ] && \
+          echo -e "\n${NAME} is *STOPPED*\n") || \
+          echo -e "\n${NAME} is *RUNNING*\n"
 
 .PHONY: clean image publish
 
