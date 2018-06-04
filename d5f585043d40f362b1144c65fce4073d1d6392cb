@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2c6cb157_761a64c0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-04T20:36:07Z",
+      "side": 1,
+      "message": "Quite surprised that the \"go get\" command doesn\u0027t allow to pin a specific version though :-O",
+      "range": {
+        "startLine": 10,
+        "startChar": 31,
+        "endLine": 10,
+        "endChar": 66
+      },
+      "revId": "d5f585043d40f362b1144c65fce4073d1d6392cb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
