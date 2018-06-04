@@ -16,6 +16,24 @@
       "revId": "5f373a388d283adab2666e72ecf1a0eab6fb2355",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "834ccab5_fdfe9ac6",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-04T11:43:44Z",
+      "side": 1,
+      "message": "Good point, shall we then do two changes?\na) Change the way Bazel gets downloaded\nb) Pin Bazel to a specific version",
+      "parentUuid": "8110af15_37451089",
+      "revId": "5f373a388d283adab2666e72ecf1a0eab6fb2355",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
