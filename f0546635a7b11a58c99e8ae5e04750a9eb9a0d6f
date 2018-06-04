@@ -22,6 +22,30 @@
       "revId": "f0546635a7b11a58c99e8ae5e04750a9eb9a0d6f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "75986c32_abc882e6",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 21
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-04T08:26:03Z",
+      "side": 1,
+      "message": "\u003e This isn\u0027t pinning but rather changing the way the package gets\n \u003e downloaded.\n \u003e Any reason for not using apt-get?\n\nYes: [1]. Let me know, if I should clarify that in the commit message.\n\n* [1] https://github.com/bazelbuild/bazel/issues/4947",
+      "parentUuid": "eeee111c_e0ab3cec",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 41
+      },
+      "revId": "f0546635a7b11a58c99e8ae5e04750a9eb9a0d6f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
