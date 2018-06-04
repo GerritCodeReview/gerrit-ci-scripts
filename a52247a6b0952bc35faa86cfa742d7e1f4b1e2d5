@@ -46,6 +46,30 @@
       "revId": "a52247a6b0952bc35faa86cfa742d7e1f4b1e2d5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "89835daa_089fd0d9",
+        "filename": "jenkins/gerrit-bazel-plugin-autosubmitter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-04T09:02:07Z",
+      "side": 1,
+      "message": "I coud do that, but the question is whether or not we should do that, even though building autosubmitter master against stable-2.15 Gerrit API seems to work fine (as you mentioned).\n\nI would also let that to plugin maintainer to decide, as we have some controversal discussions in the past exactly aboud this problem: create or not create stable branches.\n\nThe maintainer of this plugin is Luca, adding him as reviewer.",
+      "parentUuid": "124b1a89_749afd93",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "a52247a6b0952bc35faa86cfa742d7e1f4b1e2d5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
