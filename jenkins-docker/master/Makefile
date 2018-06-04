@@ -6,6 +6,9 @@ OAUTH_SECRET=secret
 JENKINS_API_USER=user
 JENKINS_API_PASSWORD=pass
 
+export JENKINS_WAR_VER=2.25
+export JENKINS_WAR_SHA=1c4a750b7d7102c5fc9b78550fd3dcc93d7374da
+
 # Targets
 
 start: build
