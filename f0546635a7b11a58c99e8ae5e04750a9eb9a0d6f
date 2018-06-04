@@ -46,6 +46,30 @@
       "revId": "f0546635a7b11a58c99e8ae5e04750a9eb9a0d6f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "835f8eff_07c363bb",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 21
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-04T11:53:00Z",
+      "side": 1,
+      "message": "Would be best to split into two changes:\nC1: use wget to download the Debian package, because of the issue you mentioned\nC2: pin to 0.14.0",
+      "parentUuid": "75986c32_abc882e6",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 41
+      },
+      "revId": "f0546635a7b11a58c99e8ae5e04750a9eb9a0d6f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
