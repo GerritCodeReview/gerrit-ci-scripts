@@ -5,14 +5,15 @@ RUN wget -O /tmp/bazel_0.14.0-linux-x86_64.deb https://github.com/bazelbuild/baz
     gdebi --non-interactive /tmp/bazel_0.14.0-linux-x86_64.deb && \
     rm /tmp/bazel_0.14.0-linux-x86_64.deb
 
-# Install buildifier utility
-ADD https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz /tmp/golang.tar.gz
-RUN cd /usr/local && \
-    tar xvfz /tmp/golang.tar.gz && \
-    cd /usr/local/bin && \
-    ln -s /usr/local/go/bin/* . && \
-    GOPATH=/usr go get github.com/bazelbuild/buildtools/buildifier && \
-    chmod a+rx /usr/bin/buildifier
+# Install buildifier utility (0.11.1)
+RUN cd /tmp && \
+    git clone https://github.com/bazelbuild/buildtools.git && \
+    cd buildtools && \
+    git checkout 0.11.1 && \
+    bazel build --workspace_status_command=`pwd`/status.sh //buildifier && \
+    cp bazel-bin/buildifier/linux_amd64_stripped/buildifier /usr/bin && \
+    rm -rf /tmp/buildtools && \
+    buildifier --version
 
 # Bazel cache warm-up with Gerrit master build
 # Set-up google-java-format utility to ~/format/google-java-format
