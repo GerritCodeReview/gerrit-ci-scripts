@@ -94,6 +94,30 @@
       "revId": "f0546635a7b11a58c99e8ae5e04750a9eb9a0d6f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cc20b0df_44d4e442",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 21
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-04T12:12:17Z",
+      "side": 1,
+      "message": "Yes, fair enough. I\u0027ve updated the commit message to reflect the dual objective of this change. LGTM",
+      "parentUuid": "3568af73_b651e962",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 41
+      },
+      "revId": "f0546635a7b11a58c99e8ae5e04750a9eb9a0d6f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
