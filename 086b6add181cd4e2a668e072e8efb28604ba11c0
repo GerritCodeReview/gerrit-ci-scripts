@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5587ae3e_6ed407c4",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-05T06:00:58Z",
+      "side": 1,
+      "message": "I\u0027m confused, why is this needed? To warm the caches and populate download_caches, we\u0027ve only built master. This change is adding gjf 1.6 but in the same time switching warm caching procedure to stable-2.14.\n\nNevertheless, I think this is a good idea (but for sure not in this commit). Because the dependencies substantially differ between stable branches and  master. The fact, the caches were warmed for master only, doesn\u0027t really help for builds on stable branches and the dependencies are downloaded again and again.\n\nShould we rectify this and build all currently existing stable-branches + master during docker image build, something like:\n\n  $ git checkout stable-2.14\n  $ bazel build :release\n  $ git checkout stable-2.15\n  $ bazel build :release\n  $ git checkout master\n  $ bazel build :release",
+      "range": {
+        "startLine": 25,
+        "startChar": 26,
+        "endLine": 25,
+        "endChar": 40
+      },
+      "revId": "086b6add181cd4e2a668e072e8efb28604ba11c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
