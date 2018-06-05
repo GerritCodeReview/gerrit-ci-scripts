@@ -22,6 +22,30 @@
       "revId": "8059a11fccc1a6a71dd9a4f9bb6a2a5d43fe3f4e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b229a25c_de7b766a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-05T12:57:46Z",
+      "side": 1,
+      "message": "Ah gosh, forgot to publish my edit :-)\nDone now.",
+      "parentUuid": "d59b8808_258123bc",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 1
+      },
+      "revId": "8059a11fccc1a6a71dd9a4f9bb6a2a5d43fe3f4e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
