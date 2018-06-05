@@ -70,6 +70,30 @@
       "revId": "086b6add181cd4e2a668e072e8efb28604ba11c0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "08af76d0_6510d69d",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-05T07:59:18Z",
+      "side": 1,
+      "message": "sure, but we need to wait for that change to land on master first :-)",
+      "parentUuid": "2a49ae80_2a91af37",
+      "range": {
+        "startLine": 25,
+        "startChar": 26,
+        "endLine": 25,
+        "endChar": 40
+      },
+      "revId": "086b6add181cd4e2a668e072e8efb28604ba11c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
