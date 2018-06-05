@@ -93,6 +93,30 @@
       "revId": "8059a11fccc1a6a71dd9a4f9bb6a2a5d43fe3f4e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "309fb1f1_3f463f33",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-05T13:08:11Z",
+      "side": 1,
+      "message": "There must be some bug on the inline edit: IF I edit the code, why should it change the commit message? :-(\nRe-applied anyway :-)",
+      "parentUuid": "5f00f07b_260a6fc2",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 1
+      },
+      "revId": "8059a11fccc1a6a71dd9a4f9bb6a2a5d43fe3f4e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
