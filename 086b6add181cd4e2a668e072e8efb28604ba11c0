@@ -46,6 +46,30 @@
       "revId": "086b6add181cd4e2a668e072e8efb28604ba11c0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a49ae80_2a91af37",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-06-05T07:58:17Z",
+      "side": 1,
+      "message": "Why don\u0027t we do the initial gjf reformatting on master then?  Once it\u0027s done there, and the new version is available on CI, we can do the formatting on stable branches later.",
+      "parentUuid": "bfa37387_f76845b2",
+      "range": {
+        "startLine": 25,
+        "startChar": 26,
+        "endLine": 25,
+        "endChar": 40
+      },
+      "revId": "086b6add181cd4e2a668e072e8efb28604ba11c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
