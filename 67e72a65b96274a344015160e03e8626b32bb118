@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a95bd2b4_6c3d6c85",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-05T21:19:21Z",
+      "side": 1,
+      "message": "Should this be \"git submodule update\":\n\n  Switched to a new branch \u0027stable-2.15\u0027\n  Branch stable-2.15 set up to track remote branch stable-2.15 from origin.\n  bash: gitsubmodule: command not found",
+      "range": {
+        "startLine": 31,
+        "startChar": 35,
+        "endLine": 31,
+        "endChar": 54
+      },
+      "revId": "67e72a65b96274a344015160e03e8626b32bb118",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a9cf856_f85cef4c",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-05T21:19:21Z",
+      "side": 1,
+      "message": "Same here.",
+      "range": {
+        "startLine": 32,
+        "startChar": 30,
+        "endLine": 32,
+        "endChar": 49
+      },
+      "revId": "67e72a65b96274a344015160e03e8626b32bb118",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
