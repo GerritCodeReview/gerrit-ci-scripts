@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aadbc1e9_bffe188f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-06T07:09:25Z",
+      "side": 1,
+      "message": "Is there any appropriate place to attribute current master/slave resource contributors? IIUC, currently, there are only 3 contributors for now, unfortunately:\n\n* GerritForge\n* Google\n* Your truly\n\nMay be on main Gerrit README.md page or gerrit web site?",
+      "revId": "21c8741eef3b2d1430661a5b117d4f5a3594867a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
