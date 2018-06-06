@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2479662f_94d0ebad",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-06T07:08:33Z",
+      "side": 1,
+      "message": "It turned out that \u0027--net\u003dhost\u0027 is necessary for some docker-related functionality, so I changed it back.",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 21,
+        "endChar": 20
+      },
+      "revId": "26cb5fa424ff7e54b4747b587934780ba412c6fd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
