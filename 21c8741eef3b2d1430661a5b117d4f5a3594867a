@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "b383c1cd_4ca8fe60",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-06T08:19:10Z",
+      "side": 1,
+      "message": "Not really, Google is more than happy to give hosts even outside Hackathons ... it is just not needed now because their nodes were 99.99% idle :-)",
+      "parentUuid": "45a58878_fcd5c28f",
+      "revId": "21c8741eef3b2d1430661a5b117d4f5a3594867a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7ee67722_0e07c47d",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 2
