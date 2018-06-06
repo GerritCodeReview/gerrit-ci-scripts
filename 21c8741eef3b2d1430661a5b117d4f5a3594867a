@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "5629e7bf_caada12e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-06-06T08:25:59Z",
+      "side": 1,
+      "message": "\u003e Not really, Google is more than happy to give hosts even outside Hackathons ... it is just not needed now because their nodes were 99.99% idle :-)\n\nThis is a pity, since we havn\u0027t implemented verification for plugin changes yet, and waste available hardware resources.",
+      "parentUuid": "b383c1cd_4ca8fe60",
+      "revId": "21c8741eef3b2d1430661a5b117d4f5a3594867a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7ee67722_0e07c47d",
         "filename": "jenkins-docker/README.md",
         "patchSetId": 2
