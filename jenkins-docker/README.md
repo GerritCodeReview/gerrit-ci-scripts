@@ -54,3 +54,66 @@ Images available are:
 * docker run --privileged -it <image_name> bash
 
 If your not familar with docker please follow https://docs.docker.com/get-started/
+
+## Contributing slave to Gerrit Code Review verification
+
+* Set up root server with running docker service.
+* Generate ecdsa SSH key and send public key to CI maintainer:
+
+----
+  $ ssh-keygen -t ecdsa -b 521
+----
+
+* Ask CI maintainer to generate for you unique slave id.
+
+* Run `cat /proc/cpuinfo` and report CI maintainer the number of CPUs, so
+that your slave would not get overloaded.
+
+* Clone gerrit-ci-scripts repository:
+
+----
+  $ git clone https://gerrit.googlesource.com/gerrit-ci-scripts
+----
+
+* Make sure `ppp` package is installed, e.g. on Ubuntu run:
+
+----
+  $ apt-get install ppp
+----
+
+* Activate Docker's remote API. On Ubuntu, add this option to systemd script:
+
+----
+  $ cat /lib/systemd/system/docker.service
+  [...]
+  ExecStart=/usr/bin/dockerd -H tcp://10.0.9.1:2375 -H fd://
+----
+
+Caution: Don't expose generic interface: `-H tcp://0.0.0.0:2375`,
+otherwise, your Docker container could be hijacked.
+
+* Reload systemd and restart docker service:
+
+----
+  $ systemctl daemon-reload
+  $ systemctl restart docker.service
+----
+
+* Add this line to crontab job (replace <your_slave_id>):
+
+----
+*/5 * * * * /root/gerrit-ci-scripts/worker/tunnel.sh <your_slave_id>
+----
+
+* In case your server is behind a Firewall, open tcp/2375 port for
+incoming requests.
+
+* Check on https://gerrit-ci.gerritforge.com and running `docker ps`
+that your slave is up and running and build jobs are scheduled. If all
+went well and when jobs have arrived you should see something like:
+
+----
+  $ docker ps
+  CONTAINER ID        IMAGE                                    COMMAND                  CREATED             STATUS              PORTS
+  d9ff4b6a8b1c        gerritforge/jenkins-slave-bazel:debian   "bash -x /bin/star..."   6 minutes ago       Up 6 minutes        0.0.0.0:32792->22/tcp
+----
