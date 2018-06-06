@@ -34,6 +34,52 @@
       "revId": "21c8741eef3b2d1430661a5b117d4f5a3594867a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ee67722_0e07c47d",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-06T07:40:40Z",
+      "side": 1,
+      "message": "Worth mentioning that \u00279\u0027 is your \"slave-id\" previously mentioned",
+      "range": {
+        "startLine": 89,
+        "startChar": 43,
+        "endLine": 89,
+        "endChar": 44
+      },
+      "revId": "21c8741eef3b2d1430661a5b117d4f5a3594867a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b788fc2c_b78b1e07",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-06T07:40:40Z",
+      "side": 1,
+      "message": "Daemon",
+      "range": {
+        "startLine": 93,
+        "startChar": 23,
+        "endLine": 93,
+        "endChar": 32
+      },
+      "revId": "21c8741eef3b2d1430661a5b117d4f5a3594867a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
