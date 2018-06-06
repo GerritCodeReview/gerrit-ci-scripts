@@ -34,6 +34,24 @@
       "revId": "0863e05bf1fe05d70e7651ee32186d14abe7d189",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "527cf12e_a8b6201b",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-06-06T10:51:42Z",
+      "side": 1,
+      "message": "Using -n would cause the first line of the \"buildifier --version\" output to be concatenated\nto that line:\n\n  Running buildifier check...buildifier version: 0.11.1\n  buildifier scm revision: 405641a50b8583dc9fe254b7a22ebc2002722d17\n\nI would say that this is less readable than:\n  Running buildifier check..\n  buildifier version: 0.11.1\n  buildifier scm revision: 405641a50b8583dc9fe254b7a22ebc2002722d17\n\nTherefore I agree with David.",
+      "parentUuid": "4c05cf76_ba895042",
+      "revId": "0863e05bf1fe05d70e7651ee32186d14abe7d189",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
