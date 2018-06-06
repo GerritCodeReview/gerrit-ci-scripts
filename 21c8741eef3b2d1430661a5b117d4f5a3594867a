@@ -16,6 +16,24 @@
       "revId": "21c8741eef3b2d1430661a5b117d4f5a3594867a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "45a58878_fcd5c28f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-06-06T07:16:22Z",
+      "side": 1,
+      "message": "The website is probably the better place.\n\nFWIW I don\u0027t think Google is permanently providing resources. Only during hackathons.",
+      "parentUuid": "aadbc1e9_bffe188f",
+      "revId": "21c8741eef3b2d1430661a5b117d4f5a3594867a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
