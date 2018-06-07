@@ -13,7 +13,6 @@
        - build-discarder:
            days-to-keep: 20
            artifact-days-to-keep: 20
-    properties:
        - authorization:
            anonymous:
              - job-discover
