@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e4645fe4_38f479ef",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-08T12:48:37Z",
+      "side": 1,
+      "message": "use ./jenkins_home to not spill out outside the current directory tree.\nYou may want to add jenkins_home as well to .gitignore, so that they can\u0027t get checked in by mistake.",
+      "range": {
+        "startLine": 14,
+        "startChar": 33,
+        "endLine": 14,
+        "endChar": 47
+      },
+      "revId": "22d7866d76d83414fd5798b879eb1b5d19db2796",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2f8ce96_40c9b0fa",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-08T12:48:37Z",
+      "side": 1,
+      "message": "best to put ./jenkins_home as default so that we do not spill out new directories elsewhere.\nAdditionally, set as ?\u003d so that can be overridden via CLI",
+      "range": {
+        "startLine": 8,
+        "startChar": 13,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "22d7866d76d83414fd5798b879eb1b5d19db2796",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
