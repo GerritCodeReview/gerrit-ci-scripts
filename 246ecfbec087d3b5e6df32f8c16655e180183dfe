@@ -16,6 +16,24 @@
       "revId": "246ecfbec087d3b5e6df32f8c16655e180183dfe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3c7931c2_27a7a4c9",
+        "filename": "jenkins-docker/slave-buck/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-08T14:22:26Z",
+      "side": 1,
+      "message": "Yes, good catch. Let me fix it.",
+      "parentUuid": "6fbac704_47817d2d",
+      "revId": "246ecfbec087d3b5e6df32f8c16655e180183dfe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
