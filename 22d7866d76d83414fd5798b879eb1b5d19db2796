@@ -93,6 +93,30 @@
       "revId": "22d7866d76d83414fd5798b879eb1b5d19db2796",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7947ee9c_b6c1c552",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-08T14:36:44Z",
+      "side": 1,
+      "message": "I am using Docker-CE 18.03.01:\n\n\u003e docker --version\nDocker version 18.03.1-ce, build 9ee9f40\n\nUsing ./jenkins_home fails. I think it is because docker thinks it is a named volume and thus does not allow \u0027/\u0027.\n\n\u003e docker run -v ./test:/test ubuntu\nUnable to find image \u0027ubuntu:latest\u0027 locally\nlatest: Pulling from library/ubuntu\n6b98dfc16071: Pull complete\n4001a1209541: Pull complete\n6319fc68c576: Pull complete\nb24603670dc3: Pull complete\n97f170c87c6f: Pull complete\nDigest: sha256:5f4bdc3467537cbbe563e80db2c3ec95d548a9145d64453b06939c4592d67b6d\nStatus: Downloaded newer image for ubuntu:latest\ndocker: Error response from daemon: create ./test: \"./test\" includes invalid characters for a local volume name, only \"[a-zA-Z0-9][a-zA-Z0-9_.-]\" are allowed. If you intended to pass a host directory, use absolute path.\n\nI think we could use --mount instead of -v. Let me try.",
+      "parentUuid": "fdde6c57_805b3bda",
+      "range": {
+        "startLine": 8,
+        "startChar": 13,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "22d7866d76d83414fd5798b879eb1b5d19db2796",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
