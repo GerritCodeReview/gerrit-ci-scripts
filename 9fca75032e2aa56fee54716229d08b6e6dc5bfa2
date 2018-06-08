@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "af796500_f291402b",
+        "filename": "jenkins-docker/slave-buck/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-06-08T12:38:02Z",
+      "side": 1,
+      "message": "This line is now too long, split it into one command per line:\n\n  cmd1 \\\n      \u0026\u0026 cmd2 \\\n      \u0026\u0026 cmd3 \\\n  ...",
+      "revId": "9fca75032e2aa56fee54716229d08b6e6dc5bfa2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
