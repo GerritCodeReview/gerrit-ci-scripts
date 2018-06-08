@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6fbac704_47817d2d",
+        "filename": "jenkins-docker/slave-buck/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-08T14:19:49Z",
+      "side": 1,
+      "message": "Nice short version.\nBut I think \u0027\u0026\u0026 cd ./gerrit\u0027 or \u0027git clone -b stable-2.13 --recursive https://gerrit.googlesource.com/gerrit . \u0026\u0026\u0027 is missing for buck to work.",
+      "revId": "246ecfbec087d3b5e6df32f8c16655e180183dfe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
