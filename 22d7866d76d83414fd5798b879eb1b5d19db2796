@@ -45,6 +45,30 @@
       "revId": "22d7866d76d83414fd5798b879eb1b5d19db2796",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "37c89242_caf040d4",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-08T13:50:14Z",
+      "side": 1,
+      "message": "Unfortunately relative paths are not allowed for host volumes used in mount binds by docker:\n\ndocker: Error response from daemon: create ./jenkins_home: \"./jenkins_home\" includes invalid characters for a local volume name, only \"[a-zA-Z0-9][a-zA-Z0-9_.-]\" are allowed. If you intended to pass a host directory, use absolute path.\n\nDo you have an idea, which other path to use? Or another nice way to solve this?",
+      "parentUuid": "c2f8ce96_40c9b0fa",
+      "range": {
+        "startLine": 8,
+        "startChar": 13,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "22d7866d76d83414fd5798b879eb1b5d19db2796",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
