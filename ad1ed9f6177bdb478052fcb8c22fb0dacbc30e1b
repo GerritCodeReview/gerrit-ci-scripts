@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8a2a012_291c70bd",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1045122
+      },
+      "writtenOn": "2018-06-08T19:17:56Z",
+      "side": 1,
+      "message": "But where to put the private key then and for what is it used? As the private key inside the slave container setting up a reverse SSH tunnel over the PPP tunnel? but these instructions aren\u0027t included or is it magic that I don\u0027t see?",
+      "range": {
+        "startLine": 61,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 30
+      },
+      "revId": "ad1ed9f6177bdb478052fcb8c22fb0dacbc30e1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
