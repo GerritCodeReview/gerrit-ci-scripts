@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "764713f1_4cd186b8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-12T16:10:03Z",
+      "side": 1,
+      "message": "Since the error appeared on our setup of this project, which runs on internal servers, I can unfortunately not send you links. I am aware that jobs run fine on https://gerrit-ci.gerritforge.com/. When setting up jenkins using the initial configuration provided by this project, no Xvfb-installation is set under Global Tool Configuration \u003e Xvfb installation \u003e Xvfb installation installations. While no Xvfb is needed on the master, jenkins still uses the path defined here to find the Xvfb-installation in the docker slaves for some reason. \nI am not sure, why it works for you, but I could imagine that in your case this configuration might have been done manually at one point and was then persisted in your jenkins_home. If of course the option mentioned above is not set on your setup, there is probably something different on our system (e.g. PATH on the slaves).",
+      "parentUuid": "7bd0fb3e_f8f8f0f4",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "800ef54f_c2deb185",
         "filename": "jenkins-docker/master/org.jenkinsci.plugins.xvfb.Xvfb.xml",
         "patchSetId": 1
@@ -36,6 +60,24 @@
       "writtenOn": "2018-06-12T15:54:55Z",
       "side": 1,
       "message": "Why do you need it on the master?",
+      "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3c704e0_a5e1f22d",
+        "filename": "jenkins-docker/master/org.jenkinsci.plugins.xvfb.Xvfb.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-12T16:10:03Z",
+      "side": 1,
+      "message": "I am not using Xvfb on the master (refer to the reply on your comment in the commit message)",
+      "parentUuid": "800ef54f_c2deb185",
       "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
