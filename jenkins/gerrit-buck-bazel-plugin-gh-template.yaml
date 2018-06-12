@@ -38,6 +38,7 @@
     name: 'plugin-{name}-gh-{branch}'
     description: "Plugin {name} {branch} branch build with BUCK owned by {organization} and hosted on GitHub\n"
     defaults: plugin-gh-template
+    node: buck
     builders:
       - shell:
          !include-raw: gerrit-buck-build-plugin.sh
@@ -50,6 +51,7 @@
     name: 'plugin-{name}-gh-bazel-{branch}'
     description: "Plugin {name} {branch} branch build with Bazel owned by {organization} and hosted on GitHub\n"
     defaults: plugin-gh-template
+    node: bazel-debian
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh

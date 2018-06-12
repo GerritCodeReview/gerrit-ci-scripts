@@ -40,6 +40,7 @@
     name: 'plugin-its-{name}-{branch}'
     description: "Plugin its-{name} {branch} branch build with BUCK\n"
     defaults: plugin-its-template
+    node: buck
     builders:
       - shell:
          !include-raw: gerrit-buck-build-its-plugin.sh

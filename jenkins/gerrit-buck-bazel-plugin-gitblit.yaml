@@ -41,6 +41,7 @@
     name: 'plugin-gitblit-{branch}'
     description: "GitBlit plugin {branch} branch build with BUCK\n"
     defaults: plugin-gitblit
+    node: buck
     builders:
       - shell:
          !include-raw: gitblit-ant-build.sh

@@ -1,6 +1,7 @@
 - defaults:
     name: plugin-template-bazel
     targets: 'plugins/{name}:{name}'
+    node: bazel-debian
     wrappers:
       - timeout:
           timeout: 30
