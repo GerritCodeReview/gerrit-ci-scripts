@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f4e1d05d_0b6b241b",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 11
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-12T16:06:26Z",
+      "side": 1,
+      "message": "What about stable-2.14?",
+      "range": {
+        "startLine": 54,
+        "startChar": 46,
+        "endLine": 54,
+        "endChar": 47
+      },
+      "revId": "b44b8d99284c49f7b50d7b2f9166677d752d8334",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
