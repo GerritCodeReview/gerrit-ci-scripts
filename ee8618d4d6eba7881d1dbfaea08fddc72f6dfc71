@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "baf82e28_a3376157",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-12T16:14:11Z",
+      "side": 1,
+      "message": "I believe you have some configuration issues with your servers: what is in gerrit-ci.gerritforge.com is *exactly* what you see in this repository.\n\nI just have an extra docker-compose, server keys and OAuth with GitHub. Everything else, is exactly as here. How can this change be verified? How can we support your private system?",
+      "parentUuid": "764713f1_4cd186b8",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "800ef54f_c2deb185",
         "filename": "jenkins-docker/master/org.jenkinsci.plugins.xvfb.Xvfb.xml",
         "patchSetId": 1
