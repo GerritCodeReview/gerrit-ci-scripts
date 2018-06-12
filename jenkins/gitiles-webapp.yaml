@@ -1,6 +1,7 @@
 - job:
     name: gitiles-webapp
     description: Builds gitiles webapp from master
+    node: bazel-debian
     wrappers:
       - timeout:
           timeout: 30

@@ -1,5 +1,6 @@
 - defaults:
     name: gerrit-buck-defaults
+    node: buck
     wrappers:
       - timeout:
           timeout: 90

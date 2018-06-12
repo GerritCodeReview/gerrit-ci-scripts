@@ -44,6 +44,7 @@
     name: 'pluginmanual-{name}-{branch}'
     description: "Plugin {name} {branch} manual branch build with BUCK\n"
     defaults: pluginmanual-template
+    node: buck
     builders:
       - shell:
          !include-raw: gerrit-buck-build-plugin-manual.sh
@@ -56,6 +57,7 @@
     name: 'pluginmanual-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} manual branch build with Bazel\n"
     defaults: pluginmanual-template
+    node: bazel-debian
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin-manual.sh

@@ -107,6 +107,7 @@
     name: Gerrit-verifier-buck
     description: "Gerrit build of open change with BUCK\n"
     defaults: verifier-defaults
+    node: buck
 
     builders:
       - merge-target-branch
