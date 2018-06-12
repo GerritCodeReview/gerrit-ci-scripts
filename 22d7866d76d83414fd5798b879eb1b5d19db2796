@@ -117,6 +117,30 @@
       "revId": "22d7866d76d83414fd5798b879eb1b5d19db2796",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "54ab7adb_7a60aae7",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-12T15:52:17Z",
+      "side": 1,
+      "message": "Unfortunately that is also not working for me:\n\ndocker run --mount type\u003dbind,source\u003d./test,target\u003d/app  ubuntu\ndocker: Error response from daemon: invalid mount config for type \"bind\": invalid mount path: \u0027./test\u0027 mount path must be absolute.\nSee \u0027docker run --help\u0027.",
+      "parentUuid": "7947ee9c_b6c1c552",
+      "range": {
+        "startLine": 8,
+        "startChar": 13,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "22d7866d76d83414fd5798b879eb1b5d19db2796",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
