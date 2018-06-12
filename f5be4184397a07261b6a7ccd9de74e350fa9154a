@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ad2bc21e_d746a479",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-12T16:08:34Z",
+      "side": 1,
+      "message": "I believe this is the right time to break this image into two:\n- Debian-with-Chrome with versioning\n- Slave-Debian",
+      "revId": "f5be4184397a07261b6a7ccd9de74e350fa9154a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
