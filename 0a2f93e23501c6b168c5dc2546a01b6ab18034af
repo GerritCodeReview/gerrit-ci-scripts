@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "819e15c7_bd564aaf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-12T15:57:02Z",
+      "side": 1,
+      "message": "Nope, they are performed as \u0027jenkins\u0027 user.",
+      "range": {
+        "startLine": 9,
+        "startChar": 7,
+        "endLine": 9,
+        "endChar": 52
+      },
+      "revId": "0a2f93e23501c6b168c5dc2546a01b6ab18034af",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "032cad5f_a5dc79a0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-12T15:57:02Z",
+      "side": 1,
+      "message": "It is not generally a good idea to run builds as root: what is your use-case for running it as root? What you cannot do as jenkins?",
+      "range": {
+        "startLine": 28,
+        "startChar": 32,
+        "endLine": 28,
+        "endChar": 55
+      },
+      "revId": "0a2f93e23501c6b168c5dc2546a01b6ab18034af",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
