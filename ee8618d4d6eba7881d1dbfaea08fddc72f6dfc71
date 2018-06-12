@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "e8159402_753a9572",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-12T16:52:16Z",
+      "side": 1,
+      "message": "Ok. Then I will look into that on our side.\nOf course we will support our private system ourselves. We decided to use this project as a base, since it is already a great setup to build and test Gerrit, which we need. While using it, we of course want to give back to the project. Thus, I was sharing changes, I needed to get it working for us and which seemed to me not directly related to internal conditions. Since I am new to the project, it is hard to judge, which changes are actually needed on your system, especially when I can only verify them on our system.\n\nSince it seems that there are still some basic issues leading to differences between the setups, I will rather discuss them in the mailing list in future, before submitting changes. Thank you for your comments and please excuse the inconveniences.",
+      "parentUuid": "baf82e28_a3376157",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "800ef54f_c2deb185",
         "filename": "jenkins-docker/master/org.jenkinsci.plugins.xvfb.Xvfb.xml",
         "patchSetId": 1
