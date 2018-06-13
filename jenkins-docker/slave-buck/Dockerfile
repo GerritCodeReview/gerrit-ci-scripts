@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave
+FROM gerritforge/gerrit-ci-slave-debian
 
 # Buck build
 
