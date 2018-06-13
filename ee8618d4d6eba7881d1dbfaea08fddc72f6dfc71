@@ -169,6 +169,30 @@
     },
     {
       "key": {
+        "uuid": "5c301cb4_ecb5bf58",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T10:00:36Z",
+      "side": 1,
+      "message": "Gotcha, I was misled by the UX. You are perfectly right.\nI tried to remove it and:\n00:00:53.633 ERROR: No Xvfb installations defined, please define one in the configuration. Once defined you?ll need to choose one under Advanced options for Xvfb plugin job settings and save job configuration.",
+      "parentUuid": "5c637d82_428a2b9d",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "800ef54f_c2deb185",
         "filename": "jenkins-docker/master/org.jenkinsci.plugins.xvfb.Xvfb.xml",
         "patchSetId": 1
