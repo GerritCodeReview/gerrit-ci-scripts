@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "5c637d82_428a2b9d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-06-13T09:23:22Z",
+      "side": 1,
+      "message": "Hi Luca, on your screenshot you see that \"Xvfb Installation installations...\" button.\nClick on it and you will be at the place where we found Xvfb configuration.",
+      "parentUuid": "f94411ce_ce853091",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "800ef54f_c2deb185",
         "filename": "jenkins-docker/master/org.jenkinsci.plugins.xvfb.Xvfb.xml",
         "patchSetId": 1
