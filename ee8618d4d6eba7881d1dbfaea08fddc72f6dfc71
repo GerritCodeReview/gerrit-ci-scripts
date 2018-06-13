@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "cb0af279_e8a61cf4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-06-13T08:40:22Z",
+      "side": 1,
+      "message": "@Luca: I just checked the Xvfb configuration on gerrit-ci and it was indeed configured\nto the values set automatically by this change.\n\nHere a screenshot from Jenkins configuration on gerrit-ci [1].\n\nTherefore, this change seems justified?\n\n[1] https://imgur.com/MnA5pHh",
+      "parentUuid": "e8159402_753a9572",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "800ef54f_c2deb185",
         "filename": "jenkins-docker/master/org.jenkinsci.plugins.xvfb.Xvfb.xml",
         "patchSetId": 1
