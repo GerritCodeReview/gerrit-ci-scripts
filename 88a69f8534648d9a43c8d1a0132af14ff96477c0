@@ -1,0 +1,316 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "be121452_6616be14",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "range": {
+        "startLine": 41,
+        "startChar": 23,
+        "endLine": 41,
+        "endChar": 27
+      },
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b8198d3a_a17ffbb4",
+        "filename": "jenkins/defaults.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bcb42779_e1dd8a78",
+        "filename": "jenkins/gerrit-app-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "80c5cdff_7b110aee",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa87844d_170c299a",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gh-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "16f3171b_c5b703b8",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gh-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0af39948_a36d544c",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitblit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6bb0d8c4_ef157636",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-its-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f45a0ad_08cdae07",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-manual-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "122348a9_9aa68dea",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-manual-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bdae41cc_c65b0245",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-owners.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7cfe5a0e_43011dc7",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-owners.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "baa28eec_b8020451",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-scripting-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4c6a26c1_4d1e3c95",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-scripting-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5809f0f4_7ac0b0c8",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d31ce651_97fd2645",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae0df64b_67614311",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29fc3f9b_59f03d8a",
+        "filename": "jenkins/gitiles-webapp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:49:38Z",
+      "side": 1,
+      "message": "Not needed",
+      "revId": "88a69f8534648d9a43c8d1a0132af14ff96477c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
