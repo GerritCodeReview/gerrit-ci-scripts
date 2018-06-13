@@ -1,13 +1,14 @@
-FROM debian:stretch
+FROM debian:$DEBIAN_VER
 
 USER root
 
-RUN echo "deb http://http.debian.net/debian/ stretch contrib" >> /etc/apt/sources.list
+RUN echo "deb http://http.debian.net/debian/ $DEBIAN_VER contrib" >> /etc/apt/sources.list
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install -y wget gpg software-properties-common default-jdk openjdk-8-jdk && \
-    update-java-alternatives -v -s java-1.8.0-openjdk-amd64
+RUN cat /etc/apt/sources.list
+
+RUN apt-get update && apt-get install -y wget software-properties-common default-jdk
 
 COPY set-java.sh /usr/bin/
 
@@ -28,6 +29,15 @@ RUN apt-get update && apt-get install -y \
     zip \
     vim \
     && rm -rf /var/lib/apt/lists/*
+
+RUN [ "$DEBIAN_VER" != "jessie" ] || \
+       ( echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
+         apt-get update && \
+         apt-get install -y -t jessie-backports openjdk-8-jdk && \
+         update-java-alternatives -s java-1.8.0-openjdk-amd64 && \
+         mv /etc/apt/sources.list.d/jessie-backports.list /etc/apt/sources.list.d/jessie-backports.list.disabled && \
+         apt-get update && \
+         rm -rf /var/lib/apt/lists/* )
 
 RUN useradd jenkins -d /home/jenkins -m -s /bin/bash
 RUN mkdir /home/jenkins/.ssh
@@ -59,10 +69,9 @@ RUN apt-get update && apt-get install -y nodejs
 # pin Chrome version to 63.0.3239.108, stable chrome version on: 2018-01-24.
 RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
     apt-get update && \
-    apt-get install -y wget curl zip && \
+    apt-get install -y wget curl zip fonts-liberation && \
     wget -O /tmp/chrome64_63.0.3239.108.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_63.0.3239.108.deb && \
-    apt-get install -y gdebi && \
-    gdebi --non-interactive /tmp/chrome64_63.0.3239.108.deb && \
+    (dpkg -i /tmp/chrome64_63.0.3239.108.deb; apt-get install -f -y) && \
     rm /tmp/chrome64_63.0.3239.108.deb
 
 COPY wct.conf.json /home/jenkins/
