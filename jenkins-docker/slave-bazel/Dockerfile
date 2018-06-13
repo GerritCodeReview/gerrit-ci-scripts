@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-debian
+FROM gerritforge/gerrit-ci-slave-buck
 
 # Bazel 0.14.0
 RUN wget -O /tmp/bazel_0.14.0-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.14.0/bazel_0.14.0-linux-x86_64.deb && \
@@ -10,10 +10,11 @@ RUN cd /tmp && \
     git clone https://github.com/bazelbuild/buildtools.git && \
     cd buildtools && \
     git checkout 0.11.1 && \
+    bash -c '. set-java.sh 8 && \
     bazel build --workspace_status_command=`pwd`/status.sh //buildifier && \
     cp bazel-bin/buildifier/linux_amd64_stripped/buildifier /usr/bin && \
     rm -rf /tmp/buildtools && \
-    buildifier --version
+    buildifier --version'
 
 # Bazel cache warm-up with Gerrit master build
 # Set-up google-java-format utility to ~/format/google-java-format
