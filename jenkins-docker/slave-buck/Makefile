@@ -1,5 +1,5 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-buck
+IMAGE=gerritforge/gerrit-ci-slave-buck:debian-jessie
 
 # Targets
 
