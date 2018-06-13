@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ecd9c266_a30d2a4c",
+        "filename": "jenkins-docker/slave-mvn/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-06-13T20:49:34Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "045b0de7_7d0ac01f",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 45
+      },
+      "revId": "292266b9becd63067d98dd4fdd21e3b19852789f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ac3a9a57_76e6030f",
         "filename": "jenkins-docker/slave-sbt/Dockerfile",
         "patchSetId": 8
@@ -45,6 +69,30 @@
       "revId": "292266b9becd63067d98dd4fdd21e3b19852789f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e6c0111_a1b788db",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-06-13T20:49:34Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "ac3a9a57_76e6030f",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 45
+      },
+      "revId": "292266b9becd63067d98dd4fdd21e3b19852789f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
