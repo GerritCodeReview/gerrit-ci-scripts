@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "f94411ce_ce853091",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T09:07:27Z",
+      "side": 1,
+      "message": "@Saša where did you see that configuration?\n\nSee below the settings in Gerrit master:\nhttps://imgur.com/a/9wiqYSE\n\nXvfb configuration makes sense on the slaves, NOT on the master. The slaves are ephemeral and their config is encapsulated in Docker.\n\nThe jobs running on the slaves are defined via JJB YAML files.\n\nI do not see the need to have Xvfb configured on the master at this point, unless you show me a failure that says \"hey, this failed because Xvfb is missing\".",
+      "parentUuid": "cb0af279_e8a61cf4",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "ee8618d4d6eba7881d1dbfaea08fddc72f6dfc71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "800ef54f_c2deb185",
         "filename": "jenkins-docker/master/org.jenkinsci.plugins.xvfb.Xvfb.xml",
         "patchSetId": 1
