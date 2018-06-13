@@ -26,10 +26,7 @@ RUN apt-get update && apt-get install -y \
     apt-transport-https && \
     rm -rf /var/lib/apt/lists/* && \
     \
-    mkdir -p /opt/ && \
-    git clone https://git.openstack.org/openstack-infra/jenkins-job-builder /opt/jenkins_job_builder && \
-    cd /opt/jenkins_job_builder && git checkout 1.6.2 && \
-    pip install /opt/jenkins_job_builder && \
+    pip install jenkins_job_builder==2.0.9 pbr==2.0.0 && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
