@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "045b0de7_7d0ac01f",
+        "filename": "jenkins-docker/slave-mvn/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:38:53Z",
+      "side": 1,
+      "message": "Better to use the debian-buck variant, which includes Java 7 as well",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 45
+      },
+      "revId": "292266b9becd63067d98dd4fdd21e3b19852789f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ac3a9a57_76e6030f",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-13T20:38:53Z",
+      "side": 1,
+      "message": "same as before",
+      "range": {
+        "startLine": 1,
+        "startChar": 38,
+        "endLine": 1,
+        "endChar": 45
+      },
+      "revId": "292266b9becd63067d98dd4fdd21e3b19852789f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
