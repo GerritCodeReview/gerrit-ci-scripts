@@ -27,6 +27,7 @@
         <xsl:element name="githubApiUri">https://api.github.com</xsl:element>
         <xsl:element name="clientId"><xsl:value-of select="$oauth-client-id"/></xsl:element>
         <xsl:element name="clientSecret"><xsl:value-of select="$oauth-client-secret"/></xsl:element>
+        <xsl:element name="oauthScopes">read:org,user:email</xsl:element>
      </xsl:element>
   </xsl:template>
 
