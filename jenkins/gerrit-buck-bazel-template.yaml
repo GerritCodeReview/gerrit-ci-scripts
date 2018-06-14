@@ -51,7 +51,7 @@
 
 - job-template:
     name: 'Gerrit-{branch}'
-    project-type: flow
+    project-type: pipeline
     concurrent: false
     needs-workspace: true
     scm:
@@ -78,9 +78,11 @@
     dsl: |
       retries = 3
       type = '{branch}' in ['stable-2.15','stable-2.14','master'] ? 'bazel' : 'buck'
-      parallel (
-        {{ retry ( retries ) {{ build( "Gerrit-$type-{branch}" ) }} }}
-      )
+      node {
+        retry(retries) {
+          build job: "Gerrit-${type}-stable-2.10"
+        }
+      }
 
 - job-template:
     name: 'Gerrit-buck-{branch}'
