@@ -72,10 +72,10 @@ RUN apt-get update && apt-get install -y nodejs
 RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y wget curl zip fonts-liberation && \
-    wget -O /tmp/chrome64_63.0.3239.108.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_63.0.3239.108.deb && \
+    wget -O /tmp/chrome.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_65.0.3325.181.deb && \
     apt-get install -y gdebi && \
-    gdebi --non-interactive /tmp/chrome64_63.0.3239.108.deb && \
-    rm /tmp/chrome64_63.0.3239.108.deb
+    gdebi --non-interactive /tmp/chrome.deb && \
+    rm /tmp/chrome.deb
 
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
