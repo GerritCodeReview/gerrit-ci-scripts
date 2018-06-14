@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e93a0036_d61f9f82",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1045122
+      },
+      "writtenOn": "2018-06-14T18:50:54Z",
+      "side": 1,
+      "message": "gdebi is a *graphical* Debian package installer; why do we actually use that? Oh, for installing Chrome later, but that could be changed to\n\n apt install /path/to/file.deb\n\nin recent APT versions or\n\n (dpkg -i /path/to/file.deb; apt-get install -f -y)\n\nin less recent APT versions, without a GNOME dependency.",
+      "range": {
+        "startLine": 31,
+        "startChar": 4,
+        "endLine": 31,
+        "endChar": 9
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "239baab3_4b23e1e4",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1045122
+      },
+      "writtenOn": "2018-06-14T18:50:54Z",
+      "side": 1,
+      "message": "why again? you just installed it already in line 32, right?",
+      "range": {
+        "startLine": 74,
+        "startChar": 37,
+        "endLine": 74,
+        "endChar": 53
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77eab3a5_d0098cbe",
+        "filename": "jenkins-docker/slave-debian/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1045122
+      },
+      "writtenOn": "2018-06-14T18:50:54Z",
+      "side": 1,
+      "message": "oh man, I learned new Make magic here. thanks :)",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 23,
+        "endChar": 25
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
