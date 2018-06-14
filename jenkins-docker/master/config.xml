@@ -33,21 +33,22 @@
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
   <clouds>
-    <com.nirima.jenkins.plugins.docker.DockerCloud plugin="docker-plugin@0.16.0">
+    <com.nirima.jenkins.plugins.docker.DockerCloud plugin="docker-plugin@1.1.4">
       <name>dockerhost</name>
       <templates>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString></labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerSSHConnector">
+            <sshKeyStrategy class="io.jenkins.docker.connector.DockerComputerSSHConnector$InjectSSHKey">
+              <user>jenkins</user>
+            </sshKeyStrategy>
+            <port>22</port>
+            <jvmOptions></jvmOptions>
+            <javaPath></javaPath>
+            <prefixStartSlaveCmd></prefixStartSlaveCmd>
+            <suffixStartSlaveCmd></suffixStartSlaveCmd>
+          </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>5</instanceCap>
@@ -81,15 +82,16 @@
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString>bazel</labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerSSHConnector">
+            <sshKeyStrategy class="io.jenkins.docker.connector.DockerComputerSSHConnector$InjectSSHKey">
+              <user>jenkins</user>
+            </sshKeyStrategy>
+            <port>22</port>
+            <jvmOptions></jvmOptions>
+            <javaPath></javaPath>
+            <prefixStartSlaveCmd></prefixStartSlaveCmd>
+            <suffixStartSlaveCmd></suffixStartSlaveCmd>
+          </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>5</instanceCap>
@@ -123,15 +125,16 @@
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString>mvn</labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerSSHConnector">
+            <sshKeyStrategy class="io.jenkins.docker.connector.DockerComputerSSHConnector$InjectSSHKey">
+              <user>jenkins</user>
+            </sshKeyStrategy>
+            <port>22</port>
+            <jvmOptions></jvmOptions>
+            <javaPath></javaPath>
+            <prefixStartSlaveCmd></prefixStartSlaveCmd>
+            <suffixStartSlaveCmd></suffixStartSlaveCmd>
+          </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>5</instanceCap>
@@ -165,15 +168,16 @@
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString>sbt</labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerSSHConnector">
+            <sshKeyStrategy class="io.jenkins.docker.connector.DockerComputerSSHConnector$InjectSSHKey">
+              <user>jenkins</user>
+            </sshKeyStrategy>
+            <port>22</port>
+            <jvmOptions></jvmOptions>
+            <javaPath></javaPath>
+            <prefixStartSlaveCmd></prefixStartSlaveCmd>
+            <suffixStartSlaveCmd></suffixStartSlaveCmd>
+          </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>5</instanceCap>
@@ -207,16 +211,16 @@
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString>bazel-debian</labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <credentialsId>67b30007-8017-47c9-af5f-7bac55e4a437</credentialsId>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerSSHConnector">
+            <sshKeyStrategy class="io.jenkins.docker.connector.DockerComputerSSHConnector$InjectSSHKey">
+              <user>jenkins</user>
+            </sshKeyStrategy>
+            <port>22</port>
+            <jvmOptions></jvmOptions>
+            <javaPath></javaPath>
+            <prefixStartSlaveCmd></prefixStartSlaveCmd>
+            <suffixStartSlaveCmd></suffixStartSlaveCmd>
+          </connector>
           <remoteFsMapping>/var/jenkins_home</remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>4</instanceCap>
@@ -228,7 +232,7 @@
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
             <image>gerritforge/jenkins-slave-bazel:debian</image>
-            <dockerCommand>bash -x /bin/start.sh</dockerCommand>
+            <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
             <dnsHosts>
