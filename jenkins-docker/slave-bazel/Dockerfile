@@ -5,11 +5,11 @@ RUN wget -O /tmp/bazel_0.14.0-linux-x86_64.deb https://github.com/bazelbuild/baz
     gdebi --non-interactive /tmp/bazel_0.14.0-linux-x86_64.deb && \
     rm /tmp/bazel_0.14.0-linux-x86_64.deb
 
-# Install buildifier utility (0.11.1)
+# Install buildifier utility (0.12.0)
 RUN cd /tmp && \
     git clone https://github.com/bazelbuild/buildtools.git && \
     cd buildtools && \
-    git checkout 0.11.1 && \
+    git checkout 0.12.0 && \
     bazel build --workspace_status_command=`pwd`/status.sh //buildifier && \
     cp bazel-bin/buildifier/linux_amd64_stripped/buildifier /usr/bin && \
     rm -rf /tmp/buildtools && \
