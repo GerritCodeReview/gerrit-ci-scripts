@@ -25,6 +25,53 @@
     },
     {
       "key": {
+        "uuid": "57b9592f_51d189fe",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-14T20:59:48Z",
+      "side": 1,
+      "message": "Good catch, will try that.",
+      "parentUuid": "e93a0036_d61f9f82",
+      "range": {
+        "startLine": 31,
+        "startChar": 4,
+        "endLine": 31,
+        "endChar": 9
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "18ee2279_71cb4598",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-14T20:59:48Z",
+      "side": 1,
+      "message": "This is possibly not needed: it is a Chrome dependency and it should be resolved automatically.",
+      "range": {
+        "startLine": 32,
+        "startChar": 4,
+        "endLine": 32,
+        "endChar": 22
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "239baab3_4b23e1e4",
         "filename": "jenkins-docker/slave-debian/Dockerfile",
         "patchSetId": 3
@@ -36,6 +83,30 @@
       "writtenOn": "2018-06-14T18:50:54Z",
       "side": 1,
       "message": "why again? you just installed it already in line 32, right?",
+      "range": {
+        "startLine": 74,
+        "startChar": 37,
+        "endLine": 74,
+        "endChar": 53
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c9a2914_1a8ae0d9",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-14T20:59:48Z",
+      "side": 1,
+      "message": "Should not be needed at all. Will try to remove it.",
+      "parentUuid": "239baab3_4b23e1e4",
       "range": {
         "startLine": 74,
         "startChar": 37,
