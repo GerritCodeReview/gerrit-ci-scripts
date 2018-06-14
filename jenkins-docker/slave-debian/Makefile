@@ -1,5 +1,6 @@
 NO_CACHE ?= false
 IMAGE=gerritforge/gerrit-ci-slave-debian
+CHROME ?= 65.0.3325.181
 
 build: build_stretch build_jessie
 
@@ -16,8 +17,8 @@ publish_jessie: jessie docker_publish
 docker_build:  id_rsa.pub
 	@echo "Building Docker for Debian:$(DEBIAN_VER)"
 	@echo "========================================"
-	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
-	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t ${IMAGE}:$(DEBIAN_VER) .
+	cat Dockerfile | CHROME=$(CHROME) DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
+	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t ${IMAGE}:$(DEBIAN_VER)-chrome-$(CHROME) .
 
 jessie stretch:
 	$(eval DEBIAN_VER := $@)
