@@ -68,6 +68,30 @@
       "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5cc8ef2_13178f15",
+        "filename": "jenkins-docker/slave-debian/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1045122
+      },
+      "writtenOn": "2018-06-14T18:52:20Z",
+      "side": 1,
+      "message": "(should not be an unresolved comment, sorry, marking resolved now)",
+      "parentUuid": "77eab3a5_d0098cbe",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 23,
+        "endChar": 25
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
