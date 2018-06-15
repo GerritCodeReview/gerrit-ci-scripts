@@ -5,9 +5,7 @@
           branch:
             - stable-2.11
             - stable-2.10
-      - 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-its-{name}-bazel-{branch}':
           branch:
-            - master
-          gerrit-branch:
             - master
             - stable-2.14
