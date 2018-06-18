@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cb578068_317ff257",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-18T07:21:38Z",
+      "side": 1,
+      "message": "With the removal of the docker plugin snapshot build, this variable is not used anymore. Should we remove it or keep it in place for potential future snapshot builds?",
+      "revId": "6de072546355f5a9d575d41f3f35d0a832d6c07e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
