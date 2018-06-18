@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8342637_a3b3924a",
+        "filename": "jenkins-docker/slave-bazel/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-18T07:49:45Z",
+      "side": 1,
+      "message": "gerritforge/gerrit-ci-slave-buck-bazel:debian would be more consistent with the current naming scheme.",
+      "revId": "a0ca54874ea04c5493a7012e705ca1c85ca228de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
