@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "bb341197_2f01e8c3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T12:24:25Z",
+      "side": 1,
+      "message": "Sure, let me do that. 2.0.10 was released on Pypi 4 days ago, so after the change.",
+      "parentUuid": "1ed6d83c_6afd5c14",
+      "range": {
+        "startLine": 7,
+        "startChar": 30,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "1861379d50828f636d037c8c4c9fb5a9fbec3f6d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "47f4d3c8_1c3ac942",
         "filename": "jenkins-docker/master/Dockerfile",
         "patchSetId": 4
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "That\u0027s strange; the requirements.txt file in the jenkins-job-builder project specifies:\n\n pbr\u003e\u003d1.8\n\nand as far as I can see there isn\u0027t anything else in the project that ties it to 2.0.0",
       "parentUuid": "3013a4b5_c8a1e6e3",
+      "range": {
+        "startLine": 29,
+        "startChar": 43,
+        "endLine": 29,
+        "endChar": 53
+      },
+      "revId": "1861379d50828f636d037c8c4c9fb5a9fbec3f6d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb88a937_ae2299e6",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T12:24:25Z",
+      "side": 1,
+      "message": "When I don\u0027t install pbr 2.0.0, pip states that the requirement is satisfied:\n\n  ...\n  Collecting jenkins_job_builder\u003d\u003d2.0.9\n  Downloading\n  ...\n  Requirement already satisfied: pbr\u003e\u003d1.8 in /usr/lib/python2.7/dist-packages (from jenkins_job_builder\u003d\u003d2.0.9)\n  ...\n\nThat is true, since pbr 1.10 is installed:\n\n  \u003e pip list\n  bzr (2.8.0.dev1)\n  certifi (2018.4.16)\n  chardet (3.0.4)\n  configobj (5.0.6)\n  cryptography (1.7.1)\n  enum34 (1.1.6)\n  fasteners (0.14.1)\n  idna (2.7)\n  ipaddress (1.0.17)\n  jenkins-job-builder (2.0.9)\n  Jinja2 (2.10)\n  keyring (10.1)\n  keyrings.alt (1.3)\n  MarkupSafe (1.0)\n  mercurial (4.0)\n  monotonic (1.5)\n  multi-key-dict (2.0.3)\n  pbr (1.10.0)\n  pip (9.0.1)\n  pyasn1 (0.1.9)\n  pycrypto (2.6.1)\n  pygobject (3.22.0)\n  python-jenkins (1.0.2)\n  pyxdg (0.25)\n  PyYAML (3.12)\n  requests (2.19.1)\n  SecretStorage (2.3.1)\n  setuptools (33.1.1)\n  six (1.10.0)\n  stevedore (1.28.0)\n  urllib3 (1.23)\n  wheel (0.29.0)\n\nBut when I run the \u0027gerrit-ci-scripts\u0027-job in Jenkins, I get this error:\n\nINFO:jenkins_jobs.cli.subcommand.update:Updating jobs in [\u0027jenkins\u0027] ([])\nTraceback (most recent call last):\n  File \"/usr/local/bin/jenkins-jobs\", line 11, in \u003cmodule\u003e\n    sys.exit(main())\n  File \"/usr/local/lib/python2.7/dist-packages/jenkins_jobs/cli/entry.py\", line 146, in main\n    jjb.execute()\n  File \"/usr/local/lib/python2.7/dist-packages/jenkins_jobs/cli/entry.py\", line 140, in execute\n    ext.obj.execute(self.options, self.jjb_config)\n  File \"/usr/local/lib/python2.7/dist-packages/jenkins_jobs/cli/subcommand/update.py\", line 135, in execute\n    options, jjb_config)\n  File \"/usr/local/lib/python2.7/dist-packages/jenkins_jobs/cli/subcommand/update.py\", line 104, in _generate_xmljobs\n    registry \u003d ModuleRegistry(jjb_config, builder.plugins_list)\n  File \"/usr/local/lib/python2.7/dist-packages/jenkins_jobs/registry.py\", line 52, in __init__\n    Mod \u003d entrypoint.load()\n  File \"/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py\", line 2290, in load\n    self.require(*args, **kwargs)\n  File \"/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py\", line 2307, in require\n    items \u003d working_set.resolve(reqs, env, installer)\n  File \"/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py\", line 854, in resolve\n    raise VersionConflict(dist, req).with_context(dependent_req)\npkg_resources.ContextualVersionConflict: (pbr 1.10.0 (/usr/lib/python2.7/dist-packages), Requirement.parse(\u0027pbr!\u003d2.1.0,\u003e\u003d2.0.0\u0027), set([\u0027stevedore\u0027]))\nBuild step \u0027Execute shell\u0027 marked build as failure\n\nThis is fixed by explicitly installing pbr 2.0.0",
+      "parentUuid": "4dc51301_e9e0a6c6",
       "range": {
         "startLine": 29,
         "startChar": 43,
