@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "86b615cd_20c7397e",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T15:52:24Z",
+      "side": 1,
+      "message": "Will add removal in change 6de072546355f5a9d575d41f3f35d0a832d6c07e",
+      "parentUuid": "52e35c82_60f43cb8",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 0
+      },
+      "revId": "58b2c374fca898a809f84ad4a7ecc172c63ee718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7573b7a7_66c5586d",
         "filename": "jenkins-docker/master/Dockerfile",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-06-20T15:14:14Z",
       "side": 1,
       "message": "Not needed anymore",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 154
+      },
+      "revId": "58b2c374fca898a809f84ad4a7ecc172c63ee718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cac4b11c_f203115b",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T15:52:24Z",
+      "side": 1,
+      "message": "Addressed in change 6de072546355f5a9d575d41f3f35d0a832d6c07e",
+      "parentUuid": "7573b7a7_66c5586d",
       "range": {
         "startLine": 57,
         "startChar": 0,
@@ -62,6 +110,24 @@
       "revId": "58b2c374fca898a809f84ad4a7ecc172c63ee718",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "52c17df0_e24a0994",
+        "filename": "jenkins-docker/master/plugins.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T15:52:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "43caf672_52646808",
+      "revId": "58b2c374fca898a809f84ad4a7ecc172c63ee718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
