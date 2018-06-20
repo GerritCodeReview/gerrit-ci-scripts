@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "52e35c82_60f43cb8",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-20T15:14:14Z",
+      "side": 1,
+      "message": "Not needed anymore",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 0
+      },
+      "revId": "58b2c374fca898a809f84ad4a7ecc172c63ee718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7573b7a7_66c5586d",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-20T15:14:14Z",
+      "side": 1,
+      "message": "Not needed anymore",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 154
+      },
+      "revId": "58b2c374fca898a809f84ad4a7ecc172c63ee718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "43caf672_52646808",
         "filename": "jenkins-docker/master/plugins.txt",
         "patchSetId": 2
