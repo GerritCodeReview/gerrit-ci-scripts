@@ -22,6 +22,30 @@
       "revId": "1861379d50828f636d037c8c4c9fb5a9fbec3f6d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3013a4b5_c8a1e6e3",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T10:53:16Z",
+      "side": 1,
+      "message": "Pip installs pbr version 1.8.0 as a dependency of jenkins_job_builder. This seems to be a bug, since then jenkins_job_builder throws an error that pbr \u003e\u003d 2.0.0 is required. Thus, it is installed explicitly here.",
+      "parentUuid": "47f4d3c8_1c3ac942",
+      "range": {
+        "startLine": 29,
+        "startChar": 43,
+        "endLine": 29,
+        "endChar": 53
+      },
+      "revId": "1861379d50828f636d037c8c4c9fb5a9fbec3f6d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
