@@ -16,6 +16,24 @@
       "revId": "6de072546355f5a9d575d41f3f35d0a832d6c07e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ff0fe11a_53725258",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T15:55:38Z",
+      "side": 1,
+      "message": "Removed following the comment here: https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/185021/2/jenkins-docker/master/Dockerfile#45",
+      "parentUuid": "cb578068_317ff257",
+      "revId": "6de072546355f5a9d575d41f3f35d0a832d6c07e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
