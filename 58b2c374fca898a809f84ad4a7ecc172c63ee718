@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "43caf672_52646808",
+        "filename": "jenkins-docker/master/plugins.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-20T15:10:23Z",
+      "side": 1,
+      "message": "Better to PIN all plugins that are compatible with this version of Jenkins.\nWe never want a Docker image to be inconsistent between builds.",
+      "revId": "58b2c374fca898a809f84ad4a7ecc172c63ee718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
