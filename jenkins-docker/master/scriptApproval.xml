@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.44">
+  <approvedScriptHashes>
+    <string>017d0db438428731cd600b6ebda805065433520f</string>
+    <string>07678cc4fe5890d0447c58f47d424facf5eaa0a1</string>
+    <string>12b27501ff9de716ff453bc46ec7f4a5ba5620ea</string>
+    <string>20124d6c347d72216b11564e7e87853774d453d3</string>
+    <string>295d8d20ba6cdfec7030143f178d95647ac6a378</string>
+    <string>385f4c0e45fb07199e9e46b146fb63876f51e4b3</string>
+    <string>4326814419c9c87c7ab5497257c25882feb74aae</string>
+    <string>69c6ce2b0d3b3301cd4549ff2ef7f2bf5d2fa6cf</string>
+    <string>6b9cd9f8a81d00bbcc75fc2aeda31d313a37ff30</string>
+    <string>7ec616b96a0947e2b19c75dbc087f1c838944f68</string>
+    <string>88e628379531174067ef26a2fc1f990e08f362f0</string>
+    <string>88f27cf3c84e8381f47e423afd275b6fd17c0698</string>
+    <string>9cd3b87eaaaee5ae2f7f96a1038dbbd5943560ea</string>
+    <string>9d881f2784fe4a806a16a783679f1e02d3bf8d6d</string>
+    <string>a44de9a22b52e46e2c65574cf8a6d248dd2252fa</string>
+    <string>ab95b4dc4e0b56c1a894892f00f2b6a686912769</string>
+    <string>b734622b8fe789460b604e27bd059269d69e3507</string>
+    <string>b97f7f03873bc0a630ad7ad57bdeff332c4f471b</string>
+    <string>ba962b1b702293309b25ed03d434f6b1dde161d0</string>
+    <string>bac5bc1b473745106e48893a3c09df34134d3cc6</string>
+    <string>bb73443a1758e6e86af1249efbb3ae1f4e03ff38</string>
+    <string>db8c4aa5812ca958baa64a0aa51c0e0dd8eaed26</string>
+    <string>e097c8ed4cc87eb558b89ec63169196f021890f0</string>
+    <string>ec142a1e6982097a9bb90eabccae41d0187c0404</string>
+  </approvedScriptHashes>
+  <approvedSignatures>
+    <string>method groovy.lang.GroovyObject invokeMethod java.lang.String java.lang.Object</string>
+    <string>method hudson.model.Run getAbsoluteUrl</string>
+    <string>method hudson.model.Run getLogReader</string>
+    <string>method hudson.model.Run getResult</string>
+    <string>method hudson.model.Run setDescription java.lang.String</string>
+    <string>method hudson.model.Run setResult hudson.model.Result</string>
+    <string>method java.io.File exists</string>
+    <string>method java.lang.Process exitValue</string>
+    <string>method java.lang.Process waitFor</string>
+    <string>method java.util.Map remove java.lang.Object</string>
+    <string>method org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper getRawBuild</string>
+    <string>new java.io.File java.lang.String</string>
+    <string>new java.lang.StringBuffer</string>
+    <string>new java.lang.StringBuilder</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods eachLine java.io.Reader groovy.lang.Closure</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.lang.String java.util.List java.io.File</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.util.List</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.util.List java.util.List java.io.File</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getMetaClass java.lang.Class</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getProperties java.lang.Object</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.net.URL java.util.Map</string>
+    <string>staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods consumeProcessOutput java.lang.Process java.lang.Appendable java.lang.Appendable</string>
+    <string>staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods waitForOrKill java.lang.Process long</string>
+  </approvedSignatures>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>
