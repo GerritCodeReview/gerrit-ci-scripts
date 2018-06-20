@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "c2100a22_3ce360dd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T12:32:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bb341197_2f01e8c3",
+      "range": {
+        "startLine": 7,
+        "startChar": 30,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "1861379d50828f636d037c8c4c9fb5a9fbec3f6d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "47f4d3c8_1c3ac942",
         "filename": "jenkins-docker/master/Dockerfile",
         "patchSetId": 4
