@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3e0944b_d71a2a62",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-20T13:07:32Z",
+      "side": 1,
+      "message": "Let\u0027s include the JENKINS_WAR_VER in the image name, so that we can version the Docker VMs exactly as Jenkins",
+      "range": {
+        "startLine": 4,
+        "startChar": 6,
+        "endLine": 4,
+        "endChar": 29
+      },
+      "revId": "02376dc8a0817470e9e0f2a4134375cd7041eadc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
