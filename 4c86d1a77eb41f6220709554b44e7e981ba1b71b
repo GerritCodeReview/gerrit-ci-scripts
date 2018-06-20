@@ -22,6 +22,30 @@
       "revId": "4c86d1a77eb41f6220709554b44e7e981ba1b71b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "899df700_1bc3adfd",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T13:55:56Z",
+      "side": 1,
+      "message": "Overriding the command executed by the docker container is actually not compatible with the SSH injection method:\n\n\"The command to run for this image. Be aware setting this might have impacts on the Launch mechanism, for sample SSH Launcher do configure sshd with injected keys authentication, overriding this command might prevent the agent to start. ...\"\n\nThus, the node startup failed with the dockerCommand set to \u0027bash -x /bin/start.sh\u0027. Removing it, solved that issue and I could use the image to build bazel jobs.\nI also couldn\u0027t find the /bin/start.sh file in the image to check what it does and to integrate it with the sshd-execution. What does it do?",
+      "parentUuid": "d32af72a_f10994ea",
+      "range": {
+        "startLine": 235,
+        "startChar": 26,
+        "endLine": 235,
+        "endChar": 28
+      },
+      "revId": "4c86d1a77eb41f6220709554b44e7e981ba1b71b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
