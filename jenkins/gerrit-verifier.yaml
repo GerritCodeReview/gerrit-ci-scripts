@@ -206,9 +206,9 @@
 
 - job:
     name: 'Gerrit-verifier-change'
-    project-type: flow
+    project-type: pipeline
+    sandbox: true
     concurrent: true
-    needs-workspace: true
     parameters:
       - string:
           name: CHANGE_ID
