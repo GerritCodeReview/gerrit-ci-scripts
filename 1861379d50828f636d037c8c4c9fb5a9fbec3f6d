@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1ed6d83c_6afd5c14",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-06-20T11:04:03Z",
+      "side": 1,
+      "message": "Why not 2.0.10 which is the latest?",
+      "range": {
+        "startLine": 7,
+        "startChar": 30,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "1861379d50828f636d037c8c4c9fb5a9fbec3f6d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "47f4d3c8_1c3ac942",
         "filename": "jenkins-docker/master/Dockerfile",
         "patchSetId": 4
@@ -37,6 +60,30 @@
       "side": 1,
       "message": "Pip installs pbr version 1.8.0 as a dependency of jenkins_job_builder. This seems to be a bug, since then jenkins_job_builder throws an error that pbr \u003e\u003d 2.0.0 is required. Thus, it is installed explicitly here.",
       "parentUuid": "47f4d3c8_1c3ac942",
+      "range": {
+        "startLine": 29,
+        "startChar": 43,
+        "endLine": 29,
+        "endChar": 53
+      },
+      "revId": "1861379d50828f636d037c8c4c9fb5a9fbec3f6d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4dc51301_e9e0a6c6",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-06-20T11:04:03Z",
+      "side": 1,
+      "message": "That\u0027s strange; the requirements.txt file in the jenkins-job-builder project specifies:\n\n pbr\u003e\u003d1.8\n\nand as far as I can see there isn\u0027t anything else in the project that ties it to 2.0.0",
+      "parentUuid": "3013a4b5_c8a1e6e3",
       "range": {
         "startLine": 29,
         "startChar": 43,
