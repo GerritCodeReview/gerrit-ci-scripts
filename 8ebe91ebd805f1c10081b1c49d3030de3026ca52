@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c3ffa7be_6d544ba6",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T10:51:05Z",
+      "side": 0,
+      "message": "Do we still need the copyright for the script?\nIt changed quite a bit, but is based on the original one after all.",
+      "revId": "8ebe91ebd805f1c10081b1c49d3030de3026ca52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af6395a6_62c97687",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T10:51:05Z",
+      "side": 0,
+      "message": "Not taken over, since it isn\u0027t referenced by any function.",
+      "range": {
+        "startLine": 151,
+        "startChar": 4,
+        "endLine": 151,
+        "endChar": 17
+      },
+      "revId": "8ebe91ebd805f1c10081b1c49d3030de3026ca52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6fdf1b10_f60a5c10",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-20T10:51:05Z",
+      "side": 0,
+      "message": "Since retries are anyway only performed until one job succeeds, testing for flaky builds is not needed. Instead 3 retries are configured by default and not after the first job (The current implementation has a hard coded 1 for retries in the first try (Line 294)) failed.",
+      "range": {
+        "startLine": 350,
+        "startChar": 4,
+        "endLine": 350,
+        "endChar": 15
+      },
+      "revId": "8ebe91ebd805f1c10081b1c49d3030de3026ca52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
