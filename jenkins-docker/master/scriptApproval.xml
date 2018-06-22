@@ -21,9 +21,18 @@
     <string>ec142a1e6982097a9bb90eabccae41d0187c0404</string>
   </approvedScriptHashes>
   <approvedSignatures>
+    <string>method hudson.model.Actionable getAllActions</string>
+    <string>method hudson.model.Hudson getJob java.lang.String</string>
+    <string>method hudson.model.Job getBuilds</string>
+    <string>method hudson.model.ParameterValue getValue</string>
+    <string>method hudson.model.ParametersAction getParameter java.lang.String</string>
     <string>method hudson.model.Run getAbsoluteUrl</string>
     <string>method hudson.model.Run getLogReader</string>
+    <string>method hudson.model.Run getPreviousSuccessfulBuild</string>
     <string>method hudson.model.Run getResult</string>
+    <string>method hudson.model.Run getStartTimeInMillis</string>
+    <string>method hudson.model.Run getUrl</string>
+    <string>method hudson.model.Run isBuilding</string>
     <string>method hudson.model.Run setDescription java.lang.String</string>
     <string>method hudson.model.Run setResult hudson.model.Result</string>
     <string>method java.io.File exists</string>
@@ -31,13 +40,20 @@
     <string>method java.lang.Process waitFor</string>
     <string>method org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper getRawBuild</string>
     <string>new java.io.File java.lang.String</string>
+    <string>new java.io.FileNotFoundException java.lang.String</string>
     <string>new java.lang.StringBuffer</string>
     <string>new java.lang.StringBuilder</string>
+    <string>staticMethod jenkins.model.Jenkins getInstance</string>
     <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods eachLine java.io.Reader groovy.lang.Closure</string>
     <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.lang.String java.util.List java.io.File</string>
     <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.util.List java.util.List java.io.File</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods flatten java.util.List</string>
     <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getProperties java.lang.Object</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.net.URL</string>
     <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.net.URL java.util.Map</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods minus java.util.List java.lang.Iterable</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods reverse java.util.List</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods take java.util.List int</string>
     <string>staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods consumeProcessOutput java.lang.Process java.lang.Appendable java.lang.Appendable</string>
     <string>staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods waitForOrKill java.lang.Process long</string>
   </approvedSignatures>
