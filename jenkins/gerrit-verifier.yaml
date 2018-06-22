@@ -233,7 +233,8 @@
 - job:
     name: 'Gerrit-verifier-flow'
     concurrent: true
-    project-type: flow
+    project-type: pipeline
+    sandbox: true
     triggers:
       - timed: 'H/5 * * * *'
     dsl:
