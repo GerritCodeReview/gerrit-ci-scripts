@@ -32,17 +32,19 @@ class Globals {
   static int waitForResultTimeout = 10000
   static int maxBuilds = 16
   static String verifierJobName = "Gerrit-verifier-change"
+  static String[] changesTodo = []
 }
 
 def getTimeSinceLastSuccessfulBuild(){
-  def lastBuild = build.getPreviousSuccessfulBuild()
+  def lastBuildTime = currentBuild.rawBuild.getPreviousSuccessfulBuild().getStartTimeInMillis()
 
-  if(lastBuild != null) {
-    println "Last successful build was " + lastBuild.toString()
+  if(lastBuildTime != null) {
+    println "Last successful build was " +
+      currentBuild.rawBuild.getPreviousSuccessfulBuild().toString()
   }
 
-  def lastBuildStartTimeMillis = lastBuild == null ?
-    (System.currentTimeMillis() - 1800000) : lastBuild.getStartTimeInMillis()
+  def lastBuildStartTimeMillis = lastBuildTime == null ?
+    (System.currentTimeMillis() - 1800000) : lastBuildTime
   def sinceMillis = lastBuildStartTimeMillis - (24 * 3600 * 1000)
   return Globals.tsFormat.format(new Date(sinceMillis))
 }
@@ -104,6 +106,7 @@ def filterChangesToDo(change){
   }
 }
 
+
 def printFilterSummary(since, inProgress, filteredChanges, buildsBandwith){
   if(!inProgress.empty) {
   println ""
@@ -125,34 +128,50 @@ def printFilterSummary(since, inProgress, filteredChanges, buildsBandwith){
   println "================================================================================"
 }
 
-def since = getTimeSinceLastSuccessfulBuild()
-
-println ""
-println "Querying Gerrit for last modified changes since ${since} ..."
-
-def changesJson = fetchNewChangeData(since)
-
-def acceptedChanges = changesJson.findAll {
-  change -> filterChangesToDo(change)
+def formatBuild(change){
+  return {
+    build job: "${Globals.verifierJobName}",
+          parameters: [string(name: 'CHANGE_ID', value: change)],
+          propagate: false
+  }
 }
 
-def inProgress = getBuildRunsInProgress()
+node('master'){
+  stage('Filter Changes'){
+    def since = getTimeSinceLastSuccessfulBuild()
 
-def inProgressChangesNums = inProgress.collect { changeOfBuildRun(it) }.flatten()
-def todoChangesNums = acceptedChanges.collect { "${it._number}" }
-def filteredChanges = todoChangesNums - inProgressChangesNums
+    println ""
+    println "Querying Gerrit for last modified changes since ${since} ..."
 
-def buildsBandwith = Globals.maxBuilds - inProgressChangesNums.size
+    def changesJson = fetchNewChangeData(since)
 
-printFilterSummary(since, inProgress, filteredChanges, buildsBandwith)
+    def acceptedChanges = changesJson.findAll {
+      change -> filterChangesToDo(change)
+    }
 
-if(buildsBandwith > 0) {
-  def changesTodo = filteredChanges.reverse().take(buildsBandwith)
+    def inProgress = getBuildRunsInProgress()
 
-  changesTodo.each {
-    println "Building change: ${changeUrl(it)} ..."
+    def inProgressChangesNums = inProgress.collect { changeOfBuildRun(it) }.flatten()
+    def todoChangesNums = acceptedChanges.collect { "${it._number}" }
+    def filteredChanges = todoChangesNums - inProgressChangesNums
+
+    def buildsBandwith = Globals.maxBuilds - inProgressChangesNums.size()
+
+    printFilterSummary(since, inProgress, filteredChanges, buildsBandwith)
+      if(buildsBandwith > 0 && filteredChanges.size() > 0) {
+        Globals.changesTodo = filteredChanges.reverse().take(buildsBandwith)
+
+        Globals.changesTodo.each {
+          println "Building change: ${changeUrl(it)} ..."
+        }
+
+      } else {
+        println "Nothing to build."
+      }
   }
-
-  def builds = changesTodo.collect { change -> { -> build(Globals.verifierJobName, CHANGE_ID: change) } }
-  parallel(builds)
+  stage('Build'){
+    if (Globals.changesTodo.size() > 0){
+      parallel Globals.changesTodo.collectEntries { ["${it}": formatBuild(it)] }
+    }
+  }
 }
