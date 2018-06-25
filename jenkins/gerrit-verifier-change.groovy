@@ -274,15 +274,8 @@ def collectBuildTools(cwd){
     return tools
 }
 
-def buildChange() {
+def collectBuildModes(){
   def modes = ["reviewdb"]
-  def cwd = getWorkspace()
-  initializeGit(cwd)
-  def tools = collectBuildTools(cwd)
-
-  println "Building Change " + Change.changeUrl
-  build.setDescription("""<a href='$Change.changeUrl' target='_blank'>Change #$Change.changeNum</a>""")
-
   if(Change.branch == "master" || Change.branch == "stable-2.15") {
     modes += "notedb"
   }
@@ -302,6 +295,17 @@ def buildChange() {
       }
     }
   }
+  return modes
+}
+
+def buildChange() {
+  def cwd = getWorkspace()
+  initializeGit(cwd)
+  def tools = collectBuildTools(cwd)
+  def modes = collectBuildModes()
+
+  println "Building Change " + Change.changeUrl
+  build.setDescription("""<a href='$Change.changeUrl' target='_blank'>Change #$Change.changeNum</a>""")
 
   def builds = []
   println "Running validation jobs using $tools builds for $modes ..."
