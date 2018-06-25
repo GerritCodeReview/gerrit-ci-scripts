@@ -41,7 +41,7 @@ class Globals {
 }
 
 
-def gerritPost(url, jsonPayload) {
+def postToGerrit(url, jsonPayload) {
   def error = ""
   def gerritPostUrl = Globals.gerrit + url
   def curl = ['curl',
@@ -71,7 +71,7 @@ def gerritPost(url, jsonPayload) {
   return 0
 }
 
-def gerritLabelVerify(change, sha1, verified, builds) {
+def applyVerificationLabel(change, sha1, verified, builds) {
   if(verified == 0) {
     return;
   }
@@ -86,7 +86,7 @@ def gerritLabelVerify(change, sha1, verified, builds) {
     "${Globals.resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
   } .join('\n')
 
-  def addVerifiedExit = gerritLabel(changeNum, sha1, 'Verified', verified, msgBody)
+  def addVerifiedExit = generateAndPostLabelJson(changeNum, sha1, 'Verified', verified, msgBody)
   if(addVerifiedExit == 0) {
     println "----------------------------------------------------------------------------"
     println "Gerrit Review: Verified=" + verified + " to change " + changeNum + "/" + sha1
@@ -110,7 +110,7 @@ def findCodestyleFilesInLog(build) {
   return codestyleFiles
 }
 
-def gerritLabelCodestyle(change, sha1, cs, files, build) {
+def applyCodestyleLabel(change, sha1, cs, files, build) {
   if(cs == 0) {
     return
   }
@@ -122,7 +122,7 @@ def gerritLabelCodestyle(change, sha1, cs, files, build) {
 
   def msgBody = "${Globals.resTicks[res]} $formattingMsg\n    (${url})"
 
-  def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', cs, msgBody)
+  def addCodeStyleExit = generateAndPostLabelJson(changeNum, sha1, 'Code-Style', cs, msgBody)
   if(addCodeStyleExit == 0) {
     println "----------------------------------------------------------------------------"
     println "Gerrit Review: Code-Style=" + cs + " to change " + changeNum + "/" + sha1
@@ -132,13 +132,13 @@ def gerritLabelCodestyle(change, sha1, cs, files, build) {
   return addCodeStyleExit
 }
 
-def gerritLabel(changeNum, sha1, label, score, msgBody = "") {
+def generateAndPostLabelJson(changeNum, sha1, label, score, msgBody = "") {
   def notify = score < 0 ? ', "notify" : "OWNER"' : ''
   def jsonPayload = '{"labels":{"' + label + '":' + score + '},' +
                     ' "message": "' + msgBody + '"' +
                     notify + ", ${Globals.addVerifiedTag} }"
 
-  return gerritPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
+  return postToGerrit("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
                     jsonPayload)
 }
 
@@ -155,7 +155,7 @@ def waitForResult(b) {
   return res == null ? Result.FAILURE : res
 }
 
-def getVerified(acc, res) {
+def getVotingScore(acc, res) {
   if(res == null || res == Result.ABORTED) {
     return 0
   }
@@ -183,7 +183,7 @@ def getChangedFiles(changeNum, sha1) {
   filesJson.keySet().findAll { it != "/COMMIT_MSG" }
 }
 
-def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,codestyle) {
+def prepareBuildsForEachMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,codestyle) {
     def builds = []
     if(codestyle) {
       builds += {
@@ -215,7 +215,7 @@ def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,code
     return builds
 }
 
-def sh(cwd, command) {
+def executeBash(cwd, command) {
     def sout = new StringBuilder(), serr = new StringBuilder()
     println "SH: $command"
     def shell = command.execute([],cwd)
@@ -242,12 +242,12 @@ def buildChange(change) {
   println "cwd: $cwd"
   println "ref: $ref"
 
-  sh(cwd, "git fetch origin $ref")
-  sh(cwd, "git checkout FETCH_HEAD")
-  sh(cwd, "git fetch origin $branch")
-  sh(cwd, 'git config user.name "Jenkins Build"')
-  sh(cwd, 'git config user.email "jenkins@gerritforge.com"')
-  sh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
+  executeBash(cwd, "git fetch origin $ref")
+  executeBash(cwd, "git checkout FETCH_HEAD")
+  executeBash(cwd, "git fetch origin $branch")
+  executeBash(cwd, 'git config user.name "Jenkins Build"')
+  executeBash(cwd, 'git config user.email "jenkins@gerritforge.com"')
+  executeBash(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 
   if(new java.io.File("$cwd/BUCK").exists()) {
     tools += ["buck"]
@@ -280,18 +280,18 @@ def buildChange(change) {
   def builds = []
   println "Running validation jobs using $tools builds for $modes ..."
   modes.collect {
-    buildsForMode(refspec,sha1,changeUrl,it,tools,branch,1,Globals.codeStyleBranches.contains(branch))
+    prepareBuildsForEachMode(refspec,sha1,changeUrl,it,tools,branch,1,Globals.codeStyleBranches.contains(branch))
   }.each { builds += it }
 
-  def buildsWithResults = parallelBuilds(builds)
+  def buildsWithResults = buildJobsInParallel(builds)
   def codestyleResult = buildsWithResults.find{ it[0] == "codestyle" }
   if(codestyleResult) {
-    def resCodeStyle = getVerified(1, codestyleResult[1])
+    def resCodeStyle = getVotingScore(1, codestyleResult[1])
     def codestyleBuild = Globals.buildsList["codestyle"]
-    gerritLabelCodestyle(change, sha1, resCodeStyle, findCodestyleFilesInLog(codestyleBuild), codestyleBuild)
+    applyCodestyleLabel(change, sha1, resCodeStyle, findCodestyleFilesInLog(codestyleBuild), codestyleBuild)
   }
 
-  flaky = flakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
+  flaky = findFlakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
   if(flaky.size > 0) {
     println "** FLAKY Builds detected: ${flaky}"
 
@@ -302,16 +302,17 @@ def buildChange(change) {
       def tool = it[0]
       def mode = it[1]
       Globals.buildsList.remove(it)
-      retryBuilds += buildsForMode(refspec,sha1,changeUrl,mode,[tool],branch,3,false)
+      retryBuilds += prepareBuildsForEachMode(refspec,sha1,changeUrl,mode,[tool],branch,3,false)
     }
-    buildsWithResults = parallelBuilds(retryBuilds)
+    buildsWithResults = buildJobsInParallel(retryBuilds)
   }
 
-  def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
+  def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult ->
+    getVotingScore(acc, buildResult[1]) }
 
-  def resAll = codestyleResult ? getVerified(resVerify, codestyleResult[1]) : resVerify
+  def resAll = codestyleResult ? getVotingScore(resVerify, codestyleResult[1]) : resVerify
 
-  gerritLabelVerify(change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
+  applyVerificationLabel(change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
 
   switch(resAll) {
     case 0: build.state.result = ABORTED
@@ -323,7 +324,7 @@ def buildChange(change) {
   }
 }
 
-def parallelBuilds(builds) {
+def buildJobsInParallel(builds) {
   ignore(FAILURE) {
     parallel (builds)
   }
@@ -336,7 +337,7 @@ def parallelBuilds(builds) {
   return buildsWithResults
 }
 
-def flakyBuilds(buildsWithResults) {
+def findFlakyBuilds(buildsWithResults) {
   def flaky = buildsWithResults.findAll { it[1] == null || it[1] != SUCCESS }
   if(flaky.size == buildsWithResults.size) {
     return []
