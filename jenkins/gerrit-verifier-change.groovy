@@ -220,6 +220,14 @@ def buildsForMode(mode,tools,retryTimes,codestyle) {
     return builds
 }
 
+def getWorkspace(){
+    def workspace = build.environment.get("WORKSPACE")
+    println "workspace: $workspace"
+    def cwd = new File("$workspace")
+    println "cwd: $cwd"
+    return cwd
+}
+
 def sh(cwd, command) {
     def sout = new StringBuilder(), serr = new StringBuilder()
     println "SH: $command"
@@ -233,11 +241,7 @@ def sh(cwd, command) {
 def buildChange() {
   def tools = []
   def modes = ["reviewdb"]
-  def workspace = build.environment.get("WORKSPACE")
-  println "workspace: $workspace"
-  def cwd = new File("$workspace")
-  println "cwd: $cwd"
-  println "ref: $Change.ref"
+  def cwd = getWorkspace()
 
   sh(cwd, "git fetch origin ${Change.ref}")
   sh(cwd, "git checkout FETCH_HEAD")
