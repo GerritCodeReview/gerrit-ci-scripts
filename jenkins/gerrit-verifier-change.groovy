@@ -247,17 +247,21 @@ def initializeGit(cwd){
     sh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 }
 
+def collectBuildTools(cwd){
+    def tools = []
+    if(new java.io.File("$cwd/BUCK").exists()) {
+        tools += ["buck"]
+    } else if(new java.io.File("$cwd/BUILD").exists()) {
+        tools += ["bazel"]
+    }
+    return tools
+}
+
 def buildChange() {
-  def tools = []
   def modes = ["reviewdb"]
   def cwd = getWorkspace()
   initializeGit(cwd)
-
-  if(new java.io.File("$cwd/BUCK").exists()) {
-    tools += ["buck"]
-  } else if(new java.io.File("$cwd/BUILD").exists()) {
-    tools += ["bazel"]
-  }
+  def tools = collectBuildTools(cwd)
 
   println "Building Change " + Change.changeUrl
   build.setDescription("""<a href='$Change.changeUrl' target='_blank'>Change #$Change.changeNum</a>""")
