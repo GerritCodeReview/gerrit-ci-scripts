@@ -25,7 +25,7 @@ String.metaClass.encodeURL = {
   java.net.URLEncoder.encode(delegate)
 }
 
-class Globals {
+class Config {
   static String gerrit = "https://gerrit-review.googlesource.com/"
   static long curlTimeout = 10000
   static int waitForResultTimeout = 10000
@@ -40,10 +40,20 @@ class Globals {
   static resTicks = [ 'ABORTED':'\u26aa', 'SUCCESS':'\u2705', 'FAILURE':'\u274c' ]
 }
 
+class Change {
+    static Map changeJson = [:]
+    static String sha1 = ""
+    static String changeNum = ""
+    static String branch = ""
+    static Map revision = [:]
+    static String ref = ""
+    static String patchNum = ""
+    static String changeUrl = ""
+}
 
 def postToGerrit(url, jsonPayload) {
   def error = ""
-  def gerritPostUrl = Globals.gerrit + url
+  def gerritPostUrl = Config.gerrit + url
   def curl = ['curl',
   '-n', '-s', '-S',
   '-X', 'POST', '-H', 'Content-Type: application/json',
@@ -53,7 +63,7 @@ def postToGerrit(url, jsonPayload) {
   def proc = curl.execute()
   def sout = new StringBuffer(), serr = new StringBuffer()
   proc.consumeProcessOutput(sout, serr)
-  proc.waitForOrKill(Globals.curlTimeout)
+  proc.waitForOrKill(Config.curlTimeout)
   def curlExit = proc.exitValue()
   if(curlExit != 0) {
     error = "$curl **FAILED** with exit code = $curlExit"
@@ -71,25 +81,24 @@ def postToGerrit(url, jsonPayload) {
   return 0
 }
 
-def applyVerificationLabel(change, sha1, verified, builds) {
+def applyVerificationLabel(verified, builds) {
   if(verified == 0) {
     return;
   }
-
-  def changeNum = change._number
 
   def msgList = builds.collect { type,build ->
     [ 'type': type, 'res': build.getResult().toString(), 'url': build.getBuildUrl() + "consoleText" ]
   } sort { a,b -> a['res'].compareTo(b['res']) }
 
   def msgBody = msgList.collect {
-    "${Globals.resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
+    "${Config.resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
   } .join('\n')
 
-  def addVerifiedExit = generateAndPostLabelJson(changeNum, sha1, 'Verified', verified, msgBody)
+  def addVerifiedExit = generateAndPostLabelJson('Verified', verified, msgBody)
   if(addVerifiedExit == 0) {
     println "----------------------------------------------------------------------------"
-    println "Gerrit Review: Verified=" + verified + " to change " + changeNum + "/" + sha1
+    println "Gerrit Review: Verified=" + verified + " to change " + Change.changeJson._number +
+      "/" + Change.sha1
     println "----------------------------------------------------------------------------"
   }
 
@@ -110,42 +119,42 @@ def findCodestyleFilesInLog(build) {
   return codestyleFiles
 }
 
-def applyCodestyleLabel(change, sha1, cs, files, build) {
+def applyCodestyleLabel(cs, files, build) {
   if(cs == 0) {
     return
   }
 
-  def changeNum = change._number
   def formattingMsg = cs < 0 ? ('The following files need formatting:\n    ' + files.join('\n    ')) : 'All files are correctly formatted'
   def res = build.getResult().toString()
   def url = build.getBuildUrl() + "consoleText"
 
-  def msgBody = "${Globals.resTicks[res]} $formattingMsg\n    (${url})"
+  def msgBody = "${Config.resTicks[res]} $formattingMsg\n    (${url})"
 
-  def addCodeStyleExit = generateAndPostLabelJson(changeNum, sha1, 'Code-Style', cs, msgBody)
+  def addCodeStyleExit = generateAndPostLabelJson('Code-Style', cs, msgBody)
   if(addCodeStyleExit == 0) {
     println "----------------------------------------------------------------------------"
-    println "Gerrit Review: Code-Style=" + cs + " to change " + changeNum + "/" + sha1
+    println "Gerrit Review: Code-Style=" + cs + " to change " + Change.changeJson._number + "/" +
+      Change.sha1
     println "----------------------------------------------------------------------------"
   }
 
   return addCodeStyleExit
 }
 
-def generateAndPostLabelJson(changeNum, sha1, label, score, msgBody = "") {
+def generateAndPostLabelJson(label, score, msgBody = "") {
   def notify = score < 0 ? ', "notify" : "OWNER"' : ''
   def jsonPayload = '{"labels":{"' + label + '":' + score + '},' +
                     ' "message": "' + msgBody + '"' +
-                    notify + ", ${Globals.addVerifiedTag} }"
+                    notify + ", ${Config.addVerifiedTag} }"
 
-  return postToGerrit("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
-                    jsonPayload)
+  return postToGerrit("a/changes/" + Change.changeJson._number + "/revisions/" +
+    Change.sha1 + "/review", jsonPayload)
 }
 
 def waitForResult(b) {
   def res = null
   def startWait = System.currentTimeMillis()
-  while(res == null && (System.currentTimeMillis() - startWait) < Globals.waitForResultTimeout) {
+  while(res == null && (System.currentTimeMillis() - startWait) < Config.waitForResultTimeout) {
     res = b.getResult()
     if(res == null) {
       Thread.sleep(100) {
@@ -175,23 +184,24 @@ def getVotingScore(acc, res) {
   }
 }
 
-def getChangedFiles(changeNum, sha1) {
+def getChangedFiles() {
   URL filesUrl = new URL(String.format("%schanges/%s/revisions/%s/files/",
-      Globals.gerrit, changeNum, sha1))
+      Config.gerrit, Change.changeNum, Change.sha1))
   def files = filesUrl.getText().substring(5)
   def filesJson = new JsonSlurper().parseText(files)
   filesJson.keySet().findAll { it != "/COMMIT_MSG" }
 }
 
-def prepareBuildsForEachMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,codestyle) {
+def prepareBuildsForEachMode(mode,tools,retryTimes,codestyle) {
     def builds = []
     if(codestyle) {
       builds += {
-        Globals.buildsList.put("codestyle", build("Gerrit-codestyle",
-                               REFSPEC: refspec, BRANCH: sha1, CHANGE_URL: changeUrl, MODE: mode,
-                               TARGET_BRANCH: targetBranch))
+        Config.buildsList.put("codestyle", build("Gerrit-codestyle",
+                               REFSPEC: Change.ref, BRANCH: Change.sha1,
+                               CHANGE_URL: Change.changeUrl, MODE: mode,
+                               TARGET_BRANCH: Change.branch))
                      println "Builds status:"
-                     Globals.buildsList.each {
+                     Config.buildsList.each {
                        n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
                      }
       }
@@ -202,11 +212,11 @@ def prepareBuildsForEachMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retr
       def key = "$tool/$mode"
       builds += {
                    retry (retryTimes) {
-                     Globals.buildsList.put(key,
-                       build(buildName, REFSPEC: refspec, BRANCH: sha1,
-                             CHANGE_URL: changeUrl, MODE: mode, TARGET_BRANCH: targetBranch))
+                     Config.buildsList.put(key,
+                       build(buildName, REFSPEC: Change.ref, BRANCH: Change.sha1,
+                             CHANGE_URL: Change.changeUrl, MODE: mode, TARGET_BRANCH: Change.branch))
                      println "Builds status:"
-                     Globals.buildsList.each {
+                     Config.buildsList.each {
                        n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
                      }
                    }
@@ -225,26 +235,18 @@ def executeBash(cwd, command) {
     println "ERR: $serr"
 }
 
-def buildChange(change) {
-  def sha1 = change.current_revision
-  def changeNum = change._number
-  def revision = change.revisions.get(sha1)
-  def ref = revision.ref
-  def patchNum = revision._number
-  def branch = change.branch
-  def changeUrl = Globals.gerrit + "#/c/" + changeNum + "/" + patchNum
-  def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
+def buildChange() {
   def tools = []
   def modes = ["reviewdb"]
   def workspace = build.environment.get("WORKSPACE")
   println "workspace: $workspace"
   def cwd = new File("$workspace")
   println "cwd: $cwd"
-  println "ref: $ref"
+  println "ref: $Change.ref"
 
-  executeBash(cwd, "git fetch origin $ref")
+  executeBash(cwd, "git fetch origin ${Change.ref}")
   executeBash(cwd, "git checkout FETCH_HEAD")
-  executeBash(cwd, "git fetch origin $branch")
+  executeBash(cwd, "git fetch origin ${Change.branch}")
   executeBash(cwd, 'git config user.name "Jenkins Build"')
   executeBash(cwd, 'git config user.email "jenkins@gerritforge.com"')
   executeBash(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
@@ -255,15 +257,16 @@ def buildChange(change) {
     tools += ["bazel"]
   }
 
-  println "Building Change " + changeUrl
-  build.setDescription("""<a href='$changeUrl' target='_blank'>Change #$changeNum</a>""")
+  println "Building Change " + Change.changeUrl
+  build.setDescription("""<a href='$Change.changeUrl' target='_blank'>Change #$Change.changeNum</a>""")
 
-  if(branch == "master" || branch == "stable-2.15") {
+  if(Change.branch == "master" || Change.branch == "stable-2.15") {
     modes += "notedb"
   }
 
-  if(branch == "master" || branch == "stable-2.15" || branch == "stable-2.14") {
-    def changedFiles = getChangedFiles(changeNum, sha1)
+  if(Change.branch == "master" || Change.branch == "stable-2.15" ||
+    Change.branch == "stable-2.14") {
+    def changedFiles = getChangedFiles()
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") }
 
     if(polygerritFiles.size() > 0) {
@@ -280,15 +283,15 @@ def buildChange(change) {
   def builds = []
   println "Running validation jobs using $tools builds for $modes ..."
   modes.collect {
-    prepareBuildsForEachMode(refspec,sha1,changeUrl,it,tools,branch,1,Globals.codeStyleBranches.contains(branch))
+    prepareBuildsForEachMode(it,tools,1,Config.codeStyleBranches.contains(Change.branch))
   }.each { builds += it }
 
   def buildsWithResults = buildJobsInParallel(builds)
   def codestyleResult = buildsWithResults.find{ it[0] == "codestyle" }
   if(codestyleResult) {
     def resCodeStyle = getVotingScore(1, codestyleResult[1])
-    def codestyleBuild = Globals.buildsList["codestyle"]
-    applyCodestyleLabel(change, sha1, resCodeStyle, findCodestyleFilesInLog(codestyleBuild), codestyleBuild)
+    def codestyleBuild = Config.buildsList["codestyle"]
+    applyCodestyleLabel(resCodeStyle, findCodestyleFilesInLog(codestyleBuild), codestyleBuild)
   }
 
   flaky = findFlakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
@@ -301,8 +304,8 @@ def buildChange(change) {
     toolsAndModes.each {
       def tool = it[0]
       def mode = it[1]
-      Globals.buildsList.remove(it)
-      retryBuilds += prepareBuildsForEachMode(refspec,sha1,changeUrl,mode,[tool],branch,3,false)
+      Config.buildsList.remove(it)
+      retryBuilds += prepareBuildsForEachMode(mode,[tool],3,false)
     }
     buildsWithResults = buildJobsInParallel(retryBuilds)
   }
@@ -312,7 +315,7 @@ def buildChange(change) {
 
   def resAll = codestyleResult ? getVotingScore(resVerify, codestyleResult[1]) : resVerify
 
-  applyVerificationLabel(change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
+  applyVerificationLabel(resVerify, Config.buildsList.findAll { key,build -> key != "codestyle" })
 
   switch(resAll) {
     case 0: build.state.result = ABORTED
@@ -328,10 +331,10 @@ def buildJobsInParallel(builds) {
   ignore(FAILURE) {
     parallel (builds)
   }
-  def results = Globals.buildsList.values().collect { waitForResult(it) }
+  def results = Config.buildsList.values().collect { waitForResult(it) }
   def buildsWithResults = []
 
-  Globals.buildsList.keySet().eachWithIndex {
+  Config.buildsList.keySet().eachWithIndex {
     key,index -> buildsWithResults.add(new Tuple(key, results[index]))
   }
   return buildsWithResults
@@ -346,19 +349,32 @@ def findFlakyBuilds(buildsWithResults) {
   return flaky.collect { it[0] }
 }
 
-def requestedChangeId = params.get("CHANGE_ID")
+def fetchChange(){
+    def requestedChangeId = params.get("CHANGE_ID")
+    def queryUrl =
+        new URL("${Config.gerrit}changes/${requestedChangeId}/?pp=0&O=3")
+    def response = queryUrl.getText().substring(5)
+    def jsonSlurper = new JsonSlurper()
+    Change.changeJson = jsonSlurper.parseText(response)
+}
 
-queryUrl =
-  new URL("${Globals.gerrit}changes/$requestedChangeId/?pp=0&O=3")
+def extractChangeMetaData(){
+    Change.sha1 = Change.changeJson.current_revision
+    Change.changeNum = Change.changeJson._number
+    Change.branch = Change.changeJson.branch
+    Change.revision = Change.changeJson.revisions.get(Change.sha1)
+    Change.ref = Change.revision.ref
+    Change.patchNum = Change.revision._number
+    Change.changeUrl = Config.gerrit + "#/c/" + Change.changeNum +
+        "/" + Change.patchNum
+}
 
-def change = queryUrl.getText().substring(5)
-def jsonSlurper = new JsonSlurper()
-def changeJson = jsonSlurper.parseText(change)
+fetchChange()
+extractChangeMetaData()
 
-sha1 = changeJson.current_revision
-if(sha1 == null) {
-  println "[WARNING] Skipping change " + changeJson.change_id + " because it does not have any current revision or patch-set"
+if(Change.sha1 == null) {
+  println "[WARNING] Skipping change " + Change.changeJson.change_id + " because it does not have any current revision or patch-set"
 } else {
-  buildChange(changeJson)
+  buildChange()
 }
 
