@@ -290,17 +290,20 @@ def runSh(cwd, command) {
     println "ERR: $serr"
 }
 
+def initializeGit(cwd){
+    runSh(cwd, "git fetch origin ${Change.ref}")
+    runSh(cwd, "git checkout FETCH_HEAD")
+    runSh(cwd, "git fetch origin ${Change.branch}")
+    runSh(cwd, 'git config user.name "Jenkins Build"')
+    runSh(cwd, 'git config user.email "jenkins@gerritforge.com"')
+    runSh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
+}
+
 def buildChange() {
   def tools = []
   def modes = ["reviewdb"]
   def cwd = getWorkspace()
-
-  runSh(cwd, "git fetch origin ${Change.ref}")
-  runSh(cwd, "git checkout FETCH_HEAD")
-  runSh(cwd, "git fetch origin ${Change.branch}")
-  runSh(cwd, 'git config user.name "Jenkins Build"')
-  runSh(cwd, 'git config user.email "jenkins@gerritforge.com"')
-  runSh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
+  initializeGit(cwd)
 
   if(new java.io.File("$cwd/BUCK").exists()) {
     tools += ["buck"]
