@@ -142,7 +142,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-mvn</image>
+            <image>gerritforge/gerrit-ci-slave-mvn:debian</image>
             <dockerCommand></dockerCommand>
             <lxcConfString>mvn</lxcConfString>
             <hostname></hostname>

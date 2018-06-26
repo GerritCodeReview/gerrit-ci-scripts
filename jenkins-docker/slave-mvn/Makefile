@@ -1,5 +1,5 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-mvn
+IMAGE=gerritforge/gerrit-ci-slave-mvn:debian
 
 # Targets
 
