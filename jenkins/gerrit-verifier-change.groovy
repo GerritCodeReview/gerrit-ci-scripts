@@ -196,7 +196,7 @@ def getChangedFiles() {
   filesJson.keySet().findAll { it != "/COMMIT_MSG" }
 }
 
-def prepareBuildsForEachMode(mode,tools,retryTimes,codestyle) {
+def prepareBuildsForEachMode(mode,tool,retryTimes,codestyle) {
     def builds = []
     if(codestyle) {
       builds += {
@@ -211,21 +211,20 @@ def prepareBuildsForEachMode(mode,tools,retryTimes,codestyle) {
       }
     }
 
-    for (tool in tools) {
-      def buildName = "Gerrit-verifier-$tool"
-      def key = "$tool/$mode"
-      builds += {
-                   retry (retryTimes) {
-                     Config.buildsList.put(key,
-                       build(buildName, REFSPEC: Change.ref, BRANCH: Change.sha1,
-                             CHANGE_URL: Change.changeUrl, MODE: mode, TARGET_BRANCH: Change.branch))
-                     println "Builds status:"
-                     Config.buildsList.each {
-                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
-                     }
-                   }
-                }
-    }
+    def buildName = "Gerrit-verifier-$tool"
+    def key = "$tool/$mode"
+    builds += {
+                  retry (retryTimes) {
+                    Config.buildsList.put(key,
+                      build(buildName, REFSPEC: Change.ref, BRANCH: Change.sha1,
+                            CHANGE_URL: Change.changeUrl, MODE: mode, TARGET_BRANCH: Change.branch))
+                    println "Builds status:"
+                    Config.buildsList.each {
+                      n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
+                    }
+                  }
+              }
+
     return builds
 }
 
@@ -256,14 +255,14 @@ def initializeGit(cwd){
     executeShellCommand(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 }
 
-def collectBuildTools(cwd){
-    def tools = []
+def collectBuildTool(cwd){
+    def tool = ""
     if(new java.io.File("$cwd/BUCK").exists()) {
-        tools += ["buck"]
+        tool = "buck"
     } else if(new java.io.File("$cwd/BUILD").exists()) {
-        tools += ["bazel"]
+        tool = "bazel"
     }
-    return tools
+    return tool
 }
 
 def collectBuildModes(){
@@ -293,16 +292,16 @@ def collectBuildModes(){
 def buildChange() {
   def cwd = getWorkspace()
   initializeGit(cwd)
-  def tools = collectBuildTools(cwd)
+  def tool = collectBuildTool(cwd)
   def modes = collectBuildModes()
 
   println "Building Change " + Change.changeUrl
   build.setDescription("""<a href='$Change.changeUrl' target='_blank'>Change #$Change.changeNum</a>""")
 
   def builds = []
-  println "Running validation jobs using $tools builds for $modes ..."
+  println "Running validation jobs using $tool builds for $modes ..."
   modes.collect {
-    prepareBuildsForEachMode(it,tools,1,Config.codeStyleBranches.contains(Change.branch))
+    prepareBuildsForEachMode(it,tool,1,Config.codeStyleBranches.contains(Change.branch))
   }.each { builds += it }
 
   def buildsWithResults = buildJobsInParallel(builds)
@@ -366,7 +365,7 @@ def retryFlakyBuilds(flaky){
       def tool = it[0]
       def mode = it[1]
       Config.buildsList.remove(it)
-      retryBuilds += prepareBuildsForEachMode(mode,[tool],3,false)
+      retryBuilds += prepareBuildsForEachMode(mode,tool,3,false)
     }
     return buildJobsInParallel(retryBuilds)
 }
