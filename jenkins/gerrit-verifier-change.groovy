@@ -71,8 +71,8 @@ def gerritPost(url, jsonPayload) {
   return 0
 }
 
-def gerritLabelVerify(change, sha1, verified, builds) {
-  if(verified == 0) {
+def gerritLabelVerify(change, sha1, verificationScore, builds) {
+  if(verificationScore == 0) {
     return;
   }
 
@@ -86,10 +86,10 @@ def gerritLabelVerify(change, sha1, verified, builds) {
     "${Globals.resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
   } .join('\n')
 
-  def addVerifiedExit = gerritLabel(changeNum, sha1, 'Verified', verified, msgBody)
+  def addVerifiedExit = gerritLabel(changeNum, sha1, 'Verified', verificationScore, msgBody)
   if(addVerifiedExit == 0) {
     println "----------------------------------------------------------------------------"
-    println "Gerrit Review: Verified=" + verified + " to change " + changeNum + "/" + sha1
+    println "Gerrit Review: Verified=" + verificationScore + " to change " + changeNum + "/" + sha1
     println "----------------------------------------------------------------------------"
   }
 
@@ -110,22 +110,22 @@ def findCodestyleFilesInLog(build) {
   return codestyleFiles
 }
 
-def gerritLabelCodestyle(change, sha1, cs, files, build) {
-  if(cs == 0) {
+def gerritLabelCodestyle(change, sha1, codeStyleScore, files, build) {
+  if(codeStyleScore == 0) {
     return
   }
 
   def changeNum = change._number
-  def formattingMsg = cs < 0 ? ('The following files need formatting:\n    ' + files.join('\n    ')) : 'All files are correctly formatted'
+  def formattingMsg = codeStyleScore < 0 ? ('The following files need formatting:\n    ' + files.join('\n    ')) : 'All files are correctly formatted'
   def res = build.getResult().toString()
   def url = build.getBuildUrl() + "consoleText"
 
   def msgBody = "${Globals.resTicks[res]} $formattingMsg\n    (${url})"
 
-  def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', cs, msgBody)
+  def addCodeStyleExit = gerritLabel(changeNum, sha1, 'Code-Style', codeStyleScore, msgBody)
   if(addCodeStyleExit == 0) {
     println "----------------------------------------------------------------------------"
-    println "Gerrit Review: Code-Style=" + cs + " to change " + changeNum + "/" + sha1
+    println "Gerrit Review: Code-Style=" + codeStyleScore + " to change " + changeNum + "/" + sha1
     println "----------------------------------------------------------------------------"
   }
 
@@ -307,13 +307,13 @@ def buildChange(change) {
     buildsWithResults = parallelBuilds(retryBuilds)
   }
 
-  def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
+  def verificationResult = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
 
-  def resAll = codestyleResult ? getVerified(resVerify, codestyleResult[1]) : resVerify
+  def combinedResult = codestyleResult ? getVerified(verificationResult, codestyleResult[1]) : verificationResult
 
-  gerritLabelVerify(change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
+  gerritLabelVerify(change, sha1, verificationResult, Globals.buildsList.findAll { key,build -> key != "codestyle" })
 
-  switch(resAll) {
+  switch(combinedResult) {
     case 0: build.state.result = ABORTED
             break
     case 1: build.state.result = SUCCESS
