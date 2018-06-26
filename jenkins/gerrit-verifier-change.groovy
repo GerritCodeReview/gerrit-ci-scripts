@@ -192,24 +192,14 @@ def getChangedFiles() {
   filesJson.keySet().findAll { it != "/COMMIT_MSG" }
 }
 
-def prepareBuildsForEachMode(mode,tool,retryTimes,codestyle) {
-    def builds = []
-    if(codestyle) {
-      builds += {
-        Config.buildsList.put("codestyle", build("Gerrit-codestyle",
-                               REFSPEC: Change.ref, BRANCH: Change.sha1,
-                               CHANGE_URL: Change.changeUrl, MODE: mode,
-                               TARGET_BRANCH: Change.branch))
-                     println "Builds status:"
-                     Config.buildsList.each {
-                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
-                     }
-      }
+def formatBuildStep(buildName,mode,tool,retryTimes = 1) {
+    def key = ""
+    if (buildName == "Gerrit-codestyle"){
+        key = "codestyle"
+    } else {
+        key = "$tool/$mode"
     }
-
-    def buildName = "Gerrit-verifier-$tool"
-    def key = "$tool/$mode"
-    builds += {
+    return [{
                   retry (retryTimes) {
                     Config.buildsList.put(key,
                       build(buildName, REFSPEC: Change.ref, BRANCH: Change.sha1,
@@ -219,9 +209,7 @@ def prepareBuildsForEachMode(mode,tool,retryTimes,codestyle) {
                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
                     }
                   }
-              }
-
-    return builds
+              }]
 }
 
 def getWorkspace(){
@@ -295,9 +283,13 @@ def buildChange() {
   build.setDescription("""<a href='$Change.changeUrl' target='_blank'>Change #$Change.changeNum</a>""")
 
   def builds = []
+  if (Config.codeStyleBranches.contains(Change.branch)){
+    builds += formatBuildStep("Gerrit-codestyle", "reviewdb", tool)
+  }
   println "Running validation jobs using $tool builds for $modes ..."
+  def buildName = "Gerrit-verifier-$tool"
   modes.collect {
-    prepareBuildsForEachMode(it,tool,1,Config.codeStyleBranches.contains(Change.branch))
+    formatBuildStep(buildName,it,tool)
   }.each { builds += it }
 
   def buildsWithResults = buildJobsInParallel(builds)
@@ -360,8 +352,9 @@ def retryFlakyBuilds(flaky){
     toolsAndModes.each {
       def tool = it[0]
       def mode = it[1]
+      def buildName = "Gerrit-verifier-$tool"
       Config.buildsList.remove(it)
-      retryBuilds += prepareBuildsForEachMode(mode,tool,3,false)
+      retryBuilds += formatBuildStep(buildName,mode,tool,3)
     }
     return buildJobsInParallel(retryBuilds)
 }
