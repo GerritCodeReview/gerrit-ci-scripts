@@ -27,6 +27,8 @@ String.metaClass.encodeURL = {
 
 class Config {
     static String gerrit = "https://gerrit-review.googlesource.com/"
+    static String gitUser = "Jenkins Build"
+    static String gitEmail = "jenkins@gerritforge.com"
     static long curlTimeout = 10000
     static int waitForResultTimeout = 10000
     static Map buildsList = [:]
@@ -229,8 +231,8 @@ def initializeGit(cwd){
     executeBash(cwd, "git fetch origin ${Change.ref}")
     executeBash(cwd, "git checkout FETCH_HEAD")
     executeBash(cwd, "git fetch origin ${Change.branch}")
-    executeBash(cwd, 'git config user.name "Jenkins Build"')
-    executeBash(cwd, 'git config user.email "jenkins@gerritforge.com"')
+    executeBash(cwd, "git config user.name \"${Config.gitUser}\"")
+    executeBash(cwd, "git config user.email \"${Config.gitEmail}\"")
     executeBash(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 }
 
