@@ -27,6 +27,8 @@ String.metaClass.encodeURL = {
 
 class Globals {
   static String gerrit = "https://gerrit-review.googlesource.com/"
+  static String gitUser = "Jenkins Build"
+  static String gitEmail = "jenkins@gerritforge.com"
   static long curlTimeout = 10000
   static int waitForResultTimeout = 10000
   static Map buildsList = [:]
@@ -245,8 +247,8 @@ def buildChange(change) {
   sh(cwd, "git fetch origin $ref")
   sh(cwd, "git checkout FETCH_HEAD")
   sh(cwd, "git fetch origin $branch")
-  sh(cwd, 'git config user.name "Jenkins Build"')
-  sh(cwd, 'git config user.email "jenkins@gerritforge.com"')
+  sh(cwd, "git config user.name \"${Globals.gitUser}\"")
+  sh(cwd, "git config user.email \"${Globals.gitEmail}\"")
   sh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 
   if(new java.io.File("$cwd/BUCK").exists()) {
