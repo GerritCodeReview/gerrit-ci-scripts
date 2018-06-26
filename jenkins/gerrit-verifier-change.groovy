@@ -324,17 +324,7 @@ def buildChange() {
   flaky = findFlakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
   if(flaky.size > 0) {
     println "** FLAKY Builds detected: ${flaky}"
-
-    def retryBuilds = []
-    def toolsAndModes = flaky.collect { it.split("/") }
-
-    toolsAndModes.each {
-      def tool = it[0]
-      def mode = it[1]
-      Config.buildsList.remove(it)
-      retryBuilds += prepareBuildsForMode(mode,[tool],3,false)
-    }
-    buildsWithResults = getResultsOfBuildsInParallel(retryBuilds)
+    buildsWithResults = retryFlakyBuilds(flaky)
   }
 
   def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult -> getLabelValue(acc, buildResult[1]) }
@@ -373,6 +363,19 @@ def findFlakyBuilds(buildsWithResults) {
   }
 
   return flaky.collect { it[0] }
+}
+
+def retryFlakyBuilds(flaky){
+    def retryBuilds = []
+    def toolsAndModes = flaky.collect { it.split("/") }
+
+    toolsAndModes.each {
+      def tool = it[0]
+      def mode = it[1]
+      Config.buildsList.remove(it)
+      retryBuilds += prepareBuildsForMode(mode,[tool],3,false)
+    }
+    return getResultsOfBuildsInParallel(retryBuilds)
 }
 
 def fetchChange(){
