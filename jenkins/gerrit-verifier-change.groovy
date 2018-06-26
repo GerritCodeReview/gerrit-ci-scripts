@@ -21,6 +21,8 @@ import java.text.*
 
 
 class Globals {
+  static String gitUser = "Jenkins Build"
+  static String gitEmail = "jenkins@gerritforge.com"
   static long curlTimeout = 10000
   static int waitForResultTimeout = 10000
   static Map buildsList = [:]
@@ -294,8 +296,8 @@ def buildChange(change) {
   runSh(cwd, "git fetch origin $ref")
   runSh(cwd, "git checkout FETCH_HEAD")
   runSh(cwd, "git fetch origin $branch")
-  runSh(cwd, 'git config user.name "Jenkins Build"')
-  runSh(cwd, 'git config user.email "jenkins@gerritforge.com"')
+  runSh(cwd, "git config user.name \"${Globals.gitUser}\"")
+  runSh(cwd, "git config user.email \"${Globals.gitEmail}\"")
   runSh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 
   if(new java.io.File("$cwd/BUCK").exists()) {
