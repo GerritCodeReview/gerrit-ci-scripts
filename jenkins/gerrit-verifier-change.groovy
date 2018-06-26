@@ -187,24 +187,14 @@ def getChangedFiles() {
   filesJson.keySet().findAll { it != "/COMMIT_MSG" }
 }
 
-def buildsForMode(mode,tool,retryTimes,codestyle) {
-    def builds = []
-    if(codestyle) {
-      builds += {
-        Config.buildsList.put("codestyle", build("Gerrit-codestyle",
-                               REFSPEC: Change.ref, BRANCH: Change.sha1,
-                               CHANGE_URL: Change.changeUrl, MODE: mode,
-                               TARGET_BRANCH: Change.branch))
-                     println "Builds status:"
-                     Config.buildsList.each {
-                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
-                     }
-      }
+def buildForMode(buildName,tool,mode="reviewdb",retryTimes = 1) {
+    def key = ""
+    if (buildName == "Gerrit-codestyle"){
+        key = "codestyle"
+    } else {
+        key = "$tool/$mode"
     }
-
-    def buildName = "Gerrit-verifier-$tool"
-    def key = "$tool/$mode"
-    builds += {
+    return [{
                   retry (retryTimes) {
                     Config.buildsList.put(key,
                       build(buildName, REFSPEC: Change.ref, BRANCH: Change.sha1,
@@ -214,9 +204,7 @@ def buildsForMode(mode,tool,retryTimes,codestyle) {
                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
                     }
                   }
-              }
-
-    return builds
+              }]
 }
 
 def getWorkspace(){
@@ -290,9 +278,13 @@ def buildChange() {
   build.setDescription("""<a href='$Change.changeUrl' target='_blank'>Change #$Change.changeNum</a>""")
 
   def builds = []
+  if (Config.codeStyleBranches.contains(Change.branch)){
+    builds += buildForMode("Gerrit-codestyle", tool)
+  }
   println "Running validation jobs using $tool builds for $modes ..."
+  def buildName = "Gerrit-verifier-$tool"
   modes.collect {
-    buildsForMode(it,tool,1,Config.codeStyleBranches.contains(Change.branch))
+    buildForMode(buildName,tool,it)
   }.each { builds += it }
 
   def buildsWithResults = parallelBuilds(builds)
@@ -354,8 +346,9 @@ def retryFlakyBuilds(flaky){
     toolsAndModes.each {
       def tool = it[0]
       def mode = it[1]
+      def buildName = "Gerrit-verifier-$tool"
       Config.buildsList.remove(it)
-      retryBuilds += buildsForMode(mode,tool,3,false)
+      retryBuilds += buildForMode(buildName,tool,mode,3)
     }
     return parallelBuilds(retryBuilds)
 }
