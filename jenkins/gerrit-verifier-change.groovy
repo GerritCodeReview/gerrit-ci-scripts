@@ -57,8 +57,8 @@ class Gerrit {
     String url = "https://gerrit-review.googlesource.com/"
     boolean verbose = true
 
-    int applyVerificationLabel(verified, builds) {
-        if(verified == 0) {
+    int applyVerificationLabel(verificationScore, builds) {
+        if(verificationScore == 0) {
             return;
         }
 
@@ -71,10 +71,10 @@ class Gerrit {
             "${Config.resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
         } .join('\n')
 
-        def addVerifiedExit = generateAndPostLabelPayload('Verified', verified, msgBody)
+        def addVerifiedExit = generateAndPostLabelPayload('Verified', verificationScore, msgBody)
         if(addVerifiedExit == 0) {
             this.script.println "----------------------------------------------------------------------------"
-            this.script.println "Gerrit Review: Verified=${verified} to change " +
+            this.script.println "Gerrit Review: Verified=${verificationScore} to change " +
                 "${Change.changeJson._number}/${Change.sha1}"
             this.script.println "----------------------------------------------------------------------------"
         }
@@ -82,23 +82,23 @@ class Gerrit {
         return addVerifiedExit
     }
 
-    static int applyCodestyleLabel(cs, files, build) {
-        if(cs == 0) {
+    static int applyCodestyleLabel(codeStyleScore, files, build) {
+        if(codeStyleScore == 0) {
             return
         }
 
-        def formattingMsg = cs < 0 ? ('The following files need formatting:\n    ' +
+        def formattingMsg = codeStyleScore < 0 ? ('The following files need formatting:\n    ' +
             files.join('\n    ')) : 'All files are correctly formatted'
         def res = build.getResult().toString()
         def url = build.getBuildUrl() + "consoleText"
 
         def msgBody = "${Config.resTicks[res]} ${formattingMsg}\n    (${url})"
 
-        def addCodeStyleExit = generateAndPostLabelPayload('Code-Style', cs, msgBody)
+        def addCodeStyleExit = generateAndPostLabelPayload('Code-Style', codeStyleScore, msgBody)
         if(addCodeStyleExit == 0) {
             this.script.println "----------------------------------------------------------------------------"
-            this.script.println "Gerrit Review: Code-Style=${cs} to change " +
-                "${Change.changeJson._number}/${Change.sha1}"
+            this.script.println "Gerrit Review: Code-Style=${codeStyleScore} to change" +
+                "${Change.changeJson._number} / ${Change.sha1}"
             this.script.println "----------------------------------------------------------------------------"
         }
 
@@ -311,14 +311,14 @@ def buildChange() {
         buildsWithResults = retryFlakyBuilds(flaky)
     }
 
-    def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult ->
+    def verificationScore = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult ->
         getVotingScore(acc, buildResult[1]) }
 
-    def resAll = codestyleResult ? getVotingScore(resVerify, codestyleResult[1]) : resVerify
+    def combinedScore = codestyleResult ? getVotingScore(verificationScore, codestyleResult[1]) : verificationScore
 
-    gerrit.applyVerificationLabel(resVerify, Builds.buildsList.findAll { key,build -> key != "codestyle" })
+    gerrit.applyVerificationLabel(verificationScore, Builds.buildsList.findAll { key,build -> key != "codestyle" })
 
-    switch(resAll) {
+    switch(combinedScore) {
         case 0: build.state.result = ABORTED
             break
         case 1: build.state.result = SUCCESS
