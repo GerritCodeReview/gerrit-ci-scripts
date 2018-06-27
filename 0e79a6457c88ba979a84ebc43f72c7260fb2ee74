@@ -283,6 +283,30 @@
     },
     {
       "key": {
+        "uuid": "75f0c43a_836ef806",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-06-27T07:16:11Z",
+      "side": 1,
+      "message": "My point is that \"add label\" means the same thing as \"apply label\" as shown in the documentation that uses the verb \"apply\".  Thus, \"applyCodestyleLabel\" is a reasonable name.\n\nMoving it into an object named Gerrit is a separate change beyond the scope of renaming.",
+      "parentUuid": "d4bc278b_d95b1563",
+      "range": {
+        "startLine": 113,
+        "startChar": 4,
+        "endLine": 113,
+        "endChar": 23
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7f7b017b_240e132c",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 1
