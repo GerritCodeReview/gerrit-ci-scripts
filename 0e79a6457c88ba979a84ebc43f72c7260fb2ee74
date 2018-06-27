@@ -235,6 +235,30 @@
     },
     {
       "key": {
+        "uuid": "885e503c_7cad681a",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-06-27T06:56:29Z",
+      "side": 1,
+      "message": "\u003e not applying but adding\n\nI don\u0027t follow.  Maybe we have different understanding of what \"apply\" means in this context, but as far as I know they both mean the same thing.\n\nSee for example the documentation here which mentions \"labels can be applied to the change\":\n\nhttp://gerrit-documentation.storage.googleapis.com/Documentation/2.14/user-upload.html#review_labels",
+      "parentUuid": "6d946cee_78583069",
+      "range": {
+        "startLine": 113,
+        "startChar": 4,
+        "endLine": 113,
+        "endChar": 23
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7f7b017b_240e132c",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 1
