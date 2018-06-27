@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a8eefd41_f954af3e",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T15:03:08Z",
+      "side": 1,
+      "message": "How about postLabelHttpRequest()?",
+      "range": {
+        "startLine": 46,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 14
+      },
+      "revId": "b10bc529632b955402f7941e8500fe8db21023a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2df9a48c_830da625",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T15:03:08Z",
+      "side": 1,
+      "message": "How about addVerificationLabel (sounds better) or addVerifiedLabel, since the label is called Verified in Gerrit.",
+      "range": {
+        "startLine": 76,
+        "startChar": 9,
+        "endLine": 76,
+        "endChar": 15
+      },
+      "revId": "b10bc529632b955402f7941e8500fe8db21023a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b264e181_2b0076da",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T15:03:08Z",
+      "side": 1,
+      "message": "To be more consistent with variables like addCodeStyleExit, I think addCodeStyleLabel would be better.",
+      "range": {
+        "startLine": 101,
+        "startChar": 6,
+        "endLine": 101,
+        "endChar": 23
+      },
+      "revId": "b10bc529632b955402f7941e8500fe8db21023a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9505cd9c_b0981a88",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T15:03:08Z",
+      "side": 1,
+      "message": "Since this function is also used for the codestyle, I would suggest to change it to getLabelValue() or similar.",
+      "range": {
+        "startLine": 179,
+        "startChar": 4,
+        "endLine": 179,
+        "endChar": 15
+      },
+      "revId": "b10bc529632b955402f7941e8500fe8db21023a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b99dc139_671b0591",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T15:03:08Z",
+      "side": 1,
+      "message": "How about prepareBuildsForMode() or getBuildsForMode()?",
+      "range": {
+        "startLine": 199,
+        "startChar": 4,
+        "endLine": 199,
+        "endChar": 17
+      },
+      "revId": "b10bc529632b955402f7941e8500fe8db21023a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7536226f_9facbab0",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T15:03:08Z",
+      "side": 1,
+      "message": "How about buildInParallel() or executeBuildsInParallel()?",
+      "range": {
+        "startLine": 340,
+        "startChar": 4,
+        "endLine": 340,
+        "endChar": 18
+      },
+      "revId": "b10bc529632b955402f7941e8500fe8db21023a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "36442bde_23184573",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T15:03:08Z",
+      "side": 1,
+      "message": "How about findFlakyBuilds()?",
+      "range": {
+        "startLine": 353,
+        "startChar": 4,
+        "endLine": 353,
+        "endChar": 15
+      },
+      "revId": "b10bc529632b955402f7941e8500fe8db21023a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
