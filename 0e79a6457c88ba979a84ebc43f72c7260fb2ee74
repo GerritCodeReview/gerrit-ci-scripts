@@ -307,6 +307,30 @@
     },
     {
       "key": {
+        "uuid": "a13e8113_2a04251a",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-27T07:20:44Z",
+      "side": 1,
+      "message": "\u003e My point is that \"add label\" means the same thing as \"apply label\" as shown in the documentation that uses the verb \"apply\".  Thus, \"applyCodestyleLabel\" is a reasonable name.\n\nMaybe the documentation should be amended?\n\"Apply means: make a formal application or request.\" OR \"be applicable or relevant.\"\n\nHere the action is \u0027add the Code-Style Label\u0027, I am in favour of amending to anything that is communicating that message :-)\n\n\u003e Moving it into an object named Gerrit is a separate change beyond the scope of renaming.\n\nGood point, shall we do the object extraction first and renaming next?\nOtherwise, the renaming will lose that piece of information :-(",
+      "parentUuid": "75f0c43a_836ef806",
+      "range": {
+        "startLine": 113,
+        "startChar": 4,
+        "endLine": 113,
+        "endChar": 23
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7f7b017b_240e132c",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 1
