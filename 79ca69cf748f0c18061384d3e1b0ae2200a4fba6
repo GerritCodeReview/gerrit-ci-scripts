@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f1150a4_65bac16e",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T14:42:21Z",
+      "side": 1,
+      "message": "Lets move this variable to the Gerrit class, since it is only used there.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 7
+      },
+      "revId": "79ca69cf748f0c18061384d3e1b0ae2200a4fba6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "89f49265_8db9c654",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T14:42:21Z",
+      "side": 1,
+      "message": "Printing out of classes does not work directly in groovy. I found this solution to work: https://stackoverflow.com/a/42548477",
+      "range": {
+        "startLine": 42,
+        "startChar": 6,
+        "endLine": 42,
+        "endChar": 12
+      },
+      "revId": "79ca69cf748f0c18061384d3e1b0ae2200a4fba6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "930f5f05_baf45e99",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T14:42:21Z",
+      "side": 1,
+      "message": "Should we make some methods like this one private?",
+      "range": {
+        "startLine": 123,
+        "startChar": 2,
+        "endLine": 123,
+        "endChar": 11
+      },
+      "revId": "79ca69cf748f0c18061384d3e1b0ae2200a4fba6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5ed9c1a0_6551867b",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T14:42:21Z",
+      "side": 1,
+      "message": "This should be on a global level for \u0027queryUrl \u003d gerrit.getChangeQueryUrl(requestedChangeId)\u0027 in line 364 to work.",
+      "revId": "79ca69cf748f0c18061384d3e1b0ae2200a4fba6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "45a9403c_59968d4f",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T14:42:21Z",
+      "side": 1,
+      "message": "Although it might not be needed, I would suggest to use \u0027url:\"https://gerrit-review.googlesource.com/\"\u0027, since it is more descriptive and makes it easier to add additional fields in future.",
+      "range": {
+        "startLine": 242,
+        "startChar": 26,
+        "endLine": 242,
+        "endChar": 67
+      },
+      "revId": "79ca69cf748f0c18061384d3e1b0ae2200a4fba6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
