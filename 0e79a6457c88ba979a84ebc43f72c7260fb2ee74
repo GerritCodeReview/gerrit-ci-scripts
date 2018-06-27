@@ -355,6 +355,30 @@
     },
     {
       "key": {
+        "uuid": "92ba8083_67227f48",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-27T07:36:04Z",
+      "side": 1,
+      "message": "\u003e It also means \"bring or put into operation or use\" which is the exact context here.  This is used throughout the documentation and is a perfectly valid usage of the word.\n\nYou mean \"apply a rule or law to something\"? Yes. But here the target is not a rule but simply a label. If the intent of this change is improving the readability, it is not accomplished IMHO.\n\nIf you compare:\n\nALTER TABLE ADD COLUMN\nto\nALTER TABLE APPLY COLUMN\n\nWhich one of the two is more readable?\n\nPossibly both plausible, but IMHO the \u0027ADD\u0027 is a more straightforward verb for adding somthing.",
+      "parentUuid": "3fa6b084_f69449ef",
+      "range": {
+        "startLine": 113,
+        "startChar": 4,
+        "endLine": 113,
+        "endChar": 23
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7f7b017b_240e132c",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 1
