@@ -72,7 +72,7 @@ class Gerrit {
     return 0
   }
 
-  def labelVerify(change, sha1, verified, builds) {
+  def addVerifiedLabel(change, sha1, verified, builds) {
     if(verified == 0) {
       return;
     }
@@ -87,7 +87,7 @@ class Gerrit {
       "${Globals.resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
     } .join('\n')
 
-    def addVerifiedExit = label(changeNum, sha1, 'Verified', verified, msgBody)
+    def addVerifiedExit = addLabel(changeNum, sha1, 'Verified', verified, msgBody)
     if(addVerifiedExit == 0) {
       println "----------------------------------------------------------------------------"
       println "Gerrit Review: Verified=" + verified + " to change " + changeNum + "/" + sha1
@@ -97,7 +97,7 @@ class Gerrit {
     return addVerifiedExit
   }
 
-  def labelCodestyle(change, sha1, cs, files, build) {
+  def addCodeStyleLabel(change, sha1, cs, files, build) {
     if(cs == 0) {
       return
     }
@@ -109,7 +109,7 @@ class Gerrit {
 
     def msgBody = "${Globals.resTicks[res]} $formattingMsg\n    (${url})"
 
-    def addCodeStyleExit = label(changeNum, sha1, 'Code-Style', cs, msgBody)
+    def addCodeStyleExit = addLabel(changeNum, sha1, 'Code-Style', cs, msgBody)
     if(addCodeStyleExit == 0) {
       println "----------------------------------------------------------------------------"
       println "Gerrit Review: Code-Style=" + cs + " to change " + changeNum + "/" + sha1
@@ -119,7 +119,7 @@ class Gerrit {
     return addCodeStyleExit
   }
 
-  private def label(changeNum, sha1, label, score, msgBody = "") {
+  private def addLabel(changeNum, sha1, label, score, msgBody = "") {
     def notify = score < 0 ? ', "notify" : "OWNER"' : ''
     def jsonPayload = '{"labels":{"' + label + '":' + score + '},' +
                       ' "message": "' + msgBody + '"' +
@@ -179,7 +179,7 @@ def waitForResult(b) {
   return res == null ? Result.FAILURE : res
 }
 
-def getVerified(acc, res) {
+def getLabelValue(acc, res) {
   if(res == null || res == Result.ABORTED) {
     return 0
   }
@@ -199,7 +199,7 @@ def getVerified(acc, res) {
   }
 }
 
-def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,codestyle) {
+def prepareBuildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,codestyle) {
     def builds = []
     if(codestyle) {
       builds += {
@@ -231,7 +231,7 @@ def buildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,code
     return builds
 }
 
-def sh(cwd, command) {
+def runSh(cwd, command) {
     def sout = new StringBuilder(), serr = new StringBuilder()
     println "SH: $command"
     def shell = command.execute([],cwd)
@@ -258,12 +258,12 @@ def buildChange(change) {
   println "cwd: $cwd"
   println "ref: $ref"
 
-  sh(cwd, "git fetch origin $ref")
-  sh(cwd, "git checkout FETCH_HEAD")
-  sh(cwd, "git fetch origin $branch")
-  sh(cwd, 'git config user.name "Jenkins Build"')
-  sh(cwd, 'git config user.email "jenkins@gerritforge.com"')
-  sh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
+  runSh(cwd, "git fetch origin $ref")
+  runSh(cwd, "git checkout FETCH_HEAD")
+  runSh(cwd, "git fetch origin $branch")
+  runSh(cwd, 'git config user.name "Jenkins Build"')
+  runSh(cwd, 'git config user.email "jenkins@gerritforge.com"')
+  runSh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 
   if(new java.io.File("$cwd/BUCK").exists()) {
     tools += ["buck"]
@@ -296,18 +296,18 @@ def buildChange(change) {
   def builds = []
   println "Running validation jobs using $tools builds for $modes ..."
   modes.collect {
-    buildsForMode(refspec,sha1,changeUrl,it,tools,branch,1,Globals.codeStyleBranches.contains(branch))
+    prepareBuildsForMode(refspec,sha1,changeUrl,it,tools,branch,1,Globals.codeStyleBranches.contains(branch))
   }.each { builds += it }
 
-  def buildsWithResults = parallelBuilds(builds)
+  def buildsWithResults = getResultsOfBuildsInParallel(builds)
   def codestyleResult = buildsWithResults.find{ it[0] == "codestyle" }
   if(codestyleResult) {
-    def resCodeStyle = getVerified(1, codestyleResult[1])
+    def resCodeStyle = getLabelValue(1, codestyleResult[1])
     def codestyleBuild = Globals.buildsList["codestyle"]
-    gerrit.labelCodestyle(change, sha1, resCodeStyle, findCodestyleFilesInLog(codestyleBuild), codestyleBuild)
+    gerrit.addCodeStyleLabel(change, sha1, resCodeStyle, findCodestyleFilesInLog(codestyleBuild), codestyleBuild)
   }
 
-  flaky = flakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
+  flaky = findFlakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
   if(flaky.size > 0) {
     println "** FLAKY Builds detected: ${flaky}"
 
@@ -318,16 +318,16 @@ def buildChange(change) {
       def tool = it[0]
       def mode = it[1]
       Globals.buildsList.remove(it)
-      retryBuilds += buildsForMode(refspec,sha1,changeUrl,mode,[tool],branch,3,false)
+      retryBuilds += prepareBuildsForMode(refspec,sha1,changeUrl,mode,[tool],branch,3,false)
     }
-    buildsWithResults = parallelBuilds(retryBuilds)
+    buildsWithResults = getResultsOfBuildsInParallel(retryBuilds)
   }
 
-  def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult -> getVerified(acc, buildResult[1]) }
+  def resVerify = buildsWithResults.findAll{ it != codestyleResult }.inject(1) { acc, buildResult -> getLabelValue(acc, buildResult[1]) }
 
-  def resAll = codestyleResult ? getVerified(resVerify, codestyleResult[1]) : resVerify
+  def resAll = codestyleResult ? getLabelValue(resVerify, codestyleResult[1]) : resVerify
 
-  gerrit.labelVerify(change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
+  gerrit.addVerifiedLabel(change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
 
   switch(resAll) {
     case 0: build.state.result = ABORTED
@@ -339,7 +339,7 @@ def buildChange(change) {
   }
 }
 
-def parallelBuilds(builds) {
+def getResultsOfBuildsInParallel(builds) {
   ignore(FAILURE) {
     parallel (builds)
   }
@@ -352,7 +352,7 @@ def parallelBuilds(builds) {
   return buildsWithResults
 }
 
-def flakyBuilds(buildsWithResults) {
+def findFlakyBuilds(buildsWithResults) {
   def flaky = buildsWithResults.findAll { it[1] == null || it[1] != SUCCESS }
   if(flaky.size == buildsWithResults.size) {
     return []
