@@ -211,6 +211,30 @@
     },
     {
       "key": {
+        "uuid": "6d946cee_78583069",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-06-27T06:12:01Z",
+      "side": 1,
+      "message": "Is not applying but adding. All those names were srmtarting with “gerrit” because were related to Gerrit client actions.\n\nBetter to create a Gerrit object and call the method then, rather than hiding it altogether.",
+      "parentUuid": "b5a80615_f17b0290",
+      "range": {
+        "startLine": 113,
+        "startChar": 4,
+        "endLine": 113,
+        "endChar": 23
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7f7b017b_240e132c",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 1
