@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "929a1a72_aa6e755a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T08:15:05Z",
+      "side": 1,
+      "message": "Thanks for your comments on the change. The change was meant as a suggestion open to discussion, especially since I don\u0027t yet know the terminology standards in the Gerrit project well.",
+      "parentUuid": "38970563_5bdee1fe",
+      "range": {
+        "startLine": 10,
+        "startChar": 44,
+        "endLine": 10,
+        "endChar": 54
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b558df4e_c0f7d8ba",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T08:15:05Z",
+      "side": 1,
+      "message": "Some method names had the verb at the end (e.g. gerritPost), some in the beginning (e.g. getVerified) and some had none (e.g. parallelBuilds).\nI personally find method names with a verb in the beginning to be the easiest readable, that\u0027s why I suggested to use that style with this change.",
+      "parentUuid": "277a66d4_ff458bbc",
+      "range": {
+        "startLine": 9,
+        "startChar": 64,
+        "endLine": 10,
+        "endChar": 12
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "796e7729_17346020",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2018-06-26T22:30:14Z",
       "side": 1,
       "message": "httpPostToGerrit",
+      "range": {
+        "startLine": 44,
+        "startChar": 4,
+        "endLine": 44,
+        "endChar": 16
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3c6a86a8_aacede60",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T08:15:05Z",
+      "side": 1,
+      "message": "To be consistent with using a verb in the beginning (see next comment), how about postLabelHttpRequest()?",
+      "parentUuid": "796e7729_17346020",
       "range": {
         "startLine": 44,
         "startChar": 4,
@@ -118,6 +190,30 @@
     },
     {
       "key": {
+        "uuid": "6ebd54ac_b841377b",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T08:15:05Z",
+      "side": 1,
+      "message": "Yes, my intention was to consistently use a verb in the beginning. (Whether apply is the best one here, is surely open for discussion.",
+      "parentUuid": "201a4f5b_4a3175c6",
+      "range": {
+        "startLine": 74,
+        "startChar": 4,
+        "endLine": 74,
+        "endChar": 26
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "07c5fcd3_2887b083",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 1
@@ -152,6 +248,54 @@
       "writtenOn": "2018-06-26T22:30:14Z",
       "side": 1,
       "message": "Generate? And Post? A method with two verbs means is not well designed.\nOne method, one thing.",
+      "range": {
+        "startLine": 89,
+        "startChar": 24,
+        "endLine": 89,
+        "endChar": 39
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3900fec7_0cc0b2a3",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T08:15:05Z",
+      "side": 1,
+      "message": "Then lets use the more generic term \u0027payload\u0027. As suggested above: generateLabelRequestPayload().",
+      "parentUuid": "07c5fcd3_2887b083",
+      "range": {
+        "startLine": 89,
+        "startChar": 44,
+        "endLine": 89,
+        "endChar": 48
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "67ecd5fe_3457d339",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T08:15:05Z",
+      "side": 1,
+      "message": "I agree on that. As it is now, the script basically has a method chain. The method in question generates the label and calls another method to do the posting, which is not ideal. It would be more readable to have one method to orchestrate the methods involved in generating and \u0027applying\u0027 the label.\nLeaving out \u0027AndPost\u0027 in this case could be done, since the method does not have the implementation of the http post itself, but on the other hand this would hide the fact, that the method directly starts the posting process.\n\nSo my suggestion would be to move the post-method call from generateAndPostLabelJson() to the applyXxxLabel() and rename the method to generateLabelRequestPayload().",
+      "parentUuid": "3aac065f_c78216c3",
       "range": {
         "startLine": 89,
         "startChar": 24,
@@ -403,6 +547,30 @@
     },
     {
       "key": {
+        "uuid": "0f06c7e2_c57632b2",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T08:15:05Z",
+      "side": 1,
+      "message": "I am actually fine with both verbs, since I think both get over the meaning well. I don\u0027t know the Gerrit-terminology well enough to know, which one would be more consistent.\nI like the suggestion with the Gerrit-object. Let me implement that and we can discuss the add or apply until then ;-).",
+      "parentUuid": "d4bc278b_d95b1563",
+      "range": {
+        "startLine": 113,
+        "startChar": 4,
+        "endLine": 113,
+        "endChar": 23
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7f7b017b_240e132c",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 1
@@ -414,6 +582,30 @@
       "writtenOn": "2018-06-26T22:30:14Z",
       "side": 1,
       "message": "Bash? Where do you see references to Bash in the body?",
+      "range": {
+        "startLine": 218,
+        "startChar": 11,
+        "endLine": 218,
+        "endChar": 15
+      },
+      "revId": "0e79a6457c88ba979a84ebc43f72c7260fb2ee74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13ed9622_8af6f490",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-06-27T08:15:05Z",
+      "side": 1,
+      "message": "You are of course right.\nShould be renamed to executeShell() or even better executeShellCommand().\n\n(sh() shouldn\u0027t be used in pipelines (to which we want to switch in the end), since it is already used by the pipeline implementation.)",
+      "parentUuid": "7f7b017b_240e132c",
       "range": {
         "startLine": 218,
         "startChar": 11,
