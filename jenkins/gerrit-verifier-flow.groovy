@@ -26,13 +26,9 @@ String.metaClass.encodeURL = {
 class Globals {
   static String gerrit = "https://gerrit-review.googlesource.com/"
   static String jenkins = "https://gerrit-ci.gerritforge.com/"
-  static String gerritReviewer = "GerritForge CI <gerritforge@gmail.com>"
-  static long curlTimeout = 10000
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
   static int maxChanges = 100
-  static int numRetryBuilds = 3
   static int myAccountId = 1022687
-  static int waitForResultTimeout = 10000
   static int maxBuilds = 16
   static String verifierJobName = "Gerrit-verifier-change"
 }
