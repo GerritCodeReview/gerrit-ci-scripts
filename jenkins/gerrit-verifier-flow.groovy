@@ -104,6 +104,27 @@ def filterChangesToDo(change){
   }
 }
 
+def printFilterSummary(since, inProgress, filteredChanges, buildsBandwith){
+  if(!inProgress.empty) {
+  println ""
+  println "Changes currently in progress: "
+  inProgress.each {
+      b -> println("Change ${changeUrl(changeOfBuildRun(b)[0])}: ${Globals.jenkins}${b.url}")
+    }
+  }
+  println ""
+  println "Gerrit has " + filteredChanges.size() + " change(s) since " + since + " $filteredChanges"
+  if(buildsBandwith <= 0) {
+    println "... but there is NO bandwidth for further builds yet"
+  }
+  else {
+    if(filteredChanges.size() > buildsBandwith) {
+      println "... but I've got bandwidth for only ${buildsBandwith} of them at the moment"
+    }
+  }
+  println "================================================================================"
+}
+
 def since = getTimeSinceLastSuccessfulBuild()
 
 println ""
@@ -116,13 +137,6 @@ def acceptedChanges = changesJson.findAll {
 }
 
 def inProgress = getBuildRunsInProgress()
-if(!inProgress.empty) {
-  println ""
-  println "Changes currently in progress: "
-  inProgress.each {
-    b -> println("Change ${changeUrl(changeOfBuildRun(b)[0])}: ${Globals.jenkins}${b.url}")
-  }
-}
 
 def inProgressChangesNums = inProgress.collect { changeOfBuildRun(it) }.flatten()
 def todoChangesNums = acceptedChanges.collect { "${it._number}" }
@@ -130,17 +144,7 @@ def filteredChanges = todoChangesNums - inProgressChangesNums
 
 def buildsBandwith = Globals.maxBuilds - inProgressChangesNums.size
 
-println ""
-println "Gerrit has " + filteredChanges.size() + " change(s) since " + since + " $filteredChanges"
-if(buildsBandwith <= 0) {
-  println "... but there is NO bandwidth for further builds yet"
-}
-else {
-  if(filteredChanges.size() > buildsBandwith) {
-    println "... but I've got bandwidth for only ${buildsBandwith} of them at the moment"
-  }
-}
-println "================================================================================"
+printFilterSummary(since, inProgress, filteredChanges, buildsBandwith)
 
 if(buildsBandwith > 0) {
   def changesTodo = filteredChanges.reverse().take(buildsBandwith)
