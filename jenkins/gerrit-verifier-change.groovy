@@ -19,9 +19,6 @@ import java.util.concurrent.CancellationException
 import groovy.json.*
 import java.text.*
 
-String.metaClass.encodeURL = {
-  java.net.URLEncoder.encode(delegate)
-}
 
 class Globals {
   static long curlTimeout = 10000
