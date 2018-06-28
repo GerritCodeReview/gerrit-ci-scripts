@@ -47,19 +47,15 @@ def getTimeSinceLastSuccessfulBuild(){
   return Globals.tsFormat.format(new Date(sinceMillis))
 }
 
-def since = getTimeSinceLastSuccessfulBuild()
-
-println ""
-println "Querying Gerrit for last modified changes since ${since} ..."
-
-def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
-
-queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
-                      URLEncoder.encode(gerritQuery, "UTF-8"))
-
-def changes = queryUrl.getText().substring(5)
-def jsonSlurper = new JsonSlurper()
-def changesJson = jsonSlurper.parseText(changes)
+def fetchNewChangeData(since){
+  def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
+  def queryUrl = new URL(Globals.gerrit +
+    "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" +
+    Globals.maxChanges + "&q=" + URLEncoder.encode(gerritQuery, "UTF-8"))
+  def changes = queryUrl.getText().substring(5)
+  def jsonSlurper = new JsonSlurper()
+  return jsonSlurper.parseText(changes)
+}
 
 def getBuildRunsInProgress() {
   def verifierChangeJob = Hudson.instance.getJob(Globals.verifierJobName)
@@ -76,6 +72,13 @@ def changeOfBuildRun(run) {
 def changeUrl(change) {
   "${Globals.gerrit}${change}"
 }
+
+def since = getTimeSinceLastSuccessfulBuild()
+
+println ""
+println "Querying Gerrit for last modified changes since ${since} ..."
+
+def changesJson = fetchNewChangeData(since)
 
 def acceptedChanges = changesJson.findAll {
   change ->
