@@ -34,16 +34,20 @@ class Globals {
   static String verifierJobName = "Gerrit-verifier-change"
 }
 
-def lastBuild = build.getPreviousSuccessfulBuild()
+def getTimeSinceLastSuccessfulBuild(){
+  def lastBuild = build.getPreviousSuccessfulBuild()
 
-def lastBuildStartTimeMillis = lastBuild == null ?
-  (System.currentTimeMillis() - 1800000) : lastBuild.getStartTimeInMillis()
-def sinceMillis = lastBuildStartTimeMillis - (24 * 3600 * 1000)
-def since = Globals.tsFormat.format(new Date(sinceMillis))
+  if(lastBuild != null) {
+    println "Last successful build was " + lastBuild.toString()
+  }
 
-if(lastBuild != null) {
-  println "Last successful build was " + lastBuild.toString()
+  def lastBuildStartTimeMillis = lastBuild == null ?
+    (System.currentTimeMillis() - 1800000) : lastBuild.getStartTimeInMillis()
+  def sinceMillis = lastBuildStartTimeMillis - (24 * 3600 * 1000)
+  return Globals.tsFormat.format(new Date(sinceMillis))
 }
+
+def since = getTimeSinceLastSuccessfulBuild()
 
 println ""
 println "Querying Gerrit for last modified changes since ${since} ..."
