@@ -21,10 +21,6 @@ import java.text.*
 
 verbose = true
 
-String.metaClass.encodeURL = {
-  java.net.URLEncoder.encode(delegate)
-}
-
 class Globals {
   static String gerrit = "https://gerrit-review.googlesource.com/"
   static long curlTimeout = 10000
