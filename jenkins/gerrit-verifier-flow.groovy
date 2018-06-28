@@ -73,15 +73,7 @@ def changeUrl(change) {
   "${Globals.gerrit}${change}"
 }
 
-def since = getTimeSinceLastSuccessfulBuild()
-
-println ""
-println "Querying Gerrit for last modified changes since ${since} ..."
-
-def changesJson = fetchNewChangeData(since)
-
-def acceptedChanges = changesJson.findAll {
-  change ->
+def filterChangesToDo(change){
   sha1 = change.current_revision
   if(sha1 == null) {
       println "[WARNING] Skipping change ${changeUrl(change._number)} because it does not have any current revision or patch-set"
@@ -110,6 +102,17 @@ def acceptedChanges = changesJson.findAll {
       return myVerifications.empty
     }
   }
+}
+
+def since = getTimeSinceLastSuccessfulBuild()
+
+println ""
+println "Querying Gerrit for last modified changes since ${since} ..."
+
+def changesJson = fetchNewChangeData(since)
+
+def acceptedChanges = changesJson.findAll {
+  change -> filterChangesToDo(change)
 }
 
 def inProgress = getBuildRunsInProgress()
