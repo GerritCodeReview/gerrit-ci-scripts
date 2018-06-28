@@ -17,11 +17,8 @@ import hudson.AbortException
 import hudson.console.HyperlinkNote
 import java.util.concurrent.CancellationException
 import groovy.json.*
+import java.net.*
 import java.text.*
-
-String.metaClass.encodeURL = {
-  java.net.URLEncoder.encode(delegate)
-}
 
 class Globals {
   static String gerrit = "https://gerrit-review.googlesource.com/"
@@ -54,7 +51,7 @@ println "Querying Gerrit for last modified changes since ${since} ..."
 def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
 
 queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
-                      gerritQuery.encodeURL())
+                      URLEncoder.encode(gerritQuery, "UTF-8"))
 
 def changes = queryUrl.getText().substring(5)
 def jsonSlurper = new JsonSlurper()
