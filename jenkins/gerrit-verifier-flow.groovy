@@ -45,15 +45,15 @@ def sinceMillis = lastBuildStartTimeMillis - (24 * 3600 * 1000)
 def since = Globals.tsFormat.format(new Date(sinceMillis))
 
 if(lastBuild != null) {
-  println "Last successful build was " + lastBuild.toString()
+  println "Last successful build was ${lastBuild.toString()}"
 }
 
 println ""
 println "Querying Gerrit for last modified changes since ${since} ..."
 
-def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
+def gerritQuery = "status:open project:gerrit since:\"${since}\""
 
-queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
+queryUrl = new URL("${Globals.gerrit}changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=${Globals.maxChanges}&q=" +
                       gerritQuery.encodeURL())
 
 def changes = queryUrl.getText().substring(5)
@@ -124,7 +124,7 @@ def filteredChanges = todoChangesNums - inProgressChangesNums
 def buildsBandwith = Globals.maxBuilds - inProgressChangesNums.size
 
 println ""
-println "Gerrit has " + filteredChanges.size() + " change(s) since " + since + " $filteredChanges"
+println "Gerrit has ${filteredChanges.size()} change(s) since ${since} ${filteredChanges}"
 if(buildsBandwith <= 0) {
   println "... but there is NO bandwidth for further builds yet"
 }
