@@ -27,6 +27,7 @@ class Globals {
   static String gerrit = "https://gerrit-review.googlesource.com/"
   static String jenkins = "https://gerrit-ci.gerritforge.com/"
   static String gerritReviewer = "GerritForge CI <gerritforge@gmail.com>"
+  static String projectName = "gerrit"
   static long curlTimeout = 10000
   static SimpleDateFormat tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
   static int maxChanges = 100
@@ -51,7 +52,7 @@ if(lastBuild != null) {
 println ""
 println "Querying Gerrit for last modified changes since ${since} ..."
 
-def gerritQuery = "status:open project:gerrit since:\"" + since + "\""
+def gerritQuery = "status:open project:${Globals.projectName} since:\"" + since + "\""
 
 queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
                       gerritQuery.encodeURL())
