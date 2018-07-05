@@ -37,12 +37,122 @@ class Globals {
   static resTicks = [ 'ABORTED':'\u26aa', 'SUCCESS':'\u2705', 'FAILURE':'\u274c' ]
 }
 
+abstract class AbstractGerritLabel {
+  final String label
+  Script script
+  String changeNum
+  String sha1
+  int score
+  Map builds
+  String msgBody = ""
+
+  AbstractGerritLabel(label, script, changeNum, sha1, score, builds) {
+    this.label = label
+    this.script = script
+    this.changeNum = changeNum
+    this.sha1 = sha1
+    this.score = score
+    this.builds = builds
+  }
+
+  def printLabelSummary() {
+    println "----------------------------------------------------------------------------"
+    println "Gerrit Review: ${label}=" + score + " to change " + changeNum + "/" + sha1
+    println "----------------------------------------------------------------------------"
+  }
+
+  def createLabelPayload() {
+    if(score == 0) {
+      return
+    }
+
+    def notify = score < 0 ? ', "notify" : "OWNER"' : ''
+    def jsonPayload = '{"labels":{"' + label + '":' + score + '},' +
+                      ' "message": "' + msgBody + '"' +
+                      notify + ", ${Globals.addVerifiedTag} }"
+
+    return jsonPayload
+  }
+
+  private def println(message) {
+    script.println(message)
+  }
+
+  abstract def createMsgBody()
+}
+
+class VerifyLabel extends AbstractGerritLabel {
+
+  VerifyLabel(script, changeNum, sha1, score, builds) {
+    super("Verified", script, changeNum, sha1, score, builds)
+  }
+
+  def createMsgBody() {
+    def msgList = builds.collect { type,build ->
+      [ 'type': type, 'res': build.getResult().toString(), 'url': build.getBuildUrl() + "consoleText" ]
+    } sort { a,b -> a['res'].compareTo(b['res']) }
+
+    msgBody = msgList.collect {
+      "${Globals.resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
+    } .join('\n')
+  }
+}
+
+class CodeStyleLabel extends AbstractGerritLabel {
+  def build
+  def files
+
+  CodeStyleLabel(script, changeNum, sha1, score, builds) {
+    super("Code-Style", script, changeNum, sha1, score, builds)
+    build = builds["Code-Style"]
+    findCodestyleFilesInLog()
+  }
+
+  def createMsgBody() {
+    def formattingMsg = cs < 0 ? ('The following files need formatting:\n    ' +
+      files.join('\n    ')) : 'All files are correctly formatted'
+    def res = build.getResult().toString()
+    def url = build.getBuildUrl() + "consoleText"
+
+    msgBody = "${Globals.resTicks[res]} $formattingMsg\n    (${url})"
+  }
+
+  private def findCodestyleFilesInLog() {
+    def codestyleFiles = []
+    def needsFormatting = false
+    def codestyleLogReader = build.getLogReader()
+    codestyleLogReader.eachLine {
+      needsFormatting = needsFormatting || (it ==~ /.*Need Formatting.*/)
+      if(needsFormatting && it ==~ /\[.*\]/) {
+        codestyleFiles += it.substring(1,it.length()-1)
+      }
+    }
+
+    files = codestyleFiles
+  }
+}
+
 class Gerrit {
   String url
   Script script
   boolean verbose = true
 
-  def httpPost(path, jsonPayload) {
+  def label(label, change, sha1, score, builds){
+    def changeNum = change._number
+    def labelObject = null
+    if (label == "Code-Style"){
+      labelObject = new CodeStyleLabel(script, changeNum, sha1, score, builds)
+    } else if (label == "Verify"){
+      labelObject = new VerifyLabel(script, changeNum, sha1, score, builds)
+    }
+    def exitCode = httpPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
+      labelObject.createLabelPayload())
+    if (exitCode == 0){
+      labelObject.printLabelSummary()
+    }
+  }
+
+  private def httpPost(path, jsonPayload) {
     def error = ""
     def gerritPostUrl = url + path
     def curl = ['curl',
@@ -72,63 +182,6 @@ class Gerrit {
     return 0
   }
 
-  def addVerifiedLabel(change, sha1, verified, builds) {
-    if(verified == 0) {
-      return;
-    }
-
-    def changeNum = change._number
-
-    def msgList = builds.collect { type,build ->
-      [ 'type': type, 'res': build.getResult().toString(), 'url': build.getBuildUrl() + "consoleText" ]
-    } sort { a,b -> a['res'].compareTo(b['res']) }
-
-    def msgBody = msgList.collect {
-      "${Globals.resTicks[it.res]} ${it.type} : ${it.res}\n    (${it.url})"
-    } .join('\n')
-
-    def addVerifiedExit = addLabel(changeNum, sha1, 'Verified', verified, msgBody)
-    if(addVerifiedExit == 0) {
-      println "----------------------------------------------------------------------------"
-      println "Gerrit Review: Verified=" + verified + " to change " + changeNum + "/" + sha1
-      println "----------------------------------------------------------------------------"
-    }
-
-    return addVerifiedExit
-  }
-
-  def addCodeStyleLabel(change, sha1, cs, files, build) {
-    if(cs == 0) {
-      return
-    }
-
-    def changeNum = change._number
-    def formattingMsg = cs < 0 ? ('The following files need formatting:\n    ' + files.join('\n    ')) : 'All files are correctly formatted'
-    def res = build.getResult().toString()
-    def url = build.getBuildUrl() + "consoleText"
-
-    def msgBody = "${Globals.resTicks[res]} $formattingMsg\n    (${url})"
-
-    def addCodeStyleExit = addLabel(changeNum, sha1, 'Code-Style', cs, msgBody)
-    if(addCodeStyleExit == 0) {
-      println "----------------------------------------------------------------------------"
-      println "Gerrit Review: Code-Style=" + cs + " to change " + changeNum + "/" + sha1
-      println "----------------------------------------------------------------------------"
-    }
-
-    return addCodeStyleExit
-  }
-
-  private def addLabel(changeNum, sha1, label, score, msgBody = "") {
-    def notify = score < 0 ? ', "notify" : "OWNER"' : ''
-    def jsonPayload = '{"labels":{"' + label + '":' + score + '},' +
-                      ' "message": "' + msgBody + '"' +
-                      notify + ", ${Globals.addVerifiedTag} }"
-
-    return httpPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/review",
-                      jsonPayload)
-  }
-
   def getChangedFiles(changeNum, sha1) {
     URL filesUrl = new URL(String.format("%schanges/%s/revisions/%s/files/",
         url, changeNum, sha1))
@@ -151,20 +204,6 @@ class Gerrit {
 }
 
 gerrit = new Gerrit(script:this, url:"https://gerrit-review.googlesource.com/")
-
-def findCodestyleFilesInLog(build) {
-  def codestyleFiles = []
-  def needsFormatting = false
-  def codestyleLogReader = build.getLogReader()
-  codestyleLogReader.eachLine {
-    needsFormatting = needsFormatting || (it ==~ /.*Need Formatting.*/)
-    if(needsFormatting && it ==~ /\[.*\]/) {
-      codestyleFiles += it.substring(1,it.length()-1)
-    }
-  }
-
-  return codestyleFiles
-}
 
 def waitForResult(b) {
   def res = null
@@ -304,7 +343,7 @@ def buildChange(change) {
   if(codestyleResult) {
     def resCodeStyle = getLabelValue(1, codestyleResult[1])
     def codestyleBuild = Globals.buildsList["codestyle"]
-    gerrit.addCodeStyleLabel(change, sha1, resCodeStyle, findCodestyleFilesInLog(codestyleBuild), codestyleBuild)
+    gerrit.label('Code-Style', change, sha1, resCodeStyle, ["Code-Style": codestyleBuild])
   }
 
   flaky = findFlakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
@@ -327,7 +366,7 @@ def buildChange(change) {
 
   def resAll = codestyleResult ? getLabelValue(resVerify, codestyleResult[1]) : resVerify
 
-  gerrit.addVerifiedLabel(change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
+  gerrit.label('Verify', change, sha1, resVerify, Globals.buildsList.findAll { key,build -> key != "codestyle" })
 
   switch(resAll) {
     case 0: build.state.result = ABORTED
