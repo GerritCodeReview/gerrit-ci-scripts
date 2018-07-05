@@ -22,6 +22,30 @@
       "revId": "c5e5af466d3003dbbf9bece362ec6dbdc187831b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0741a461_fc606619",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1021862
+      },
+      "writtenOn": "2018-07-05T01:49:41Z",
+      "side": 1,
+      "message": "Sorry, I was creating a new commit from a revert commit.  My bad.",
+      "parentUuid": "25c44284_e3c1b3a7",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 16
+      },
+      "revId": "c5e5af466d3003dbbf9bece362ec6dbdc187831b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
