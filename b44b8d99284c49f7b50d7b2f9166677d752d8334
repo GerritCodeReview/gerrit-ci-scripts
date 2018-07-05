@@ -70,6 +70,30 @@
       "revId": "b44b8d99284c49f7b50d7b2f9166677d752d8334",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5158edf4_8ea1b365",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 11
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-05T14:42:28Z",
+      "side": 1,
+      "message": "At least for me (gerrit-ci.gerritforge.com has successful builds today), this change seems to be required now for building Gerrit on branch stable-2.14. With node 6, I get this error during the Polygerrit tests, when wct is executed:\n\n  TypeError: util_1.promisify is not a function\n\nutil_1.promisify is only supported with node 8+ (https://stackoverflow.com/a/46489275 (The workaround described in the thread didn\u0027t work for me)). Applying this change (although the --unsafe-perm flag for npm install was needed in line 71) let the build proceed further. But it currently still fails for me with this error later on, after starting the Selenium server:\n\n  session not created exception: Chrome version must be \u003e\u003d 66.0.3359.0\n\nI don\u0027t know whether that is directly related or an independent issue.",
+      "parentUuid": "31e42e5d_bd0ff404",
+      "range": {
+        "startLine": 54,
+        "startChar": 46,
+        "endLine": 54,
+        "endChar": 47
+      },
+      "revId": "b44b8d99284c49f7b50d7b2f9166677d752d8334",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
