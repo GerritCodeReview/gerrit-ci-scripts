@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "c78eaab6_a0c08c20",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-06T09:09:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "57b9592f_51d189fe",
+      "range": {
+        "startLine": 31,
+        "startChar": 4,
+        "endLine": 31,
+        "endChar": 9
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "18ee2279_71cb4598",
         "filename": "jenkins-docker/slave-debian/Dockerfile",
         "patchSetId": 3
@@ -69,6 +93,30 @@
       "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db66cfb8_7c7ef33e",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-06T09:09:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "18ee2279_71cb4598",
+      "range": {
+        "startLine": 32,
+        "startChar": 4,
+        "endLine": 32,
+        "endChar": 22
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -116,6 +164,30 @@
       "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6050c40f_8e6a0fd4",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-06T09:09:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9c9a2914_1a8ae0d9",
+      "range": {
+        "startLine": 74,
+        "startChar": 37,
+        "endLine": 74,
+        "endChar": 53
+      },
+      "revId": "8122bccba1fe92bbf3d2538d5e67175e88b3e0e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
