@@ -61,7 +61,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 # Node JS for PolyGerrit build
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_9.x | bash -
 RUN apt-get update && apt-get install -y nodejs
 
 # PolyGerrit tests
@@ -77,7 +77,7 @@ RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
-RUN npm install -g eslint@"=4.19.0" eslint-config-google eslint-plugin-html typescript fried-twinkie@">0.2.0" polylint polymer-cli web-component-tester
+RUN npm install --unsafe-perm -g eslint@"=4.19.0" eslint-config-google eslint-plugin-html typescript fried-twinkie@">0.2.0" polylint polymer-cli web-component-tester
 
 # Allow Android SDK tools to run on a 64-bit system, see
 # http://stackoverflow.com/a/23201209/1127485
