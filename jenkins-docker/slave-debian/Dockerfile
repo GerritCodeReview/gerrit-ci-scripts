@@ -57,11 +57,6 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
-# Node JS for PolyGerrit build
-
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get update && apt-get install -y nodejs
-
 # PolyGerrit tests
 
 # pin Chrome version to 63.0.3239.108, stable chrome version on: 2018-01-24.
@@ -71,6 +66,14 @@ RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
     wget -O /tmp/chrome64_63.0.3239.108.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_63.0.3239.108.deb && \
     (dpkg -i /tmp/chrome64_63.0.3239.108.deb; apt-get install -f -y) && \
     rm /tmp/chrome64_63.0.3239.108.deb
+
+# Node JS for PolyGerrit build
+
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get update && apt-get install -y nodejs gcc g++ make && \
+    curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    apt-get update && apt-get install yarn
 
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
