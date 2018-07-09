@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fbd306bf_5903fdd0",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-07-09T11:10:19Z",
+      "side": 1,
+      "message": "Need to change 6.6.0 to 6.7.1.",
+      "revId": "10faf5fc3c606b98a15c822a4883bf12915ef268",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
