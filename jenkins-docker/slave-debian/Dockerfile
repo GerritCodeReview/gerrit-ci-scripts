@@ -61,13 +61,13 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 # PolyGerrit tests
 
-# pin Chrome version to 63.0.3239.108, stable chrome version on: 2018-01-24.
+# pin Chrome version to 66.0.3359.181
 RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y wget curl zip fonts-liberation && \
-    wget -O /tmp/chrome64_63.0.3239.108.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_63.0.3239.108.deb && \
-    (dpkg -i /tmp/chrome64_63.0.3239.108.deb; apt-get install -f -y) && \
-    rm /tmp/chrome64_63.0.3239.108.deb
+    wget -O /tmp/chrome.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_66.0.3359.181.deb && \
+    (dpkg -i /tmp/chrome.deb; apt-get install -f -y) && \
+    rm /tmp/chrome.deb
 
 # Node JS for PolyGerrit build
 
@@ -80,7 +80,8 @@ RUN apt-get update && apt-get install -y nodejs gcc g++ make && \
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
-RUN npm install --unsafe-perm -g eslint@"=4.19.0" eslint-config-google eslint-plugin-html typescript fried-twinkie@">0.2.0" polylint polymer-cli web-component-tester
+RUN npm install --unsafe-perm -g eslint@"=4.19.0" eslint-config-google eslint-plugin-html typescript fried-twinkie@">0.2.0" polylint polymer-cli
+RUN npm install --unsafe-perm -g 'web-component-tester@6.7.1'
 
 # Allow Android SDK tools to run on a 64-bit system, see
 # http://stackoverflow.com/a/23201209/1127485
