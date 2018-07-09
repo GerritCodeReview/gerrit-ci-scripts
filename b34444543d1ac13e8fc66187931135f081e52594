@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "025d4131_a5311ff7",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-09T23:35:08Z",
+      "side": 1,
+      "message": "would be best to have this method to return the message body, rather than relying on side-effects by its subclasses.",
+      "range": {
+        "startLine": 81,
+        "startChar": 2,
+        "endLine": 81,
+        "endChar": 30
+      },
+      "revId": "b34444543d1ac13e8fc66187931135f081e52594",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c8301e3_01057d5c",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-09T23:35:08Z",
+      "side": 1,
+      "message": "return",
+      "range": {
+        "startLine": 95,
+        "startChar": 4,
+        "endLine": 95,
+        "endChar": 14
+      },
+      "revId": "b34444543d1ac13e8fc66187931135f081e52594",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7f1d6b6a_fa29e377",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-09T23:35:08Z",
+      "side": 1,
+      "message": "return",
+      "range": {
+        "startLine": 117,
+        "startChar": 4,
+        "endLine": 117,
+        "endChar": 13
+      },
+      "revId": "b34444543d1ac13e8fc66187931135f081e52594",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0258ddc8_748f7b3d",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-09T23:35:08Z",
+      "side": 1,
+      "message": "addLabel",
+      "range": {
+        "startLine": 140,
+        "startChar": 6,
+        "endLine": 140,
+        "endChar": 11
+      },
+      "revId": "b34444543d1ac13e8fc66187931135f081e52594",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
