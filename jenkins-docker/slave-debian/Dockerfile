@@ -80,7 +80,7 @@ RUN apt-get update && apt-get install -y nodejs gcc g++ make && \
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
-RUN npm install --unsafe-perm -g eslint@"=4.19.0" eslint-config-google eslint-plugin-html typescript fried-twinkie@">0.2.0" polylint polymer-cli web-component-tester
+RUN npm install --unsafe-perm -g eslint@"=4.19.0" eslint-config-google eslint-plugin-html typescript fried-twinkie@">0.2.0" polylint polymer-cli web-component-tester@6.6.0
 
 # Allow Android SDK tools to run on a 64-bit system, see
 # http://stackoverflow.com/a/23201209/1127485
