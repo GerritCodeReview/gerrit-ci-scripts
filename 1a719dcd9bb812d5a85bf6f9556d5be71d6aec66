@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2fbb71c8_1b5317fa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-07-09T09:46:59Z",
+      "side": 1,
+      "message": "an",
+      "range": {
+        "startLine": 10,
+        "startChar": 5,
+        "endLine": 10,
+        "endChar": 8
+      },
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "87d29344_adef2783",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-07-09T09:46:59Z",
+      "side": 1,
+      "message": "[optional] name it just AbstractLabel\n\nFrom the project name and context we know that it is about Gerrit.",
+      "range": {
+        "startLine": 40,
+        "startChar": 15,
+        "endLine": 40,
+        "endChar": 34
+      },
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "796f4287_429eb2f8",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-07-09T09:46:59Z",
+      "side": 1,
+      "message": "Why use a mix of single/double quotes? I am not a groovy developer but looks like single\nquoted strings are the normal Java strings and double quoted strings are used for templates [1].\n\n[1] https://stackoverflow.com/a/6761591",
+      "range": {
+        "startLine": 346,
+        "startChar": 60,
+        "endLine": 346,
+        "endChar": 72
+      },
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d71c790c_4dbb5586",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-07-09T09:46:59Z",
+      "side": 1,
+      "message": "Here we already know that a CodeStyleLabel instance needs to be created, so why not create it here?\n\nWhy pass a \u0027Code-Style\u0027 string to the label method which then has to perform if/else-if tests\nto decode the passed label name into a class name?",
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "824c46da_c07abc1b",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-07-09T09:46:59Z",
+      "side": 1,
+      "message": "Similarly here, why not instantiate VerifyLabel here?",
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
