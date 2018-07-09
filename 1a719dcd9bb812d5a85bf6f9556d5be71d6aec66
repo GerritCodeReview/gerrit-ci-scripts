@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6f276dcd_b0ab1c35",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-09T15:53:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2fbb71c8_1b5317fa",
+      "range": {
+        "startLine": 10,
+        "startChar": 5,
+        "endLine": 10,
+        "endChar": 8
+      },
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "87d29344_adef2783",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 2
@@ -45,6 +69,30 @@
       "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62795e60_6af8ce67",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-09T15:53:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87d29344_adef2783",
+      "range": {
+        "startLine": 40,
+        "startChar": 15,
+        "endLine": 40,
+        "endChar": 34
+      },
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -88,6 +136,48 @@
     },
     {
       "key": {
+        "uuid": "3a690e23_4c95fd64",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-09T15:53:36Z",
+      "side": 1,
+      "message": "I agree, I didn\u0027t separate concerns well. The best way, I guess, would be to implement a factory for labels, but for this script that might be a bit over the top.\nFor now at least, I moved the instantiation of the label objects into the buildChange() method.",
+      "parentUuid": "d71c790c_4dbb5586",
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b4e558f9_1f90b0d7",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-09T15:53:36Z",
+      "side": 1,
+      "message": "Quotes are generally not used consistently in the script (no excuse for me doing the same). Here it was resolved by the changes I made for your previous comments, but in general double quotes would be best to be used here, since they are consistent with most strings in the script and they also work as normal strings.",
+      "parentUuid": "796f4287_429eb2f8",
+      "range": {
+        "startLine": 346,
+        "startChar": 60,
+        "endLine": 346,
+        "endChar": 72
+      },
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "824c46da_c07abc1b",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 2
@@ -102,6 +192,24 @@
       "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c313e34_87b8071e",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-09T15:53:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "824c46da_c07abc1b",
+      "revId": "1a719dcd9bb812d5a85bf6f9556d5be71d6aec66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
