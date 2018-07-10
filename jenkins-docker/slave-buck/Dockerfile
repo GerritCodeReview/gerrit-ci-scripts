@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-debian:jessie
+FROM gerritforge/gerrit-ci-slave-debian:jessie-66.0.3359.181
 
 # Buck build
 
