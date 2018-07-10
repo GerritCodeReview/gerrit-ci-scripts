@@ -1,12 +1,13 @@
 NO_CACHE=false
 IMAGE=gerritforge/gerrit-ci-slave-buck:debian-jessie
-CHROME_VER ?= 66.0.3359.181
+NODE_VER ?= 10
+WCT_VER ?= 6.7.1
 
 # Targets
 
 build:
-	cat Dockerfile | CHROME_VER=$(CHROME_VER) envsubst > Dockerfile-$(CHROME_VER)
-	docker build -f Dockerfile-$(CHROME_VER) --no-cache=$(NO_CACHE) -t ${IMAGE} .
+	cat Dockerfile | NODE_VER=$(NODE_VER) WCT_VER=$(WCT_VER) envsubst > Dockerfile-$(NODE_VER)-$(WCT_VER)
+	docker build -f Dockerfile-$(NODE_VER)-$(WCT_VER) --no-cache=$(NO_CACHE) -t $(IMAGE) .
 
 publish:
 	docker push ${IMAGE}
