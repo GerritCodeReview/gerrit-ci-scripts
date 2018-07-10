@@ -46,6 +46,30 @@
       "revId": "f8f0ac213ce1138a4682b00949b773591d6ec901",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4fe696b7_d0a79671",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-10T15:11:18Z",
+      "side": 1,
+      "message": "On stretch the following line installs the JDK 8:\n  RUN apt-get update \u0026\u0026 apt-get install -y wget software-properties-common default-jdk",
+      "parentUuid": "494a2636_b942e44e",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 38
+      },
+      "revId": "f8f0ac213ce1138a4682b00949b773591d6ec901",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
