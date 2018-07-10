@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1b9ea6b1_db424cd4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-10T20:31:15Z",
+      "side": 1,
+      "message": "You are right, I messed up this change in my chain :-(\nThis has nothing to do with  the switch to Debian/Jessie",
+      "parentUuid": "b6762770_a0806814",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 32
+      },
+      "revId": "411c192f406c8b1619f120f46d2884e1f42d3580",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "78b341bb_047e1f73",
         "filename": "jenkins-docker/slave-debian/Dockerfile",
         "patchSetId": 4
@@ -59,6 +83,30 @@
       "writtenOn": "2018-07-10T15:47:29Z",
       "side": 1,
       "message": "Is that related to fixing the Bazel setup or rather bumping to nodejs 10?",
+      "range": {
+        "startLine": 75,
+        "startChar": 48,
+        "endLine": 78,
+        "endChar": 42
+      },
+      "revId": "411c192f406c8b1619f120f46d2884e1f42d3580",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c8a4f83a_495d5d8b",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-10T20:31:15Z",
+      "side": 1,
+      "message": "Honestly, I don\u0027t remember. Let me try to pull this out and see if that still works ;-)",
+      "parentUuid": "80cf84c9_447b2fc1",
       "range": {
         "startLine": 75,
         "startChar": 48,
