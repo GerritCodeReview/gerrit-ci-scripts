@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-debian:jessie
+FROM gerritforge/gerrit-ci-slave-chrome:jessie-$CHROME_VER
 
 # Buck build
 
