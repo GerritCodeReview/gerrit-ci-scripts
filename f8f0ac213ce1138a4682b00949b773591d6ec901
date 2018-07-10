@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ef346b9_3595568b",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2018-07-10T12:33:56Z",
+      "side": 1,
+      "message": "Shoulden\u0027t we install java8 if we were on stretch?",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 38
+      },
+      "revId": "f8f0ac213ce1138a4682b00949b773591d6ec901",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
