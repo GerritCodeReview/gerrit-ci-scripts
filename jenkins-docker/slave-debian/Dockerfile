@@ -57,16 +57,6 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
-# PolyGerrit tests
-
-# pin Chrome version to 66.0.3359.181
-RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
-    apt-get update && \
-    apt-get install -y wget curl zip fonts-liberation && \
-    wget -O /tmp/chrome.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_66.0.3359.181.deb && \
-    (dpkg -i /tmp/chrome.deb; apt-get install -f -y) && \
-    rm /tmp/chrome.deb
-
 # Node JS for PolyGerrit build
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
