@@ -116,6 +116,30 @@
       "revId": "411c192f406c8b1619f120f46d2884e1f42d3580",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5ad16a1d_876c6a6a",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-07-10T20:40:30Z",
+      "side": 1,
+      "message": "Not related at all and not needed either. Let me get rid of it as it makes the change confusing.",
+      "parentUuid": "c8a4f83a_495d5d8b",
+      "range": {
+        "startLine": 75,
+        "startChar": 48,
+        "endLine": 78,
+        "endChar": 42
+      },
+      "revId": "411c192f406c8b1619f120f46d2884e1f42d3580",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
