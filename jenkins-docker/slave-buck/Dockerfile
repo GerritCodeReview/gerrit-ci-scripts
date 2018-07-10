@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-chrome:jessie-66.0.3359.181
+FROM gerritforge/gerrit-ci-slave-node-wct:10-6.7.1 
 
 # Buck build
 
