@@ -80,7 +80,7 @@ RUN npm install --unsafe-perm -g 'web-component-tester@6.7.1'
 
 # Allow Android SDK tools to run on a 64-bit system, see
 # http://stackoverflow.com/a/23201209/1127485
-RUN apt-get install -y lib32stdc++6 lib32z1
+RUN apt-get update && apt-get install -y lib32stdc++6 lib32z1
 
 RUN /etc/init.d/ssh start
 
