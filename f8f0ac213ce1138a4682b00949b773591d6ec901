@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "d939a08d_4064525c",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-10T15:31:52Z",
+      "side": 1,
+      "message": "I guess this command was added for debugging reasons,was it? I think it can be removed.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 29
+      },
+      "revId": "f8f0ac213ce1138a4682b00949b773591d6ec901",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5ef346b9_3595568b",
         "filename": "jenkins-docker/slave-debian/Dockerfile",
         "patchSetId": 4
