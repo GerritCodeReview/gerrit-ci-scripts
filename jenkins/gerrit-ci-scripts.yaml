@@ -27,15 +27,12 @@
     triggers:
       - timed: "@midnight"
     builders:
+      - shell: docker system prune -af
       - shell: |
           export JENKINS_WAR_VER=2.25
           export JENKINS_WAR_SHA=1c4a750b7d7102c5fc9b78550fd3dcc93d7374da
-          export DOCKER_HOST=tcp://127.0.0.1:2375
           cd jenkins-docker
           make NO_CACHE=true build
-          docker ps -qf status=exited | while read id; do docker rm -f $id; done
-          docker volume ls -qf dangling=true | while read id; do docker volume rm $id; done
-          docker rmi -f $(docker images --filter "dangling=true" -q)
 
 - job:
     name: gerrit-ci-scripts-manual
