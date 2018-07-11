@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "db25efb6_1ec50555",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-11T07:04:06Z",
+      "side": 1,
+      "message": "This is not related to this change, but to the one adding the chrome layer. Should be moved to Change 188171.",
+      "range": {
+        "startLine": 1,
+        "startChar": 34,
+        "endLine": 1,
+        "endChar": 40
+      },
+      "revId": "495af08fb9b53ff8ef707f221c6d7ce862458243",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
