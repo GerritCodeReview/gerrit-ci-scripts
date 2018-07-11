@@ -71,11 +71,17 @@ RUN echo "2.0" > $JENKINS_REF/jenkins.install.UpgradeWizard.state && \
 
 COPY gitconfig $JENKINS_REF/.gitconfig
 
-RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
-    echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list && \
-    apt-get update && \
-    apt-cache policy docker-engine && \
-    apt-get install -y docker-engine=1.11.2-0~jessie
+RUN apt-get install -y \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     gnupg2 \
+     software-properties-common && \
+     curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
+     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian jessie stable" && \
+     apt-get update && \
+     apt-cache policy docker-engine && \
+     apt-get install -y docker-ce=18.03.0.ce
 
 COPY id_rsa* $JENKINS_REF/.ssh/
 RUN chown jenkins:jenkins $JENKINS_REF/.ssh/id_rsa* && \
