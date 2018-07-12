@@ -6,7 +6,7 @@ RUN echo "deb http://http.debian.net/debian/ $DEBIAN_VER contrib" >> /etc/apt/so
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install -y wget software-properties-common default-jdk
+RUN apt-get update && apt-get install -y software-properties-common default-jdk
 
 COPY set-java.sh /usr/bin/
 
