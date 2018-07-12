@@ -4,7 +4,8 @@ FROM gerritforge/gerrit-ci-slave-buck:debian-jessie
 RUN apt-get update && \
     curl -fsSLo /tmp/bazel_0.14.0-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.14.0/bazel_0.14.0-linux-x86_64.deb && \
     (dpkg -i /tmp/bazel_0.14.0-linux-x86_64.deb; apt-get install -f -y) && \
-    rm /tmp/bazel_0.14.0-linux-x86_64.deb
+    rm /tmp/bazel_0.14.0-linux-x86_64.deb && \
+    bash -c '. set-java.sh 8 && bazel version'
 
 # Install buildifier utility (0.12.0)
 RUN cd /tmp && \
