@@ -2,7 +2,7 @@
 
 if [ -f "gerrit/BUILD" ]
 then
-  git read-tree -u --prefix=gerrit gerrit/{branch}
+  git read-tree -u --prefix=gerrit gerrit/{gerrit-branch}
   . set-java.sh 8
 
   pushd gerrit
