@@ -64,10 +64,10 @@ RUN apt-get update && apt-get install -y google-chrome-stable
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
-RUN apt-get install -y unzip wget
+RUN apt-get install -y unzip 
 RUN mkdir /tmp/chromedriver/
 ADD http://chromedriver.storage.googleapis.com/LATEST_RELEASE /tmp/chromedriver/LATEST_RELEASE
-RUN wget -O /tmp/chromedriver/chromedriver.zip 'http://chromedriver.storage.googleapis.com/'$(cat /tmp/chromedriver/LATEST_RELEASE)'/chromedriver_linux64.zip'
+RUN curl -fsSLo /tmp/chromedriver/chromedriver.zip 'http://chromedriver.storage.googleapis.com/'$(cat /tmp/chromedriver/LATEST_RELEASE)'/chromedriver_linux64.zip'
 RUN unzip /tmp/chromedriver/chromedriver.zip chromedriver -d /usr/local/bin/
 RUN chmod a+x /usr/local/bin/chromedriver
 
