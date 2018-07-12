@@ -26,7 +26,7 @@
            - gerrit:
                url: https://gerrit.googlesource.com/gerrit
            - gitblit:
-               url: https://github.com/gitblit/gitblit.git
+               url: https://gerrit.googlesource.com/gitblit
          branches:
            - origin/{branch}
          submodule:
@@ -63,9 +63,9 @@
            - origin:
                url: https://gerrit.googlesource.com/plugins/gitblit
            - gitblit:
-               url: https://github.com/gitblit/gitblit.git
+               url: https://gerrit.googlesource.com/gitblit
            - gerrit:
-               url: https://gerrit.googlesource.com/gerrit.git
+               url: https://gerrit.googlesource.com/gerrit
          branches:
            - origin/{branch}
          submodule:
