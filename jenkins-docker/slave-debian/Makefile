@@ -1,9 +1,11 @@
 NO_CACHE ?= false
 IMAGE=gerritforge/gerrit-ci-slave-debian
+VERSIONS=jessie stretch
 
-build: build_stretch build_jessie
+build publish:
+	for ver in $(VERSIONS); do make $@_$$ver; done
 
-publish: publish_stretch publish_jessie
+build_jessie: jessie docker_build
 
 build_stretch: stretch docker_build
 
@@ -13,7 +15,7 @@ build_jessie: jessie docker_build
 
 publish_jessie: jessie docker_publish
 
-docker_build:  id_rsa.pub
+docker_build:
 	@echo "Building Docker for Debian:$(DEBIAN_VER)"
 	@echo "========================================"
 	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
@@ -32,5 +34,5 @@ clean:
 	docker rmi -f ${IMAGE}
 	-rm -f id_rsa*
 
-.PHONY: clean id_rsa.pub publish
+.PHONY: clean id_rsa.pub publish docker_build
 
