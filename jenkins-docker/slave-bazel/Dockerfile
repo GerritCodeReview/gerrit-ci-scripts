@@ -2,7 +2,7 @@ FROM gerritforge/gerrit-ci-slave-buck:debian-jessie
 
 # Bazel 0.14.0
 RUN apt-get update && \
-    wget -O /tmp/bazel_0.14.0-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.14.0/bazel_0.14.0-linux-x86_64.deb && \
+    curl -fsSLo /tmp/bazel_0.14.0-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.14.0/bazel_0.14.0-linux-x86_64.deb && \
     (dpkg -i /tmp/bazel_0.14.0-linux-x86_64.deb; apt-get install -f -y) && \
     rm /tmp/bazel_0.14.0-linux-x86_64.deb
 
