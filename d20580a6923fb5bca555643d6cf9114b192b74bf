@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6f620456_d9083113",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-07-12T07:44:26Z",
+      "side": 1,
+      "message": "trailing whitespace",
+      "revId": "d20580a6923fb5bca555643d6cf9114b192b74bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
