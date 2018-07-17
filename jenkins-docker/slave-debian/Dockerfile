@@ -28,10 +28,12 @@ RUN apt-get update && apt-get install -y \
     vim \
     && rm -rf /var/lib/apt/lists/*
 
+
 RUN [ "$DEBIAN_VER" != "jessie" ] || \
        ( echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
          apt-get update && \
          apt-get install -y -t jessie-backports openjdk-8-jdk && \
+         apt-get install -y -t jessie-backports git && \
          update-java-alternatives -s java-1.8.0-openjdk-amd64 && \
          mv /etc/apt/sources.list.d/jessie-backports.list /etc/apt/sources.list.d/jessie-backports.list.disabled && \
          apt-get update && \
