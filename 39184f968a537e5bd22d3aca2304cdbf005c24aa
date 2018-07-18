@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f10dace_4b68dd8e",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-07-18T10:00:29Z",
+      "side": 1,
+      "message": "The latest is meantie 0.15.2. Should we upgrade to it, instead of 0.15.0?",
+      "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
