@@ -16,6 +16,24 @@
       "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eb5fe594_dce5c445",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-07-18T10:10:02Z",
+      "side": 1,
+      "message": "Wasn\u0027t aware of that.  I can update this, but have you been using 0.15.2 and can confirm that it works on all the branches?",
+      "parentUuid": "7f10dace_4b68dd8e",
+      "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
