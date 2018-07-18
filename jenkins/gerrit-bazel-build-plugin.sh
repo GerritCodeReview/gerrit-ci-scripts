@@ -17,7 +17,7 @@ bazel build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
 for JAR in $(find bazel-genfiles/plugins/{name} -name {name}*.jar)
 do
-    PLUGIN_VERSION=$(git describe  --always origin/{branch})
+    PLUGIN_VERSION=$(cat bazel-out/stable-status.txt | grep STABLE_BUILD | grep LABEL | cut -d ' ' -f 2)
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=bazel-genfiles/plugins/{name}/$(basename $JAR)
