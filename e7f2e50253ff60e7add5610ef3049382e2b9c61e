@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "11e37b41_13bb2f2b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-19T14:20:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2371465d_104cbb18",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 8
+      },
+      "revId": "e7f2e50253ff60e7add5610ef3049382e2b9c61e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "566ac14f_ec25446f",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -36,6 +60,24 @@
       "writtenOn": "2018-07-19T14:11:44Z",
       "side": 1,
       "message": "Why should we prefer this style?",
+      "revId": "e7f2e50253ff60e7add5610ef3049382e2b9c61e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f15c7fa2_b98783a8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-19T14:20:43Z",
+      "side": 1,
+      "message": "IMHO it is the style that is the most readable. Using only a dollar sign without brackets makes it easier to miss variables in strings, if no colour coding is used, like in the internal editor of Jenkins.\nBut if another style is preferred for this project, I am of course open for suggestions.",
+      "parentUuid": "566ac14f_ec25446f",
       "revId": "e7f2e50253ff60e7add5610ef3049382e2b9c61e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
