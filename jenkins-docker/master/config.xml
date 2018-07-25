@@ -164,7 +164,7 @@
         </com.nirima.jenkins.plugins.docker.DockerTemplate>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
-          <labelString>bazel-debian</labelString>
+          <labelString>bazel</labelString>
           <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
             <sshConnector plugin="ssh-slaves@1.11">
               <port>22</port>
@@ -185,7 +185,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/jenkins-slave-bazel:debian</image>
+            <image>gerritforge/gerrit-ci-slave-bazel:debian-jessie</image>
             <dockerCommand>bash -x /bin/start.sh</dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
