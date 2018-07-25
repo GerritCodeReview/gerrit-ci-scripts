@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "215980d9_62880fb8",
+        "filename": "jenkins-docker/slave-mvn/Dockerfile",
+        "patchSetId": 11
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-25T07:52:08Z",
+      "side": 1,
+      "message": "This is needed for the SSH-connection to work correctly, when using the SSH-key injection method.\nThe builds are run by the \u0027jenkins\u0027-user as configured in the config.xml.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 9
+      },
+      "revId": "e9fd028e8573b5c7e1125d5ba05a07739f069eb9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
