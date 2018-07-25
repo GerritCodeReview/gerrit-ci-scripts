@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a8b25c09_5e8f0672",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-07-25T08:15:28Z",
+      "side": 1,
+      "message": "Is this configuration (and the dnsHosts and environment variables) still needed, when using the updated docker images or can they be removed?",
+      "range": {
+        "startLine": 189,
+        "startChar": 27,
+        "endLine": 189,
+        "endChar": 48
+      },
+      "revId": "58777027c0133f7fccc1b1718280126890d91bdd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
