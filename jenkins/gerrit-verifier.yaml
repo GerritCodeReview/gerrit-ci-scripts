@@ -128,7 +128,7 @@
     name: Gerrit-verifier-bazel
     description: "Gerrit build of open change with BUCK\n"
     defaults: verifier-defaults
-    node: bazel-debian
+    node: bazel
 
     builders:
       - merge-target-branch
@@ -153,7 +153,7 @@
     name: Gerrit-codestyle
     description: "Gerrit code-style checker for an open change\n"
     defaults: verifier-defaults
-    node: bazel-debian
+    node: bazel
 
     builders:
       - merge-target-branch
