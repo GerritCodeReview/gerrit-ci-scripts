@@ -34,6 +34,24 @@
       "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "90be8685_5ce5b681",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-08-01T11:12:38Z",
+      "side": 1,
+      "message": "This can be 0.16.0 now. It was released yesterday and it works here.",
+      "parentUuid": "eb5fe594_dce5c445",
+      "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
