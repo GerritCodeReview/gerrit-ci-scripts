@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
     xsltproc \
     zip \
     vim \
+    gettext-base \
     && rm -rf /var/lib/apt/lists/*
 
 
