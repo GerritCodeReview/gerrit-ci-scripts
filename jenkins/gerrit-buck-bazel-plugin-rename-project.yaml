@@ -1,0 +1,7 @@
+- project:
+    name: rename-project
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.15
