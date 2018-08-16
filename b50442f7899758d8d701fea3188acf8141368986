@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c3d6c37c_26e05e63",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-rename-project.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1012987
+      },
+      "writtenOn": "2018-08-16T00:28:18Z",
+      "side": 1,
+      "message": "Should we add stable-2.14 as well?",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "b50442f7899758d8d701fea3188acf8141368986",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
