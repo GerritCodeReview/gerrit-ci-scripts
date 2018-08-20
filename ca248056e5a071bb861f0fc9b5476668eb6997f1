@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "be982748_07f347cd",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-rename-project.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-08-20T00:28:57Z",
+      "side": 1,
+      "message": "The file should be named \"gerrit-bazel-plugin-rename-project.yaml\".\n\nI.e. remove \"buck\" from the name, since there is no buck build.",
+      "revId": "ca248056e5a071bb861f0fc9b5476668eb6997f1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97563f0b_72b1175f",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-rename-project.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-08-20T00:28:57Z",
+      "side": 1,
+      "message": "There is no stable-2.15 branch on the plugin.",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "ca248056e5a071bb861f0fc9b5476668eb6997f1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
