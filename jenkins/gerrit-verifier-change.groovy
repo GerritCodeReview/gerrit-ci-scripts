@@ -119,11 +119,9 @@ class CodeStyleLabel extends AbstractLabel {
 
   private def findCodestyleFilesInLog() {
     def codestyleFiles = []
-    def needsFormatting = false
     def codestyleLogReader = build.getLogReader()
     codestyleLogReader.eachLine {
-      needsFormatting = needsFormatting || (it ==~ /.*Need Formatting.*/)
-      if(needsFormatting && it ==~ /\[.*\]/) {
+      if(it ==~ /\[.*\]/) {
         codestyleFiles += it.substring(1,it.length()-1)
       }
     }
