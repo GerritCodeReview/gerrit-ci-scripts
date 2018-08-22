@@ -162,7 +162,15 @@
          #!/bin/bash -xe
          cd gerrit
          echo 'Running google-java-format check...'
-         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format-1.6 -n --set-exit-if-changed
+         LOG=$(git show --diff-filter=AM --name-only --pretty= HEAD \
+             | grep 'java$' \
+             | xargs --no-run-if-empty ~/format/google-java-format-1.6 -n)
+         if [[ -n $LOG ]]; then
+           echo "Need Formatting"
+           echo "["
+           echo ${LOG}
+           echo "]"
+         fi
       - shell: |
          #!/bin/bash -xe
          cd gerrit
