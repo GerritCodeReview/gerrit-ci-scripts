@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79bd3bf8_8db0c3ea",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-08-22T06:31:09Z",
+      "side": 0,
+      "message": "It was a blind fix. Does anybody have an idea how to verify it, except to apply that change in production?",
+      "range": {
+        "startLine": 125,
+        "startChar": 43,
+        "endLine": 125,
+        "endChar": 73
+      },
+      "revId": "582bc6697fdf14f31c1a3a44eeb5468a62e1d725",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
