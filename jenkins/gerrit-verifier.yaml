@@ -168,7 +168,15 @@
            GJF=$(find 'tools/format' -regex '.*/google-java-format-[0-9][0-9]*\.[0-9][0-9]*')
          fi
          echo 'Running google-java-format check...'
-         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r $GJF -n --set-exit-if-changed
+         LOG=$(git show --diff-filter=AM --name-only --pretty= HEAD \
+             | grep 'java$' \
+             | xargs --no-run-if-empty $GJF -n)
+         if [[ -n $LOG ]]; then
+           echo "Need Formatting"
+           echo "["
+           echo "$LOG"
+           echo "]"
+         fi
       - shell: |
          #!/bin/bash -xe
          cd gerrit
