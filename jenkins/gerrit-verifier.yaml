@@ -159,10 +159,18 @@
       - merge-target-branch
       - fetch-all-submodules
       - shell: |
-         #!/bin/bash -xe
+         #!/bin/bash -x
          cd gerrit
          echo 'Running google-java-format check...'
-         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format-1.6 -n --set-exit-if-changed
+         LOG=/tmp/$$.gjf.log
+         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format-1.6 -n --set-exit-if-changed > ${LOG}
+         if [[ $? != 0 ]]; then
+           echo "Need Formatting"
+           echo "["
+           expand ${LOG}
+           echo "]"
+         fi
+         rm -f ${LOG}
       - shell: |
          #!/bin/bash -xe
          cd gerrit
