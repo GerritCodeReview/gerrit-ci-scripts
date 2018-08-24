@@ -88,6 +88,24 @@
       "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f55863e_efc6eca0",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-08-24T06:33:01Z",
+      "side": 1,
+      "message": "Done.  The problem mentioned before is resolved by moving bazel out of homebrew core, into its own tap [1].\n\nOf course, this is irrelevant to CI which uses debian.  However as far as I can see, version 0.16.1 does not require Java 9 as I previously thought it might, so we should be OK to go ahead with this.\n\n[1] https://blog.bazel.build/2018/08/22/bazel-homebrew.html",
+      "parentUuid": "817afaee_3c38c13a",
+      "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
