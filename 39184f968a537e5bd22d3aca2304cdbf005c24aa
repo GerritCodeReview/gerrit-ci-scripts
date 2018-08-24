@@ -124,6 +124,24 @@
       "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8964d171_bc600c96",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-08-24T06:42:31Z",
+      "side": 1,
+      "message": "Well, we can keep saying we wait for the next release, but there\u0027s always a next release and we\u0027ll never merge anything.\n\nI don\u0027t think we need to update any docs.  IIRC in previous discussions we\u0027ve said that we don\u0027t provide specific per platform installation instructions; we just say what is needed and let the user find the relevant instructions for their platform.",
+      "parentUuid": "4500b865_02837f8a",
+      "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
