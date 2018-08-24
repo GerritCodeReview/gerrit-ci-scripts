@@ -106,6 +106,24 @@
       "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4500b865_02837f8a",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-08-24T06:38:20Z",
+      "side": 1,
+      "message": "Another thought is to wait for 0.17.0, as this would allow us to build gerrit with JDK 10. See also pending change for JDK 10 support.\n\n\u003e [1] https://blog.bazel.build/2018/08/22/bazel-homebrew.html\n\nUnrelated here, but should we update dev-bazel.txt to reflect that Bazel distro move for Mac users?",
+      "parentUuid": "3f55863e_efc6eca0",
+      "revId": "39184f968a537e5bd22d3aca2304cdbf005c24aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
