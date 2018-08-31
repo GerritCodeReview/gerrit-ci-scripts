@@ -70,6 +70,30 @@
       "revId": "a86195c07395119c6aa5fdfca1e47b611893ef78",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b95f4d7a_cab4bd13",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-08-31T03:56:48Z",
+      "side": 1,
+      "message": "\u003e OK, then we need to backport the new toolchain to stable-2.14 and stable-2.15 before doing that.\n\u003e \n+1. Should be trivial to do, just to adjust the Bazel packages from //java/..., //javatets/... to older package names, e.g.: //gerrit-server/..., etc.",
+      "parentUuid": "7704ee45_88a5b9ea",
+      "range": {
+        "startLine": 6,
+        "startChar": 19,
+        "endLine": 6,
+        "endChar": 66
+      },
+      "revId": "a86195c07395119c6aa5fdfca1e47b611893ef78",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
