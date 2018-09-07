@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cfd58ec6_a302032c",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-09-07T22:15:32Z",
+      "side": 1,
+      "message": "Fails on master",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f148a9a3_cbfb4e65",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-09-07T22:15:32Z",
+      "side": 1,
+      "message": "That\u0027s the only one that works",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "955cb8fd_c460c6dc",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-09-07T22:15:32Z",
+      "side": 1,
+      "message": "Fails on 2.14",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
