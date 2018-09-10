@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "3ff3dbe8_dd772a49",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-09-10T00:28:36Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f148a9a3_cbfb4e65",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "955cb8fd_c460c6dc",
         "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
         "patchSetId": 5
@@ -59,6 +83,30 @@
       "writtenOn": "2018-09-07T22:15:32Z",
       "side": 1,
       "message": "Fails on 2.14",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce65024c_17dd10bb",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-09-10T00:28:36Z",
+      "side": 1,
+      "message": "Can you share the logs?  The stable-2.14 branch is working OK locally.",
+      "parentUuid": "955cb8fd_c460c6dc",
       "range": {
         "startLine": 8,
         "startChar": 14,
