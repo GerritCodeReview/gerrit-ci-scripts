@@ -116,6 +116,30 @@
       "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9197dd95_8916ff3f",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-09-10T00:29:31Z",
+      "side": 1,
+      "message": "Never mind.  I see now that the tests are failing.",
+      "parentUuid": "ce65024c_17dd10bb",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
