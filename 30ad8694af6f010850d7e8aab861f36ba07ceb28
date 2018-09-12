@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e116f737_aabeec79",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-09-12T02:54:28Z",
+      "side": 1,
+      "message": "Point should be escaped as well here: \\.bzl$. Otherwise when tools/bzl/license-map-bzl is added we still have a match:\n\n  $ commit\n  tools/bzl/license-map-bzl\n  tools/bzl/license-map.py\n\nAnd running the amended regex:\n\n  $ git show --diff-filter\u003dAM --name-only --pretty\u003d\"\" HEAD | grep --regex \"WORKSPACE\\|BUILD\\|.bzl$\"\n  tools/bzl/license-map-bzl",
+      "range": {
+        "startLine": 192,
+        "startChar": 118,
+        "endLine": 192,
+        "endChar": 119
+      },
+      "revId": "30ad8694af6f010850d7e8aab861f36ba07ceb28",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
