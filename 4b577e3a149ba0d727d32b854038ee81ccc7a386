@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c32adec2_567c1fa0",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-09-16T23:12:55Z",
+      "side": 1,
+      "message": "Build failed with:\n  symbol:   class Accessor\n  location: class DatabaseRenameHandler\nplugins/rename-project/src/main/java/com/googlesource/gerrit/plugins/renameproject/database/DatabaseRenameHandler.java:56: error: package WatchConfig does not exist\n      Provider\u003cWatchConfig.Accessor\u003e watchConfig) {",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "4b577e3a149ba0d727d32b854038ee81ccc7a386",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
