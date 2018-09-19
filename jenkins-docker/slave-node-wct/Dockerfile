@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-chrome:jessie-66.0.3359.181
+FROM gerritforge/gerrit-ci-slave-chrome:jessie-69.0.3497.92
 
 # Node JS for PolyGerrit build
 
