@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 cd gerrit
+. set-java.sh 8
 
 export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_output errors \
