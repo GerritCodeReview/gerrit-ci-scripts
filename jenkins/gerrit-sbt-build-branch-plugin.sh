@@ -1,10 +1,10 @@
 #!/bin/bash -e
 
+git read-tree -u --prefix=gerrit gerrit/{gerrit-branch}
+. set-java.sh 8
+
 if [ -f "gerrit/BUILD" ]
 then
-  git read-tree -u --prefix=gerrit gerrit/{gerrit-branch}
-  . set-java.sh 8
-
   pushd gerrit
   bazel build api
   ./tools/maven/api.sh install
