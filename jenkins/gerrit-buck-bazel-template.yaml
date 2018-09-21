@@ -201,3 +201,16 @@
       - stable-2.10
     jobs:
       - 'Gerrit-{branch}'
+
+- view:
+    name: Gerrit
+    view-type: list
+    columns:
+      - status
+      - weather
+      - job
+      - last-success
+      - last-failure
+      - last-duration
+      - build-button
+    regex: 'Gerrit-.*'

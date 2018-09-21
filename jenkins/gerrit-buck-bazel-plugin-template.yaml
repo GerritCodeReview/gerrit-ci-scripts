@@ -63,3 +63,30 @@
       - archive:
          artifacts: >
            bazel-genfiles/plugins/{name}/*{name}*.jar*,bazel-genfiles/plugins/{name}/{name}.json
+
+- view-template:
+    name: 'Plugins-{branch}'
+    view-type: list
+    columns:
+      - status
+      - weather
+      - job
+      - last-success
+      - last-failure
+      - last-duration
+      - build-button
+    regex: 'plugin-.+-{branch}'
+
+- project:
+    name: 'plugin-views'
+    views:
+      - 'Plugins-{branch}'
+    branch:
+      - master
+      - stable-2.10
+      - stable-2.11
+      - stable-2.12
+      - stable-2.13
+      - stable-2.14
+      - stable-2.15
+      - stable-2.16
