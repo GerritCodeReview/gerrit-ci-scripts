@@ -22,6 +22,30 @@
       "revId": "93888f190f9f394e7192d86619ce39ff88457611",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb485fa2_dbb5b30b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-09-22T23:18:08Z",
+      "side": 1,
+      "message": "It isn\u0027t the only plugin that generates jars in multiple subdirs ... it isn\u0027t a Gitiles-specific behaviour.",
+      "parentUuid": "3bd0373b_d5cb7c74",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 9
+      },
+      "revId": "93888f190f9f394e7192d86619ce39ff88457611",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
