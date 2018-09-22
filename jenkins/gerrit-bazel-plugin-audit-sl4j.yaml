@@ -1,0 +1,6 @@
+- project:
+    name: audit-sl4j
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
