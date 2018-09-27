@@ -3,32 +3,31 @@ DEBIAN_VER ?= jessie
 CHROME_VER ?= 69.0.3497.92
 IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)-$(CHROME_VER)
 
-build: build_jessie build_stretch
+build: build_stretch build_jessie
 
-publish: publish_jessie publish_stretch
+publish: publish_stretch publish_jessie
 
-build_jessie: jessie docker_build
+clean: clean_stretch clean_jessie
 
-build_stretch: stretch docker_build
+build_jessie publish_jessie clean_jessie: DEBIAN_VER=jessie
 
-publish_jessie: jessie docker_publish
+build_stretch publish_stretch clean_stretch: DEBIAN_VER=stretch
 
-publish_stretch: stretch docker_publish
+publish_jessie: build_jessie
 
-docker_build: Makefile Dockerfile
+publish_stretch: build_stretch
+
+build_jessie build_stretch: Makefile Dockerfile
 	@echo "Building Docker for $(DEBIAN_VER) / Chrome v$(CHROME_VER)"
 	@echo "==================================================="
 	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$(CHROME_VER) envsubst > Dockerfile-$(DEBIAN_VER)-$(CHROME_VER)
 	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$(CHROME_VER) -t $(IMAGE) .
 
-docker_publish: build
+publish_jessie publish_stretch:
 	docker push $(IMAGE)
 
-clean:
+clean_jessie clean_stretch:
 	docker rmi -f $(IMAGE)
-
-jessie stretch:
-	$(eval DEBIAN_VER := $@)
 
 .PHONY: clean jessie stretch
 

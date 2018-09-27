@@ -5,30 +5,29 @@ build: build_stretch build_jessie
 
 publish: publish_stretch publish_jessie
 
-build_stretch: stretch docker_build
+clean: clean_stretch clean_jessie
 
-publish_stretch: stretch docker_publish
+build_jessie publish_jessie clean_jessie: DEBIAN_VER=jessie
 
-build_jessie: jessie docker_build
+build_stretch publish_stretch clean_stretch: DEBIAN_VER=stretch
 
-publish_jessie: jessie docker_publish
+publish_jessie: build_jessie
 
-docker_build:  id_rsa.pub
+publish_stretch: build_stretch
+
+build_jessie build_stretch:  id_rsa.pub
 	@echo "Building Docker for Debian:$(DEBIAN_VER)"
 	@echo "========================================"
 	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
 	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t ${IMAGE}:$(DEBIAN_VER) .
 
-jessie stretch:
-	$(eval DEBIAN_VER := $@)
+publish_jessie publish_stretch:
+	docker push ${IMAGE}:$(DEBIAN_VER)
 
 id_rsa.pub: ../master/id_rsa.pub
 	cp $? $@
 
-docker_publish: docker_build
-	docker push ${IMAGE}:$(DEBIAN_VER)
-
-clean:
+clean_stretch clean_jessie:
 	docker rmi -f ${IMAGE}
 	-rm -f id_rsa*
 
