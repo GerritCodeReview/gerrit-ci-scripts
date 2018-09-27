@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80652e96_42315078",
+        "filename": "jenkins-docker/slave-chrome/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2018-09-27T20:36:19Z",
+      "side": 1,
+      "message": "Was it really necessary to reverse the order of these two targets?",
+      "range": {
+        "startLine": 6,
+        "startChar": 7,
+        "endLine": 6,
+        "endChar": 33
+      },
+      "revId": "594e0b24e207829ff5d90a230b30e2308ad9b9ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
