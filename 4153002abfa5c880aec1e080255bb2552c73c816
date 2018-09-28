@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5d9c765d_a3f1b96e",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-09-28T04:50:25Z",
+      "side": 0,
+      "message": "Are you sure that this isn\u0027t needed anymore? Is there a message in the console log that gives a clue that there is a problem with formatting?",
+      "range": {
+        "startLine": 125,
+        "startChar": 6,
+        "endLine": 125,
+        "endChar": 73
+      },
+      "revId": "4153002abfa5c880aec1e080255bb2552c73c816",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
