@@ -70,6 +70,30 @@
       "revId": "4153002abfa5c880aec1e080255bb2552c73c816",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a7db85ec_bcd7cae1",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-09-28T05:09:25Z",
+      "side": 0,
+      "message": "I havn\u0027t tested anything. It was a blind fix.",
+      "parentUuid": "111f48ce_12a0012b",
+      "range": {
+        "startLine": 125,
+        "startChar": 6,
+        "endLine": 125,
+        "endChar": 73
+      },
+      "revId": "4153002abfa5c880aec1e080255bb2552c73c816",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
