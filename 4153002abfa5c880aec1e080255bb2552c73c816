@@ -46,6 +46,30 @@
       "revId": "4153002abfa5c880aec1e080255bb2552c73c816",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "111f48ce_12a0012b",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-09-28T05:07:38Z",
+      "side": 0,
+      "message": "Need to do some testing then, so that we make sure that we don\u0027t extract anything else that is not relevant to the formatting.\n\nHave you tested thoroughly?",
+      "parentUuid": "149cc9b3_6bf820c6",
+      "range": {
+        "startLine": 125,
+        "startChar": 6,
+        "endLine": 125,
+        "endChar": 73
+      },
+      "revId": "4153002abfa5c880aec1e080255bb2552c73c816",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
