@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d3f65f81_aa7bbbb2",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-admin-console.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-10-16T23:03:44Z",
+      "side": 1,
+      "message": "I think we should hold off on doing changes like this until we know if the plugin(s) will need stable-2.16 branches.",
+      "revId": "77f336134a4cee892efc39eeec4c8f4c2d0dfbfc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
