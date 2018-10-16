@@ -1,8 +1,13 @@
 - project:
     name: audit-sl4j
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-2.16
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
             - stable-2.15
             - stable-2.14
