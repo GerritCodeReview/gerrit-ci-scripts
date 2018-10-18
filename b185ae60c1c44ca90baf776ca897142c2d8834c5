@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e66c9480_11325ffc",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-uploadvalidator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-10-18T08:25:50Z",
+      "side": 1,
+      "message": "nit: wrong order",
+      "revId": "b185ae60c1c44ca90baf776ca897142c2d8834c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
