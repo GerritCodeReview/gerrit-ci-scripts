@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e948442_1d0588d6",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-plugin-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-10-19T07:22:00Z",
+      "side": 1,
+      "message": "stable-2.15 needs to be built on its-own branch",
+      "range": {
+        "startLine": 16,
+        "startChar": 13,
+        "endLine": 16,
+        "endChar": 25
+      },
+      "revId": "3723a7a23981e6d7875167b9a15fe5d76a239e4b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
