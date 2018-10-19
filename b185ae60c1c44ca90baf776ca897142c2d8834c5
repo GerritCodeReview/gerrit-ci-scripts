@@ -16,6 +16,24 @@
       "revId": "b185ae60c1c44ca90baf776ca897142c2d8834c5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "85965aec_002ca389",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-uploadvalidator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-10-19T07:23:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e66c9480_11325ffc",
+      "revId": "b185ae60c1c44ca90baf776ca897142c2d8834c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
