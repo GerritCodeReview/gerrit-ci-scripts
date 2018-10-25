@@ -307,8 +307,13 @@ def buildChange(change) {
   println "Building Change " + changeUrl
   build.setDescription("""<a href='$changeUrl' target='_blank'>Change #$changeNum</a>""")
 
-  if(branch == "master" || branch == "stable-2.15" || branch == "stable-2.16") {
-    modes += "notedb"
+  if(branch == "master") {
+    modes = ["notedb"]
+  }
+  else if(branch == "stable-2.15" || branch == "stable-2.16") {
+    modes = ["reviewdb","nodedb"]
+  } else {
+    modes = ["reviewdb"]
   }
 
   if(branch == "master" || branch == "stable-2.16" || branch == "stable-2.15" || branch == "stable-2.14") {
