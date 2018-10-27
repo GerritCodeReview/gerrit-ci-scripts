@@ -15,6 +15,7 @@ RUN npm install --unsafe-perm -g \
       eslint@"=4.19.0" \
       eslint-config-google@"=0.12.0" \
       eslint-plugin-html@"=5.0.3" \
+      eslint-plugin-promise@"=4.0.1" \
       typescript \
       fried-twinkie@">0.2.0" \
       polylint polymer-cli
