@@ -12,7 +12,7 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
 
 echo 'Test in ReviewDb mode'
 echo '----------------------------------------------'
-bazel test $BAZEL_OPTS //...
+bazel test --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
 
 if [ "{branch}" == "master" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ]
 then

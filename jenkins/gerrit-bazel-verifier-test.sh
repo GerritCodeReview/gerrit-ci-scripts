@@ -16,6 +16,7 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
 
 if [[ "$MODE" == *"reviewdb"* ]]
 then
+  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=OFF"
   bazel test $BAZEL_OPTS //...
 fi
 
