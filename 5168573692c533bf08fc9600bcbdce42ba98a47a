@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c1607fbf_a8802268",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-groovy-provider.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-01T23:00:05Z",
+      "side": 1,
+      "message": "stable",
+      "range": {
+        "startLine": 14,
+        "startChar": 14,
+        "endLine": 14,
+        "endChar": 20
+      },
+      "revId": "5168573692c533bf08fc9600bcbdce42ba98a47a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
