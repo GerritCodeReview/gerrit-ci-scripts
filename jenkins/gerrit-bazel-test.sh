@@ -10,9 +10,12 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky,-docker"
 
-echo 'Test in ReviewDb mode'
-echo '----------------------------------------------'
-bazel test --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
+if [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ] || [ "{branch}" == "stable-2.14" ]
+then
+  echo 'Test in ReviewDb mode'
+  echo '----------------------------------------------'
+  bazel test --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
+fi
 
 if [ "{branch}" == "master" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ]
 then
