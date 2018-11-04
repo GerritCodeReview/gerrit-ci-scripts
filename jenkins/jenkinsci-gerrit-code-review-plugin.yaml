@@ -1,0 +1,15 @@
+- project:
+    name: 'jenkinsci-gerrit-code-review-plugin'
+    description: 'Gerrit Code Review plugin for Jenkins'
+
+    project-type: multibranch
+
+    periodic-folder-trigger: 1d
+    prune-dead-branches: True
+    number-to-keep: '10'
+    days-to-keep: '10'
+    script-path: 'Jenkinsfile'
+    scm:
+      - gerrit:
+          url: 'https://review.gerrithub.io/a/jenkinsci/gerrit-code-review'
+          credentials-id: 'jenkins-at-gerritci'
