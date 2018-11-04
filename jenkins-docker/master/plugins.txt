@@ -10,6 +10,7 @@ docker-plugin:1.1.4
 durable-task:1.22
 embeddable-build-status:1.9
 envinject:2.1.5
+gerrit-code-review:0.3.2
 git:3.9.1
 git-client:2.7.2
 github:1.29.1
