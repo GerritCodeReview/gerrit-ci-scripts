@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c17394a_b5d17b3b",
+        "filename": "worker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-05T15:23:31Z",
+      "side": 1,
+      "message": "Any reason behind the 51?\n(just curiosity)",
+      "revId": "5c9d9a1a5597551a3e7fe6fb0c8386c79d3b91ed",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
