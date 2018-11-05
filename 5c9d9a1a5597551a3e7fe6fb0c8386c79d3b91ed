@@ -34,6 +34,24 @@
       "revId": "5c9d9a1a5597551a3e7fe6fb0c8386c79d3b91ed",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "652704bc_2638315d",
+        "filename": "worker/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-05T15:35:57Z",
+      "side": 1,
+      "message": "\u003e just a random number. It needs to be a free number in your CI. (How do I check that?)\n\nYes, it\u0027s free :-)",
+      "parentUuid": "3f1f3313_4f864c67",
+      "revId": "5c9d9a1a5597551a3e7fe6fb0c8386c79d3b91ed",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
