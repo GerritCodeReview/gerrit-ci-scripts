@@ -7,12 +7,12 @@ RUN apt-get update && \
     rm /tmp/bazel_0.17.1-linux-x86_64.deb && \
     bash -c '. set-java.sh 8 && bazel version'
 
-# Install buildifier utility (0.15.0)
+# Install buildifier utility (0.17.2)
 RUN cd /tmp && \
     bash -c '. /usr/bin/set-java.sh 8 && \
     git clone https://github.com/bazelbuild/buildtools.git && \
     cd buildtools && \
-    git checkout 0.15.0 && \
+    git checkout 0.17.2 && \
     bazel build --workspace_status_command=`pwd`/status.sh //buildifier && \
     cp bazel-bin/buildifier/linux_amd64_stripped/buildifier /usr/bin && \
     rm -rf /tmp/buildtools && \
