@@ -18,10 +18,8 @@ RUN cd /tmp && \
     rm -rf /tmp/buildtools && \
     buildifier --version'
 
-# Bazel cache warm-up with Gerrit master build
+# Bazel cache warm-up with Gerrit master and stable branches build
 # Set-up google-java-format utility to ~/format/google-java-format
-# TODO(davido): Switch to upstream, when this PR (or similar) is merged upstream:
-# https://github.com/google/google-java-format/pull/154
 USER jenkins
 RUN bash -c '. /usr/bin/set-java.sh 8 && \
     cd /tmp &&  git clone -b stable-2.15 --recursive https://gerrit.googlesource.com/gerrit && \
