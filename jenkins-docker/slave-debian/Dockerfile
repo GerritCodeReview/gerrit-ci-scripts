@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y wget software-properties-common default
 
 COPY set-java.sh /usr/bin/
 
+# TODO(davido): Python jenkins is not known on sid
 RUN apt-get update && apt-get install -y \
     maven \
     openssh-server \
@@ -19,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \
     python-yaml \
-    python-jenkins \
+#    python-jenkins \
     ant \
     autoconf \
     automake \

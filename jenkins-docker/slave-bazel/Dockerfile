@@ -1,15 +1,15 @@
-FROM gerritforge/gerrit-ci-slave-buck:debian-jessie
+FROM gerritforge/gerrit-ci-slave-node-wct:10-6.8.0
 
-# Bazel 0.17.1
+# Bazel 0.19.0
 RUN apt-get update && \
-    wget -O /tmp/bazel_0.17.1-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.17.1/bazel_0.17.1-linux-x86_64.deb && \
-    (dpkg -i /tmp/bazel_0.17.1-linux-x86_64.deb; apt-get install -f -y) && \
-    rm /tmp/bazel_0.17.1-linux-x86_64.deb && \
-    bash -c '. set-java.sh 8 && bazel version'
+    wget -O /tmp/bazel_0.19.0-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.19.0/bazel_0.19.0-linux-x86_64.deb && \
+    (dpkg -i /tmp/bazel_0.19.0-linux-x86_64.deb; apt-get install -f -y) && \
+    rm /tmp/bazel_0.19.0-linux-x86_64.deb && \
+    bash -c 'bazel version'
 
 # Install buildifier utility (0.17.2)
 RUN cd /tmp && \
-    bash -c '. /usr/bin/set-java.sh 8 && \
+    bash -c '\
     git clone https://github.com/bazelbuild/buildtools.git && \
     cd buildtools && \
     git checkout 0.17.2 && \
@@ -21,13 +21,11 @@ RUN cd /tmp && \
 # Bazel cache warm-up with Gerrit master and stable branches build
 # Set-up google-java-format utility to ~/format/google-java-format
 USER jenkins
-RUN bash -c '. /usr/bin/set-java.sh 8 && \
-    cd /tmp &&  git clone -b stable-2.15 --recursive https://gerrit.googlesource.com/gerrit && \
+RUN bash -c '\
+    cd /tmp &&  git clone --recursive https://gerrit.googlesource.com/gerrit && \
     cd /tmp/gerrit && \
     ./tools/setup_gjf.sh 1.6 && \
     ( bazel build release || true ) && \
-    git checkout -f stable-2.16 && git submodule update --init && ( bazel build release || true ) && \
-    git checkout -f master && git submodule update --init && ( bazel build release || true ) && \
     cd /tmp/gerrit && mv tools/format ~ && \
     rm -Rf /tmp/gerrit'
 
