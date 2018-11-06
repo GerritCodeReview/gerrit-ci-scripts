@@ -25,9 +25,9 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     cd /tmp &&  git clone -b stable-2.15 --recursive https://gerrit.googlesource.com/gerrit && \
     cd /tmp/gerrit && \
     ./tools/setup_gjf.sh 1.6 && \
-    ( bazel build release || true ) && \
-    git checkout -f stable-2.16 && git submodule update --init && ( bazel build release || true ) && \
-    git checkout -f master && git submodule update --init && ( bazel build release || true ) && \
+    ( bazel build //... || true ) && \
+    git checkout -f stable-2.16 && git submodule update --init && ( bazel build //... || true ) && \
+    git checkout -f master && git submodule update --init && ( bazel build //... || true ) && \
     cd /tmp/gerrit && mv tools/format ~ && \
     rm -Rf /tmp/gerrit'
 
