@@ -15,13 +15,14 @@ IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}
 
 start: build
 	-docker rm ${NAME}
+	mkdir -p ${JENKINS_HOME}/jobs
 	docker run --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
           -e OAUTH_ID=${OAUTH_ID} \
           -e OAUTH_SECRET=${OAUTH_SECRET} \
           -e JENKINS_API_USER=${JENKINS_API_USER} \
           -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
           -v /var/run/docker.sock:/var/run/docker.sock \
-          -v ${JENKINS_HOME}:/var/jenkins_home \
+          -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
           --net=host ${IMAGE}
 
 id_rsa:
