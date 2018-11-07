@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d24aa671_905f84c7",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-delete-project.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-07T10:56:31Z",
+      "side": 1,
+      "message": "Can this section be removed altogether then?\nJust add a \u0027-master\u0027 to the one below.",
+      "range": {
+        "startLine": 10,
+        "startChar": 1,
+        "endLine": 15,
+        "endChar": 0
+      },
+      "revId": "950e30f26ab14d9b82aa9ac072271a6763d89156",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
