@@ -52,6 +52,24 @@
       "revId": "4e29ead1c9d65617f281d59a1800b7ce643ea855",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87aec3e1_88bcbb4f",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-cfoauth.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-08T11:54:14Z",
+      "side": 0,
+      "message": "We are using Java 8.",
+      "parentUuid": "740630bc_1f48c42b",
+      "revId": "4e29ead1c9d65617f281d59a1800b7ce643ea855",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
