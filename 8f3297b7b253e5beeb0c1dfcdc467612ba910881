@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "6febafd2_9087acf9",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-08T11:52:00Z",
+      "side": 1,
+      "message": "Ah, ok as I understood it, the gerrit-ci-scripts-docker job was there to ensure that the Gerrit CI was always using the images built from top of the master branch.\n\nI agree then, that this should become part of the planned verification pipeline of gerrit-ci-scripts. Should we then remove the job for now, so that we don\u0027t run into the issue of having no images for the slaves? The only issue with that would then be that until we have a proper job for that, the images would . have to be updated manually, which would hopefully only be the case until next week :-).",
+      "parentUuid": "fc74db5c_9473e5c4",
+      "range": {
+        "startLine": 68,
+        "startChar": 24,
+        "endLine": 68,
+        "endChar": 34
+      },
+      "revId": "8f3297b7b253e5beeb0c1dfcdc467612ba910881",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "422b0836_0f56959e",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 5
