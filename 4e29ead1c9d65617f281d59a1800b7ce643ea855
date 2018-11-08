@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "407e091a_8c087114",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-cfoauth.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-08T11:44:36Z",
+      "side": 0,
+      "message": "In the master branch of the plugin, the VERSION file says it is built for 2.12, if I get it correctly. Although this is strange seeing that it is built with bazel, should the job to build the master-branch of cfoauth be kept active?",
+      "revId": "4e29ead1c9d65617f281d59a1800b7ce643ea855",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
