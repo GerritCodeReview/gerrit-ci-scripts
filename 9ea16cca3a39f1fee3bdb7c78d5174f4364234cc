@@ -105,6 +105,30 @@
       "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a93e516f_23fee3ca",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-08T10:57:58Z",
+      "side": 1,
+      "message": "\u003e End of life of Java 8 is January 2019. So, that Java 7 is more dead than alive. \n\nAgreed. Bear in mind, however, that Oracle still supports Java 7 in exchange for a very large support fee. So, technically, is still living a quite expensive life.\n\n\u003e Currently we prevent upgrading slave docker image to debian stretch and still using outdated debian jessie, only because of Java 7, right?\n\nExactly, which sucks I know.\n \n\u003e One simplifcation I would like to suggest would be to remove Java 7 support from docker images, and build with buck on 2.12 and 2.13 stable branches with Java 8.\n\nThat sounds reasonable. However, we should make a Gerrit release of 2.12.x and 2.13.x with Java8 and announce it on the mailing list.\n\nNow that I know how to make releases, I can do it :-)\n\n\u003e IIRC, I\u0027ve built last time a patch for production system with buck on stable-2.13 and I havn\u0027t switched to Java 7 and used Java 8 and it just worked.\n\nYes, looks good to me.\n \n\u003e Moreover, we could even set backwards compatibility in .buckconfig in gerrit tree:\n\u003e \n\u003e   [java]\n\u003e   source_level \u003d 7\n\u003e   target_level \u003d 7\n\nThat is interesting, shall we post that change on the stable-2.12 and stable-2.13 branches?",
+      "parentUuid": "ceb1fe31_7daeedd3",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
