@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "e1532c3c_8c148200",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-08T10:20:29Z",
+      "side": 1,
+      "message": "Removing v2.12 doesn\u0027t bring more benefit, but if we stop supporting v2.13 *as well* then yes, we can kill:\n- Java 7\n- Buck\n\nAnd that would make me (and the Gerrit-CI) happy :-)\n\nHowever, as you said, v2.13 is still used. I would prefer to break down the problem in two steps.",
+      "parentUuid": "e4c4a8ee_71d7fce7",
+      "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb20af98_af99fe4c",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -39,6 +57,30 @@
       "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1052c77_e510d34f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-08T10:20:29Z",
+      "side": 1,
+      "message": "You are right, until we remove v2.13 and v2.12 there isn\u0027t so much simplification of the obsolete images :-(",
+      "parentUuid": "eb20af98_af99fe4c",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
