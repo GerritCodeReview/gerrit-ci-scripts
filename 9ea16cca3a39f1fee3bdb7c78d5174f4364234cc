@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e4c4a8ee_71d7fce7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-11-08T10:15:49Z",
+      "side": 1,
+      "message": "Why not to also to discontinue 2.12? LibreOffice and OpenStack are on 2.13.x now and WMF on 2.15, so that from this persepctive it should be fine to remove support for 2.12 as well.",
+      "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eb20af98_af99fe4c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-11-08T10:15:49Z",
+      "side": 1,
+      "message": "Wouel it mean we also can discontinue support for Java 7 and simplify slave docker images?",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
