@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2bec0964_c519e880",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-08T08:45:47Z",
+      "side": 1,
+      "message": "Why do we not want to pull the latest images?\nDo you want to rely on the job gerrit-ci-scripts-docker to build the images? If yes, we should think about, what happens if it fails to build an image (e.g. due to a flaky connection to a package repository). Since it throws away all images before building, this might cause missing docker images in the worst case.",
+      "range": {
+        "startLine": 68,
+        "startChar": 24,
+        "endLine": 68,
+        "endChar": 34
+      },
+      "revId": "8f3297b7b253e5beeb0c1dfcdc467612ba910881",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "422b0836_0f56959e",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-08T08:45:47Z",
+      "side": 1,
+      "message": "Do you have a concrete reason to reduce the container cap?",
+      "range": {
+        "startLine": 155,
+        "startChar": 20,
+        "endLine": 155,
+        "endChar": 21
+      },
+      "revId": "8f3297b7b253e5beeb0c1dfcdc467612ba910881",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9933989f_2dd5fc7f",
+        "filename": "jenkins-docker/slave/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-08T08:45:47Z",
+      "side": 1,
+      "message": "Is anybody still using this image? It can\u0027t even be built anymore, if I remember correctly. SHouldn\u0027t we rather remove it?",
+      "revId": "8f3297b7b253e5beeb0c1dfcdc467612ba910881",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
