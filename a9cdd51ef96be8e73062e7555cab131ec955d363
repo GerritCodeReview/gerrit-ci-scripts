@@ -22,6 +22,30 @@
       "revId": "a9cdd51ef96be8e73062e7555cab131ec955d363",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "99dab27d_eefe64fc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-08T09:55:21Z",
+      "side": 1,
+      "message": "Forgot to add a tons of other changes :-)\nFixed now and ready for review.",
+      "parentUuid": "e91655ec_13b80cc3",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "a9cdd51ef96be8e73062e7555cab131ec955d363",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
