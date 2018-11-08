@@ -81,6 +81,30 @@
       "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb1fe31_7daeedd3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-11-08T10:53:22Z",
+      "side": 1,
+      "message": "End of life of Java 8 is January 2019. So, that Java 7 is more dead than alive. Currently we prevent upgrading slave docker image to debian stretch and still using outdated debian jessie, only because of Java 7, right?\n\nOne simplifcation I would like to suggest would be to remove Java 7 support from docker images, and build with buck on 2.12 and 2.13 stable branches with Java 8.\n\nIIRC, I\u0027ve built last time a patch for production system with buck on stable-2.13 and I havn\u0027t switched to Java 7 and used Java 8 and it just worked.\n\nMoreover, we could even set backwards compatibility in .buckconfig in gerrit tree:\n\n  [java]\n  source_level \u003d 7\n  target_level \u003d 7\n\n(Moreover, I think, that we this approach, we could even move directly to Java 11 and it would also work (as it would also work with Bazel, because it produces per default Java 8 target level).\n\n[1] https://buckbuild.com/files-and-dirs/buckconfig.html#java.source_level",
+      "parentUuid": "d1052c77_e510d34f",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "9ea16cca3a39f1fee3bdb7c78d5174f4364234cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
