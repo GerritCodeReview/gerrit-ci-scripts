@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4b519a7f_14b35a6f",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-08T09:00:41Z",
+      "side": 1,
+      "message": "Pulling the latest is very dangerous and slow.\nIdeally we should only rely on named tags and never ever use latest, but that is the future.\n\nWith regards to missing images, actually it is a lot better to NOT start a build because the image is missing rather than having a failed build for \"strange reasons\" and then after hours of investigations realise that it was just building with the wrong image :-(\n\nBut, of course, I am open to discussions :-)",
+      "parentUuid": "2bec0964_c519e880",
+      "range": {
+        "startLine": 68,
+        "startChar": 24,
+        "endLine": 68,
+        "endChar": 34
+      },
+      "revId": "8f3297b7b253e5beeb0c1dfcdc467612ba910881",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "422b0836_0f56959e",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 5
