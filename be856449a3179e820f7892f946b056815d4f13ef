@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "761e0305_5b9e36d7",
+        "filename": "jenkins-docker/master/jenkins.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-08T09:01:12Z",
+      "side": 1,
+      "message": "nit: A similar operation is already performed in config.sh (Adding the jenkins user to the dockergroup-group). I think we should keep these commands together in one place.",
+      "revId": "be856449a3179e820f7892f946b056815d4f13ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
