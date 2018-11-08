@@ -1,11 +1,6 @@
 - project:
     name: branch-network
     jobs:
-      - 'plugin-{name}-{branch}':
-          branch:
-            - stable-2.12
-            - stable-2.11
-            - stable-2.10
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
