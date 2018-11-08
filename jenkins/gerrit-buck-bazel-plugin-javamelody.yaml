@@ -17,9 +17,6 @@
           branch:
             - stable-2.13
             - stable-2.12
-            - stable-2.11
-            - stable-2.10
-            - stable-2.9
           targets: >
             plugins/javamelody:javamelody-nodep
             plugins/javamelody:javamelody-deps
