@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "f99427a8_1f98253b",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-08T09:12:41Z",
+      "side": 1,
+      "message": "Yes, pulling latest is certainly not the best way to go.\nBut having a stand-still, because no build slave is available can also be very bad. I was thinking, we should implement some kind of fall-back. Something like having the previous image, which should usually have worked, still available, in case the build of the docker images fails.\n\nImagine the following example:\nThe job gerrit-ci-scripts-docker removes all images (docker system prune -af), then starts building the docker images and fails for some reason, when building the image containing the Jenkins master. The jenkins job stops then and all docker images for slaves are missing and nothing is built/verified, until somebody fixes that.\n\nThe gerrit-ci-scripts-docker job fails a lot and to me it seems to be a flakyness issue due to repositories, since it sometimes builds. So I think, we should work on the gerrit-ci-scripts-docker job, before we merge this change. What do you think?",
+      "parentUuid": "4b519a7f_14b35a6f",
+      "range": {
+        "startLine": 68,
+        "startChar": 24,
+        "endLine": 68,
+        "endChar": 34
+      },
+      "revId": "8f3297b7b253e5beeb0c1dfcdc467612ba910881",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "422b0836_0f56959e",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 5
