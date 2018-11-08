@@ -41,11 +41,6 @@
 - project:
     name: owners
     jobs:
-      - 'plugin-{name}-{branch}':
-          targets: 'plugins/owners/gerrit-owners:owners plugins/owners/gerrit-owners-autoassign:owners-autoassign'
-          branch:
-            - stable-2.11
-            - stable-2.10
       - 'plugin-owners-{branch}':
           targets: 'plugins/owners plugins/owners-autoassign'
           branch:

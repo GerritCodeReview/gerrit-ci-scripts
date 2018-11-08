@@ -1,8 +1,0 @@
-- project:
-    name: reviewassistant-mvn
-    repo: reviewassistant
-    branch:
-      - stable-2.10
-    jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-

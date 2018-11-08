@@ -7,12 +7,6 @@ SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
 
 buck build -v 3 api plugins:core release
 
-if [ -f tools/maven/api.sh ]
-then
-  # From Gerrit 2.13 onwards
-  tools/maven/api.sh install buck
-else
-  # Up to Gerrit 2.12
-  buck build -v 3 api_install
-fi
+tools/maven/api.sh install buck
+
 mv $(find buck-out -name '*.war') buck-out/gen/gerrit.war

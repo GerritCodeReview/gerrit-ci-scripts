@@ -4,8 +4,6 @@
       - 'plugin-scripting-{name}-{branch}':
           branch:
             - stable-2.13
-            - stable-2.12
-            - stable-2.11
       - 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
