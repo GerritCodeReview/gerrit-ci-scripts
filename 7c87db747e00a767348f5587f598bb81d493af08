@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ce43f66_9addd886",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-09T09:45:28Z",
+      "side": 1,
+      "message": "I would suggest to use:\n\n  [ \"{branch}\" \u003d\u003d \"stable-2.16\" ] || [ \"{branch}\" \u003d\u003d \"stable-2.15\" ] || ...\n\nWhile it looks more cluttered now, we wouldn\u0027t need to add new branches every time one is created (e.g. stable-3.0) as long as we still support versions using reviewdb, which I guess will still be some time.",
+      "revId": "7c87db747e00a767348f5587f598bb81d493af08",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
