@@ -334,7 +334,7 @@ def buildChange(change) {
   def builds = []
   println "Running validation jobs using $tools builds for $modes ..."
   modes.collect {
-    prepareBuildsForMode(refspec,sha1,changeUrl,it,tools,branch,1,Globals.codeStyleBranches.contains(branch))
+    prepareBuildsForMode(refspec,sha1,changeUrl,it,tools,branch,3,Globals.codeStyleBranches.contains(branch))
   }.each { builds += it }
 
   def buildsWithResults = getResultsOfBuildsInParallel(builds)
