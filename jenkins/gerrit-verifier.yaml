@@ -209,6 +209,7 @@
     project-type: flow
     concurrent: true
     needs-workspace: true
+    node: master
     parameters:
       - string:
           name: CHANGE_ID

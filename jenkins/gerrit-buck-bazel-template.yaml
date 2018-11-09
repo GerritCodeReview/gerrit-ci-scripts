@@ -54,6 +54,7 @@
     project-type: flow
     concurrent: false
     needs-workspace: true
+    node: master
     scm:
       - git:
          url: https://gerrit.googlesource.com/gerrit
