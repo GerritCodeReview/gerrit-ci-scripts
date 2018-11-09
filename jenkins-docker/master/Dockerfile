@@ -54,6 +54,8 @@ RUN mkdir -p $JENKINS_REF/.ssh && \
 
 COPY plugins.txt $JENKINS_REF
 RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
+# Fix for docker-plugin for the incomplete read on the DockerMultiplexedInputStream (see https://github.com/jenkinsci/docker-plugin/pull/693)
+ADD https://repo.jenkins-ci.org/incrementals/io/jenkins/docker/docker-plugin/1.1.6-rc867.6e6f38dd6134/docker-plugin-1.1.6-rc867.6e6f38dd6134.hpi $JENKINS_REF/plugins/docker-plugin.jpi
 RUN chown -R jenkins:jenkins $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
