@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "578bea08_70cc5a81",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-09T10:41:07Z",
+      "side": 1,
+      "message": "This plugin is a bit of a bumpy road: there isn\u0027t a single released version that works :-( The previous one I needed to patch with PR, this one, the same.\n\nHopefully the 1.1.6 will be stable (?)",
+      "revId": "0dce152a24cf40c67de10e0ca239c66a1405fc34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
