@@ -242,3 +242,12 @@
     properties:
       - build-discarder:
            days-to-keep: 1
+
+- job:
+    name: 'Gerrit-verifier'
+    project-type: multibranch
+    scm:
+      - gerrit:
+          url: https://gerrit.googlesource.com/gerrit
+    periodic-folder-trigger: 15m
+    days-to-keep: 7
