@@ -22,6 +22,30 @@
       "revId": "9570da078d64cc1cca89d344fd1d67a010a022a6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e17df35e_23113c7c",
+        "filename": "jenkins/gerrit-bazel-plugin-messageoftheday.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-11-14T17:13:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4259b9f4_9ed00d9b",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 25
+      },
+      "revId": "9570da078d64cc1cca89d344fd1d67a010a022a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
