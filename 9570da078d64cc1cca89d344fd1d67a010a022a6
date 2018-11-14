@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4259b9f4_9ed00d9b",
+        "filename": "jenkins/gerrit-bazel-plugin-messageoftheday.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2018-11-14T16:12:32Z",
+      "side": 1,
+      "message": "There is no stable-2.16 branch yet for this project [1].\n\n[1] https://gerrit-review.googlesource.com/admin/repos/plugins/messageoftheday,branches",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 25
+      },
+      "revId": "9570da078d64cc1cca89d344fd1d67a010a022a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
