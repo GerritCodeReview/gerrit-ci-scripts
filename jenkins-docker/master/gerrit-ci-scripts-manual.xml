@@ -16,6 +16,11 @@
           <description>Revision number of patch to build</description>
           <defaultValue>1</defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>JOBS</name>
+          <description>One or several whitespace-separated jobs to update. (All will be built if left blank.)</description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
@@ -45,7 +50,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>jenkins-jobs update jenkins</command>
+      <command>jenkins-jobs update jenkins ${JOBS}</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

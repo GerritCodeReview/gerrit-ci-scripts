@@ -49,6 +49,9 @@
       - string:
          name: CHANGE_COMMIT
          description: "Optional SHA-1 hash of patch to build (takes precedence over Change ID)"
+      - string:
+         name: JOBS
+         description: "One or several whitespace-separated jobs to update. (All will be built if left blank.)"
     properties:
       - inject:
          properties-file: env.properties
@@ -68,5 +71,5 @@
            - '${CHANGE_COMMIT}'
          skip-tag: true
     builders:
-      - shell: jenkins-jobs update --delete-old jenkins/.
+      - shell: jenkins-jobs update jenkins/. ${JOBS}
 
