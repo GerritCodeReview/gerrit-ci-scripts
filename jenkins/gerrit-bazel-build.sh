@@ -5,5 +5,5 @@ cd gerrit
 
 export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone"
 
-bazel build $BAZEL_OPTS //...
+bazel build $BAZEL_OPTS plugins:core release api
 tools/eclipse/project.py
