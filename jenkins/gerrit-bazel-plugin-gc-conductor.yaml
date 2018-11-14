@@ -1,0 +1,6 @@
+- project:
+    name: gc-conductor
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - stable-2.14
