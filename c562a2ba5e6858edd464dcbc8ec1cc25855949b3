@@ -34,6 +34,24 @@
       "revId": "c562a2ba5e6858edd464dcbc8ec1cc25855949b3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb1a4737_8109edc7",
+        "filename": "jenkins/gerrit-bazel-plugin-batch.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-11-17T00:17:07Z",
+      "side": 1,
+      "message": "It won\u0027t build for 2.16.  I\u0027m working on migrating it.",
+      "parentUuid": "d6d0f6d2_b77197e0",
+      "revId": "c562a2ba5e6858edd464dcbc8ec1cc25855949b3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
