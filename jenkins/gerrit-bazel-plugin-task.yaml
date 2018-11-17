@@ -1,0 +1,8 @@
+- project:
+    name: task
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-2.16
