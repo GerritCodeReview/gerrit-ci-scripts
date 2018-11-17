@@ -52,6 +52,24 @@
       "revId": "c562a2ba5e6858edd464dcbc8ec1cc25855949b3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10dee0a1_ed41931f",
+        "filename": "jenkins/gerrit-bazel-plugin-batch.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-11-17T00:20:24Z",
+      "side": 1,
+      "message": "See https://gerrit-review.googlesource.com/c/plugins/batch/+/204980",
+      "parentUuid": "cb1a4737_8109edc7",
+      "revId": "c562a2ba5e6858edd464dcbc8ec1cc25855949b3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
