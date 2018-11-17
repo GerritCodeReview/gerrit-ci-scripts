@@ -1,0 +1,6 @@
+- project:
+    name: simple-submit-rules
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
