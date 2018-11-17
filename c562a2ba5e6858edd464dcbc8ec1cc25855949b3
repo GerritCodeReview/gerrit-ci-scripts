@@ -16,6 +16,24 @@
       "revId": "c562a2ba5e6858edd464dcbc8ec1cc25855949b3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6d0f6d2_b77197e0",
+        "filename": "jenkins/gerrit-bazel-plugin-batch.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1003883
+      },
+      "writtenOn": "2018-11-17T00:11:57Z",
+      "side": 1,
+      "message": "The intent is to build it for 2.15 since we can.  We want 2.15 users to be able to use the plugin.",
+      "parentUuid": "1127ba6b_39e82b5d",
+      "revId": "c562a2ba5e6858edd464dcbc8ec1cc25855949b3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
