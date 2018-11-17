@@ -70,6 +70,24 @@
       "revId": "c562a2ba5e6858edd464dcbc8ec1cc25855949b3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b1edb48_5ff52efa",
+        "filename": "jenkins/gerrit-bazel-plugin-batch.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-17T04:47:10Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "10dee0a1_ed41931f",
+      "revId": "c562a2ba5e6858edd464dcbc8ec1cc25855949b3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
