@@ -1,7 +1,7 @@
 NO_CACHE=false
 IMAGE=gerritforge/gerrit-ci-slave-buck:debian-jessie
 NODE_VER ?= 10
-WCT_VER ?= 6.8.0
+WCT_VER ?= 6.9.0
 
 # Targets
 
