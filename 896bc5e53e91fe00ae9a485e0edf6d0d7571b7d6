@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cbaffa2d_c134b4b8",
+        "filename": "jenkins/gerrit-bazel-plugin-batch.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-17T00:11:52Z",
+      "side": 1,
+      "message": "Have we tried to run on v2.16 or master? Would it work?",
+      "revId": "896bc5e53e91fe00ae9a485e0edf6d0d7571b7d6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
