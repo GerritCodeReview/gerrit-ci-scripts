@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7886a38f_7bcb688c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-19T09:48:36Z",
+      "side": 1,
+      "message": "nit: The final commit message should probably not contain the test plan :-)",
+      "revId": "dd02f00eb49392b991d9bf12ab1095079c77a592",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
