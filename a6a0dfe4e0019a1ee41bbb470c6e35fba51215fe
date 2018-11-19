@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a06eeff8_29f676ef",
+        "filename": "jenkins-docker/slave-node-wct/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-19T09:45:37Z",
+      "side": 1,
+      "message": "The WCT-version has to be changed in the Makefile of slave-buck as well, so that the correct image is inherited.",
+      "revId": "a6a0dfe4e0019a1ee41bbb470c6e35fba51215fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
