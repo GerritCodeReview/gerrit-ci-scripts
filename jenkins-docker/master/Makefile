@@ -25,6 +25,23 @@ start: build
           -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
           --net=host ${IMAGE}
 
+start_osx:
+	-docker rm ${NAME} ${NAME}-socat
+	mkdir -p ${JENKINS_HOME}/jobs
+	docker run -d --name ${NAME}-socat\
+					-v /var/run/docker.sock:/var/run/docker.sock \
+					-p 127.0.0.1:1234:1234 \
+					bobrik/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
+	docker run --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
+          -e OAUTH_ID=${OAUTH_ID} \
+          -e OAUTH_SECRET=${OAUTH_SECRET} \
+          -e JENKINS_API_USER=${JENKINS_API_USER} \
+          -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
+					-e DOCKER_URL="tcp://host.docker.internal:1234" \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
+          -p 8080:8080 ${IMAGE}
+
 id_rsa:
 	ssh-keygen -f id_rsa -t rsa -b 2048 -N ''
 	chmod a+r id_rsa*
@@ -40,7 +57,7 @@ publish:
 clean:
 	-docker rmi -f ${IMAGE}
 	-rm -f id_rsa*
-	-rm -r $JENKINS_HOME
+	-rm -r ${JENKINS_HOME}
 
 stop:
 	for img in $$(docker ps -q -f name=${NAME}); do docker kill $$img; done
