@@ -13,6 +13,7 @@ usermod -g 993 jenkins
 
 xsltproc \
   --stringparam use-security $USE_SECURITY \
+  --stringparam docker-url $DOCKER_URL\
   --stringparam oauth-client-id $OAUTH_ID \
   --stringparam oauth-client-secret $OAUTH_SECRET \
   $JENKINS_REF/edit-config.xslt $CONFIG > /tmp/config.xml.new
