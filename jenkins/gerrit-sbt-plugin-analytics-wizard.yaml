@@ -7,3 +7,7 @@
           gerrit-branch:
             - master
             - stable-2.16
+      - 'plugin-{name}-sbt-{branch}':
+          branch:
+            - stable-2.15
+            - stable-2.14
