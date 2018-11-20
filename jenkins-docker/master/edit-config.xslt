@@ -3,6 +3,7 @@
     xmlns:domain="urn:jboss:domain:1.4">
 
   <xsl:param name="use-security"/>
+  <xsl:param name="docker-url"/>
   <xsl:param name="oauth-client-id"/>
   <xsl:param name="oauth-client-secret"/>
 
@@ -18,6 +19,10 @@
 
   <xsl:template match="hudson/useSecurity">
      <xsl:element name="useSecurity"><xsl:value-of select="$use-security"/></xsl:element>
+  </xsl:template>
+
+  <xsl:template match="serverUrl">
+     <xsl:element name="serverUrl"><xsl:value-of select="$docker-url"/></xsl:element>
   </xsl:template>
 
   <xsl:template match="hudson/securityRealm">
