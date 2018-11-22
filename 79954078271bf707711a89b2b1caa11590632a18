@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eadccbae_c839463c",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-22T10:11:57Z",
+      "side": 1,
+      "message": "Are you sure that would work on MacOS as well?",
+      "range": {
+        "startLine": 41,
+        "startChar": 10,
+        "endLine": 41,
+        "endChar": 54
+      },
+      "revId": "79954078271bf707711a89b2b1caa11590632a18",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bb374a1d_0fc3f1ab",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-22T10:11:57Z",
+      "side": 1,
+      "message": "Good catch. I believe this is useful regardless of MacOS right?",
+      "revId": "79954078271bf707711a89b2b1caa11590632a18",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
