@@ -40,7 +40,7 @@ publish:
 clean:
 	-docker rmi -f ${IMAGE}
 	-rm -f id_rsa*
-	-rm -r $JENKINS_HOME
+	-rm -r ${JENKINS_HOME}
 
 stop:
 	for img in $$(docker ps -q -f name=${NAME}); do docker kill $$img; done
