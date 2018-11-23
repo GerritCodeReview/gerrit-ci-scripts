@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "508ecaa8_648e78c0",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-11-23T04:22:08Z",
+      "side": 1,
+      "message": "The javamelody plugin does not have a stable-2.16 branch",
+      "range": {
+        "startLine": 33,
+        "startChar": 14,
+        "endLine": 33,
+        "endChar": 25
+      },
+      "revId": "397aeac1cd9b25d827acf863409ddfb8f663d31a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
