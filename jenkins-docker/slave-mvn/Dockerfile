@@ -23,3 +23,5 @@ RUN export HOME=/home/jenkins && for prj in $PROJECTS; do cd /tmp && git clone $
 
 # Remove SNAPSHOT builds from Maven repo
 RUN for DIR in $(find ~/.m2/repository -type d -name '*SNAPSHOT*'); do rm -Rf $DIR; done
+
+USER root
