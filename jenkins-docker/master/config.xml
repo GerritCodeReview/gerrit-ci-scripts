@@ -186,7 +186,7 @@
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
             <image>gerritforge/gerrit-ci-slave-bazel:debian-jessie</image>
-            <dockerCommand>bash -x /bin/start.sh</dockerCommand>
+            <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
             <dnsHosts>
