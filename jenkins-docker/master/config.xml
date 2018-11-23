@@ -186,12 +186,12 @@
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
             <image>gerritforge/gerrit-ci-slave-bazel:debian-jessie</image>
-            <dockerCommand>bash -x /bin/start.sh</dockerCommand>
+            <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
             <dnsHosts>
-              <string>8.8.8.8</string>
-              <string>8.8.4.4</string>
+              <string></string>
+              <string></string>
             </dnsHosts>
             <network></network>
             <volumes/>
