@@ -1,4 +1,5 @@
 NO_CACHE=false
+CACHE_SSH_KEY=true
 ORGANISATION=gerritforge
 NAME=gerrit-ci
 USE_SECURITY=false
@@ -42,8 +43,9 @@ start_osx:
           -p 8080:8080 ${IMAGE}
 
 id_rsa:
-	ssh-keygen -f id_rsa -t rsa -b 2048 -N ''
-	chmod a+r id_rsa*
+	(test -f id_rsa && test -f id_rsa.pub && [ "${CACHE_SSH_KEY}" = "true" ]) || \
+		(ssh-keygen -f id_rsa -t rsa -b 2048 -N '' && \
+			chmod a+r id_rsa*)
 
 build: id_rsa
 	docker build --no-cache=$(NO_CACHE) \
