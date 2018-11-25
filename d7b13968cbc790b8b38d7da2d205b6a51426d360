@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9fa26734_69597645",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-25T17:57:27Z",
+      "side": 1,
+      "message": "DOCKER_HOST",
+      "range": {
+        "startLine": 40,
+        "startChar": 13,
+        "endLine": 40,
+        "endChar": 23
+      },
+      "revId": "d7b13968cbc790b8b38d7da2d205b6a51426d360",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
