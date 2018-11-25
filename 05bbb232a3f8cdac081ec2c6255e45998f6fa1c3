@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b8c7439_ad867fa2",
+        "filename": "jenkins/gerrit-bazel-plugin-simple-submit-rules.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-25T18:07:50Z",
+      "side": 1,
+      "message": "this isn\u0027t needed",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "05bbb232a3f8cdac081ec2c6255e45998f6fa1c3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
