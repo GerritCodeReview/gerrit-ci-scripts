@@ -16,6 +16,24 @@
       "revId": "95355fa15e9173ca4ae5f2ef21bac3444225f07d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "baf13a56_ee4260f2",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-26T10:16:19Z",
+      "side": 0,
+      "message": "Ok. I tested it with the DNS still configured and it worked. Seems only the custom entrypoint is keeping Jenkins from connecting to the slave.",
+      "parentUuid": "19520d54_46b35c5e",
+      "revId": "95355fa15e9173ca4ae5f2ef21bac3444225f07d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
