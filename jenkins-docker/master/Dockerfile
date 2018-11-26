@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     automake \
     xsltproc \
+    gettext-base \
     apt-transport-https && \
     rm -rf /var/lib/apt/lists/* && \
     \
