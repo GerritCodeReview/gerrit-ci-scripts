@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "18b442e2_a400479c",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-events-log.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2018-11-26T22:41:03Z",
+      "side": 1,
+      "message": "The rationale behind this line move for the master branch could also be mentioned in the commit message.",
+      "range": {
+        "startLine": 15,
+        "startChar": 12,
+        "endLine": 17,
+        "endChar": 20
+      },
+      "revId": "f68ae66b04cdf0480bd6bb2d280efc322759483b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
