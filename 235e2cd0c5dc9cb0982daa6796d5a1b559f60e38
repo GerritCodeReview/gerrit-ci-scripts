@@ -22,6 +22,29 @@
       "revId": "235e2cd0c5dc9cb0982daa6796d5a1b559f60e38",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd9ba632_1a2edbcc",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-11-26T00:46:06Z",
+      "side": 1,
+      "message": "There is now a stable-2.16 branch on the plugin, so this can be moved up to below line 43.",
+      "range": {
+        "startLine": 50,
+        "startChar": 12,
+        "endLine": 50,
+        "endChar": 25
+      },
+      "revId": "235e2cd0c5dc9cb0982daa6796d5a1b559f60e38",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
