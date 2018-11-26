@@ -2,6 +2,7 @@
     name: 'plugin-javamelody-bazel-{branch}'
     description: "JavaMelody plugin {branch} branch build with Bazel\n"
     defaults: plugin-template
+    node: bazel-debian
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh
