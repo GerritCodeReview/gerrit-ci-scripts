@@ -50,6 +50,7 @@
     name: 'plugin-{name}-gh-bazel-{branch}'
     description: "Plugin {name} {branch} branch build with Bazel owned by {organization} and hosted on GitHub\n"
     defaults: plugin-gh-template
+    node: bazel-debian
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh
