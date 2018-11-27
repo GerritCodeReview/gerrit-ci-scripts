@@ -22,6 +22,30 @@
       "revId": "f68ae66b04cdf0480bd6bb2d280efc322759483b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ec8c71be_2484843f",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-events-log.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1017568
+      },
+      "writtenOn": "2018-11-27T08:54:33Z",
+      "side": 1,
+      "message": "not much rationale on my part: I just did it like the other plugins (for exemple I30120b4aca)",
+      "parentUuid": "18b442e2_a400479c",
+      "range": {
+        "startLine": 15,
+        "startChar": 12,
+        "endLine": 17,
+        "endChar": 20
+      },
+      "revId": "f68ae66b04cdf0480bd6bb2d280efc322759483b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
