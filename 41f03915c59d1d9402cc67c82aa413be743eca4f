@@ -34,6 +34,24 @@
       "revId": "41f03915c59d1d9402cc67c82aa413be743eca4f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "419a78f4_97524382",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-emoticons.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-28T10:19:59Z",
+      "side": 0,
+      "message": "When you have one branch compatible with multiple version of gerrit, then you can use the template ending with {branch}-{gerrit-branch}.",
+      "parentUuid": "d1771a7d_0b65c85a",
+      "revId": "41f03915c59d1d9402cc67c82aa413be743eca4f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
