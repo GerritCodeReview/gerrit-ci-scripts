@@ -16,6 +16,24 @@
       "revId": "41f03915c59d1d9402cc67c82aa413be743eca4f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1771a7d_0b65c85a",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-emoticons.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-28T09:58:20Z",
+      "side": 0,
+      "message": "Master isn\u0027t working at all: I\u0027ve created a stable-2.16 branch on the plugin which works. There is definitely work to be done on the plugin to make it work.",
+      "parentUuid": "167bf430_872c466b",
+      "revId": "41f03915c59d1d9402cc67c82aa413be743eca4f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
