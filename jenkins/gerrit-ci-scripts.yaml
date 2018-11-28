@@ -71,5 +71,10 @@
            - '${CHANGE_COMMIT}'
          skip-tag: true
     builders:
-      - shell: jenkins-jobs update jenkins/. ${JOBS}
+      - shell: |
+          if test -n "${JOBS}"; then
+            jenkins-jobs update jenkins ${JOBS}
+          else
+            jenkins-jobs update --delete-old jenkins
+          fi
 

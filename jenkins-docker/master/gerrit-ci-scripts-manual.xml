@@ -50,7 +50,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>jenkins-jobs update jenkins ${JOBS}</command>
+      <command>
+        if test -n "${JOBS}"; then
+          jenkins-jobs update jenkins ${JOBS}
+        else
+          jenkins-jobs update --delete-old jenkins
+        fi
+      </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
