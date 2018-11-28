@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "167bf430_872c466b",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-emoticons.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1017568
+      },
+      "writtenOn": "2018-11-28T09:52:27Z",
+      "side": 0,
+      "message": "so now the \u0027master\u0027 branch build is not defined in script anymore?\n\nI don\u0027t mind keeping \u0027master\u0027 here (to keep old job name), but in other jobs it seems that each branch of the plugin is listed only once: so when master branch of plugin must be built against master \u0026 stable job name gets changed. I saw this see happen on I30120b4ac for instance.",
+      "revId": "41f03915c59d1d9402cc67c82aa413be743eca4f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
