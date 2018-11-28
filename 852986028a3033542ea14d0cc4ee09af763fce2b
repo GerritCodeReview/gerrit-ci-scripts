@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7b1a340c_aecbeca1",
+        "filename": "jenkins-docker/master/gerrit-ci-scripts-manual.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-11-28T17:56:44Z",
+      "side": 1,
+      "message": "I believe I committed this XML by mistake :-(\nThe job is created anyway the first time that gerrit-ci-scripts gets executed\n\nNevermind, it is harmless",
+      "revId": "852986028a3033542ea14d0cc4ee09af763fce2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
