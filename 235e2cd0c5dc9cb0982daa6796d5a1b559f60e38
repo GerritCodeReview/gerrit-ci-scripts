@@ -93,6 +93,53 @@
       "revId": "235e2cd0c5dc9cb0982daa6796d5a1b559f60e38",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "20816643_649e2199",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-11-29T07:25:33Z",
+      "side": 1,
+      "message": "\u003e There is now a stable-2.16 branch on the plugin\n\nStrange, I have just created stable-2.16 branch.",
+      "parentUuid": "aed5096c_e71341f6",
+      "range": {
+        "startLine": 50,
+        "startChar": 12,
+        "endLine": 50,
+        "endChar": 25
+      },
+      "revId": "235e2cd0c5dc9cb0982daa6796d5a1b559f60e38",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e2075c0_d15539d1",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-javamelody.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-11-29T07:25:33Z",
+      "side": 1,
+      "message": "Unrelated to this change, but how can i make targets depend in branch? Context: starting form master/3.0 plugins/javamelody:javamelody-deps_deploy.jar target is gone.",
+      "range": {
+        "startLine": 52,
+        "startChar": 12,
+        "endLine": 52,
+        "endChar": 57
+      },
+      "revId": "235e2cd0c5dc9cb0982daa6796d5a1b559f60e38",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
