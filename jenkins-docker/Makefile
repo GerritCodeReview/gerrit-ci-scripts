@@ -1,4 +1,4 @@
-SLAVE_DIRS ?= slave-debian slave-chrome slave-node-wct slave-buck slave-mvn slave-bazel slave-sbt
+SLAVE_DIRS ?= slave-debian slave-chrome slave-node-wct slave-buck slave-mvn slave-bazel slave-sbt slave-release
 ALL_DIRS ?= master $(SLAVE_DIRS)
 NO_CACHE ?= true
 
