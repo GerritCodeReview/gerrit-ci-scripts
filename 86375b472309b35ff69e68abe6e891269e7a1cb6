@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7b43b07d_cfe16db7",
+        "filename": "jenkins-docker/slave-release/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-12-07T23:55:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1fa2eeee_1fe0f792",
+      "range": {
+        "startLine": 8,
+        "startChar": 22,
+        "endLine": 8,
+        "endChar": 26
+      },
+      "revId": "86375b472309b35ff69e68abe6e891269e7a1cb6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ef22b3f1_b644c8b1",
         "filename": "jenkins-docker/slave-release/gerrit-release.sh",
         "patchSetId": 2
