@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ef22b3f1_b644c8b1",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-12-07T22:50:42Z",
+      "side": 1,
+      "message": "I specifically *omit* the git push of the new commit and tag for two reasons:\n\n- The generated \"candidate release\" may not work at all and thus the \u0027Set to version $version\u0027 commit could have been potentially reverted\n- Once the tag gets pushed, the release is out and can\u0027t be undone.\n\nFinal push of the change, merge and tagging will be done at the end and *manually* because the automated validation of the Gerrit functionality E2E isn\u0027t there yet.",
+      "revId": "86375b472309b35ff69e68abe6e891269e7a1cb6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
