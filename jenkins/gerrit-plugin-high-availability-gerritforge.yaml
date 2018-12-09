@@ -1,9 +1,9 @@
-- job-template:
-    name: 'plugin-{name}-gerritforge-{branch}'
+- defaults:
+    name: high-availability-gerritforge-defaults
     class: plugins
     node: bazel-debian
-    description: "Plugin {name} {branch} branch for Gerrit {branch} - GerritForge fork\n"
     defaults: plugin-template-bazel
+    targets: 'plugins/high-availability'
     scm:
       - git:
          remotes:
@@ -14,12 +14,27 @@
          branches:
            - 'origin/{branch}'
          skip-tag: true
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/{name}/*{name}*.jar*, bazel-genfiles/plugins/{name}/{name}.json
+
+- job-template:
+    name: 'plugin-{name}-gerritforge-{branch}'
+    defaults: high-availability-gerritforge-defaults
+    description: "Plugin {name} {branch} branch for Gerrit {branch} - GerritForge fork\n"
     builders:
       - shell:
          !include-raw: gerrit-bazel-build-plugin.sh
       - shell:
          !include-raw: gerrit-bazel-get-project-info.sh
-    publishers:
-      - archive:
-         artifacts: >
-           bazel-genfiles/plugins/{name}/*{name}*.jar*, bazel-genfiles/plugins/{name}/{name}.json
+
+- job-template:
+    name: 'plugin-{name}-gerritforge-{branch}-{gerrit-branch}'
+    defaults: high-availability-gerritforge-defaults
+    description: "Plugin {name} {branch} branch for Gerrit {gerrit-branch} - GerritForge fork\n"
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin-branch.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-project-info.sh
