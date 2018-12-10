@@ -22,6 +22,30 @@
       "revId": "7bbf624fe7dbca128be50ea2164b610eaed3a678",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "45693e84_526a3634",
+        "filename": "jenkins/gerrit-bazel-plugin-webhooks.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-12-10T11:22:18Z",
+      "side": 1,
+      "message": "True, will do a follow-up change where all the newly core-plugins aren\u0027t built anymore on master",
+      "parentUuid": "b79f64fc_6e7c93e0",
+      "range": {
+        "startLine": 9,
+        "startChar": 14,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "7bbf624fe7dbca128be50ea2164b610eaed3a678",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
