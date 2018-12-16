@@ -58,7 +58,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-buck:debian-jessie</image>
+            <image>gerritforge/gerrit-ci-slave-buck:debian-stretch</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
