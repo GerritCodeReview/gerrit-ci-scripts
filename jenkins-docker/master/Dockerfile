@@ -75,7 +75,7 @@ RUN apt-get install -y \
      curl \
      dirmngr gnupg gpgv && \
      curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
-     echo "deb [arch=amd64] https://download.docker.com/linux/debian jessie stable" >> etc/apt/sources.list && \
+     echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" >> etc/apt/sources.list && \
      apt-get update && \
      apt-cache policy docker-engine && \
      apt-get install -y docker-ce=18.03.1~ce-0~debian
