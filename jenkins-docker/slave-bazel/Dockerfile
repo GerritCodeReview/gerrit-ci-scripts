@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-buck:debian-jessie
+FROM gerritforge/gerrit-ci-slave-buck:debian-stretch
 
 # Bazel 0.19.0
 RUN apt-get update && \
@@ -25,9 +25,9 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     cd /tmp &&  git clone -b stable-2.15 --recursive https://gerrit.googlesource.com/gerrit && \
     cd /tmp/gerrit && \
     ./tools/setup_gjf.sh 1.6 && \
-    ( bazel build //... || true ) && \
-    git checkout -f stable-2.16 && git submodule update --init && ( bazel build //... || true ) && \
-    git checkout -f master && git submodule update --init && ( bazel build //... || true ) && \
+    ( bazel build plugins:core release api || true ) && \
+    git checkout -f stable-2.16 && git submodule update --init && ( bazel build plugins:core release api || true ) && \
+    git checkout -f master && git submodule update --init && ( bazel build plugins:core release api || true ) && \
     cd /tmp/gerrit && mv tools/format ~ && \
     rm -Rf /tmp/gerrit'
 
