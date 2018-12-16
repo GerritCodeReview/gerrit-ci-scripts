@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-jessie
+FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch
 
 USER jenkins
 

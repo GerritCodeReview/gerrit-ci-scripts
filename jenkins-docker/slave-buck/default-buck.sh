@@ -1,3 +1,3 @@
 #!/bin/bash
 
-. /usr/bin/set-buck.sh 8
+. /usr/bin/set-buck.sh

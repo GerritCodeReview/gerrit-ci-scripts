@@ -1,5 +1,5 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-buck:debian-jessie
+IMAGE=gerritforge/gerrit-ci-slave-buck:debian-stretch
 NODE_VER ?= 10
 WCT_VER ?= 6.8.0
 
