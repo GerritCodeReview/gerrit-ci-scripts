@@ -27,10 +27,12 @@
             plugins/javamelody:javamelody \
       - 'plugin-javamelody-bazel-{branch}':
           branch:
-            - master
             - stable-2.14
             - stable-2.15
             - stable-2.16
           targets: >
             plugins/javamelody:javamelody-deps_deploy.jar
             plugins/javamelody:javamelody \
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
