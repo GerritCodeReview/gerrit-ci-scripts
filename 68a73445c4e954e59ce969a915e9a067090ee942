@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8a8459_0f946979",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-12-18T11:40:59Z",
+      "side": 0,
+      "message": "this should have been kept",
+      "range": {
+        "startLine": 235,
+        "startChar": 0,
+        "endLine": 238,
+        "endChar": 31
+      },
+      "revId": "68a73445c4e954e59ce969a915e9a067090ee942",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
