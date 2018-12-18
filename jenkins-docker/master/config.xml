@@ -62,7 +62,10 @@
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
-            <dnsHosts/>
+            <dnsHosts>
+              <string>8.8.8.8</string>
+              <string>8.8.4.4</string>
+            </dnsHosts>
             <volumes/>
             <volumesFrom2/>
             <environment/>
