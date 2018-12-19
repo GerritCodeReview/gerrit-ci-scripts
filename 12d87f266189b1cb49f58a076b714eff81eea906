@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4573ec00_4d3e79b0",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-12-19T07:57:01Z",
+      "side": 1,
+      "message": "This should not be EXCLUSIVE anymore, since this way only jobs specifying this label will use this node. Thus, jobs not specifying a label (e.g. for buck-based builds) won\u0027t use this.",
+      "range": {
+        "startLine": 54,
+        "startChar": 16,
+        "endLine": 54,
+        "endChar": 25
+      },
+      "revId": "12d87f266189b1cb49f58a076b714eff81eea906",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
