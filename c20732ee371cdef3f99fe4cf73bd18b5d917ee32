@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1413591a_6ced3bc6",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-12-19T00:42:41Z",
+      "side": 0,
+      "message": "This target gets executed by make *only* if the id_rsa file doesn\u0027t exist.",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 6
+      },
+      "revId": "c20732ee371cdef3f99fe4cf73bd18b5d917ee32",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
