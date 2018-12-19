@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "7fef2352_396d56cd",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-12-19T07:54:46Z",
+      "side": 0,
+      "message": "Don\u0027t we still need this? Since the slave-mvn is inheriting from slave-bazel, slave-bazel does not contain maven.",
+      "range": {
+        "startLine": 145,
+        "startChar": 19,
+        "endLine": 145,
+        "endChar": 50
+      },
+      "revId": "68a73445c4e954e59ce969a915e9a067090ee942",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f20a7a5c_9bdd9339",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-12-19T07:54:46Z",
+      "side": 0,
+      "message": "Don\u0027t we still need this? Since the slave-sbt is inheriting from slave-bazel, slave-bazel does not contain sbt.",
+      "range": {
+        "startLine": 187,
+        "startChar": 19,
+        "endLine": 187,
+        "endChar": 56
+      },
+      "revId": "68a73445c4e954e59ce969a915e9a067090ee942",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ce8a8459_0f946979",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 2
