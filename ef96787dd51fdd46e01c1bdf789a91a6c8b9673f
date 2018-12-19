@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "75c7076a_2ab6cb81",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-12-19T02:34:20Z",
+      "side": 1,
+      "message": "\"be\"",
+      "range": {
+        "startLine": 9,
+        "startChar": 65,
+        "endLine": 9,
+        "endChar": 68
+      },
+      "revId": "ef96787dd51fdd46e01c1bdf789a91a6c8b9673f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3a98bc20_2252e576",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-12-19T02:34:20Z",
+      "side": 1,
+      "message": "building",
+      "range": {
+        "startLine": 24,
+        "startChar": 18,
+        "endLine": 24,
+        "endChar": 23
+      },
+      "revId": "ef96787dd51fdd46e01c1bdf789a91a6c8b9673f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9dbc314d_9916467c",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2018-12-19T02:34:20Z",
+      "side": 1,
+      "message": "but",
+      "range": {
+        "startLine": 49,
+        "startChar": 37,
+        "endLine": 49,
+        "endChar": 42
+      },
+      "revId": "ef96787dd51fdd46e01c1bdf789a91a6c8b9673f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
