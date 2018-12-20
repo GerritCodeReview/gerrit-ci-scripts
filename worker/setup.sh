@@ -29,6 +29,7 @@ cp ${src}/setup-tunnel.service /etc/systemd/system/
 cp ${src}/tunnel.sh /root
 
 systemctl daemon-reload
+systemctl enable docker
 systemctl start docker
 systemctl restart docker
 systemctl enable setup-tunnel.service
