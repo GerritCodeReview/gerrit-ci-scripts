@@ -34,14 +34,6 @@ RUN echo ". /usr/bin/set-buck.sh $1" >> /usr/bin/set-java.sh
 # Buck JVM options setup
 COPY buckjavaargs /home/jenkins/.buckjavaargs
 
-# Buck cache warm-up with Gerrit 2.13 build
-USER jenkins
-RUN bash -c '. /usr/bin/set-java.sh 8 && cd /tmp &&  \
-    git clone -b stable-2.13 --recursive https://gerrit.googlesource.com/gerrit && \
-    cd gerrit && buck build gerrit api plugins:core || true  && \
-    buck test --dry-run --no-results-cache --exclude flaky || true  && \
-    rm -Rf /tmp/gerrit /home/jenkins/.gerritcodereview/buck-cache/{cache,locally-built-artifacts}'
-
 # Enable Buck rebuild
 ENV BUCK_CLEAN_REPO_IF_DIRTY y
 
