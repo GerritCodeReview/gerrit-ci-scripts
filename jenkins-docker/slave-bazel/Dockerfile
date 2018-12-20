@@ -5,7 +5,8 @@ RUN apt-get update && \
     wget -O /tmp/bazel_0.19.0-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.19.0/bazel_0.19.0-linux-x86_64.deb && \
     (dpkg -i /tmp/bazel_0.19.0-linux-x86_64.deb; apt-get install -f -y) && \
     rm /tmp/bazel_0.19.0-linux-x86_64.deb && \
-    bash -c '. set-java.sh 8 && bazel version'
+    bash -c '. set-java.sh 8 && bazel version' && \
+    apt-get clean
 
 # Install buildifier utility (0.17.2)
 RUN cd /tmp && \
@@ -26,8 +27,7 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     cd /tmp/gerrit && \
     ./tools/setup_gjf.sh 1.6 && \
     ( bazel build //... || true ) && \
-    git checkout -f stable-2.16 && git submodule update --init && ( bazel build //... || true ) && \
-    git checkout -f master && git submodule update --init && ( bazel build //... || true ) && \
+    git checkout -f master && git submodule update --init && ( bazel build gerrit || true ) && \
     cd /tmp/gerrit && mv tools/format ~ && \
     rm -Rf /tmp/gerrit'
 

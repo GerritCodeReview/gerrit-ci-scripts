@@ -8,7 +8,8 @@ RUN apt-get update && \
     apt-get update && \
     apt-get -y install --no-install-recommends sbt && \
     rm -rf /etc/apt/sources.list.d/* && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get clean
 
 # SBT warm-up
 RUN cd /tmp && echo hello | sbt new sbt/scala-seed.g8
