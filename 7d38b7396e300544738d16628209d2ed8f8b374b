@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c3c112e2_aefd8697",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-12-21T08:40:27Z",
+      "side": 1,
+      "message": "Can we merge that installation with the one below?",
+      "revId": "7d38b7396e300544738d16628209d2ed8f8b374b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "204fc448_5a40f69d",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-12-21T08:40:27Z",
+      "side": 1,
+      "message": "Unrelated to this change here, but do we really need vim?",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 28,
+        "endChar": 7
+      },
+      "revId": "7d38b7396e300544738d16628209d2ed8f8b374b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a7bfd36_90f0c619",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-12-21T08:40:27Z",
+      "side": 1,
+      "message": "We should run an \u0027apt-get clean\u0027 here as well.",
+      "revId": "7d38b7396e300544738d16628209d2ed8f8b374b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
