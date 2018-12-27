@@ -9,8 +9,14 @@ SOURCE_LEVEL=$(grep "source_level" .buckconfig || echo "source_level=7")
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
+BUCK_OPTIONS="--no-results-cache"
+if ([ "$TARGET_BRANCH" == "stable-2.9" ])
+then
+  BUCK_OPTIONS=""
+fi
+
 if [[ "$MODE" == *"reviewdb"* ]]
 then
-  buck test --no-results-cache --exclude flaky
+  buck test $BUCK_OPTIONS --exclude flaky
 fi
 
