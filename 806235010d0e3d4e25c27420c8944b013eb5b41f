@@ -46,6 +46,30 @@
       "revId": "806235010d0e3d4e25c27420c8944b013eb5b41f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6b65c03_2a73f366",
+        "filename": "jenkins/gerrit-buck-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2018-12-27T10:44:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "35e68da8_27f6b278",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 0
+      },
+      "revId": "806235010d0e3d4e25c27420c8944b013eb5b41f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
