@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a8262c0_57f24ee7",
+        "filename": "jenkins/gerrit-buck-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-12-27T10:35:41Z",
+      "side": 1,
+      "message": "Why not doing the opposite?\n\n  BUCK_OPTIONS\u003d\"--no-results-cache\"\n  if ([ \"$TARGET_BRANCH\" \u003d\u003d \"stable-2.9\" ])\n  then\n    BUCK_OPTIONS\u003d\"\"\n  fi",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 0
+      },
+      "revId": "806235010d0e3d4e25c27420c8944b013eb5b41f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
