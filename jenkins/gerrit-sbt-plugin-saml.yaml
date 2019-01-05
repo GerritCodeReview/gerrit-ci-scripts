@@ -1,0 +1,6 @@
+- project:
+    name: saml
+    jobs:
+      - 'plugin-{name}-sbt-{branch}':
+          branch:
+            - stable-2.11
