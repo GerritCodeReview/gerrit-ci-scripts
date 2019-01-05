@@ -39,7 +39,7 @@
          !include-raw: gerrit-sbt-build-branch-plugin.sh
     publishers:
       - archive:
-         artifacts: '**/target/**/{name}*.jar*,**/target/**/{name}*.json'
+         artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json'
 
     wrappers:
       - raw:
