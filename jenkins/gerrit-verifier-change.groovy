@@ -311,7 +311,7 @@ def buildChange(change) {
     modes = ["notedb"]
   }
   else if(branch == "stable-2.15" || branch == "stable-2.16") {
-    modes = ["reviewdb","nodedb"]
+    modes = ["reviewdb","notedb"]
   } else {
     modes = ["reviewdb"]
   }
