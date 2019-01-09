@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c0013ace_093fce0c",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-01-09T22:49:20Z",
+      "side": 1,
+      "message": "Right I considered to do that, but went with return code and removal of -e option in the end.",
+      "parentUuid": "9a5fd071_8e6a8464",
+      "range": {
+        "startLine": 167,
+        "startChar": 12,
+        "endLine": 167,
+        "endChar": 25
+      },
+      "revId": "8dfe5d94546a7fd1a445103eb799324779ff3b7d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b07c8117_e87a72b9",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 8
@@ -59,6 +83,30 @@
       "writtenOn": "2019-01-09T22:35:06Z",
       "side": 1,
       "message": "Choose a less obvious delimiter :-)\ne.g.\n\u003d\u003d\u003d\u003d FORMATTING ERRORS: BEGIN \u003d\u003d\u003d\u003d",
+      "range": {
+        "startLine": 169,
+        "startChar": 17,
+        "endLine": 169,
+        "endChar": 18
+      },
+      "revId": "8dfe5d94546a7fd1a445103eb799324779ff3b7d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c743a47_9086eaa5",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-01-09T22:49:20Z",
+      "side": 1,
+      "message": "I went with old delimiter \"[\" to not change too much at once ;-) But I could look into adjusting it.",
+      "parentUuid": "ab432ca1_2607c1d9",
       "range": {
         "startLine": 169,
         "startChar": 17,

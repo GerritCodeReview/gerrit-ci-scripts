@@ -22,6 +22,30 @@
       "revId": "cbf569a0863c9184b70bc79016f581d405bf9e5f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "76824f82_6e4d090c",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-01-09T22:49:20Z",
+      "side": 1,
+      "message": "Yes, that\u0027s problematic. The reason is that with -e option pipe command doesn\u0027t work in respect of returning correct return value.",
+      "parentUuid": "e6212357_f0967f2d",
+      "range": {
+        "startLine": 162,
+        "startChar": 23,
+        "endLine": 162,
+        "endChar": 24
+      },
+      "revId": "cbf569a0863c9184b70bc79016f581d405bf9e5f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
