@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4a3bbfaa_4ce77f9f",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-09T16:01:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "75c7076a_2ab6cb81",
+      "range": {
+        "startLine": 9,
+        "startChar": 65,
+        "endLine": 9,
+        "endChar": 68
+      },
+      "revId": "ef96787dd51fdd46e01c1bdf789a91a6c8b9673f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a98bc20_2252e576",
         "filename": "jenkins-docker/slave-release/gerrit-release.sh",
         "patchSetId": 5
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "284d61ba_c19a8fda",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-09T16:01:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a98bc20_2252e576",
+      "range": {
+        "startLine": 24,
+        "startChar": 18,
+        "endLine": 24,
+        "endChar": 23
+      },
+      "revId": "ef96787dd51fdd46e01c1bdf789a91a6c8b9673f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9dbc314d_9916467c",
         "filename": "jenkins-docker/slave-release/gerrit-release.sh",
         "patchSetId": 5
@@ -68,6 +116,30 @@
       "revId": "ef96787dd51fdd46e01c1bdf789a91a6c8b9673f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f91bac62_f7ee3a06",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-09T16:01:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9dbc314d_9916467c",
+      "range": {
+        "startLine": 49,
+        "startChar": 37,
+        "endLine": 49,
+        "endChar": 42
+      },
+      "revId": "ef96787dd51fdd46e01c1bdf789a91a6c8b9673f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
