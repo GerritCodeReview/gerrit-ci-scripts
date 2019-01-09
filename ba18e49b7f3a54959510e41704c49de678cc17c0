@@ -52,6 +52,24 @@
       "revId": "ba18e49b7f3a54959510e41704c49de678cc17c0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "204c7372_70660671",
+        "filename": "jenkins/gerrit-bazel-plugin-project-group-structure.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2019-01-09T14:04:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b521513a_2409aec6",
+      "revId": "ba18e49b7f3a54959510e41704c49de678cc17c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
