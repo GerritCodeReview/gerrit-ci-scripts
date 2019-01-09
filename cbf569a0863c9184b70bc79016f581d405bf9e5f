@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6212357_f0967f2d",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-09T22:35:06Z",
+      "side": 1,
+      "message": "Why removing the -e?\nImagine that we have a typo anywhere and we fail to execute the command: the job will fail and won\u0027t generate any output.\n\nInstead of reporting the failure, we will say \"oh yes, all good\" ... whilst isn\u0027t good at all :-(",
+      "range": {
+        "startLine": 162,
+        "startChar": 23,
+        "endLine": 162,
+        "endChar": 24
+      },
+      "revId": "cbf569a0863c9184b70bc79016f581d405bf9e5f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
