@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c7c1ec19_9b615f1e",
+        "filename": "jenkins/gerrit-bazel-plugin-project-group-structure.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2019-01-09T08:47:57Z",
+      "side": 1,
+      "message": "Thanks, will remove master.",
+      "parentUuid": "bb8d2676_e9342090",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "92d51047125a464336f4654187695695d9cceb0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "dfb51b2f_7b7a537c",
         "filename": "jenkins/gerrit-bazel-plugin-project-group-structure.yaml",
         "patchSetId": 3
@@ -36,6 +60,24 @@
       "writtenOn": "2019-01-09T08:40:24Z",
       "side": 1,
       "message": "What about stable-2.14?",
+      "revId": "92d51047125a464336f4654187695695d9cceb0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "191b25b5_a5185686",
+        "filename": "jenkins/gerrit-bazel-plugin-project-group-structure.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2019-01-09T08:47:57Z",
+      "side": 1,
+      "message": "I\u0027m fine adding it; I just didn\u0027t because personally I\u0027m only interested in 2.15 :-)",
+      "parentUuid": "dfb51b2f_7b7a537c",
       "revId": "92d51047125a464336f4654187695695d9cceb0f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
