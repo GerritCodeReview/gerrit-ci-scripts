@@ -16,6 +16,24 @@
       "revId": "ba18e49b7f3a54959510e41704c49de678cc17c0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "67dbe0b6_5fbea2af",
+        "filename": "jenkins/gerrit-bazel-plugin-project-group-structure.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2019-01-09T13:14:29Z",
+      "side": 1,
+      "message": "I was simply overlooking that existing file, sorry. Any preference whether to edit the existing file to contain `stable-2.15`, or extract the Bazel build to its own file? What\u0027s the best practice here?",
+      "parentUuid": "1ac082e0_caffab99",
+      "revId": "ba18e49b7f3a54959510e41704c49de678cc17c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
