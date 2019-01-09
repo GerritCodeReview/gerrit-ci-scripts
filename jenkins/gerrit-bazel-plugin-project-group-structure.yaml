@@ -1,0 +1,7 @@
+- project:
+    name: project-group-structure
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.15
