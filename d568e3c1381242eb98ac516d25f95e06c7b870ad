@@ -34,6 +34,24 @@
       "revId": "d568e3c1381242eb98ac516d25f95e06c7b870ad",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5296155b_f5b57e43",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-09T07:52:47Z",
+      "side": 1,
+      "message": "\u003e Im not sure, maybe?\n\nYes, it would be best.",
+      "parentUuid": "4353a386_da447a66",
+      "revId": "d568e3c1381242eb98ac516d25f95e06c7b870ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
