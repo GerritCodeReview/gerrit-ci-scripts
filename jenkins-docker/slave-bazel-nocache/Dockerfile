@@ -10,7 +10,7 @@ RUN apt-get update && \
     rm /tmp/bazel_${BAZEL_VER}-linux-x86_64.deb && \
     bash -c '. set-java.sh 8 && bazel version'
 
-# Install Buildifier
+# Install buildifier utility
 RUN cd /tmp && \
     bash -c '. /usr/bin/set-java.sh 8 && \
     git clone https://github.com/bazelbuild/buildtools.git && \
