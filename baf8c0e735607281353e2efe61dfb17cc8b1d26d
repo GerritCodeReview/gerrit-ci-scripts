@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff5c3fab_b0dfaf71",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-01-10T07:22:34Z",
+      "side": 1,
+      "message": "Is it possible to make this a constant so there\u0027s less risk of mistakes being made in replacing the several places where it\u0027s hard-coded?",
+      "range": {
+        "startLine": 5,
+        "startChar": 25,
+        "endLine": 5,
+        "endChar": 29
+      },
+      "revId": "baf8c0e735607281353e2efe61dfb17cc8b1d26d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
