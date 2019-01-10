@@ -1,7 +1,7 @@
 NO_CACHE=false
 IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-jessie-nocache
 BAZEL_VER=0.19.0
-BUILDIFIER_VER=0.17.2
+BUILDIFIER_VER=0.20.0
 
 # Targets
 
