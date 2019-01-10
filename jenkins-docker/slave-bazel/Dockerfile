@@ -1,10 +1,10 @@
 FROM gerritforge/gerrit-ci-slave-buck:debian-jessie
 
-# Bazel 0.19.0
+# Bazel 0.21.0
 RUN apt-get update && \
-    wget -O /tmp/bazel_0.19.0-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.19.0/bazel_0.19.0-linux-x86_64.deb && \
-    (dpkg -i /tmp/bazel_0.19.0-linux-x86_64.deb; apt-get install -f -y) && \
-    rm /tmp/bazel_0.19.0-linux-x86_64.deb && \
+    wget -O /tmp/bazel_0.21.0-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/0.21.0/bazel_0.21.0-linux-x86_64.deb && \
+    (dpkg -i /tmp/bazel_0.21.0-linux-x86_64.deb; apt-get install -f -y) && \
+    rm /tmp/bazel_0.21.0-linux-x86_64.deb && \
     bash -c '. set-java.sh 8 && bazel version'
 
 # Install buildifier utility (0.17.2)
