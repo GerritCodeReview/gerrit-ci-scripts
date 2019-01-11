@@ -23,7 +23,7 @@ branch-api:2.0.20
 build-flow-plugin:0.20
 build-timeout:1.19
 cloudbees-folder:6.4
-credentials:2.1.16
+credentials:2.1.17
 docker-plugin:1.1.4
 durable-task:1.22
 embeddable-build-status:1.9
@@ -61,7 +61,7 @@ pipeline-stage-view:2.10
 plain-credentials:1.4
 scm-api:2.2.7
 script-security:1.44
-ssh-credentials:1.13
+ssh-credentials:1.14
 ssh-slaves:1.26
 structs:1.14
 token-macro:2.5
