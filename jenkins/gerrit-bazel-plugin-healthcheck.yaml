@@ -1,9 +1,9 @@
 - project:
     name: healthcheck
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-          gerrit-branch:
+            - stable-2.16
             - stable-2.15
             - stable-2.14
