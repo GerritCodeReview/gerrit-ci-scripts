@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "22a76a6d_2c2b3603",
+        "filename": "jenkins/gerrit-bazel-plugin-healthcheck.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-16T22:43:11Z",
+      "side": 1,
+      "message": "This isn\u0027t working at all: the master is diverging quite a lot from v2.16 and having the same code for both is not practical.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 25
+      },
+      "revId": "80fc85d0b57272d99f5789ed5212aadbd5ea25f3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
