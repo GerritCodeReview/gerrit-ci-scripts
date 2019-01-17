@@ -22,6 +22,30 @@
       "revId": "426f5e9bb13d02ff43eeeba25e8d7d4f14ac3048",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ec0b5617_3ad5a82b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-17T07:23:41Z",
+      "side": 1,
+      "message": "Right, let me amend the description.",
+      "parentUuid": "b5f327a4_5b8e86b1",
+      "range": {
+        "startLine": 7,
+        "startChar": 34,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "426f5e9bb13d02ff43eeeba25e8d7d4f14ac3048",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
