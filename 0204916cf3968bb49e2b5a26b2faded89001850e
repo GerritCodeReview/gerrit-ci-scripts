@@ -70,6 +70,30 @@
       "revId": "0204916cf3968bb49e2b5a26b2faded89001850e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "329afd2a_a7645977",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitiles.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-01-19T10:48:48Z",
+      "side": 1,
+      "message": "What I mean is, it\u0027s building the 2.16 version using the master branch. It should be changed to build the stable-2.16 branch.",
+      "parentUuid": "cb70bd3c_1a687930",
+      "range": {
+        "startLine": 18,
+        "startChar": 14,
+        "endLine": 18,
+        "endChar": 25
+      },
+      "revId": "0204916cf3968bb49e2b5a26b2faded89001850e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
