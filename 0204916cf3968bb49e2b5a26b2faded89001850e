@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eec18029_6e4a4948",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitiles.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-01-19T00:25:43Z",
+      "side": 1,
+      "message": "We will probably need to build this plugin on its own stable-2.16 branch soon, so shall we do that already?",
+      "range": {
+        "startLine": 18,
+        "startChar": 14,
+        "endLine": 18,
+        "endChar": 25
+      },
+      "revId": "0204916cf3968bb49e2b5a26b2faded89001850e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
