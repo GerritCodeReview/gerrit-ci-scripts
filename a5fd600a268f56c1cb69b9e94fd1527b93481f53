@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "675136f6_6255ad85",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-01-20T05:58:01Z",
+      "side": 1,
+      "message": "This change cannot add 2.16 branch to the CI again, because it was already added here: [1],[2].\n\n* [1] https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/205658\n* [2] https://gerrit-ci.gerritforge.com/view/Plugins-stable-2.16/job/plugin-reviewers-by-blame-bazel-master-stable-2.16/",
+      "revId": "a5fd600a268f56c1cb69b9e94fd1527b93481f53",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
