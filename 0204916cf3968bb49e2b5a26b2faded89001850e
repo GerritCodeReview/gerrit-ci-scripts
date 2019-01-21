@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "cfa1325b_7e9e0bbc",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-gitiles.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-01-21T08:05:37Z",
+      "side": 1,
+      "message": "The branch of the plugin isn\u0027t set now. Thus, the generation of the job will fail.\nThis is probably also related to David Pursehouse\u0027s comment. Do we want to build gitiles stable-2.16 in tree with Gerrit stable-2.16?",
+      "range": {
+        "startLine": 16,
+        "startChar": 29,
+        "endLine": 16,
+        "endChar": 37
+      },
+      "revId": "0204916cf3968bb49e2b5a26b2faded89001850e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "eec18029_6e4a4948",
         "filename": "jenkins/gerrit-buck-bazel-plugin-gitiles.yaml",
         "patchSetId": 2
