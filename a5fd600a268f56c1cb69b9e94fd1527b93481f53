@@ -34,6 +34,29 @@
       "revId": "a5fd600a268f56c1cb69b9e94fd1527b93481f53",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7b38defd_9ccfc40b",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-reviewers-by-blame.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-01-21T08:11:31Z",
+      "side": 1,
+      "message": "Can the master-branch of the plugin be built out of tree by now?",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "a5fd600a268f56c1cb69b9e94fd1527b93481f53",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
