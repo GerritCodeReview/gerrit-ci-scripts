@@ -57,6 +57,30 @@
       "revId": "a5fd600a268f56c1cb69b9e94fd1527b93481f53",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "be2e15ee_50299106",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-reviewers-by-blame.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-01-21T08:15:53Z",
+      "side": 1,
+      "message": "No, this plugin does not have a standalone build on any branch.  If we introduce a standalone build, I would prefer to do it on stable-2.14 and merge it up.",
+      "parentUuid": "7b38defd_9ccfc40b",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "a5fd600a268f56c1cb69b9e94fd1527b93481f53",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
