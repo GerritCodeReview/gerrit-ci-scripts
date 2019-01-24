@@ -61,6 +61,28 @@ export VERBOSE=1
 ./tools/maven/api.sh war_deploy
 ./tools/maven/api.sh deploy
 
-echo "Release completed"
 echo "Download the artifacts from SonaType staging repository at https://oss.sonatype.org"
 echo "logging in using your credentials"
+
+popd
+
+cp -f gerrit/bazel-bin/Documentation/searchfree.zip .
+cp -f gerrit/bazel-bin/release.war gerrit-$version.war
+
+echo "gerrit.war checksums"
+shasum gerrit-$version.war
+shasum -a 256 gerrit-$version.war
+md5sum gerrit-$version.war
+
+echo "Pushing to Google Cloud Buckets"
+gcloud auth login
+
+echo "Pushing gerrit.war to gerrit-releases ..."
+gsutil cp gerrit-$version.war gs://gerrit-releases/gerrit-$version.war
+
+echo "Pushing gerrit documentation to gerrit-documentation ..."
+unzip searchfree.zip
+pushd Documentation
+gsutil cp -r . gs://gerrit-documentation/Documentation/$version
+
+echo "Release completed"
