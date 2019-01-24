@@ -22,7 +22,8 @@ then
 fi
 
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
-git clone https://gerrit.googlesource.com/gerrit
+git clone https://gerrit.googlesource.com/gerrit && (cd gerrit && f=`git rev-parse --git-dir`/hooks/commit-msg ; curl -Lo $f https://gerrit-review.googlesource.com/tools/hooks/commit-msg ; chmod +x $f)
+
 pushd gerrit
 
 source set-java.sh 8
