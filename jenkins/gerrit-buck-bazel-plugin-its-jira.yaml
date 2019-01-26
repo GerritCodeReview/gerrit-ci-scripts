@@ -10,9 +10,11 @@
           branch:
             - stable-2.15
             - stable-2.14
+          targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'
       - 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
           gerrit-branch:
             - master
             - stable-2.16
+          targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'
