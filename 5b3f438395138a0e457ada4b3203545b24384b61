@@ -52,6 +52,24 @@
       "revId": "5b3f438395138a0e457ada4b3203545b24384b61",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "335ff7cc_50576b81",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1010008
+      },
+      "writtenOn": "2019-01-28T21:38:51Z",
+      "side": 1,
+      "message": "Now that you mention it, yeah, I think that\u0027s the reason why it makes sense to reformat old stable branches.",
+      "parentUuid": "83ec5f70_187ec8b9",
+      "revId": "5b3f438395138a0e457ada4b3203545b24384b61",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
