@@ -70,6 +70,24 @@
       "revId": "5b3f438395138a0e457ada4b3203545b24384b61",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "80cbb1bb_6c87fe2e",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-28T22:05:49Z",
+      "side": 1,
+      "message": "We should get THIS change merged first and then validate the other with all the code formatting. WDYT?",
+      "parentUuid": "335ff7cc_50576b81",
+      "revId": "5b3f438395138a0e457ada4b3203545b24384b61",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
