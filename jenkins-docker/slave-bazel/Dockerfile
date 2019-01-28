@@ -11,6 +11,8 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     git checkout -f stable-2.16 && git submodule update --init && ( bazel build //... || true ) && \
     git checkout -f master && git submodule update --init && ( bazel build //... || true ) && \
     cd /tmp/gerrit && mv tools/format ~ && \
+    git fetch https://gerrit.googlesource.com/gerrit refs/changes/32/211932/4 && git checkout FETCH_HEAD && \
+    ./tools/setup_gjf.sh 1.7 && \
     rm -Rf /tmp/gerrit'
 
 USER root
