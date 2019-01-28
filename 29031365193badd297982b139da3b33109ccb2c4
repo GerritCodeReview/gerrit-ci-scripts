@@ -45,6 +45,30 @@
       "revId": "29031365193badd297982b139da3b33109ccb2c4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb954ffd_5b0e231a",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-28T21:49:08Z",
+      "side": 1,
+      "message": "Didn\u0027t even notice that :-)\nWill remove it.",
+      "parentUuid": "f6ba8b98_0de81ca2",
+      "range": {
+        "startLine": 30,
+        "startChar": 34,
+        "endLine": 30,
+        "endChar": 35
+      },
+      "revId": "29031365193badd297982b139da3b33109ccb2c4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
