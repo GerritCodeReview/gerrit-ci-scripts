@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "587a2d11_e2f8802e",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2019-01-28T20:28:54Z",
+      "side": 1,
+      "message": "(Same.)",
+      "range": {
+        "startLine": 34,
+        "startChar": 34,
+        "endLine": 34,
+        "endChar": 35
+      },
+      "revId": "29031365193badd297982b139da3b33109ccb2c4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f6ba8b98_0de81ca2",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2019-01-28T20:28:54Z",
+      "side": 1,
+      "message": "Extra space character inserted?",
+      "range": {
+        "startLine": 30,
+        "startChar": 34,
+        "endLine": 30,
+        "endChar": 35
+      },
+      "revId": "29031365193badd297982b139da3b33109ccb2c4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
