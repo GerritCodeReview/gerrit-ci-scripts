@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-buck:debian-jessie-nocache
+FROM gerritforge/gerrit-ci-slave-bazel:debian-jessie-nocache
 
 # Bazel cache warm-up with Gerrit master and stable branches build
 # Set-up google-java-format utility to ~/format/google-java-format
