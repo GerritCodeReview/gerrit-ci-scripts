@@ -10,3 +10,4 @@
             - master
             - stable-2.15
             - stable-2.14
+          targets: 'plugins/its-storyboard:its-storyboard plugins/its-storyboard:its_storyboard_tests'
