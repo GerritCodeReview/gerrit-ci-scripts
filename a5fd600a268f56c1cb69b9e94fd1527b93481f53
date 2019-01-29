@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "d7c3576c_090a9b18",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-01-29T10:28:32Z",
+      "side": 1,
+      "message": "I just checked the last builds on gerrit-ci.gerritforge.com of the current configuration and the master branch of the plugin does not build anymore in Gerrit stable-2.16, but in tree with Gerrit master it works.\nI also applied this change to the test instance and there both jobs (for the master- and stable-2.16-branch of the plugin) are successful.\nSo we should submit this change.",
+      "parentUuid": "92af46a5_ed02311e",
+      "revId": "a5fd600a268f56c1cb69b9e94fd1527b93481f53",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7b38defd_9ccfc40b",
         "filename": "jenkins/gerrit-buck-bazel-plugin-reviewers-by-blame.yaml",
         "patchSetId": 2
@@ -81,6 +99,30 @@
       "revId": "a5fd600a268f56c1cb69b9e94fd1527b93481f53",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34f3f627_e229916e",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-reviewers-by-blame.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-01-29T10:28:32Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "be2e15ee_50299106",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "a5fd600a268f56c1cb69b9e94fd1527b93481f53",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
