@@ -10,3 +10,4 @@
             - master
             - stable-2.15
             - stable-2.14
+          targets: 'plugins/its-phabricator:its-phabricator plugins/its-phabricator:its_phabricator_tests'
