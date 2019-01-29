@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9af2a6da_201cddcb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-01-29T07:52:45Z",
+      "side": 1,
+      "message": "Misleading commit header. I would suggest:\n\nFixing incorrect base image of slave-bazel image",
+      "revId": "2378cf9cda68c2626518bb14616415c636a1ed52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
