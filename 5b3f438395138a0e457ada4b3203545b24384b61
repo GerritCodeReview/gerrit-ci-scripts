@@ -88,6 +88,24 @@
       "revId": "5b3f438395138a0e457ada4b3203545b24384b61",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f47a92c9_df0c8326",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1010008
+      },
+      "writtenOn": "2019-01-29T23:58:07Z",
+      "side": 1,
+      "message": "Sure, but maybe we should split up the other change so we don\u0027t have to fetch an open change in order to support `setup_gjf.sh 1.7`.",
+      "parentUuid": "80cbb1bb_6c87fe2e",
+      "revId": "5b3f438395138a0e457ada4b3203545b24384b61",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
