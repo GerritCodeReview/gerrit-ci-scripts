@@ -10,3 +10,4 @@
             - master
             - stable-2.15
             - stable-2.14
+          targets: 'plugins/its-rtc:its-rtc plugins/its-rtc:its_rtc_tests'
