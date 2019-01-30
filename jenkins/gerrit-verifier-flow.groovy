@@ -84,11 +84,6 @@ def acceptedChanges = changesJson.findAll {
       return false
   }
 
-  if(!change.mergeable) {
-      println "[WARNING] Skipping change ${changeUrl(change._number)} because has merge conflicts"
-      return false
-  }
-
   if(change.hashtags.contains("skipci")) {
       println "[WARNING] Skipping change ${changeUrl(change._number)} because it is tagged with #skipci"
       return false
