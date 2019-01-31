@@ -22,6 +22,30 @@
       "revId": "8955cdbb7f78822d95b80a8d3de6ecb55e742afe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e87f4a0f_ce47c261",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-zuul-status.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2019-01-31T15:56:07Z",
+      "side": 1,
+      "message": "Oh, i was ment to do the build stable-2.16 branch on master. Sorry fixing now. Thanks!",
+      "parentUuid": "503b28ca_ce51ddf2",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "8955cdbb7f78822d95b80a8d3de6ecb55e742afe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
