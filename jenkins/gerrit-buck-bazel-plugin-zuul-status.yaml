@@ -1,0 +1,7 @@
+- project:
+    name: zuul-status
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.16
