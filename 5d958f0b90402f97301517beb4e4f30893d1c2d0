@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2622b3f_c17d90f7",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-01-31T08:19:31Z",
+      "side": 1,
+      "message": "As for change 209821:\n\nWe should also represent the build-argument in the Makefile. So that the Makefile can be used to easily build the images with different versions as well.",
+      "revId": "5d958f0b90402f97301517beb4e4f30893d1c2d0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
