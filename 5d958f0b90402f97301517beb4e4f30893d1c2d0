@@ -39,6 +39,30 @@
       "revId": "5d958f0b90402f97301517beb4e4f30893d1c2d0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "55969ae1_a6ad785f",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-01-31T08:31:35Z",
+      "side": 1,
+      "message": "Oops.  That\u0027s my mistake.  Looks like my search-and-replace removed instead of replacing in this case.",
+      "parentUuid": "54a8db60_84b15bca",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 40
+      },
+      "revId": "5d958f0b90402f97301517beb4e4f30893d1c2d0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
