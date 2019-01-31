@@ -16,6 +16,29 @@
       "revId": "5d958f0b90402f97301517beb4e4f30893d1c2d0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "54a8db60_84b15bca",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-01-31T08:29:27Z",
+      "side": 1,
+      "message": "This should be \u0027/tmp/bazel_${BAZEL_VER}-linux-x86_64.deb\u0027. This way the build of the image fails.",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 40
+      },
+      "revId": "5d958f0b90402f97301517beb4e4f30893d1c2d0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
