@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "23944eeb_6df460cc",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-05T20:59:40Z",
+      "side": 1,
+      "message": "You are right, the buildifier is going to be too much :-)\nHowever, because the image name is \u0027gerrit-ci-slave-bazel\u0027 it makes sense to have the bazel version in the label of the image, isn\u0027t it?\n\nFor example, an image called GerritCodeReview/gerrit:2.16.4 is clearly the version 2.16.4 of Gerrit. Similarly an image called gerritforge/gerrit-ci-slave-bazel:0.19.0-debian-jessie-nocache is clearly the v0.19.0 of Bazel.",
+      "parentUuid": "1b4debe9_301d2dea",
+      "range": {
+        "startLine": 2,
+        "startChar": 40,
+        "endLine": 2,
+        "endChar": 61
+      },
+      "revId": "c7ff888227e918ca988afb07d221b73f79cfe2ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a0e9d506_0bc591bd",
         "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
         "patchSetId": 1
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "We do not build Bazel here. We build Docker image and download pre-built version of Bazel in that image. Heer we do it without pre-warming of build cache.\n\nWe could skip that step and just use Docker Image without pre-installed Bazel, but then we would have issue with cold Bazel caches and CI build would take much longer. The only alternative I see, is to use remote bazel cache.",
       "parentUuid": "a0e9d506_0bc591bd",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 21
+      },
+      "revId": "c7ff888227e918ca988afb07d221b73f79cfe2ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a18bdd8f_4ca4df0e",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-05T20:59:40Z",
+      "side": 1,
+      "message": "A remote bazel cache will be done over the Internet isn\u0027t it? It is going to be slow anyway. This image contains \"bazel without cache\" and there is another one that does the warm-up.\n\nI\u0027ve built this image because during releases I don\u0027t want to use any cache, I want to make a full build and have a very slim image to do it.\n\nWe can keep the pre-warm cache image and it\u0027s fine for now. I just want to make sure to have \"something\" for building v2.14 of Gerrit :-)",
+      "parentUuid": "7eeee459_5a3b2dc4",
       "range": {
         "startLine": 9,
         "startChar": 0,
