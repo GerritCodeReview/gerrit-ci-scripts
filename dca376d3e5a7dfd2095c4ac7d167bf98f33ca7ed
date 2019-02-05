@@ -22,6 +22,30 @@
       "revId": "dca376d3e5a7dfd2095c4ac7d167bf98f33ca7ed",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b42dbd09_aa8fc4c4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-05T23:54:50Z",
+      "side": 1,
+      "message": "At the moment, not much. However, the \"experiment\" is to evolve from the high-availability code-base and start supporting the multi-site use-cases.\n\nIt is an experiment, but nevertheless we need to build it with Gerrit :-)",
+      "parentUuid": "6b3dc559_d5e765b6",
+      "range": {
+        "startLine": 9,
+        "startChar": 35,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "dca376d3e5a7dfd2095c4ac7d167bf98f33ca7ed",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
