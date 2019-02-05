@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "60f79e17_39897bfe",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-02-05T20:36:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2622b3f_c17d90f7",
+      "revId": "5d958f0b90402f97301517beb4e4f30893d1c2d0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "54a8db60_84b15bca",
         "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
         "patchSetId": 6
@@ -63,6 +81,30 @@
       "revId": "5d958f0b90402f97301517beb4e4f30893d1c2d0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d37114e1_a6149954",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-02-05T20:36:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "55969ae1_a6ad785f",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 40
+      },
+      "revId": "5d958f0b90402f97301517beb4e4f30893d1c2d0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
