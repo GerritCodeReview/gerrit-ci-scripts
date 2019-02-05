@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91a0942d_0166099b",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-05T20:40:03Z",
+      "side": 1,
+      "message": "The image version should contain the bazel/buildifier versions also.\nSo that different branches of Gerrit can use different version of bazel.\nI don\u0027t believe we want to keep on releasing 2.14.x for every bazel upgrade we do, isn\u0027t it?",
+      "range": {
+        "startLine": 2,
+        "startChar": 40,
+        "endLine": 2,
+        "endChar": 61
+      },
+      "revId": "c7ff888227e918ca988afb07d221b73f79cfe2ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a0e9d506_0bc591bd",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-05T20:40:03Z",
+      "side": 1,
+      "message": "Do we want to build all the versions of Bazel we need?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 21
+      },
+      "revId": "c7ff888227e918ca988afb07d221b73f79cfe2ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
