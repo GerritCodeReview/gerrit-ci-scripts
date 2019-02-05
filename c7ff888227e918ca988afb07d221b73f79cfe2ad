@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1b4debe9_301d2dea",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-02-05T20:51:09Z",
+      "side": 1,
+      "message": "I don\u0027t see why that would be helpful? Should we start producing all possible permutation, of debian/bazel/buildifier version docker images?",
+      "parentUuid": "91a0942d_0166099b",
+      "range": {
+        "startLine": 2,
+        "startChar": 40,
+        "endLine": 2,
+        "endChar": 61
+      },
+      "revId": "c7ff888227e918ca988afb07d221b73f79cfe2ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a0e9d506_0bc591bd",
         "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2019-02-05T20:40:03Z",
       "side": 1,
       "message": "Do we want to build all the versions of Bazel we need?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 21
+      },
+      "revId": "c7ff888227e918ca988afb07d221b73f79cfe2ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7eeee459_5a3b2dc4",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-02-05T20:51:09Z",
+      "side": 1,
+      "message": "We do not build Bazel here. We build Docker image and download pre-built version of Bazel in that image. Heer we do it without pre-warming of build cache.\n\nWe could skip that step and just use Docker Image without pre-installed Bazel, but then we would have issue with cold Bazel caches and CI build would take much longer. The only alternative I see, is to use remote bazel cache.",
+      "parentUuid": "a0e9d506_0bc591bd",
       "range": {
         "startLine": 9,
         "startChar": 0,
