@@ -16,6 +16,24 @@
       "revId": "e1dbf6110ec9fa1e0113e172b20a52289c823c37",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0593a4b1_f68ca57d",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-02-05T20:36:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "feb2c4dd_35f3c6b6",
+      "revId": "e1dbf6110ec9fa1e0113e172b20a52289c823c37",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
