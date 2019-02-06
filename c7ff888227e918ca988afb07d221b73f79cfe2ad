@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "6bf8f42b_bdf2da7b",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-02-06T09:09:46Z",
+      "side": 1,
+      "message": "I agree with Luca. If we come into a situation that one branch can\u0027t be built anymore with a newer version of bazel, we should maintain multiple versions of the bazel-slave. We would then have to use multiple labels to assign the slave-images correctly. This would also consume more space on the docker nodes of course, if multiple images have to be available.\n\nWe should maybe also always print the bazel/buildifier versions in the build log of each build. This would make it a lot easier to reproduce the builds.",
+      "parentUuid": "23944eeb_6df460cc",
+      "range": {
+        "startLine": 2,
+        "startChar": 40,
+        "endLine": 2,
+        "endChar": 61
+      },
+      "revId": "c7ff888227e918ca988afb07d221b73f79cfe2ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a0e9d506_0bc591bd",
         "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
         "patchSetId": 1
