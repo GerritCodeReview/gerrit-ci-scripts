@@ -22,6 +22,30 @@
       "revId": "c64ed1450bfba24bda8370f8aa91269f437492dc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b04d0809_90b08282",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2019-02-07T14:15:29Z",
+      "side": 1,
+      "message": "This version passes for me locally.\n\n4.19.0 is almost a year old.\n\nThough there isen\u0027t really a feature/bug fix i want from the release.",
+      "parentUuid": "451acadf_694e5187",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 23
+      },
+      "revId": "c64ed1450bfba24bda8370f8aa91269f437492dc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
