@@ -22,6 +22,30 @@
       "revId": "90f5ed71347b6c730a0ffad2f75f608e8d70595e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e3482fe_fb57429a",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-02-07T17:20:23Z",
+      "side": 1,
+      "message": "I don\u0027t know that npm package.\n@Paladox: What do you think?",
+      "parentUuid": "11586f3f_9936f5f7",
+      "range": {
+        "startLine": 14,
+        "startChar": 81,
+        "endLine": 14,
+        "endChar": 99
+      },
+      "revId": "90f5ed71347b6c730a0ffad2f75f608e8d70595e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
