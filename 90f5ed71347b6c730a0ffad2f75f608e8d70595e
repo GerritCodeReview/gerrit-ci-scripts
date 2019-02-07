@@ -46,6 +46,29 @@
       "revId": "90f5ed71347b6c730a0ffad2f75f608e8d70595e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d82d97a2_8a5b8115",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-07T17:23:37Z",
+      "side": 1,
+      "message": "Yes, let\u0027s pin this to 0.12.0 which is the current one.",
+      "range": {
+        "startLine": 14,
+        "startChar": 73,
+        "endLine": 14,
+        "endChar": 79
+      },
+      "revId": "90f5ed71347b6c730a0ffad2f75f608e8d70595e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
