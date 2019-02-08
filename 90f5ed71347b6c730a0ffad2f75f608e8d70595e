@@ -93,6 +93,30 @@
       "revId": "90f5ed71347b6c730a0ffad2f75f608e8d70595e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14f7fe59_650bec16",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-02-08T08:18:47Z",
+      "side": 1,
+      "message": "@Luca: Done\n@Paladox: Done in the next change of the series.",
+      "parentUuid": "f7cfe9cf_6bd16167",
+      "range": {
+        "startLine": 14,
+        "startChar": 73,
+        "endLine": 14,
+        "endChar": 79
+      },
+      "revId": "90f5ed71347b6c730a0ffad2f75f608e8d70595e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
