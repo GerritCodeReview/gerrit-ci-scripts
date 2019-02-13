@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "71e772fd_9ea5c35a",
+        "filename": "jenkins/gerrit-bazel-plugin-gc-conductor.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-13T18:01:00Z",
+      "side": 1,
+      "message": "Add the `targets` section to override the default, which would run tests.\n\n  targets: plugins/gc-conductor\n\nBest would be, however, to have a specific label for the PostgreSQL-related tests\nso to exclude only those ones from the CI.\n\nEven better, rely on TestContainers so that we can run PostgreSQL on-demand when needed.",
+      "revId": "207e8d3d95656549a5ee13181a18973576711d6d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
