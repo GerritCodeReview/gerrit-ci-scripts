@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "c9beabce_840ad8d4",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2019-02-26T19:09:36Z",
+      "side": 1,
+      "message": "Remove?",
+      "range": {
+        "startLine": 11,
+        "startChar": 44,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6889f87a_8d265bef",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 1
