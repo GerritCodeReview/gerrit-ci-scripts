@@ -25,6 +25,53 @@
     },
     {
       "key": {
+        "uuid": "d88fdd1e_daef2f44",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-26T21:36:29Z",
+      "side": 1,
+      "message": "Yes, good catch, thanks.",
+      "parentUuid": "c9beabce_840ad8d4",
+      "range": {
+        "startLine": 11,
+        "startChar": 44,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "675c7cec_10b86eea",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-26T21:36:29Z",
+      "side": 1,
+      "message": "This can be added above in the BAZEL_OPTS",
+      "range": {
+        "startLine": 17,
+        "startChar": 13,
+        "endLine": 17,
+        "endChar": 48
+      },
+      "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6889f87a_8d265bef",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 1
