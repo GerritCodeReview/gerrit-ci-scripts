@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6889f87a_8d265bef",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-02-26T16:26:51Z",
+      "side": 1,
+      "message": "How will the DOCKER_HOST variable be set in the slave-container?\nWill you use the `Expose DOCKER_HOST`-option provided by the docker-plugin?\nIf some additional steps are needed to set the variable in the slave containers, I think we should make sure to submit a change implementing them before this change. Else, I guess, tests requiring docker will start to fail again.",
+      "range": {
+        "startLine": 16,
+        "startChar": 40,
+        "endLine": 16,
+        "endChar": 52
+      },
+      "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
