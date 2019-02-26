@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b7a5f15_9cc18b2c",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-26T23:16:33Z",
+      "side": 1,
+      "message": "We should keep excluding the Docker-specific tests for the time being: I tried and they failed. It works for other builds, so it can be some quirk specific to our way to trigger them.",
+      "revId": "acad9bca6e9646250874e21369c44e0d28a9c3c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}

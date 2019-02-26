@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "00f8ad72_d5f1d513",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-26T23:16:33Z",
+      "side": 0,
+      "message": "We should keep excluding Docker-specific tests for now.",
+      "range": {
+        "startLine": 11,
+        "startChar": 44,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "c4b65f69a3abb96793a6000a113811e367d639f8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "603be7bd_f8faec5d",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-26T23:16:33Z",
+      "side": 0,
+      "message": "We should keep excluding Docker-specific tests for now",
+      "revId": "c4b65f69a3abb96793a6000a113811e367d639f8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
