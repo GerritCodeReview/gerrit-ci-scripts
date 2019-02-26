@@ -8,13 +8,14 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_summary detailed --flaky_test_attempts 3 \
                    --test_verbose_timeout_warnings --build_tests_only \
                    --test_timeout 3600 \
-                   --test_tag_filters=-flaky,-docker"
+                   --test_tag_filters=-flaky,-docker \
+                   --test_env DOCKER_HOST=$DOCKER_HOST"
 
 if [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ] || [ "{branch}" == "stable-2.14" ]
 then
   echo 'Test in ReviewDb mode'
   echo '----------------------------------------------'
-  bazel test --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
+  bazel test  --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
 fi
 
 if [ "{branch}" == "master" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ]
