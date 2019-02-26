@@ -22,6 +22,30 @@
       "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "665b9724_b6fc159a",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-26T16:53:48Z",
+      "side": 1,
+      "message": "\u003e How will the DOCKER_HOST variable be set in the slave-container?\n\nI realized we have it already :-)\nThe Docker plugin set this automatically.\n\n\u003e Will you use the `Expose DOCKER_HOST`-option provided by the docker-plugin?\n\nIt is already there, but we never used it because we did not have the docker executable in the container.\n\n\u003e If some additional steps are needed to set the variable in the slave containers, I think we should make sure to submit a change implementing them before this change. Else, I guess, tests requiring docker will start to fail again.\n\nIt is there already, and worked for the multi-site plugin.\n(see https://gerrit-ci.gerritforge.com/job/plugin-multi-site-bazel-gerritforge-stable-2.16/)",
+      "parentUuid": "6889f87a_8d265bef",
+      "range": {
+        "startLine": 16,
+        "startChar": 40,
+        "endLine": 16,
+        "endChar": 52
+      },
+      "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
