@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "6c11d4bf_d02bb509",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-26T23:18:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "675c7cec_10b86eea",
+      "range": {
+        "startLine": 17,
+        "startChar": 13,
+        "endLine": 17,
+        "endChar": 48
+      },
+      "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6889f87a_8d265bef",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 1
