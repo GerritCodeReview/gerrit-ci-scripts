@@ -140,6 +140,30 @@
       "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "369ec435_5c9fef81",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-02-27T12:40:11Z",
+      "side": 1,
+      "message": "Ok, I could verify that on my local machine.\nThe option I mentioned above is only added with newer versions of the docker-plugin as it seems. Older versions provide this variable by default.",
+      "parentUuid": "665b9724_b6fc159a",
+      "range": {
+        "startLine": 16,
+        "startChar": 40,
+        "endLine": 16,
+        "endChar": 52
+      },
+      "revId": "c9f784c9afd24ad8eec648d4e45c4af472a0e833",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
