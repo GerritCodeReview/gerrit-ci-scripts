@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3dce9f3f_51961f62",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-28T00:40:39Z",
+      "side": 1,
+      "message": "We need to keep 1.6 and 1.7",
+      "revId": "31188b3e9f8ffe62d4adb7692fe7cc9f94cbeb05",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "683dbc68_d513722d",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-28T00:40:39Z",
+      "side": 1,
+      "message": "This needs to happen *after* we have rebuilt the images with GJF 1.7\nI would suggest avoiding disruptions and:\n- Upgrade the Docker images (with both 1.6 and 1.7)\n- Create the changes to validate with 1.7\n- Once all the changes are merged, remove 1.6",
+      "range": {
+        "startLine": 165,
+        "startChar": 115,
+        "endLine": 165,
+        "endChar": 119
+      },
+      "revId": "31188b3e9f8ffe62d4adb7692fe7cc9f94cbeb05",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
