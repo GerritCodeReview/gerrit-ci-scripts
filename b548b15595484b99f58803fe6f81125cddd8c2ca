@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fce9a2f7_c3ee3cda",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-02-28T06:58:22Z",
+      "side": 0,
+      "message": "This would immediately mean that all ElasticSearch tests get executed. Can it be that some of them ares still failing? Should we then add \"docker-flaky\" label or add \"manual\" tag for those failing tests?",
+      "range": {
+        "startLine": 28,
+        "startChar": 44,
+        "endLine": 28,
+        "endChar": 53
+      },
+      "revId": "b548b15595484b99f58803fe6f81125cddd8c2ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
