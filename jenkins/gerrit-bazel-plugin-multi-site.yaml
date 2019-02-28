@@ -1,0 +1,7 @@
+- project:
+    name: multi-site
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.16
