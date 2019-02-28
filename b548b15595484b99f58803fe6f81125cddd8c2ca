@@ -46,6 +46,47 @@
       "revId": "b548b15595484b99f58803fe6f81125cddd8c2ca",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "57cfd469_9891e532",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-28T07:20:53Z",
+      "side": 0,
+      "message": "This script for plugins builds, not for Gerrit.",
+      "parentUuid": "d97d9fb0_ac4f67f2",
+      "range": {
+        "startLine": 28,
+        "startChar": 44,
+        "endLine": 28,
+        "endChar": 53
+      },
+      "revId": "b548b15595484b99f58803fe6f81125cddd8c2ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2de2bbac_4b07fa57",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-02-28T07:20:53Z",
+      "side": 0,
+      "message": "Best to keep exclusion of Docker-based tests, there are still issues in running ES tests.",
+      "revId": "b548b15595484b99f58803fe6f81125cddd8c2ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
