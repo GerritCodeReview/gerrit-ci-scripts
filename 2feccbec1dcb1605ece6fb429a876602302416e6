@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "812d6467_b75e20e0",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-03-01T20:51:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "82fb3b06_30217947",
+      "range": {
+        "startLine": 17,
+        "startChar": 23,
+        "endLine": 17,
+        "endChar": 49
+      },
+      "revId": "2feccbec1dcb1605ece6fb429a876602302416e6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "96282a98_a9ad90bd",
         "filename": "jenkins/gerrit-bazel-test.sh",
         "patchSetId": 5
@@ -45,6 +69,30 @@
       "revId": "2feccbec1dcb1605ece6fb429a876602302416e6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "605f31ec_e6e4874b",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-03-01T20:51:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "96282a98_a9ad90bd",
+      "range": {
+        "startLine": 24,
+        "startChar": 24,
+        "endLine": 24,
+        "endChar": 48
+      },
+      "revId": "2feccbec1dcb1605ece6fb429a876602302416e6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
