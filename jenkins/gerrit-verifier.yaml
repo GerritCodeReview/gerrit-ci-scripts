@@ -126,7 +126,7 @@
 
 - job:
     name: Gerrit-verifier-bazel
-    description: "Gerrit build of open change with BUCK\n"
+    description: "Gerrit build of open change with Bazel\n"
     defaults: verifier-defaults
     node: bazel-debian
 
