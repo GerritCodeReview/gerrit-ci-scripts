@@ -9,7 +9,7 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_verbose_timeout_warnings --build_tests_only \
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky,-docker \
-                   DOCKER_HOST=$DOCKER_HOST"
+                   --test_env DOCKER_HOST=$DOCKER_HOST"
 
 if [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ] || [ "{branch}" == "stable-2.14" ]
 then
