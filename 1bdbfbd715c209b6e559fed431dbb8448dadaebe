@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41115a8c_c6898986",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-03-11T15:24:21Z",
+      "side": 1,
+      "message": "The version should rather be parsed (e.g. from setup_gjf.sh). The approach currently used would fail for versions like 1.10 .",
+      "range": {
+        "startLine": 166,
+        "startChar": 122,
+        "endLine": 166,
+        "endChar": 125
+      },
+      "revId": "1bdbfbd715c209b6e559fed431dbb8448dadaebe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
