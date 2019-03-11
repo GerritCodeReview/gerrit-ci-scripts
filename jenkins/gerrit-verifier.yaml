@@ -161,8 +161,9 @@
       - shell: |
          #!/bin/bash -xe
          cd gerrit
+         ./tools/setup_gjf.sh
          echo 'Running google-java-format check...'
-         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ~/format/google-java-format-1.6 -n --set-exit-if-changed
+         git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r ./tools/format/google-java-format-?.? -n --set-exit-if-changed
       - shell: |
          #!/bin/bash -xe
          cd gerrit
