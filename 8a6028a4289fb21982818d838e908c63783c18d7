@@ -16,6 +16,24 @@
       "revId": "8a6028a4289fb21982818d838e908c63783c18d7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "140339ab_bb681cfb",
+        "filename": "worker/setup-all.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2019-03-11T15:52:24Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "0d738a0a_cf9e790b",
+      "revId": "8a6028a4289fb21982818d838e908c63783c18d7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
