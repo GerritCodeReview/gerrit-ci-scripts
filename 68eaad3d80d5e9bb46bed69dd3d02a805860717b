@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "47c42638_a6442245",
+        "filename": "worker/setup.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-03-11T15:50:29Z",
+      "side": 1,
+      "message": "Where is daemon.json? Can\u0027t find it in this commit",
+      "revId": "68eaad3d80d5e9bb46bed69dd3d02a805860717b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
