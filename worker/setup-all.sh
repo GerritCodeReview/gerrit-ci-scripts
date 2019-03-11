@@ -52,7 +52,6 @@ for DEST in $IPS ; do
     echo $DEST && \
     scp -o StrictHostKeyChecking=no $HOME/.ssh/gerritforge/id_ecdsa ${DEST}: && \
     scp worker/* ${DEST}: && \
-
     # this takes a while.
     ssh ${DEST} 'sudo sh -x $(pwd)/setup.sh' &
 done
