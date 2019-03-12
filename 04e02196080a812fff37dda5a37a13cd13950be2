@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0fa0fc4a_3c12916b",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-03-12T07:48:23Z",
+      "side": 1,
+      "message": "cool idea, however for the most frequent builds on master, it would be best to still have it pre-downloaded on the Docker image.",
+      "range": {
+        "startLine": 164,
+        "startChar": 9,
+        "endLine": 164,
+        "endChar": 29
+      },
+      "revId": "04e02196080a812fff37dda5a37a13cd13950be2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
