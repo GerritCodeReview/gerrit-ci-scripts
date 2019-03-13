@@ -2,7 +2,9 @@ FROM debian:$DEBIAN_VER
 
 USER root
 
-RUN echo "deb http://http.debian.net/debian/ $DEBIAN_VER contrib" >> /etc/apt/sources.list
+ARG REPO_MIRROR="http://deb.debian.org/debian"
+
+RUN echo "deb $REPO_MIRROR $DEBIAN_VER contrib" >> /etc/apt/sources.list
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -31,7 +33,7 @@ RUN apt-get update && apt-get install -y \
 
 
 RUN [ "$DEBIAN_VER" != "jessie" ] || \
-       ( echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
+       ( echo "deb $REPO_MIRROR jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
          apt-get update && \
          apt-get install -y -t jessie-backports ca-certificates-java && \
          apt-get install -y -t jessie-backports openjdk-8-jre-headless && \

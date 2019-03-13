@@ -18,7 +18,7 @@ publish_stretch: build_stretch
 build_jessie build_stretch:  id_rsa.pub
 	@echo "Building Docker for Debian:$(DEBIAN_VER)"
 	@echo "========================================"
-	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
+	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst '$$DEBIAN_VER' > Dockerfile-$(DEBIAN_VER)
 	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t ${IMAGE}:$(DEBIAN_VER) .
 
 publish_jessie publish_stretch:
