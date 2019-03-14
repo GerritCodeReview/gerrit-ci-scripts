@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ce133c1_6c4f2855",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-03-14T00:28:39Z",
+      "side": 1,
+      "message": "The URL is repeated below; is it possible to extract it to a variable?",
+      "revId": "8221f5c3c5ab126739369ff9d821efdd60f46662",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
