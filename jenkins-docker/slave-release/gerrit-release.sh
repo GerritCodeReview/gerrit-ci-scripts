@@ -4,17 +4,19 @@ if [ "$1" == "" ] || [ "$2" == "" ]
 then
   echo "Gerrit Code Review - release automation script"
   echo "----------------------------------------------"
-  echo "Use: $0 <branch> <version>"
+  echo "Use: $0 <branch> <version> <next-version>"
   echo ""
   echo "Where: branch  Gerrit branch name where the release must be cut"
   echo "       version Gerrit semantic release number"
+  echo "       next-version Next SNAPSHOT version after release"
   echo ""
-  echo "Example: $0 stable-2.16 2.16.1"
+  echo "Example: $0 stable-2.16 2.16.7 2.16.8-SNAPSHOT"
   exit 1
 fi
 
 export branch=$1
 export version=$2
+export nextversion=$3
 
 if [ -d gerrit ]
 then
@@ -35,6 +37,9 @@ git submodule update --init
 git clean -fdx
 ./tools/version.py $version
 git commit -a -m "Set version to $version"
+git push origin HEAD:refs/for/$branch
+git submodule foreach git push origin HEAD:refs/for/$branch
+
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach git tag -f -s -m "v$version" "v$version"
 
@@ -84,5 +89,15 @@ echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
 pushd Documentation
 gsutil cp -r . gs://gerrit-documentation/Documentation/$version
+popd
+
+echo "Setting next release tag to $nextversion ..."
+pushd gerrit
+git clean -fdx
+./tools/version.py $nextversion
+git commit -a -m "Set version to $nextversion"
+git push origin HEAD:refs/for/$branch
+git submodule foreach git push origin HEAD:refs/for/$branch
+popd
 
 echo "Release completed"
