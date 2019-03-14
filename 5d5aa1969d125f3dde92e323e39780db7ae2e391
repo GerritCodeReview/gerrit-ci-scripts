@@ -69,6 +69,30 @@
       "revId": "5d5aa1969d125f3dde92e323e39780db7ae2e391",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf18a12f_4b55c8bf",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-03-14T13:09:36Z",
+      "side": 1,
+      "message": "Yes, I believe we can.\nWe should basically get the 3rd number (if it is there) and increment it by 1.\nIf there is no 3rd number, then just append \u0027.1\u0027",
+      "parentUuid": "340c2edf_9ed7b380",
+      "range": {
+        "startLine": 13,
+        "startChar": 39,
+        "endLine": 13,
+        "endChar": 54
+      },
+      "revId": "5d5aa1969d125f3dde92e323e39780db7ae2e391",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
