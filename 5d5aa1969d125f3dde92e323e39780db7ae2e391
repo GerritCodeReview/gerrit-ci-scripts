@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7410c57f_a7a90834",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-03-14T12:05:37Z",
+      "side": 1,
+      "message": "Are these still set after patchset 2?",
+      "range": {
+        "startLine": 10,
+        "startChar": 10,
+        "endLine": 10,
+        "endChar": 34
+      },
+      "revId": "5d5aa1969d125f3dde92e323e39780db7ae2e391",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "340c2edf_9ed7b380",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-03-14T12:05:37Z",
+      "side": 1,
+      "message": "Can\u0027t we generate this automatically from `$version`?",
+      "range": {
+        "startLine": 13,
+        "startChar": 39,
+        "endLine": 13,
+        "endChar": 54
+      },
+      "revId": "5d5aa1969d125f3dde92e323e39780db7ae2e391",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
