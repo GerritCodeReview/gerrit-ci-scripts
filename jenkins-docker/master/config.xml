@@ -58,7 +58,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-bazel:debian-jessie</image>
+            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-jessie</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
