@@ -15,12 +15,28 @@
     <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.View.Read:anonymous</permission>
+    <permission>hudson.model.Hudson.Read:JJB</permission>
+    <permission>hudson.model.Item.Configure:JJB</permission>
+    <permission>hudson.model.Item.Create:JJB</permission>
+    <permission>hudson.model.Item.Delete:JJB</permission>
+    <permission>hudson.model.Item.Read:JJB</permission>
+    <permission>hudson.model.View.Configure:JJB</permission>
+    <permission>hudson.model.View.Create:JJB</permission>
+    <permission>hudson.model.View.Delete:JJB</permission>
+    <permission>hudson.model.View.Read:JJB</permission>
   </authorizationStrategy>
-  <securityRealm class="org.jenkinsci.plugins.GithubSecurityRealm">
-    <githubWebUri>https://github.com</githubWebUri>
-    <githubApiUri>https://api.github.com</githubApiUri>
-    <clientID>#OAUTH_ID#</clientID>
-    <clientSecret>#OAUTH_SECRET#</clientSecret>
+  <securityRealm class="org.jenkinsci.plugins.reverse_proxy_auth.ReverseProxySecurityRealm" plugin="reverse-proxy-auth-plugin@1.6.3">
+    <proxyTemplate/>
+    <inhibitInferRootDN>false</inhibitInferRootDN>
+    <userSearchBase></userSearchBase>
+    <userSearch>uid={0}</userSearch>
+    <updateInterval>15</updateInterval>
+    <forwardedUser>X-Forwarded-User</forwardedUser>
+    <headerGroups>X-Forwarded-Groups</headerGroups>
+    <headerGroupsDelimiter>|</headerGroupsDelimiter>
+    <disableLdapEmailResolver>false</disableLdapEmailResolver>
+    <displayNameLdapAttribute></displayNameLdapAttribute>
+    <emailAddressLdapAttribute></emailAddressLdapAttribute>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
@@ -86,15 +102,9 @@
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString>bazel-debian</labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
+            <user>jenkins</user>
+          </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>5</instanceCap>
@@ -133,15 +143,9 @@
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString>mvn</labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
+            <user>jenkins</user>
+          </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>5</instanceCap>
@@ -177,15 +181,9 @@
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString>sbt</labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
+            <user>jenkins</user>
+          </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>5</instanceCap>
@@ -221,15 +219,9 @@
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
           <labelString>python3</labelString>
-          <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
-            <sshConnector plugin="ssh-slaves@1.11">
-              <port>22</port>
-              <jvmOptions></jvmOptions>
-              <javaPath></javaPath>
-              <maxNumRetries>0</maxNumRetries>
-              <retryWaitTime>0</retryWaitTime>
-            </sshConnector>
-          </launcher>
+          <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
+            <user>jenkins</user>
+          </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
           <instanceCap>5</instanceCap>

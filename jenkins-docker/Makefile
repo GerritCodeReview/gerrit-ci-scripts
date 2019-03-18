@@ -2,6 +2,14 @@ SLAVE_DIRS ?= slave-debian slave-chrome slave-node-wct slave-bazel-nocache slave
 ALL_DIRS ?= master bazel-cache $(SLAVE_DIRS)
 NO_CACHE ?= true
 
+USE_SECURITY ?= true
+JENKINS_HOME ?= ~/jenkins_home
+NGINX_CERTS ?= ~/.ssl
+
+OPTS = USE_SECURITY=${USE_SECURITY} \
+       JENKINS_HOME=${JENKINS_HOME} \
+       NGINX_CERTS=${NGINX_CERTS}
+
 default: build
 
 build clean publish:
@@ -10,6 +18,18 @@ build clean publish:
 publish_slave:
 	for dir in $(SLAVE_DIRS); do (make NO_CACHE=$(NO_CACHE) -C $$dir build publish) || exit 1; done
 
-start stop restart:
-	make -C master $@
+ssl_certs:
+	if [ ! -f ${NGINX_CERTS}/cert.key ] || [ ! -f ${NGINX_CERTS}/cert.key ]; then \
+		openssl req -x509 \
+			-newkey rsa:4096 \
+			-keyout ${NGINX_CERTS}/cert.key \
+			-out ${NGINX_CERTS}/cert.crt \
+			-nodes \
+			-subj '/CN=gerrit-ci.gerritforge.com'; \
+	fi
 
+start: ssl_certs
+	$(OPTS) docker-compose up -d
+
+stop:
+	$(OPTS) docker-compose down
