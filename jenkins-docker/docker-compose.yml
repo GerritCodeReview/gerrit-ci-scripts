@@ -1,0 +1,25 @@
+version: '3.2'
+
+services:
+  jenkins:
+    image: gerritforge/gerrit-ci:2.204.1
+    container_name: gerrit-ci-master
+    restart: on-failure
+    command: ["--httpPort=38080"]
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs
+    - ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc
+    environment:
+    - USE_SECURITY=${USE_SECURITY}
+  nginx:
+    image: gerritforge/gerrit-ci-nginx-proxy
+    container_name: nginx-proxy
+    restart: on-failure
+    ports:
+    - 80:80
+    - 443:443
+    volumes:
+    - ${NGINX_CERTS}:/etc/ssl/certs/
+    depends_on:
+    - jenkins
