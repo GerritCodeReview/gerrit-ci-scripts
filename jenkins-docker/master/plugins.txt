@@ -59,6 +59,7 @@ pipeline-stage-step:2.3
 pipeline-stage-tags-metadata:1.2
 pipeline-stage-view:2.10
 plain-credentials:1.4
+reverse-proxy-auth-plugin:1.6.3
 scm-api:2.2.7
 script-security:1.44
 ssh-credentials:1.14
