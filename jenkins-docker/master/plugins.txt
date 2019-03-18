@@ -43,7 +43,6 @@ git-client:3.0.0
 github:1.29.5
 github-api:1.92
 github-branch-source:2.3.6
-github-oauth:0.33
 github-organization-folder:1.6
 git-server:1.7
 greenballs:1.15
@@ -79,6 +78,7 @@ scm-api:2.6.3
 script-security:1.66
 sse-gateway:1.20
 ssh-credentials:1.18
+reverse-proxy-auth-plugin:1.6.3
 ssh-slaves:1.26
 structs:1.20
 token-macro:2.10
