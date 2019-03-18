@@ -33,7 +33,54 @@ https://docs.docker.com/articles/b2d_volume_resize/
 
 make build
 
-## Images
+## Starting Jenkins
+
+To start Jenkins and the reverse proxy regulating ingress traffic, follow the
+following steps:
+
+### (Optional) Provide SSL certificates to enable HTTPS
+
+The reverse proxy will serve traffic via HTTPS. To do this it requires a
+certificate and key. For browsers to trust these certificates, certificates
+from trusted authorities (e.g. digicert) can be used. To do this, put both the
+certificate and the key into the same folder and name them `cert.crt` and
+`cert.key` respectively.
+
+If no certificates are provided, the Nginx-container will create self-signed
+certificates.
+
+### (Optional) Provide a CA-certificate for authentication
+
+For authentication of users a CA-certificate will be needed, since certificate-
+based authentication will be used. Put the CA-certificate into the same directory
+as the SSL certificates and call it `auth_ca.crt`.
+
+To allow a user to access Jenkins get a certificate for this user with this CA.
+The username should be set in the CN-field of the CSR's-subject. The username then
+also has to be set in the `config.xml` of Jenkins to configure permissions.
+
+If no CA will be provided, certificate-based authentication will be disabled. All
+users will be anonymous.
+
+### Start up Nginx and Jenkins
+
+In the directory of this README run:
+
+```sh
+make \
+  USE_SECURITY=true \
+  JENKINS_API_USER=user \
+  JENKINS_API_PASSWORD=pass \
+  JENKINS_HOME=~/jenkins_home \
+  NGINX_CERTS=~/.ssl \
+  start
+```
+
+If no CA for authentication was provide use `USE_SECURITY=false`, otherwise only
+read-access will be available. The `NGINX_CERTS`-variable should point to the
+directory containing the SSL-certificates and authentication-CA.
+
+## Slave images
 
 Images available are:
 
