@@ -1,0 +1,24 @@
+version: '3.2'
+services:
+  jenkins:
+    image: gerritforge/gerrit-ci:2.60.3
+    container_name: gerrit-ci-master
+    restart: on-failure
+    network_mode: "host"
+    command: ["--httpListenAddress=127.0.0.1"]
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs
+    environment:
+    - USE_SECURITY=${USE_SECURITY}
+    - JENKINS_API_USER=${JENKINS_API_USER}
+    - JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD}
+  nginx:
+    image: gerritforge/gerrit-ci-nginx-proxy
+    container_name: nginx-proxy
+    restart: on-failure
+    network_mode: "host"
+    volumes:
+    - ${NGINX_CERTS}:/etc/ssl/certs/
+    depends_on:
+    - jenkins
