@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c85880f8_13a7d49d",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-plugin-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-03-20T08:11:24Z",
+      "side": 1,
+      "message": "Since we just build the plugin\u0027s master branch against Gerrit master, we can move it up into \u0027plugin-{name}-bazel-{branch}\u0027:\n\n  - \u0027plugin-{name}-bazel-{branch}\u0027:\n      branch:\n       - master\n       - stable-2.16\n  ...",
+      "revId": "b76b80deeba23cb0772d9a6055d1d89c24f5a768",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
