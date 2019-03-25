@@ -1,0 +1,8 @@
+- project:
+    name: account
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-2.16
+            - stable-2.15
