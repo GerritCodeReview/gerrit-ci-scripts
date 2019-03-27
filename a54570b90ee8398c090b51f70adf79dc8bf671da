@@ -123,6 +123,24 @@
       "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b5d0a80c_cbd29688",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011842
+      },
+      "writtenOn": "2019-03-27T17:12:04Z",
+      "side": 1,
+      "message": "jessie-backports is indeed no longer supported: https://lists.debian.org/debian-backports-announce/2018/07/msg00000.html\n\nWhat packages do we use from there?",
+      "parentUuid": "5c751847_7f4bd065",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
