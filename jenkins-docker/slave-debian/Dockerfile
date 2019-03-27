@@ -4,7 +4,12 @@ USER root
 
 ARG REPO_MIRROR="http://deb.debian.org/debian"
 
-RUN echo "deb $REPO_MIRROR $DEBIAN_VER contrib" >> /etc/apt/sources.list
+RUN ( [ "$DEBIAN_VER" != "jessie" ] && \
+       echo "deb $REPO_MIRROR $DEBIAN_VER contrib" >> /etc/apt/sources.list) && \
+    [ "$DEBIAN_VER" != "jessie" ] || \
+       ( echo "deb http://archive.debian.org/debian/ jessie main \n \
+               deb-src http://archive.debian.org/debian/ jessie main \n \
+               deb http://security.debian.org/debian-security jessie/updates main" > /etc/apt/sources.list)
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -33,7 +38,8 @@ RUN apt-get update && apt-get install -y \
 
 
 RUN [ "$DEBIAN_VER" != "jessie" ] || \
-       ( echo "deb $REPO_MIRROR jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
+       ( echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
+         echo 'Acquire::Check-Valid-Until "false";' >> /etc/apt/apt.conf && \
          apt-get update && \
          apt-get install -y -t jessie-backports ca-certificates-java && \
          apt-get install -y -t jessie-backports openjdk-8-jre-headless && \
