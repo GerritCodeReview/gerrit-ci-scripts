@@ -34,6 +34,24 @@
       "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c54590a0_d6a5d46a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-03-27T15:33:45Z",
+      "side": 1,
+      "message": "\u003e Alternatively, what would you think of making future point releases of these Gerrit versions declared as supporting Java 8 only? (It would still be okay to build targeting Java 7, but we\u0027d only have to run tests in Java 8. Or we could even build targeting Java 8.)\n\nMaking a v2.13.14 that requires Java8 would be making effectively a semi-major release :-)\n\nI would rather opt for dropping support for any Gerrit release \u003c\u003d v2.13, including the mailing list, apart from usage problems.\n\nThat means that if in the future we\u0027ll discover security or other stability issues with Gerrit v2.13, we won\u0027t be able to release anything to them.\n\nHowever, we are about to release v3.0 in May (hopefully) and I believe we should start giving some \"hard stop\" to the community and their expectations. Supporting from May v3.0, v2.16, v2.15 and v2.14 ... would be *more than enough* IMHO",
+      "parentUuid": "a236bcc5_dc8254f4",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
