@@ -105,6 +105,24 @@
       "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5c751847_7f4bd065",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-03-27T16:55:32Z",
+      "side": 1,
+      "message": "Using deb.debian.org didn\u0027t work for me a few hours ago, but seems to work now.\njessie-backports however is still only available on archive.debian.org. It looks like they are still working on the repositories.\nLet me check back tomorrow and update this change accordingly.",
+      "parentUuid": "319201f3_4ab2e582",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
