@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "033eaa95_547feca4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011842
+      },
+      "writtenOn": "2019-03-27T15:28:17Z",
+      "side": 1,
+      "message": "fully stopped. Jessie was supported for a long time, but even Debian\u0027s long term support team has limits.\n\nCan we declare EOL for these versions of Gerrit instead?",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
