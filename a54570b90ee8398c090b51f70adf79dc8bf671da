@@ -52,6 +52,24 @@
       "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14cc1368_5e05aebc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-03-27T15:49:13Z",
+      "side": 1,
+      "message": "It is not really fully stopped. Jessie is still in LTS [1].\n\nWe should certainly discuss EOL for teh Gerrit versions, but I guess this will take some time and should be done with a broader audience.\n\nI guess, the issue with moving to Java 8 to build with targeting Java 7 is, even if tests run with Java 8, is that the users using these versions of Java are running Gerrit in a Java 7 environment, which should be reflected by the tests.\n\n[1] https://wiki.debian.org/de/LTS",
+      "parentUuid": "a236bcc5_dc8254f4",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
