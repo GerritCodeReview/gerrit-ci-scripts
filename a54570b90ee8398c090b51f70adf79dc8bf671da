@@ -70,6 +70,41 @@
       "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3c147df9_c0df906b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011842
+      },
+      "writtenOn": "2019-03-27T16:13:30Z",
+      "side": 1,
+      "message": "\u003e It is not really fully stopped. Jessie is still in LTS [1].\n\nOh! In that case, I\u0027m fine with this, but we should not use archive.debian.org for it. I had misremembered https://lists.debian.org/debian-devel-announce/2019/03/msg00006.html.",
+      "parentUuid": "14cc1368_5e05aebc",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "319201f3_4ab2e582",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011842
+      },
+      "writtenOn": "2019-03-27T16:13:30Z",
+      "side": 1,
+      "message": "Can this use the sources.list entries from https://wiki.debian.org/LTS/Using instead of archive.debian.org?\n\nIf the sources.list entries in that wiki are wrong, can we update the wiki?",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
