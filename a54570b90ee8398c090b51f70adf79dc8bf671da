@@ -141,6 +141,24 @@
       "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "91981116_3833491c",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-03-27T17:59:28Z",
+      "side": 1,
+      "message": "Look at lines 40ff.\nBasically, git, openjdk-8-jre/jdk and its dependencies.",
+      "parentUuid": "b5d0a80c_cbd29688",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
