@@ -16,6 +16,24 @@
       "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a236bcc5_dc8254f4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011842
+      },
+      "writtenOn": "2019-03-27T15:29:45Z",
+      "side": 1,
+      "message": "Alternatively, what would you think of making future point releases of these Gerrit versions declared as supporting Java 8 only? (It would still be okay to build targeting Java 7, but we\u0027d only have to run tests in Java 8. Or we could even build targeting Java 8.)",
+      "parentUuid": "033eaa95_547feca4",
+      "revId": "a54570b90ee8398c090b51f70adf79dc8bf671da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
