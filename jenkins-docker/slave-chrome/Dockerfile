@@ -6,4 +6,3 @@ RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
     wget -O /tmp/chrome.deb http://www.slimjetbrowser.com/chrome/files/$CHROME_VER/google-chrome-stable_current_amd64.deb && \
     (dpkg -i /tmp/chrome.deb; apt-get install -f -y) && \
     rm /tmp/chrome.deb
-

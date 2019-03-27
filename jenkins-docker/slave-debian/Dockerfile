@@ -2,7 +2,13 @@ FROM debian:$DEBIAN_VER
 
 USER root
 
-RUN echo "deb http://http.debian.net/debian/ $DEBIAN_VER contrib" >> /etc/apt/sources.list
+RUN ( [ "$DEBIAN_VER" != "stretch" ] || \
+       echo "deb http://http.debian.net/debian/ $DEBIAN_VER contrib" >> /etc/apt/sources.list) && \
+    [ "$DEBIAN_VER" != "jessie" ] || \
+       ( echo "deb http://deb.debian.org/debian/ jessie main contrib non-free \n \
+               deb-src http://deb.debian.org/debian/ jessie main contrib non-free \n \
+               deb http://security.debian.org/debian-security jessie/updates main \n \
+               deb-src http://security.debian.org/ jessie/updates main contrib non-free" > /etc/apt/sources.list)
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -31,7 +37,8 @@ RUN apt-get update && apt-get install -y \
 
 
 RUN [ "$DEBIAN_VER" != "jessie" ] || \
-       ( echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
+       ( echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
+         echo 'Acquire::Check-Valid-Until "false";' >> /etc/apt/apt.conf && \
          apt-get update && \
          apt-get install -y -t jessie-backports ca-certificates-java && \
          apt-get install -y -t jessie-backports openjdk-8-jre-headless && \
