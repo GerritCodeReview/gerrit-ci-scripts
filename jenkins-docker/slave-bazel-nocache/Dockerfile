@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-buck:debian-jessie
+FROM gerritforge/gerrit-ci-slave-buck:debian-$DEBIAN_VER
 
 ARG BAZEL_VER
 ARG BUILDIFIER_VER

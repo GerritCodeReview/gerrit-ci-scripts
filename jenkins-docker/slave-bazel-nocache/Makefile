@@ -1,21 +1,40 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-jessie-nocache
+DEBIAN_VER ?= jessie
+IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-$(DEBIAN_VER)-nocache
 BAZEL_VER=0.22.0
 BUILDIFIER_VER=0.20.0
 
 # Targets
 
-build:
+build: build_jessie build_stretch
+
+publish: publish_jessie publish_stretch
+
+clean: clean_jessie clean_stretch
+
+build_jessie publish_jessie clean_jessie: DEBIAN_VER=jessie
+
+build_stretch publish_stretch clean_stretch: DEBIAN_VER=stretch
+
+publish_jessie: build_jessie
+
+publish_stretch: build_stretch
+
+build_jessie build_stretch:  Dockerfile Makefile
+	@echo "Building Docker for $(DEBIAN_VER)"
+	@echo "==================================================="
+	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst '$$DEBIAN_VER' > Dockerfile-$(DEBIAN_VER)
 	docker build --no-cache=$(NO_CACHE) \
         --build-arg BAZEL_VER=${BAZEL_VER} \
         --build-arg BUILDIFIER_VER=${BUILDIFIER_VER} \
-        -t ${IMAGE} .
+        -f Dockerfile-$(DEBIAN_VER) \
+        -t $(IMAGE) .
 
-publish:
-	docker push ${IMAGE}
+publish_jessie publish_stretch:
+	docker push $(IMAGE)
 
-clean:
-	docker rmi -f ${IMAGE}
+clean_jessie clean_stretch:
+	docker rmi -f $(IMAGE)
+	-rm -f id_rsa*
 
 .PHONY: clean image publish
-
