@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "83541c99_47c0186e",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-03-28T08:24:59Z",
+      "side": 1,
+      "message": "Do we still need slave-containers having both Java 7 and Java 8, if we use debian-stretch-based slaves for building newer versions? If not, we could avoid using archive.debian.org in the future.",
+      "revId": "5153535004b95c6306b6fba8ce2ffbc9a15560dd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
