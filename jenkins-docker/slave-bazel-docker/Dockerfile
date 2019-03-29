@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-jessie
+FROM gerritforge/gerrit-ci-slave-bazel:debian-$DEBIAN_VER
 
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     add-apt-repository \
