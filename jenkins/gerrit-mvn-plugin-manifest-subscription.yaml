@@ -6,4 +6,4 @@
       - stable-2.15
       - stable-2.14
     jobs:
-      - 'plugin-{repo}-mvn-{branch}'
+      - 'plugin-{repo}-java-8-mvn-{branch}'
