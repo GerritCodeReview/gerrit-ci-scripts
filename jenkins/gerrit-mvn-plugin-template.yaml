@@ -1,7 +1,5 @@
-- job-template:
-    name: 'plugin-{repo}-mvn-{branch}'
-    description: "Plugin {repo} {branch} branch build with Maven\n"
-    node: mvn
+- defaults:
+    name: 'plugin-mvn-defaults'
     wrappers:
       - timeout:
           timeout: 30
@@ -34,14 +32,26 @@
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
-
-    builders:
-      - shell:
-         !include-raw: gerrit-mvn-build-plugin.sh
     publishers:
       - archive:
          artifacts: '**/target/{repo}*.jar*,**/target/{repo}*.json'
 
-    wrappers:
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+- job-template:
+    name: 'plugin-{repo}-java-8-mvn-{branch}'
+    description: "Plugin {repo} {branch} branch build with Maven and Java 8\n"
+    node: mvn
+
+    builders:
+      - shell:
+         !include-raw: gerrit-mvn-build-plugin-install-gerrit-api.sh
+      - shell:
+         !include-raw: gerrit-mvn-build-plugin.sh
+
+- job-template:
+    name: 'plugin-{repo}-java-7-mvn-{branch}'
+    description: "Plugin {repo} {branch} branch build with Maven and Java 7\n"
+    node: mvn-debian-jessie
+
+    builders:
+      - shell:
+         !include-raw: gerrit-mvn-build-plugin.sh

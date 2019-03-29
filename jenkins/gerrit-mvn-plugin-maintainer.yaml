@@ -1,9 +1,10 @@
 - project:
     name: maintainer-mvn
     repo: maintainer
-    branch:
-      - master
-      - stable-2.13
     jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-
+      - 'plugin-{repo}-java-8-mvn-{branch}':
+        branch:
+            - master
+      - 'plugin-{repo}-java-7-mvn-{branch}':
+        branch:
+            - stable-2.13
