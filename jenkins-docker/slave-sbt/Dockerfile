@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-jessie
+FROM gerritforge/gerrit-ci-slave-bazel:debian-$DEBIAN_VER
 
 # SBT Setup
 RUN apt-get update && \
