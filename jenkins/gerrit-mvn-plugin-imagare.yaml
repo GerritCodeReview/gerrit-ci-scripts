@@ -1,8 +1,7 @@
 - project:
     name: imagare-mvn
     repo: imagare
-    branch:
-      - stable-2.10
     jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-
+      - 'plugin-{repo}-java-7-mvn-{branch}':
+          branch:
+            - stable-2.10

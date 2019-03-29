@@ -1,9 +1,8 @@
 - project:
     name: project-download-commands-mvn
     repo: project-download-commands
-    branch:
-      - stable-2.11
-      - stable-2.10
     jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-
+      - 'plugin-{repo}-java-7-mvn-{branch}':
+          branch:
+            - stable-2.11
+            - stable-2.10
