@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "530ea811_e3027da0",
+        "filename": "jenkins-docker/slave-buck/buckjavaargs",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-02T06:31:16Z",
+      "side": 0,
+      "message": "This needs to become -XX:MetaspaceSize\u003d512m rather than been just removed",
+      "range": {
+        "startLine": 1,
+        "startChar": 4,
+        "endLine": 1,
+        "endChar": 22
+      },
+      "revId": "016d6a2c016870cc1d437c64e15e78fd278504b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fd430909_aaaaa6a0",
+        "filename": "jenkins-docker/slave-chrome/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-02T06:31:16Z",
+      "side": 0,
+      "message": "I would keep the ability, if needed, to rebuild the jessie immage if needed.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 28
+      },
+      "revId": "016d6a2c016870cc1d437c64e15e78fd278504b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ced6e8a_8a3d15fd",
+        "filename": "jenkins-docker/slave-debian/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-02T06:31:16Z",
+      "side": 0,
+      "message": "I would keep the ability to build Debian jessie",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 27
+      },
+      "revId": "016d6a2c016870cc1d437c64e15e78fd278504b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95f9bdf4_2a505e82",
+        "filename": "jenkins-docker/slave-buck/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-02T06:31:16Z",
+      "side": 1,
+      "message": "This line isn\u0027t needed anymore",
+      "revId": "e0272840d0f2069eab009783e95db2cbff14bbfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f84da93f_75779813",
+        "filename": "jenkins-docker/slave-buck/default-buck.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-02T06:31:16Z",
+      "side": 1,
+      "message": "This can be removed: we\u0027ll keep only Java-8 version of Buck",
+      "revId": "e0272840d0f2069eab009783e95db2cbff14bbfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "00d9af1a_9bff237f",
+        "filename": "jenkins-docker/slave-buck/set-buck.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-02T06:31:16Z",
+      "side": 1,
+      "message": "set-buck.sh can be removed",
+      "revId": "e0272840d0f2069eab009783e95db2cbff14bbfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4729b01e_e64d46c6",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-02T06:31:16Z",
+      "side": 1,
+      "message": "We don\u0027t need set-java.sh anymore",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "e0272840d0f2069eab009783e95db2cbff14bbfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
