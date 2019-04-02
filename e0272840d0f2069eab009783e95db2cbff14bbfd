@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "edcec72a_520e5348",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-04-02T07:01:24Z",
+      "side": 1,
+      "message": "This image does not yet exist. However, I proposed changes to get there: topic:\"debian-stretch-for-slaves\". We should coordinate on that. I will have a look into my changes and adapt theme to yours. I think there are some differences.\nAlso we\u0027ll have to stop building Gerrit stable-2.10-2.12 before we start using only stretch images. Alternatively, we could in the beginning still have a jessie-based image next to the stretch-based slaves, as I proposed in my changes.",
+      "revId": "e0272840d0f2069eab009783e95db2cbff14bbfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "95f9bdf4_2a505e82",
         "filename": "jenkins-docker/slave-buck/Dockerfile",
         "patchSetId": 4
@@ -66,6 +83,24 @@
       "side": 1,
       "message": "But we do need set buck path, so that the buck is found, right?",
       "parentUuid": "f84da93f_75779813",
+      "revId": "e0272840d0f2069eab009783e95db2cbff14bbfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e1d7228c_8e9f4169",
+        "filename": "jenkins-docker/slave-buck/default-buck.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-04-02T07:01:24Z",
+      "side": 1,
+      "message": "Yes, but this could then be hardcoded into the docker image.\nWe will also have to adjust the job scripts accordingly.",
+      "parentUuid": "8c43d2f0_9e3768eb",
       "revId": "e0272840d0f2069eab009783e95db2cbff14bbfd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
