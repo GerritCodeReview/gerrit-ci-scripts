@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "12f8ca3b_1553390d",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-09T19:59:41Z",
+      "side": 1,
+      "message": "nope, but you\u0027re right, isn\u0027t related :-)",
+      "parentUuid": "204fc448_5a40f69d",
+      "range": {
+        "startLine": 28,
+        "startChar": 4,
+        "endLine": 28,
+        "endChar": 7
+      },
+      "revId": "7d38b7396e300544738d16628209d2ed8f8b374b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1a7bfd36_90f0c619",
         "filename": "jenkins-docker/slave-debian/Dockerfile",
         "patchSetId": 2
@@ -56,6 +80,24 @@
       "revId": "7d38b7396e300544738d16628209d2ed8f8b374b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "abb373f6_83eb8ee6",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-09T19:59:41Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "1a7bfd36_90f0c619",
+      "revId": "7d38b7396e300544738d16628209d2ed8f8b374b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
