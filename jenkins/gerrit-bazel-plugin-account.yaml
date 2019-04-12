@@ -1,7 +1,35 @@
+- job-template:
+    name: 'module-account-bazel-{branch}'
+    class: modules
+    node: bazel-debian
+    description: "Lib module {name} {branch} branch Bazel build\n"
+    defaults: plugin-template-bazel
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/modules/{name}
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - '*/{branch}'
+         skip-tag: true
+    builders:
+      - shell:
+         bower install
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-project-info.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/{name}/*{name}*.jar*, bazel-genfiles/plugins/{name}/{name}.json
+
 - project:
     name: account
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-account-bazel-{branch}':
           branch:
             - master
             - stable-2.16
