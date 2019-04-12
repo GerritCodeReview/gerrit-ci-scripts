@@ -1,7 +1,26 @@
+- job-template:
+    name: 'plugin-account-test-bazel-{branch}'
+    description: "Plugin account {branch} branch build with Bazel\n"
+    defaults: plugin-template
+    node: bazel-debian
+    class: plugins
+    project-name: plugins%2Faccount
+    builders:
+      - shell:
+         bower install
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-project-info.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-genfiles/plugins/account/account.jar*,bazel-genfiles/plugins/account/account.json
+
 - project:
-    name: account
+    name: account-test
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-account-test-bazel-{branch}':
           branch:
             - master
             - stable-2.16
