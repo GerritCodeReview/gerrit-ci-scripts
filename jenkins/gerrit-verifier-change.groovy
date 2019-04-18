@@ -30,7 +30,7 @@ class Globals {
   }
 
   static String addVerifiedTag = ciTag("addVerified")
-  static Set<String> codeStyleBranches = ["master", "stable-2.16", "stable-2.15", "stable-2.14"]
+  static Set<String> codeStyleBranches = ["master", "stable-3.0", "stable-2.16", "stable-2.15", "stable-2.14"]
   static resTicks = [ 'ABORTED':'\u26aa', 'SUCCESS':'\u2705', 'FAILURE':'\u274c' ]
 }
 
@@ -307,7 +307,7 @@ def buildChange(change) {
   println "Building Change " + changeUrl
   build.setDescription("""<a href='$changeUrl' target='_blank'>Change #$changeNum</a>""")
 
-  if(branch == "master") {
+  if(branch == "master" || branch == "stable-3.0") {
     modes = ["notedb"]
   }
   else if(branch == "stable-2.15" || branch == "stable-2.16") {
@@ -316,7 +316,7 @@ def buildChange(change) {
     modes = ["reviewdb"]
   }
 
-  if(branch == "master" || branch == "stable-2.16" || branch == "stable-2.15" || branch == "stable-2.14") {
+  if(branch == "master" || branch == "stable-3.0" || branch == "stable-2.16" || branch == "stable-2.15" || branch == "stable-2.14") {
     def changedFiles = gerrit.getChangedFiles(changeNum, sha1)
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") }
 
