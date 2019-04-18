@@ -78,7 +78,7 @@
              - job-extended-read
     dsl: |
       retries = 3
-      type = '{branch}' in ['stable-2.16', 'stable-2.15', 'stable-2.14','master'] ? 'bazel' : 'buck'
+      type = '{branch}' in ['master', 'stable-3.0', 'stable-2.16', 'stable-2.15', 'stable-2.14'] ? 'bazel' : 'buck'
       parallel (
         {{ retry ( retries ) {{ build( "Gerrit-$type-{branch}" ) }} }}
       )
