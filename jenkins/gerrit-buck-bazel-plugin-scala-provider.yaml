@@ -11,6 +11,7 @@
             - master
           gerrit-branch:
             - master
+            - stable-3.0
             - stable-2.16
       - 'plugin-scripting-{name}-bazel-{branch}':
           branch:
