@@ -15,8 +15,7 @@ ENV PROJECTS \
 	menuextender \
 	project-download-commands \
 	reviewassistant \
-	serviceuser \
-	slack-integration
+	serviceuser
 
 # Maven cache warm-up for Gerrit plugins
 RUN export HOME=/home/jenkins && for prj in $PROJECTS; do cd /tmp && git clone $GERRIT_URL/$prj && cd $prj && ( mvn clean install || true ); rm -Rf /tmp/$prj; done

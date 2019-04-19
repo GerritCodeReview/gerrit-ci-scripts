@@ -1,0 +1,6 @@
+- project:
+    name: slack-integration
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
