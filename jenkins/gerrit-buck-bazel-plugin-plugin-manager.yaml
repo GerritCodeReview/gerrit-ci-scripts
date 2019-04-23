@@ -1,5 +1,6 @@
 - project:
     name: plugin-manager
+    targets: 'plugins/plugin-manager plugins/plugin-manager:plugin_manager_tests'
     jobs:
       - 'plugin-{name}-{branch}':
           branch:
