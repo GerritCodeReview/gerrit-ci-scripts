@@ -9,6 +9,7 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     ./tools/setup_gjf.sh 1.7 && \
     ( bazel build //... || true ) && \
     git checkout -f stable-2.16 && git submodule update --init && ( bazel build //... || true ) && \
+    git checkout -f stable-3.0 && git submodule update --init && ( bazel build //... || true ) && \
     git checkout -f master && git submodule update --init && ( bazel build //... || true ) && \
     cd /tmp/gerrit && mv tools/format ~ && \
     rm -Rf /tmp/gerrit'
