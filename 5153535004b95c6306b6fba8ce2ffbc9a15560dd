@@ -16,6 +16,24 @@
       "revId": "5153535004b95c6306b6fba8ce2ffbc9a15560dd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad237f4f_26574dbe",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-05-06T13:19:30Z",
+      "side": 1,
+      "message": "We do not have anymore Java-7 based builds on the CI :-)\n\nIt is time to remove Jessie and Java-7 altogether.",
+      "parentUuid": "83541c99_47c0186e",
+      "revId": "5153535004b95c6306b6fba8ce2ffbc9a15560dd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
