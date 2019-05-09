@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c94386e1_a1458331",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2019-05-09T13:41:36Z",
+      "side": 1,
+      "message": "Maybe mention that this is for the 3.0/master branch only?\n\nSince we will still build it for 2.16 \u003d\u003c right?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "e2a729a7bc3a832a573e9cc3e5ec25ce6d7f62c4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "92f24b61_5f425601",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2019-05-09T13:41:36Z",
+      "side": 1,
+      "message": "Maybe mention that this is for the 3.0/master branch only?\n\nSince we will still build it for 2.16 \u003d\u003c right?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "e2a729a7bc3a832a573e9cc3e5ec25ce6d7f62c4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
