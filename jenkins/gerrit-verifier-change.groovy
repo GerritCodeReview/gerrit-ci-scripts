@@ -320,7 +320,7 @@ def buildChange(change) {
     def changedFiles = gerrit.getChangedFiles(changeNum, sha1)
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") }
 
-    if(polygerritFiles.size() > 0) {
+    if(polygerritFiles.size() > 0 || changedFiles.contains("WORKSPACE")) {
       if(changedFiles.size() == polygerritFiles.size()) {
         println "Only PolyGerrit UI changes detected, skipping other test modes..."
         modes = ["polygerrit"]
