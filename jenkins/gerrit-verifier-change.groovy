@@ -132,6 +132,46 @@ class CodeStyleLabel extends AbstractLabel {
   }
 }
 
+class GerritCheck {
+  String uuid
+  String changeNum
+  String sha1
+  Object build
+  String score = ""
+
+  GerritCheck(name, changeNum, sha1, build) {
+    this.uuid = "gerritforge:" + name.replaceAll("(buck/|bazel/)", "")
+    this.changeNum = changeNum
+    this.sha1 = sha1
+    this.build = build
+  }
+
+  def printCheckSummary() {
+    println "----------------------------------------------------------------------------"
+    println "Gerrit Check: ${uuid}=" + score + " to change " + changeNum + "/" + sha1
+    println "----------------------------------------------------------------------------"
+  }
+
+  def createCheckPayload() {
+    switch(build.getResult()) {
+      case Result.SUCCESS:
+        score = "SUCCESSFUL"
+        break
+      case Result.FAILURE:
+        score = "FAILED"
+        break
+      default:
+        score = "NOT_RELEVANT";
+    }
+
+    def jsonPayload = '{  "checker_uuid": "' + uuid + '",' +
+                      ' "state": "' + score + '",' +
+                      ' "url": "' + build.getBuildUrl() + "consoleText" + '"}"'
+
+    return jsonPayload
+  }
+}
+
 class Gerrit {
   String url
   Script script
@@ -143,6 +183,14 @@ class Gerrit {
       label.createLabelPayload())
     if (exitCode == 0){
       label.printLabelSummary()
+    }
+  }
+
+  def postCheck(check) {
+    def exitCode = httpPost("a/changes/" + check.changeNum + "/revisions/" + check.sha1 + "/check",
+      check.createCheckPayload())
+    if (exitCode == 0) {
+      check.printCheckSummary()
     }
   }
 
@@ -370,6 +418,9 @@ def buildChange(change) {
   def verifyLabel = new VerifyLabel(this, changeNum, sha1, resVerify,
     Globals.buildsList.findAll { key,build -> key != "codestyle" })
   gerrit.addLabel(verifyLabel, change, sha1)
+
+  // Per build result create vote on gerrit checker
+  builds.each { type,build -> gerrit.postCheck(new GerritCheck(type, changeNum, sha1, build)) }
 
   switch(resAll) {
     case 0: build.state.result = ABORTED
