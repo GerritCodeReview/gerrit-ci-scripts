@@ -16,6 +16,52 @@
       "revId": "b63e246fa4d63cfd46cd191a8756e87d54890004",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "59f8b654_33cedd4e",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1031898
+      },
+      "writtenOn": "2019-05-14T14:14:16Z",
+      "side": 1,
+      "message": "remove this? Only makes this blocking when we\u0027re sure it\u0027s working.",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 37
+      },
+      "revId": "b63e246fa4d63cfd46cd191a8756e87d54890004",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e4979a99_d8aa9c79",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1031898
+      },
+      "writtenOn": "2019-05-14T14:14:16Z",
+      "side": 1,
+      "message": "same with above. Please also adjust the following.",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 37
+      },
+      "revId": "b63e246fa4d63cfd46cd191a8756e87d54890004",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
