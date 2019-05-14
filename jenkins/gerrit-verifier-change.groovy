@@ -132,6 +132,70 @@ class CodeStyleLabel extends AbstractLabel {
   }
 }
 
+abstract class AbstractCheck {
+  String name
+  Script script
+  String changeNum
+  String sha1
+  int score
+  Object build
+
+  AbstractCheck(name, script, changeNum, sha1, score, build) {
+    this.name = name
+    this.script = script
+    this.changeNum = changeNum
+    this.sha1 = sha1
+    this.score = score
+    this.build = build
+  }
+
+  def printCheckSummary() {
+    println "----------------------------------------------------------------------------"
+    println "Gerrit Review: ${name}=" + score + " to change " + changeNum + "/" + sha1
+    println "----------------------------------------------------------------------------"
+  }
+
+  def createCheckPayload() {
+    def url = build.getBuildUrl() + "consoleText"
+    def res = build.getResult().toString()
+    def checkResult;
+
+    switch(score) {
+        case Result.SUCCESS:
+            checkResult = "SUCCESSFUL"
+            break
+        case Result.FAILURE:
+            checkResult = "FAILED"
+            break
+        default:
+            checkResult = "NOT_RELEVANT";
+    }
+
+    def jsonPayload = '{  "checker_uuid":  "' + name + '",' +
+                      ' "state": "' + checkResult + '",' +
+                      ' "url": "' + url + '"}"
+
+    return jsonPayload
+  }
+}
+
+class VerifyCheck extends AbstractCheck {
+  // TODO(davido): This only works on stable-3.0 and master, because on
+  // stable-2.16 and older stable branches multiple jobs are scheduled
+  // (noteDb and reviewDb).
+  VerifyCheck(script, changeNum, sha1, score, builds) {
+    super("gerritforge:verifier-checker", script, changeNum, sha1, score,
+        builds[0])
+  }
+}
+
+class CodeStyleCheck extends AbstractCheck {
+  CodeStyleCheck(script, changeNum, sha1, score, builds) {
+    super("gerritforge:style-checker", script, changeNum, sha1, score,
+        builds["Code-Style"])
+  }
+}
+
 class Gerrit {
   String url
   Script script
@@ -143,6 +207,15 @@ class Gerrit {
       label.createLabelPayload())
     if (exitCode == 0){
       label.printLabelSummary()
+    }
+  }
+
+  def addCheck(name, change, sha1) {
+    def changeNum = change._number
+    def exitCode = httpPost("a/changes/" + changeNum + "/revisions/" + sha1 + "/check",
+      check.createCheckPayload())
+    if (exitCode == 0){
+      label.printCheckSummary()
     }
   }
 
@@ -339,12 +412,14 @@ def buildChange(change) {
 
   def buildsWithResults = getResultsOfBuildsInParallel(builds)
   def codestyleResult = buildsWithResults.find{ it[0] == "codestyle" }
-  if(codestyleResult) {
+  if (codestyleResult) {
     def resCodeStyle = getLabelValue(1, codestyleResult[1])
     def codestyleBuild = Globals.buildsList["codestyle"]
-    def codestyleLabel = new CodeStyleLabel(this, changeNum, sha1, resCodeStyle,
-      ["Code-Style": codestyleBuild])
+    def codeStyleBuilds = ["Code-Style": codestyleBuild]
+    def codestyleLabel = new CodeStyleLabel(this, changeNum, sha1, resCodeStyle, codeStyleBuilds)
     gerrit.addLabel(codestyleLabel, change, sha1)
+    def codeStyleCheck = new CodeStyleCheck(this, changeNum, sha1, resCodeStyle, codeStyleBuilds)
+    gerrit.addCheck(codeStyleCheck, change, sha1)
   }
 
   flaky = findFlakyBuilds(buildsWithResults.findAll { it[0] != "codestyle" })
@@ -367,9 +442,15 @@ def buildChange(change) {
 
   def resAll = codestyleResult ? getLabelValue(resVerify, codestyleResult[1]) : resVerify
 
-  def verifyLabel = new VerifyLabel(this, changeNum, sha1, resVerify,
-    Globals.buildsList.findAll { key,build -> key != "codestyle" })
+  def buildVerifyResults = Globals.buildsList.findAll { key,build -> key != "codestyle" }
+  def verifyLabel = new VerifyLabel(this, changeNum, sha1, resVerify, buildVerifyResults)
   gerrit.addLabel(verifyLabel, change, sha1)
+
+  // Checker vote. Currently only verifier-checker supported
+  if (branch == "master" || branch == "stable-3.0") {
+     def verifyCheck = new VerifyCheck(this, changeNum, sha1, resVerify, buildVerifyResults)
+     gerrit.addCheck(verifyCheck, change, sha1)
+  }
 
   switch(resAll) {
     case 0: build.state.result = ABORTED
@@ -377,7 +458,7 @@ def buildChange(change) {
     case 1: build.state.result = SUCCESS
             break
     case -1: build.state.result = FAILURE
-             break
+            break
   }
 }
 
