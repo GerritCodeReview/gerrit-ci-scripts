@@ -132,6 +132,50 @@ class CodeStyleLabel extends AbstractLabel {
   }
 }
 
+class GerritCheck {
+  String uuid
+  String changeNum
+  String sha1
+  Object build
+
+  GerritCheck(name, changeNum, sha1, build) {
+    this.uuid = "gerritforge:" + name.replaceAll("(buck/|bazel/)", "")
+    this.changeNum = changeNum
+    this.sha1 = sha1
+    this.build = build
+  }
+
+  def printCheckSummary() {
+    println "----------------------------------------------------------------------------"
+    println "Gerrit Check: ${uuid}=" + build.getResult() + " to change " + changeNum + "/" + sha1
+    println "----------------------------------------------------------------------------"
+  }
+
+  def getCheckResultFromBuild() {
+    switch(build.getResult()) {
+      case Result.SUCCESS:
+        return "SUCCESSFUL"
+      case Result.ABORTED:
+      case Result.FAILURE:
+      case Result.UNSTABLE:
+        return "FAILED"
+      case Result.NOT_BUILT:
+      default:
+        return "NOT_RELEVANT";
+    }
+  }
+
+  def createCheckPayload() {
+    def json = new JsonBuilder()
+    json {
+      checker_uuid(uuid)
+      state(getCheckResultFromBuild())
+      url(build.getBuildUrl() + "consoleText")
+    }
+    return json.toString()
+  }
+}
+
 class Gerrit {
   String url
   Script script
@@ -143,6 +187,14 @@ class Gerrit {
       label.createLabelPayload())
     if (exitCode == 0){
       label.printLabelSummary()
+    }
+  }
+
+  def postCheck(check) {
+    def exitCode = httpPost("a/changes/${check.changeNum}/revisions/${check.sha1}/checks",
+        check.createCheckPayload())
+    if (exitCode == 0) {
+      check.printCheckSummary()
     }
   }
 
@@ -370,6 +422,9 @@ def buildChange(change) {
   def verifyLabel = new VerifyLabel(this, changeNum, sha1, resVerify,
     Globals.buildsList.findAll { key,build -> key != "codestyle" })
   gerrit.addLabel(verifyLabel, change, sha1)
+
+  // Per build result create vote on gerrit checker
+  Globals.buildsList.each { type,build -> gerrit.postCheck(new GerritCheck(type, changeNum, sha1, build)) }
 
   switch(resAll) {
     case 0: build.state.result = ABORTED
