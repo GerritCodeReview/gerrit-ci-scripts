@@ -132,6 +132,49 @@ class CodeStyleLabel extends AbstractLabel {
   }
 }
 
+class GerritCheck {
+  String uuid
+  String changeNum
+  String sha1
+  Object build
+  String score = ""
+
+  GerritCheck(name, changeNum, sha1, build) {
+    this.uuid = "gerritforge:" + name
+    this.changeNum = changeNum
+    this.sha1 = sha1
+    this.build = build
+  }
+
+  def printCheckSummary() {
+    println "----------------------------------------------------------------------------"
+    println "Gerrit Review: ${uuid}=" + score + " to change " + changeNum + "/" + sha1
+    println "----------------------------------------------------------------------------"
+  }
+
+  def createCheckPayload() {
+    def url = build.getBuildUrl() + "consoleText"
+    def res = build.getResult().toString()
+
+    switch(res) {
+        case Result.SUCCESS:
+            score = "SUCCESSFUL"
+            break
+        case Result.FAILURE:
+            score = "FAILED"
+            break
+        default:
+            score = "NOT_RELEVANT";
+    }
+
+    def jsonPayload = '{  "checker_uuid": "' + uuid + '",' +
+                      ' "state": "' + score + '",' +
+                      ' "url": "' + url + '"}"
+
+    return jsonPayload
+  }
+}
+
 class Gerrit {
   String url
   Script script
@@ -143,6 +186,14 @@ class Gerrit {
       label.createLabelPayload())
     if (exitCode == 0){
       label.printLabelSummary()
+    }
+  }
+
+  def postCheck(check) {
+    def exitCode = httpPost("a/changes/" + check.changeNum + "/revisions/" + check.sha1 + "/check",
+      check.createCheckPayload())
+    if (exitCode == 0) {
+      check.printCheckSummary()
     }
   }
 
@@ -367,9 +418,12 @@ def buildChange(change) {
 
   def resAll = codestyleResult ? getLabelValue(resVerify, codestyleResult[1]) : resVerify
 
-  def verifyLabel = new VerifyLabel(this, changeNum, sha1, resVerify,
-    Globals.buildsList.findAll { key,build -> key != "codestyle" })
+  def buildVerifyResults = Globals.buildsList.findAll { key,build -> key != "codestyle" }
+  def verifyLabel = new VerifyLabel(this, changeNum, sha1, resVerify, buildVerifyResults)
   gerrit.addLabel(verifyLabel, change, sha1)
+
+  // Per build result create vote on gerrit checker
+  builds.each { type,build -> gerrit.postCheck(new GerritCheck(type, changeNum, sha1, build)) }
 
   switch(resAll) {
     case 0: build.state.result = ABORTED
@@ -377,7 +431,7 @@ def buildChange(change) {
     case 1: build.state.result = SUCCESS
             break
     case -1: build.state.result = FAILURE
-             break
+            break
   }
 }
 
