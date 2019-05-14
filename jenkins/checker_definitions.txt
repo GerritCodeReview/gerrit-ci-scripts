@@ -1,0 +1,46 @@
+POST /plugins/checks/checkers/ HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+  {
+    "uuid": "gerritforge:notedb",
+    "name": "notedb",
+    "description": "NoteDb checker",
+    "repository": "gerrit",
+    "branch": "stable-2.15 OR stable-2.16 OR stable-3.0 OR master",
+    "blocking": [],
+    "blocking": ["STATE_NOT_PASSING"]
+  }
+
+POST /plugins/checks/checkers/ HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+  {
+    "uuid": "gerritforge:reviewdb",
+    "name": "reviewdb",
+    "description": "ReviewDb checker",
+    "repository": "gerrit",
+    "branch": "stable-2.13 OR stable-2.14 OR stable-2.15 OR stable-2.16",
+    "blocking": ["STATE_NOT_PASSING"]
+  }
+
+POST /plugins/checks/checkers/ HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+  {
+    "uuid": "gerritforge:polygerrit",
+    "name": "polygerrit",
+    "description": "PolyGerrit checker",
+    "repository": "gerrit",
+    "query": "directory:polygerit-ui OR file:WORKSPACE",
+    "branch": "stable-2.14 OR stable-2.15 OR stable-2.16 OR stable-3.0 OR master",
+    "blocking": ["STATE_NOT_PASSING"]
+  }
+
+POST /plugins/checks/checkers/ HTTP/1.0
+  Content-Type: application/json; charset=UTF-8
+  {
+    "uuid": "gerritforge:codestyle",
+    "name": "codestyle",
+    "description": "Code style checker",
+    "repository": "gerrit",
+    "branch": "stable-2.14 OR stable-2.15 OR stable-2.16 OR stable-3.0 OR master",
+    "blocking": ["STATE_NOT_PASSING"]
+  }
+
