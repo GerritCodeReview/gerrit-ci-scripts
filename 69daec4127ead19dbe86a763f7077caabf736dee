@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eed76cea_6e838c54",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-05-14T10:26:03Z",
+      "side": 1,
+      "message": "This is not available here.\n\nSidenote: resAll, as used further down in this script, combines the results of all builds (codestyle, reviewdb and notedb), which we wouldn\u0027t want to use here. You will have to get the result from the \"buildsWithResults\"-map as done for example in line 409.",
+      "range": {
+        "startLine": 161,
+        "startChar": 11,
+        "endLine": 161,
+        "endChar": 17
+      },
+      "revId": "69daec4127ead19dbe86a763f7077caabf736dee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
