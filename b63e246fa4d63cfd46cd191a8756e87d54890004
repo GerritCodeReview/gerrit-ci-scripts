@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "544dfe17_a13a3489",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1010008
+      },
+      "writtenOn": "2019-05-14T14:12:39Z",
+      "side": 1,
+      "message": "\"branch\" is not a field in CheckerInput:\n\nhttps://gerrit.googlesource.com/plugins/checks/+/e1a39d8f6a46d682ee83106165c32fa0d5c29f0b/resources/Documentation/rest-api-checkers.md#checkerinput\n\nInstead do something like\n\n \"query\": \"branch:stable-2.15 OR ...\"",
+      "revId": "b63e246fa4d63cfd46cd191a8756e87d54890004",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
