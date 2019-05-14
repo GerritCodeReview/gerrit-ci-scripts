@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "67b609b7_f7e3022d",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 6
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-05-14T13:04:06Z",
+      "side": 1,
+      "message": "Actually, this does not work for master and stable-3.0 as well, because it could be multiple jobs as well: \"notedb\" and \"polygerrit\". So that we have to make it work for multiple checks.",
+      "range": {
+        "startLine": 183,
+        "startChar": 0,
+        "endLine": 185,
+        "endChar": 27
+      },
+      "revId": "419485c15a624f2ad37191ae236656c6c5bc48b5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
