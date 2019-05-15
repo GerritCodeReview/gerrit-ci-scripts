@@ -22,6 +22,30 @@
       "revId": "0dcda6f680238e7e49a2c09a51f2e625421a1f15",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "95700318_9c47a04a",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 30
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-05-15T12:22:45Z",
+      "side": 1,
+      "message": "May be we need another status on checker side, like not failing but also not succeeding? E.g.: UNKNOWN or UNSTABLE. Then we would map ABORTED and UNSTABLE to it.",
+      "parentUuid": "e2447b4e_4a60f0e1",
+      "range": {
+        "startLine": 161,
+        "startChar": 6,
+        "endLine": 165,
+        "endChar": 30
+      },
+      "revId": "0dcda6f680238e7e49a2c09a51f2e625421a1f15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
