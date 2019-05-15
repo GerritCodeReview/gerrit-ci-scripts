@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebb22bb_39ee4c81",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 29
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-05-15T12:04:15Z",
+      "side": 1,
+      "message": "A build can be aborted for many reasons and shouldnt\u0027 report a negative check but just a not report anything.",
+      "range": {
+        "startLine": 159,
+        "startChar": 6,
+        "endLine": 159,
+        "endChar": 25
+      },
+      "revId": "aa00a4afd69a66064e72e5797cd377072b4e654d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72719561_1339a976",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 29
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-05-15T12:04:15Z",
+      "side": 1,
+      "message": "We did not capture that before and we do not collect test results either. Bazel returns an exit code when failing, so this use-case is never used in this script.",
+      "range": {
+        "startLine": 161,
+        "startChar": 6,
+        "endLine": 161,
+        "endChar": 27
+      },
+      "revId": "aa00a4afd69a66064e72e5797cd377072b4e654d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "443ca8d0_e1612c10",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 29
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-05-15T12:04:15Z",
+      "side": 1,
+      "message": "Why this case?",
+      "range": {
+        "startLine": 163,
+        "startChar": 6,
+        "endLine": 163,
+        "endChar": 28
+      },
+      "revId": "aa00a4afd69a66064e72e5797cd377072b4e654d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
