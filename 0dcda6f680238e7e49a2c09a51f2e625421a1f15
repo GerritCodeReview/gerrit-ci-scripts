@@ -46,6 +46,30 @@
       "revId": "0dcda6f680238e7e49a2c09a51f2e625421a1f15",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b85d4475_28a4a6a2",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 30
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-05-15T12:51:25Z",
+      "side": 1,
+      "message": "As discussed with Alice, we agreed that:\n- ABORTED means that the build needs to be re-triggered, and thus should be reported as NOT_STARTED so that checker can re-schedule it again\n- NOT_BUILT and UNSTABLE should be inside the default case as unexpected states, so should be reported as FAILED with a specific reason, so that the developer can see the reason and possibly retrigger the build.",
+      "parentUuid": "95700318_9c47a04a",
+      "range": {
+        "startLine": 161,
+        "startChar": 6,
+        "endLine": 165,
+        "endChar": 30
+      },
+      "revId": "0dcda6f680238e7e49a2c09a51f2e625421a1f15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
