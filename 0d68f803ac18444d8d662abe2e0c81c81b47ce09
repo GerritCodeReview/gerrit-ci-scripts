@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d9bde932_ed7c0314",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1030912
+      },
+      "writtenOn": "2019-05-15T09:21:25Z",
+      "side": 1,
+      "message": "FYI: This is the name which will show up on the UI. As long as we don\u0027t show the description of a checker in the checks table, it would be helpful if the name is as expressive as possible while being short and concise. By the way, the name is allowed to contain blanks and may start with a capital letter. ;-)\n\nI think I would rather prefer something like \"Build/Tests\" instead of \"notedb\" and \"ReviewDb Build/Tests\" for \"reviewdb\". (I left out \u0027NoteDb\u0027 for the former as it should be the default now and in the future.)",
+      "range": {
+        "startLine": 5,
+        "startChar": 13,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba076a94_1fd70918",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1030912
+      },
+      "writtenOn": "2019-05-15T09:21:25Z",
+      "side": 1,
+      "message": "FYI: It\u0027s unnecessary to include \u0027checker\u0027 in here. The original idea was also that a description may be more verbose than the name while still being short enough. It might be something like \"Builds the code base and executes unit/integration tests\". For the ReviewDb checker below, it could be something like \"Using ReviewDb, builds the code base and executes unit/integration tests\".",
+      "range": {
+        "startLine": 6,
+        "startChar": 20,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "406f632a_ef8bf375",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1030912
+      },
+      "writtenOn": "2019-05-15T09:21:25Z",
+      "side": 1,
+      "message": "FYI: Having some more details here would be helpful (e.g. what is this checking?).",
+      "range": {
+        "startLine": 28,
+        "startChar": 20,
+        "endLine": 28,
+        "endChar": 38
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae4c1f6e_4180f6da",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1030912
+      },
+      "writtenOn": "2019-05-15T09:21:25Z",
+      "side": 1,
+      "message": "Looks like a query we should support according to the code. I haven\u0027t tried it, though. Please complain if it doesn\u0027t work.",
+      "range": {
+        "startLine": 30,
+        "startChar": 14,
+        "endLine": 30,
+        "endChar": 163
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "03216385_f497261e",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1030912
+      },
+      "writtenOn": "2019-05-15T09:21:25Z",
+      "side": 1,
+      "message": "FYI: Could also be \"Code style\" or \"Code Style\" depending on which reads nicer on the UI.",
+      "range": {
+        "startLine": 38,
+        "startChar": 13,
+        "endLine": 38,
+        "endChar": 22
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
