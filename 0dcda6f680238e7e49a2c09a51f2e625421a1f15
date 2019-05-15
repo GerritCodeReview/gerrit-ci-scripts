@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2447b4e_4a60f0e1",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 30
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1030912
+      },
+      "writtenOn": "2019-05-15T12:18:27Z",
+      "side": 1,
+      "message": "FYI: The \u0027not relevant\u0027 state is a passing state like \u0027successful\u0027. It means that a required check doesn\u0027t block if being in this state. From what I understood, Result.NOT_BUILT occurs when the check doesn\u0027t need to run, which is exactly what \u0027not relevant\u0027 is for. I\u0027m just wondering if Result.ABORTED and Result.UNSTABLE are like that.",
+      "range": {
+        "startLine": 161,
+        "startChar": 6,
+        "endLine": 165,
+        "endChar": 30
+      },
+      "revId": "0dcda6f680238e7e49a2c09a51f2e625421a1f15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
