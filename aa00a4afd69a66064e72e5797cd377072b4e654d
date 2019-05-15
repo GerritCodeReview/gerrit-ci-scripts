@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "747615ad_8a74bce2",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 29
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-05-15T12:17:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f7b0007_9adb1039",
+      "range": {
+        "startLine": 38,
+        "startChar": 13,
+        "endLine": 38,
+        "endChar": 18
+      },
+      "revId": "aa00a4afd69a66064e72e5797cd377072b4e654d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebb22bb_39ee4c81",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 29
