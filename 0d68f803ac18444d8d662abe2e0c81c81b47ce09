@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "68d47e6f_5e412fa6",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-05-15T09:53:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d9bde932_ed7c0314",
+      "range": {
+        "startLine": 5,
+        "startChar": 13,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba076a94_1fd70918",
         "filename": "jenkins/checker_definitions.txt",
         "patchSetId": 26
@@ -45,6 +69,30 @@
       "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3456d629_df9be886",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-05-15T09:53:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba076a94_1fd70918",
+      "range": {
+        "startLine": 6,
+        "startChar": 20,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "2d4533c3_13b644e4",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-05-15T09:53:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "406f632a_ef8bf375",
+      "range": {
+        "startLine": 28,
+        "startChar": 20,
+        "endLine": 28,
+        "endChar": 38
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae4c1f6e_4180f6da",
         "filename": "jenkins/checker_definitions.txt",
         "patchSetId": 26
@@ -82,6 +154,30 @@
       "writtenOn": "2019-05-15T09:21:25Z",
       "side": 1,
       "message": "Looks like a query we should support according to the code. I haven\u0027t tried it, though. Please complain if it doesn\u0027t work.",
+      "range": {
+        "startLine": 30,
+        "startChar": 14,
+        "endLine": 30,
+        "endChar": 163
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e2c087e_450c0a88",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-05-15T09:53:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ae4c1f6e_4180f6da",
       "range": {
         "startLine": 30,
         "startChar": 14,
@@ -114,6 +210,30 @@
       "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a10baa7_6edb60b7",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 26
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-05-15T09:53:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "03216385_f497261e",
+      "range": {
+        "startLine": 38,
+        "startChar": 13,
+        "endLine": 38,
+        "endChar": 22
+      },
+      "revId": "0d68f803ac18444d8d662abe2e0c81c81b47ce09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
