@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9f7b0007_9adb1039",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 29
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1030912
+      },
+      "writtenOn": "2019-05-15T12:11:01Z",
+      "side": 1,
+      "message": "Can we omit this part? It\u0027s a bit strange to me.",
+      "range": {
+        "startLine": 38,
+        "startChar": 13,
+        "endLine": 38,
+        "endChar": 18
+      },
+      "revId": "aa00a4afd69a66064e72e5797cd377072b4e654d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0ebb22bb_39ee4c81",
         "filename": "jenkins/gerrit-verifier-change.groovy",
         "patchSetId": 29
@@ -13,6 +36,30 @@
       "writtenOn": "2019-05-15T12:04:15Z",
       "side": 1,
       "message": "A build can be aborted for many reasons and shouldnt\u0027 report a negative check but just a not report anything.",
+      "range": {
+        "startLine": 159,
+        "startChar": 6,
+        "endLine": 159,
+        "endChar": 25
+      },
+      "revId": "aa00a4afd69a66064e72e5797cd377072b4e654d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae0ffb1b_5a66a09c",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 29
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1030912
+      },
+      "writtenOn": "2019-05-15T12:11:01Z",
+      "side": 1,
+      "message": "If the build is aborted, is it automatically restarted? (We currently don\u0027t have a \u0027cancelled\u0027 state yet but before not reporting anything, it\u0027s better to report \u0027failed\u0027 instead of leaving the check in \u0027running\u0027 forever.)",
+      "parentUuid": "0ebb22bb_39ee4c81",
       "range": {
         "startLine": 159,
         "startChar": 6,
