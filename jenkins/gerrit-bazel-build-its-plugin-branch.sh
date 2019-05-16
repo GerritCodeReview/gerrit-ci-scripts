@@ -26,7 +26,7 @@ bazel build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
 if [ "$TEST_TARGET" != "" ]
 then
-    bazel test --test_env DOCKER_HOST=$DOCKER_HOST plugins/its-{name}:$TEST_TARGET
+    bazel test --test_output errors --test_env DOCKER_HOST=$DOCKER_HOST plugins/its-{name}:$TEST_TARGET
 fi
 
 for JAR in $(find bazel-genfiles/plugins/its-{name} -name its-{name}*.jar)
