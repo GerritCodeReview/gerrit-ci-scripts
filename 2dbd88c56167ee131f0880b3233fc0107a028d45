@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c0aaa5b5_1e1bcc16",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-05-25T05:24:58Z",
+      "side": 1,
+      "message": "Is this applicable to all branches?  If not, shall we backport the minimal changes needed for this back to stable-2.14?",
+      "revId": "2dbd88c56167ee131f0880b3233fc0107a028d45",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
