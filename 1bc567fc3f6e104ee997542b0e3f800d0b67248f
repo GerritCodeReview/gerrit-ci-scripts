@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd7f9af8_95dbb748",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-05-26T11:29:20Z",
+      "side": 1,
+      "message": "This should go into the polygerritFiles",
+      "revId": "1bc567fc3f6e104ee997542b0e3f800d0b67248f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
