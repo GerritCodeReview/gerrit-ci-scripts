@@ -34,6 +34,24 @@
       "revId": "2dbd88c56167ee131f0880b3233fc0107a028d45",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "695e93f2_6932e0a0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-05-26T00:33:57Z",
+      "side": 1,
+      "message": "\u003e But this would require us to activate all error prone bug pattern with error severity\n\nWe don\u0027t have to activate them with error severity. They can stay as warning.  That\u0027s what I meant with minimal changes.",
+      "parentUuid": "b733750d_fbd961fe",
+      "revId": "2dbd88c56167ee131f0880b3233fc0107a028d45",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
