@@ -52,6 +52,24 @@
       "revId": "2dbd88c56167ee131f0880b3233fc0107a028d45",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ea3458a_ee755075",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-05-29T05:21:23Z",
+      "side": 1,
+      "message": "The change to enable error-prone by default is now on all branches from stable-2.14 upwards.",
+      "parentUuid": "695e93f2_6932e0a0",
+      "revId": "2dbd88c56167ee131f0880b3233fc0107a028d45",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
