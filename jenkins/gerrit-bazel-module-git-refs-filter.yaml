@@ -1,0 +1,8 @@
+- project:
+    name: git-refs-filter
+    jobs: 
+      - 'module-{name}-bazel-{branch}':
+         branch:
+           - master
+           - stable-3.0
+           - stable-2.16
