@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54201d30_2d09840b",
+        "filename": "jenkins/gerrit-bazel-module-git-refs-filter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2019-06-01T01:30:29Z",
+      "side": 1,
+      "message": "Remove this whitespace please.",
+      "range": {
+        "startLine": 3,
+        "startChar": 9,
+        "endLine": 3,
+        "endChar": 10
+      },
+      "revId": "874edc1a6485021b19dff7f3f0aacc1e34b130ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
