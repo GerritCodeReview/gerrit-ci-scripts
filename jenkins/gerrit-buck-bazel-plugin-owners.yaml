@@ -8,7 +8,7 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/{name}*/*{name}*.jar*
+           bazel-genfiles/plugins/owners/owners.jar*,bazel-genfiles/plugins/owners/owners-autoassign.jar*
 
 - job-template:
     name: 'plugin-owners-bazel-{branch}-{gerrit-branch}'
@@ -24,7 +24,7 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/{name}*/*{name}*.jar*,bazel-genfiles/plugins/{name}*/*{name}*.json
+           bazel-genfiles/plugins/owners/owners.jar*,bazel-genfiles/plugins/owners/owners-autoassign.jar*
 
 - job-template:
     name: 'plugin-owners-{branch}'
