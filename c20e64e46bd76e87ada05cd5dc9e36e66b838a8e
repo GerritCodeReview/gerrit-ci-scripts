@@ -118,6 +118,30 @@
       "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5fc0722f_c7fa1e51",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-06-05T14:10:31Z",
+      "side": 1,
+      "message": "\u003e I see - does that mean there is no way to do the `npm install` in each job?\n\nWe can have the actual `npm install` in each job. However, it would be nice to have a pre-warmed copy so that the time to download the dependencies is reduced to a minimum.",
+      "parentUuid": "6abf6190_04fb6ada",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 15
+      },
+      "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
