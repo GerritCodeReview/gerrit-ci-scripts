@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7954011f_1153260d",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1070860
+      },
+      "writtenOn": "2019-06-05T12:40:46Z",
+      "side": 0,
+      "message": "Is it fine if this works only for HEAD of gerrit, or do I need to somehow make sure this works before and after we added package.json in the main gerrit repository?\nDo the versions here have any relations to the versions in the main repository?",
+      "range": {
+        "startLine": 15,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 30
+      },
+      "revId": "7019cf45005051611c1de5434d6d752fef6aef0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
