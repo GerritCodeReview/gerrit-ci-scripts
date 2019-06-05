@@ -142,6 +142,30 @@
       "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf7ed670_ce4f8d7d",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-05T14:18:20Z",
+      "side": 1,
+      "message": "Would this help: https://github.com/bazelbuild/rules_nodejs#using-bazel-managed-dependencies ?\nThen we could use bazel to install the npm packages, which would also fill its own cache in the container images.",
+      "parentUuid": "5fc0722f_c7fa1e51",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 15
+      },
+      "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
