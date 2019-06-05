@@ -94,6 +94,30 @@
       "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b13adeb1_7eec9939",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-05T14:09:44Z",
+      "side": 1,
+      "message": "No we can call it in each job that needs the packages. My idea was just to reduce the number of required downloads by installing a basic set of the packages each time we anyway update the CI images and only download the new/updated packages.\nThe packages installed during the job run could be installed locally, but the packages that would be preinstalled in the containers would have to be installed globally, since the workspace does not exist yet, when building the containers. I am not an npm-expert, but I would expect that npm would use globally installed packages if available and not reinstall them when calling npm install in the project. So we would not have to redownload the packages each time, when there was no change to the dependencies. Does npm copy those global dependencies over to the local npm_modules, when running a local npm install and it is available globally?\n\nIf preinstalling the packages would not work, I would be fine with just running npm install every time, but it would definitely increase the download numbers for those packages ;-)",
+      "parentUuid": "6abf6190_04fb6ada",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 15
+      },
+      "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
