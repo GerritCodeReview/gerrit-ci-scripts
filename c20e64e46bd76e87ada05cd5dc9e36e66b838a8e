@@ -46,6 +46,30 @@
       "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db6748c8_61a576f4",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-05T13:15:48Z",
+      "side": 1,
+      "message": "Maybe we can add it to the cache-warmup in the slave-bazel image. Then we would have a base set of the dependencies installed and would just have to update dependencies that changed in the meantime, when running the job. We would however have to install them globally then.\n\n@Ole: The Gerrit-repository is not yet present in this intermediary container. In general during the build of the containers Gerrit will only be cloned to fill the buck/bazel chaches (in slave-buck / slave-bazel), but deleted afterwards. Gerrit will be cloned for each job, so we cannot perform a local npm install, when building the docker containers.",
+      "parentUuid": "62c7b1a8_1adf25c5",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 15
+      },
+      "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }

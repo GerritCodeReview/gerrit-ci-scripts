@@ -22,6 +22,30 @@
       "revId": "7019cf45005051611c1de5434d6d752fef6aef0f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3206448a_514448b5",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-05T13:15:48Z",
+      "side": 0,
+      "message": "As long as it is working for all Gerrit versions built with the CI, it should be fine. We do the same with bazel-updates, after which we oftentimes are also unable to build older commits of Gerrit. Best apply the same topic to the changes in Gerrit and the CI to coordinate the submission process.",
+      "parentUuid": "7954011f_1153260d",
+      "range": {
+        "startLine": 15,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 30
+      },
+      "revId": "7019cf45005051611c1de5434d6d752fef6aef0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
