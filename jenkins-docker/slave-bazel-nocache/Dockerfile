@@ -2,6 +2,24 @@ FROM gerritforge/gerrit-ci-slave-buck:debian-stretch
 
 ARG BAZEL_VER
 ARG BUILDIFIER_VER
+ARG GO_VER
+
+ADD https://dl.google.com/go/go${GO_VER}.linux-amd64.tar.gz /usr/local/
+
+RUN cd /usr/local && \
+    tar -xvf go${GO_VER}.linux-amd64.tar.gz
+
+ENV GOROOT=/usr/local/go
+
+# Bazel cache warm-up with Gerrit master and stable branches build
+# Set-up google-java-format utility to ~/format/google-java-format
+USER jenkins
+
+ENV GOPATH=/home/jenkins/go
+
+RUN $GOROOT/bin/go get github.com/bazelbuild/bazelisk
+
+ENV PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # Install Bazel
 RUN apt-get update && \
