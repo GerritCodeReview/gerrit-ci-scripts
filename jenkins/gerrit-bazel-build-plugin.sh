@@ -14,11 +14,12 @@ TEST_TARGET=$(grep -2 junit_tests plugins/{name}/BUILD | grep -o 'name = "[^"]*"
 
 . set-java.sh 8
 
-bazel build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+bazelisk version
+bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
 if [ "$TEST_TARGET" != "" ]
 then
-    bazel test --test_env DOCKER_HOST=$DOCKER_HOST plugins/{name}:$TEST_TARGET
+    bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST plugins/{name}:$TEST_TARGET
 fi
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)

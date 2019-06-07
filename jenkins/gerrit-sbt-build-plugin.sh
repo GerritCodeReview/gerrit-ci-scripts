@@ -6,7 +6,8 @@ git read-tree -u --prefix=gerrit gerrit/{branch}
 if [ -f "gerrit/BUILD" ]
 then
   pushd gerrit
-  bazel build api
+  bazelisk version
+  bazelisk build api
   ./tools/maven/api.sh install
   popd
 fi

@@ -33,9 +33,10 @@
           set +x
           echo "Building gitiles webapp master"
           echo '=============================='
-          bazel clean --expunge
-          bazel build //...
-          bazel test //...
+          bazelisk clean --expunge
+          bazelisk version
+          bazelisk build //...
+          bazelisk test //...
     publishers:
       - archive:
          artifacts: 'bazel-bin/gitiles.war'
