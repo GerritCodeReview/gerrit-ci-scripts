@@ -2,6 +2,7 @@ FROM gerritforge/gerrit-ci-slave-buck:debian-stretch
 
 ARG BAZEL_VER
 ARG BUILDIFIER_VER
+ARG BAZELISK_VER
 
 # Install Bazel
 RUN apt-get update && \
@@ -20,5 +21,18 @@ RUN cd /tmp && \
     cp bazel-bin/buildifier/linux_amd64_stripped/buildifier /usr/bin && \
     rm -rf /tmp/buildtools && \
     buildifier --version'
+
+# Install Bazelisk
+RUN cd /tmp && \
+    git clone https://github.com/bazelbuild/bazelisk.git && \
+    cd bazelisk && \
+    git checkout v${BAZELISK_VER} && \
+    bazel build bazelisk && \
+    cp bazel-bin/linux_amd64_stripped/bazelisk /usr/bin && \
+    rm -rf /tmp/bazelisk
+
+# Bazel cache warm-up with Gerrit master and stable branches build
+# Set-up google-java-format utility to ~/format/google-java-format
+USER jenkins
 
 USER root
