@@ -18,13 +18,13 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
 if [[ "$MODE" == *"reviewdb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=OFF"
-  bazel test $BAZEL_OPTS //...
+  bazelisk test $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"notedb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=ON"
-  bazel test $GERRIT_NOTEDB $BAZEL_OPTS //...
+  bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
 if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-3.0" || "$TARGET_BRANCH" == "stable-2.16" || "$TARGET_BRANCH" == "stable-2.15" || "$TARGET_BRANCH" == "stable-2.14" ]]

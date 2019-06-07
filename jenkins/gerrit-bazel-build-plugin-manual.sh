@@ -14,7 +14,7 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 . set-java.sh 8
 
-bazel build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
 do

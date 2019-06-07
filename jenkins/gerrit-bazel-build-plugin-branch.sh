@@ -16,7 +16,7 @@ fi
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 BUILD_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep -v test)
 
-bazel build --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_TARGETS
+bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_TARGETS
 
 if TEST_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep test)
 then
@@ -27,7 +27,7 @@ then
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
-    bazel test $BAZEL_OPTS $TEST_TARGETS
+    bazelisk test $BAZEL_OPTS $TEST_TARGETS
 fi
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
