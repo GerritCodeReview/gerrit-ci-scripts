@@ -23,11 +23,11 @@ cp -Rf bower_components/bootstrap/dist/css/*css src/main/resources/static/css/.
 cp -Rf bower_components/angular/*js src/main/resources/static/js/.
 popd
 
-bazel build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
 if [ "$TEST_TARGET" != "" ]
 then
-    bazel test --test_env DOCKER_HOST=$DOCKER_HOST plugins/account:$TEST_TARGET
+    bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST plugins/account:$TEST_TARGET
 fi
 
 for JAR in $(find bazel-genfiles/plugins/account -name account*.jar)
