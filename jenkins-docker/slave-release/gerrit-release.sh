@@ -38,7 +38,7 @@ git commit -a -m "Set version to $version"
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach git tag -f -s -m "v$version" "v$version"
 
-bazel build release Documentation:searchfree
+bazelisk build release Documentation:searchfree
 ./tools/maven/api.sh install
 
 echo -n "Checking Gerrit version ... "

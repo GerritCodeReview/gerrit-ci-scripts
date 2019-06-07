@@ -7,7 +7,7 @@ then
   . set-java.sh 8
 
   pushd gerrit
-  bazel build api
+  bazelisk build api
   ./tools/maven/api.sh install
   popd
 fi

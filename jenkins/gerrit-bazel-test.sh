@@ -15,14 +15,14 @@ if [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ] || [ "{bra
 then
   echo 'Test in ReviewDb mode'
   echo '----------------------------------------------'
-  bazel test --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
+  bazelisk test --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
 fi
 
 if [ "{branch}" == "master" ] || [ "{branch}" == "stable-3.0" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ]
 then
   echo 'Test in NoteDb mode'
   echo '----------------------------------------------'
-  bazel test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
+  bazelisk test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
 fi
 
 if [ "{branch}" == "master" ] || [ "{branch}" == "stable-3.0" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ] || [ "{branch}" == "stable-2.14" ]
