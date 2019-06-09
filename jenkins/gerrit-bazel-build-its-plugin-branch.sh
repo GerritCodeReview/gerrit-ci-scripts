@@ -10,7 +10,7 @@ git read-tree -u --prefix=plugins/its-{name} origin/{branch}
 # Try first the Gerrit-specific branch of its-base and then fallback to the one of the plugin
 git read-tree -u --prefix=plugins/its-base base/{gerrit-branch} || git read-tree -u --prefix=plugins/its-base base/{branch}
 
-rm -Rf bazel-genfiles
+rm -Rf bazel-bin
 
 if [ -f plugins/its-{name}/external_plugin_deps.bzl ]
 then
@@ -29,12 +29,12 @@ then
     bazel test --test_env DOCKER_HOST=$DOCKER_HOST plugins/its-{name}:$TEST_TARGET
 fi
 
-for JAR in $(find bazel-genfiles/plugins/its-{name} -name its-{name}*.jar)
+for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)
 do
     PLUGIN_VERSION=$(git describe --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
-    DEST_JAR=bazel-genfiles/plugins/its-{name}/$(basename $JAR)
+    DEST_JAR=bazel-bin/plugins/its-{name}/$(basename $JAR)
     [ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
-    echo "$PLUGIN_VERSION" > bazel-genfiles/plugins/its-{name}/$(basename $JAR-version)
+    echo "$PLUGIN_VERSION" > bazel-bin/plugins/its-{name}/$(basename $JAR-version)
 done
