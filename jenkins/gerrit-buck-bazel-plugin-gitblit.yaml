@@ -80,7 +80,7 @@
          !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
-         artifacts: 'bazel-genfiles/plugins/gitblit/*gitblit*.jar*,bazel-genfiles/plugins/gitblit/*gitblit*.json'
+         artifacts: 'bazel-bin/plugins/gitblit/*gitblit*.jar*,bazel-bin/plugins/gitblit/*gitblit*.json'
 
 
 - project:
