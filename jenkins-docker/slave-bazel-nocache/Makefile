@@ -1,6 +1,6 @@
 NO_CACHE=false
 IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache
-BAZEL_VER=0.25.0
+BAZEL_VER=0.26.1
 BUILDIFIER_VER=0.22.0
 BAZELISK_VER=0.0.7
 
