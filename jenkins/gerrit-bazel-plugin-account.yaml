@@ -13,7 +13,7 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/account/account.jar*,bazel-genfiles/plugins/account/account.json
+           bazel-bin/plugins/account/account.jar*,bazel-bin/plugins/account/account.json
 
 - project:
     name: account

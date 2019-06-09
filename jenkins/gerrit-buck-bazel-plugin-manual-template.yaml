@@ -62,4 +62,4 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-genfiles/plugins/{name}/*{name}*.jar*
+           bazel-bin/plugins/{name}/*{name}*.jar*
