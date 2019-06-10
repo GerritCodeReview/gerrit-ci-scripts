@@ -1,0 +1,61 @@
+- job-template:
+    name: 'gatling-git-sbt-{branch}'
+    description: "Gatling Git extension {branch} branch build with Sbt"
+    node: sbt
+    targets: compile test assembly
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://review.gerrithub.io/GerritForge/gatling-git
+
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+
+    triggers:
+      - pollscm:
+          cron: 'H/50 * * * *'
+
+    builders:
+      - shell: |
+         "sbt -no-colors compile test assembly
+         "# Extract version information"
+         "JARS=$(find . -name 'gatling-git*jar')"
+         "for jar in $JARS"
+         "do"
+             "VERSION=$(git describe  --always origin/master)"
+             "echo -e "Implementation-Version: $VERSION" > MANIFEST.MF"
+             "jar ufm $jar MANIFEST.MF && rm MANIFEST.MF"
+             "echo "$VERSION" > $jar-version"
+             "curl -L https://review.gerrithub.io/projects/GerritForge%2Fgatling-git/config | \"
+             "tail -n +2 > $(dirname $jar)/$(basename $jar .jar).json"
+        "done"
+    publishers:
+      - archive:
+         artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json'
+
+- project:
+    name: gatling-git-sbt-{branch}
+    jobs:
+      - 'gatling-git-sbt-{branch}':
+          branch:
+            - master
