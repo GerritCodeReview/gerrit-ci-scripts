@@ -22,6 +22,30 @@
       "revId": "2677dc2a5c3419220641e53246473b7fe35a0460",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e98b9f54_2e8e584a",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-06-10T08:53:05Z",
+      "side": 1,
+      "message": "This is a script to build Gerrit, so it does make sense to have it here IMHO.",
+      "parentUuid": "fb83574f_15c5e5d9",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 8
+      },
+      "revId": "2677dc2a5c3419220641e53246473b7fe35a0460",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
