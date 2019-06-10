@@ -45,7 +45,7 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-bin/plugins/{name}/*{name}*.jar*, bazel-bin/plugins/{name}/{name}.json
+           bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
@@ -69,7 +69,7 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-bin/plugins/{name}/*{name}*.jar*, bazel-bin/plugins/{name}/{name}.json
+           bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
     name: 'module-{name}-bazel-{branch}'
@@ -95,4 +95,4 @@
     publishers:
       - archive:
          artifacts: >
-           bazel-bin/plugins/{name}/*{name}*.jar*, bazel-bin/plugins/{name}/{name}.json
+           bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
