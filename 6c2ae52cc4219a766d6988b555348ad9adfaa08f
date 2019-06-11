@@ -22,6 +22,30 @@
       "revId": "6c2ae52cc4219a766d6988b555348ad9adfaa08f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c87ce41_983d86c3",
+        "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-prometheus.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2019-06-11T13:36:48Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "dca1ea44_d82c4cad",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "6c2ae52cc4219a766d6988b555348ad9adfaa08f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
