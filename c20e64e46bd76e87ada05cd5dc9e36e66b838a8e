@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "935fa609_c8a22f1a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-06-12T21:15:01Z",
+      "side": 1,
+      "message": "Right now this doesn\u0027t work. If we submit this as is, rebuild the CI image and run the `bazel test polygerrit-ui/...` this would just fail. I tried this in context of this PR: [1]. The error log is here: [2]\n\n* [1] https://github.com/bazelbuild/continuous-integration/pull/720\n* [2] http://paste.openstack.org/show/752839",
+      "revId": "c20e64e46bd76e87ada05cd5dc9e36e66b838a8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ab996097_5e17cb92",
         "filename": "jenkins-docker/slave-node-wct/Dockerfile",
         "patchSetId": 1
