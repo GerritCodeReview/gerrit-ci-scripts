@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3f8cec68_d491e56c",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-24T12:50:29Z",
+      "side": 1,
+      "message": "That would be a good idea for the test instance, but not for the production instance, where we want to be somewhat more sure what the contents of the image we use are, which we have when we pull the image from the repository. Otherwise we would for example run into those plugin-issues from time to time, because the image is rebuilt.",
+      "parentUuid": "3dd8058e_f5ee8943",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 39
+      },
+      "revId": "35aaf4db0dd1ccbcae9d39701e6e56a1440da4a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "786c0e99_f7844e0c",
         "filename": "jenkins-docker/docker-compose.yml",
         "patchSetId": 7
@@ -36,6 +60,30 @@
       "writtenOn": "2019-06-14T21:50:39Z",
       "side": 1,
       "message": "This means that the container ports are exposed externally without mapping: is that strictly needed? It could expose some security holes :-(",
+      "range": {
+        "startLine": 7,
+        "startChar": 18,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "35aaf4db0dd1ccbcae9d39701e6e56a1440da4a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c119ecc7_185ea00e",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-24T12:50:29Z",
+      "side": 1,
+      "message": "We also use it in the Makefile for running the master. IIRC this was required to access docker. Let me check that. Otherwise, a docker network would certainly be the better solution.",
+      "parentUuid": "786c0e99_f7844e0c",
       "range": {
         "startLine": 7,
         "startChar": 18,
