@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "51fc8ed2_b6c8e20d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-24T12:22:07Z",
+      "side": 1,
+      "message": "I can do that, but actually I only saw this on the test system, since this is only an issue with buck-based builds, which didn\u0027t run for a long time on the CI. And since the configuration for docker is different on the production system, it may be that this issue does not occur there at all. Thus, opening a bug might be confusing since I can\u0027t post any jobs on the production system, which aren\u0027t working.\nTo reproduce it try to start the plugin-gitiles-stable-2.13 build. It should not start, since it can\u0027t find a suitable node (at least with the configuration as in the project).\nAnyway, this is less relevant in the meantime, since we stopped most builds using buck (except stable-2.13).",
+      "parentUuid": "f70ee899_ca484f13",
+      "range": {
+        "startLine": 12,
+        "startChar": 28,
+        "endLine": 13,
+        "endChar": 30
+      },
+      "revId": "a39a31dddf135280c0c51ca849796a8470aace6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d63b6057_32f58ecd",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2019-06-14T21:55:10Z",
       "side": 1,
       "message": "This would cause also the jobs that would normally go on the master to be potentially executed by a slave, which isn\u0027t what we want.",
+      "range": {
+        "startLine": 54,
+        "startChar": 16,
+        "endLine": 54,
+        "endChar": 22
+      },
+      "revId": "a39a31dddf135280c0c51ca849796a8470aace6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c08f130d_ddce8c9a",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-24T12:22:07Z",
+      "side": 1,
+      "message": "Ok, then we should make sure that all those jobs are confined to run on master by setting `node: master`, as it is already done for some jobs, but missing for example for `Gerrit-verifier-flow`.\nAlternatively, we could add the `node: bazel-debian`-option to all jobs that do not have it yet (all jobs using buck) and leave the config untouched.\nWDYT?",
+      "parentUuid": "d63b6057_32f58ecd",
       "range": {
         "startLine": 54,
         "startChar": 16,
