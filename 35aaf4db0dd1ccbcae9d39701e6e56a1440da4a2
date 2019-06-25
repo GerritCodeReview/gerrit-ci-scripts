@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "63f05557_1e322027",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-06-25T05:59:49Z",
+      "side": 1,
+      "message": "True, we should then start including also a \"version number\" from a git describe of the gerrit-ci HEAD.",
+      "parentUuid": "3f8cec68_d491e56c",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 39
+      },
+      "revId": "35aaf4db0dd1ccbcae9d39701e6e56a1440da4a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "786c0e99_f7844e0c",
         "filename": "jenkins-docker/docker-compose.yml",
         "patchSetId": 7
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "We also use it in the Makefile for running the master. IIRC this was required to access docker. Let me check that. Otherwise, a docker network would certainly be the better solution.",
       "parentUuid": "786c0e99_f7844e0c",
+      "range": {
+        "startLine": 7,
+        "startChar": 18,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "35aaf4db0dd1ccbcae9d39701e6e56a1440da4a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7777d541_2a051d9f",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-06-25T05:59:49Z",
+      "side": 1,
+      "message": "Yes, I would use a docker network instead. Host mode is highly dangerous from a security standpoint.",
+      "parentUuid": "c119ecc7_185ea00e",
       "range": {
         "startLine": 7,
         "startChar": 18,
