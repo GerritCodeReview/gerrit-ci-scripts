@@ -49,6 +49,45 @@
 
          excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
 
+- defaults:
+    name: gerrit-bazel-defaults
+    node: bazel-debian
+    properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+         basedir: gerrit
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build.sh
+      - shell:
+         !include-raw: gerrit-bazel-test.sh
+      - shell:
+         !include-raw-escape: gerrit-bazel-cat-test-log.sh
+      - shell:
+         !include-raw: gerrit-deploy-api.sh
+    publishers:
+      - archive:
+         artifacts: >
+           gerrit/bazel-bin/*.war,gerrit/bazel-bin/plugins/*/*.jar,
+           gerrit/bazel-bin/*api/*api.jar,
+           gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
+
+         excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
+
 - job-template:
     name: 'Gerrit-{branch}'
     project-type: flow
@@ -113,7 +152,7 @@
 - job-template:
     name: 'Gerrit-bazel-{branch}'
     description: "{name} {branch} branch build with Bazel\n"
-    node: bazel-debian
+    defaults: gerrit-bazel-defaults
     wrappers:
       - timeout:
           timeout: 90
@@ -131,42 +170,34 @@
           shutdown-with-build: false
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    properties:
-       - build-discarder:
-           days-to-keep: 20
-           artifact-days-to-keep: 20
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-    scm:
-      - git:
-         url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
-         basedir: gerrit
 
-    builders:
-      - shell:
-         !include-raw: gerrit-bazel-build.sh
-      - shell:
-         !include-raw: gerrit-bazel-test.sh
-      - shell:
-         !include-raw-escape: gerrit-bazel-cat-test-log.sh
-      - shell:
-         !include-raw: gerrit-deploy-api.sh
-    publishers:
-      - archive:
-         artifacts: >
-           gerrit/bazel-bin/*.war,gerrit/bazel-bin/plugins/*/*.jar,
-           gerrit/bazel-bin/*api/*api.jar,
-           gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
-
-         excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
+- job-template:
+    name: 'Gerrit-bazel-java11-{branch}'
+    description: "{name} {branch} branch build with Bazel and Java 11\n"
+    defaults: gerrit-bazel-defaults
+    wrappers:
+      - timeout:
+          timeout: 90
+          type: absolute
+          fail: false
+      - timestamps
+      - xvfb:
+          installation-name: Xvfb
+          display-name: 1
+          parallel-build: false
+          timeout: 30
+          screen: 1024x768x16
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11
+                       --javabase=@bazel_tools//tools/jdk:remote_jdk11
+                       --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
+                       --java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
     name: Gerrit-buck
@@ -186,6 +217,13 @@
       - stable-2.14
     jobs:
       - 'Gerrit-bazel-{branch}'
+
+- project:
+    name: Gerrit-bazel-java11
+    branch:
+      - stable-3.0
+    jobs:
+      - 'Gerrit-bazel-java11-{branch}'
 
 - project:
     name: Gerrit-build-flow
