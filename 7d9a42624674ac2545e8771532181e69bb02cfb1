@@ -105,6 +105,24 @@
     },
     {
       "key": {
+        "uuid": "91bb8200_92e4108a",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-06-26T15:00:37Z",
+      "side": 1,
+      "message": "The productive instance of the gerrit-ci currently uses Digicert.",
+      "parentUuid": "00a13a65_7cec05ef",
+      "revId": "7d9a42624674ac2545e8771532181e69bb02cfb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d36859cc_d693495c",
         "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
         "patchSetId": 9
