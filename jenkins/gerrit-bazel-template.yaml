@@ -19,7 +19,23 @@
            recursive: true
          skip-tag: true
          basedir: gerrit
-
+    wrappers:
+      - timeout:
+          timeout: 90
+          type: absolute
+          fail: false
+      - timestamps
+      - xvfb:
+          installation-name: Xvfb
+          display-name: 1
+          parallel-build: false
+          timeout: 30
+          screen: 1024x768x16
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     builders:
       - shell:
          !include-raw: gerrit-bazel-build.sh
@@ -76,23 +92,23 @@
     description: "{name} {branch} branch build with Bazel\n"
     defaults: gerrit-bazel-defaults
     node: bazel-debian
-    wrappers:
-      - timeout:
-          timeout: 90
-          type: absolute
-          fail: false
-      - timestamps
-      - xvfb:
-          installation-name: Xvfb
-          display-name: 1
-          parallel-build: false
-          timeout: 30
-          screen: 1024x768x16
-          additional-options: -fbdir /tmp
-          debug: true
-          shutdown-with-build: false
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+
+- job-template:
+    name: 'Gerrit-bazel-java11-{branch}'
+    description: "{name} {branch} branch build with Bazel and Java 11\n"
+    defaults: gerrit-bazel-defaults
+    properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+       - inject:
+           properties-content: |
+             BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11 --javabase=@bazel_tools//tools/jdk:remote_jdk11 --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11 --java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
     name: Gerrit-bazel
@@ -104,6 +120,13 @@
       - stable-2.14
     jobs:
       - 'Gerrit-bazel-{branch}'
+
+- project:
+    name: Gerrit-bazel-java11
+    branch:
+      - master
+    jobs:
+      - 'Gerrit-bazel-java11-{branch}'
 
 - project:
     name: Gerrit-build-flow
