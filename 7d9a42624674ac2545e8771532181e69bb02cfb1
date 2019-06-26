@@ -1,0 +1,147 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d61a6945_7290df15",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2019-06-26T13:30:11Z",
+      "side": 1,
+      "message": "I guess you mean redirects ?",
+      "range": {
+        "startLine": 21,
+        "startChar": 20,
+        "endLine": 21,
+        "endChar": 28
+      },
+      "revId": "7d9a42624674ac2545e8771532181e69bb02cfb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c00086d9_a8d3da19",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2019-06-26T13:30:11Z",
+      "side": 1,
+      "message": "could we use the same port for anonymous access and client-certificate based access ?",
+      "revId": "7d9a42624674ac2545e8771532181e69bb02cfb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "18277785_54e40fe3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2019-06-26T13:30:11Z",
+      "side": 1,
+      "message": "certificate\u0027s",
+      "range": {
+        "startLine": 29,
+        "startChar": 6,
+        "endLine": 29,
+        "endChar": 18
+      },
+      "revId": "7d9a42624674ac2545e8771532181e69bb02cfb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f0bd7ba_abf67b29",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2019-06-26T13:30:11Z",
+      "side": 1,
+      "message": "these",
+      "range": {
+        "startLine": 38,
+        "startChar": 74,
+        "endLine": 39,
+        "endChar": 9
+      },
+      "revId": "7d9a42624674ac2545e8771532181e69bb02cfb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "00a13a65_7cec05ef",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2019-06-26T13:30:11Z",
+      "side": 1,
+      "message": "we could use Letsencrypt",
+      "revId": "7d9a42624674ac2545e8771532181e69bb02cfb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d36859cc_d693495c",
+        "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2019-06-26T13:30:11Z",
+      "side": 1,
+      "message": "see comments above",
+      "revId": "7d9a42624674ac2545e8771532181e69bb02cfb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5c747468_360ff967",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2019-06-26T13:30:11Z",
+      "side": 1,
+      "message": "I would disallow these deprecated insecure protocols\n\nTake a look here [1] for a recommended secure nginx configuration and hardening recommendations in [2]. I would suggest to run SSL Lab Tests [3] when this is set up in order to verify nginx configuration is secure.\n\n[1] https://cipherli.st/\n[2] https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html\nhttps://www.owasp.org/index.php/SCG_WS_nginx\n[3] https://www.ssllabs.com/ssltest/analyze.html?d\u003dcipherli.st",
+      "range": {
+        "startLine": 15,
+        "startChar": 34,
+        "endLine": 15,
+        "endChar": 46
+      },
+      "revId": "7d9a42624674ac2545e8771532181e69bb02cfb1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
