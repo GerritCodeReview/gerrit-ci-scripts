@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y wget software-properties-common default
 COPY set-java.sh /usr/bin/
 
 RUN apt-get update && apt-get install -y \
-    maven \
     openssh-server \
     curl \
     git-core \
@@ -28,6 +27,12 @@ RUN apt-get update && apt-get install -y \
     vim \
     gettext-base \
     && rm -rf /var/lib/apt/lists/*
+
+ADD http://www-eu.apache.org/dist/maven/maven-3/$MAVEN_VER/binaries/apache-maven-$MAVEN_VER-bin.tar.gz /usr/local
+
+RUN cd /usr/local && \
+    tar xfz apache-maven-$MAVEN_VER-bin.tar.gz && \
+    cd bin && ln -s ../apache-maven-$MAVEN_VER/bin/* .
 
 RUN useradd jenkins -d /home/jenkins -m -s /bin/bash
 RUN mkdir /home/jenkins/.ssh
