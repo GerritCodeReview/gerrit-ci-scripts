@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-buck:debian-stretch
+FROM gerritforge/gerrit-ci-slave-node-wct:$NODE_VER-$WCT_VER
 
 ARG BAZEL_VER
 ARG BUILDIFIER_VER
