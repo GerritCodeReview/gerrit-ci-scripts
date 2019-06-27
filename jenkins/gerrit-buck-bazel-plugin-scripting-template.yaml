@@ -35,18 +35,6 @@
           cron: 'H/50 * * * *'
 
 - job-template:
-    name: 'plugin-scripting-{name}-{branch}'
-    description: "Plugin scripting/{name} {branch} branch build with BUCK\n"
-    defaults: plugin-scripting-template
-    builders:
-      - shell:
-         !include-raw: gerrit-buck-build-plugin.sh
-    publishers:
-      - archive:
-         artifacts: >
-           buck-out/gen/plugins/{name}/{name}.jar*
-
-- job-template:
     name: 'plugin-scripting-{name}-bazel-{branch}'
     description: "Plugin scripting/{name}/{branch} Bazel build for Gerrit\n"
     defaults: plugin-scripting-template

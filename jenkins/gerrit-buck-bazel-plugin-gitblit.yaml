@@ -1,7 +1,6 @@
 - defaults:
     name: 'plugin-gitblit'
     description: "GitBlit plugin {branch} branch build with BUCK\n"
-    defaults: buck-plugin
     wrappers:
       - timeout:
           timeout: 30

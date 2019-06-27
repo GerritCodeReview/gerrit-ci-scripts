@@ -41,18 +41,6 @@
          skip-tag: true
 
 - job-template:
-    name: 'pluginmanual-{name}-{branch}'
-    description: "Plugin {name} {branch} manual branch build with BUCK\n"
-    defaults: pluginmanual-template
-    builders:
-      - shell:
-         !include-raw: gerrit-buck-build-plugin-manual.sh
-    publishers:
-      - archive:
-         artifacts: >
-           buck-out/gen/plugins/{name}/*{name}*.jar*,
-
-- job-template:
     name: 'pluginmanual-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} manual branch build with Bazel\n"
     defaults: pluginmanual-template
