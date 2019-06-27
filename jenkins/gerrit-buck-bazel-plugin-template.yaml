@@ -34,19 +34,6 @@
       - pollscm:
           cron: 'H/50 * * * *'
 
-
-- job-template:
-    name: 'plugin-{name}-{branch}'
-    description: "Plugin {name} {branch} branch build with BUCK\n"
-    defaults: plugin-template
-    builders:
-      - shell:
-         !include-raw: gerrit-buck-build-plugin.sh
-    publishers:
-      - archive:
-         artifacts: >
-           buck-out/gen/plugins/{name}/*{name}*.jar*,
-
 - job-template:
     name: 'plugin-{name}-bazel-{branch}'
     description: "Plugin {name} {branch} branch build with Bazel\n"
@@ -87,4 +74,3 @@
       - stable-2.16
       - stable-2.15
       - stable-2.14
-      - stable-2.13

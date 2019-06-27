@@ -41,8 +41,6 @@ Images available are:
 
 * gerritforge/gerrit-ci-slave-debian: Base Jenkins slave with OS and prerequisites.
 
-* gerritforge/gerrit-ci-slave-buck: Buck build for older Gerrit until 2.13
-
 * gerritforge/gerrit-ci-slave-bazel: Bazel build for gerrit 2.14+.
 
 * gerritforge/gerrit-ci-slave-bazel-sbt: Setups scala for plugins that use scala.
