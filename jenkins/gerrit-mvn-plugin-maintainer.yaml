@@ -3,7 +3,6 @@
     repo: maintainer
     branch:
       - master
-      - stable-2.13
     jobs:
       - 'plugin-{repo}-mvn-{branch}'
 
