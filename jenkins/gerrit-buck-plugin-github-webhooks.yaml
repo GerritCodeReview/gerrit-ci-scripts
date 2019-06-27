@@ -1,7 +1,0 @@
-- project:
-    name: github-webhooks
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-{branch}'
-

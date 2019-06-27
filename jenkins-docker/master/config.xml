@@ -197,7 +197,7 @@
           </default>
           <int>1</int>
           <string>PATH</string>
-          <string>/var/lib/jenkins/buck/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin</string>
+          <string>/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin</string>
         </tree-map>
       </envVars>
     </hudson.slaves.EnvironmentVariablesNodeProperty>

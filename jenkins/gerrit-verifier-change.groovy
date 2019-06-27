@@ -140,7 +140,7 @@ class GerritCheck {
   Object build
 
   GerritCheck(name, changeNum, sha1, build) {
-    this.uuid = "gerritforge:" + name.replaceAll("(buck/|bazel/)", "") + Globals.gerritRepositoryNameSha1Suffix
+    this.uuid = "gerritforge:" + name.replaceAll("(bazel/)", "") + Globals.gerritRepositoryNameSha1Suffix
     this.changeNum = changeNum
     this.sha1 = sha1
     this.build = build
@@ -351,9 +351,7 @@ def buildChange(change) {
   runSh(cwd, 'git config user.email "jenkins@gerritforge.com"')
   runSh(cwd, 'git merge --no-commit --no-edit --no-ff FETCH_HEAD')
 
-  if(new java.io.File("$cwd/BUCK").exists()) {
-    tools += ["buck"]
-  } else if(new java.io.File("$cwd/BUILD").exists()) {
+  if(new java.io.File("$cwd/BUILD").exists()) {
     tools += ["bazel"]
   }
 

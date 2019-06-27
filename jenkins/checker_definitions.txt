@@ -16,7 +16,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "name": "ReviewDb Build/Tests",
     "description": "Using ReviewDb, builds the code base and executes unit/integration tests",
     "repository": "gerrit",
-    "query": "branch:stable-2.13 OR branch:stable-2.14 OR branch:stable-2.15 OR branch:stable-2.16",
+    "query": "branch:stable-2.14 OR branch:stable-2.15 OR branch:stable-2.16",
     "blocking": []
   }
 

@@ -1,8 +1,0 @@
-- project:
-    name: slack-integration-mvn
-    repo: slack-integration
-    branch:
-      - stable-2.13
-    jobs:
-      - 'plugin-{repo}-mvn-{branch}'
-
