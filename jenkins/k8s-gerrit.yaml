@@ -1,0 +1,45 @@
+- job:
+    name: k8s-gerrit-release
+    description: Builds and optionally publishes container images for k8s-gerrit
+    project-type: pipeline
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    properties:
+      - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    parameters:
+      - bool:
+          name: PUBLISH
+          description: Whether to publish the images to the container registry.
+          default: false
+      - string:
+          name: REGISTRY_URL
+          description: URL of the container registry.
+          default: https://index.docker.io/v1/
+      - string:
+          name: CREDENTIAL_ID
+          description: >
+            ID of the username-password credentials for the container registry.
+          default: dockerhub
+    sandbox: true
+    pipeline-scm:
+      scm:
+        - git:
+          url: https://gerrit.googlesource.com/k8s-gerrit
+          branches:
+            - master
+          skip-tag: true
+
+
+- project:
+    name: k8s-gerrit
+    jobs:
+      - 'k8s-gerrit-release'
