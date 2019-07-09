@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "006638b6_189a6e32",
+        "filename": "jenkins/gerrit-buck-bazel-plugin-replication.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-07-09T13:09:18Z",
+      "side": 1,
+      "message": "This isn\u0027t needed anymore.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "e6af018348a7a3e1d1b0644321632013a659fbce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
