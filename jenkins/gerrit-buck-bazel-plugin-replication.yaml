@@ -8,3 +8,8 @@
           branch:
             - master
             - stable-2.14
+      - 'plugin-{name}-gerritforge-bazel-{branch}':
+          branch:
+            - stable-3.0
+          gerrit-branch:
+            - stable-3.0
