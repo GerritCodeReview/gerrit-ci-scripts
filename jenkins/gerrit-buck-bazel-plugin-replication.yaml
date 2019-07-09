@@ -8,3 +8,9 @@
           branch:
             - master
             - stable-2.14
+      - 'plugin-{name}-gerritforge-{branch}':
+          targets: 'plugins/replication'
+          branch:
+            - stable-3.0
+          gerrit-branch:
+            - stable-3.0
