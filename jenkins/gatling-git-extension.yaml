@@ -36,17 +36,8 @@
           cron: 'H/50 * * * *'
 
     builders:
-      - shell: |
-         sbt -no-colors compile test assembly
-         # Extract version information
-         JARS=$(find . -name 'gatling-git*jar')
-         for jar in $JARS
-         do
-             VERSION=$(git describe  --always origin/master)
-             echo -e "Implementation-Version: $VERSION" > MANIFEST.MF
-             jar ufm $jar MANIFEST.MF && rm MANIFEST.MF
-             echo "$VERSION" > $jar-version
-         done
+      - shell:
+         !include-raw: gerrit-sbt-build-app.sh
     publishers:
       - archive:
          artifacts: '**/target/**/gatling-git-assembly*.jar*'
