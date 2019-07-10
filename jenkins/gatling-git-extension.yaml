@@ -49,7 +49,7 @@
          done
     publishers:
       - archive:
-         artifacts: '**/target/**/gatling-git-assembly*.jar*'
+         artifacts: '**/target/**/gatling-git-extension.jar*'
 
 - project:
     name: gatling-git-sbt-{branch}
