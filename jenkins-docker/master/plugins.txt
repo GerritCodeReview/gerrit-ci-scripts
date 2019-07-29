@@ -53,6 +53,7 @@ mailer:1.21
 mask-passwords:2.12.0
 matrix-auth:2.2
 matrix-project:1.13
+mercurial:2.6
 momentjs:1.1.1
 monitoring:1.73.0
 pipeline-build-step:2.7
