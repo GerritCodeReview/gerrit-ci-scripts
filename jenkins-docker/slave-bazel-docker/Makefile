@@ -1,16 +1,28 @@
+include ../chrome-vers.mk
+
 NO_CACHE=false
 IMAGE=gerritforge/gerrit-ci-slave-bazel-docker:debian-stretch
 
 # Targets
 
 build:
-	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
+	@for chrome_ver in $(CHROME_VERS); \
+        do \
+		cat Dockerfile | CHROME_VER=$$chrome_ver envsubst > Dockerfile-subst ; \
+		docker build -f Dockerfile-subst --no-cache=$(NO_CACHE) -t ${IMAGE}-$$chrome_ver . ; \
+	done
 
 publish:
-	docker push ${IMAGE}
+	@for chrome_ver in $(CHROME_VERS); \
+        do \
+		docker push ${IMAGE}-$$chrome_ver ; \
+	done
 
 clean:
-	docker rmi -f ${IMAGE}
+	@for chrome_ver in $(CHROME_VERS); \
+        do \
+		docker rmi -f ${IMAGE}-$$chrome_ver ; \
+	done
 
 .PHONY: clean image publish
 
