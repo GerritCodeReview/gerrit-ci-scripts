@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache
+FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache-80.0.3987.149
 
 RUN apt-get update && \
     apt-get install -y gnupg2 && \

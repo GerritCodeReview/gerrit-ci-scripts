@@ -1,29 +1,29 @@
+include ../chrome-vers.mk
+
 NO_CACHE ?= false
 DEBIAN_VER ?= stretch
-CHROME_VER ?= 69.0.3497.92
-IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)-$(CHROME_VER)
+IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)
 
-build: build_stretch
+build: Makefile Dockerfile
+	@for chrome_ver in $(CHROME_VERS); \
+	do \
+		echo "Building Docker for $(DEBIAN_VER) / Chrome v$$chrome_ver"; \
+		echo "========================================================"; \
+		cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$$chrome_ver envsubst > Dockerfile-$(DEBIAN_VER)-$$chrome_ver; \
+		docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$$chrome_ver -t "$(IMAGE)-$$chrome_ver" .;  \
+	done
 
-publish: publish_stretch
+publish:
+	for chrome_ver in $(CHROME_VERS); \
+	do \
+		docker push $(IMAGE)-$$chrome_ver; \
+	done
 
-clean: clean_stretch
+clean:
+	for chrome_ver in $(CHROME_VERS); \
+	do \
+		docker rmi -f $(IMAGE)-$$chrome_ver; \
+	done
 
-build_stretch publish_stretch clean_stretch: DEBIAN_VER=stretch
-
-publish_stretch: build_stretch
-
-build_stretch: Makefile Dockerfile
-	@echo "Building Docker for $(DEBIAN_VER) / Chrome v$(CHROME_VER)"
-	@echo "==================================================="
-	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$(CHROME_VER) envsubst > Dockerfile-$(DEBIAN_VER)-$(CHROME_VER)
-	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$(CHROME_VER) -t $(IMAGE) .
-
-publish_stretch:
-	docker push $(IMAGE)
-
-clean_stretch:
-	docker rmi -f $(IMAGE)
-
-.PHONY: clean stretch
+.PHONY: build publish clean
 
