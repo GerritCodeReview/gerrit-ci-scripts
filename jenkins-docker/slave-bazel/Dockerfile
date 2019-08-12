@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache
+FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache-$CHROME_VER
 
 # Bazel cache warm-up with Gerrit master and latest stable branch.
 # Set-up google-java-format utility to ~/format/google-java-format.

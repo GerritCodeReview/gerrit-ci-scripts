@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch
+FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch-80.0.3987.149
 
 USER jenkins
 
