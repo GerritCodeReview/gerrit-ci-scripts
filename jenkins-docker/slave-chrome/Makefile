@@ -1,6 +1,6 @@
 NO_CACHE ?= false
 DEBIAN_VER ?= stretch
-CHROME_VER ?= 69.0.3497.92
+CHROME_VER ?= 80.0.3987.149
 IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)-$(CHROME_VER)
 
 build: build_stretch
