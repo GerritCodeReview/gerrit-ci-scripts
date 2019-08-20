@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 git checkout gerrit/{branch}
+git submodule update --init
 rm -rf plugins/{name}
 git fetch https://gerrit.googlesource.com/plugins/{name} $REFS_CHANGE
 git read-tree -u --prefix=plugins/{name} FETCH_HEAD
