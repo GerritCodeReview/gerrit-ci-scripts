@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-git checkout -f gerrit/{branch}
+git checkout -fb {branch} gerrit/{branch}
+git submodule update --init gerrit/{branch}
 rm -rf plugins/{name}
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 
