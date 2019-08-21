@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f9646db0_d1245087",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-08-21T07:32:08Z",
+      "side": 1,
+      "message": "These jobs fail now with the error:\n\n  + git checkout -fb stable-3.0 gerrit/stable-3.0\n  fatal: Cannot update paths and switch to branch \u0027stable-3.0\u0027 at the same time.\n  Did you intend to checkout \u0027gerrit/stable-3.0\u0027 which can not be resolved as commit?\n  Build step \u0027Execute shell\u0027 marked build as failure\n  Archiving artifacts\n  Finished: FAILURE",
+      "revId": "981bc161a2c5873bad4b653fa3ec8f9d10325be4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
