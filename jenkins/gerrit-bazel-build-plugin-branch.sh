@@ -5,8 +5,7 @@
 echo "Building plugin {name}/{branch} with Gerrit/{gerrit-branch}"
 
 git remote add gerrit https://gerrit.googlesource.com/gerrit
-git checkout -fb {gerrit-branch} gerrit/{gerrit-branch}
-git submodule update --init
+git fetch gerrit {gerrit-branch} && git checkout -f FETCH_HEAD
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 
 if [ -f plugins/{name}/external_plugin_deps.bzl ]
