@@ -1,0 +1,3 @@
+- defaults:
+    name: buck-plugin
+    targets: 'plugins/{name}:{name}'

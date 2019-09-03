@@ -2,6 +2,9 @@
     name: plugin-manager
     targets: 'plugins/plugin-manager plugins/plugin-manager:plugin_manager_tests'
     jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - stable-2.13
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - stable-2.16

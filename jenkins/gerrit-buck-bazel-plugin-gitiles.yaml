@@ -1,6 +1,12 @@
 - project:
     name: gitiles
     jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - stable-2.13
+      - 'pluginmanual-{name}-{branch}':
+          branch:
+            - stable-2.13
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - stable-2.16

@@ -1,3 +1,54 @@
+- defaults:
+    name: gerrit-buck-defaults
+    wrappers:
+      - timeout:
+          timeout: 90
+          type: absolute
+          fail: false
+      - timestamps
+      - xvfb:
+          installation-name: Xvfb
+          display-name: 1
+          parallel-build: false
+          timeout: 30
+          screen: 1024x768x16
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+         basedir: gerrit
+
+    builders:
+      - shell:
+         !include-raw: gerrit-buck-build.sh
+      - shell:
+         !include-raw: gerrit-buck-test.sh
+    publishers:
+      - archive:
+         artifacts: >
+           gerrit/buck-out/gen/*.war,gerrit/buck-out/gen/plugins/*/*.jar,gerrit/buck-out/gen/*api/*api.jar,
+           gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
+
+         excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
+
 - job-template:
     name: 'Gerrit-{branch}'
     project-type: flow
@@ -27,10 +78,37 @@
              - job-extended-read
     dsl: |
       retries = 3
-      type = 'bazel'
+      type = '{branch}' in ['master', 'stable-3.0', 'stable-2.16', 'stable-2.15', 'stable-2.14'] ? 'bazel' : 'buck'
       parallel (
         {{ retry ( retries ) {{ build( "Gerrit-$type-{branch}" ) }} }}
       )
+
+- job-template:
+    name: 'Gerrit-buck-{branch}'
+    description: "{name} {branch} branch build with Buck\n"
+    defaults: gerrit-buck-defaults
+
+- job:
+    name: Gerrit-buck-stable-2.9
+    description: "Gerrit 2.9 branch build with Buck\n"
+    defaults: gerrit-buck-defaults
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/stable-2.9
+         submodule:
+           recursive: true
+         skip-tag: true
+         basedir: gerrit
+    triggers:
+      - pollscm:
+          cron: 'H/10 * * * *'
+    builders:
+      - shell:
+         !include-raw: gerrit-buck-build.sh
+      - shell:
+         !include-raw: gerrit-buck-test-2.9.sh
 
 - job-template:
     name: 'Gerrit-bazel-{branch}'
@@ -91,6 +169,14 @@
          excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
 
 - project:
+    name: Gerrit-buck
+    branch:
+      - stable-2.13
+    jobs:
+      - 'Gerrit-buck-{branch}'
+
+
+- project:
     name: Gerrit-bazel
     branch:
       - master
@@ -109,6 +195,7 @@
       - stable-2.16
       - stable-2.15
       - stable-2.14
+      - stable-2.13
     jobs:
       - 'Gerrit-{branch}'
 

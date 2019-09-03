@@ -102,6 +102,28 @@
       - groovy-postbuild:
           script: "(manager.logContains('timed out') || manager.logContains('TIMEOUT in ')) ? manager.buildAborted() : false"
 
+
+- job:
+    name: Gerrit-verifier-buck
+    description: "Gerrit build of open change with BUCK\n"
+    defaults: verifier-defaults
+
+    builders:
+      - merge-target-branch
+      - fetch-all-submodules
+      - shell:
+         !include-raw-escape: gerrit-buck-build.sh
+      - shell:
+         !include-raw-escape: gerrit-buck-verifier-test.sh
+
+    publishers:
+      - archive:
+          artifacts: >
+            gerrit/buck-out/gen/*.war,gerrit/buck-out/gen/plugins/*/*.jar,gerrit/buck-out/gen/*api/*api.jar,
+            gerrit/buck-out/gen/gerrit-acceptance-framework/*.jar
+
+          excludes: 'gerrit/buck-out/gen/plugins/core*/**/*.jar'
+
 - job:
     name: Gerrit-verifier-bazel
     description: "Gerrit build of open change with Bazel\n"

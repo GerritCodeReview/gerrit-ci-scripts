@@ -1,6 +1,9 @@
 - project:
     name: groovy-provider
     jobs:
+      - 'plugin-scripting-{name}-{branch}':
+          branch:
+            - stable-2.13
       - 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master

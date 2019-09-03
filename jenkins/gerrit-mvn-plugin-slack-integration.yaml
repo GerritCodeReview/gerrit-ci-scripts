@@ -1,8 +1,7 @@
 - project:
-    name: maintainer-mvn
-    repo: maintainer
+    name: slack-integration-mvn
+    repo: slack-integration
     branch:
-      - master
       - stable-2.13
     jobs:
       - 'plugin-{repo}-mvn-{branch}'

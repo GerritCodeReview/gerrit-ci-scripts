@@ -13,6 +13,14 @@
 - project:
     name: javamelody
     jobs:
+      - 'plugin-{name}-{branch}':
+          branch:
+            - stable-2.13
+          targets: >
+            plugins/javamelody:javamelody-nodep
+            plugins/javamelody:javamelody-deps
+            plugins/javamelody:javamelody-datasource-interceptor
+            plugins/javamelody:javamelody \
       - 'plugin-javamelody-bazel-{branch}':
           branch:
             - stable-2.14
