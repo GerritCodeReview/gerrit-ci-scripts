@@ -27,7 +27,7 @@ RUN cd /tmp && \
     git clone https://github.com/bazelbuild/bazelisk.git && \
     cd bazelisk && \
     git checkout v${BAZELISK_VER} && \
-    bazel build bazelisk && \
+    bazel build --stamp --workspace_status_command=`pwd`/stamp.sh --platforms=@io_bazel_rules_go//go/toolchain:linux_amd64 //:bazelisk && \
     cp bazel-bin/linux_amd64_stripped/bazelisk /usr/bin && \
     rm -rf /tmp/bazelisk
 
