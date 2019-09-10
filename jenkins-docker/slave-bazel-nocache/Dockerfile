@@ -5,8 +5,10 @@ ARG BUILDIFIER_VER
 ARG BAZELISK_VER
 
 # Install Bazel
+# Exception from the rule and should be removed afer switch to regular release.
+# URL: https://releases.bazel.build/1.0.0/rc2/bazel_1.0.0rc2-linux-x86_64.deb
 RUN apt-get update && \
-    wget -O /tmp/bazel_${BAZEL_VER}-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VER}/bazel_${BAZEL_VER}-linux-x86_64.deb && \
+    wget -O /tmp/bazel_${BAZEL_VER}-linux-x86_64.deb https://releases.bazel.build/1.0.0/rc2/bazel_${BAZEL_VER}-linux-x86_64.deb && \
     (dpkg -i /tmp/bazel_${BAZEL_VER}-linux-x86_64.deb; apt-get install -f -y) && \
     rm /tmp/bazel_${BAZEL_VER}-linux-x86_64.deb && \
     bash -c '. set-java.sh 8 && bazel version'
