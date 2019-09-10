@@ -69,8 +69,10 @@ pipeline-stage-step:2.3
 pipeline-stage-tags-metadata:1.2
 pipeline-stage-view:2.10
 plain-credentials:1.4
+pubsub-light:1.12
 scm-api:2.2.7
 script-security:1.44
+sse-gateway:1.19
 ssh-credentials:1.14
 ssh-slaves:1.26
 structs:1.14
