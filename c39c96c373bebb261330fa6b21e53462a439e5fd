@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "822e8e63_9b618cb6",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-10T20:46:11Z",
+      "side": 1,
+      "message": "Turns out, that local bazel version is almost unused on the CI docker image, except that building Buildifier and Bazelisk itself from source (below).\n\nEven though, the right Bazel version is already installed locally, in /usr/bin/bazel, the new instance of the same Bazel version is installed into ~/.cache/bazelisk/bin/bazelbuild/bazel-1.0.0rc2-linux-x86_64 by the Bazelisk. I wrote this issue upstream: [1].\n\n* [1] https://github.com/bazelbuild/bazelisk/issues/89",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 0
+      },
+      "revId": "c39c96c373bebb261330fa6b21e53462a439e5fd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
