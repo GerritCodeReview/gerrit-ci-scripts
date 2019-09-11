@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80099fd4_137ca3d8",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-09-11T07:05:18Z",
+      "side": 1,
+      "message": "nit: this could have stayed as it is.",
+      "range": {
+        "startLine": 11,
+        "startChar": 98,
+        "endLine": 11,
+        "endChar": 106
+      },
+      "revId": "93f3286a38b4ade389301e884abd9bf7f1e2ac0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
