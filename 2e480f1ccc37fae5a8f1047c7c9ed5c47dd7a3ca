@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8a5f978c_f38a1b1c",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-09-13T08:37:34Z",
+      "side": 1,
+      "message": "This part is not correctly parsed yet.",
+      "revId": "2e480f1ccc37fae5a8f1047c7c9ed5c47dd7a3ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
