@@ -22,6 +22,34 @@
       - pollscm:
           cron: 'H/50 * * * *'
 
+- job-template:
+    name: 'plugin-{name}-bazel-{branch}'
+    description: "Plugin {name} {branch} branch build with Bazel\n"
+    defaults: plugin-template-bazel
+    node: bazel-debian
+    class: plugins
+    project-name: plugins%2F{name}
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://gerrit.googlesource.com/plugins/{name}
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+    builders:
+      - shell:
+         !include-raw: gerrit-bazel-build-plugin.sh
+      - shell:
+         !include-raw: gerrit-bazel-get-project-info.sh
+    publishers:
+      - archive:
+         artifacts: >
+           bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
@@ -96,3 +124,27 @@
       - archive:
          artifacts: >
            bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
+
+- view-template:
+    name: 'Plugins-{branch}'
+    view-type: list
+    columns:
+      - status
+      - weather
+      - job
+      - last-success
+      - last-failure
+      - last-duration
+      - build-button
+    regex: 'plugin-.+-{branch}'
+
+- project:
+    name: 'plugin-views'
+    views:
+      - 'Plugins-{branch}'
+    branch:
+      - master
+      - stable-3.0
+      - stable-2.16
+      - stable-2.15
+      - stable-2.14
