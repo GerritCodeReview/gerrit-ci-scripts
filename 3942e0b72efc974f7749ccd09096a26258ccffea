@@ -16,6 +16,24 @@
       "revId": "3942e0b72efc974f7749ccd09096a26258ccffea",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce268706_1321b424",
+        "filename": "jenkins/gerrit-buck-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-13T06:56:06Z",
+      "side": 1,
+      "message": "Good point. Let me rebase this series on top of your change.",
+      "parentUuid": "72481dcb_5012acac",
+      "revId": "3942e0b72efc974f7749ccd09096a26258ccffea",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
