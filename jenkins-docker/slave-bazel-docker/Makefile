@@ -1,7 +1,7 @@
 include ../chrome-vers.mk
 
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-bazel-docker:debian-stretch
+IMAGE=gerritforge/gerrit-ci-slave-bazel-docker:debian-buster
 
 # Targets
 
