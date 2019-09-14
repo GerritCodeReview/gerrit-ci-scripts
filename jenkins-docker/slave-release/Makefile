@@ -1,5 +1,5 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-release-bazel:debian-stretch
+IMAGE=gerritforge/gerrit-release-bazel:debian-buster
 
 # Targets
 

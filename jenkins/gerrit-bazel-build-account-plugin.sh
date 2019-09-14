@@ -13,8 +13,6 @@ fi
 TARGETS=$(echo "plugins/account:account" | sed -e 's/account/account/g')
 TEST_TARGET=$(grep -2 junit_tests plugins/account/BUILD | grep -o 'name = "[^"]*"' | cut -d '"' -f 2)
 
-. set-java.sh 8
-
 export NODE_MODULES=$PWD/node_modules
 npm install bower
 
