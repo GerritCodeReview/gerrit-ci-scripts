@@ -8,8 +8,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y wget software-properties-common default-jdk
 
-COPY set-java.sh /usr/bin/
-
 RUN apt-get update && apt-get install -y \
     openssh-server \
     curl \
@@ -18,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \
     python-yaml \
-    python-jenkins \
+    python-jenkinsapi \
     ant \
     autoconf \
     automake \
