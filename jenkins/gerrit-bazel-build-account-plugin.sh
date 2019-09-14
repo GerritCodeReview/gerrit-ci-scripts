@@ -15,8 +15,6 @@ done
 
 TARGETS=$(echo "plugins/account:account" | sed -e 's/account/account/g')
 
-. set-java.sh 8
-
 export NODE_MODULES=$PWD/node_modules
 npm install bower
 
