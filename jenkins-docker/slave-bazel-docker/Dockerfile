@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch-$CHROME_VER
+FROM gerritforge/gerrit-ci-slave-bazel:debian-buster-$CHROME_VER
 
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     add-apt-repository \

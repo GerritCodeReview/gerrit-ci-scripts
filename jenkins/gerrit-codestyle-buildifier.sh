@@ -1,6 +1,5 @@
 #!/bin/bash -e
 echo 'Running buildifier check...'
-. set-java.sh 8
 buildifier --version
 cd gerrit
 EXITCODE=0
