@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
 cd gerrit
-. set-java.sh 8
 
 TEST_TAG_FILTERS="-flaky,-replication"
 if [ "{branch}" == "stable-2.16" ]
