@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch
+FROM gerritforge/gerrit-ci-slave-bazel:debian-buster
 
 # SBT Setup
 RUN apt-get update && \
