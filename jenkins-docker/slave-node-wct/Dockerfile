@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-chrome:stretch-$CHROME_VER
+FROM gerritforge/gerrit-ci-slave-chrome:buster-$CHROME_VER
 
 # Node JS for PolyGerrit build
 

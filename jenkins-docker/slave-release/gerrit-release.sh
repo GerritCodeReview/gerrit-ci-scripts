@@ -28,8 +28,6 @@ git clone https://gerrit.googlesource.com/gerrit && (cd gerrit && f=`git rev-par
 
 pushd gerrit
 
-source set-java.sh 8
-
 git checkout $branch
 git fetch && git reset --hard origin/$branch
 git submodule update --init
