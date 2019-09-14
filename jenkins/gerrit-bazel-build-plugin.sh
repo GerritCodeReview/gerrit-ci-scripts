@@ -14,8 +14,6 @@ fi
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 TEST_TARGET=$(grep -2 junit_tests plugins/{name}/BUILD | grep -o 'name = "[^"]*"' | cut -d '"' -f 2)
 
-. set-java.sh 8
-
 java -fullversion
 bazelisk version
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
