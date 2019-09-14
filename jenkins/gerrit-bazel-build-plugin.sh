@@ -15,7 +15,6 @@ do
 done
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
-. set-java.sh 8
 
 java -fullversion
 bazelisk version
