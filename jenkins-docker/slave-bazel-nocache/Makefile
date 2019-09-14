@@ -1,7 +1,7 @@
 include ../chrome-vers.mk
 
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache
+IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache
 BAZEL_VER=3.5.1
 BUILDIFIER_VER=3.5.0
 BAZELISK_VER=1.6.1
