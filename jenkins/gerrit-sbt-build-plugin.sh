@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-. set-java.sh 8
 java -fullversion
 bazelisk version
 

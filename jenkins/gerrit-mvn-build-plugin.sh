@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-. set-java.sh 8
-
 git checkout -f -b gerrit-master gerrit/{branch}
 git submodule update --init
 java -fullversion
