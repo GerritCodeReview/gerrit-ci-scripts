@@ -24,8 +24,6 @@ done
 
 TARGETS=$(echo "{targets}" | sed -e 's/its-{{name}}/its-{name}/g')
 
-. set-java.sh 8
-
 java -fullversion
 bazelisk version
 bazelisk build $BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
