@@ -16,6 +16,24 @@
       "revId": "deb4d08e317a57390ad5159968f02acd68119acd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9293b711_7d7c2b3d",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-16T07:25:57Z",
+      "side": 0,
+      "message": "How is this unrelated change? Java 8 is gone, and say hello to Java 11. Nevertheless, thanks Bazel default java tool chain the result byte code is still java 8. I think I should have emphasized this behavioural change in the commit message.",
+      "parentUuid": "b1c9add3_7aba2535",
+      "revId": "deb4d08e317a57390ad5159968f02acd68119acd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
