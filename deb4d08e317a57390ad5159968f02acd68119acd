@@ -34,6 +34,24 @@
       "revId": "deb4d08e317a57390ad5159968f02acd68119acd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c1141d4b_17795c0a",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-09-16T07:31:03Z",
+      "side": 0,
+      "message": "Yeah, I just read this in the comments on the change introducing the java11 toolchain for builds.\n\nWill that mean that we won\u0027t be able to build anything below stable-3.0 anymore?\n\n(Maybe the placement of my comment was also a bit off. I wanted to mark the whole RUN-block, since there you remove the cache filling for builds below stable 3.0) and not the removal of the set-java.sh script usage, which is of course fine.)",
+      "parentUuid": "9293b711_7d7c2b3d",
+      "revId": "deb4d08e317a57390ad5159968f02acd68119acd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
