@@ -52,6 +52,24 @@
       "revId": "deb4d08e317a57390ad5159968f02acd68119acd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de1d91ac_dc37699e",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-16T19:02:15Z",
+      "side": 0,
+      "message": "Yes, you are right, those changes are unrelated, reverted. Done.",
+      "parentUuid": "c1141d4b_17795c0a",
+      "revId": "deb4d08e317a57390ad5159968f02acd68119acd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
