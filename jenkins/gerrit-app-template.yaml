@@ -1,6 +1,6 @@
 - job-template:
     name: 'app-{name}-{branch}'
-    description: "App {name} {branch} branch build\n"
+    description: 'App {name} {branch} branch build'
     wrappers:
       - timeout:
           timeout: 30
@@ -34,4 +34,4 @@
       - shell: '{commands}'
     publishers:
       - archive:
-         artifacts: '{artifacts}'
+          artifacts: '{artifacts}'

@@ -1,0 +1,9 @@
+# Install yamllint: pip3 install yamllint
+# Run yamllint: yamllint -c yamllint-config.yaml ./jenkins/**/*.yaml
+
+extends: default
+
+rules:
+  document-start: disable
+  line-length:
+    max: 100

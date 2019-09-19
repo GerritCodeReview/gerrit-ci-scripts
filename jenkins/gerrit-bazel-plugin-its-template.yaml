@@ -9,69 +9,66 @@
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     properties:
-       - build-discarder:
-           days-to-keep: 20
-           artifact-days-to-keep: 20
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
+      - build-discarder:
+          days-to-keep: 20
+          artifact-days-to-keep: 20
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/its-{name}
-           - gerrit:
-               url: https://gerrit.googlesource.com/gerrit
-           - base:
-               url: https://gerrit.googlesource.com/plugins/its-base
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
-
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/plugins/its-{name}
+            - gerrit:
+                url: https://gerrit.googlesource.com/gerrit
+            - base:
+                url: https://gerrit.googlesource.com/plugins/its-base
+          branches:
+            - origin/{branch}
+          submodule:
+            recursive: true
+          skip-tag: true
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
 
 - job-template:
     name: 'plugin-its-{name}-bazel-{branch}'
-    description: "Plugin its-{name} {branch} branch build with Bazel\n"
+    description: 'Plugin its-{name} {branch} branch build with Bazel'
     defaults: plugin-its-template
     node: bazel-debian
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-its-plugin.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-its-plugin-info.sh
+      - shell: !include-raw: gerrit-bazel-build-its-plugin.sh
+      - shell: !include-raw: gerrit-bazel-get-its-plugin-info.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/its-{name}/its-{name}.jar*, bazel-bin/plugins/its-{name}/its-{name}.json
+          artifacts: >
+            bazel-bin/plugins/its-{name}/its-{name}.jar*,
+            bazel-bin/plugins/its-{name}/its-{name}.json
 
 - job-template:
     name: 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}'
-    description: "Plugin its-{name} {branch} branch Bazel build for Gerrit {gerrit-branch}\n"
+    description: 'Plugin its-{name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-its-template
     node: bazel-debian
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/its-{name}
-           - base:
-               url: https://gerrit.googlesource.com/plugins/its-base
-         branches:
-           - origin/{branch}
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/plugins/its-{name}
+            - base:
+                url: https://gerrit.googlesource.com/plugins/its-base
+          branches:
+            - origin/{branch}
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-its-plugin-branch.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-its-plugin-info.sh
+      - shell: !include-raw: gerrit-bazel-build-its-plugin-branch.sh
+      - shell: !include-raw: gerrit-bazel-get-its-plugin-info.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/its-{name}/its-{name}.jar*, bazel-bin/plugins/its-{name}/its-{name}.json
+          artifacts: >
+            bazel-bin/plugins/its-{name}/its-{name}.jar*,
+            bazel-bin/plugins/its-{name}/its-{name}.json

@@ -9,73 +9,68 @@
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     properties:
-       - build-discarder:
-           days-to-keep: 20
-           artifact-days-to-keep: 20
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
+      - build-discarder:
+          days-to-keep: 20
+          artifact-days-to-keep: 20
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/scripting/{name}
-           - gerrit:
-               url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
-
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+            - gerrit:
+                url: https://gerrit.googlesource.com/gerrit
+          branches:
+            - origin/{branch}
+          submodule:
+            recursive: true
+          skip-tag: true
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
 
 - job-template:
     name: 'plugin-scripting-{name}-bazel-{branch}'
-    description: "Plugin scripting/{name}/{branch} Bazel build for Gerrit\n"
+    description: 'Plugin scripting/{name}/{branch} Bazel build for Gerrit'
     defaults: plugin-scripting-template
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/scripting/{name}
-           - gerrit:
-               url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - origin/{branch}
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+            - gerrit:
+                url: https://gerrit.googlesource.com/gerrit
+          branches:
+            - origin/{branch}
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-plugin.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-scripting-plugin-info.sh
+      - shell: !include-raw: gerrit-bazel-build-plugin.sh
+      - shell: !include-raw: gerrit-bazel-get-scripting-plugin-info.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
     name: 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}'
-    description: "Plugin scripting/{name}/{branch} Bazel build for Gerrit/{gerrit-branch}\n"
+    description: 'Plugin scripting/{name}/{branch} Bazel build for Gerrit/{gerrit-branch}'
     defaults: plugin-scripting-template
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/scripting/{name}
-         branches:
-           - origin/{branch}
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+          branches:
+            - origin/{branch}
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-plugin-branch.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-scripting-plugin-info.sh
+      - shell: !include-raw: gerrit-bazel-build-plugin-branch.sh
+      - shell: !include-raw: gerrit-bazel-get-scripting-plugin-info.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
