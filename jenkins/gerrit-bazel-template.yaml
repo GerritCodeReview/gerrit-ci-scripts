@@ -19,7 +19,6 @@
            recursive: true
          skip-tag: true
          basedir: gerrit
-
     builders:
       - shell:
          !include-raw: gerrit-bazel-build.sh

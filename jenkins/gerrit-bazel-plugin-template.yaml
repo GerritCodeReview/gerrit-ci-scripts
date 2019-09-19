@@ -9,15 +9,14 @@
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     properties:
-       - build-discarder:
-           days-to-keep: 20
-           artifact-days-to-keep: 20
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-
+      - build-discarder:
+          days-to-keep: 20
+          artifact-days-to-keep: 20
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
@@ -31,25 +30,23 @@
     project-name: plugins%2F{name}
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/{name}
-           - gerrit:
-               url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/plugins/{name}
+            - gerrit:
+                url: https://gerrit.googlesource.com/gerrit
+          branches:
+            - origin/{branch}
+          submodule:
+            recursive: true
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-plugin.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-project-info.sh
+      - shell: !include-raw: gerrit-bazel-build-plugin.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
@@ -59,21 +56,19 @@
     defaults: plugin-template-bazel
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/{name}
-         branches:
-           - '*/{branch}'
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/plugins/{name}
+          branches:
+            - '*/{branch}'
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-plugin-branch.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-project-info.sh
+      - shell: !include-raw: gerrit-bazel-build-plugin-branch.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
@@ -83,21 +78,19 @@
     defaults: plugin-template-bazel
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/modules/{name}
-         branches:
-           - '*/{branch}'
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/modules/{name}
+          branches:
+            - '*/{branch}'
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-plugin-branch.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-project-info.sh
+      - shell: !include-raw: gerrit-bazel-build-plugin-branch.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
     name: 'module-{name}-bazel-{branch}'
@@ -107,23 +100,21 @@
     defaults: plugin-template-bazel
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/modules/{name}
-           - gerrit:
-               url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - '*/{branch}'
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/modules/{name}
+            - gerrit:
+                url: https://gerrit.googlesource.com/gerrit
+          branches:
+            - '*/{branch}'
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-plugin.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-project-info.sh
+      - shell: !include-raw: gerrit-bazel-build-plugin.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar, bazel-bin/plugins/{name}/{name}.jar-version, bazel-bin/plugins/{name}/{name}.json
 
 - view-template:
     name: 'Plugins-{branch}'

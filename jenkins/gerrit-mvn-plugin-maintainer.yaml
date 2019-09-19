@@ -5,4 +5,3 @@
       - master
     jobs:
       - 'plugin-{repo}-mvn-{branch}'
-

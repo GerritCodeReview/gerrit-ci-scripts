@@ -30,18 +30,15 @@
          submodule:
            recursive: true
          skip-tag: true
-
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
-
     builders:
       - shell:
          !include-raw: gerrit-mvn-build-plugin.sh
     publishers:
       - archive:
          artifacts: '**/target/{repo}*.jar*,**/target/{repo}*.json'
-
     wrappers:
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
