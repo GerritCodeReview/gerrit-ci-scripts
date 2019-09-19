@@ -8,20 +8,20 @@
           fail: true
       - timestamps
     properties:
-       - build-discarder:
-           days-to-keep: 20
-           artifact-days-to-keep: 20
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
+      - build-discarder:
+          days-to-keep: 20
+          artifact-days-to-keep: 20
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
     scm:
       - git:
-         url: git://git.eclipse.org/gitroot/jgit/jgit
-         branches:
-           - 'master'
-         skip-tag: true
+          url: git://git.eclipse.org/gitroot/jgit/jgit
+          branches:
+            - 'master'
+          skip-tag: true
 
     triggers:
       - pollscm:
@@ -37,4 +37,4 @@
           bazelisk test //...
     publishers:
       - archive:
-         artifacts: 'bazel-bin/all.zip'
+          artifacts: 'bazel-bin/all.zip'
