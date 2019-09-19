@@ -9,25 +9,23 @@
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     properties:
-       - build-discarder:
-           days-to-keep: 20
-           artifact-days-to-keep: 20
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
+      - build-discarder:
+          days-to-keep: 20
+          artifact-days-to-keep: 20
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
     scm:
       - git:
-         url: https://gerrit.googlesource.com/gitiles
-         branches:
-           - master
-         skip-tag: true
-
+          url: https://gerrit.googlesource.com/gitiles
+          branches:
+            - master
+          skip-tag: true
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
-
     builders:
       - shell: |
           set +x
@@ -38,4 +36,4 @@
           bazelisk test //...
     publishers:
       - archive:
-         artifacts: 'bazel-bin/gitiles.war'
+          artifacts: 'bazel-bin/gitiles.war'
