@@ -6,43 +6,39 @@
     targets: 'plugins/high-availability'
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/{name}/{name}.jar*, bazel-bin/plugins/{name}/{name}.json
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar*, bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
     name: 'plugin-{name}-gerritforge-{branch}'
     defaults: high-availability-gerritforge-defaults
-    description: "Plugin {name} {branch} branch for Gerrit {branch} - GerritForge fork\n"
+    description: 'Plugin {name} {branch} branch for Gerrit {branch} - GerritForge fork'
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://github.com/GerritForge/plugins_{name}
-           - gerrit:
-               url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - 'origin/{branch}'
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://github.com/GerritForge/plugins_{name}
+            - gerrit:
+                url: https://gerrit.googlesource.com/gerrit
+          branches:
+            - 'origin/{branch}'
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-plugin.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-project-info.sh
+      - shell: !include-raw: gerrit-bazel-build-plugin.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
 
 - job-template:
     name: 'plugin-{name}-gerritforge-{branch}-{gerrit-branch}'
     defaults: high-availability-gerritforge-defaults
-    description: "Plugin {name} {branch} branch for Gerrit {gerrit-branch} - GerritForge fork\n"
+    description: 'Plugin {name} {branch} branch for Gerrit {gerrit-branch} - GerritForge fork'
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://github.com/GerritForge/plugins_{name}
-         branches:
-           - 'origin/{branch}'
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://github.com/GerritForge/plugins_{name}
+          branches:
+            - 'origin/{branch}'
+          skip-tag: true
     builders:
-      - shell:
-         !include-raw: gerrit-bazel-build-plugin-branch.sh
-      - shell:
-         !include-raw: gerrit-bazel-get-project-info.sh
+      - shell: !include-raw: gerrit-bazel-build-plugin-branch.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh

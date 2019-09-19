@@ -9,4 +9,3 @@
       - stable-2.14
     jobs:
       - 'plugin-{repo}-mvn-{branch}'
-
