@@ -3,14 +3,8 @@
     targets: 'plugins/{name}:{name}'
     parameters:
       - string:
-         name: REFS_CHANGE
-         description: "Refs change as provided by Download/Checkout eg: refs/changes/21/75721/1"
-    properties:
-      - inject:
-         properties-file: env.properties
-         script-content: |
-           echo "REFS_CHANGE=$REFS_CHANGE" > env.properties
-         override-build-parameters: true
+          name: REFS_CHANGE
+          description: "Refs change as provided by Download/Checkout eg: refs/changes/21/75721/1"
     wrappers:
       - timeout:
           timeout: 30
@@ -19,26 +13,31 @@
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     properties:
-       - build-discarder:
-           days-to-keep: 20
-           artifact-days-to-keep: 20
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
+      - build-discarder:
+          days-to-keep: 20
+          artifact-days-to-keep: 20
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
+      - inject:
+          properties-file: env.properties
+          script-content: |
+            echo "REFS_CHANGE=$REFS_CHANGE" > env.properties
+          override-build-parameters: true
     scm:
       - git:
-         remotes:
-           - origin:
-               url: https://gerrit.googlesource.com/plugins/{name}
-           - gerrit:
-               url: https://gerrit.googlesource.com/gerrit
-         branches:
-           - origin/{branch}
-         submodule:
-           recursive: true
-         skip-tag: true
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/plugins/{name}
+            - gerrit:
+                url: https://gerrit.googlesource.com/gerrit
+        branches:
+          - origin/{branch}
+        submodule:
+          recursive: true
+        skip-tag: true
 
 - job-template:
     name: 'pluginmanual-{name}-bazel-{branch}'
@@ -46,8 +45,8 @@
     defaults: pluginmanual-template
     builders:
       - shell:
-         !include-raw: gerrit-bazel-build-plugin-manual.sh
+          !include-raw: gerrit-bazel-build-plugin-manual.sh
     publishers:
       - archive:
-         artifacts: >
-           bazel-bin/plugins/{name}/*{name}*.jar*
+          artifacts: >
+            bazel-bin/plugins/{name}/*{name}*.jar*
