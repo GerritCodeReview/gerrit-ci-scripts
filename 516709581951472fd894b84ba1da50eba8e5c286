@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a440735_30adfea3",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-09-20T20:21:53Z",
+      "side": 1,
+      "message": "bazelisk",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 7
+      },
+      "revId": "516709581951472fd894b84ba1da50eba8e5c286",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
