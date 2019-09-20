@@ -42,7 +42,7 @@ git push origin HEAD:refs/for/$branch
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach git tag -f -s -m "v$version" "v$version"
 
-bazel build release Documentation:searchfree
+bazelsk build release Documentation:searchfree
 ./tools/maven/api.sh install
 
 echo -n "Checking Gerrit version ... "
