@@ -30,7 +30,7 @@ class Globals {
   }
 
   static String addVerifiedTag = ciTag("addVerified")
-  static Set<String> codeStyleBranches = ["master", "stable-3.0", "stable-2.16", "stable-2.15", "stable-2.14"]
+  static Set<String> codeStyleBranches = ["master", "stable-3.0", "stable-2.16", "stable-2.15"]
   static resTicks = [ 'ABORTED':'\u26aa', 'SUCCESS':'\u2705', 'FAILURE':'\u274c' ]
   static String gerritRepositoryNameSha1Suffix = "-a6a0e4682515f3521897c5f950d1394f4619d928"
 }
@@ -367,7 +367,7 @@ def buildChange(change) {
     modes = ["reviewdb"]
   }
 
-  if(branch == "master" || branch == "stable-3.0" || branch == "stable-2.16" || branch == "stable-2.15" || branch == "stable-2.14") {
+  if(branch == "master" || branch == "stable-3.0" || branch == "stable-2.16" || branch == "stable-2.15") {
     def changedFiles = gerrit.getChangedFiles(changeNum, sha1)
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") || it.startsWith("lib/js") }
 
