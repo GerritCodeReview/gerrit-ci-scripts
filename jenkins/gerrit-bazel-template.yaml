@@ -97,6 +97,9 @@
     name: 'Gerrit-bazel-java11-{branch}'
     description: "{name} {branch} branch build with Bazel and Java 11\n"
     defaults: gerrit-bazel-defaults
+    triggers:
+      - pollscm:
+          cron: 'H/10 * * * *'
     properties:
        - build-discarder:
            days-to-keep: 20
