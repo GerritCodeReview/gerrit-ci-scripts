@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c8a1df71_5bd5c12d",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-24T20:04:10Z",
+      "side": 1,
+      "message": "Can we generalize it in gerrit-bazel-defaults template? What if we add Gerrit-bazel-java12, Gerrit-bazel-java13, etc. would we need to repeat that section?",
+      "revId": "54f5b7823c06baee99bb628c85ca4d65b56add22",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
