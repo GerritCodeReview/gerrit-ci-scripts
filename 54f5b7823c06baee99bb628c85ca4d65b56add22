@@ -16,6 +16,24 @@
       "revId": "54f5b7823c06baee99bb628c85ca4d65b56add22",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "27ab010d_b9ddf72b",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-09-24T20:08:23Z",
+      "side": 1,
+      "message": "This java11 build job is a bit of a hack: it shouldn\u0027t be done in this way.\nHowever, it was cool to start building something on java11.\n\nThe Gerrit-{branch} job template is the one that controls what to build: that one has the SCM Poll config.\nThat job should be triggering the java11 one.",
+      "parentUuid": "c8a1df71_5bd5c12d",
+      "revId": "54f5b7823c06baee99bb628c85ca4d65b56add22",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
