@@ -34,6 +34,24 @@
       "revId": "54f5b7823c06baee99bb628c85ca4d65b56add22",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aaaee0c6_92380ef9",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-09-25T07:20:27Z",
+      "side": 1,
+      "message": "But then we just have to configure the Gerrit-{branch} job to also start this job. There is no reason that this can\u0027t be done. I didn\u0027t do that from the start, because when I started on implementing this job, java11 builds seemed to be an experiment for which I thought it would be enough to trigger them manually in the beginning. Now, that they are working well, we should definitely build them regularly.\nWhat we could do differently to merge all Gerrit-bazel* builds would be to add a parameter to those jobs that allows to select the Java version and to add a script, that depending on the version defines the $BAZEL_OPTS variable. The disadvantage would be that it wouldn\u0027t be easily discernible which Java was used to build the artifact, since all would be in one job. That was one reason to create a separate job.\nIf we want to easily allow to add multiple Java versions (12, 13 etc), we could make the java version a templating variable for JJB, naming this job-template \u0027Gerrit-bazel-{java}-{branch}\u0027 for example.",
+      "parentUuid": "27ab010d_b9ddf72b",
+      "revId": "54f5b7823c06baee99bb628c85ca4d65b56add22",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
