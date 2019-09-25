@@ -52,6 +52,24 @@
       "revId": "54f5b7823c06baee99bb628c85ca4d65b56add22",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e72f1ed5_58f6a120",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-09-25T07:23:09Z",
+      "side": 1,
+      "message": "OK, let us submit it as is now, to avoid triggering the job manually.",
+      "parentUuid": "aaaee0c6_92380ef9",
+      "revId": "54f5b7823c06baee99bb628c85ca4d65b56add22",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
