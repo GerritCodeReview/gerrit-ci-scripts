@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "859c2515_b25e2b0c",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-09-27T13:51:44Z",
+      "side": 1,
+      "message": "master branch isn\u0027t ready for build yet:\nhttps://gerrit-ci.gerritforge.com/job/plugin-zookeeper-gh-bazel-master/",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "273eb4affa732fc51f05b10d70ac66e8ecde3a9e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
