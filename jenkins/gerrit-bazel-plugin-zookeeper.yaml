@@ -1,0 +1,9 @@
+- project:
+    name: zookeeper
+    organization: GerritForge
+    repo: plugins_zookeeper
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
+            - stable-3.0
