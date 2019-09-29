@@ -11,6 +11,11 @@ export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=st
                    --test_tag_filters=-flaky,-docker \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
 
+echo '
+[filesystem "Oracle Corporation|1.8.0_222|rootfs"]
+  timestampResolution = 2500 milliseconds
+  minRacyThreshold = 0 nanoseconds' >> ~/.gitconfig
+
 bazelisk version
 
 if [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ] || [ "{branch}" == "stable-2.14" ]
