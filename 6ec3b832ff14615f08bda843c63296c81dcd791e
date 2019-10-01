@@ -22,6 +22,30 @@
       "revId": "6ec3b832ff14615f08bda843c63296c81dcd791e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1b069c57_dc546b31",
+        "filename": "jenkins/jgit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-01T23:11:00Z",
+      "side": 1,
+      "message": "Yes, as soon as @Patrick configures it.\nIt would be nice also if the Gerrit-CI has \"some right to vote\" on the JGit change, but that could be a second step I believe.",
+      "parentUuid": "526fe2e1_14864625",
+      "range": {
+        "startLine": 20,
+        "startChar": 14,
+        "endLine": 20,
+        "endChar": 53
+      },
+      "revId": "6ec3b832ff14615f08bda843c63296c81dcd791e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
