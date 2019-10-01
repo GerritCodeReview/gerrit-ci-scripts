@@ -1,0 +1,47 @@
+- job-template:
+    name: 'jgit-{branch}'
+    description: JGit Bazel build on {branch}
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+    properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         url: git://git.eclipse.org/gitroot/jgit/jgit
+         branches:
+           - {branch}
+         skip-tag: true
+
+    triggers:
+      - pollscm:
+          cron: 'H/50 * * * *'
+
+    builders:
+      - shell: |
+          set +x
+          echo "Building jgit on {branch}"
+          echo '=============================='
+          bazelisk clean --expunge
+          bazelisk version
+          bazelisk build all
+      - shell: mvn test
+    publishers:
+      - archive:
+         artifacts: 'bazel-bin/all.zip'
+
+- project:
+    name: jgit
+    jobs:
+      - 'jgit-{branch}':
+          branch:
+            - master
