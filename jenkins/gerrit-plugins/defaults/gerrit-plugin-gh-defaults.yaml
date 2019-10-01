@@ -1,8 +1,6 @@
-- job-template:
-    name: 'app-{name}-sbt-{branch}'
-    description: 'App {name} {branch} branch build with Sbt'
-    node: sbt
-    targets: compile test assembly
+- defaults:
+    name: plugin-gh-template
+    targets: 'plugins/{name}:{name}'
     wrappers:
       - timeout:
           timeout: 30
@@ -23,24 +21,14 @@
       - git:
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/apps/{name}
+                url: https://github.com/{organization}/{repo}
+            - gerrit:
+                url: https://gerrit.googlesource.com/gerrit
           branches:
             - origin/{branch}
           submodule:
-            recursive: true
+            disable: true
           skip-tag: true
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
-    builders:
-      - shell: !include-raw: gerrit-sbt-build-app.sh
-    publishers:
-      - archive:
-          artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json'
-
-- project:
-    name: analytics-etl
-    jobs:
-      - 'app-{name}-sbt-{branch}':
-          branch:
-            - master

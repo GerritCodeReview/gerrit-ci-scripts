@@ -1,0 +1,19 @@
+- job:
+    name: gerrit-ci-scripts-docker
+    description: Gerrit Jenkins Job Builder Docker images
+    node: master
+    scm:
+      - git:
+          url: https://gerrit.googlesource.com/gerrit-ci-scripts
+          branches:
+            - '*/master'
+          skip-tag: true
+    triggers:
+      - timed: '@midnight'
+    builders:
+      - shell: docker system prune -af
+      - shell: |
+          export JENKINS_WAR_VER=2.60.3
+          export JENKINS_WAR_SHA=e62d9ed7eb3d29b08719e639c959cd328776ba50
+          cd jenkins-docker
+          make NO_CACHE=true build

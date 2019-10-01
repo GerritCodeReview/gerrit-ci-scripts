@@ -1,6 +1,8 @@
-- defaults:
-    name: sbt-build-defaults
+- job-template:
+    name: 'app-{name}-sbt-{branch}'
+    description: 'App {name} {branch} branch build with Sbt'
     node: sbt
+    targets: compile test assembly
     wrappers:
       - timeout:
           timeout: 30
@@ -21,9 +23,7 @@
       - git:
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/{name}
-            - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/apps/{name}
           branches:
             - origin/{branch}
           submodule:
@@ -33,24 +33,7 @@
       - pollscm:
           cron: 'H/50 * * * *'
     builders:
-      - shell:
-          !include-raw: gerrit-sbt-build-branch-plugin.sh
+      - shell: !include-raw: gerrit-sbt-build-app.sh
     publishers:
       - archive:
           artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json'
-
-- job-template:
-    name: 'plugin-{name}-sbt-{branch}-{gerrit-branch}'
-    description: "Plugin {name} {branch} branch build with Sbt on top of Gerrit {gerrit-branch}\n"
-    defaults: sbt-build-defaults
-    builders:
-      - shell:
-          !include-raw: gerrit-sbt-build-branch-plugin.sh
-
-- job-template:
-    name: 'plugin-{name}-sbt-{branch}'
-    description: "Plugin {name} build with Sbt on top of Gerrit {branch}\n"
-    defaults: sbt-build-defaults
-    builders:
-      - shell:
-          !include-raw: gerrit-sbt-build-plugin.sh

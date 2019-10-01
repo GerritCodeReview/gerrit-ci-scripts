@@ -1,0 +1,15 @@
+- job-template:
+    name: 'plugin-{name}-sbt-{branch}-{gerrit-branch}'
+    description: "Plugin {name} {branch} branch build with Sbt on top of Gerrit {gerrit-branch}\n"
+    defaults: sbt-build-defaults
+    builders:
+      - shell:
+          !include-raw: gerrit-sbt-build-branch-plugin.sh
+
+- job-template:
+    name: 'plugin-{name}-sbt-{branch}'
+    description: "Plugin {name} build with Sbt on top of Gerrit {branch}\n"
+    defaults: sbt-build-defaults
+    builders:
+      - shell:
+          !include-raw: gerrit-sbt-build-plugin.sh

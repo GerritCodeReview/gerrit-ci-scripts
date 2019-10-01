@@ -1,0 +1,9 @@
+- project:
+    name: gitblit
+    jobs:
+      - 'plugin-gitblit-bazel-{branch}':
+          targets: plugins/gitblit
+          branch:
+            - master
+            - stable-2.15
+            - stable-2.14

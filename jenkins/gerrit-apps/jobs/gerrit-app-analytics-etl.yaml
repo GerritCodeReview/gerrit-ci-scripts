@@ -1,0 +1,6 @@
+- project:
+    name: analytics-etl
+    jobs:
+      - 'app-{name}-sbt-{branch}':
+          branch:
+            - master

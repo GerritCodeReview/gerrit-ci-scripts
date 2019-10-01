@@ -1,0 +1,22 @@
+- defaults:
+    name: plugin-template-bazel
+    targets: 'plugins/{name}:{name}'
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    properties:
+      - build-discarder:
+          days-to-keep: 20
+          artifact-days-to-keep: 20
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
+    triggers:
+      - pollscm:
+          cron: 'H/50 * * * *'
