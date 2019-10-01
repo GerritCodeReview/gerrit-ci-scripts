@@ -1,0 +1,68 @@
+- defaults:
+    name: verifier-defaults
+    concurrent: true
+    parameters:
+      - string:
+          name: CHANGE_URL
+          description: 'Gerrit Change URL to build'
+      - string:
+          name: REFSPEC
+          description: 'Git refspec to use for fetching changes'
+      - string:
+          name: BRANCH
+          description: 'Git SHA1 of the path-set to verify'
+      - string:
+          name: TARGET_BRANCH
+          description: 'Git target branch of the change'
+      - choice:
+          name: MODE
+          choices:
+            - reviewdb
+            - notedb
+            - polygerrit
+          description: 'Type of verification to execute'
+    properties:
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
+      - build-discarder:
+          days-to-keep: 7
+    scm:
+      - git:
+          url: https://gerrit.googlesource.com/gerrit
+          refspec: $REFSPEC
+          branches:
+            - $BRANCH
+          submodule:
+            disable: true
+          skip-tag: true
+          basedir: gerrit
+    wrappers:
+      - xvfb:
+          installation-name: Xvfb
+          display-name: 1
+          parallel-build: false
+          timeout: 60
+          screen: 1024x768x16
+          additional-options: -fbdir /tmp
+          debug: true
+          shutdown-with-build: false
+      - raw:
+          xml: |
+            <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.16">
+              <strategy class="hudson.plugins.build_timeout.impl.NoActivityTimeOutStrategy">
+                 <timeoutSecondsString>750</timeoutSecondsString>
+              </strategy>
+              <operationList>
+                 <hudson.plugins.build__timeout.operations.AbortOperation/>
+              </operationList>
+            </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    publishers:
+      - groovy-postbuild:
+          script: |
+            "(manager.logContains('timed out') || manager.logContains('TIMEOUT in ')) ? \
+              manager.buildAborted() : false"

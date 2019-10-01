@@ -1,5 +1,5 @@
 # Install yamllint: pip3 install yamllint
-# Run yamllint: yamllint -c jenkins/yamllint-config.yaml ./jenkins/*.yaml
+# Run yamllint: yamllint -c jenkins/yamllint-config.yaml ./jenkins/**/*.yaml
 
 extends: default
 
