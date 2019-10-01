@@ -47,10 +47,3 @@
     publishers:
       - archive:
           artifacts: '**/target/**/gatling-git-extension.jar*'
-
-- project:
-    name: gatling-git-sbt-{branch}
-    jobs:
-      - 'gatling-git-sbt-{branch}':
-          branch:
-            - master

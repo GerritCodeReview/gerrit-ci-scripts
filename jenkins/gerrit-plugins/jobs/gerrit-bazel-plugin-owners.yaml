@@ -1,0 +1,11 @@
+- project:
+    name: owners
+    jobs:
+      - 'plugin-owners-bazel-{branch}':
+          targets: 'plugins/owners plugins/owners-autoassign'
+          branch:
+            - master
+            - stable-3.0
+            - stable-2.16
+            - stable-2.15
+            - stable-2.14
