@@ -1,0 +1,10 @@
+- defaults:
+    name: high-availability-gerritforge-defaults
+    class: plugins
+    node: bazel-debian
+    defaults: plugin-template-bazel
+    targets: 'plugins/high-availability'
+    publishers:
+      - archive:
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar*, bazel-bin/plugins/{name}/{name}.json

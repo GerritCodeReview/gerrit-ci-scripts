@@ -1,6 +1,5 @@
 - defaults:
-    name: plugin-gh-template
-    targets: 'plugins/{name}:{name}'
+    name: 'plugin-gitblit'
     wrappers:
       - timeout:
           timeout: 30
@@ -21,28 +20,16 @@
       - git:
           remotes:
             - origin:
-                url: https://github.com/{organization}/{repo}
+                url: https://gerrit.googlesource.com/plugins/gitblit
             - gerrit:
                 url: https://gerrit.googlesource.com/gerrit
+            - gitblit:
+                url: https://gerrit.googlesource.com/gitblit
           branches:
             - origin/{branch}
           submodule:
-            disable: true
+            recursive: true
           skip-tag: true
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
-
-- job-template:
-    name: 'plugin-{name}-gh-bazel-{branch}'
-    description: >
-      Plugin {name} {branch} branch build with Bazel owned by {organization}
-      and hosted on GitHub\n
-    defaults: plugin-gh-template
-    builders:
-      - shell: !include-raw: gerrit-bazel-build-plugin.sh
-      - shell: !include-raw: gerrit-bazel-gh-get-plugin-info.sh
-    publishers:
-      - archive:
-          artifacts: >
-            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
