@@ -66,7 +66,9 @@
               <string>8.8.8.8</string>
               <string>8.8.4.4</string>
             </dnsHosts>
-            <volumes/>
+            <volumes>
+              <string>/dev/urandom:/dev/random</string>
+            </volumes>
             <volumesFrom2/>
             <environment/>
             <bindPorts></bindPorts>
@@ -108,7 +110,9 @@
             <lxcConfString>mvn</lxcConfString>
             <hostname></hostname>
             <dnsHosts/>
-            <volumes/>
+            <volumes>
+              <string>/dev/urandom:/dev/random</string>
+            </volumes>
             <volumesFrom2/>
             <environment/>
             <bindPorts></bindPorts>
@@ -150,7 +154,9 @@
             <lxcConfString>sbt</lxcConfString>
             <hostname></hostname>
             <dnsHosts/>
-            <volumes/>
+            <volumes>
+              <string>/dev/urandom:/dev/random</string>
+            </volumes>
             <volumesFrom2/>
             <environment/>
             <bindPorts></bindPorts>
