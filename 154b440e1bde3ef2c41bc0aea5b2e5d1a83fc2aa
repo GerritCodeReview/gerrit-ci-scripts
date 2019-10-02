@@ -22,6 +22,30 @@
       "revId": "154b440e1bde3ef2c41bc0aea5b2e5d1a83fc2aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c885dc1_c9b2e66f",
+        "filename": "jenkins/jgit.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-02T13:50:08Z",
+      "side": 1,
+      "message": "For sure, we don\u0027t. In Bazel you never ever use bazel clean. You only need this if you use Maven ;-)",
+      "parentUuid": "90de8717_55f0e455",
+      "range": {
+        "startLine": 35,
+        "startChar": 10,
+        "endLine": 35,
+        "endChar": 34
+      },
+      "revId": "154b440e1bde3ef2c41bc0aea5b2e5d1a83fc2aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
