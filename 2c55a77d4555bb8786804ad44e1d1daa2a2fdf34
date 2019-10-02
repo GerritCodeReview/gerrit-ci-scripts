@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bde12332_07622112",
+        "filename": "jenkins-docker/slave-debian/set-java.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-02T12:53:12Z",
+      "side": 1,
+      "message": "I would rather get rid of this file altogether: we don\u0027t need to switch Java version at all.",
+      "revId": "2c55a77d4555bb8786804ad44e1d1daa2a2fdf34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1859ac7a_cb03f428",
+        "filename": "jenkins-docker/slave-debian/set-java.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-02T12:53:12Z",
+      "side": 1,
+      "message": "This can be just done in the Java11 job.",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 2
+      },
+      "revId": "2c55a77d4555bb8786804ad44e1d1daa2a2fdf34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "923aa5cb_462a7909",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-02T12:53:12Z",
+      "side": 1,
+      "message": "I would rather keep the current ones and have just one ad-hoc verifier for Java11 for now. WDYT?",
+      "range": {
+        "startLine": 106,
+        "startChar": 31,
+        "endLine": 106,
+        "endChar": 42
+      },
+      "revId": "2c55a77d4555bb8786804ad44e1d1daa2a2fdf34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cc01cc9d_c6018b47",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-02T12:53:12Z",
+      "side": 1,
+      "message": "Interesting, but a bit messy IMHO.\n\nCan we just, instead, manage the case of java8 vs. java11 like we did with reviewdb vs. notedb?",
+      "range": {
+        "startLine": 242,
+        "startChar": 0,
+        "endLine": 250,
+        "endChar": 27
+      },
+      "revId": "2c55a77d4555bb8786804ad44e1d1daa2a2fdf34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
