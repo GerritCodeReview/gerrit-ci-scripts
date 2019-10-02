@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "db1955a4_5c74a5e4",
+        "filename": "jenkins/jgit.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T09:15:35Z",
+      "side": 1,
+      "message": "This has to be a list:\n\n  branch:\n    - master\n\nOtherwise, Jenkins Job Builder fails.",
+      "range": {
+        "startLine": 44,
+        "startChar": 12,
+        "endLine": 44,
+        "endChar": 18
+      },
+      "revId": "b4b7d5d6783998b6b90e799953a80c72ff7c5821",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
