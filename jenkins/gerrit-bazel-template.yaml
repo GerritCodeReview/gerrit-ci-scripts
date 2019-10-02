@@ -83,35 +83,21 @@
     dsl: |
       retries = 3
       type = 'bazel'
+      def java = [8]
+      if ("{branch}" in ["master"]) {{
+        java.add(11)
+      }}
       parallel (
-        {{ retry ( retries ) {{ build( "Gerrit-$type-{branch}" ) }} }}
+        java.each {{
+          {{ retry ( retries ) {{ build( "Gerrit-$type-java$it-{branch}" ) }} }}
+        }}
       )
 
 - job-template:
-    name: 'Gerrit-bazel-{branch}'
-    description: "{name} {branch} branch build with Bazel\n"
+    name: 'Gerrit-bazel-java{java}-{branch}'
+    description: "{name} {branch} branch build with Bazel and Java toolkit {java}\n"
     defaults: gerrit-bazel-defaults
     node: bazel-debian
-
-- job-template:
-    name: 'Gerrit-bazel-java11-{branch}'
-    description: "{name} {branch} branch build with Bazel and Java 11\n"
-    defaults: gerrit-bazel-defaults
-    triggers:
-      - pollscm:
-          cron: 'H/10 * * * *'
-    properties:
-       - build-discarder:
-           days-to-keep: 20
-           artifact-days-to-keep: 20
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
-       - inject:
-           properties-content: |
-             BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11 --javabase=@bazel_tools//tools/jdk:remote_jdk11 --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11 --java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
     name: Gerrit-bazel
@@ -121,15 +107,20 @@
       - stable-2.16
       - stable-2.15
       - stable-2.14
+    java:
+      - 8
+      - 11
+    exclude:
+      - java: 11
+        branch: stable-3.0
+      - java: 11
+        branch: stable-2.16
+      - java: 11
+        branch: stable-2.15
+      - java: 11
+        branch: stable-2.14
     jobs:
-      - 'Gerrit-bazel-{branch}'
-
-- project:
-    name: Gerrit-bazel-java11
-    branch:
-      - master
-    jobs:
-      - 'Gerrit-bazel-java11-{branch}'
+      - 'Gerrit-bazel-java{java}-{branch}'
 
 - project:
     name: Gerrit-build-flow

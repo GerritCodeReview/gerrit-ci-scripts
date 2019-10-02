@@ -102,8 +102,8 @@
       - groovy-postbuild:
           script: "(manager.logContains('timed out') || manager.logContains('TIMEOUT in ')) ? manager.buildAborted() : false"
 
-- job:
-    name: Gerrit-verifier-bazel
+- job-template:
+    name: Gerrit-verifier-bazel-java{java}
     description: "Gerrit build of open change with Bazel\n"
     defaults: verifier-defaults
     node: bazel-debian
@@ -227,3 +227,26 @@
     properties:
       - build-discarder:
            days-to-keep: 1
+
+- project:
+    name: Gerrit-verifier-bazel
+    branch:
+      - master
+      - stable-3.0
+      - stable-2.16
+      - stable-2.15
+      - stable-2.14
+    java:
+      - 8
+      - 11
+    exclude:
+      - java: 11
+        branch: stable-3.0
+      - java: 11
+        branch: stable-2.16
+      - java: 11
+        branch: stable-2.15
+      - java: 11
+        branch: stable-2.14
+    jobs:
+      - 'Gerrit-verifier-bazel-java{java}'

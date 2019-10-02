@@ -285,7 +285,7 @@ def getLabelValue(acc, res) {
   }
 }
 
-def prepareBuildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTimes,codestyle) {
+def prepareBuildsForMode(refspec,sha1,changeUrl,mode,tools,javaToolkits,targetBranch,retryTimes,codestyle) {
     def builds = []
     if(codestyle) {
       builds += {
@@ -299,20 +299,22 @@ def prepareBuildsForMode(refspec,sha1,changeUrl,mode,tools,targetBranch,retryTim
       }
     }
 
-    for (tool in tools) {
-      def buildName = "Gerrit-verifier-$tool"
-      def key = "$tool/$mode"
-      builds += {
-                   retry (retryTimes) {
-                     Globals.buildsList.put(key,
-                       build(buildName, REFSPEC: refspec, BRANCH: sha1,
-                             CHANGE_URL: changeUrl, MODE: mode, TARGET_BRANCH: targetBranch))
-                     println "Builds status:"
-                     Globals.buildsList.each {
-                       n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
-                     }
-                   }
-                }
+    for (javaToolkit in javaToolkits) {
+      for (tool in tools) {
+        def buildName = "Gerrit-verifier-$tool-java$javaToolkit"
+        def key = "$tool/$javaToolkit/$mode"
+        builds += {
+                    retry (retryTimes) {
+                      Globals.buildsList.put(key,
+                        build(buildName, REFSPEC: refspec, BRANCH: sha1,
+                              CHANGE_URL: changeUrl, MODE: mode, TARGET_BRANCH: targetBranch))
+                      println "Builds status:"
+                      Globals.buildsList.each {
+                        n, v -> println "  $n : ${v.getResult()}\n    (${v.getBuildUrl() + "consoleText"})"
+                      }
+                    }
+                  }
+      }
     }
     return builds
 }
@@ -337,6 +339,7 @@ def buildChange(change) {
   def changeUrl = gerrit.getChangeUrl(changeNum, patchNum)
   def refspec = "+" + ref + ":" + ref.replaceAll('ref/', 'ref/remotes/origin/')
   def tools = []
+  def javaToolkits = [8]
   def modes = ["reviewdb"]
   def workspace = build.environment.get("WORKSPACE")
   println "workspace: $workspace"
@@ -357,6 +360,10 @@ def buildChange(change) {
 
   println "Building Change " + changeUrl
   build.setDescription("""<a href='$changeUrl' target='_blank'>Change #$changeNum</a>""")
+
+  if(branch == "master") {
+    javaToolkits.add(11)
+  }
 
   if(branch == "master" || branch == "stable-3.0") {
     modes = ["notedb"]
@@ -385,7 +392,7 @@ def buildChange(change) {
   def builds = []
   println "Running validation jobs using $tools builds for $modes ..."
   modes.collect {
-    prepareBuildsForMode(refspec,sha1,changeUrl,it,tools,branch,1,Globals.codeStyleBranches.contains(branch))
+    prepareBuildsForMode(refspec,sha1,changeUrl,it,tools,javaToolkits,branch,1,Globals.codeStyleBranches.contains(branch))
   }.each { builds += it }
 
   def buildsWithResults = getResultsOfBuildsInParallel(builds)
@@ -409,7 +416,7 @@ def buildChange(change) {
       def tool = it[0]
       def mode = it[1]
       Globals.buildsList.remove(it)
-      retryBuilds += prepareBuildsForMode(refspec,sha1,changeUrl,mode,[tool],branch,3,false)
+      retryBuilds += prepareBuildsForMode(refspec,sha1,changeUrl,mode,[tool],javaToolkits,branch,3,false)
     }
     buildsWithResults = getResultsOfBuildsInParallel(retryBuilds)
   }
@@ -471,4 +478,3 @@ if(sha1 == null) {
 } else {
   buildChange(changeJson)
 }
-
