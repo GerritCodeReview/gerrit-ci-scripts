@@ -97,17 +97,6 @@
             </hudson.plugins.build__timeout.BuildTimeoutWrapper>
       - raw:
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
-    publishers:
-      - groovy-postbuild:
-          script: |
-            (manager.logContains('timed out') || manager.logContains('TIMEOUT in ')) \
-              ? manager.buildAborted() : false
-
-- job:
-    name: Gerrit-verifier-bazel
-    description: 'Gerrit build of open change with Bazel'
-    defaults: verifier-defaults
-    node: bazel-debian
     builders:
       - merge-target-branch
       - fetch-all-submodules
@@ -121,6 +110,27 @@
             gerrit/bazel-bin/*api/*api.jar,
             gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
+      - groovy-postbuild:
+          script: |
+            (manager.logContains('timed out') || manager.logContains('TIMEOUT in ')) \
+              ? manager.buildAborted() : false
+
+- job:
+    name: Gerrit-verifier-bazel
+    description: 'Gerrit build of open change with Bazel'
+    defaults: verifier-defaults
+    node: bazel-debian
+
+- job:
+    name: Gerrit-verifier-bazel-java11
+    description: "Gerrit build of open change with Bazel and Java11\n"
+    defaults: verifier-defaults
+    node: bazel-debian
+
+    properties:
+      - inject:
+         properties-content: |
+           BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11 --javabase=@bazel_tools//tools/jdk:remote_jdk11 --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11 --java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - job:
     name: Gerrit-codestyle
@@ -134,6 +144,7 @@
       - shell: !include-raw-escape: gerrit-codestyle-polygerrit-lint.sh
       - shell: !include-raw-escape: gerrit-codestyle-polygerrit-template.sh
       - shell: !include-raw-escape: gerrit-codestyle-buildifier.sh
+    publishers:
 
 - job:
     name: 'Gerrit-verifier-pipeline'

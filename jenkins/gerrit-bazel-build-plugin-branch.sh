@@ -24,7 +24,7 @@ bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_
 
 if TEST_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep test)
 then
-    BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
+    BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_output errors \
                    --test_summary detailed --flaky_test_attempts 3 \
                    --test_verbose_timeout_warnings --build_tests_only \
