@@ -46,6 +46,30 @@
       "revId": "154b440e1bde3ef2c41bc0aea5b2e5d1a83fc2aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f667c4b1_bd15f8b0",
+        "filename": "jenkins/jgit.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-02T13:54:34Z",
+      "side": 1,
+      "message": "Exactly: I actually found it in some of the existing builds we have. Let me dig into it.\nFor this build, we *do love* to reuse cache as much as possible, right?",
+      "parentUuid": "9c885dc1_c9b2e66f",
+      "range": {
+        "startLine": 35,
+        "startChar": 10,
+        "endLine": 35,
+        "endChar": 34
+      },
+      "revId": "154b440e1bde3ef2c41bc0aea5b2e5d1a83fc2aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
