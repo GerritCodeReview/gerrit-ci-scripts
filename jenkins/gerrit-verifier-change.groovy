@@ -355,6 +355,10 @@ def buildChange(change) {
     tools += ["bazel"]
   }
 
+  if(branch == "master") {
+    tools += ["bazel-java11"]
+  }
+
   println "Building Change " + changeUrl
   build.setDescription("""<a href='$changeUrl' target='_blank'>Change #$changeNum</a>""")
 
