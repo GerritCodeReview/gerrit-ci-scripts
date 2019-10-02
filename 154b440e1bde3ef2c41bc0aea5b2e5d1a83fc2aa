@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "90de8717_55f0e455",
+        "filename": "jenkins/jgit.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-02T13:44:33Z",
+      "side": 1,
+      "message": "Not sure we need this clean.",
+      "range": {
+        "startLine": 35,
+        "startChar": 10,
+        "endLine": 35,
+        "endChar": 34
+      },
+      "revId": "154b440e1bde3ef2c41bc0aea5b2e5d1a83fc2aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
