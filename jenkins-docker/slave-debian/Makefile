@@ -1,6 +1,6 @@
 NO_CACHE ?= false
 IMAGE=gerritforge/gerrit-ci-slave-debian
-MAVEN_VER=3.6.1
+MAVEN_VER=3.6.2
 
 build: build_stretch
 
