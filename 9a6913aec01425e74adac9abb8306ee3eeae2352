@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f1d44a01_eac5ffd1",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T09:45:41Z",
+      "side": 1,
+      "message": "This doesn\u0027t work as expected. Only the first parameter is set to BAZEL_OPTS",
+      "revId": "9a6913aec01425e74adac9abb8306ee3eeae2352",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
