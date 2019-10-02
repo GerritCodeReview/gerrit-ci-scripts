@@ -22,6 +22,30 @@
       "revId": "82eae3bef6208b415c3883cfea1b37b186cbad93",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6a50a51c_15ee16ec",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T13:34:12Z",
+      "side": 0,
+      "message": "WIth this change a template variable for JJB is used in the script, thus this has to be `!include-raw` now, as e.g. in gerrit-bazel-template.yaml",
+      "parentUuid": "add3ecab_311c1fdf",
+      "range": {
+        "startLine": 115,
+        "startChar": 21,
+        "endLine": 115,
+        "endChar": 28
+      },
+      "revId": "82eae3bef6208b415c3883cfea1b37b186cbad93",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }

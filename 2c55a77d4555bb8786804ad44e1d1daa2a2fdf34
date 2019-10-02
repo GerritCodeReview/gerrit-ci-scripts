@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "69c97307_7d537054",
+        "filename": "jenkins-docker/slave-debian/set-java.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T13:34:12Z",
+      "side": 1,
+      "message": "IIRC we decided to keep this file, because we might be in a situation again where we would need multiple JDKs (although we should try to avoid that). What are the plans concerning that?",
+      "parentUuid": "bde12332_07622112",
+      "revId": "2c55a77d4555bb8786804ad44e1d1daa2a2fdf34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "1859ac7a_cb03f428",
         "filename": "jenkins-docker/slave-debian/set-java.sh",
         "patchSetId": 2
@@ -30,6 +48,30 @@
       "writtenOn": "2019-10-02T12:53:12Z",
       "side": 1,
       "message": "This can be just done in the Java11 job.",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 2
+      },
+      "revId": "2c55a77d4555bb8786804ad44e1d1daa2a2fdf34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ece590a7_16256a8e",
+        "filename": "jenkins-docker/slave-debian/set-java.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T13:34:12Z",
+      "side": 1,
+      "message": "I am also not happy with this solution. Especially, since this is hiding what is done here from the logs.\n\nHowever, I wanted to avoid having to duplicate the scripts for building- and testing Gerrit, which I would have to do, if I want to use `export BAZEL_OPTS`(env variables set this way are not shared between build-steps :-( ).\nThe env-inject solution I used before worked, but the long line required in the yaml was annoying me (using `\u003e` to avoid that did not work).\n\nThus, since this script was still there, it seemed to be the most  straightforward thing to do.\n\nAnother solution may be to have a build step that writes these bazel options to a file, if Java11 is supposed to be used, which is in the late build steps added to the variable using `$(cat bazel.opts)` or just source it.",
+      "parentUuid": "1859ac7a_cb03f428",
       "range": {
         "startLine": 29,
         "startChar": 0,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "3124dbeb_5c6b3a55",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T13:34:12Z",
+      "side": 1,
+      "message": "You mean the solution existing right now?\nWhat are the exact plans with Java11? If we want to push it, having a voter that always confirms that there is no regression in that it is not buildable with Java11 would be good, I think.",
+      "parentUuid": "923aa5cb_462a7909",
+      "range": {
+        "startLine": 106,
+        "startChar": 31,
+        "endLine": 106,
+        "endChar": 42
+      },
+      "revId": "2c55a77d4555bb8786804ad44e1d1daa2a2fdf34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cc01cc9d_c6018b47",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 2
@@ -76,6 +142,30 @@
       "writtenOn": "2019-10-02T12:53:12Z",
       "side": 1,
       "message": "Interesting, but a bit messy IMHO.\n\nCan we just, instead, manage the case of java8 vs. java11 like we did with reviewdb vs. notedb?",
+      "range": {
+        "startLine": 242,
+        "startChar": 0,
+        "endLine": 250,
+        "endChar": 27
+      },
+      "revId": "2c55a77d4555bb8786804ad44e1d1daa2a2fdf34",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "034f2a64_bb8fd6ca",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T13:34:12Z",
+      "side": 1,
+      "message": "Messy for sure. Yes we can. We could just add another parameter.\n\nBut I would like not to use parameters for the `Gerrit-bazel-{branch}`-job, since then people would always have to look into the parameter section to know, whether they download java8- or java11-based artifacts.",
+      "parentUuid": "cc01cc9d_c6018b47",
       "range": {
         "startLine": 242,
         "startChar": 0,
