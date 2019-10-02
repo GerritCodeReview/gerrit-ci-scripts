@@ -33,7 +33,6 @@
           set +x
           echo "Building gitiles webapp master"
           echo '=============================='
-          bazelisk clean --expunge
           bazelisk version
           bazelisk build //...
           bazelisk test //...
