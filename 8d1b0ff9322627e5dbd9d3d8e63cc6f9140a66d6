@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fbb5c7ca_09a9295e",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T11:02:05Z",
+      "side": 1,
+      "message": "This still doesn\u0027t work.",
+      "revId": "8d1b0ff9322627e5dbd9d3d8e63cc6f9140a66d6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
