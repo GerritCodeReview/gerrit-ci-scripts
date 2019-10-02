@@ -16,6 +16,24 @@
       "revId": "aa74e74c361ead5c3bd357a021b8677da644e79c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "236955b7_e6727458",
+        "filename": "jenkins/gerrit-bazel-plugin-imagare.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-02T11:47:57Z",
+      "side": 1,
+      "message": "There is no stable-2.15 branch. I guess this plugin is not used by many people. When I started working on the PolyGerrit UI, there was only stable-2.14 and the master branch (which was not far ahead) was already using bazlets for 2.16.\nSHould we create a stable-2.15 branch for completeness?",
+      "parentUuid": "36d1764d_765fc2bd",
+      "revId": "aa74e74c361ead5c3bd357a021b8677da644e79c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
