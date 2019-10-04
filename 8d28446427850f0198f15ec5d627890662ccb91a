@@ -22,6 +22,30 @@
       "revId": "8d28446427850f0198f15ec5d627890662ccb91a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "26f330d7_0cb3b5fb",
+        "filename": "jenkins/gerrit-mvn-global-refdb.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-04T14:41:31Z",
+      "side": 1,
+      "message": "There is a proposal on the plate made by Marcin: the discussion is almost over and a decision is due by the next ESC, in around 2 weeks\u0027 time.\n\nIf Gerrit will accept the interface, we won\u0027t need this library anymore. Otherwise, we will and thus it will make sense to build it and check against Gerrit.",
+      "parentUuid": "57d8d8fd_30b20bb0",
+      "range": {
+        "startLine": 27,
+        "startChar": 15,
+        "endLine": 27,
+        "endChar": 58
+      },
+      "revId": "8d28446427850f0198f15ec5d627890662ccb91a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
