@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb7e56e3_72892866",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-04T12:24:57Z",
+      "side": 1,
+      "message": "Wouls that mean, that outcome will be also reported as deddicated line in the result, e.g.:\n\n* bazel/notedb : SUCCESS\n    (https://gerrit-ci.gerritforge.com/job/Gerrit-verifier-bazel/72823/consoleText)\n* bazel-java11 : SUCCESS\n    (https://gerrit-ci.gerritforge.com/job/Gerrit-verifier-bazel/72824/consoleText)\n\nShouldn\u0027t we also add a new checker for that? I have the ACL and could do that.",
+      "range": {
+        "startLine": 87,
+        "startChar": 8,
+        "endLine": 87,
+        "endChar": 14
+      },
+      "revId": "caaeaf0dd4e70aa9946d1d4603cbaca1ed6b9f98",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
