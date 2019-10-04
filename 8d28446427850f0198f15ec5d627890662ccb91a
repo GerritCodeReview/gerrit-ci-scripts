@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "88f6daaa_b897f010",
+        "filename": "jenkins/gerrit-mvn-global-refdb.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2019-10-04T15:32:41Z",
+      "side": 1,
+      "message": "Maybe we can put job template in a separate class. I was planning to reuse it for events-bus project",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 15
+      },
+      "revId": "8d28446427850f0198f15ec5d627890662ccb91a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "57d8d8fd_30b20bb0",
         "filename": "jenkins/gerrit-mvn-global-refdb.yaml",
         "patchSetId": 3
