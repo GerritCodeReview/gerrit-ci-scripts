@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "57d8d8fd_30b20bb0",
+        "filename": "jenkins/gerrit-mvn-global-refdb.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-04T14:39:35Z",
+      "side": 1,
+      "message": "global-refdb project does not exist on gerrit yet?",
+      "range": {
+        "startLine": 27,
+        "startChar": 15,
+        "endLine": 27,
+        "endChar": 58
+      },
+      "revId": "8d28446427850f0198f15ec5d627890662ccb91a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
