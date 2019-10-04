@@ -22,6 +22,30 @@
       "revId": "caaeaf0dd4e70aa9946d1d4603cbaca1ed6b9f98",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c3997a5_4fb831be",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-04T12:26:09Z",
+      "side": 1,
+      "message": "This flow doesn\u0027t do any validation: it\u0027s just the build of the master (or stable) branch.",
+      "parentUuid": "fb7e56e3_72892866",
+      "range": {
+        "startLine": 87,
+        "startChar": 8,
+        "endLine": 87,
+        "endChar": 14
+      },
+      "revId": "caaeaf0dd4e70aa9946d1d4603cbaca1ed6b9f98",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
