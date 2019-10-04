@@ -1,0 +1,10 @@
+- project:
+    name: global-refdb
+    gitserver: review.gerrithub.io
+    organisation: GerritForge
+    branch:
+      - master
+      - stable-3.0
+    jobs:
+      - 'lib-{repo}-mvn-{branch}'
+
