@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "92ac9bfc_bd7c430e",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-04T12:47:58Z",
+      "side": 1,
+      "message": "Here is the palce, where checker UUID is extracted from the build name. What would be the name of the build for Java 11 verification?",
+      "range": {
+        "startLine": 143,
+        "startChar": 4,
+        "endLine": 143,
+        "endChar": 105
+      },
+      "revId": "8f23803084c868ce2daeb107a03e956afff5b617",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab8dd03b_13c595e4",
+        "filename": "jenkins/gerrit-verifier-change.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-04T12:47:58Z",
+      "side": 1,
+      "message": "What the uuid of the checker for bazel-java11 would be here?",
+      "range": {
+        "startLine": 430,
+        "startChar": 1,
+        "endLine": 430,
+        "endChar": 107
+      },
+      "revId": "8f23803084c868ce2daeb107a03e956afff5b617",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
