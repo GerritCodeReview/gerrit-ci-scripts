@@ -1,0 +1,11 @@
+- project:
+    name: global-refdb
+    repo: global-refdb
+    gitserver: review.gerrithub.io
+    organisation: GerritForge
+    branch:
+      - master
+      - stable-3.1
+      - stable-3.0
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}'
