@@ -1,0 +1,55 @@
+- job-template:
+    name: 'lib-{repo}-mvn-{branch}'
+    description: "{repo} library build on {branch} branch with Maven\n"
+    node: mvn
+    wrappers:
+      - timeout:
+          timeout: 30
+          fail: true
+      - timestamps
+      - raw:
+          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
+    properties:
+       - build-discarder:
+           days-to-keep: 20
+           artifact-days-to-keep: 20
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    scm:
+      - git:
+         remotes:
+           - origin:
+               url: https://{gitserver}/{organisation}/{repo}
+           - gerrit:
+               url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+
+    triggers:
+      - pollscm:
+          cron: 'H/50 * * * *'
+
+    builders:
+      - shell:
+         !include-raw: gerrit-mvn-build-plugin.sh
+    publishers:
+      - archive:
+         artifacts: '**/target/{repo}*.jar*,**/target/{repo}*.json'
+
+- project:
+    name: global-refdb
+    repo: global-refdb
+    gitserver: review.gerrithub.io
+    organisation: GerritForge
+    branch:
+      - master
+      - stable-3.0
+    jobs:
+      - 'lib-{repo}-mvn-{branch}'
+
