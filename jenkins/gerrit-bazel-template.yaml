@@ -94,6 +94,46 @@
       parallel (builds)
 
 - job-template:
+    name: 'Gerrit-pipeline-{branch}'
+    project-type: pipeline
+    sandbox: true
+    concurrent: false
+    node: master
+    triggers:
+      - pollscm:
+          cron: 'H/10 * * * *'
+    properties:
+       - build-discarder:
+           days-to-keep: 256
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    dsl: |
+      def retries = 3
+      def types = ['bazel']
+      def builds = [:]
+
+      def createStep(jobFullName) {{
+          return {{
+            build jobFullName
+          }}
+      }}
+
+      if ("{branch}"=="master") {{
+        types += 'bazel-java11'
+      }}
+
+      types.each {{
+          builds.put("${{it}}", createStep("Gerrit-${{it}}-{branch}"))
+      }}
+
+      node('master') {{
+        parallel (builds)
+      }}
+
+- job-template:
     name: 'Gerrit-bazel-{branch}'
     description: "{name} {branch} branch build with Bazel\n"
     defaults: gerrit-bazel-defaults
@@ -144,6 +184,17 @@
       - stable-2.14
     jobs:
       - 'Gerrit-{branch}'
+
+- project:
+    name: Gerrit-pipeline
+    branch:
+      - master
+      - stable-3.0
+      - stable-2.16
+      - stable-2.15
+      - stable-2.14
+    jobs:
+      - 'Gerrit-pipeline-{branch}'
 
 - view:
     name: Gerrit
