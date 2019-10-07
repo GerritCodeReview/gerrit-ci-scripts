@@ -50,45 +50,6 @@
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
 
 - job-template:
-    name: 'Gerrit-{branch}'
-    project-type: flow
-    concurrent: false
-    needs-workspace: true
-    node: master
-    scm:
-      - git:
-          url: https://gerrit.googlesource.com/gerrit
-          branches:
-            - origin/{branch}
-          submodule:
-            recursive: true
-          skip-tag: true
-          basedir: gerrit
-    triggers:
-      - pollscm:
-          cron: 'H/10 * * * *'
-    properties:
-      - build-discarder:
-          days-to-keep: 256
-      - authorization:
-          anonymous:
-            - job-discover
-            - job-read
-            - job-extended-read
-    dsl: |
-      retries = 3
-      types = ['bazel']
-      if ("{branch}"=="master") {{
-        types += 'bazel-java11'
-      }}
-      builds = [:]
-      for (type in types) {{
-        def buildName = "Gerrit-${{type}}-{branch}"
-        builds.put(type, {{ -> retry (retries) {{ build(buildName) }} }})
-      }}
-      parallel (builds)
-
-- job-template:
     name: 'Gerrit-pipeline-{branch}'
     project-type: pipeline
     sandbox: true
@@ -171,17 +132,6 @@
       - master
     jobs:
       - 'Gerrit-bazel-java11-{branch}'
-
-- project:
-    name: Gerrit-build-flow
-    branch:
-      - master
-      - stable-3.0
-      - stable-2.16
-      - stable-2.15
-      - stable-2.14
-    jobs:
-      - 'Gerrit-{branch}'
 
 - project:
     name: Gerrit-pipeline
