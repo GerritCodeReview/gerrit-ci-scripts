@@ -94,6 +94,53 @@
       parallel (builds)
 
 - job-template:
+    name: 'Gerrit-pipeline-{branch}'
+    project-type: pipeline
+    sandbox: true
+    concurrent: false
+    needs-workspace: true
+    node: master
+    scm:
+      - git:
+         url: https://gerrit.googlesource.com/gerrit
+         branches:
+           - origin/{branch}
+         submodule:
+           recursive: true
+         skip-tag: true
+         basedir: gerrit
+    triggers:
+      - pollscm:
+          cron: 'H/10 * * * *'
+    properties:
+    properties:
+       - build-discarder:
+           days-to-keep: 256
+       - authorization:
+           anonymous:
+             - job-discover
+             - job-read
+             - job-extended-read
+    dsl: |
+      retries = 3
+      types = ['bazel']
+      if ("{branch}"=="master") {{
+        types += 'bazel-java11'
+      }}
+
+      node('master') {{
+        parallel {{
+          types.each {{
+            stage("${{it}}") {{
+              retry (retries) {{
+                build job: "Gerrit-${{it}}-master"
+              }}
+            }}
+          }}
+        }}
+      }}
+
+- job-template:
     name: 'Gerrit-bazel-{branch}'
     description: "{name} {branch} branch build with Bazel\n"
     defaults: gerrit-bazel-defaults
