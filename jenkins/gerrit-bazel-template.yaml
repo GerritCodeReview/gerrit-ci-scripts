@@ -55,7 +55,8 @@
 
 - job-template:
     name: 'Gerrit-{branch}'
-    project-type: flow
+    project-type: pipeline
+    sandbox: true
     concurrent: false
     needs-workspace: true
     node: master
@@ -86,12 +87,18 @@
       if ("{branch}"=="master") {{
         types += 'bazel-java11'
       }}
-      builds = [:]
-      for (type in types) {{
-        def buildName = "Gerrit-${{type}}-master"
-        builds.put(type, {{ -> retry (retries) {{ build(buildName) }} }})
+
+      node('master') {{
+        parallel {{
+          types.each {{
+            stage("${{it}}") {{
+              retry (retries) {{
+                build job: "Gerrit-${{it}}-master"
+              }}
+            }}
+          }}
+        }}
       }}
-      parallel (builds)
 
 - job-template:
     name: 'Gerrit-bazel-{branch}'
