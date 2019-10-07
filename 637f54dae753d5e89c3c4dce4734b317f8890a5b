@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "197e5271_49d86e32",
+        "filename": "jenkins/gerrit-mvn-lib-global-refdb.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-07T07:30:31Z",
+      "side": 1,
+      "message": "the templating variable `name` is never used. Should we just remove `repo` in favor of `name` like we do for all plugins?",
+      "revId": "637f54dae753d5e89c3c4dce4734b317f8890a5b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
