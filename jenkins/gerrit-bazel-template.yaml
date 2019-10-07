@@ -88,7 +88,7 @@
       }}
       builds = [:]
       for (type in types) {{
-        def buildName = "Gerrit-${{type}}-master"
+        def buildName = "Gerrit-${{type}}-{branch}"
         builds.put(type, {{ -> retry (retries) {{ build(buildName) }} }})
       }}
       parallel (builds)
