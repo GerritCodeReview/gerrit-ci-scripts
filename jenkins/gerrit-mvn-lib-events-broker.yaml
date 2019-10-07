@@ -1,0 +1,9 @@
+- project:
+    name: events-broker
+    repo: events-broker
+    gitserver: review.gerrithub.io
+    organisation: GerritForge
+    branch:
+      - master
+    jobs:
+      - 'lib-{repo}-mvn-{branch}'
