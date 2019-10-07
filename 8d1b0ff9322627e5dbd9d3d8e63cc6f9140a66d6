@@ -16,6 +16,24 @@
       "revId": "8d1b0ff9322627e5dbd9d3d8e63cc6f9140a66d6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c4110088_ff09fef0",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-07T09:37:00Z",
+      "side": 1,
+      "message": "It finally works.\nAdditional whitespaces (other than what `\u003e`adds) are not allowed as it seems",
+      "parentUuid": "fbb5c7ca_09a9295e",
+      "revId": "8d1b0ff9322627e5dbd9d3d8e63cc6f9140a66d6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
