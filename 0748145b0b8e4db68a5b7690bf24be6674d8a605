@@ -22,6 +22,30 @@
       "revId": "0748145b0b8e4db68a5b7690bf24be6674d8a605",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c74c0ac_4f848497",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-08T10:47:14Z",
+      "side": 1,
+      "message": "Good catch, this needs to go back 1 char also.",
+      "parentUuid": "af894b7e_17edf849",
+      "range": {
+        "startLine": 64,
+        "startChar": 7,
+        "endLine": 68,
+        "endChar": 32
+      },
+      "revId": "0748145b0b8e4db68a5b7690bf24be6674d8a605",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
