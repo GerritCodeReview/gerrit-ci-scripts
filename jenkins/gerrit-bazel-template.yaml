@@ -59,13 +59,13 @@
       - pollscm:
           cron: 'H/10 * * * *'
     properties:
-       - build-discarder:
-           days-to-keep: 256
-       - authorization:
-           anonymous:
-             - job-discover
-             - job-read
-             - job-extended-read
+      - build-discarder:
+          days-to-keep: 256
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
     dsl: |
       def retries = 3
       def types = ['bazel']
