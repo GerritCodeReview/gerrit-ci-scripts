@@ -23,6 +23,7 @@ start: build
           -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
           -v /var/run/docker.sock:/var/run/docker.sock \
           -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
+          -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc \
           --net=host ${IMAGE}
 
 start_osx:
