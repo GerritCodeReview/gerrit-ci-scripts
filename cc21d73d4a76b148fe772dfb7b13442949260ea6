@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe24d729_aebd34ea",
+        "filename": "jenkins/gerrit-mvn-lib-global-refdb.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-08T09:42:15Z",
+      "side": 1,
+      "message": "An empty line too much",
+      "revId": "cc21d73d4a76b148fe772dfb7b13442949260ea6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bfc691ef_afb18456",
+        "filename": "jenkins/gerrit-mvn-lib-template.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-08T09:42:15Z",
+      "side": 1,
+      "message": "Indentation is off in this and the following lines.",
+      "revId": "cc21d73d4a76b148fe772dfb7b13442949260ea6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5ced182b_4c69f081",
+        "filename": "jenkins/gerrit-mvn-lib-template.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-08T09:42:15Z",
+      "side": 1,
+      "message": "Indentation",
+      "revId": "cc21d73d4a76b148fe772dfb7b13442949260ea6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "094bbe7f_27a092e5",
+        "filename": "jenkins/gerrit-mvn-lib-template.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-08T09:42:15Z",
+      "side": 1,
+      "message": "Indentation",
+      "revId": "cc21d73d4a76b148fe772dfb7b13442949260ea6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "445a8db2_9172a9be",
+        "filename": "jenkins/gerrit-mvn-lib-template.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-08T09:42:15Z",
+      "side": 1,
+      "message": "Indentation",
+      "revId": "cc21d73d4a76b148fe772dfb7b13442949260ea6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dfa8e8f8_c3468580",
+        "filename": "jenkins/gerrit-mvn-lib-template.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-08T09:42:15Z",
+      "side": 1,
+      "message": "One empty line too much",
+      "revId": "cc21d73d4a76b148fe772dfb7b13442949260ea6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
