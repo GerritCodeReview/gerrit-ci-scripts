@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "488119d5_5a131b8a",
+        "filename": "jenkins/gerrit-bazel-plugin-replication.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-10-08T00:36:57Z",
+      "side": 1,
+      "message": "Do we still need this fork?\n\n(If not, it can be removed in a separate change)",
+      "range": {
+        "startLine": 8,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 24
+      },
+      "revId": "f0410d47c76c150e1721ebbbb97417200a53e8dc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
