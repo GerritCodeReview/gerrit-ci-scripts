@@ -1,0 +1,14 @@
+import com.cloudbees.plugins.credentials.impl.*;
+import com.cloudbees.plugins.credentials.*;
+import com.cloudbees.plugins.credentials.domains.*;
+
+new File(".netrc").eachLine { line ->
+  def lineParts = line.trim().split()
+  if (lineParts.size() > 0) {
+    def machine = lineParts[1]
+    def user = lineParts[3]
+    def pass = lineParts[5]
+    Credentials c = (Credentials) new UsernamePasswordCredentialsImpl(CredentialsScope.GLOBAL,java.util.UUID.randomUUID().toString(), machine, user, pass)
+    SystemCredentialsProvider.getInstance().getStore().addCredentials(Domain.global(), c)
+  }
+}
