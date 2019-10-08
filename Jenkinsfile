@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 // Copyright (C) 2019 The Android Open Source Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,13 +13,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import hudson.model.*;
-import jenkins.model.*;
+node ('master') {
+  checkout scm
 
+  gerritReview labels: ['Code-Style': 0]
+  stage('YAML lint') {
+    def lintOutTrimmed = ""
 
-Thread.start {
-      sleep 10000
-      println "--> setting maximum number of executors on master"
-      Jenkins.instance.setNumExecutors(10)
-      Jenkins.instance.reload()
+    docker.image('gerritforge/gerrit-ci-slave-debian:stretch') {
+      def lintOut = sh(script: 'yamllint -c yamllint-config.yaml jenkins/*.yaml', returnStdout: true)
+      lintOutTrimmed = lintOut.trim()
+    }
+
+    if (lintOutTrimmed) {
+      gerritReview labels: ['Code-Style': -1], message: lintOutTrimmed
+    } else {
+      gerritReview labels: ['Code-Style': 1]
+    }
+  }
 }
