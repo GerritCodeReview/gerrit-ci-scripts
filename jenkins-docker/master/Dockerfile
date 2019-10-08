@@ -23,10 +23,11 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     automake \
     xsltproc \
-    apt-transport-https && \
+    apt-transport-https \
+    python3-pip && \
     rm -rf /var/lib/apt/lists/* && \
-    \
     pip install jenkins_job_builder==2.7.0 pbr==2.0.0 && \
+    pip3 install yamllint && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
