@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "27ddab54_dedf8814",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-10-08T23:39:27Z",
+      "side": 1,
+      "message": "Do we want to pin this to a specific version?",
+      "range": {
+        "startLine": 30,
+        "startChar": 17,
+        "endLine": 30,
+        "endChar": 25
+      },
+      "revId": "92ea826deb2060be80cbb59a2836ae91e4c2b350",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "90882842_204a55cf",
+        "filename": "jenkins-docker/master/number-executors.groovy",
+        "patchSetId": 18
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-10-08T23:39:27Z",
+      "side": 1,
+      "message": "Is this change related?",
+      "range": {
+        "startLine": 8,
+        "startChar": 39,
+        "endLine": 8,
+        "endChar": 41
+      },
+      "revId": "92ea826deb2060be80cbb59a2836ae91e4c2b350",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "95b64b49_df26000b",
+        "filename": "jenkins-docker/master/set-credentials.groovy",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-10-08T23:39:27Z",
+      "side": 1,
+      "message": "Copyright and license header?",
+      "revId": "92ea826deb2060be80cbb59a2836ae91e4c2b350",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
