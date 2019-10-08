@@ -59,7 +59,7 @@
       - pollscm:
           cron: 'H/10 * * * *'
     properties:
-       - build-discarder:
+      - build-discarder:
            days-to-keep: 256
        - authorization:
            anonymous:
