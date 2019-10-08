@@ -23,10 +23,11 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     automake \
     xsltproc \
-    apt-transport-https && \
+    apt-transport-https \
+    python3-pip && \
     rm -rf /var/lib/apt/lists/* && \
-    \
     pip install jenkins_job_builder==2.7.0 pbr==2.0.0 && \
+    pip3 install yamllint && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
@@ -60,6 +61,7 @@ RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
     mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts-manual/
 
 COPY number-executors.groovy $JENKINS_REF/init.groovy.d/
+COPY set-credentials.groovy $JENKINS_REF/init.groovy.d/
 COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
 COPY gerrit-ci-scripts-manual.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
 

@@ -12,13 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import hudson.model.*;
-import jenkins.model.*;
+node ('master') {
+  checkout scm
 
+  gerritReview labels: [Verified: 0]
+  stage('YAML lint') {
+    def lintOut = sh (script: 'yamllint -c yamllint-config.yaml jenkins/*.yaml', returnStdout: true)
+    def lintOutTrimmed = lintOut.trim()
 
-Thread.start {
-      sleep 10000
-      println "--> setting maximum number of executors on master"
-      Jenkins.instance.setNumExecutors(10)
-      Jenkins.instance.reload()
+    if (lintOutTrimmed) {
+      def files = formatOut.split('\n').collect { it.split(' ').last() }
+      gerritReview labels: ['Code-Style': -1], message: lintOutTrimmed
+    } else {
+      gerritReview labels: ['Code-Style': 1]
+    }
+  }
 }
