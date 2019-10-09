@@ -1,0 +1,17 @@
+- job:
+    name: 'verifier-trigger'
+    project-type: pipeline
+    concurrent: false
+    node: master
+    triggers:
+      - timed:
+          cron: 'H/5 * * * *'
+    properties:
+      - build-discarder:
+          days-to-keep: 1
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
+    dsl: !include-raw: verifier-trigger.yaml
