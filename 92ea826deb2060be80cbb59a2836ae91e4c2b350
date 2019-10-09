@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b9919fb0_08e01d4b",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 18
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T07:07:32Z",
+      "side": 1,
+      "message": "Not sure we have to: the syntax configuration is not in the version of the yamllint (like in GJF) but in a configuration file.\n\n@Thomas?",
+      "parentUuid": "27ddab54_dedf8814",
+      "range": {
+        "startLine": 30,
+        "startChar": 17,
+        "endLine": 30,
+        "endChar": 25
+      },
+      "revId": "92ea826deb2060be80cbb59a2836ae91e4c2b350",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "90882842_204a55cf",
         "filename": "jenkins-docker/master/number-executors.groovy",
         "patchSetId": 18
@@ -36,6 +60,30 @@
       "writtenOn": "2019-10-08T23:39:27Z",
       "side": 1,
       "message": "Is this change related?",
+      "range": {
+        "startLine": 8,
+        "startChar": 39,
+        "endLine": 8,
+        "endChar": 41
+      },
+      "revId": "92ea826deb2060be80cbb59a2836ae91e4c2b350",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "235db700_77068492",
+        "filename": "jenkins-docker/master/number-executors.groovy",
+        "patchSetId": 18
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T07:07:32Z",
+      "side": 1,
+      "message": "Yes, as this job would run on master.\nLet me add a specific reason in the commit description.",
+      "parentUuid": "90882842_204a55cf",
       "range": {
         "startLine": 8,
         "startChar": 39,
@@ -62,6 +110,24 @@
       "revId": "92ea826deb2060be80cbb59a2836ae91e4c2b350",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94a6c098_c535e563",
+        "filename": "jenkins-docker/master/set-credentials.groovy",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T07:07:32Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "95b64b49_df26000b",
+      "revId": "92ea826deb2060be80cbb59a2836ae91e4c2b350",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
