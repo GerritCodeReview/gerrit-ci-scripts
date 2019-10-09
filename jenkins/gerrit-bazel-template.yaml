@@ -71,9 +71,11 @@
       def types = ['bazel']
       def builds = [:]
 
-      def createStep(jobFullName) {{
+      def createStep(type) {{
           return {{
-              build jobFullName
+              stage(type) {{
+                build "Gerrit-${{type}}-{branch}"
+              }}
           }}
       }}
 
@@ -82,7 +84,7 @@
       }}
 
       types.each {{
-          builds.put("${{it}}", createStep("Gerrit-${{it}}-{branch}"))
+          builds.put("${{it}}", createStep(it))
       }}
 
       node('master') {{
