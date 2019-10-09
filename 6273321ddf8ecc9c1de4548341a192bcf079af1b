@@ -2,6 +2,138 @@
   "comments": [
     {
       "key": {
+        "uuid": "390bd9bb_c57f9c35",
+        "filename": "jenkins/verifier-trigger.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T14:53:04Z",
+      "side": 1,
+      "message": "/verifier/webhook ?",
+      "range": {
+        "startLine": 2,
+        "startChar": 11,
+        "endLine": 2,
+        "endChar": 19
+      },
+      "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fbbe537f_ff3b676c",
+        "filename": "jenkins/verifier-trigger.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T14:53:04Z",
+      "side": 1,
+      "message": "This is not needed: if we query Gerrit for the recent changes, every change JSON payload will have the associated project name.",
+      "range": {
+        "startLine": 18,
+        "startChar": 6,
+        "endLine": 18,
+        "endChar": 19
+      },
+      "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ea05435f_a6e93a7a",
+        "filename": "jenkins/verifier-trigger.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T14:53:04Z",
+      "side": 1,
+      "message": "What is missing here is a generic query on Gerrit to know \"what\u0027s new\" since the last invocation. That can be done regardless of the project name.",
+      "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eced5283_8318ae06",
+        "filename": "jenkins/verifier-trigger.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T14:53:04Z",
+      "side": 1,
+      "message": "This should be \u0027changes\u0027, obtained from a query from Gerrit.",
+      "range": {
+        "startLine": 22,
+        "startChar": 10,
+        "endLine": 22,
+        "endChar": 18
+      },
+      "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a0ffb5ad_e4a2c31e",
+        "filename": "jenkins/verifier-trigger.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T14:53:04Z",
+      "side": 1,
+      "message": "We don\u0027t really know if *that* is the event. However, it\u0027s the best guess we can make :-)",
+      "range": {
+        "startLine": 25,
+        "startChar": 36,
+        "endLine": 25,
+        "endChar": 52
+      },
+      "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce1e392d_da55fb0c",
+        "filename": "jenkins/verifier-trigger.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T14:53:04Z",
+      "side": 1,
+      "message": "Leftover?",
+      "range": {
+        "startLine": 27,
+        "startChar": 18,
+        "endLine": 27,
+        "endChar": 29
+      },
+      "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "dbd669be_07c87739",
         "filename": "jenkins/verifier-trigger.yaml",
         "patchSetId": 1
