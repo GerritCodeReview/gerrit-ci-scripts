@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "067753f7_8c93b3eb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 20
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-09T07:40:48Z",
+      "side": 1,
+      "message": "True, but I also don\u0027t like to stuff to much stuff into the master container image, if it can be avoided.\nI would suggest to create a new slave-container based directly on slave-debian, which contains a set of python tools. Since we are starting to work with pipelines now, we become more flexible, since we can use multiple agents in a single job, allowing us to use several potentially smaller slave containers.\nIn the end, I planned to create such a slave anyway for the k8s-gerrit project at some point, since I use python for linting and testing as well. Maybe we can move this job to such a slave as soon as there is at least that additional use case for it. Until then the job might also do more than just lining the yaml-files, but maybe also rebuilding images etc..",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c39be65_6576c27d",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-09T07:40:48Z",
+      "side": 1,
+      "message": "Why do we touch the Verified label here? Currently this job just checks the code style.",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0796c774_4fedf344",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-09T07:40:48Z",
+      "side": 1,
+      "message": "This variable isn\u0027t used.",
+      "range": {
+        "startLine": 24,
+        "startChar": 10,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47be10d0_346bf32c",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-09T07:40:48Z",
+      "side": 1,
+      "message": "Do we want to post all output to Gerrit? This could theoretically be a lot.",
+      "range": {
+        "startLine": 25,
+        "startChar": 56,
+        "endLine": 25,
+        "endChar": 70
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad00af15_e828fd46",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-09T07:40:48Z",
+      "side": 1,
+      "message": "Won\u0027t this interfere with the last list entry?",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47858212_d2c82ab5",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-09T07:40:48Z",
+      "side": 1,
+      "message": "Same as above. Duplicate list entry.",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
