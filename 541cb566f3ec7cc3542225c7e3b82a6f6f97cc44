@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "14b7f90a_72d0e4cb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 20
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T17:45:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d9b41b7_2acef01f",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9c39be65_6576c27d",
         "filename": "Jenkinsfile",
         "patchSetId": 20
@@ -69,6 +87,24 @@
       "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0bb02dc1_ed54ce28",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T17:45:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d3ae95e_1b3afe71",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -119,6 +155,30 @@
     },
     {
       "key": {
+        "uuid": "034efc75_b9b970bb",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T17:45:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c51a7228_ca7aa21d",
+      "range": {
+        "startLine": 24,
+        "startChar": 10,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "47be10d0_346bf32c",
         "filename": "Jenkinsfile",
         "patchSetId": 20
@@ -166,6 +226,30 @@
     },
     {
       "key": {
+        "uuid": "cf754c8d_078e8c62",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T17:45:23Z",
+      "side": 1,
+      "message": "Is this OK as 1st solution? Will post the breakdown into pieces in the follow-up.",
+      "parentUuid": "f8169946_6acfdbdf",
+      "range": {
+        "startLine": 25,
+        "startChar": 56,
+        "endLine": 25,
+        "endChar": 70
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d29bc886_c719a6ce",
         "filename": "jenkins-docker/master/Dockerfile",
         "patchSetId": 20
@@ -189,6 +273,30 @@
     },
     {
       "key": {
+        "uuid": "e802122a_20bc97f6",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T17:45:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d29bc886_c719a6ce",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 30
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "851eb790_ac3bd4e2",
         "filename": "jenkins-docker/master/number-executors.groovy",
         "patchSetId": 20
@@ -200,6 +308,30 @@
       "writtenOn": "2019-10-09T08:28:07Z",
       "side": 1,
       "message": "This can be avoided.",
+      "range": {
+        "startLine": 22,
+        "startChar": 39,
+        "endLine": 22,
+        "endChar": 41
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5433a937_54a3b7c2",
+        "filename": "jenkins-docker/master/number-executors.groovy",
+        "patchSetId": 20
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T17:45:23Z",
+      "side": 1,
+      "message": "Actually not: part of the pipeline is executed on the master anyway.",
+      "parentUuid": "851eb790_ac3bd4e2",
       "range": {
         "startLine": 22,
         "startChar": 39,
@@ -247,6 +379,24 @@
     },
     {
       "key": {
+        "uuid": "e0391974_93c9d5ee",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T17:45:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc63f4b0_8c1d895f",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "47858212_d2c82ab5",
         "filename": "jenkins/gerrit-ci-scripts.yaml",
         "patchSetId": 20
@@ -279,6 +429,24 @@
       "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8472971f_b39d810e",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T17:45:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d114f622_05019c03",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
