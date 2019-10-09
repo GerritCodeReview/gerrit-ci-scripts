@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4d9b41b7_2acef01f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 20
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T08:28:07Z",
+      "side": 1,
+      "message": "\u003e True, but I also don\u0027t like to stuff to much stuff into the master container image, if it can be avoided.\n\nIn this case, it\u0027s only yamllint. However, you are right and that isn\u0027t a good practice.\n\n\u003e I would suggest to create a new slave-container based directly on slave-debian, which contains a set of python tools. Since we are starting to work with pipelines now, we become more flexible, since we can use multiple agents in a single job, allowing us to use several potentially smaller slave containers.\n\nLet me add an extra image for it.",
+      "parentUuid": "067753f7_8c93b3eb",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9c39be65_6576c27d",
         "filename": "Jenkinsfile",
         "patchSetId": 20
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8d3ae95e_1b3afe71",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T08:28:07Z",
+      "side": 1,
+      "message": "\u003e Why do we touch the Verified label here? Currently this job just checks the code style.\n\nGood catch, it\u0027s a typo. Should be \u0027Code-Style\u0027",
+      "parentUuid": "9c39be65_6576c27d",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0796c774_4fedf344",
         "filename": "Jenkinsfile",
         "patchSetId": 20
@@ -47,6 +83,30 @@
       "writtenOn": "2019-10-09T07:40:48Z",
       "side": 1,
       "message": "This variable isn\u0027t used.",
+      "range": {
+        "startLine": 24,
+        "startChar": 10,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c51a7228_ca7aa21d",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T08:28:07Z",
+      "side": 1,
+      "message": "Yes, I was planning to extract the list of files and put each feedback to the associated file. But not yet on this change. Will remove it.",
+      "parentUuid": "0796c774_4fedf344",
       "range": {
         "startLine": 24,
         "startChar": 10,
@@ -82,6 +142,76 @@
     },
     {
       "key": {
+        "uuid": "f8169946_6acfdbdf",
+        "filename": "Jenkinsfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T08:28:07Z",
+      "side": 1,
+      "message": "I know, however, this is just the first step. The lintOutTrimmed is going then to be broken down in pieces and each feedback put as a comment to each line.",
+      "parentUuid": "47be10d0_346bf32c",
+      "range": {
+        "startLine": 25,
+        "startChar": 56,
+        "endLine": 25,
+        "endChar": 70
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d29bc886_c719a6ce",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 20
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T08:28:07Z",
+      "side": 1,
+      "message": "Changes to be removed from here and put into another Docker image.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 30
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "851eb790_ac3bd4e2",
+        "filename": "jenkins-docker/master/number-executors.groovy",
+        "patchSetId": 20
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T08:28:07Z",
+      "side": 1,
+      "message": "This can be avoided.",
+      "range": {
+        "startLine": 22,
+        "startChar": 39,
+        "endLine": 22,
+        "endChar": 41
+      },
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ad00af15_e828fd46",
         "filename": "jenkins/gerrit-ci-scripts.yaml",
         "patchSetId": 20
@@ -99,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "fc63f4b0_8c1d895f",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T08:28:07Z",
+      "side": 1,
+      "message": "To be honest, I just copy\u0026pasted an example. Not sure we need tags at all.",
+      "parentUuid": "ad00af15_e828fd46",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "47858212_d2c82ab5",
         "filename": "jenkins/gerrit-ci-scripts.yaml",
         "patchSetId": 20
@@ -110,6 +258,24 @@
       "writtenOn": "2019-10-09T07:40:48Z",
       "side": 1,
       "message": "Same as above. Duplicate list entry.",
+      "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d114f622_05019c03",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T08:28:07Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "47858212_d2c82ab5",
       "revId": "541cb566f3ec7cc3542225c7e3b82a6f6f97cc44",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
