@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dbd669be_07c87739",
+        "filename": "jenkins/verifier-trigger.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-09T14:52:07Z",
+      "side": 1,
+      "message": "Because of execute(), we can\u0027t run in the sandbox (or we at least have to configure an exception for that). It might be worth looking for an alternative solution.",
+      "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
