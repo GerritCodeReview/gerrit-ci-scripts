@@ -148,6 +148,24 @@
       "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "838e47d5_34d6125a",
+        "filename": "jenkins/verifier-trigger.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T14:53:53Z",
+      "side": 1,
+      "message": "What about a simple \u0027sh\u0027 command?",
+      "parentUuid": "dbd669be_07c87739",
+      "revId": "6273321ddf8ecc9c1de4548341a192bcf079af1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
