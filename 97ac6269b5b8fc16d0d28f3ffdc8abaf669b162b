@@ -70,6 +70,30 @@
       "revId": "97ac6269b5b8fc16d0d28f3ffdc8abaf669b162b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "88b5f1c2_0e62d21f",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-09T21:26:12Z",
+      "side": 1,
+      "message": "And it is back green, automatically.\nIs this enough to say that this series works?",
+      "parentUuid": "864fe9fc_3e73aa10",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 38
+      },
+      "revId": "97ac6269b5b8fc16d0d28f3ffdc8abaf669b162b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
