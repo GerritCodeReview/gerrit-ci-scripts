@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7775674f_cdb8fc4a",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-09T21:07:15Z",
+      "side": 1,
+      "message": "This is really cool. Can you break in one patch set the indentation here, just to verify, that the CI would vote CS-1? And fix it again in the follow-up patch set?",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 38
+      },
+      "revId": "97ac6269b5b8fc16d0d28f3ffdc8abaf669b162b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
