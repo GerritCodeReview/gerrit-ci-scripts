@@ -1,0 +1,35 @@
+- job:
+    name: 'verifier-trigger'
+    project-type: pipeline
+    concurrent: false
+    node: master
+    triggers:
+      - pollscm:
+          cron: 'H/5 * * * *'
+    properties:
+      - build-discarder:
+          days-to-keep: 256
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
+    dsl: |
+      def projects = ["gerrit-ci-scripts"]
+      def hookUrl = "${{env.JENKINS_URL}}gerrit-webhook/"
+
+      node('master') {{
+          projects.each {{ project ->
+              stage("${project}") {{
+                  def jsonPayload = '{{"project":{{"name":"' + project +
+                      '"}}, "type":"patchset-created"}}'
+                  def cmd = ["curl", "-v", "-d", jsonPayload, hookUrl]
+                  println cmd
+                  def exec = cmd.execute()
+                  exec.waitFor()
+                  if (exec.exitValue() > 0) {{
+                    error "Could not trigger job for ${{project}}"
+                  }}
+              }}
+          }}
+      }}
