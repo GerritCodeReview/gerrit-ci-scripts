@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a18d537a_1aa8b027",
+        "filename": "jenkins/verifier-trigger.groovy",
+        "patchSetId": 15
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-10T07:44:19Z",
+      "side": 1,
+      "message": "I think it would be helpful to put such hard-coded values into some global variable or object, like it is done for the existing groovy scripts. That makes it easier to determine or adjust these values.",
+      "revId": "50f71b141b8eb0da23127b11507a2f30283bc88b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
