@@ -35,6 +35,24 @@
       "revId": "50f71b141b8eb0da23127b11507a2f30283bc88b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5df9e43c_36fc88d6",
+        "filename": "jenkins/verifier-trigger.groovy",
+        "patchSetId": 15
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-10T10:38:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e28c0192_0b338d7d",
+      "revId": "50f71b141b8eb0da23127b11507a2f30283bc88b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
