@@ -97,6 +97,3 @@
             all-branches:
               - suppress-scm-triggering: true
               - pipeline-branch-durability-override: max-survivability
-          build-strategies:
-            - regular-branches: true
-            - skip-initial-build: true
