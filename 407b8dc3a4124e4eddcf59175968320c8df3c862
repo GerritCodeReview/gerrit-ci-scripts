@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "475fdfc9_1e9dd52b",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-10T12:12:52Z",
+      "side": 1,
+      "message": "For these options we will actually need this plugin: https://plugins.jenkins.io/basic-branch-build-strategies.",
+      "revId": "407b8dc3a4124e4eddcf59175968320c8df3c862",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
