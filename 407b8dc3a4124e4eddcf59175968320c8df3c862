@@ -16,6 +16,24 @@
       "revId": "407b8dc3a4124e4eddcf59175968320c8df3c862",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a605d9d_9c3acdff",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 29
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-10T12:32:54Z",
+      "side": 1,
+      "message": "Possibly we don\u0027t even use it. Let me get rid of it.",
+      "parentUuid": "475fdfc9_1e9dd52b",
+      "revId": "407b8dc3a4124e4eddcf59175968320c8df3c862",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
