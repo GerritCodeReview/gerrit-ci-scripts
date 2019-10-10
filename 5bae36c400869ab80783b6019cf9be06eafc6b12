@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49ec67c7_3bf26a4e",
+        "filename": "Jenkinsfile",
+        "patchSetId": 28
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-10T07:35:04Z",
+      "side": 1,
+      "message": "nit: Should we add an empty line between shebang and license header?",
+      "revId": "5bae36c400869ab80783b6019cf9be06eafc6b12",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ebac9217_584032fb",
+        "filename": "jenkins-docker/slave-python3/Dockerfile",
+        "patchSetId": 28
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-10T07:35:04Z",
+      "side": 1,
+      "message": "nit: No new empty line at end of file",
+      "revId": "5bae36c400869ab80783b6019cf9be06eafc6b12",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
