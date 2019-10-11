@@ -22,7 +22,6 @@ class Globals {
     static final def maxChanges = 500
     static final def pollMinutes = 5
     static final def tsFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss.S Z")
-    static final def hookUrl = "${env.JENKINS_URL}gerrit-webhook/"
 }
 
 import static Globals.*
@@ -53,7 +52,7 @@ node('master') {
         stage("${project}") {
             def jsonPayload = '{"project":{"name":"' + project +
                     '"}, "type":"patchset-created"}'
-            sh "curl -d '${jsonPayload}' $hookUrl"
+            sh "curl -d '${jsonPayload}' ${env.JENKINS_URL}gerrit-webhook/"
         }
     }
 }
