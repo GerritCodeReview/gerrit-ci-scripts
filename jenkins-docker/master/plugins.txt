@@ -48,6 +48,7 @@ git-server:1.7
 greenballs:1.15
 groovy-postbuild:2.4.1
 handlebars:1.1.1
+http_request:1.8.23
 jackson2-api:2.9.9
 logstash:2.0.0
 icon-shim:2.0.3
