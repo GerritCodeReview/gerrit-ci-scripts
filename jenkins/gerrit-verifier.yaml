@@ -171,3 +171,20 @@
     properties:
       - build-discarder:
           days-to-keep: 1
+
+- job:
+    name: 'Gerrit-verifier-pipeline'
+    description: Multi-branch pipeline to validate Gerrit
+    project-type: multibranch
+    node: master
+    scm:
+      - gerrit:
+          url: https://gerrit-review.googlesource.com/a/gerrit
+          credentials-id: gerrit-review.googlesource.com
+          refspecs:
+            - '+refs/heads/*:refs/remotes/@{remote}/*'
+            - '+refs/changes/*:refs/remotes/@{remote}/*'
+          property-strategies:
+            all-branches:
+              - suppress-scm-triggering: true
+              - pipeline-branch-durability-override: max-survivability
