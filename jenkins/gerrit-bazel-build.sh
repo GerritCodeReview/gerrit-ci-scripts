@@ -7,4 +7,5 @@ export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=st
 
 bazelisk version
 bazelisk build $BAZEL_OPTS plugins:core release api
+tools/eclipse/maven/api.sh install
 tools/eclipse/project.py --bazel bazelisk
