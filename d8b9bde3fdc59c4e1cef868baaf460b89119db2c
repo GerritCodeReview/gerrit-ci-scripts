@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab3e41e_44be4359",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-10-16T09:06:58Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be `tools/maven/api.sh install`?",
+      "revId": "d8b9bde3fdc59c4e1cef868baaf460b89119db2c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
