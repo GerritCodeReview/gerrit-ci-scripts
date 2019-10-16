@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "23d7c4af_988addcc",
+        "filename": "jenkins-docker/master/jenkins.model.JenkinsLocationConfiguration.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-16T22:54:59Z",
+      "side": 1,
+      "message": "jenkins@gerritforge.com",
+      "range": {
+        "startLine": 3,
+        "startChar": 16,
+        "endLine": 3,
+        "endChar": 65
+      },
+      "revId": "22d21e7517453078e654d70f2b1bf5d4aee8ef57",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
