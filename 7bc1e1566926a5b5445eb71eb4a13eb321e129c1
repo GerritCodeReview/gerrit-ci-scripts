@@ -22,6 +22,30 @@
       "revId": "7bc1e1566926a5b5445eb71eb4a13eb321e129c1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2c7126fe_74fa4c67",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-17T20:54:29Z",
+      "side": 1,
+      "message": "Oh yes, it is NOT correct at all. It should contain the {branch} placeholder that is then replaced by JJB. Let me upload a fix for it.",
+      "parentUuid": "7bb14a12_1418d03f",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 0
+      },
+      "revId": "7bc1e1566926a5b5445eb71eb4a13eb321e129c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
