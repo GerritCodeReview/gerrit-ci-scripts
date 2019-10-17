@@ -184,7 +184,7 @@
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
             - '+refs/changes/*:refs/remotes/@{remote}/*'
-          property-strategies:
-            all-branches:
-              - suppress-scm-triggering: true
-              - pipeline-branch-durability-override: max-survivability
+          build-strategies:
+            - named-branches:
+                - regex-name:
+                    regex: '^\d+\/\d+\/\d+$'
