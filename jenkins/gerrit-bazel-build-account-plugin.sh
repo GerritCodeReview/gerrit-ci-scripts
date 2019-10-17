@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
-git checkout -f gerrit/stable-2.16
+git checkout -f gerrit/{branch}
 rm -rf plugins/account
-git read-tree -u --prefix=plugins/account origin/stable-2.16
+git read-tree -u --prefix=plugins/account origin/{branch}
 
 if [ -f plugins/account/external_plugin_deps.bzl ]
 then
@@ -33,7 +33,7 @@ fi
 
 for JAR in $(find bazel-bin/plugins/account -name account*.jar)
 do
-    PLUGIN_VERSION=$(git describe  --always origin/stable-2.16)
+    PLUGIN_VERSION=$(git describe  --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=bazel-bin/plugins/account/$(basename $JAR)
