@@ -18,8 +18,8 @@
             recursive: true
           skip-tag: true
     builders:
-      - shell: !include-raw: gerrit-bazel-build-account-plugin.sh
-      - shell: !include-raw: gerrit-bazel-get-project-info.sh
+      - shell: !include: gerrit-bazel-build-account-plugin.sh
+      - shell: !include: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
           artifacts: >
