@@ -12,4 +12,3 @@
       - 'plugin-scripting-{name}-bazel-{branch}':
           branch:
             - stable-2.15
-            - stable-2.14
