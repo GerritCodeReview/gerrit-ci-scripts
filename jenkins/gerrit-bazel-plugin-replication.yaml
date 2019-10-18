@@ -1,10 +1,6 @@
 - project:
     name: replication
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master
-            - stable-2.14
       - 'plugin-{name}-gerritforge-{branch}':
           targets: 'plugins/replication'
           branch:
