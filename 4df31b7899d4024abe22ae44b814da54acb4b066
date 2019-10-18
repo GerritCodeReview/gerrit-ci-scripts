@@ -22,6 +22,30 @@
       "revId": "4df31b7899d4024abe22ae44b814da54acb4b066",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a251269b_9b588737",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-18T09:15:05Z",
+      "side": 1,
+      "message": "Ah, good point. I missed that part last night. Let me raise a separate change for that.",
+      "parentUuid": "e8c256df_947c5da6",
+      "range": {
+        "startLine": 30,
+        "startChar": 106,
+        "endLine": 30,
+        "endChar": 140
+      },
+      "revId": "4df31b7899d4024abe22ae44b814da54acb4b066",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
