@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "661284db_b699e50e",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-18T09:13:16Z",
+      "side": 0,
+      "message": "This would mean we would have to update te checker definition.",
+      "range": {
+        "startLine": 19,
+        "startChar": 14,
+        "endLine": 19,
+        "endChar": 35
+      },
+      "revId": "e100ac6f578b1dcbb70df295103d0cd8f9b6059b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}

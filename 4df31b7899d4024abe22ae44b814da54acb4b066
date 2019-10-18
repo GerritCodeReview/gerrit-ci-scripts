@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8c256df_947c5da6",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-18T09:13:16Z",
+      "side": 1,
+      "message": "This would also mean that we would have to upgrade the checker definition to query for stable-3.1 branch.",
+      "range": {
+        "startLine": 30,
+        "startChar": 106,
+        "endLine": 30,
+        "endChar": 140
+      },
+      "revId": "4df31b7899d4024abe22ae44b814da54acb4b066",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
