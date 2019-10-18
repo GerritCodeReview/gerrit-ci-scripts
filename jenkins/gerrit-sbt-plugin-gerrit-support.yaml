@@ -4,4 +4,3 @@
       - 'plugin-{name}-sbt-{branch}':
           branch:
             - master
-            - stable-2.14
