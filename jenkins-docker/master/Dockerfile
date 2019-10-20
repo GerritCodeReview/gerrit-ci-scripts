@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y \
     apt-transport-https && \
     rm -rf /var/lib/apt/lists/* && \
     \
-    pip install jenkins_job_builder==2.7.0 pbr==2.0.0 && \
+    pip install jenkins_job_builder==3.2.0 pbr==2.0.0 && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
