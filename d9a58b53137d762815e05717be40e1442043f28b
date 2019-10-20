@@ -22,6 +22,30 @@
       "revId": "d9a58b53137d762815e05717be40e1442043f28b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bc3ef5f7_39f3d2aa",
+        "filename": "jenkins/gerrit-bazel-plugin-high-availability.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-20T23:21:43Z",
+      "side": 1,
+      "message": "Hopefully not, but after the hackathon :-)\nThere are still fixes in the gerritforge\u0027s fork that aren\u0027t in the vanilla.\n\nThe focus of the hackathon is to fill the gap.",
+      "parentUuid": "062e0dab_30a5ccb2",
+      "range": {
+        "startLine": 16,
+        "startChar": 6,
+        "endLine": 23,
+        "endChar": 25
+      },
+      "revId": "d9a58b53137d762815e05717be40e1442043f28b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
