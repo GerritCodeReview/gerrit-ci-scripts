@@ -181,8 +181,8 @@
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit
           credentials-id: gerrit-review.googlesource.com
+          excludes: 'stable-*,master'
           refspecs:
-            - '+refs/heads/*:refs/remotes/@{remote}/*'
             - '+refs/changes/*:refs/remotes/@{remote}/*'
           property-strategies:
             all-branches:
