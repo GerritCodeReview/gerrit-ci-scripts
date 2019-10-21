@@ -24,12 +24,13 @@ branch-api:2.5.5
 build-timeout:1.19
 cloudbees-bitbucket-branch-source:2.6.0
 cloudbees-folder:6.10.1
+command-launcher:1.7
 credentials:2.3.0
 credentials-binding:1.20
 display-url-api:2.3.2
-docker-commons:1.13
-docker-plugin:1.1.4
-docker-workflow:1.17
+docker-commons:1.16
+docker-plugin:1.1.9
+docker-workflow:1.21
 durable-task:1.33
 embeddable-build-status:2.0.3
 envinject:2.3.0
