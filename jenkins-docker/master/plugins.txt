@@ -24,7 +24,7 @@ branch-api:2.0.20
 build-flow-plugin:0.20
 build-timeout:1.19
 cloudbees-folder:6.4
-credentials:2.1.17
+credentials:2.3.0
 credentials-binding:1.18
 display-url-api:2.3.0
 docker-commons:1.13
