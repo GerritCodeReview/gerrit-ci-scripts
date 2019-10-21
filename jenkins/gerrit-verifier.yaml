@@ -136,43 +136,6 @@
       - shell: !include-raw-escape: gerrit-codestyle-buildifier.sh
 
 - job:
-    name: 'Gerrit-verifier-change'
-    project-type: flow
-    concurrent: true
-    needs-workspace: true
-    node: master
-    parameters:
-      - string:
-          name: CHANGE_ID
-          description: Gerrit Change-ID to build and verify
-    scm:
-      - git:
-          url: https://gerrit.googlesource.com/gerrit
-          branches:
-            - '*/master'
-          submodule:
-            disable: true
-          skip-tag: true
-    dsl: !include-raw: gerrit-verifier-change.groovy
-    properties:
-      - build-discarder:
-          days-to-keep: 7
-      - inject:
-          keep-build-variables: true
-          keep-system-variables: true
-
-- job:
-    name: 'Gerrit-verifier-flow'
-    concurrent: true
-    project-type: flow
-    triggers:
-      - timed: 'H/5 * * * *'
-    dsl: !include-raw: gerrit-verifier-flow.groovy
-    properties:
-      - build-discarder:
-          days-to-keep: 1
-
-- job:
     name: 'Gerrit-verifier-pipeline'
     description: Multi-branch pipeline to validate Gerrit
     project-type: multibranch
