@@ -31,8 +31,8 @@ docker-plugin:1.1.4
 docker-workflow:1.17
 durable-task:1.30
 embeddable-build-status:2.0.2
-envinject:2.1.5
-envinject-api:1.5
+envinject:2.2.1
+envinject-api:1.6
 gatling:1.2.5
 gatling-check:1.0.0
 gerrit-code-review:0.3.3
