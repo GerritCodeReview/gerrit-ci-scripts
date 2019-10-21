@@ -38,7 +38,7 @@ gatling:1.2.5
 gatling-check:1.0.0
 gerrit-code-review:0.4.0
 git:3.9.1
-git-client:2.7.2
+git-client:3.0.0
 github:1.29.1
 github-api:1.92
 github-branch-source:2.3.6
@@ -77,7 +77,7 @@ pubsub-light:1.12
 scm-api:2.2.7
 script-security:1.66
 sse-gateway:1.19
-ssh-credentials:1.14
+ssh-credentials:1.18
 ssh-slaves:1.26
 structs:1.20
 token-macro:2.5
