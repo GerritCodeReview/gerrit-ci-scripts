@@ -43,7 +43,7 @@ git-client:2.9.0
 github:1.29.1
 github-api:1.92
 github-branch-source:2.3.6
-github-oauth:0.29
+github-oauth:0.33
 github-organization-folder:1.6
 git-server:1.7
 greenballs:1.15
