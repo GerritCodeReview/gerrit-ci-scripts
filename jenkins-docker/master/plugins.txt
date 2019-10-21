@@ -39,7 +39,7 @@ gatling-check:1.0.0
 gerrit-code-review:0.4.0
 git:3.9.1
 git-client:3.0.0
-github:1.29.1
+github:1.29.5
 github-api:1.92
 github-branch-source:2.3.6
 github-oauth:0.33
