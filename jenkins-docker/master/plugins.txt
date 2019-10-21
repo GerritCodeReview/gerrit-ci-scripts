@@ -62,7 +62,7 @@ matrix-auth:2.2
 matrix-project:1.13
 mercurial:2.6
 momentjs:1.1.1
-monitoring:1.73.0
+monitoring:1.81.0
 pipeline-build-step:2.7
 pipeline-graph-analysis:1.9
 pipeline-input-step:2.8
