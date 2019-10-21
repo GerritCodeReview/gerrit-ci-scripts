@@ -51,7 +51,7 @@ if(lastBuild != null) {
 println ""
 println "Querying Gerrit for last modified changes since ${since} ..."
 
-def gerritQuery = "status:open project:gerrit (branch:stable-3.0 OR branch:stable-3.1 OR branch:master) since:\"" + since + "\""
+def gerritQuery = "status:open project:gerrit (branch:stable-3.1 OR branch:master) since:\"" + since + "\""
 
 queryUrl = new URL(Globals.gerrit + "changes/?pp=0&o=CURRENT_REVISION&o=DETAILED_ACCOUNTS&o=DETAILED_LABELS&n=" + Globals.maxChanges + "&q=" +
                       gerritQuery.encodeURL())
