@@ -1,8 +1,9 @@
 include ../chrome-vers.mk
 
 NO_CACHE=false
+SCM_VER=${shell git describe --always HEAD}
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-slave-bazel:debian-buster-nocache
+IMAGE=${PREFIX}/gerrit-ci-slave-bazel:debian-buster-nocache-${SCM_VER}
 BAZEL_VER=4.0.0
 BUILDIFIER_VER=4.0.0
 BAZELISK_VER=1.7.4
@@ -19,6 +20,7 @@ build:
 		BUILDIFIER_VER=${BUILDIFIER_VER} \
 		BAZELISK_VER=${BAZELISK_VER} \
 		NODE_VER=${NODE_VER} \
+		SCM_VER=$(SCM_VER) \
 		WCT_VER=${WCT_VER} \
 		CHROME_VER=$$chrome_ver envsubst > Dockerfile-subst; \
 		docker build --no-cache=$(NO_CACHE) \

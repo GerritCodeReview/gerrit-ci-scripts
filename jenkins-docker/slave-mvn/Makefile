@@ -1,11 +1,13 @@
 NO_CACHE=false
+SCM_VER=${shell git describe --always HEAD}
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-slave-mvn
+IMAGE=${PREFIX}/gerrit-ci-slave-mvn-${SCM_VER}
 
 # Targets
 
 build:
-	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
+	SCM_VER=$(SCM_VER) envsubst Dockerfile > Dockerfile.out
+	docker build -f Dockerfile.out --no-cache=$(NO_CACHE) -t ${IMAGE} .
 
 publish:
 	docker push ${IMAGE}
