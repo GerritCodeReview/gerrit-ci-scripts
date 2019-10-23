@@ -83,7 +83,7 @@ scm-api:2.6.3
 script-security:1.68
 sse-gateway:1.20
 ssh-credentials:1.18
-ssh-slaves:1.26
+ssh-slaves:1.29.4
 structs:1.20
 token-macro:2.10
 timestamper:1.10
