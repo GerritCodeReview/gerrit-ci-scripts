@@ -1,15 +1,17 @@
+<<<<<<< HEAD
 include ../chrome-vers.mk
 
 NO_CACHE ?= false
 DEBIAN_VER ?= buster
-IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)-${SCM_VER}
 
 build: Makefile Dockerfile
 	@for chrome_ver in $(CHROME_VERS); \
 	do \
 		echo "Building Docker for $(DEBIAN_VER) / Chrome v$$chrome_ver"; \
 		echo "========================================================"; \
-		cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$$chrome_ver envsubst > Dockerfile-$(DEBIAN_VER)-$$chrome_ver; \
+		cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$$chrome_ver SCM_VER=$(SCM_VER) envsubst > Dockerfile-$(DEBIAN_VER)-$$chrome_ver; \
 		docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$$chrome_ver -t "$(IMAGE)-$$chrome_ver" .;  \
 	done
 

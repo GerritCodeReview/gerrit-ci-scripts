@@ -10,7 +10,8 @@ JENKINS_WAR_VER=2.204.1
 JENKINS_WAR_SHA=924d2c9fabfdcacee1bae757337a07d7599eaa35
 JENKINS_HOME?=~/jenkins_home
 DOCKER_GID?=993
-IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}-${SCM_VER}
 
 # Targets
 
@@ -53,7 +54,9 @@ id_rsa:
 	chmod a+r id_rsa*
 
 build: id_rsa
-	docker build --no-cache=$(NO_CACHE) \
+	SCM_VER=$(SCM_VER) envsubst Dockerfile > Dockerfile.out
+	docker build -f Dockerfile.out \
+	--no-cache=$(NO_CACHE) \
         --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
         --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} -t ${IMAGE} .
 

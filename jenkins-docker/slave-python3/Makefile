@@ -1,9 +1,10 @@
 NO_CACHE ?= false
 DEBIAN_VER ?= buster
-IMAGE=gerritforge/gerrit-ci-slave-python3:$(DEBIAN_VER)
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=gerritforge/gerrit-ci-slave-python3:$(DEBIAN_VER)-${SCM_VER}
 
 build:  Dockerfile Makefile
-	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
+	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) SCM_VER=$(SCM_VER) envsubst > Dockerfile-$(DEBIAN_VER)
 	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t $(IMAGE) .
 
 publish: build

@@ -1,9 +1,13 @@
 NO_CACHE=true
-IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-80.0.3987.149
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-80.0.3987.149-${SCM_VER}
 CONTAINER=release
 
+# Targets
+
 build:
-	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
+	SCM_VER=$(SCM_VER) envsubst Dockerfile > Dockerfile.out
+	docker build -f Dockerfile.out --no-cache=$(NO_CACHE) -t ${IMAGE} .
 
 # Dockerfile shows from where to manually execute the release script once in.
 # E.g.: /usr/local/bin/gerrit-release.sh stable-3.3 3.3.0-rc3 3.3.0-SNAPSHOT
