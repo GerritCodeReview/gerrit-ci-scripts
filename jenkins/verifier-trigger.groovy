@@ -14,6 +14,7 @@
 
 import com.cloudbees.groovy.cps.NonCPS
 import groovy.json.JsonSlurper
+import java.net.URLEncoder
 import java.text.SimpleDateFormat
 import java.util.concurrent.TimeUnit
 
@@ -40,7 +41,7 @@ def listChangedProjects() {
     println "Querying Gerrit for last modified changes since ${since} ..."
 
     def gerritQuery = "status:open since:\"${since}\""
-    def queryUrl = new URL("${gerrit}changes/?pp=0&n=${maxChanges}&q=${gerritQuery.encodeURL()}")
+    def queryUrl = new URL("${gerrit}changes/?pp=0&n=${maxChanges}&q=${URLEncoder.encode(gerritQuery, 'utf-8')}")
     def changes = queryUrl.getText().substring(5)
     def jsonSlurper = new JsonSlurper()
     def changesJson = jsonSlurper.parseText(changes)
