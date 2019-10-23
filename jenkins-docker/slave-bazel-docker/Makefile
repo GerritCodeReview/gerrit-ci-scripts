@@ -1,15 +1,16 @@
 include ../chrome-vers.mk
 
 NO_CACHE=false
+SCM_VER=${shell git describe --always HEAD}
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-slave-bazel-docker:debian-buster
+IMAGE=${PREFIX}/gerrit-ci-slave-bazel-docker:debian-buster-${SCM_VER}
 
 # Targets
 
 build:
 	@for chrome_ver in $(CHROME_VERS); \
         do \
-		cat Dockerfile | CHROME_VER=$$chrome_ver envsubst > Dockerfile-subst ; \
+		cat Dockerfile | CHROME_VER=$$chrome_ver SCM_VER=$(SCM_VER) envsubst > Dockerfile-subst ; \
 		docker build -f Dockerfile-subst --no-cache=$(NO_CACHE) -t ${IMAGE}-$$chrome_ver . ; \
 	done
 
