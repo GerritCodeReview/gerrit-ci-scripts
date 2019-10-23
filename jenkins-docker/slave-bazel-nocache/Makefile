@@ -1,5 +1,6 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache-${SCM_VER}
 BAZEL_VER=1.0.0
 BUILDIFIER_VER=0.29.0
 BAZELISK_VER=1.0
@@ -14,6 +15,7 @@ build:
         BUILDIFIER_VER=${BUILDIFIER_VER} \
         BAZELISK_VER=${BAZELISK_VER} \
         NODE_VER=${NODE_VER} \
+	SCM_VER=$(SCM_VER) \
         WCT_VER=${WCT_VER} envsubst > Dockerfile-subst
 	docker build --no-cache=$(NO_CACHE) \
         -f Dockerfile-subst \

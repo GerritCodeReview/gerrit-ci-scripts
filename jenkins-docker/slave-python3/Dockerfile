@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-debian:$DEBIAN_VER
+FROM gerritforge/gerrit-ci-slave-debian:$DEBIAN_VER-$SCM_VER
 
 RUN apt-get update && apt-get install -y \
     python3-pip && \

@@ -9,7 +9,8 @@ JENKINS_API_PASSWORD=pass
 JENKINS_WAR_VER=2.60.3
 JENKINS_WAR_SHA=e62d9ed7eb3d29b08719e639c959cd328776ba50
 JENKINS_HOME?=~/jenkins_home
-IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}-${SCM_VER}
 
 # Targets
 
@@ -47,7 +48,9 @@ id_rsa:
 	chmod a+r id_rsa*
 
 build: id_rsa
-	docker build --no-cache=$(NO_CACHE) \
+	SCM_VER=$(SCM_VER) envsubst Dockerfile > Dockerfile.out
+	docker build -f Dockerfile.out \
+	--no-cache=$(NO_CACHE) \
         --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
         --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} -t ${IMAGE} .
 

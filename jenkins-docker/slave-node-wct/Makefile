@@ -1,10 +1,11 @@
 NO_CACHE ?= false
 NODE_VER ?= 10
 WCT_VER ?= 6.8.0
-IMAGE=gerritforge/gerrit-ci-slave-node-wct:$(NODE_VER)-$(WCT_VER)
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=gerritforge/gerrit-ci-slave-node-wct:$(NODE_VER)-$(WCT_VER)-${SCM_VER}
 
 build:  Dockerfile Makefile
-	cat Dockerfile | NODE_VER=$(NODE_VER) WCT_VER=$(WCT_VER) envsubst > Dockerfile-$(NODE_VER)-$(WCT_VER)
+	cat Dockerfile | NODE_VER=$(NODE_VER) WCT_VER=$(WCT_VER) SCM_VER=$(SCM_VER) envsubst > Dockerfile-$(NODE_VER)-$(WCT_VER)
 	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(NODE_VER)-$(WCT_VER) -t $(IMAGE) .
 
 publish: build

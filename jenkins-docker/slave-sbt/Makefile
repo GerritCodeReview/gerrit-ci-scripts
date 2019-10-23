@@ -1,10 +1,12 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-bazel-sbt
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=gerritforge/gerrit-ci-slave-bazel-sbt-${SCM_VER}
 
 # Targets
 
 build:
-	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
+	SCM_VER=$(SCM_VER) envsubst Dockerfile > Dockerfile.out
+	docker build -f Dockerfile.out --no-cache=$(NO_CACHE) -t ${IMAGE} .
 
 publish:
 	docker push ${IMAGE}

@@ -1,6 +1,7 @@
 NO_CACHE ?= false
 IMAGE=gerritforge/gerrit-ci-slave-debian
 MAVEN_VER=3.6.1
+SCM_VER=${shell git describe --always HEAD}
 
 build: build_stretch
 
@@ -15,11 +16,11 @@ publish_stretch: build_stretch
 build_stretch:  id_rsa.pub
 	@echo "Building Docker for Debian:$(DEBIAN_VER)"
 	@echo "========================================"
-	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) MAVEN_VER=$(MAVEN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
-	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t ${IMAGE}:$(DEBIAN_VER) .
+	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) MAVEN_VER=$(MAVEN_VER) SCM_VER=$(SCM_VER) envsubst > Dockerfile-$(DEBIAN_VER)
+	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t ${IMAGE}:$(DEBIAN_VER)-${SCM_VER} .
 
 publish_stretch:
-	docker push ${IMAGE}:$(DEBIAN_VER)
+	docker push ${IMAGE}:$(DEBIAN_VER)-${SCM_VER}
 
 id_rsa.pub: ../master/id_rsa.pub
 	cp $? $@

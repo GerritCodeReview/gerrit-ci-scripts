@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-debian:$DEBIAN_VER
+FROM gerritforge/gerrit-ci-slave-debian:$DEBIAN_VER-$SCM_VER
 
 RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list && \
     apt-get update && \

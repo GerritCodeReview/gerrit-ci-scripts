@@ -1,7 +1,8 @@
 NO_CACHE ?= false
 DEBIAN_VER ?= stretch
 CHROME_VER ?= 69.0.3497.92
-IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)-$(CHROME_VER)
+SCM_VER=${shell git describe --always HEAD}
+IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)-$(CHROME_VER)-${SCM_VER}
 
 build: build_stretch
 
@@ -16,7 +17,7 @@ publish_stretch: build_stretch
 build_stretch: Makefile Dockerfile
 	@echo "Building Docker for $(DEBIAN_VER) / Chrome v$(CHROME_VER)"
 	@echo "==================================================="
-	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$(CHROME_VER) envsubst > Dockerfile-$(DEBIAN_VER)-$(CHROME_VER)
+	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$(CHROME_VER) SCM_VER=$(SCM_VER) envsubst > Dockerfile-$(DEBIAN_VER)-$(CHROME_VER)
 	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$(CHROME_VER) -t $(IMAGE) .
 
 publish_stretch:
