@@ -1,0 +1,6 @@
+- project:
+    name: pull-replication
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
