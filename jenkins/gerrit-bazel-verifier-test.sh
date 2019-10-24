@@ -29,7 +29,7 @@ then
   bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
-if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-3.0" || "$TARGET_BRANCH" == "stable-2.16" || "$TARGET_BRANCH" == "stable-2.15" || "$TARGET_BRANCH" == "stable-2.14" ]]
+if [[ "$TARGET_BRANCH" == "master" || "$TARGET_BRANCH" == "stable-3.1" || "$TARGET_BRANCH" == "stable-3.0" || "$TARGET_BRANCH" == "stable-2.16" || "$TARGET_BRANCH" == "stable-2.15" || "$TARGET_BRANCH" == "stable-2.14" ]]
 then
   if [[ "$MODE" == *"polygerrit"* ]]
   then
