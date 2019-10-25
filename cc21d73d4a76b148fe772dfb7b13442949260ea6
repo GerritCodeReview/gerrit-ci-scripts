@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "00e5572d_51a2561b",
+        "filename": "jenkins/gerrit-mvn-lib-global-refdb.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-25T13:34:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fe24d729_aebd34ea",
+      "revId": "cc21d73d4a76b148fe772dfb7b13442949260ea6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bfc691ef_afb18456",
         "filename": "jenkins/gerrit-mvn-lib-template.yaml",
         "patchSetId": 7
