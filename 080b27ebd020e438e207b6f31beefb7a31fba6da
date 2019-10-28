@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0c05eaf3_b8059972",
+        "filename": "jenkins/gerrit-sbt-build-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-28T14:34:24Z",
+      "side": 1,
+      "message": "Checkout of the plugin\u0027s branch is missing here",
+      "revId": "080b27ebd020e438e207b6f31beefb7a31fba6da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
