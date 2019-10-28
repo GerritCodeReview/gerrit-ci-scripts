@@ -1,16 +1,12 @@
 #!/bin/bash -e
 
-git read-tree -u --prefix=gerrit gerrit/{branch}
 . set-java.sh 8
+bazelisk version
 
-if [ -f "gerrit/BUILD" ]
-then
-  pushd gerrit
-  bazelisk version
-  bazelisk build api
-  ./tools/maven/api.sh install
-  popd
-fi
+git checkout -f -b gerrit-master gerrit/{branch}
+git submodule update --init
+bazelisk build api
+./tools/maven/api.sh install
 
 sbt -no-colors compile test assembly
 
