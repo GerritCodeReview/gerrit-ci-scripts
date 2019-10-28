@@ -15,9 +15,11 @@ TEST_TARGET=$(grep -2 junit_tests plugins/account/BUILD | grep -o 'name = "[^"]*
 
 . set-java.sh 8
 
+NODE_MODULES=$PWD/node_modules
+
 pushd plugins/account
 npm install bower
-./node_modules/bower/bin/bower install
+$NODE_MODULES/bower/bin/bower install
 cp -Rf bower_components/jquery/dist/*js src/main/resources/static/js/.
 cp -Rf bower_components/bootstrap/dist/js/*js src/main/resources/static/js/.
 cp -Rf bower_components/bootstrap/dist/css/*css src/main/resources/static/css/.
