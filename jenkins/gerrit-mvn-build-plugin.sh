@@ -7,9 +7,12 @@ then
   . set-java.sh 8
 
   pushd gerrit
+  git checkout -f -b gerrit-{gerrit-branch} gerrit/{gerrit-branch}
+  git submodule update --init
   bazelisk version
   bazelisk build api
   ./tools/maven/api.sh install
+  git checkout -f origin/{branch}
   popd
 fi
 
