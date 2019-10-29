@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "60bd5356_98d0f64e",
+        "filename": "jenkins/gerrit-bazel-plugin-admin-console.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-10-29T23:50:44Z",
+      "side": 1,
+      "message": "Should this be removed?",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "fd012d1e6f6da82fb65eaa49ab7d2dd72c0500c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
