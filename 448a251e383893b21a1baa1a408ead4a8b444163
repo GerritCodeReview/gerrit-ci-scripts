@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d758c43c_0c437251",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2019-10-29T10:18:29Z",
+      "side": 1,
+      "message": "You\u0027re right @luca, I will split into two if the node_modules change is still required.\nOtherwise this will only be the submodule fix.",
+      "parentUuid": "2abb8f7e_af129dcc",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 32
+      },
+      "revId": "448a251e383893b21a1baa1a408ead4a8b444163",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "76c994d2_310a9ed3",
         "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2019-10-29T10:07:36Z",
       "side": 1,
       "message": "$NODE_MODULES should point to the current working directory, which is \u0027.\u0027\nIt should be working already now without this variable redirection, correct?",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 13
+      },
+      "revId": "448a251e383893b21a1baa1a408ead4a8b444163",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "05ff3872_afaaaf52",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2019-10-29T10:18:29Z",
+      "side": 1,
+      "message": "I would agree, but see my response above.\nWithout pinning node_modules the build fail [1]\n\nPerhaps this is side effect of something else I am not seeing at the moment.\nIdeas?\n\n[1] https://gerrit-ci.gerritforge.com/job/plugin-account-bazel-master/22/console",
+      "parentUuid": "76c994d2_310a9ed3",
       "range": {
         "startLine": 18,
         "startChar": 0,
