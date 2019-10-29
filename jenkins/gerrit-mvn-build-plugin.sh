@@ -1,18 +1,17 @@
 #!/bin/bash -e
 
+. set-java.sh 8
 
 if [ "{branch}" == "master" ] || [ "{branch}" == "stable-3.1" ] || [ "{branch}" == "stable-3.0" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ] || [ "{branch}" == "stable-2.14" ]
 then
-  git read-tree -u --prefix=gerrit gerrit/{branch}
-  . set-java.sh 8
-
-  pushd gerrit
+  git checkout -f -b gerrit-master gerrit/{branch}
+  git submodule update --init
   bazelisk version
   bazelisk build api
   ./tools/maven/api.sh install
-  popd
 fi
 
+git checkout -f origin/{branch}
 mvn package
 
 # Extract version information
