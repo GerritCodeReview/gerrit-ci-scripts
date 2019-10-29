@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c48a4ef2_01cf07e1",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-29T18:20:10Z",
+      "side": 1,
+      "message": "This isn\u0027t working, because the gerrit is just the result of the read-tree",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 29
+      },
+      "revId": "ea7bb65b54ae7861e369d225899cb6ca4ba35956",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
