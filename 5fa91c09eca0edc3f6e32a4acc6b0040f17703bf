@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3609ef82_1e864de1",
+        "filename": "jenkins/gerrit-bazel-plugin-healthcheck.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-29T16:38:40Z",
+      "side": 1,
+      "message": "There is no stable-3.1 branch on the healthcheck plugin.\nWe should cross-compile instead: let me add another PS for that.",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "5fa91c09eca0edc3f6e32a4acc6b0040f17703bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
