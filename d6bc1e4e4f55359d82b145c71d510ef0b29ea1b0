@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b0ef825_27eb5fd3",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-template.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-10-30T10:23:16Z",
+      "side": 1,
+      "message": "Note: this one doesn\u0027t emit the bazelisk version. It can be fixed in a separate change.",
+      "revId": "d6bc1e4e4f55359d82b145c71d510ef0b29ea1b0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
