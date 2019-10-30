@@ -15,6 +15,7 @@ export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
                  --test_tag_filters=-flaky,-docker \
                  --test_env DOCKER_HOST=$DOCKER_HOST"
 
+java -fullversion
 bazelisk version
 
 if [[ "$MODE" == *"reviewdb"* ]]

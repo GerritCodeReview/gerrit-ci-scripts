@@ -26,6 +26,7 @@ cp -Rf bower_components/bootstrap/dist/css/*css src/main/resources/static/css/.
 cp -Rf bower_components/angular/*js src/main/resources/static/js/.
 popd
 
+java -fullversion
 bazelisk version
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
