@@ -9,5 +9,6 @@ if ([ "$TARGET_BRANCH" == "master" ] || \
 then
   echo 'Running PolyGerrit template test...'
   . set-java.sh 8
+  java -fullversion
   bazelisk test //polygerrit-ui/app:all --test_tag_filters=template --test_output errors
 fi
