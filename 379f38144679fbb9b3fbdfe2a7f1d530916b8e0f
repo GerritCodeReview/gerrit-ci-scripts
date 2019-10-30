@@ -16,6 +16,24 @@
       "revId": "379f38144679fbb9b3fbdfe2a7f1d530916b8e0f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4866b44a_8fb5b77b",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-10-30T07:14:22Z",
+      "side": 1,
+      "message": "On my system the -fullversion gives less info than -version.\n\n gerrit $ java -version\n java version \"1.8.0_231\"\n Java(TM) SE Runtime Environment (build 1.8.0_231-b11)\n Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)\n gerrit $ java -fullversion\n java full version \"1.8.0_231-b11\"",
+      "parentUuid": "1f06b892_c50d59f8",
+      "revId": "379f38144679fbb9b3fbdfe2a7f1d530916b8e0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
