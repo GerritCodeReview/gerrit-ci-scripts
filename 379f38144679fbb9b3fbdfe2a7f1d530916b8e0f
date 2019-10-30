@@ -34,6 +34,24 @@
       "revId": "379f38144679fbb9b3fbdfe2a7f1d530916b8e0f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e598d9b9_d0d326b2",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-10-30T07:18:52Z",
+      "side": 1,
+      "message": "Isn\u0027t it is too much spam, and the short form of -fullversion telling us would be enough?",
+      "parentUuid": "4866b44a_8fb5b77b",
+      "revId": "379f38144679fbb9b3fbdfe2a7f1d530916b8e0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
