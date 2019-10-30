@@ -6,6 +6,7 @@ if [ "{branch}" == "master" ] || [ "{branch}" == "stable-3.1" ] || [ "{branch}" 
 then
   git checkout -f -b gerrit-master gerrit/{branch}
   git submodule update --init
+  java -fullversion
   bazelisk version
   bazelisk build api
   ./tools/maven/api.sh install

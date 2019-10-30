@@ -18,6 +18,7 @@ fi
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 BUILD_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep -v test)
 
+java -fullversion
 bazelisk version
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_TARGETS
 

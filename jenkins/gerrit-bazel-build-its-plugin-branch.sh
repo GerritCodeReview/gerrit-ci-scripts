@@ -22,6 +22,7 @@ TEST_TARGET=$(grep -2 junit_tests plugins/its-{name}/BUILD | grep -o 'name = "[^
 
 . set-java.sh 8
 
+java -fullversion
 bazelisk version
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
