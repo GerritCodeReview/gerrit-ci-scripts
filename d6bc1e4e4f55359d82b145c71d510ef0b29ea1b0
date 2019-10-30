@@ -16,6 +16,24 @@
       "revId": "d6bc1e4e4f55359d82b145c71d510ef0b29ea1b0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9962e556_ab718231",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-template.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-10-30T11:25:47Z",
+      "side": 1,
+      "message": "True, let me add a follow-up to this.",
+      "parentUuid": "6b0ef825_27eb5fd3",
+      "revId": "d6bc1e4e4f55359d82b145c71d510ef0b29ea1b0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
