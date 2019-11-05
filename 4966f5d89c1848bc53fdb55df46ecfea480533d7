@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "11047537_284358f2",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-11-05T01:07:45Z",
+      "side": 1,
+      "message": "Why is this hosted on gerritforge rather than in the existing zookeeper plugin on gerrit-review?",
+      "range": {
+        "startLine": 3,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 27
+      },
+      "revId": "4966f5d89c1848bc53fdb55df46ecfea480533d7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
