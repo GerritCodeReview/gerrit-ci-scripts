@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa04a71e_4fb51a24",
+        "filename": "jenkins/gerrit-bazel-plugin-replication.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-11-06T14:25:12Z",
+      "side": 0,
+      "message": "Shouldn\u0027t master still be built?",
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "afe23308_410bf59d",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-11-06T14:25:12Z",
+      "side": 0,
+      "message": "For a followup change: Do we still need this if-clause? We by now only build branches that require the polygerrit tests.",
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9eab26ac_f0c12f3a",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-11-06T14:25:12Z",
+      "side": 0,
+      "message": "See my suggestion for a followup change above.",
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9e9c7684_8b4e6836",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-11-06T14:25:12Z",
+      "side": 0,
+      "message": "See my suggestion for a followup change above.",
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
