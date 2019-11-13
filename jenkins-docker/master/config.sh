@@ -8,8 +8,8 @@ else
 fi
 
 echo "Make Docker socket accessible by Jenkins"
-groupadd -g 993 dockergroup
-usermod -g 993 jenkins
+groupadd -g $DOCKER_GID dockergroup
+usermod -g $DOCKER_GID jenkins
 
 xsltproc \
   --stringparam use-security $USE_SECURITY \
