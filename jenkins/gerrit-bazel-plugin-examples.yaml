@@ -19,13 +19,12 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/all.zip
+            plugins/examples/bazel-bin/all.zip
 
 - project:
     name: examples
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          targets: 'all'
+      - 'plugin-examples-bazel-{branch}':
           branch:
             - master
             - stable-3.1
