@@ -2,11 +2,12 @@
     name: 'plugin-examples-bazel-{branch}'
     description: 'Plugin examples {branch} branch build with Bazel'
     defaults: plugin-template-bazel
+    targets: ''
     scm:
       - git:
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/{name}
+                url: https://gerrit.googlesource.com/plugins/examples
             - gerrit:
                 url: https://gerrit.googlesource.com/gerrit
           branches:
@@ -19,13 +20,12 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/all.zip
+            plugins/examples/bazel-bin/all.zip
 
 - project:
     name: examples
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          targets: 'all'
+      - 'plugin-examples-bazel-{branch}':
           branch:
             - master
             - stable-3.1

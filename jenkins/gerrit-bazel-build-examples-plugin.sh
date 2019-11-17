@@ -12,20 +12,18 @@ then
   cp -f "$PLUGIN_PATH"/external_plugin_deps.bzl plugins/
 fi
 
-TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
-
 . set-java.sh 8
+
+pushd "$PLUGIN_PATH"
 
 java -fullversion
 bazelisk version
-
-pushd "$PLUGIN_PATH"
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone all
 
 EXAMPLES=( $(find * -depth 0 -type d -name 'example-*') )
 popd
 
-for EXAMPLE in "${EXAMPLES[@]}"
+for EXAMPLE in "${{EXAMPLES[@]}}"
 do
     for JAR in $(find "$PLUGIN_PATH"/bazel-bin/"$EXAMPLE" -name "$EXAMPLE".jar)
     do
