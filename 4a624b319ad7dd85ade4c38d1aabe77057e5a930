@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "59704666_20240ea0",
+        "filename": "jenkins/gerrit-bazel-build-examples-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-17T17:18:18Z",
+      "side": 1,
+      "message": "These are not needed",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "4a624b319ad7dd85ade4c38d1aabe77057e5a930",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a58c7a46_971c5413",
+        "filename": "jenkins/gerrit-bazel-build-examples-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-17T17:18:18Z",
+      "side": 1,
+      "message": "This isn\u0027t needed either.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 2
+      },
+      "revId": "4a624b319ad7dd85ade4c38d1aabe77057e5a930",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "962c9733_44d44d84",
+        "filename": "jenkins/gerrit-bazel-build-examples-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-17T17:18:18Z",
+      "side": 1,
+      "message": "This isn\u0027t needed anymore.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 15
+      },
+      "revId": "4a624b319ad7dd85ade4c38d1aabe77057e5a930",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d3a046b7_84aef538",
+        "filename": "jenkins/gerrit-bazel-plugin-examples.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-17T17:18:18Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be needed for standalone build",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 59
+      },
+      "revId": "4a624b319ad7dd85ade4c38d1aabe77057e5a930",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
