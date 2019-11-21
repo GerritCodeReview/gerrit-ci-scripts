@@ -3,6 +3,5 @@
     repo: manifest-subscription
     branch:
       - master
-      - stable-2.15
     jobs:
       - 'plugin-{repo}-mvn-{branch}'

@@ -14,7 +14,7 @@ export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=st
 java -fullversion
 bazelisk version
 
-if [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ]
+if [ "{branch}" == "stable-2.16" ]
 then
   echo 'Test in ReviewDb mode'
   echo '----------------------------------------------'

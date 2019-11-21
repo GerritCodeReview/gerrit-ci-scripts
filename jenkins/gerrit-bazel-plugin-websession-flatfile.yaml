@@ -1,9 +1,6 @@
 - project:
     name: websession-flatfile
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - stable-2.15
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master

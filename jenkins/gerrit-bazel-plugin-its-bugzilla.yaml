@@ -5,5 +5,4 @@
           branch:
             - master
             - stable-2.16
-            - stable-2.15
           targets: 'plugins/its-bugzilla:its-bugzilla plugins/its-bugzilla:its_bugzilla_tests'

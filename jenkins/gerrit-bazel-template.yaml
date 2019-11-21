@@ -124,7 +124,6 @@
       - stable-3.1
       - stable-3.0
       - stable-2.16
-      - stable-2.15
     jobs:
       - 'Gerrit-bazel-{branch}'
 
@@ -142,7 +141,6 @@
       - stable-3.1
       - stable-3.0
       - stable-2.16
-      - stable-2.15
     jobs:
       - 'Gerrit-pipeline-{branch}'
 
