@@ -19,6 +19,47 @@
     },
     {
       "key": {
+        "uuid": "d7920bf1_06696b97",
+        "filename": "jenkins/gerrit-bazel-plugin-replication.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-21T13:11:30Z",
+      "side": 0,
+      "message": "Nope, because it is a core plugin.",
+      "parentUuid": "aa04a71e_4fb51a24",
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58283385_1fefa76f",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-21T13:11:30Z",
+      "side": 0,
+      "message": "This \u0027if\u0027 isn\u0027t needed anymore: will address in a follow-up change.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 167
+      },
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "afe23308_410bf59d",
         "filename": "jenkins/gerrit-bazel-test.sh",
         "patchSetId": 3
@@ -33,6 +74,24 @@
       "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "982c2090_b0df101a",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-21T13:11:30Z",
+      "side": 0,
+      "message": "Point taken, let me upload a follow-up change for that.",
+      "parentUuid": "afe23308_410bf59d",
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +112,24 @@
     },
     {
       "key": {
+        "uuid": "74d2a074_a1324388",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-21T13:11:30Z",
+      "side": 0,
+      "message": "Ack",
+      "parentUuid": "9eab26ac_f0c12f3a",
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9e9c7684_8b4e6836",
         "filename": "jenkins/gerrit-mvn-build-plugin.sh",
         "patchSetId": 3
@@ -67,6 +144,24 @@
       "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5c7ee6e1_d6a07cfe",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-21T13:11:30Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "9e9c7684_8b4e6836",
+      "revId": "d0fe3637712807053d66a4655a0ce98da75af394",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }

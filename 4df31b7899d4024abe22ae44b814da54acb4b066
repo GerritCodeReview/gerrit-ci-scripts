@@ -46,6 +46,30 @@
       "revId": "4df31b7899d4024abe22ae44b814da54acb4b066",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a7e3f12f_55ea96c5",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-21T13:11:30Z",
+      "side": 1,
+      "message": "I believe this has been done already on master.",
+      "parentUuid": "a251269b_9b588737",
+      "range": {
+        "startLine": 30,
+        "startChar": 106,
+        "endLine": 30,
+        "endChar": 140
+      },
+      "revId": "4df31b7899d4024abe22ae44b814da54acb4b066",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
