@@ -2,15 +2,12 @@
 
 . set-java.sh 8
 
-if [ "{branch}" == "master" ] || [ "{branch}" == "stable-3.1" ] || [ "{branch}" == "stable-3.0" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ]
-then
-  git checkout -f -b gerrit-master gerrit/{branch}
-  git submodule update --init
-  java -fullversion
-  bazelisk version
-  bazelisk build api
-  ./tools/maven/api.sh install
-fi
+git checkout -f -b gerrit-master gerrit/{branch}
+git submodule update --init
+java -fullversion
+bazelisk version
+bazelisk build api
+./tools/maven/api.sh install
 
 git checkout -f origin/{branch}
 mvn package
