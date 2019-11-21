@@ -21,27 +21,21 @@ then
   bazelisk test --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
 fi
 
-if [ "{branch}" == "master" ] || [ "{branch}" == "stable-3.1" ] || [ "{branch}" == "stable-3.0" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ]
-then
-  echo 'Test in NoteDb mode'
-  echo '----------------------------------------------'
-  bazelisk test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
-fi
+echo 'Test in NoteDb mode'
+echo '----------------------------------------------'
+bazelisk test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
 
-if [ "{branch}" == "master" ] || [ "{branch}" == "stable-3.1" ] || [ "{branch}" == "stable-3.0" ] || [ "{branch}" == "stable-2.16" ] || [ "{branch}" == "stable-2.15" ]
-then
-  echo 'Test PolyGerrit locally'
-  echo '----------------------------------------------'
-  bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+echo 'Test PolyGerrit locally'
+echo '----------------------------------------------'
+bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
 
-  if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
-  then
-    echo 'Not running on Sauce Labs because env vars are not set.'
-  else
-    echo 'Test PolyGerrit on Sauce Labs'
-    echo '----------------------------------------------'
-    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
-  fi
+if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
+then
+  echo 'Not running on Sauce Labs because env vars are not set.'
+else
+  echo 'Test PolyGerrit on Sauce Labs'
+  echo '----------------------------------------------'
+  WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
 fi
 
 exit 0
