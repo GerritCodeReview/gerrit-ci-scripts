@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ff2cd08_81a751e2",
+        "filename": "jenkins/gerrit-bazel-plugin-high-availability.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2019-11-21T23:59:28Z",
+      "side": 1,
+      "message": "Is this still needed?  I thought the changes in the fork had been upstreamed.",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "1b534eb74bb395d99bfb8d05b0f1c4df87766c0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
