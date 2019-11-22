@@ -22,6 +22,30 @@
       "revId": "1b534eb74bb395d99bfb8d05b0f1c4df87766c0f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97f85cdd_ba337b94",
+        "filename": "jenkins/gerrit-bazel-plugin-high-availability.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-22T06:53:42Z",
+      "side": 1,
+      "message": "There is still one change left, I need to create it and upload to gerrit-review and then the fork is gone :-)\n\nI\u0027ll then upload a separate change to remove the build.",
+      "parentUuid": "1ff2cd08_81a751e2",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "1b534eb74bb395d99bfb8d05b0f1c4df87766c0f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
