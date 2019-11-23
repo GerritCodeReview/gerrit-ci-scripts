@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6d5f74e7_a23c0501",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-11-23T10:17:43Z",
+      "side": 1,
+      "message": "The better question is, what byte code Maven would generate if we change host Java version from 8 to 11. Probably we want to instruct Maven to produce Java 8 byte code (major version 52) in plugins that still use Maven (is it only GitHub-plugin?).",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "11cea171_4dea901f",
+        "filename": "jenkins/gerrit-sbt-build-branch-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-11-23T10:17:43Z",
+      "side": 1,
+      "message": "The better question is, what byte code sbt would generate if we change host Java version from 8 to 11. Probably we want to instruct sbt to produce Java 8 byte code (major version 52) in plugins that still use sbt (is it only Analytics-plugin?).",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 36
+      },
+      "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
