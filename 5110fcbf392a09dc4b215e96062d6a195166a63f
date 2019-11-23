@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b75df7e1_d24d4b40",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-11-23T22:27:29Z",
+      "side": 1,
+      "message": "What about running the tests? (integration and e2e)\nWe still need to support the builds of Gerrit v2.16, v3.0 and v3.1, where we support officially Java 8.\n\nWould we need to have two Docker containers per build? One with Java 11 and another with Java 8?",
+      "revId": "5110fcbf392a09dc4b215e96062d6a195166a63f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
