@@ -45,6 +45,30 @@
       "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e8ff280a_609b669b",
+        "filename": "jenkins/gerrit-sbt-build-branch-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-11-25T08:36:38Z",
+      "side": 1,
+      "message": "To solve this, we could change the jobs using sbt (and mvn) to pipeline jobs, which support using multiple nodes with shared workspace in one job, let the new buster-based slaves build the API and keep stretch based sbt/mvn slaves, that are not inheriting from the bazel-image:\n\nnode(\u0027bazel-debian\u0027) {\n  //Build API\n}\nnode(\u0027sbt\u0027) {\n  //Build plugin\n}\n\nThe advantage here would be that the sbt- and mvn-slaves would get a lot smaller, but still work with Java 8 as long as need be, while the bazel-slave uses debian buster and java 11, producing java8-based code. And we would not need to maintain slaves in multiple versions for now. WDYT?",
+      "parentUuid": "11cea171_4dea901f",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 36
+      },
+      "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
