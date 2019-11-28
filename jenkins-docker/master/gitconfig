@@ -3,3 +3,5 @@
 	email = jenkins@localhost
 [protocol]
 	version = 2
+[fetch]
+	negotiationAlgorithm = skipping
