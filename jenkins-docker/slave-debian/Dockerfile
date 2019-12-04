@@ -13,7 +13,6 @@ COPY set-java.sh /usr/bin/
 RUN apt-get update && apt-get install -y \
     openssh-server \
     curl \
-    git-core \
     xvfb \
     python-dev \
     python-pip \
@@ -26,7 +25,19 @@ RUN apt-get update && apt-get install -y \
     zip \
     vim \
     gettext-base \
+    libcurl4-gnutls-dev \
+    libexpat1-dev \
+    gettext \
+    libz-dev \
+    libssl-dev \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
+
+ADD https://www.kernel.org/pub/software/scm/git/git-$GIT_VER.tar.gz /tmp/
+RUN tar xvfz /tmp/git-$GIT_VER.tar.gz && \
+    cd $GIT_VER && \
+    make prefix=/usr all install && \
+    cd .. && rm -Rf git-$GIT_VER
 
 ADD http://www-eu.apache.org/dist/maven/maven-3/$MAVEN_VER/binaries/apache-maven-$MAVEN_VER-bin.tar.gz /usr/local
 
