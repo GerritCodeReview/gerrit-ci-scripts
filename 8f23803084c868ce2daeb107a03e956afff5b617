@@ -199,6 +199,30 @@
       "revId": "8f23803084c868ce2daeb107a03e956afff5b617",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6014d219_12b2a1b5",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-12-05T21:37:00Z",
+      "side": 1,
+      "message": "I believe Thomas was right: it has been duplicated in this change and thus makes sense to fix it here.",
+      "parentUuid": "7415e899_bc6d23f6",
+      "range": {
+        "startLine": 141,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 60
+      },
+      "revId": "8f23803084c868ce2daeb107a03e956afff5b617",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
