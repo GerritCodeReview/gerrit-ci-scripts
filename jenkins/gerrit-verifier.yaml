@@ -129,8 +129,11 @@
 
     properties:
       - inject:
-         properties-content: |
-           BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11 --javabase=@bazel_tools//tools/jdk:remote_jdk11 --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11 --java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
+          properties-content: |
+           BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11 \
+           --javabase=@bazel_tools//tools/jdk:remote_jdk11 \
+           --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11 \
+           --java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - job:
     name: Gerrit-codestyle
@@ -157,8 +160,8 @@
           credentials-id: gerrit-review.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
-            - '+refs/changes/*:refs/remotes/@{remote}/*'
           property-strategies:
             all-branches:
               - suppress-scm-triggering: true
               - pipeline-branch-durability-override: max-survivability
+    periodic-folder-trigger: 10m
