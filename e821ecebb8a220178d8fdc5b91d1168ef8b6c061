@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "189b1b7a_4f54b88d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-05T08:28:06Z",
+      "side": 1,
+      "message": "How did you measure that?",
+      "revId": "e821ecebb8a220178d8fdc5b91d1168ef8b6c061",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
