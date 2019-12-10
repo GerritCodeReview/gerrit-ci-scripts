@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f92493c6_240e0667",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-10T15:37:25Z",
+      "side": 1,
+      "message": "We fetch gerrit in the build script here and not using the Jenkins SCM, so is this required?",
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d26f6478_5d598d82",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-10T15:37:25Z",
+      "side": 1,
+      "message": "Is this needed in this case? Here the Jenkins SCM plugin does not fetch Gerrit. This is done in the build script.",
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c077b055_0464540f",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-10T15:37:25Z",
+      "side": 1,
+      "message": "See my previous comment",
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
