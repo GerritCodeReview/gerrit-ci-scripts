@@ -4,6 +4,7 @@ git checkout -fb {branch} gerrit/{branch}
 git submodule update --init
 rm -rf plugins/{name}
 git read-tree -u --prefix=plugins/{name} origin/{branch}
+git fetch --tags origin
 
 if [ -f plugins/{name}/external_plugin_deps.bzl ]
 then
