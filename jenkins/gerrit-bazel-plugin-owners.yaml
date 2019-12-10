@@ -14,6 +14,7 @@
           submodule:
             recursive: true
           skip-tag: true
+          do-not-fetch-tags: true
     builders:
       - shell: !include-raw: gerrit-bazel-build-owners-plugin.sh
     publishers:
@@ -38,6 +39,7 @@
           submodule:
             recursive: true
           skip-tag: true
+          do-not-fetch-tags: true
     project-name: plugins%2Fowners
     builders:
       - shell: !include-raw: gerrit-bazel-build-owners-plugin-branch.sh

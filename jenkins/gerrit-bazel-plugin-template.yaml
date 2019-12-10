@@ -40,6 +40,7 @@
           submodule:
             recursive: true
           skip-tag: true
+          do-not-fetch-tags: true
     builders:
       - shell: !include-raw: gerrit-bazel-build-plugin.sh
       - shell: !include-raw: gerrit-bazel-get-project-info.sh
@@ -114,6 +115,7 @@
           branches:
             - '*/{branch}'
           skip-tag: true
+          do-not-fetch-tags: true
     builders:
       - shell: !include-raw: gerrit-bazel-build-plugin.sh
       - shell: !include-raw: gerrit-bazel-get-project-info.sh
