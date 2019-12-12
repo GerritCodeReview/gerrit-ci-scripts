@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e8d0e9d_74ce9ba8",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-12-12T12:01:09Z",
+      "side": 1,
+      "message": "Yes, we only need the tags from the \u0027origin\u0027 because they influence the value returned by \u0027git describe\u0027 laster on in the versioning.\n\nPreviously, we were using the Jenkins SCM pre-defined tags fetching which was getting the ones form \u0027gerrit\u0027 also, potentially conflicting with the ones from the plugin.",
+      "parentUuid": "f92493c6_240e0667",
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d26f6478_5d598d82",
         "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "239219c2_feac37e0",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-12-12T12:01:09Z",
+      "side": 1,
+      "message": "It is needed, because the default is \u0027false\u0027 which means \"fetch tags\".\nWe do not want Jenkins to fetch all the tags for us, but instead having the build script to fetch only the ones associated with the plugin.",
+      "parentUuid": "d26f6478_5d598d82",
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c077b055_0464540f",
         "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
         "patchSetId": 3
@@ -50,6 +86,24 @@
       "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e6772184_3ca0c722",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-12-12T12:01:09Z",
+      "side": 1,
+      "message": "Same answer as before.",
+      "parentUuid": "c077b055_0464540f",
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
