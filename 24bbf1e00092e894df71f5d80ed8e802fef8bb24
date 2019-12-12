@@ -90,6 +90,47 @@
     },
     {
       "key": {
+        "uuid": "efe0bb86_6673650c",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-12-12T14:53:14Z",
+      "side": 1,
+      "message": "Unrelated to this change, but a related question is with how to ask jenkins to fetch recursively? I filed this issue: [1]. In it-* template only gerrit is fetched, but not jgit moduels, that is required to build its-* plugins. Any idea?\n\n* [1] https://bugs.chromium.org/p/gerrit/issues/detail?id\u003d12064",
+      "parentUuid": "20e095fe_e04888bd",
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c777fd03_3f3b2da9",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2019-12-12T14:53:14Z",
+      "side": 1,
+      "message": "According to the documentation it is included in the extension: [1]. Are those extension available? I\u0027m asking because I would like to fix CI build for it-* plugins, and for that I need to fetch submodules (actually only JGit), e.g.:\n\n  scm:\n      - git:\n          remotes:\n            - origin:\n                url: https://gerrit.googlesource.com/gerrit\n                submodules:\n                  recursive: true\n            \n* [1] https://docs.openstack.org/infra/jenkins-job-builder/scm.html?highlight\u003dwipe#scm.git\n* [2] https://bugs.chromium.org/p/gerrit/issues/detail?id\u003d1206",
+      "range": {
+        "startLine": 68,
+        "startChar": 10,
+        "endLine": 68,
+        "endChar": 33
+      },
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c077b055_0464540f",
         "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
         "patchSetId": 3
