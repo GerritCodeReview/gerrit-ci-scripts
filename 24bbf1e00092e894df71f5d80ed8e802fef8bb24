@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "20e095fe_e04888bd",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-12T14:29:50Z",
+      "side": 1,
+      "message": "Yes, I got that, but here Jenkins will only clone the plugin and not Gerrit:\n\n  scm:\n      - git:\n          remotes:\n            - origin:\n                url: https://gerrit.googlesource.com/plugins/{name}\n          branches:\n            - \u0027*/{branch}\u0027\n          skip-tag: true\n\nGerrit is fetched manually in a shell script during the build. So Jenkins should only fetch tags from the plugin here, since the Jenkins SCM plugin does not know anything about Gerrit being fetched. Thus, I think we should only need that for the jobs, where we build the a plugin branch against only a single Gerrit branch, where we let the Jenkins SCM fetch both repositories.",
+      "parentUuid": "239219c2_feac37e0",
+      "revId": "24bbf1e00092e894df71f5d80ed8e802fef8bb24",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c077b055_0464540f",
         "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
         "patchSetId": 3
