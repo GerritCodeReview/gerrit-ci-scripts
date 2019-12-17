@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "579704aa_4bed7528",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2019-12-17T16:31:24Z",
+      "side": 1,
+      "message": "ya i think yarn will cache multiple versions of a package as long as you installed any of them",
+      "parentUuid": "39867cc7_d8f1b259",
+      "revId": "acd32c618b635ab5003f36ced4aae36f23b7b21f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "80fbaad0_f1c141a9",
         "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
         "patchSetId": 1

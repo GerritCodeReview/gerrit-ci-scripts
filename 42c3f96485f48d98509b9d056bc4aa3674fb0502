@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "52d9377c_3b1e391d",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2019-12-17T16:31:24Z",
+      "side": 1,
+      "message": "so if the package.json changed, this `--offline` will fallback to `yarn install` ?",
+      "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
