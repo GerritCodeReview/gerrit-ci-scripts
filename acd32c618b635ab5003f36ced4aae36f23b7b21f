@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39867cc7_d8f1b259",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-17T15:19:49Z",
+      "side": 1,
+      "message": "In the end, we probably want to do that for all gerrit branches. This requires a downport of the package.json though.\nThen we will have to test whether yarn caches multiple versions of a package, so that this also works, if different versions are used between the branches.",
+      "revId": "acd32c618b635ab5003f36ced4aae36f23b7b21f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
