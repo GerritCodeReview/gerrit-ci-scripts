@@ -16,6 +16,23 @@
       "revId": "acd32c618b635ab5003f36ced4aae36f23b7b21f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "80fbaad0_f1c141a9",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-17T15:27:11Z",
+      "side": 1,
+      "message": "This check will not be enough, since the package.json will probably be updated in a separate change than the tested UI change. It should rather be tested, whether the versions are available in the cache or not. I will test, whether an offline installation fails, if that is the case. Then just trying and falling back would be an option.",
+      "revId": "acd32c618b635ab5003f36ced4aae36f23b7b21f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
