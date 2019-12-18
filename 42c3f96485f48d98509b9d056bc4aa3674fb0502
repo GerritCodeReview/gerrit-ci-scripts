@@ -106,6 +106,24 @@
       "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc1e1e00_e626b3c2",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2019-12-18T09:19:35Z",
+      "side": 1,
+      "message": "talked offline. This is mainly because of:\n\n1. slaves won\u0027t be able to modify global cache\n2. we don\u0027t want fetches from slaves\n3. for better support on future versions and multiple versions as well (the global cache should have all versions we need)",
+      "parentUuid": "e9108195_556f0c56",
+      "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
