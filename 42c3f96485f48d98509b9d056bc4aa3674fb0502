@@ -52,6 +52,24 @@
       "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "16ce962c_c80d94c7",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-18T08:55:26Z",
+      "side": 1,
+      "message": "Yes, that\u0027s the idea and why I have this change still WIP. We first need the package.json available in all branches built by the CI.",
+      "parentUuid": "9e577b98_d21caf63",
+      "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
