@@ -88,6 +88,24 @@
       "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e9108195_556f0c56",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1085901
+      },
+      "writtenOn": "2019-12-18T09:06:09Z",
+      "side": 1,
+      "message": "What if we combine both approaches? I.e. install globally old packages + yarn install to populate a cache?\nI expect, that in this case old branches will use globally installed version and new branches will use locally installed version.",
+      "parentUuid": "16ce962c_c80d94c7",
+      "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
