@@ -124,6 +124,24 @@
       "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe9e19c9_ff9fa360",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-18T09:20:00Z",
+      "side": 1,
+      "message": "Possible, but then we would still have to maintain the versions in the CI, which we would like to get rid of. Porting down the package.json is actually not a lot of work and afterwards they can develop independently over the branches, producing little work at all on old branches. And we would be consistent over all.\nAnyway, the issue that caused Tao and me to start working on this, was that eslint \u003e 6.0.0 does not support global installations anymore, at least if plugins should be used. To get it work we had to do some hacks in the scripting, which isn\u0027t nice. Having it installed locally for every build would eliminate that. WOuld be nice to have that for all supported branches.",
+      "parentUuid": "e9108195_556f0c56",
+      "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
