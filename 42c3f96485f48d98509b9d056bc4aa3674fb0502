@@ -34,6 +34,24 @@
       "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9e577b98_d21caf63",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2019-12-18T08:53:33Z",
+      "side": 1,
+      "message": "i see. if thats the case, we may need to download multiple copy of the `package.json` from all supported branches (2.16 - master) and install all of them when build the docker image.",
+      "parentUuid": "51fe6789_95f99fee",
+      "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
