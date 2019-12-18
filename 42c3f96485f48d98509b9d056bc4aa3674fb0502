@@ -16,6 +16,24 @@
       "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "51fe6789_95f99fee",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-18T08:47:12Z",
+      "side": 1,
+      "message": "Exactly, if a new package is added or the version changed and is thus not in the cache, the offline install will fail and a normal \"online\" install will be started, which will get the new dependencies from the package servers. one disadvantage is, that if the version is not pinned to an exact version this online install will also get the latest allowed version of a package that did not change, which might (but should not) have unforeseen side effects. Narrowing down the allowed versions as far as possible might be a good practice.\nNote, that the online install will not update the cache, since the cache is stored inside the slave container and will thus be deleted with the container, which happens after the job is finished. Thus, the cache has to be refreshed, either regularly or after a package update happens, to again allow offline installation. We handle that similarly with the bazel versions right now, updating them by rebuilding the containers, if necessary and in the meantime use bazelisk to download a newer version, if required.",
+      "parentUuid": "52d9377c_3b1e391d",
+      "revId": "42c3f96485f48d98509b9d056bc4aa3674fb0502",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
