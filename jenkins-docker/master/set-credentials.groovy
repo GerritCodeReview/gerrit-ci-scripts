@@ -23,7 +23,7 @@ new File("/var/jenkins_home/.netrc").eachLine { line ->
     def user = lineParts[3]
     def pass = lineParts[5]
     println "Setting password for user $user on machine $machine"
-    Credentials c = (Credentials) new UsernamePasswordCredentialsImpl(machine, ".netrc credentials for $machine", user, pass)
+    Credentials c = (Credentials) new UsernamePasswordCredentialsImpl(CredentialsScope.GLOBAL, machine, ".netrc credentials for $machine", user, pass)
     SystemCredentialsProvider.getInstance().getStore().addCredentials(Domain.global(), c)
   }
 }
