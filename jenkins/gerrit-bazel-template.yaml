@@ -50,48 +50,6 @@
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
 
 - job-template:
-    name: 'Gerrit-pipeline-{branch}'
-    project-type: pipeline
-    sandbox: true
-    concurrent: false
-    node: master
-    triggers:
-      - pollscm:
-          cron: 'H/10 * * * *'
-    properties:
-      - build-discarder:
-          days-to-keep: 256
-      - authorization:
-          anonymous:
-            - job-discover
-            - job-read
-            - job-extended-read
-    dsl: |
-      def retries = 3
-      def types = ['bazel']
-      def builds = [:]
-
-      def createStep(type) {{
-          return {{
-              stage(type) {{
-                build "Gerrit-${{type}}-{branch}"
-              }}
-          }}
-      }}
-
-      if ("{branch}"=="master") {{
-          types += 'bazel-java11'
-      }}
-
-      types.each {{
-          builds.put("${{it}}", createStep(it))
-      }}
-
-      node('master') {{
-          parallel (builds)
-      }}
-
-- job-template:
     name: 'Gerrit-bazel-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
@@ -133,16 +91,6 @@
       - master
     jobs:
       - 'Gerrit-bazel-java11-{branch}'
-
-- project:
-    name: Gerrit-pipeline
-    branch:
-      - master
-      - stable-3.1
-      - stable-3.0
-      - stable-2.16
-    jobs:
-      - 'Gerrit-pipeline-{branch}'
 
 - view:
     name: Gerrit
