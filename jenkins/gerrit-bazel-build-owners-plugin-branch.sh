@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-git checkout -f gerrit/{gerrit-branch}
+git checkout -fb {branch} gerrit/{gerrit-branch}
+git submodule update --init
 git read-tree -u --prefix=plugins/{name}-plugin origin/{branch}
 git fetch --tags origin
 ln -s plugins/{name}-plugin/owners-common .
