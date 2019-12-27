@@ -22,6 +22,30 @@
       "revId": "ea920e301eafe40363bbc8b176807efc0df376cb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa80e5b7_5d6c6e36",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2019-12-27T07:16:24Z",
+      "side": 1,
+      "message": "I think so, since this will overwrite the defaults and thereby remove the publishers. The defaults will try to archive build artifacts, which the Gerrit-codestyle job will not produce. Thus, the job would fail, if this is not done.",
+      "parentUuid": "a89ebf9e_b2f52c1c",
+      "range": {
+        "startLine": 147,
+        "startChar": 4,
+        "endLine": 147,
+        "endChar": 15
+      },
+      "revId": "ea920e301eafe40363bbc8b176807efc0df376cb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
