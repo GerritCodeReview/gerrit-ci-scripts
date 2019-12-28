@@ -5,6 +5,7 @@ rm -rf plugins/its-{name}
 rm -rf plugins/its-base
 git read-tree -u --prefix=plugins/its-{name} origin/{branch}
 git read-tree -u --prefix=plugins/its-base base/{branch}
+git fetch --tags origin
 
 rm -Rf bazel-bin
 
