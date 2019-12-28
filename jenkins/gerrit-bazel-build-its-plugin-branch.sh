@@ -1,11 +1,12 @@
 #!/bin/bash -e
 
-git remote add gerrit https://gerrit.googlesource.com/gerrit
-git fetch gerrit
-git checkout gerrit/{gerrit-branch}
+git remote add origin https://gerrit.googlesource.com/gerrit
+git fetch origin
+git checkout origin/{gerrit-branch}
+git submodule update --init
 rm -rf plugins/its-{name}
 rm -rf plugins/its-base
-git read-tree -u --prefix=plugins/its-{name} origin/{branch}
+git read-tree -u --prefix=plugins/its-{name} plugin/{branch}
 
 # Try first the Gerrit-specific branch of its-base and then fallback to the one of the plugin
 git read-tree -u --prefix=plugins/its-base base/{gerrit-branch} || git read-tree -u --prefix=plugins/its-base base/{branch}
@@ -33,7 +34,7 @@ fi
 
 for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)
 do
-    PLUGIN_VERSION=$(git describe --always origin/{branch})
+    PLUGIN_VERSION=$(git describe --always plugin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=bazel-bin/plugins/its-{name}/$(basename $JAR)

@@ -20,16 +20,16 @@
     scm:
       - git:
           remotes:
-            - origin:
+            - plugin:
                 url: https://gerrit.googlesource.com/plugins/its-{name}
-            - gerrit:
+            - origin:
                 url: https://gerrit.googlesource.com/gerrit
             - base:
                 url: https://gerrit.googlesource.com/plugins/its-base
           branches:
-            - origin/{branch}
+            - plugin/{branch}
           submodule:
-            recursive: true
+            recursive: false
           skip-tag: true
     triggers:
       - pollscm:
@@ -57,12 +57,12 @@
     scm:
       - git:
           remotes:
-            - origin:
+            - plugin:
                 url: https://gerrit.googlesource.com/plugins/its-{name}
             - base:
                 url: https://gerrit.googlesource.com/plugins/its-base
           branches:
-            - origin/{branch}
+            - plugin/{branch}
           skip-tag: true
     builders:
       - shell: !include-raw: gerrit-bazel-build-its-plugin-branch.sh
