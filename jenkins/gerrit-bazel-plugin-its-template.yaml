@@ -29,7 +29,7 @@
           branches:
             - origin/{branch}
           submodule:
-            recursive: true
+            recursive: false
           skip-tag: true
     triggers:
       - pollscm:
