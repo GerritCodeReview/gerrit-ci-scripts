@@ -2,7 +2,8 @@
 
 git remote add gerrit https://gerrit.googlesource.com/gerrit
 git fetch gerrit
-git checkout gerrit/{gerrit-branch}
+git checkout -fb {gerrit-branch} gerrit/{gerrit-branch}
+git submodule update --init
 rm -rf plugins/its-{name}
 rm -rf plugins/its-base
 git read-tree -u --prefix=plugins/its-{name} origin/{branch}
