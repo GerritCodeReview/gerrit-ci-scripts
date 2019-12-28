@@ -29,6 +29,7 @@
           submodule:
             recursive: true
           skip-tag: true
+          do-not-fetch-tags: true
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'

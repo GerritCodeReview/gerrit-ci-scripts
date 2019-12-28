@@ -6,6 +6,7 @@ bazelisk version
 
 git checkout -f -b gerrit-master gerrit/{gerrit-branch}
 git submodule update --init
+git fetch --tags origin
 bazelisk build api
 ./tools/maven/api.sh install
 
