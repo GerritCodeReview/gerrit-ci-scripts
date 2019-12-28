@@ -2,6 +2,7 @@
 
 git checkout -f gerrit/{branch}
 git read-tree -u --prefix=plugins/{name}-plugin origin/{branch}
+git fetch --tags origin
 ln -s plugins/{name}-plugin/owners-common .
 pushd plugins && ln -s owners-plugin/{{owners,owners-autoassign}} . && popd
 
