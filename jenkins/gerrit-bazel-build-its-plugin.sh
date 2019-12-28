@@ -1,9 +1,10 @@
 #!/bin/bash -e
 
-git checkout gerrit/{branch}
+git checkout origin/{branch}
+git submodule update --init
 rm -rf plugins/its-{name}
 rm -rf plugins/its-base
-git read-tree -u --prefix=plugins/its-{name} origin/{branch}
+git read-tree -u --prefix=plugins/its-{name} plugin/{branch}
 git read-tree -u --prefix=plugins/its-base base/{branch}
 
 rm -Rf bazel-bin
@@ -29,7 +30,7 @@ fi
 
 for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)
 do
-    PLUGIN_VERSION=$(git describe --always origin/{branch})
+    PLUGIN_VERSION=$(git describe --always plugin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=bazel-bin/plugins/its-{name}/$(basename $JAR)
