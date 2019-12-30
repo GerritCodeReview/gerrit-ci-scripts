@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d598ca35_5e8d44f5",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2019-12-30T13:03:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "70651962_3eef7b78",
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "53da7ead_613df639",
         "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
         "patchSetId": 1
@@ -181,6 +199,30 @@
       "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1933afd5_33f44a0e",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2019-12-30T13:03:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7277001e_5ed39fba",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
