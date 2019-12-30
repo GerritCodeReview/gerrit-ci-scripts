@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "70651962_3eef7b78",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-12-30T11:45:30Z",
+      "side": 1,
+      "message": "organization: GerritForge\nrepo: plugins_websession-broker",
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "53da7ead_613df639",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-12-30T11:45:30Z",
+      "side": 1,
+      "message": "The \u0027gh-bazel\u0027 template doesn\u0027t have the gerrit-branch variable",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 53
+      },
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "738e0bb2_acae1cd0",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-12-30T11:45:30Z",
+      "side": 1,
+      "message": "should be \u0027gh-bazel\u0027 because the plugin is currently on GitHub only",
+      "range": {
+        "startLine": 4,
+        "startChar": 23,
+        "endLine": 4,
+        "endChar": 28
+      },
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "baba10fb_bdfb9770",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-12-30T11:45:30Z",
+      "side": 1,
+      "message": "stable-3.0, right?",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
