@@ -65,6 +65,54 @@
     },
     {
       "key": {
+        "uuid": "e112119e_4911fd20",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2019-12-30T11:52:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "53da7ead_613df639",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 53
+      },
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8cc15c55_c89eaa1a",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2019-12-30T11:52:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "738e0bb2_acae1cd0",
+      "range": {
+        "startLine": 4,
+        "startChar": 23,
+        "endLine": 4,
+        "endChar": 28
+      },
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baba10fb_bdfb9770",
         "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
         "patchSetId": 1
@@ -76,6 +124,30 @@
       "writtenOn": "2019-12-30T11:45:30Z",
       "side": 1,
       "message": "stable-3.0, right?",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "600e6caafb2afa6167ea605fd6c3c6a3627d772c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1623acca_8f0b634f",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2019-12-30T11:52:14Z",
+      "side": 1,
+      "message": "for now we have just master branch in websession-broker, should we create stable-3.0",
+      "parentUuid": "baba10fb_bdfb9770",
       "range": {
         "startLine": 6,
         "startChar": 14,
