@@ -29,6 +29,13 @@ RUN apt-get update && apt-get install -y \
     pip install jenkins_job_builder==2.7.0 pbr==2.0.0 && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
+RUN git clone https://review.opendev.org/jjb/jenkins-job-builder && \
+    cd jenkins-job-builder && \
+    git fetch origin refs/changes/21/700921/3 && \
+    git checkout FETCH_HEAD && \
+    cd .. && \
+    pip install ./jenkins-job-builder
+
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.ParametersAction.keepUndefinedParameters=true
