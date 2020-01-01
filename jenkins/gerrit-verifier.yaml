@@ -140,12 +140,18 @@
     description: Multi-branch pipeline to validate Gerrit
     project-type: multibranch
     node: master
+    days-to-keep: 90
+    number-to-keep: 500
+    prune-dead-branches: false
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit
           credentials-id: gerrit-review.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
+          filter-checks:
+            query-operator: 'SCHEME'
+            query-string: 'gerritforge'
           property-strategies:
             all-branches:
               - suppress-scm-triggering: true
