@@ -140,14 +140,37 @@
     description: Multi-branch pipeline to validate Gerrit
     project-type: multibranch
     node: master
-    scm:
-      - gerrit:
-          url: https://gerrit-review.googlesource.com/a/gerrit
-          credentials-id: gerrit-review.googlesource.com
-          refspecs:
-            - '+refs/heads/*:refs/remotes/@{remote}/*'
-          property-strategies:
-            all-branches:
-              - suppress-scm-triggering: true
-              - pipeline-branch-durability-override: max-survivability
+    raw:
+      - xml: |
+        <sources class="jenkins.branch.MultiBranchProject$BranchSourceList" plugin="branch-api">
+          <data>
+            <jenkins.branch.BranchSource>
+              <source class="jenkins.plugins.gerrit.GerritSCMSource" plugin="gerrit">
+                <id>gr-https://gerrit-review.googlesource.com/a/gerrit</id>
+                <remote>https://gerrit-review.googlesource.com/a/gerrit</remote>
+                <credentialsId>gerrit-review.googlesource.com</credentialsId>
+                <includes>*</includes>
+                <excludes/>
+                <ignoreOnPushNotifications>true</ignoreOnPushNotifications>
+                <traits>
+                  <jenkins.plugins.gerrit.traits.ChangeDiscoveryTrait/>
+                  <jenkins.plugins.gerrit.traits.FilterChecksTrait>
+                    <queryOperator>SCHEME</queryOperator>
+                    <queryString>gerritforge</queryString>
+                  </jenkins.plugins.gerrit.traits.FilterChecksTrait>
+                  <jenkins.plugins.git.traits.RefSpecsSCMSourceTrait plugin="git">
+                    <templates>
+                      <jenkins.plugins.git.traits.RefSpecsSCMSourceTrait_-RefSpecTemplate>
+                        <value>+refs/heads/*:refs/remotes/@{remote}/*</value>
+                      </jenkins.plugins.git.traits.RefSpecsSCMSourceTrait_-RefSpecTemplate>
+                    </templates>
+                  </jenkins.plugins.git.traits.RefSpecsSCMSourceTrait>
+                </traits>
+              </source>
+            </jenkins.branch.BranchSource>
+          </data>
+          <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+        </sources>
     periodic-folder-trigger: 10m
+    number-to-keep: 500
+    days-to-keep: 90
