@@ -25,9 +25,13 @@ RUN apt-get update && apt-get install -y \
     xsltproc \
     apt-transport-https && \
     rm -rf /var/lib/apt/lists/* && \
-    \
-    pip install jenkins_job_builder==3.2.0 pbr==2.0.0 && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
+
+RUN git clone https://review.opendev.org/jjb/jenkins-job-builder && \
+    cd jenkins-job-builder && \
+    git fetch origin refs/changes/21/700921/4 && \
+    git checkout FETCH_HEAD && \
+    pip install .
 
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
