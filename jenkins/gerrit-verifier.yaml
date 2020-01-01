@@ -146,8 +146,16 @@
           credentials-id: gerrit-review.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
+          raw:
+            xml: |
+              <jenkins.plugins.gerrit.traits.FilterChecksTrait>
+                <queryOperator>SCHEME</queryOperator>
+                <queryString>gerritforge</queryString>
+              </jenkins.plugins.gerrit.traits.FilterChecksTrait>
           property-strategies:
             all-branches:
               - suppress-scm-triggering: true
               - pipeline-branch-durability-override: max-survivability
     periodic-folder-trigger: 10m
+    number-to-keep: 500
+    days-to-keep: 90
