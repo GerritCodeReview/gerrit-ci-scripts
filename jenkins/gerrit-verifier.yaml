@@ -136,18 +136,60 @@
       - shell: !include-raw-escape: gerrit-codestyle-buildifier.sh
 
 - job:
-    name: 'Gerrit-verifier-pipeline'
-    description: Multi-branch pipeline to validate Gerrit
-    project-type: multibranch
-    node: master
-    scm:
-      - gerrit:
-          url: https://gerrit-review.googlesource.com/a/gerrit
-          credentials-id: gerrit-review.googlesource.com
-          refspecs:
-            - '+refs/heads/*:refs/remotes/@{remote}/*'
-          property-strategies:
-            all-branches:
-              - suppress-scm-triggering: true
-              - pipeline-branch-durability-override: max-survivability
-    periodic-folder-trigger: 10m
+    raw:
+      xml: |
+        <?xml version='1.1' encoding='UTF-8'?>
+        <org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject plugin="workflow-multibranch@2.16">
+          <actions/>
+          <description>Multi-branch pipeline to validate Gerrit&lt;!-- Managed by Jenkins Job Builder --&gt;</description>
+          <properties/>
+          <folderViews class="jenkins.branch.MultiBranchProjectViewHolder" plugin="branch-api@2.0.20">
+            <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+          </folderViews>
+          <healthMetrics>
+            <com.cloudbees.hudson.plugins.folder.health.WorstChildHealthMetric plugin="cloudbees-folder@6.4">
+              <nonRecursive>false</nonRecursive>
+            </com.cloudbees.hudson.plugins.folder.health.WorstChildHealthMetric>
+          </healthMetrics>
+          <icon class="jenkins.branch.MetadataActionFolderIcon" plugin="branch-api@2.0.20">
+            <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+          </icon>
+          <orphanedItemStrategy class="com.cloudbees.hudson.plugins.folder.computed.DefaultOrphanedItemStrategy" plugin="cloudbees-folder@6.4">
+            <pruneDeadBranches>true</pruneDeadBranches>
+            <daysToKeep>-1</daysToKeep>
+            <numToKeep>-1</numToKeep>
+          </orphanedItemStrategy>
+          <triggers>
+            <com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger plugin="cloudbees-folder@6.4">
+              <spec>H/6 * * * *</spec>
+              <interval>600000</interval>
+            </com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger>
+          </triggers>
+          <disabled>false</disabled>
+          <sources class="jenkins.branch.MultiBranchProject$BranchSourceList" plugin="branch-api@2.0.20">
+            <data>
+              <jenkins.branch.BranchSource>
+                <source class="jenkins.plugins.gerrit.GerritSCMSource" plugin="gerrit-code-review@0.4.0">
+                  <id>gr-https://gerrit-review.googlesource.com/a/gerrit</id>
+                  <remote>https://gerrit-review.googlesource.com/a/gerrit</remote>
+                  <credentialsId>gerrit-review.googlesource.com</credentialsId>
+                  <traits>
+                    <jenkins.plugins.gerrit.traits.ChangeDiscoveryTrait/>
+                    <jenkins.plugins.git.traits.RefSpecsSCMSourceTrait plugin="git@3.9.1">
+                      <templates>
+                        <jenkins.plugins.git.traits.RefSpecsSCMSourceTrait_-RefSpecTemplate>
+                          <value>+refs/heads/*:refs/remotes/@{remote}/*</value>
+                        </jenkins.plugins.git.traits.RefSpecsSCMSourceTrait_-RefSpecTemplate>
+                      </templates>
+                    </jenkins.plugins.git.traits.RefSpecsSCMSourceTrait>
+                  </traits>
+                </source>
+              </jenkins.branch.BranchSource>
+            </data>
+            <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+          </sources>
+          <factory class="org.jenkinsci.plugins.workflow.multibranch.WorkflowBranchProjectFactory">
+            <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
+            <scriptPath>Jenkinsfile</scriptPath>
+          </factory>
+        </org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject>
