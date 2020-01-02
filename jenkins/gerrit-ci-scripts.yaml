@@ -29,8 +29,8 @@
     builders:
       - shell: docker system prune -af
       - shell: |
-          export JENKINS_WAR_VER=2.190.1
-          export JENKINS_WAR_SHA=412e5806740b85082068f7034e79e87c77d07d7b
+          export JENKINS_WAR_VER=2.204.1
+          export JENKINS_WAR_SHA=924d2c9fabfdcacee1bae757337a07d7599eaa35
           cd jenkins-docker
           make NO_CACHE=true build
 
