@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4c463c45_b581bd50",
+        "filename": "jenkins-docker/master/set-credentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-01-02T09:53:58Z",
+      "side": 1,
+      "message": "How did this work before? Git blame shows that the constructor is unchanged for 7 years (the original implementation).",
+      "revId": "71efe9ac857893895c8ec25a0a9bf87bf48e54de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
