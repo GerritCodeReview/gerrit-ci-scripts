@@ -46,6 +46,7 @@ COPY config.xml $JENKINS_REF
 COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 COPY jenkins.model.JenkinsLocationConfiguration.xml $JENKINS_REF
 COPY org.jenkinsci.plugins.xvfb.Xvfb.xml $JENKINS_REF
+COPY jenkins.security.UpdateSiteWarningsConfiguration.xml $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/.ssh && \
     chown -R jenkins:jenkins $JENKINS_REF/.ssh && \
