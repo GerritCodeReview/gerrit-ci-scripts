@@ -22,6 +22,30 @@
       "revId": "0b1ab7dc450cbd2db03786355b16aaaa9ebc6e54",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b67c8b6_a25e1b9c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-02T11:31:20Z",
+      "side": 1,
+      "message": "forgot to add \u0027far\u0027",
+      "parentUuid": "ccf5c12f_7f24696a",
+      "range": {
+        "startLine": 10,
+        "startChar": 9,
+        "endLine": 10,
+        "endChar": 11
+      },
+      "revId": "0b1ab7dc450cbd2db03786355b16aaaa9ebc6e54",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
