@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "158b883d_4f69fca9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-01-03T14:07:13Z",
+      "side": 1,
+      "message": "Can we clearly label it as a short-term solution, e.g. adding [WORKAROUND] at the beginning of the header?",
+      "revId": "e3438969b14acbb8bc4684a1eca38c92a9881023",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
