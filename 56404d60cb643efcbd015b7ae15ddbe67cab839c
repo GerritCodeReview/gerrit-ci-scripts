@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "613a3dfa_0696adaf",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T22:39:40Z",
+      "side": 1,
+      "message": "I would stick with 443 as it is today",
+      "range": {
+        "startLine": 23,
+        "startChar": 51,
+        "endLine": 23,
+        "endChar": 55
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "89219529_a8bd676f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T22:39:40Z",
+      "side": 1,
+      "message": "You don\u0027t need a different port, just a different hostname.\n\nExample: \n- gerrit-ci.gerritforge.com (not auth)\n- gerrit-ci-sec.gerritforge.com (X.509 auth)",
+      "range": {
+        "startLine": 25,
+        "startChar": 52,
+        "endLine": 25,
+        "endChar": 56
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "021c77ac_c05dd802",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T22:39:40Z",
+      "side": 1,
+      "message": "Why not just keeping the token authentication and use localhost:8080 instead?",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 35
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "afded2ed_63dde6d6",
         "filename": "jenkins-docker/docker-compose.yml",
         "patchSetId": 12
