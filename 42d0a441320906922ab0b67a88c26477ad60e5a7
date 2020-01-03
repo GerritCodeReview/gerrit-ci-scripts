@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e0ff9131_31fe1d10",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T16:17:38Z",
+      "side": 1,
+      "message": "I35739678 has already upgraded the docker-plugin, or am I missing anything?",
+      "range": {
+        "startLine": 11,
+        "startChar": 49,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "42d0a441320906922ab0b67a88c26477ad60e5a7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
