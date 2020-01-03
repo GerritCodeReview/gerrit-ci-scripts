@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1cd9dba1_980acfa3",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-01-03T14:15:49Z",
+      "side": 1,
+      "message": "Currently, there are only couple of checkers with this prefix for Gerrit core project only. What if we would define another 150 checkers für gerrit plugin projects, that currently not supported for verification within the pipeline? Should we check in some place, that only gerrit core project is supported and skip all other projects?",
+      "range": {
+        "startLine": 154,
+        "startChar": 27,
+        "endLine": 154,
+        "endChar": 38
+      },
+      "revId": "c62e9f34efb804099315f2e2aefde3697f9c886b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
