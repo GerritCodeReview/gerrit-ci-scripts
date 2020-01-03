@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "33fcd218_35804e37",
+        "filename": "jenkins-docker/master/plugins.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T16:02:12Z",
+      "side": 1,
+      "message": "Is this upgrade implied by the git plugin upgrade?",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 11
+      },
+      "revId": "35927720b23686742960c4dc6cf36939be035cde",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
