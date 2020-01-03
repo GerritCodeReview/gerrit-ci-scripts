@@ -70,6 +70,30 @@
       "revId": "c62e9f34efb804099315f2e2aefde3697f9c886b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a3c88a4c_0c073ec6",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T14:43:30Z",
+      "side": 1,
+      "message": "\u003e -1. This would mean the explosion of queries.\n\nI would suggest to move the discussion offline, as this change is about gerrit-verifier and this isn\u0027t necessarily relevant here.\nBut I see your point and it is worth digging into it further.\n\n\u003e In case of OpenStack, there are 2000+ projects. The idea is to have one single query with \"zuul:\"-prefix, and be able to perform verification for all 2000+ projects.\n\nI am really looking forward to see how that works in practice and adopting Zuul.\nFor Jenkins, it should be in a different pipeline: not a multi-branch but a multi-repo/multi-branch pipeline.\n\n\u003e The only problem we have now, is that the current GerritForge-CI-pipeline doesn\u0027t support yet verification for changes for plugins. But if we would implement them, then we could just define new checkers for plugins and everything should just work.\n\nYep, that\u0027s the plan. However, if Zuul adoption will speedup, we may get there with Zuul instead.\n\n\u003e We could also just submit this series and remember to only define new checkers for non gerrit core project, if the CI pipeline supports those projects.\n\nMy idea is more making the checkers definition completely automatic: but that is under discussion on a different thread on the mailing list with Thomas.",
+      "parentUuid": "31d05417_3369cd19",
+      "range": {
+        "startLine": 154,
+        "startChar": 27,
+        "endLine": 154,
+        "endChar": 38
+      },
+      "revId": "c62e9f34efb804099315f2e2aefde3697f9c886b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
