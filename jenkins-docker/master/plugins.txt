@@ -76,7 +76,7 @@ pipeline-stage-view:2.10
 plain-credentials:1.4
 pubsub-light:1.13
 scm-api:2.6.3
-script-security:1.66
+script-security:1.68
 sse-gateway:1.20
 ssh-credentials:1.18
 ssh-slaves:1.26
