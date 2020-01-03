@@ -22,6 +22,30 @@
       "revId": "c62e9f34efb804099315f2e2aefde3697f9c886b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b5cd4c53_54ff1496",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T14:29:21Z",
+      "side": 1,
+      "message": "Yes, we should have the repository as additional filter condition. However, at the moment the checks API doesn\u0027t implement any other filter than the scheme.\n\nAnother alternative would be to have the repository name as scheme. WDYT?",
+      "parentUuid": "1cd9dba1_980acfa3",
+      "range": {
+        "startLine": 154,
+        "startChar": 27,
+        "endLine": 154,
+        "endChar": 38
+      },
+      "revId": "c62e9f34efb804099315f2e2aefde3697f9c886b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
