@@ -72,6 +72,29 @@
     },
     {
       "key": {
+        "uuid": "8f276f53_3cced133",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T19:04:25Z",
+      "side": 1,
+      "message": "SSLv2/v3 are considered insecure and shouldn\u0027t be used",
+      "range": {
+        "startLine": 15,
+        "startChar": 34,
+        "endLine": 15,
+        "endChar": 45
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5f1b4770_3ca461f9",
         "filename": "jenkins-docker/nginx-proxy/nginx.sh",
         "patchSetId": 12
