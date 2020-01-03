@@ -22,6 +22,30 @@
       "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b77e5f60_1b513dea",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-03T16:39:54Z",
+      "side": 1,
+      "message": "oops, it should be 2.204.1",
+      "parentUuid": "afded2ed_63dde6d6",
+      "range": {
+        "startLine": 5,
+        "startChar": 33,
+        "endLine": 5,
+        "endChar": 39
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
