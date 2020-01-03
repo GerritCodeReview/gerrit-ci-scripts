@@ -46,6 +46,30 @@
       "revId": "c62e9f34efb804099315f2e2aefde3697f9c886b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "31d05417_3369cd19",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-01-03T14:38:10Z",
+      "side": 1,
+      "message": "-1. This would mean the explosion of queries. In case of OpenStack, there are 2000+ projects. The idea is to have one single query with \"zuul:\"-prefix, and be able to perform verification for all 2000+ projects.\n\nThe only problem we have now, is that the current GerritForge-CI-pipeline doesn\u0027t support yet verification for changes for plugins. But if we would implement them, then we could just define new checkers for plugins and everything should just work.\n\nWe could also just submit this series and remember to only define new checkers for non gerrit core project, if the CI pipeline supports those projects.",
+      "parentUuid": "b5cd4c53_54ff1496",
+      "range": {
+        "startLine": 154,
+        "startChar": 27,
+        "endLine": 154,
+        "endChar": 38
+      },
+      "revId": "c62e9f34efb804099315f2e2aefde3697f9c886b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
