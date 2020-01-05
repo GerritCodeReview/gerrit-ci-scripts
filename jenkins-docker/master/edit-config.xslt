@@ -21,10 +21,6 @@
      <xsl:element name="useSecurity"><xsl:value-of select="$use-security"/></xsl:element>
   </xsl:template>
 
-  <xsl:template match="serverUrl">
-     <xsl:element name="serverUrl"><xsl:value-of select="$docker-url"/></xsl:element>
-  </xsl:template>
-
   <xsl:template match="hudson/securityRealm">
      <xsl:element name="securityRealm">
         <xsl:attribute name="class">org.jenkinsci.plugins.GithubSecurityRealm</xsl:attribute>
