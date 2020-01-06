@@ -95,6 +95,6 @@
             - '+refs/changes/*:refs/remotes/@{remote}/*'
           property-strategies:
             all-branches:
-              - suppress-scm-triggering: true
+              - suppress-scm-triggering: false
               - pipeline-branch-durability-override: max-survivability
     periodic-folder-trigger: 10m
