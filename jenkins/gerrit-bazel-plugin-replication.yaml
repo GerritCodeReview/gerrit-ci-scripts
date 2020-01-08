@@ -1,7 +1,0 @@
-- project:
-    name: replication
-    jobs:
-      - 'plugin-{name}-gerritforge-{branch}':
-          targets: 'plugins/replication'
-          branch:
-            - stable-3.0
