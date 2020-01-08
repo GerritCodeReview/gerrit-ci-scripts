@@ -34,6 +34,24 @@
       "revId": "a6cf8083ec2b9cf4b19240def4d70c89f582e7c9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ec4b07bd_b3017959",
+        "filename": "jenkins/gerrit-plugin-high-availability-gerritforge.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-01-08T21:07:59Z",
+      "side": 0,
+      "message": "\u003e Should be removed through the base change.\n\nCovered.",
+      "parentUuid": "a5b3f4a8_7e28bb8b",
+      "revId": "a6cf8083ec2b9cf4b19240def4d70c89f582e7c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
