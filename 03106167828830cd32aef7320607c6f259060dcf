@@ -22,6 +22,30 @@
       "revId": "03106167828830cd32aef7320607c6f259060dcf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f42cdd14_b5ad8998",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-01-10T08:44:25Z",
+      "side": 1,
+      "message": "True but it was installed before as a dependency of some plugin, although I don\u0027t know of what plugin in particular. The version that was installed had a security issue, so I updated it by explicitly installing the newest version, where the issue was fixed.",
+      "parentUuid": "3fb5481b_7560db22",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 6
+      },
+      "revId": "03106167828830cd32aef7320607c6f259060dcf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
