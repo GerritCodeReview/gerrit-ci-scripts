@@ -22,6 +22,30 @@
       "revId": "42d0a441320906922ab0b67a88c26477ad60e5a7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97f9cae2_7bdf6a31",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-01-10T08:48:56Z",
+      "side": 1,
+      "message": "It only updated the version installed by the install script, it will still be overwritten at this point, which we can\u0027t undo for know, since then it would stop working for us. I would also not submit this change for now, until we solve the docker-plugin issue in some way.",
+      "parentUuid": "e0ff9131_31fe1d10",
+      "range": {
+        "startLine": 11,
+        "startChar": 49,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "42d0a441320906922ab0b67a88c26477ad60e5a7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
