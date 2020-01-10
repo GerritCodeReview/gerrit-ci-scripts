@@ -37,7 +37,7 @@ envinject-api:1.7
 gatling:1.2.5
 gatling-check:1.0.0
 gerrit-code-review:0.4.0
-git:4.0.0
+git:3.9.1
 git-client:3.0.0
 github:1.29.5
 github-api:1.92
@@ -55,7 +55,7 @@ logstash:2.0.0
 icon-shim:2.0.3
 jquery-detached:1.2.1
 junit:1.24
-mailer:1.29
+mailer:1.21
 mask-passwords:2.12.0
 matrix-auth:2.2
 matrix-project:1.13
