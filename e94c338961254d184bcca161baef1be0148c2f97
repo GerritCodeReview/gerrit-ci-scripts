@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f474818a_dc1b8415",
+        "filename": "jenkins-docker/master/edit-config.xslt",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-01-10T09:21:31Z",
+      "side": 0,
+      "message": "This will break the test installations, where we will have to set the docker url to unix:///var/run/docker.sock (linux) or tcp://host.docker.internal:1234 (osx). Can we make this conditional?",
+      "revId": "e94c338961254d184bcca161baef1be0148c2f97",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6d4686e_2f2d16d9",
+        "filename": "jenkins-docker/master/edit-config.xslt",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-01-10T09:21:31Z",
+      "side": 0,
+      "message": "If we do this, the config.sh, Dockerfile and Makefile should be adapted accordingly.",
+      "range": {
+        "startLine": 25,
+        "startChar": 58,
+        "endLine": 25,
+        "endChar": 68
+      },
+      "revId": "e94c338961254d184bcca161baef1be0148c2f97",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
