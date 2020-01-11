@@ -64,7 +64,7 @@
             - job-read
             - job-extended-read
       - build-discarder:
-          days-to-keep: 7
+          days-to-keep: 30
     scm:
       - git:
           url: https://gerrit.googlesource.com/gerrit
