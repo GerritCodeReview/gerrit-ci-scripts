@@ -19,6 +19,9 @@
             recursive: true
           skip-tag: true
           basedir: gerrit
+    triggers:
+      - pollscm:
+          cron: 'H/50 * * * *'
     wrappers:
       - timeout:
           timeout: 90
