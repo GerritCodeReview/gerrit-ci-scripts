@@ -156,4 +156,4 @@
             all-branches:
               - suppress-scm-triggering: false
               - pipeline-branch-durability-override: max-survivability
-    periodic-folder-trigger: 10m
+    periodic-folder-trigger: 5m
