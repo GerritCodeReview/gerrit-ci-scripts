@@ -17,7 +17,8 @@ RUN npm install --unsafe-perm -g \
       eslint-plugin-html@"=6.0.0" \
       eslint-plugin-jsdoc@"=18.4.3" \
       eslint-plugin-promise@"=4.0.1" \
+      crisper@="2.1.1" \
+      glob@="7.1.6" \
       typescript \
-      fried-twinkie@"^0.2.2" \
       polylint polymer-cli
 RUN npm install --unsafe-perm -g 'web-component-tester@$WCT_VER'
