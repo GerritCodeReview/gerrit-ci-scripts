@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f91bd606_f495e81a",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-01-13T16:06:22Z",
+      "side": 1,
+      "message": "no need to have a `run` ? thats nit",
+      "range": {
+        "startLine": 13,
+        "startChar": 6,
+        "endLine": 13,
+        "endChar": 11
+      },
+      "revId": "f8c87221eb151e03c8fb7c67d28fab90cb88506b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
