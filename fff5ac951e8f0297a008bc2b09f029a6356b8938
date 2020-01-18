@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0f04d44a_be4e9e00",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1070360
+      },
+      "writtenOn": "2020-01-18T15:20:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cfd58ec6_a302032c",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f148a9a3_cbfb4e65",
         "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
         "patchSetId": 5
@@ -155,6 +179,30 @@
       "side": 1,
       "message": "Fixed by https://gerrit-review.googlesource.com/c/plugins/rename-project/+/195492",
       "parentUuid": "9197dd95_8916ff3f",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "fff5ac951e8f0297a008bc2b09f029a6356b8938",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5edea2c4_e1ee11c5",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1070360
+      },
+      "writtenOn": "2020-01-18T15:20:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1057260_437ee281",
       "range": {
         "startLine": 8,
         "startChar": 14,
