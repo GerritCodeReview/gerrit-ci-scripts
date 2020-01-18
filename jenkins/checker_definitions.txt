@@ -6,7 +6,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "description": "Builds the code base and executes unit/integration tests",
     "repository": "gerrit",
     "query": "branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:master",
-    "blocking": []
+    "blocking": ["STATE_NOT_PASSING"]
   }
 
 POST /plugins/checks/checkers/ HTTP/1.0
@@ -17,7 +17,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "description": "Using ReviewDb, builds the code base and executes unit/integration tests",
     "repository": "gerrit",
     "query": "branch:stable-2.16",
-    "blocking": []
+    "blocking": ["STATE_NOT_PASSING"]
   }
 
 POST /plugins/checks/checkers/ HTTP/1.0
@@ -28,7 +28,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "description": "Executes unit/integration tests for PolyGerrit UI",
     "repository": "gerrit",
     "query": "(directory:polygerit-ui OR file:WORKSPACE) AND (branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:master)",
-    "blocking": []
+    "blocking": ["STATE_NOT_PASSING"]
   }
 
 POST /plugins/checks/checkers/ HTTP/1.0
@@ -39,5 +39,5 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "description": "Executes Code Style tests",
     "repository": "gerrit",
     "query": "branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:master",
-    "blocking": []
+    "blocking": ["STATE_NOT_PASSING"]
   }
