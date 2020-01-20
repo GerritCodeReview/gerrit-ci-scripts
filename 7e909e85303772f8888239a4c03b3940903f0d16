@@ -34,6 +34,24 @@
       "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ef233152_5a780016",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-01-20T08:37:41Z",
+      "side": 1,
+      "message": "hmmm https://gerrit-ci.gerritforge.com/job/Gerrit-verifier-bazel/77987/console\n\nabove is the log from patchset 4 (which should be the rerun after the new build), and the error is:\n\n```\n    throw err;\n    ^\n\nError: Cannot find module \u0027crisper\u0027\n```",
+      "parentUuid": "88696343_1ab27b1b",
+      "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
