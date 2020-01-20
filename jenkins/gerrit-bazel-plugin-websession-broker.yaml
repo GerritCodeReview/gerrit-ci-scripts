@@ -1,9 +1,7 @@
 - project:
     name: websession-broker
-    organization: GerritForge
-    repo: plugins_websession-broker
     jobs:
-      - 'plugin-{name}-gh-bazel-{branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
             - stable-3.1
