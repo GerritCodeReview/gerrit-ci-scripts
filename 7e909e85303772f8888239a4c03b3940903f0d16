@@ -70,6 +70,24 @@
       "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bbbc9ceb_fa6cacde",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-01-20T08:51:55Z",
+      "side": 1,
+      "message": "Ah, I see. I thought the dependencies would just be needed for the codestyle job. Let me add the package installation to the verifier job as well.",
+      "parentUuid": "43697d34_ed15b26e",
+      "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
