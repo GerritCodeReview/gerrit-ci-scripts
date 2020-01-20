@@ -88,6 +88,24 @@
       "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "49f9e6da_0c441fbe",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-01-20T09:06:01Z",
+      "side": 1,
+      "message": "oh yup, did not know that the BUILD/TESTS actually will run the closure build rule (which rely on the crisper and glob), is that expected ? or is there a way to exclude some build from the BUILD/TEST run ?",
+      "parentUuid": "bbbc9ceb_fa6cacde",
+      "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
