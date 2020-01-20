@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0f0eead2_b476a4b7",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-01-20T08:06:47Z",
+      "side": 1,
+      "message": "There are changes, where this check is not actually run. (E.g. https://gerrit-review.googlesource.com/c/gerrit/+/242732) These are changes only have changes in the polygerrit-ui directory. This is currently not detected by the checks query and thus these changes could not be merged at the current state. We thus have to either change the check-query to correctly add the checks or change the Jenkinsfile to always run the notedb/reviewdb verification.",
+      "revId": "e8bacfb675265f1d8d39fc9bd884235cc93b7906",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
