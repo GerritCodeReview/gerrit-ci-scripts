@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "53fd25ee_e7a6575b",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-01-20T02:14:41Z",
+      "side": 1,
+      "message": "it seems that this may work not correctly if we have changes with new package involved, i.e: new package added to package.json in that change and used in tests. \n\nhttps://gerrit-review.googlesource.com/c/gerrit/+/250150/4\n\nI split above change into two separated parts, one to add dependencies first so can be picked up by the docker.",
+      "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
