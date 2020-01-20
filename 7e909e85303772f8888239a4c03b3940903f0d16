@@ -52,6 +52,24 @@
       "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "43697d34_ed15b26e",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-01-20T08:46:09Z",
+      "side": 1,
+      "message": "actually it\u0027s working just fine for code style tests (the error is for a the BUILD i hope).\n\nthe failure complains about missing crisper seems from Build / Tests stage (link I left above)",
+      "parentUuid": "ef233152_5a780016",
+      "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
