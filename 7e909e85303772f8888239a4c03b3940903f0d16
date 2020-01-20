@@ -106,6 +106,24 @@
       "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "50842318_d0913364",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-install-deps.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-01-20T09:31:07Z",
+      "side": 1,
+      "message": "It is expected, see for example: [1]. This test will create release.war with all core plugins and as part of it will build whole 9 yard PolyGerrit UI:\n\n  bazel test plugins/plugins-manager:plugin_manager_tests\n\n* [1] https://gerrit-review.googlesource.com/c/plugins/plugin-manager/+/224798",
+      "parentUuid": "49f9e6da_0c441fbe",
+      "revId": "7e909e85303772f8888239a4c03b3940903f0d16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
