@@ -1,0 +1,6 @@
+- project:
+    name: metrics-reporter-elasticsearch
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
