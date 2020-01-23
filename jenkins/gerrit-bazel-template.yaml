@@ -19,6 +19,7 @@
             recursive: true
           skip-tag: true
           basedir: gerrit
+          reference-repo: /home/jenkins/repo_cache
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'

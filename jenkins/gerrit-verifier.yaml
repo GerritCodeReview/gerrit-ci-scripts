@@ -75,6 +75,7 @@
             disable: true
           skip-tag: true
           basedir: gerrit
+          reference-repo: /home/jenkins/repo_cache
     wrappers:
       - xvfb:
           installation-name: Xvfb
