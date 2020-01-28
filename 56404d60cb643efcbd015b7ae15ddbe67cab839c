@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "67e1d6e9_1bcaca6e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "613a3dfa_0696adaf",
+      "range": {
+        "startLine": 23,
+        "startChar": 51,
+        "endLine": 23,
+        "endChar": 55
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "89219529_a8bd676f",
         "filename": "/COMMIT_MSG",
         "patchSetId": 12
@@ -45,6 +69,30 @@
       "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1b4efc10_8821bbee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 12
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "89219529_a8bd676f",
+      "range": {
+        "startLine": 25,
+        "startChar": 52,
+        "endLine": 25,
+        "endChar": 56
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -118,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "dd934ab9_515bd3dd",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "46781bc6_ebeef514",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c2eba19e_51c6962b",
         "filename": "jenkins-docker/Makefile",
         "patchSetId": 12
@@ -138,6 +210,30 @@
       "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ebf22e61_ba6f4144",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2eba19e_51c6962b",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 53
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -188,6 +284,30 @@
     },
     {
       "key": {
+        "uuid": "05c2fe61_e1765f24",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b77e5f60_1b513dea",
+      "range": {
+        "startLine": 5,
+        "startChar": 33,
+        "endLine": 5,
+        "endChar": 39
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "48e883f7_24b55a43",
         "filename": "jenkins-docker/docker-compose.yml",
         "patchSetId": 12
@@ -208,6 +328,30 @@
       "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "39256ac7_25a6ba4a",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "48e883f7_24b55a43",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 50
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -234,6 +378,30 @@
     },
     {
       "key": {
+        "uuid": "87ad3aa0_b438c005",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c7183a8c_001ebffe",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 15
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ead5e488_206b9e9e",
         "filename": "jenkins-docker/docker-compose.yml",
         "patchSetId": 12
@@ -254,6 +422,30 @@
       "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69f5a6ce_ec2445a1",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ead5e488_206b9e9e",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 15
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -280,6 +472,30 @@
     },
     {
       "key": {
+        "uuid": "af9fd761_fea985b9",
+        "filename": "jenkins-docker/docker-compose.yml",
+        "patchSetId": 12
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e60ed10_82af87b8",
+      "range": {
+        "startLine": 23,
+        "startChar": 1,
+        "endLine": 23,
+        "endChar": 15
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fde9d76a_938f57c7",
         "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
         "patchSetId": 12
@@ -303,6 +519,30 @@
     },
     {
       "key": {
+        "uuid": "ceb586ff_0110b77a",
+        "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fde9d76a_938f57c7",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 15
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b3093c18_24624aba",
         "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
         "patchSetId": 12
@@ -323,6 +563,30 @@
       "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "23517e42_55465e70",
+        "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
+        "patchSetId": 12
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b3093c18_24624aba",
+      "range": {
+        "startLine": 8,
+        "startChar": 16,
+        "endLine": 8,
+        "endChar": 31
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -372,6 +636,30 @@
     },
     {
       "key": {
+        "uuid": "1cc55708_40a86fe4",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 12
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64ad54a1_1dc2b287",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 15
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "809ca76c_05099e38",
         "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
         "patchSetId": 12
@@ -395,6 +683,30 @@
     },
     {
       "key": {
+        "uuid": "f0b951fb_5a63a129",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 12
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "809ca76c_05099e38",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 13,
+        "endChar": 11
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8f276f53_3cced133",
         "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
         "patchSetId": 12
@@ -415,6 +727,30 @@
       "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "25bc778a_d25cca99",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f276f53_3cced133",
+      "range": {
+        "startLine": 15,
+        "startChar": 34,
+        "endLine": 15,
+        "endChar": 45
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -461,6 +797,30 @@
       "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2573a356_ee1a6f66",
+        "filename": "jenkins-docker/nginx-proxy/nginx.sh",
+        "patchSetId": 12
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-28T14:25:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f1b4770_3ca461f9",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 2
+      },
+      "revId": "56404d60cb643efcbd015b7ae15ddbe67cab839c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
