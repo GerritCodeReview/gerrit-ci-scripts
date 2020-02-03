@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69c2c7db_a07d0e1f",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-template.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-02-03T08:36:46Z",
+      "side": 1,
+      "message": "As I commented in your change in Gerrit, IMHO it would be better to not maintain a virtual link to the closure-test via the template-test for the CI\u0027s sake. I think that just adds too much \"junk\" to maintain in the package.json for a long time. I would rather use the if-clause here, checking for which branch is built, to decide whether to use the template- or the closure-tests.",
+      "revId": "d9980a7690168ead143d75405848934cb11c8286",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
