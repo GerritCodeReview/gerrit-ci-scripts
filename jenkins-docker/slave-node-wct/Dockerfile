@@ -13,6 +13,8 @@ RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
 USER jenkins
 
+RUN yarn config set unsafe-perm true
+
 RUN bash -c 'cd /tmp && git clone -b stable-2.16 https://gerrit.googlesource.com/gerrit && \
     cd /tmp/gerrit && \
     yarn install && \
