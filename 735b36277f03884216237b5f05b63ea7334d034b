@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "091525b7_0055f7c9",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-02-09T16:31:05Z",
+      "side": 1,
+      "message": "Why do we need the offline flag here? These packages aren\u0027t persisted but downloaded each time the build is run.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "735b36277f03884216237b5f05b63ea7334d034b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
