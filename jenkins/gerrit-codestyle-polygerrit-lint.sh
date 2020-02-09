@@ -10,6 +10,6 @@ then
   echo 'Running PolyGerrit lint check...'
   . set-java.sh 8
   java -fullversion
-  yarn eslint
-  yarn polylint
+  bazelisk test //polygerrit-ui/app:lint_test --test_output errors
+  bazelisk test //polygerrit-ui/app:polylint_test --test_output errors
 fi

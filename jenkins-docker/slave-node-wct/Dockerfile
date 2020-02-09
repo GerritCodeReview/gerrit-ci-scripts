@@ -11,14 +11,13 @@ RUN apt-get update && apt-get install -y nodejs gcc g++ make && \
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
-USER jenkins
-
-RUN bash -c 'cd /tmp && git clone -b stable-2.16 https://gerrit.googlesource.com/gerrit && \
-    cd /tmp/gerrit && \
-    yarn install && \
-    git checkout -f stable-3.0 && yarn install && \
-    git checkout -f stable-3.1 && yarn install && \
-    git checkout -f master && yarn install && \
-    rm -Rf /tmp/gerrit'
-
-USER root
+RUN npm install --unsafe-perm -g \
+      eslint@"=6.6.0" \
+      eslint-config-google@"=0.13.0" \
+      eslint-plugin-html@"=6.0.0" \
+      eslint-plugin-jsdoc@"=18.4.3" \
+      eslint-plugin-promise@"=4.0.1" \
+      typescript \
+      fried-twinkie@"^0.2.2" \
+      polylint polymer-cli
+RUN npm install --unsafe-perm -g 'web-component-tester@$WCT_VER'
