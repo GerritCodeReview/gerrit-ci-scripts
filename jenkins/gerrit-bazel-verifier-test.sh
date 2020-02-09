@@ -32,6 +32,9 @@ fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
 then
+  echo 'Installing required npm packages...'
+  yarn install --offline || yarn install
+
   if [ -z "$DISPLAY" ]
   then
     echo 'Not running local tests because env var "DISPLAY" is not set.'
