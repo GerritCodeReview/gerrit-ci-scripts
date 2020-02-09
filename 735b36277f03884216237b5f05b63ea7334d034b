@@ -22,6 +22,30 @@
       "revId": "735b36277f03884216237b5f05b63ea7334d034b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ebc7669_89c85c75",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-02-09T16:40:45Z",
+      "side": 1,
+      "message": "Could we instead do the `yarn install --offline` when we are building the Docker image instead?\nBy downloading and installing the NPMs all the times we run a build, we would be adding more minutes to the build time :-(",
+      "parentUuid": "091525b7_0055f7c9",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "735b36277f03884216237b5f05b63ea7334d034b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
