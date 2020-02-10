@@ -34,6 +34,24 @@
       "revId": "e8bacfb675265f1d8d39fc9bd884235cc93b7906",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b177abeb_cc2d2ccf",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-02-10T14:01:30Z",
+      "side": 1,
+      "message": "Definitively the more secure thing to do. Can you propose the corresponding change(s)?",
+      "parentUuid": "809ccdc0_391409fe",
+      "revId": "e8bacfb675265f1d8d39fc9bd884235cc93b7906",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
