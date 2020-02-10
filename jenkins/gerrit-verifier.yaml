@@ -192,7 +192,6 @@
     project-type: multibranch
     node: master
     days-to-keep: 90
-    number-to-keep: 500
     prune-dead-branches: true
     scm:
       - gerrit:
