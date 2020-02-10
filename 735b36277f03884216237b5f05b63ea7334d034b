@@ -70,6 +70,30 @@
       "revId": "735b36277f03884216237b5f05b63ea7334d034b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a9b6d27_0fd29455",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-02-10T09:27:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "782d0230_7293bcbe",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "735b36277f03884216237b5f05b63ea7334d034b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
