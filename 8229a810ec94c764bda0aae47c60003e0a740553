@@ -22,6 +22,30 @@
       "revId": "8229a810ec94c764bda0aae47c60003e0a740553",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc7a3c17_fd26eaa7",
+        "filename": "jenkins/gerrit-bazel-plugin-rabbitmq.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-02-19T09:25:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "474b32a8_b3926e43",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "8229a810ec94c764bda0aae47c60003e0a740553",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
