@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "474b32a8_b3926e43",
+        "filename": "jenkins/gerrit-bazel-plugin-rabbitmq.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2020-02-19T09:08:08Z",
+      "side": 1,
+      "message": "I\u0027ve just added a stable-3.1 branch, perhaps you could add that one also?\nOr do you wish that I do that in a separate commit?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "8229a810ec94c764bda0aae47c60003e0a740553",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
