@@ -56,5 +56,6 @@
           targets: 'plugins/owners plugins/owners-autoassign'
           branch:
             - master
+            - stable-3.1
             - stable-3.0
             - stable-2.16
