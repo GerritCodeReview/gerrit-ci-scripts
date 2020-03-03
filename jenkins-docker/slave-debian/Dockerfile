@@ -17,7 +17,6 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \
     python-yaml \
-    python-jenkins \
     ant \
     autoconf \
     automake \
@@ -32,6 +31,8 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip install python-jenkins
 
 ADD https://www.kernel.org/pub/software/scm/git/git-$GIT_VER.tar.gz /tmp/
 RUN tar xvfz /tmp/git-$GIT_VER.tar.gz && \
