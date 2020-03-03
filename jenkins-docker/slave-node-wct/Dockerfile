@@ -15,7 +15,7 @@ RUN npm install --unsafe-perm -g \
       eslint@"=6.6.0" \
       eslint-config-google@"=0.13.0" \
       eslint-plugin-html@"=6.0.0" \
-      eslint-plugin-jsdoc@"=18.4.3" \
+      eslint-plugin-jsdoc@"=19.2.0" \
       eslint-plugin-promise@"=4.0.1" \
       typescript \
       fried-twinkie@"^0.2.2" \
