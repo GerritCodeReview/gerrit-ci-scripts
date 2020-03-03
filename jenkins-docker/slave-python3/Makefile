@@ -1,5 +1,5 @@
 NO_CACHE ?= false
-DEBIAN_VER ?= stretch
+DEBIAN_VER ?= buster
 IMAGE=gerritforge/gerrit-ci-slave-python3:$(DEBIAN_VER)
 
 build:  Dockerfile Makefile
