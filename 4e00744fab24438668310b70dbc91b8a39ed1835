@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd394d2c_9b2943a5",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-04T14:47:09Z",
+      "side": 1,
+      "message": "I left this in the script, although this could be done using the json-file for compatibility reasons.",
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
