@@ -26,6 +26,7 @@ start: build
           -v /var/run/docker.sock:/var/run/docker.sock \
           -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
           -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc \
+          -v ${JENKINS_HOME}/.secrets:/var/jenkins_home/.secrets \
           --net=host ${IMAGE}
 
 start_osx:
@@ -43,6 +44,8 @@ start_osx:
           -e DOCKER_GID=${DOCKER_GID} \
           -e DOCKER_HOST="tcp://host.docker.internal:1234" \
           -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
+          -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc \
+          -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.secrets \
           -p 8080:8080 ${IMAGE}
 
 id_rsa:

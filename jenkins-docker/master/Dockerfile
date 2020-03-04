@@ -66,7 +66,7 @@ RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
     mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts-manual/
 
 COPY number-executors.groovy $JENKINS_REF/init.groovy.d/
-COPY set-credentials.groovy $JENKINS_REF/init.groovy.d/
+COPY setCredentials.groovy $JENKINS_REF/init.groovy.d/
 COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
 COPY gerrit-ci-scripts-manual.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
 
