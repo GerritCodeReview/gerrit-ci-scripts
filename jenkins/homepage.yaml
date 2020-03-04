@@ -1,0 +1,12 @@
+- job:
+    name: homepage
+    project-type: pipeline
+    pipeline-scm:
+      scm:
+        - git:
+            url: https://gerrit.googlesource.com/homepage
+            branches:
+              - master
+    triggers:
+      - pollscm:
+          cron: "H/10 * * * *"
