@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c8f396bd_8bcac890",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T08:31:04Z",
+      "side": 1,
+      "message": "Yes, groovy doesn\u0027t accept it as a class-name otherwise and since we now use functions it will implicitly create a class from the file. With the previous name it was thus failing.",
+      "parentUuid": "b8ff8d5f_15d60796",
+      "range": {
+        "startLine": 69,
+        "startChar": 5,
+        "endLine": 69,
+        "endChar": 19
+      },
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9639aa88_96467eca",
         "filename": "jenkins-docker/master/Makefile",
         "patchSetId": 1
@@ -71,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "b8a309f9_36c3e829",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T08:31:04Z",
+      "side": 1,
+      "message": "No. You are right.",
+      "parentUuid": "24a34a53_50e8d18d",
+      "range": {
+        "startLine": 50,
+        "startChar": 36,
+        "endLine": 50,
+        "endChar": 52
+      },
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "088c7829_1bdd2c9e",
         "filename": "jenkins-docker/master/setCredentials.groovy",
         "patchSetId": 1
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "bce2a9b0_a6fe4ea9",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T08:31:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "088c7829_1bdd2c9e",
+      "range": {
+        "startLine": 60,
+        "startChar": 50,
+        "endLine": 60,
+        "endChar": 66
+      },
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "46a34969_fe7c9f3f",
         "filename": "jenkins-docker/master/setCredentials.groovy",
         "patchSetId": 1
@@ -108,6 +180,24 @@
       "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e323661c_b0a23f2a",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T08:31:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "46a34969_fe7c9f3f",
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -140,6 +230,24 @@
       "side": 1,
       "message": "We need to make sure that there are no more plain git commands or curl executions. If that is the case, then yes, we can just consolidate everything into the json credentials file.",
       "parentUuid": "fd394d2c_9b2943a5",
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5383e55a_6afe22ee",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T08:31:04Z",
+      "side": 1,
+      "message": "Yes, but it would also be an option to keep the .netrc file and still remove this code, although then the credentials would have to be present in two files.\n\nI think for now it is OK to leave it like it is.",
+      "parentUuid": "929aae63_e1b712d8",
       "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
