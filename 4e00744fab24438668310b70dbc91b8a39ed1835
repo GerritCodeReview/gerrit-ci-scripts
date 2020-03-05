@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "42efa91b_aab622aa",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T09:27:50Z",
+      "side": 1,
+      "message": "\u003e Yes, groovy doesn\u0027t accept it as a class-name otherwise and since we now use functions it will implicitly create a class from the file.\n\nGotcha.\n\n\u003e With the previous name it was thus failing.\n\nNot really, as it is currently working. You mean with the new defs is now failing and thus the filename should be changed.",
+      "parentUuid": "c8f396bd_8bcac890",
+      "range": {
+        "startLine": 69,
+        "startChar": 5,
+        "endLine": 69,
+        "endChar": 19
+      },
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9639aa88_96467eca",
         "filename": "jenkins-docker/master/Makefile",
         "patchSetId": 1
@@ -248,6 +272,24 @@
       "side": 1,
       "message": "Yes, but it would also be an option to keep the .netrc file and still remove this code, although then the credentials would have to be present in two files.\n\nI think for now it is OK to leave it like it is.",
       "parentUuid": "929aae63_e1b712d8",
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f2757722_f6955c6f",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T09:27:50Z",
+      "side": 1,
+      "message": "Ack, can be done at a later stage.",
+      "parentUuid": "5383e55a_6afe22ee",
       "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
