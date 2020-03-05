@@ -14,7 +14,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
 lintOutTrimmed = ""
+
+def needsDockerBuild() {
+    def queryUrl = "https://gerrit-review.googlesource.com/changes/${env.GERRIT_CHANGE_NUMBER}/revisions/${env.GERRIT_PATCHSET_REVISION}/files/"
+    def response = httpRequest queryUrl
+    def files = response.getContent().substring(5)
+    def filesJson = new JsonSlurper().parseText(files)
+    return filesJson.keySet().find { it.contains("docker") }
+}
 
 node ('master') {
   gerritReview labels: ['Code-Style': 0]
@@ -32,6 +43,18 @@ node ('master') {
       gerritReview labels: ['Code-Style': -1], message: "${lintOutTrimmed}\n${env.BUILD_URL}"
     } else {
       gerritReview labels: ['Code-Style': 1], message: env.BUILD_URL
+    }
+  }
+
+  if (needsDockerBuild()) {
+    stage('Docker build') {
+      node ('docker')
+      try {
+        sh "make -C jenkins-docker"
+        gerritReview labels: ['Verified': 1], message: "Docker build OK\n${env.BUILD_URL}"
+      } catch (e) {
+        gerritReview labels: ['Verified': -1], message: "Docker build FAILED\n${env.BUILD_URL}"
+      }
     }
   }
 }
