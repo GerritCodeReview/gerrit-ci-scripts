@@ -84,6 +84,24 @@
     },
     {
       "key": {
+        "uuid": "d942dbe2_1a5c7566",
+        "filename": "Jenkinsfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T13:22:48Z",
+      "side": 1,
+      "message": "\u003e \u003e Could we optimize that a little and not rebuild all images, but only the changed one and all depending?\n\u003e \n\u003e You don\u0027t really know the dependencies, if you modify a top-level layer you would need to rebuild also all the others.\n\u003e \n\nTrue, currently we do not know, but this could be described somewhere. But let\u0027s leave that for later. Building everything is in principle always a good idea to test everything from a clean state. It will however require a lot of resources, but then building slave-bazel is the most expensive one and it will require to be rebuild 95 % of all verifications.\n\n\u003e \u003e Also wouldn\u0027t that overwrite the slave images on the docker host, since they use the same image  names/tags? That could break the build system.\n\u003e \n\u003e Good catch: yes, we should use different labels.",
+      "parentUuid": "d3b4b84d_cd5763c0",
+      "revId": "41feadcc42802ff74ed250d36178d1da0488945b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "70481602_782e76f2",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 3
@@ -119,6 +137,30 @@
       "side": 1,
       "message": "Yes, this is a list of space-separated labels",
       "parentUuid": "70481602_782e76f2",
+      "range": {
+        "startLine": 41,
+        "startChar": 35,
+        "endLine": 41,
+        "endChar": 36
+      },
+      "revId": "41feadcc42802ff74ed250d36178d1da0488945b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "440974eb_a32cedf0",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T13:22:48Z",
+      "side": 1,
+      "message": "But why adding an additional label here?",
+      "parentUuid": "4d03dc3a_b5091b69",
       "range": {
         "startLine": 41,
         "startChar": 35,
