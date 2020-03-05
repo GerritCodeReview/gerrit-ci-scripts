@@ -2,6 +2,115 @@
   "comments": [
     {
       "key": {
+        "uuid": "b8ff8d5f_15d60796",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T07:26:37Z",
+      "side": 1,
+      "message": "any reasons for using camel-case instead of kebab-case?",
+      "range": {
+        "startLine": 69,
+        "startChar": 5,
+        "endLine": 69,
+        "endChar": 19
+      },
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9639aa88_96467eca",
+        "filename": "jenkins-docker/master/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T07:26:37Z",
+      "side": 1,
+      "message": "Good catch.",
+      "range": {
+        "startLine": 47,
+        "startChar": 10,
+        "endLine": 47,
+        "endChar": 62
+      },
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "24a34a53_50e8d18d",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T07:26:37Z",
+      "side": 1,
+      "message": "Is this default used anywhere?",
+      "range": {
+        "startLine": 50,
+        "startChar": 36,
+        "endLine": 50,
+        "endChar": 52
+      },
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "088c7829_1bdd2c9e",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T07:26:37Z",
+      "side": 1,
+      "message": "Is this default used anywhere?",
+      "range": {
+        "startLine": 60,
+        "startChar": 50,
+        "endLine": 60,
+        "endChar": 66
+      },
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "46a34969_fe7c9f3f",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T07:26:37Z",
+      "side": 1,
+      "message": "It would be useful to print the credentials ids + username that have been read and configured in Jenkins.",
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fd394d2c_9b2943a5",
         "filename": "jenkins-docker/master/setCredentials.groovy",
         "patchSetId": 1
@@ -13,6 +122,24 @@
       "writtenOn": "2020-03-04T14:47:09Z",
       "side": 1,
       "message": "I left this in the script, although this could be done using the json-file for compatibility reasons.",
+      "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "929aae63_e1b712d8",
+        "filename": "jenkins-docker/master/setCredentials.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T07:26:37Z",
+      "side": 1,
+      "message": "We need to make sure that there are no more plain git commands or curl executions. If that is the case, then yes, we can just consolidate everything into the json credentials file.",
+      "parentUuid": "fd394d2c_9b2943a5",
       "revId": "4e00744fab24438668310b70dbc91b8a39ed1835",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
