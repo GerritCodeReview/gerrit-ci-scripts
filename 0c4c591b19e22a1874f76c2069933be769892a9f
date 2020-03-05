@@ -22,6 +22,30 @@
       "revId": "0c4c591b19e22a1874f76c2069933be769892a9f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0dbd0c95_dc5094d7",
+        "filename": "jenkins-docker/slave-jekyll/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-03-05T12:43:00Z",
+      "side": 1,
+      "message": "AFAICS ADD doesn\u0027t support changing the file mode and adding 2 layers to the image build for adding the file and then changing the file mode seems unnecessary. And curl is anyway already available in the underlying image.",
+      "parentUuid": "050f0a1d_357e76d8",
+      "range": {
+        "startLine": 14,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 78
+      },
+      "revId": "0c4c591b19e22a1874f76c2069933be769892a9f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
