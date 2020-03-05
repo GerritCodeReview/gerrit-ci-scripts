@@ -22,6 +22,30 @@
       "revId": "8e169f024ade60293547f7381ada2346f4ef6784",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2aa25b0a_15356411",
+        "filename": "jenkins/homepage.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T08:30:45Z",
+      "side": 1,
+      "message": "Right now this pipeline is meant for deploying the homepage. This should not happen in a verification build. We would have to adapt the pipeline to conditionally skip the deployment step to also use it for verification.\nCurrently, there is little in place that is verifying, except for: Is the jekyll build working. So I would vote for leaving it as it is for now and expand on it later.",
+      "parentUuid": "ad4eb88d_7fb52fad",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "8e169f024ade60293547f7381ada2346f4ef6784",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
