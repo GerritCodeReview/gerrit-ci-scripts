@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "050f0a1d_357e76d8",
+        "filename": "jenkins-docker/slave-jekyll/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T08:04:31Z",
+      "side": 1,
+      "message": "Why not simply:\nADD https://firebase.tools/bin/linux/latest /usr/local/bin/firebase",
+      "range": {
+        "startLine": 14,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 78
+      },
+      "revId": "0c4c591b19e22a1874f76c2069933be769892a9f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
