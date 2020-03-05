@@ -46,6 +46,30 @@
       "revId": "0e32833d60a274c90000668e366c951d505eb9db",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "07ce7e1d_f4a67fcb",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-05T09:01:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cdded63d_6890a803",
+      "range": {
+        "startLine": 20,
+        "startChar": 18,
+        "endLine": 20,
+        "endChar": 21
+      },
+      "revId": "0e32833d60a274c90000668e366c951d505eb9db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
