@@ -102,6 +102,24 @@
     },
     {
       "key": {
+        "uuid": "d97eaf82_b0b3ca4e",
+        "filename": "Jenkinsfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T13:26:01Z",
+      "side": 1,
+      "message": "\u003e \u003e \u003e Could we optimize that a little and not rebuild all images, but only the changed one and all depending?\n\u003e \u003e \n\u003e \u003e You don\u0027t really know the dependencies, if you modify a top-level layer you would need to rebuild also all the others.\n\u003e \u003e \n\u003e \n\u003e True, currently we do not know, but this could be described somewhere. But let\u0027s leave that for later. Building everything is in principle always a good idea to test everything from a clean state. It will however require a lot of resources, but then building slave-bazel is the most expensive one and it will require to be rebuild 95 % of all verifications.\n\nNot really, because this is limited ONLY if you change the jenkins-docker files, which is pretty much stable.\n\nAdditionally, we would do that anyway, but just manually. So, no waste of resources but only automation.\n\n\u003e \n\u003e \u003e \u003e Also wouldn\u0027t that overwrite the slave images on the docker host, since they use the same image  names/tags? That could break the build system.\n\u003e \u003e \n\u003e \u003e Good catch: yes, we should use different labels.",
+      "parentUuid": "d942dbe2_1a5c7566",
+      "revId": "41feadcc42802ff74ed250d36178d1da0488945b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "70481602_782e76f2",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 3
