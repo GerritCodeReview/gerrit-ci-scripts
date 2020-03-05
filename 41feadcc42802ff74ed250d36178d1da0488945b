@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "fe9f015b_8c786971",
+        "filename": "Jenkinsfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T13:05:01Z",
+      "side": 1,
+      "message": "True, let me add \u0027jenkins-\u0027 prefix.",
+      "parentUuid": "7508eac0_bf02d810",
+      "range": {
+        "startLine": 27,
+        "startChar": 50,
+        "endLine": 27,
+        "endChar": 56
+      },
+      "revId": "41feadcc42802ff74ed250d36178d1da0488945b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fe30a375_8660dd24",
         "filename": "Jenkinsfile",
         "patchSetId": 3
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "d3b4b84d_cd5763c0",
+        "filename": "Jenkinsfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T13:05:01Z",
+      "side": 1,
+      "message": "\u003e Could we optimize that a little and not rebuild all images, but only the changed one and all depending?\n\nYou don\u0027t really know the dependencies, if you modify a top-level layer you would need to rebuild also all the others.\n\n\u003e Also wouldn\u0027t that overwrite the slave images on the docker host, since they use the same image  names/tags? That could break the build system.\n\nGood catch: yes, we should use different labels.",
+      "parentUuid": "fe30a375_8660dd24",
+      "revId": "41feadcc42802ff74ed250d36178d1da0488945b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "70481602_782e76f2",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 3
@@ -53,6 +95,30 @@
       "writtenOn": "2020-03-05T12:19:02Z",
       "side": 1,
       "message": "Are blanks allowed here?\nAnd isn\u0027t this an unrelated change that would also break other builds relying on this label?",
+      "range": {
+        "startLine": 41,
+        "startChar": 35,
+        "endLine": 41,
+        "endChar": 36
+      },
+      "revId": "41feadcc42802ff74ed250d36178d1da0488945b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4d03dc3a_b5091b69",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-05T13:05:01Z",
+      "side": 1,
+      "message": "Yes, this is a list of space-separated labels",
+      "parentUuid": "70481602_782e76f2",
       "range": {
         "startLine": 41,
         "startChar": 35,
