@@ -17,7 +17,7 @@ RUN cd /tmp && \
     git clone https://github.com/bazelbuild/buildtools.git && \
     cd buildtools && \
     git checkout ${BUILDIFIER_VER} && \
-    bazel build --workspace_status_command=`pwd`/status.py //buildifier && \
+    bazel build --config=release //buildifier && \
     cp bazel-bin/buildifier/linux_amd64_stripped/buildifier /usr/bin && \
     rm -rf /tmp/buildtools && \
     buildifier --version'
