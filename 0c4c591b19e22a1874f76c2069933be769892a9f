@@ -46,6 +46,30 @@
       "revId": "0c4c591b19e22a1874f76c2069933be769892a9f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "87beffd8_b20937bc",
+        "filename": "jenkins-docker/slave-jekyll/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-09T11:01:50Z",
+      "side": 1,
+      "message": "There is a proposal to have a ADD --chmod, but isn\u0027t there yet (see [1]).\n\n[1] https://github.com/moby/buildkit/issues/1080",
+      "parentUuid": "0dbd0c95_dc5094d7",
+      "range": {
+        "startLine": 14,
+        "startChar": 4,
+        "endLine": 14,
+        "endChar": 78
+      },
+      "revId": "0c4c591b19e22a1874f76c2069933be769892a9f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
