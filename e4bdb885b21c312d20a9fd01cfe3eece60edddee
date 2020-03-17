@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17aacead_c4147d4a",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-03-17T07:21:38Z",
+      "side": 1,
+      "message": "Since we want this options for every call of bazel in the gerrit build/test scripts, why inject it? I added the inject mechanism for the java11 builds to avoid having to overly change the build scripts, but if we use this flag everywhere, we can just add it into the scripts as we do for other option like `--spawn_strategy\u003dstandalone`",
+      "revId": "e4bdb885b21c312d20a9fd01cfe3eece60edddee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
