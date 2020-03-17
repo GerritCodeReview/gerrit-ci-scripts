@@ -16,6 +16,24 @@
       "revId": "e4bdb885b21c312d20a9fd01cfe3eece60edddee",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5d79992b_91bb0a90",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-17T12:40:21Z",
+      "side": 1,
+      "message": "True, but it would actually touching more places if added to all shell scripts. Also, this should only be temporary until we increase the nodes\u0027 HW specs OR move to RBE.",
+      "parentUuid": "17aacead_c4147d4a",
+      "revId": "e4bdb885b21c312d20a9fd01cfe3eece60edddee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
