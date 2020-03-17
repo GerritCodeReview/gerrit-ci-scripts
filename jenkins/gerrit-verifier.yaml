@@ -108,6 +108,10 @@
     description: 'Gerrit build of open change with Bazel'
     defaults: verifier-defaults
     node: bazel-debian
+    properties:
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--ram_utilization_factor=30
     builders:
       - merge-target-branch
       - fetch-all-submodules
