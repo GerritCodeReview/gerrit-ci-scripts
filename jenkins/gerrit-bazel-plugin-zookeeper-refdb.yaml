@@ -1,0 +1,8 @@
+- project:
+    name: zookeeper-refdb
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-3.1
+            - stable-3.0
