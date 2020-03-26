@@ -22,6 +22,30 @@
       "revId": "26dc2c5dbb4548c347282076caa38a283f4f93bc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "136e35bb_a0f3d361",
+        "filename": "jenkins/gerrit-bazel-plugin-avatars-external.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-03-26T15:03:23Z",
+      "side": 1,
+      "message": "I didn\u0027t check 2.16 tbh, I thought 2.16 was EOL?",
+      "parentUuid": "0001553f_5a422c71",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 25
+      },
+      "revId": "26dc2c5dbb4548c347282076caa38a283f4f93bc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
