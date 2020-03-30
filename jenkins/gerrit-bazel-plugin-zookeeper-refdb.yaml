@@ -6,3 +6,4 @@
             - master
             - stable-3.1
             - stable-3.0
+      - 'plugin-{name}-verifier'
