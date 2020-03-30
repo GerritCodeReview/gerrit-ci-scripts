@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "53e8545b_eb4edeb9",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-30T22:46:59Z",
+      "side": 1,
+      "message": "It would be best to define a template for this.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 32
+      },
+      "revId": "e5bf85572437da14b461863be74223091410500a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
