@@ -6,3 +6,20 @@
             - master
             - stable-3.1
             - stable-3.0
+
+- job:
+    name: plugin-zookeeper-refdb-bazel-verifier
+    description: Multi-branch pipeline to validate zookeeper-refdb plugin
+    project-type: multibranch
+    node: master
+    scm:
+      - gerrit:
+          url: https://gerrit-review.googlesource.com/a/plugins/zookeeper-refdb
+          credentials-id: gerrit-review.googlesource.com
+          refspecs:
+            - '+refs/heads/*:refs/remotes/@{remote}/*'
+          property-strategies:
+            all-branches:
+              - suppress-scm-triggering: false
+              - pipeline-branch-durability-override: max-survivability
+    periodic-folder-trigger: 10m
