@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3e3dcfa6_e7b94e1e",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-31T11:46:50Z",
+      "side": 1,
+      "message": "Use should use filter-checks so that we can have Checks integration.",
+      "revId": "a5de227ace008e72b692ec26253e4a93ca49a066",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
