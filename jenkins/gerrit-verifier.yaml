@@ -112,6 +112,7 @@
       - inject:
           properties-content: >
             BAZEL_OPTS=--ram_utilization_factor=30
+                       --remote_cache=https://gerrit-ci.gerritforge.com/cache
     builders:
       - merge-target-branch
       - fetch-all-submodules
