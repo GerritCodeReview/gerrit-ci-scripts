@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5117cd1c_7f0b886f",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-01T22:01:51Z",
+      "side": 1,
+      "message": "Not needed here",
+      "revId": "d96415a1526bf624a5be418b077680a9305092b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "327c41c3_3c5fa74d",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-01T22:01:51Z",
+      "side": 1,
+      "message": "Not needed here",
+      "revId": "d96415a1526bf624a5be418b077680a9305092b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
