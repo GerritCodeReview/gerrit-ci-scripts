@@ -1,7 +1,5 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-stretch
-
-# Targets
+IMAGE=gerritforge/bazel-cache
 
 build:
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
