@@ -22,6 +22,30 @@
       "revId": "194f948345bc82c82d2be7d97f1b235944880250",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e1c2eae1_8f563b44",
+        "filename": "jenkins/set-docker-host.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-01T15:32:45Z",
+      "side": 1,
+      "message": "True, only one.",
+      "parentUuid": "0a067e7d_c315a47c",
+      "range": {
+        "startLine": 2,
+        "startChar": 56,
+        "endLine": 2,
+        "endChar": 58
+      },
+      "revId": "194f948345bc82c82d2be7d97f1b235944880250",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
