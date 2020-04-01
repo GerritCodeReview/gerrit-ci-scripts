@@ -116,6 +116,7 @@
       - merge-target-branch
       - fetch-all-submodules
       - shell: !include-raw-escape: gerrit-bazel-build.sh
+      - shell: !include-raw: set-docker-host.sh
       - shell: !include-raw-escape: gerrit-bazel-verifier-test.sh
       - shell: !include-raw-escape: gerrit-bazel-cat-test-log.sh
     publishers:
