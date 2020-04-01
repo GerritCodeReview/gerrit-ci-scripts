@@ -30,3 +30,7 @@ systemctl start docker
 systemctl restart docker
 systemctl enable setup-tunnel.service
 systemctl start setup-tunnel.service
+
+# local Bazel cache for allowing cached tests execution
+mkdir -p /var/bazel/cache
+chown -R 1000:1000 /var/bazel/cache
