@@ -68,6 +68,7 @@
             </dnsHosts>
             <volumes>
               <string>/dev/urandom:/dev/random</string>
+              <string>/var/bazel/cache:/var/bazel/cache</string>
             </volumes>
             <volumesFrom2/>
             <environment/>
@@ -112,6 +113,7 @@
             <dnsHosts/>
             <volumes>
               <string>/dev/urandom:/dev/random</string>
+              <string>/var/bazel/cache:/var/bazel/cache</string>
             </volumes>
             <volumesFrom2/>
             <environment/>
@@ -156,6 +158,7 @@
             <dnsHosts/>
             <volumes>
               <string>/dev/urandom:/dev/random</string>
+              <string>/var/bazel/cache:/var/bazel/cache</string>
             </volumes>
             <volumesFrom2/>
             <environment/>

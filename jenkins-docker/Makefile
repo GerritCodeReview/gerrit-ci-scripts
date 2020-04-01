@@ -1,4 +1,4 @@
-SLAVE_DIRS ?= slave-debian slave-chrome slave-node-wct slave-bazel-nocache slave-bazel slave-bazel-docker slave-sbt slave-mvn slave-release slave-python3 slave-jekyll
+SLAVE_DIRS ?= slave-debian slave-chrome slave-node-wct slave-bazel-nocache slave-bazel-docker slave-sbt slave-mvn slave-release slave-python3 slave-jekyll
 ALL_DIRS ?= master $(SLAVE_DIRS)
 NO_CACHE ?= true
 
