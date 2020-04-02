@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "7aaea0cd_9d0ddd6a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-02T13:22:01Z",
+      "side": 1,
+      "message": "@DavidO I believe there is a misunderstanding: the \u0027local\u0027 cache is not local to the docker container, because the volume is externally mounted. The storage is preserved and shared by all the containers that will run concurrently or later on.\n\nDoes now make more sense to you?",
+      "parentUuid": "02c68e14_14c6f354",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 44
+      },
+      "revId": "d2d0490994a1709d40a9500466a2917d9fb9127e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "70cf18e5_6efb9a68",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 2
