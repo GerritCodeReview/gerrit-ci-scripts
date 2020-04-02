@@ -63,6 +63,24 @@
       "revId": "d2d0490994a1709d40a9500466a2917d9fb9127e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "229a7aea_78155ff9",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-02T10:35:30Z",
+      "side": 1,
+      "message": "\u003e Is the bazel cache in the docker images then used at all? If not, could we remove it?\n\nGood catch, yes, it will add the removal of that cache.\n\n\u003e We would have to adapt the Gerrit-bazel-{branch} jobs as well.\n\nIn theory yes, but in practice I would like to keep a point where we run the *whole* build and the *whole* tests once in a while. The merge to the target branch is a good candidate.\n\nAlso, if we see that something is breaking there and did not break the change validation, then it means we have some Bazel caching issue.\n\nNOTE: Some dependencies may disappear from the Internet and we could not notice them because of Bazel cache.",
+      "parentUuid": "70cf18e5_6efb9a68",
+      "revId": "d2d0490994a1709d40a9500466a2917d9fb9127e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
