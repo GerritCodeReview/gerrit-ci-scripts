@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8c112171_e0c28407",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-02T06:34:53Z",
+      "side": 1,
+      "message": "Not sure I understand, how local Bazel cache should be reused, if pool of worker machines is used. The plan was to use Remote Bazel Cache: [1]. For that we would have to set-up Remote Cache on one machine, on the same GCP, where other worker machine are runnig, to optimize read and write cache operations. \n\nThen the pool of machines, would specific remote caceh, and all 50 machine will use that remote cache. This was never implemented, though. If we have remote cache, we can drop pre-warming cache steps in Docker image build (bazel build :release :api) and thus significantly reduce the Docker image size.\n\n* [1] https://docs.bazel.build/versions/master/remote-caching.html",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 44
+      },
+      "revId": "d2d0490994a1709d40a9500466a2917d9fb9127e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
