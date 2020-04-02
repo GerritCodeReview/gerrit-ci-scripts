@@ -22,6 +22,30 @@
       "revId": "d2d0490994a1709d40a9500466a2917d9fb9127e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "02c68e14_14c6f354",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-02T10:00:39Z",
+      "side": 1,
+      "message": "A shared cache for all workers would never work, because every worker has its own DOCKER_HOST variable and thus Bazel won\u0027t use the cache if that changes.\n\nA persistent cache *on the worker* would work because for that worker the DOCKER_HOST is the same and thus the cache will be reused.\n\nDoes that make sense?",
+      "parentUuid": "8c112171_e0c28407",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 44
+      },
+      "revId": "d2d0490994a1709d40a9500466a2917d9fb9127e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
