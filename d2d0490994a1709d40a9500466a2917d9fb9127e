@@ -81,6 +81,24 @@
       "revId": "d2d0490994a1709d40a9500466a2917d9fb9127e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9d9783a0_5fa5306f",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-02T10:46:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "229a7aea_78155ff9",
+      "revId": "d2d0490994a1709d40a9500466a2917d9fb9127e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
