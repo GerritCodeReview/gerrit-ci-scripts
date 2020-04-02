@@ -41,7 +41,6 @@
           xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     builders:
       - shell: !include-raw: gerrit-bazel-build.sh
-      - shell: !include-raw-escape: set-docker-host.sh
       - shell: !include-raw: gerrit-bazel-test.sh
       - shell: !include-raw-escape: gerrit-bazel-cat-test-log.sh
       - shell: !include-raw: gerrit-deploy-api.sh
