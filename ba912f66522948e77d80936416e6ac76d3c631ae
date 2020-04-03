@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a121571_c92b3ae8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T12:33:12Z",
+      "side": 1,
+      "message": "True, a double-benefit indeed. I\u0027ll add that.",
+      "parentUuid": "fbc8c047_f09d4202",
+      "range": {
+        "startLine": 11,
+        "startChar": 29,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9fef0807_9235975a",
         "filename": "jenkins-docker/bazel-cache/Dockerfile",
         "patchSetId": 9
@@ -36,6 +60,30 @@
       "writtenOn": "2020-04-03T12:25:34Z",
       "side": 1,
       "message": "@Luca, you decided to go with just Nginx as cache backend? But there is also bazel-remote Golang based service, written by Yakob Buchgraber from bazel team, with pre-built Docker image, quoting:\n\n\"\nbazel-remote\n\nbazel-remote is an open source remote build cache that you can use on your infrastructure. It has been successfully used in production at several companies since early 2018. Note that the Bazel project does not provide technical support for bazel-remote.\n\nThis cache stores contents on disk and also provides garbage collection to enforce an upper storage limit and clean unused artifacts. The cache is available as a docker image and its code is available on GitHub. Both the REST and gRPC remote cache APIs are supported.\n\nPlease refer to the GitHub page for instructions on how to use it.\n\"\n\n@Han-Wen, @Philipp Wollermann: Given that we cannot use RBE on GerritForge CI due to authentication issues (?) (even though it works from my laptop, but cannot work from GCP woker nodes), we are trying to set up and use remote Bazel cache from scratch on GerritForge CI instance.\n\nWhat would Bazel team advice to use as Remote-Cache-Backend ? Or even better, may be we could use some existing remote Bazel cache provided/used by Bazel team (I got impression Bazel team using remote cache on their Buildkite CI and it is: [2] backend, correct?), or may be Bazel team could set up one for us?\n\n[1] https://docs.bazel.build/versions/master/remote-caching.html#bazel-remote\n[2] https://github.com/buchgr/bazel-remote",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 25
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a219ccc_f1fccbe0",
+        "filename": "jenkins-docker/bazel-cache/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T12:33:12Z",
+      "side": 1,
+      "message": "\u003e @Luca, you decided to go with just Nginx as cache backend? \n\nThat is because I have already NGINX in place on the Gerrit-CI, so it\u0027s just yet another server.conf to add. No extra infrastructure or CPU needed.\n\n\u003e But there is also bazel-remote Golang based service, written by Yakob Buchgraber from bazel team, with pre-built Docker image\n\nYep, I saw that. That would be nice because has a lot of other goodies associated.\nCan be possibly a follow-up step?\n\n\u003e @Han-Wen, @Philipp Wollermann: Given that we cannot use RBE on GerritForge CI due to authentication issues (?) (even though it works from my laptop, but cannot work from GCP woker nodes)\n\nI believe we can, if you help me out verify that change :-)\nIt\u0027s just a matter of service-users to be allocated on GCP.\n\n\u003e we are trying to set up and use remote Bazel cache from scratch on GerritForge CI instance.\n\nAs interim solution, but the target is RBE :-)",
+      "parentUuid": "9fef0807_9235975a",
       "range": {
         "startLine": 3,
         "startChar": 0,
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "6fffbf0e_9b55c124",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T12:33:12Z",
+      "side": 1,
+      "message": "Sure, I\u0027ll include in the commit message.\n\nPlease note that your IP would need to be whitelisted, as I do not allow random IPs from the internet to access in write mode. But anyone could access in read-only mode (for now).",
+      "parentUuid": "02d0e3af_a42d30d5",
+      "range": {
+        "startLine": 114,
+        "startChar": 52,
+        "endLine": 114,
+        "endChar": 106
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9570b8d9_19884910",
         "filename": "worker/setup.sh",
         "patchSetId": 9
@@ -108,6 +180,24 @@
       "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4fcc5eb9_43131dbd",
+        "filename": "worker/setup.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T12:33:12Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9570b8d9_19884910",
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
