@@ -49,6 +49,23 @@
     },
     {
       "key": {
+        "uuid": "bece6a88_d665f05f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T18:12:31Z",
+      "side": 1,
+      "message": "I don\u0027t think we could reliably test remote cache from local (Linux) machine against test produced by running docker based build using GerritForge docker  image. I just tried to build the Gerrit@HEAD from my laptop:\n\n  $ bazelisk build --remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache --remote_upload_local_results\u003dfalse java/com/google/gerrit/server:server\n\nAnd I don\u0027t have any cache hits:\n\n  INFO: Elapsed time: 50.038s, Critical Path: 46.21s\n  INFO: 103 processes: 80 linux-sandbox, 23 worker.\n  INFO: Build completed successfully, 111 total actions\n\nSo, I would suggest the following test: Populate the cache by running the bazel build/test from one commit using docker process with the latest GerritForge docker image used by GerritForge CI. Then run another docker process and re-run the build/test from the same gerrit commit using the remote cache. Do you see cache hits? Can you perform that test from different GCP worker nodes? Do you see \u0027bazel test javatests/...\u0027 getting cached results and not re-execution of tests?",
+      "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4ac30591_6045cefc",
         "filename": "/COMMIT_MSG",
         "patchSetId": 17
