@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "51b4e0d7_b4e1e095",
+        "filename": "jenkins-docker/bazel-cache/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T12:33:12Z",
+      "side": 0,
+      "message": "This is incorrectly recognised by Git as a rename :-)\n\nHowever, I am warming up the new cache already, including tests (which were omitted before).",
+      "parentUuid": "a67d17e7_c58d8258",
+      "revId": "ea284be0932b318dc59d6b6b3522d935731be89d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bf5a7293_94d54457",
         "filename": "jenkins-docker/slave-bazel/Dockerfile",
         "patchSetId": 9
