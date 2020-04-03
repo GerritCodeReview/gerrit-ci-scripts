@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4cf6d9f2_bdac0216",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T07:02:35Z",
+      "side": 1,
+      "message": "As I said in my previous comment and other comment on other changes, there are 3 options we have to enable bazel caches:\n\n* RBE, my personal favorite. However, because of authentication issue, it cannot be used outside of GCP, so that it\u0027s only an option for Zuul, but not for GerritForge CI.\n* Bazel Remote cache. For that we would have to set-up remote cache server, and enable it on one specific node, taht is always running, obviously, e.g.: bazel-cache.gerritcodereview.com, then the all worker nodes would say: --remote_cache\u003dhttps://bazel-cache.gerritcodereview\n* Mount persistent storage from Docker host using Docker protocoll",
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "670a7e34_02985537",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T07:02:35Z",
+      "side": 1,
+      "message": "I still don\u0027t understand that statement. Before that change, all thee Bazel/Gerrit caches:\n\n* CAS\n* Repository\n* custom maven_jar caches are consumed from $HOME/.gerritcodereview/bazel-cache\n\nfrom jenkins user from Docker images produced by pre-warm cache step during docker image build:\n\n  $ bazelisk build plugins:core release api\n\nAlso note, that tests were never run in that pre-warm phase, so that caching of tests rsult was never implemented and thus this is incorrect, to state, that it\u0027s not working. Something that was never implemented cannot work.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 49
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8fe63d50_aa7dead5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T07:02:35Z",
+      "side": 1,
+      "message": "Same here: That change is not about running docker in docker testcpontainers tests, but about implementing (first time) persistent Bazel cache. There is nothing special with ES tests here.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 23
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "76172dd5_dfc88163",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T07:02:35Z",
+      "side": 1,
+      "message": "This is not enough. This would only re-use CAS (content acessible storage) used for action cache. The relevant caches currently used in Gerrit Bazel build toolchain are:\n\n* CAS: [1]\n* Bazel\u0027s built in repository cache: [2], that is used by transitive dependencies, like rules_closure, etc.\n* Gerrit\u0027s maven_jar custom cache, located in $HOME/.gerritcodereview/bazel-cache/downloaded-artifacts. This cache is not controlled by any Bazel variables, but is hard coded in download_file.py: [3], so that:\n\n  load(\"//tools/bzl:maven_jar.bzl\", \"GERRIT\", \"MAVEN_LOCAL\", \"maven_jar\")\n  maven_jar(\n      name \u003d \"guice-library\",\n      artifact \u003d \"com.google.inject:guice:\" + GUICE_VERS,\n      sha1 \u003d \"2ea992d6d7bdcac7a43111a95d182a4c42eb5ff7\",\n  )\n\nwould fetch the dependency with custom curl toolchain and store it in:\n\n  $HOME/.gerritcodereview/bazel-cache/downloaded-artifacts/2ea992d6d7bdcac7a43111a95d182a4c42eb5ff7/guice-library-${GUICE_VERS}.jar\n\nSo that this change supposed to change all three caches to have the desired effect, because otherwise, given that pre-warmed Bazell caches from the Docker image build were wiped out, each and every Gerrit build would now pull in Gigabytes of transitive dependencies : ca. 180 Java Jars and the whole Polymer deps.\n\nGiven that current cache location is hard coded to $HOME/.gerritcodereview/bazel-cache/downloaded-artifacts download_file.py this cannot be currently done, but the current build tool chain need to be refactored:\n\n* a) Remove maven_jar custom tool chain entirely. This has survided Buck migration. Probably a better alternative would be to use official Bazel way, to consume external dependencies. That would has the effect, that the external dependency would be saved in bazl\u0027s own repository cache and can be clontrolled by --repository_cache\u003d~/.gerritcodereview/bazel-cache/repository option.\n* b) Until a) is implemented, allow to customize hard coded cache location for downloaded-artifacts in download_file.py file.\n\n* [1] https://github.com/GerritCodeReview/gerrit/blob/master/.bazelrc#L4\n* [2] https://github.com/GerritCodeReview/gerrit/blob/master/.bazelrc#L2\n* [3] https://github.com/GerritCodeReview/gerrit/blob/master/tools/download_file.py#L27-L28",
+      "range": {
+        "startLine": 114,
+        "startChar": 52,
+        "endLine": 114,
+        "endChar": 81
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
