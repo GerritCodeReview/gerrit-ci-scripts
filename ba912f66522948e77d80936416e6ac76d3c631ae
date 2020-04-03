@@ -190,6 +190,30 @@
     },
     {
       "key": {
+        "uuid": "b0471a19_92d4bcee",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T13:37:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6fffbf0e_9b55c124",
+      "range": {
+        "startLine": 114,
+        "startChar": 52,
+        "endLine": 114,
+        "endChar": 106
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9570b8d9_19884910",
         "filename": "worker/setup.sh",
         "patchSetId": 9
@@ -219,6 +243,24 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "9570b8d9_19884910",
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fe46827e_68739680",
+        "filename": "worker/setup.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T13:37:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fcc5eb9_43131dbd",
       "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
