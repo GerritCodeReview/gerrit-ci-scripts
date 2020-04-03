@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91c84a05_f29fddee",
+        "filename": "jenkins-docker/bazel-cache/default.conf",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T12:24:00Z",
+      "side": 1,
+      "message": "I believe this still allows other people to fetch from it, which isn\u0027t ideal.\nLet\u0027s leave it open for now, we can then restrict that later on, based on the incoming traffic.",
+      "range": {
+        "startLine": 13,
+        "startChar": 8,
+        "endLine": 13,
+        "endChar": 26
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
