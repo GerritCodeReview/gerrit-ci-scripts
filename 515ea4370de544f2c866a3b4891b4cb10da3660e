@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a45d0c73_5328ee7e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T09:17:15Z",
+      "side": 1,
+      "message": "\u003e As I said in my previous comment and other comment on other changes, there are 3 options we have to enable bazel caches:\n\u003e \n\u003e * RBE, my personal favorite. However, because of authentication issue, it cannot be used outside of GCP, so that it\u0027s only an option for Zuul, but not for GerritForge CI.\n\nGerritForge CI is just the trigger: the builds are executed in GCP. I believe though that isn\u0027t enough as you need also credentials to access the RBE environment.\nI tried locally with my own credentials but it looks like only Linux (from a client side) is supported. I will try again with Linux.\n\n\u003e * Bazel Remote cache. For that we would have to set-up remote cache server, and enable it on one specific node, taht is always running, obviously, e.g.: bazel-cache.gerritcodereview.com, then the all worker nodes would say: --remote_cache\u003dhttps://bazel-cache.gerritcodereview\n\nThat is an option as well. Will add a Bazel cache docker container to this change and we can run it on a shared host.\n\n\u003e * Mount persistent storage from Docker host using Docker protocoll\n\nThis is what I have attempted in this change, but it doesn\u0027t work for some permissions problems. I haven\u0027t figured that out yet, as it works when run interactively.",
+      "parentUuid": "4cf6d9f2_bdac0216",
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "670a7e34_02985537",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "e2322064_2f8a6018",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T09:17:15Z",
+      "side": 1,
+      "message": "The build cache works because is pre-warmed up in the Docker container.\nThe test cache isn\u0027t there and is desperately needed now that we run ES as well during our CI.\n\nFor the test cache to work, we need to have consistent parameters, otherwise Bazel won\u0027t use that case. DOCKER_HOST cannot be consistent across run, just because it is different depending on the allocated worker node. I an try to make it consistent by using a \"logical name\" inside the container which is then remapped to the external IP.\n\nHope this clarifies the statement.",
+      "parentUuid": "670a7e34_02985537",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 49
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8fe63d50_aa7dead5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -53,6 +95,30 @@
       "writtenOn": "2020-04-03T07:02:35Z",
       "side": 1,
       "message": "Same here: That change is not about running docker in docker testcpontainers tests, but about implementing (first time) persistent Bazel cache. There is nothing special with ES tests here.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 23
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b259265d_aee72a34",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T09:17:15Z",
+      "side": 1,
+      "message": "Yes, the change is generic and not specific to ES at all. I mentioned ES here only because it is the reason for escalating the urgency of implementing this.",
+      "parentUuid": "8fe63d50_aa7dead5",
       "range": {
         "startLine": 16,
         "startChar": 0,
