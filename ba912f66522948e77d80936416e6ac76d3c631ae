@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "f054361f_54f6485b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T12:38:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a121571_c92b3ae8",
+      "range": {
+        "startLine": 11,
+        "startChar": 29,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9fef0807_9235975a",
         "filename": "jenkins-docker/bazel-cache/Dockerfile",
         "patchSetId": 9
