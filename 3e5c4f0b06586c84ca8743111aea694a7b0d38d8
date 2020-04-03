@@ -281,6 +281,30 @@
       "revId": "3e5c4f0b06586c84ca8743111aea694a7b0d38d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1152521e_4607d6db",
+        "filename": "jenkins-docker/bazel-cache/default.conf",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T17:18:16Z",
+      "side": 1,
+      "message": "Yes, I just did copy\u0026paste from the docs without formatting it properly.\nDoing it now.",
+      "parentUuid": "6837aed6_1bd7f4a8",
+      "range": {
+        "startLine": 11,
+        "startChar": 18,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "3e5c4f0b06586c84ca8743111aea694a7b0d38d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
