@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f1422eed_53716ff9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T17:42:20Z",
+      "side": 1,
+      "message": "According to the documentation: [1] this should use this flag as well:\n\n bzelsik build --remote_upload_local_results\u003dfalse\n\nfor read only cache access, otherwise it is failing with:\n\n* [1] https://docs.bazel.build/versions/2.0.0/remote-caching.html#read-from-and-write-to-the-remote-cache",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 78
+      },
+      "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ac30591_6045cefc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T17:42:20Z",
+      "side": 1,
+      "message": "Should we rather remove that scenario? To not poison the remote cache, it should only populate the cache from GCP worker nodes that all use the same docker image.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 78
+      },
+      "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "61547ac5_f31ea0c9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T17:42:20Z",
+      "side": 1,
+      "message": "One issue, that we could mention here is cache entries eviction. If we don\u0027t do some cache clean up the CI disk may run out of space, see this section: [1]:\n\n  You may want to delete content from the cache to:\n\n* Create a clean cache after a cache was poisoned\n* Reduce the amount of storage used by deleting old outputs\n\nSome this can be addressed later. \n\n[1] https://docs.bazel.build/versions/2.0.0/remote-caching.html#delete-content-from-the-remote-cache",
+      "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
