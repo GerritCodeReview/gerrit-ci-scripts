@@ -257,6 +257,30 @@
       "revId": "3e5c4f0b06586c84ca8743111aea694a7b0d38d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6837aed6_1bd7f4a8",
+        "filename": "jenkins-docker/bazel-cache/default.conf",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-04-03T17:08:56Z",
+      "side": 1,
+      "message": "-Just in case this is not wanted. Spacing in this file could in general maybe be amended.",
+      "parentUuid": "cb692c4e_73346d72",
+      "range": {
+        "startLine": 11,
+        "startChar": 18,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "3e5c4f0b06586c84ca8743111aea694a7b0d38d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
