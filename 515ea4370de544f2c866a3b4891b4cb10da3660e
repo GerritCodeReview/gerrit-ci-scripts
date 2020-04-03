@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "3253323c_a969ed03",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T11:14:56Z",
+      "side": 1,
+      "message": "\u003e \u003e \u003e * RBE, my personal favorite. However, because of authentication issue, it cannot be used outside of GCP, so that it\u0027s only an option for Zuul, but not for GerritForge CI.\n\u003e \u003e \n\u003e \u003e GerritForge CI is just the trigger: the builds are executed in GCP. I believe though that isn\u0027t enough as you need also credentials to access the RBE environment.\n\u003e \n\u003e Locally it works for me, from Linux, just install gcloud and authenticate using your gmail account. \n\nI did, but it says that isn\u0027t supported from MacOS :-(\n(I\u0027ve commented your other change)\n\nHave you tried with your MacOS laptop?\n\n\u003e It works from my laptop, because as Gerrit maintainer I\u0027m granted the ACL. However, as Han-Wen mentioned in another change, this kind of authentication cannot be used from GerriForge CI, because it is not secure.\n\nWe would also need to grant a limited permission to run builds on RBE without being a Gerrit maintainer I believe :-)\nThe GCP worker nodes would have a service user associated and that would need to be granted permission.\n\nThat isn\u0027t a problem, because GerritForge CI won\u0027t specify any authentication: it\u0027s the GCP workers that will call RBE, we should be fine then.\n\n\u003e Even if we sort out authentication issue (or even use Zuul CI for RBE build) there is another problem to solve, that is orthogonal problem: Docker image to use for tests. Right now there are two vanilla Ubuntu images provided for RBE: 16.04 and 18.04. Both have outdated Git version, so in any event we would have to use our own Docker image for RBE. I updated at least Git version and published new RBE docker image in another change.\n\nI commented on the other change, I\u0027m keen to get that working :-)",
+      "parentUuid": "2d9500fd_a6e4b347",
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "670a7e34_02985537",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -126,6 +144,30 @@
     },
     {
       "key": {
+        "uuid": "2eb2f00f_f1b1e6ac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T11:14:56Z",
+      "side": 1,
+      "message": "\u003e If we go with Bazel remote cache and would pass --remote_cache\u003dfoo, then we wouldn\u0027t care about DOCKER_HOST and the above statement could be removed.\n\nYou do need DOCKER_HOST environment variable because otherwise how can the TestContainer classes spin up the containers they need for testing? (the different versions of elasticsearch)",
+      "parentUuid": "d853175d_bc959331",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 49
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8fe63d50_aa7dead5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -185,6 +227,30 @@
       "side": 1,
       "message": "Why? James mentioned, that on Zuul the test time ist about 79 minutes (without any Bazel caches). Not sure how long ES would contribute to the entire test time? Moreover there is pending issue to drop outdated/unused ES client versions. I also suggested in that issue to switch all tests to manuall, and thus not run them during CI build, but only test the very last ES client version, that would probably reduce the test time by factor 10?",
       "parentUuid": "b259265d_aee72a34",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 23
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f41fa875_aa264636",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T11:14:56Z",
+      "side": 1,
+      "message": "Zuul testing of 79 minutes isn\u0027t related to ES at all: he used the wrong specs of the machine (8Gb with 2 vCPUs). I\u0027m actually surprised that it even completed successfully :-)\n\nRunning or not running tests based of what code you change is a general concept: you should not hardcoded any of that associated with ES.\nDisabling ES tests altogether is a bad idea: the recent undetected breakage on master during the implementation of the attention-set is the evidence of that.\n\nI agree we should not run tests that are not related to the change we validate: that\u0027s why it\u0027s important to enable test caching. You taught me that :-)",
+      "parentUuid": "2638ed88_96950717",
       "range": {
         "startLine": 16,
         "startChar": 0,
