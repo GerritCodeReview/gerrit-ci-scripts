@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a67d17e7_c58d8258",
+        "filename": "jenkins-docker/bazel-cache/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T12:25:34Z",
+      "side": 0,
+      "message": "Same here, can you preserve and still used the current Docker image with pre-warmed Bazel caches?",
+      "revId": "ea284be0932b318dc59d6b6b3522d935731be89d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf5a7293_94d54457",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T12:25:34Z",
+      "side": 0,
+      "message": "Can we preserve the same Docker image with cache? I have not tried in combination with remote-cache, but probably bazel build could benefit from pre-warmed caches even if remote-cache is used?",
+      "revId": "ea284be0932b318dc59d6b6b3522d935731be89d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}

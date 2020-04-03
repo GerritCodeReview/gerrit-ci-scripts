@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "fbc8c047_f09d4202",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T12:25:34Z",
+      "side": 1,
+      "message": "This is not accurate: Using remote Bazel cache would also avoid re-building and not only re-running the tests if nothiing changed. As the build artifacts would be fetched from the remote Bazel cache thanks to cache hits.\n\nIn fact the whole\n\n  bazel build :release :api\n\nwould be a no-op if only some files were changed that do not contribute to the final artifact (say contrib directory).",
+      "range": {
+        "startLine": 11,
+        "startChar": 29,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9fef0807_9235975a",
+        "filename": "jenkins-docker/bazel-cache/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T12:25:34Z",
+      "side": 1,
+      "message": "@Luca, you decided to go with just Nginx as cache backend? But there is also bazel-remote Golang based service, written by Yakob Buchgraber from bazel team, with pre-built Docker image, quoting:\n\n\"\nbazel-remote\n\nbazel-remote is an open source remote build cache that you can use on your infrastructure. It has been successfully used in production at several companies since early 2018. Note that the Bazel project does not provide technical support for bazel-remote.\n\nThis cache stores contents on disk and also provides garbage collection to enforce an upper storage limit and clean unused artifacts. The cache is available as a docker image and its code is available on GitHub. Both the REST and gRPC remote cache APIs are supported.\n\nPlease refer to the GitHub page for instructions on how to use it.\n\"\n\n@Han-Wen, @Philipp Wollermann: Given that we cannot use RBE on GerritForge CI due to authentication issues (?) (even though it works from my laptop, but cannot work from GCP woker nodes), we are trying to set up and use remote Bazel cache from scratch on GerritForge CI instance.\n\nWhat would Bazel team advice to use as Remote-Cache-Backend ? Or even better, may be we could use some existing remote Bazel cache provided/used by Bazel team (I got impression Bazel team using remote cache on their Buildkite CI and it is: [2] backend, correct?), or may be Bazel team could set up one for us?\n\n[1] https://docs.bazel.build/versions/master/remote-caching.html#bazel-remote\n[2] https://github.com/buchgr/bazel-remote",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 25
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "91c84a05_f29fddee",
         "filename": "jenkins-docker/bazel-cache/default.conf",
         "patchSetId": 9
@@ -19,6 +65,46 @@
         "endLine": 13,
         "endChar": 26
       },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "02d0e3af_a42d30d5",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T12:25:34Z",
+      "side": 1,
+      "message": "Nice! How can we test it locally? Can you provide a shell script for that or even dscribe Test Plan in the commit messsage?",
+      "range": {
+        "startLine": 114,
+        "startChar": 52,
+        "endLine": 114,
+        "endChar": 106
+      },
+      "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9570b8d9_19884910",
+        "filename": "worker/setup.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T12:25:34Z",
+      "side": 1,
+      "message": "This is a left over from previous attempt to use persistent worker cache using Docker protocoll and should be removed.",
       "revId": "ba912f66522948e77d80936416e6ac76d3c631ae",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
