@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee5fd7e9_1195037f",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T15:01:52Z",
+      "side": 1,
+      "message": "Double-quotes not needed at both ends.",
+      "range": {
+        "startLine": 114,
+        "startChar": 23,
+        "endLine": 114,
+        "endChar": 24
+      },
+      "revId": "9bf63fa7e5097c836c448bbe2f68bfb157c5f70f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
