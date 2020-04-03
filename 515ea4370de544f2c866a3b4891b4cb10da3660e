@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2d9500fd_a6e4b347",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T10:02:55Z",
+      "side": 1,
+      "message": "\u003e \u003e * RBE, my personal favorite. However, because of authentication issue, it cannot be used outside of GCP, so that it\u0027s only an option for Zuul, but not for GerritForge CI.\n\u003e \n\u003e GerritForge CI is just the trigger: the builds are executed in GCP. I believe though that isn\u0027t enough as you need also credentials to access the RBE environment.\n\nLocally it works for me, from Linux, just install gcloud and authenticate using your gmail account. It works from my laptop, because as Gerrit maintainer I\u0027m granted the ACL. However, as Han-Wen mentioned in another change, this kind of authentication cannot be used from GerriForge CI, because it is not secure.\n\nEven if we sort out authentication issue (or even use Zuul CI for RBE build) there is another problem to solve, that is orthogonal problem: Docker image to use for tests. Right now there are two vanilla Ubuntu images provided for RBE: 16.04 and 18.04. Both have outdated Git version, so in any event we would have to use our own Docker image for RBE. I updated at least Git version and published new RBE docker image in another change.",
+      "parentUuid": "a45d0c73_5328ee7e",
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "670a7e34_02985537",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -84,6 +102,30 @@
     },
     {
       "key": {
+        "uuid": "d853175d_bc959331",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T10:02:55Z",
+      "side": 1,
+      "message": "If we go with Bazel remote cache and would pass --remote_cache\u003dfoo, then we wouldn\u0027t care about DOCKER_HOST and the above statement could be removed.",
+      "parentUuid": "e2322064_2f8a6018",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 49
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8fe63d50_aa7dead5",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -119,6 +161,30 @@
       "side": 1,
       "message": "Yes, the change is generic and not specific to ES at all. I mentioned ES here only because it is the reason for escalating the urgency of implementing this.",
       "parentUuid": "8fe63d50_aa7dead5",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 23
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2638ed88_96950717",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-03T10:02:55Z",
+      "side": 1,
+      "message": "Why? James mentioned, that on Zuul the test time ist about 79 minutes (without any Bazel caches). Not sure how long ES would contribute to the entire test time? Moreover there is pending issue to drop outdated/unused ES client versions. I also suggested in that issue to switch all tests to manuall, and thus not run them during CI build, but only test the very last ES client version, that would probably reduce the test time by factor 10?",
+      "parentUuid": "b259265d_aee72a34",
       "range": {
         "startLine": 16,
         "startChar": 0,
