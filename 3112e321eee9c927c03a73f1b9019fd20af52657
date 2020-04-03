@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "77d768cf_df2de977",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T21:24:31Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a6104a00_f96a7429",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 78
+      },
+      "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bece6a88_d665f05f",
         "filename": "/COMMIT_MSG",
         "patchSetId": 17
@@ -60,6 +84,24 @@
       "writtenOn": "2020-04-03T18:12:31Z",
       "side": 1,
       "message": "I don\u0027t think we could reliably test remote cache from local (Linux) machine against test produced by running docker based build using GerritForge docker  image. I just tried to build the Gerrit@HEAD from my laptop:\n\n  $ bazelisk build --remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache --remote_upload_local_results\u003dfalse java/com/google/gerrit/server:server\n\nAnd I don\u0027t have any cache hits:\n\n  INFO: Elapsed time: 50.038s, Critical Path: 46.21s\n  INFO: 103 processes: 80 linux-sandbox, 23 worker.\n  INFO: Build completed successfully, 111 total actions\n\nSo, I would suggest the following test: Populate the cache by running the bazel build/test from one commit using docker process with the latest GerritForge docker image used by GerritForge CI. Then run another docker process and re-run the build/test from the same gerrit commit using the remote cache. Do you see cache hits? Can you perform that test from different GCP worker nodes? Do you see \u0027bazel test javatests/...\u0027 getting cached results and not re-execution of tests?",
+      "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "38952e55_6fe79ec5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T21:24:31Z",
+      "side": 1,
+      "message": "Let me apply this change temporarily to Gerrit-CI and see the hits by re-running a build.\nI\u0027ll cleanup the shared cache first, to avoid any previous poisoning.\n\nAlso, I\u0027ll get the statistics on the server side of the cache hits.",
+      "parentUuid": "bece6a88_d665f05f",
       "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
@@ -89,6 +131,30 @@
     },
     {
       "key": {
+        "uuid": "d6ec6331_983985ce",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T21:24:31Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4ac30591_6045cefc",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 78
+      },
+      "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61547ac5_f31ea0c9",
         "filename": "/COMMIT_MSG",
         "patchSetId": 17
@@ -103,6 +169,24 @@
       "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f060d1eb_ba2c75c9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-03T21:24:31Z",
+      "side": 1,
+      "message": "Yep, let address that later. We have hundreds of Gigs on that box, it should not be a problem at the beginning.\n\nWe will then hopefully migrate to the Bazel cache server or, better, to RBE (as soon as I manage to get it working).",
+      "parentUuid": "61547ac5_f31ea0c9",
+      "revId": "3112e321eee9c927c03a73f1b9019fd20af52657",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
