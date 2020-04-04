@@ -111,7 +111,7 @@
     properties:
       - inject:
           properties-content: >
-            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+            BAZEL_OPTS=--config=remote
     builders:
       - merge-target-branch
       - fetch-all-submodules
