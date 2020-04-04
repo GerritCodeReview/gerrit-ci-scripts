@@ -51,6 +51,23 @@
       "revId": "ea284be0932b318dc59d6b6b3522d935731be89d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "53ebd8e9_cfbe84f6",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-04T05:37:17Z",
+      "side": 0,
+      "message": "Restore, and consider to remove it later? Pre-warmed local cache is still useful for downloading all transitive dependencies. Have you re-built the Docker image for tests performed in that change, or have you used the same, existing docker image with the pre-warmed caches? Would it make sense to even add --remote-cache option to this pre-warmed cache step?",
+      "revId": "ea284be0932b318dc59d6b6b3522d935731be89d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
