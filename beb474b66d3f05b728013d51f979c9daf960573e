@@ -2,6 +2,92 @@
   "comments": [
     {
       "key": {
+        "uuid": "19dbd978_c11090a4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 22
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-04T08:28:46Z",
+      "side": 1,
+      "message": "You said, that result for elasticsearch were not retrievied from cache between different test runs on different nodes.\n\nThat is strange. I have tested on my Laptop Yakob\u0027s bazel-remote cache backend, by using provided Docker image:\n\n  $ docker run -v /tmp/bazel-remote/cache-dir:/data -p 9090:8080 -p 9092:9092 buchgr/bazel-remote-cache\n\nThen I cleaned local disk cache and on Gerrit@HEAD executed ElasticSearch V7 tests using the remote cache:\n\n  $ bazel test --remote_cache\u003dhttp://localhost:9090 javatests/com/google/gerrit/elasticsearch/...\n\nThen the results are:\n\nINFO: 89 processes: 57 linux-sandbox, 32 worker.\nINFO: Build completed successfully, 113 total actions\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_query_accounts_test_V7 PASSED in 173.3s\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_query_changes_test_V7 PASSED in 493.0s\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_query_groups_test_V7 PASSED in 143.8s\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_query_projects_test_V7 PASSED in 132.2s\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_tests          PASSED in 1.3s\n\nAnd the file with remote cache was populated:\n\n  $ davido@wizball:/tmp/bazel-remote/cache-dir$ find . -type f | wc -l\n2096\n\nNow, I removed the whole workspace using:\n\n  $ bazel clean --expunge_async\n  $ rm -rf /home/davido/.cache/bazel/_bazel_davido/5c01f4f713b675540b8b424c5c647f63_tmp_31562\n\nand also removed local disk cas cache:\n\n $ rm -rf ~/.gerritcodereview/bazel-cache/cas\n\nIf I repeat the ES tests, the results are retrieved from the remote cache:\n\n  $ bazel test --remote_cache\u003dhttp://localhost:9090 javatests/com/google/gerrit/elasticsearch/...\n  [...]\n  INFO: Build completed successfully, 463 total actions\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_query_accounts_test_V7 (cached) PASSED in 0.2s\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_query_changes_test_V7 (cached) PASSED in 0.2s\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_query_groups_test_V7 (cached) PASSED in 0.2s\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_query_projects_test_V7 (cached) PASSED in 0.0s\n//javatests/com/google/gerrit/elasticsearch:elasticsearch_tests (cached) PASSED in 0.0s\n\nAs you can see, it generally works as expected. So that we should debug, why it doesn\u0027t work with test caching on GerritForge CI for ES tests. Can you perform similar test as above on GCP worker node? Do you have cache hits for the same node:\n\n* 1. Run the ES tests once with remote cache enabled Read/Write, confirm that the test is populated\n* 2. wipe out the workspace and cas, as I did above \n* 3. Repeat step 1: You should have 100 cache hits",
+      "revId": "beb474b66d3f05b728013d51f979c9daf960573e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe8ed874_d6319878",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 22
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-04T08:28:46Z",
+      "side": 1,
+      "message": "Not used and can be removed.",
+      "range": {
+        "startLine": 71,
+        "startChar": 14,
+        "endLine": 71,
+        "endChar": 64
+      },
+      "revId": "beb474b66d3f05b728013d51f979c9daf960573e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9a531b32_c8918fbd",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 22
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-04T08:28:46Z",
+      "side": 1,
+      "message": "Same here, left over from previous approach.",
+      "range": {
+        "startLine": 116,
+        "startChar": 14,
+        "endLine": 116,
+        "endChar": 64
+      },
+      "revId": "beb474b66d3f05b728013d51f979c9daf960573e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e1abac17_455ea7a5",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 22
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-04T08:28:46Z",
+      "side": 1,
+      "message": "And here.",
+      "range": {
+        "startLine": 161,
+        "startChar": 14,
+        "endLine": 161,
+        "endChar": 64
+      },
+      "revId": "beb474b66d3f05b728013d51f979c9daf960573e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "bb5718bb_2ee56e7f",
         "filename": "jenkins-docker/slave-bazel-docker/Dockerfile",
         "patchSetId": 22
