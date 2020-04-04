@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "cfadc32f_7e650a26",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-04-04T23:55:52Z",
+      "side": 1,
+      "message": "GCP?",
+      "range": {
+        "startLine": 7,
+        "startChar": 37,
+        "endLine": 7,
+        "endChar": 40
+      },
+      "revId": "ea7ec382a89a3e1948615f5325f0f088eeff92f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d1108735_1bf52a36",
         "filename": "jenkins/gerrit-bazel-build.sh",
         "patchSetId": 2
