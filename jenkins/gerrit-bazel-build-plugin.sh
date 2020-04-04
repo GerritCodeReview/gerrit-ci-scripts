@@ -18,16 +18,16 @@ TEST_TARGET=$(grep -2 junit_tests plugins/{name}/BUILD | grep -o 'name = "[^"]*"
 
 java -fullversion
 bazelisk version
-bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+bazelisk build --config=remote $TARGETS
 
 if [ "$TEST_TARGET" != "" ]
 then
-    bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST plugins/{name}:$TEST_TARGET
+    bazelisk test --config=remote --test_env DOCKER_HOST=$DOCKER_HOST plugins/{name}:$TEST_TARGET
 fi
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
 do
-    PLUGIN_VERSION=$(git describe  --always origin/{branch})
+    PLUGIN_VERSION=$(git describe --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=bazel-bin/plugins/{name}/$(basename $JAR)
