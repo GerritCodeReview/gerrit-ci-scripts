@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ab568ad1_fae8fbc7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 22
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-04T18:44:04Z",
+      "side": 1,
+      "message": "We run tests with environment variables set, that\u0027s why I believe the cache is not getting fully utilised. In your test, you were relying on the Docker daemon on the local box I imagine, whilst we need to use a remote one dynamically discovered using the network interfaces.\n\nAnyway, we can make it better in a follow-up change as it may require some changes in our scripts and/or test code for running without environment variables.",
+      "parentUuid": "19dbd978_c11090a4",
+      "revId": "beb474b66d3f05b728013d51f979c9daf960573e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fe8ed874_d6319878",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 22
@@ -105,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "5a57d996_3360d077",
+        "filename": "jenkins-docker/slave-bazel-docker/Dockerfile",
+        "patchSetId": 22
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-04T18:44:04Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "bb5718bb_2ee56e7f",
+      "revId": "beb474b66d3f05b728013d51f979c9daf960573e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "020e5912_fcbd68c8",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 22
@@ -116,6 +152,30 @@
       "writtenOn": "2020-04-04T05:37:17Z",
       "side": 1,
       "message": "This line is too long, this is the reason for style check failure?",
+      "range": {
+        "startLine": 114,
+        "startChar": 51,
+        "endLine": 114,
+        "endChar": 105
+      },
+      "revId": "beb474b66d3f05b728013d51f979c9daf960573e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3bf8f0ff_c83641d6",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 22
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-04T18:44:04Z",
+      "side": 1,
+      "message": "Yep, but I actually need the value in a single line.",
+      "parentUuid": "020e5912_fcbd68c8",
       "range": {
         "startLine": 114,
         "startChar": 51,
