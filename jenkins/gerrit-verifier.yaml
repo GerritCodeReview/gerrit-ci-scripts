@@ -110,8 +110,10 @@
     node: bazel-debian
     properties:
       - inject:
-          properties-content: >
-            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+          properties-content: "\
+            BAZEL_OPTS=\
+            --config=remote \
+            --remote_instance_name=projects/api-project-164060093628/instances/default_instance"
     builders:
       - merge-target-branch
       - fetch-all-submodules

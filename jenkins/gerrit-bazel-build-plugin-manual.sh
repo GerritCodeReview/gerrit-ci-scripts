@@ -17,11 +17,11 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 java -fullversion
 bazelisk version
-bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+bazelisk build --config=remote $TARGETS
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
 do
-    PLUGIN_VERSION=$(git describe  --always origin/{branch})
+    PLUGIN_VERSION=$(git describe --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
 
