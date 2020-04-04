@@ -7,12 +7,12 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
-export BAZEL_OPTS="--spawn_strategy=standalone --genrule_strategy=standalone \
+export BAZEL_OPTS="$BAZEL_OPTS \
                  --test_output errors \
                  --test_summary detailed --flaky_test_attempts 3 \
                  --test_verbose_timeout_warnings --build_tests_only \
                  --test_timeout 3600 \
-                 --test_tag_filters=-flaky \
+                 --test_tag_filters=-flaky,-docker \
                  --test_env DOCKER_HOST=$DOCKER_HOST"
 
 java -fullversion

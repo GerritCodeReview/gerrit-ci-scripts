@@ -1,4 +1,4 @@
-- builder:
+#- builder:
     name: merge-target-branch
     builders:
       - shell: |
@@ -111,7 +111,7 @@
     properties:
       - inject:
           properties-content: >
-            BAZEL_OPTS=--ram_utilization_factor=30
+            BAZEL_OPTS=--config=remote
     builders:
       - merge-target-branch
       - fetch-all-submodules
