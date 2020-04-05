@@ -22,6 +22,29 @@
       "revId": "74394d67fc49b3bf3783e3b4e3c241e5bf1752d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "705154d9_9889b9e0",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 27
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-05T11:21:55Z",
+      "side": 1,
+      "message": "Is this actually needed? As I understood, only small worker nodes were affected? If you remove this option again, you don\u0027t have to wrap the line.",
+      "range": {
+        "startLine": 113,
+        "startChar": 42,
+        "endLine": 113,
+        "endChar": 69
+      },
+      "revId": "74394d67fc49b3bf3783e3b4e3c241e5bf1752d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
