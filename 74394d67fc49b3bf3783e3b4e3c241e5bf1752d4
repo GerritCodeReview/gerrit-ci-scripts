@@ -93,6 +93,30 @@
       "revId": "74394d67fc49b3bf3783e3b4e3c241e5bf1752d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c96710f7_e2f4921d",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 27
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-05T14:59:21Z",
+      "side": 1,
+      "message": "\u003e What are the nodes not affected? \n\nAh, you were talking about the ram_utilization_factor. Yes, we can remove it in a follow-up change. I like to make small changes, one at a time, so we know what breaks what.\n\nThe Bazel RAM utilization was not enough to prevent the small physical nodes from going out of memory, even if it mitigated the incidence by a factor of 5x.\n\nWe still need to understand why we need so much heap for our builds, but that\u0027s a different issue from the caching.",
+      "parentUuid": "163d5f71_7bed92b1",
+      "range": {
+        "startLine": 113,
+        "startChar": 42,
+        "endLine": 113,
+        "endChar": 69
+      },
+      "revId": "74394d67fc49b3bf3783e3b4e3c241e5bf1752d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
