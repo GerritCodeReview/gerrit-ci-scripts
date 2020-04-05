@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80ce36da_1a1101e5",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 27
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-05T11:20:19Z",
+      "side": 1,
+      "message": "Quotes are really needed?",
+      "range": {
+        "startLine": 113,
+        "startChar": 30,
+        "endLine": 113,
+        "endChar": 31
+      },
+      "revId": "74394d67fc49b3bf3783e3b4e3c241e5bf1752d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
