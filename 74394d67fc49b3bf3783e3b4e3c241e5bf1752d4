@@ -45,6 +45,54 @@
       "revId": "74394d67fc49b3bf3783e3b4e3c241e5bf1752d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "163d5f71_7bed92b1",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 27
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-05T14:36:02Z",
+      "side": 1,
+      "message": "What are the nodes not affected? The setting has been applied to the Job and the same one is executed on any worker node, which runs exactly the same docker container.\n\nThere is no reason for one worker to get the setting and another not getting it.\nCan you point to where you saw the issue?",
+      "parentUuid": "705154d9_9889b9e0",
+      "range": {
+        "startLine": 113,
+        "startChar": 42,
+        "endLine": 113,
+        "endChar": 69
+      },
+      "revId": "74394d67fc49b3bf3783e3b4e3c241e5bf1752d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d7503c2b_8ab9d8fb",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 27
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-05T14:36:02Z",
+      "side": 1,
+      "message": "Yep, that\u0027s the syntax for the wrapping with \u0027\\\u0027",
+      "parentUuid": "80ce36da_1a1101e5",
+      "range": {
+        "startLine": 113,
+        "startChar": 30,
+        "endLine": 113,
+        "endChar": 31
+      },
+      "revId": "74394d67fc49b3bf3783e3b4e3c241e5bf1752d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
