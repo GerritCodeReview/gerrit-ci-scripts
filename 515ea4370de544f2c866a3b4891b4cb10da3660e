@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "a2ac89fe_3613f084",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-06T09:49:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3253323c_a969ed03",
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "670a7e34_02985537",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
@@ -165,6 +183,30 @@
       "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dad598c4_c948f4d9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-06T09:49:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2eb2f00f_f1b1e6ac",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 49
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -263,6 +305,30 @@
     },
     {
       "key": {
+        "uuid": "708cee99_c447b727",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-06T09:49:37Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f41fa875_aa264636",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 23
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "76172dd5_dfc88163",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 4
@@ -283,6 +349,30 @@
       "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db19cba7_330903c7",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-06T09:49:37Z",
+      "side": 1,
+      "message": "This is now obsolete, as we don\u0027t use disk cache anymore.",
+      "parentUuid": "76172dd5_dfc88163",
+      "range": {
+        "startLine": 114,
+        "startChar": 52,
+        "endLine": 114,
+        "endChar": 81
+      },
+      "revId": "515ea4370de544f2c866a3b4891b4cb10da3660e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
