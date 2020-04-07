@@ -22,6 +22,30 @@
       "revId": "baa20c825f72fd2303ba6329b185414115e27a1b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5099b7d8_b06fbc24",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-07T13:16:42Z",
+      "side": 1,
+      "message": "Removed the .bazelversion for version check",
+      "parentUuid": "547a592c_28c950e6",
+      "range": {
+        "startLine": 5,
+        "startChar": 13,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "baa20c825f72fd2303ba6329b185414115e27a1b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
