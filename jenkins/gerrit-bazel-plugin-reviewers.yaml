@@ -1,13 +1,9 @@
 - project:
     name: reviewers
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
-            - master
-            - stable-3.1
       - 'plugin-{name}-bazel-{branch}':
           branch:
+            - master
+            - stable-3.1
             - stable-3.0
             - stable-2.16
