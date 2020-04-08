@@ -37,8 +37,6 @@
           additional-options: -fbdir /tmp
           debug: true
           shutdown-with-build: false
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     builders:
       - shell: !include-raw: gerrit-bazel-build.sh
       - shell: !include-raw-escape: set-docker-host.sh

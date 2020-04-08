@@ -95,8 +95,6 @@
                  <hudson.plugins.build__timeout.operations.AbortOperation/>
               </operationList>
             </hudson.plugins.build__timeout.BuildTimeoutWrapper>
-      - raw:
-          xml: <jenkins.plugins.logstash.LogstashBuildWrapper plugin="logstash@1.2.0"/>
     publishers:
       - groovy-postbuild:
           script: |
