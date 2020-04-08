@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2c2c2d6_72b2e53b",
+        "filename": "jenkins/gerrit-bazel-build-plugin-manual.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-08T22:31:06Z",
+      "side": 1,
+      "message": "See same comments as the gerrit-bazel-build-plugin.sh",
+      "range": {
+        "startLine": 20,
+        "startChar": 15,
+        "endLine": 20,
+        "endChar": 30
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bb96013c_7f56452c",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-08T22:31:06Z",
+      "side": 1,
+      "message": "This should be set in the YAML template as BAZEL_OPTS and used at L21 and L25.\n\nP.S. Are we sure that *ALL* plugins builds are compatible with RBE?",
+      "range": {
+        "startLine": 21,
+        "startChar": 15,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a2c4ce8_769e032e",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-08T22:31:06Z",
+      "side": 1,
+      "message": "Does RBE have access to our Docker server? If yes, how? If not, is there a Docker listener that can be used in RBE to start/stop docker images for running tests with TestContainers?",
+      "range": {
+        "startLine": 25,
+        "startChar": 45,
+        "endLine": 25,
+        "endChar": 68
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "633d9764_bb307f41",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-08T22:31:06Z",
+      "side": 1,
+      "message": "Same as before: we should define in a single place and reuse it.",
+      "range": {
+        "startLine": 25,
+        "startChar": 20,
+        "endLine": 25,
+        "endChar": 36
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
