@@ -186,6 +186,30 @@
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8d4b9bcb_fa90ddfe",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-09T09:00:44Z",
+      "side": 1,
+      "message": "\u003e See my comment in jenkins/gerrit-bazel-build-plugin.sh. If we want to make it conditional, what options to use, we should isolate two different options here and not poison BAZEL_OPTS:\n\u003e \n\u003e   BAZEL_RBE_OPTS\u003d--config\u003dremote --disk_cache\u003d --remote_instance_name\u003d...\n\u003e \n\u003e and a different one for non RBE remote cache option\n\u003e \n\u003e   BAZEL_REMOTE_OPTS\u003d--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache\n\u003e \n\u003e Thus, the BAZEL_OPTS is wasn\u0027t touched, and is conducted dependent on the build environment.\n\nWhat about creating doing this:\n\n- BAZEL_OPTS: options valid for both remote and local build\n- BAZEL_REMOTE_OPTS: options for remote build\n- BAZEL_LOCAL_OPTS: options for local build\n\nThen we use BAZEL_$BUILD_ENV_OPTS + BAZEL_OPTS\n\nDoes that make sense?",
+      "parentUuid": "733f193c_3c059502",
+      "range": {
+        "startLine": 113,
+        "startChar": 10,
+        "endLine": 116,
+        "endChar": 96
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
