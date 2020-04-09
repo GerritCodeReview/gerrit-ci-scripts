@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "fd5ab60d_5b6f7c35",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-09T06:19:26Z",
+      "side": 1,
+      "message": "Consider also the situation, like for Bazel and Libreoffice CI, where, at some point we may want to verify, that Gerrit builds and tests are passing also from Mac Os X. RBE doesn\u0027t support that OS, so that remove build should be preferred over RBE and that why it is a bad idea to activate RBE globally.",
+      "parentUuid": "0bcfe2db_8c36f07c",
+      "range": {
+        "startLine": 21,
+        "startChar": 15,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4a2c4ce8_769e032e",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
         "patchSetId": 5
