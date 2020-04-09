@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "0bcfe2db_8c36f07c",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-09T06:11:39Z",
+      "side": 1,
+      "message": "The way it works on Buildkite (Bazel Team CI) is conditional switch between RBE and not RBE, with remote aching then.\n\nSame here. We may have situation that we would switch between RBE (at least for now) and not RBE using remote cache.\n\nThat why the plan for now is a different one: we should remove any global scope options, and use it at the leafs of the tree:\n\n  if [ \"$BUILD_ENV\" \u003d \"remote\" ]\n  then\n      BAZEL_REMOTE_OPTIONS\u003d--config\u003dremote\n  else\n      BAZEL_REMOTE_OPTIONS\u003d--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache\n  fi\n\nNow, dependent from the Checker value BUILD_ENV should be set.",
+      "parentUuid": "bb96013c_7f56452c",
+      "range": {
+        "startLine": 21,
+        "startChar": 15,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4a2c4ce8_769e032e",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
         "patchSetId": 5
@@ -87,6 +111,53 @@
         "startChar": 20,
         "endLine": 25,
         "endChar": 36
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6e2f3f77_c11817c2",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-09T06:11:39Z",
+      "side": 1,
+      "message": "Same as above. It\u0027s say Docker in Docker is not supported in RBE. The way forward: as above, isolate docker tests and run them in own Checker on GerritForge CI with remote_cache: \"Docker tests\" with Bazel option:\n\n  $ bazel test $BAZEL_REMOTE_OPTIONS --test_tag_filters\u003ddocker //...\n\nOn BUILD_ENV\u003dRBE, those tests will be skipped:\n\n  $ bazel test $BAZEL_REMOTE_OPTIONS --test_tag_filters\u003d-docker //...",
+      "parentUuid": "633d9764_bb307f41",
+      "range": {
+        "startLine": 25,
+        "startChar": 20,
+        "endLine": 25,
+        "endChar": 36
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "733f193c_3c059502",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-09T06:11:39Z",
+      "side": 1,
+      "message": "See my comment in jenkins/gerrit-bazel-build-plugin.sh. If we want to make it conditional, what options to use, we should isolate two different options here and not poison BAZEL_OPTS:\n\n  BAZEL_RBE_OPTS\u003d--config\u003dremote --disk_cache\u003d --remote_instance_name\u003d...\n\nand a different one for non RBE remote cache option\n\n  BAZEL_REMOTE_OPTS\u003d--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache\n\nThus, the BAZEL_OPTS is wasn\u0027t touched, and is conducted dependent on the build environment.",
+      "range": {
+        "startLine": 113,
+        "startChar": 10,
+        "endLine": 116,
+        "endChar": 96
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
