@@ -22,6 +22,30 @@
       "revId": "03458d8d38ef1ab537c3470dc3e6e7b704cee662",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe48814c_4e285a11",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-09T09:01:43Z",
+      "side": 1,
+      "message": "\u003e Clarify why would gcloud SDK is required. My understanding is that GCloud administrator (Han-Wen) would set-up the tool chain up and running, and it should just work, and GCloud SDK shouldn\u0027t be needed.\n\nIf you run Bazel with RBE it complains that GCloud SDK isn\u0027t installed and it would fail.",
+      "parentUuid": "fb37580c_d3ad497f",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 10
+      },
+      "revId": "03458d8d38ef1ab537c3470dc3e6e7b704cee662",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
