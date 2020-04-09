@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb37580c_d3ad497f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-09T05:53:36Z",
+      "side": 1,
+      "message": "Clarify why would gcloud SDK is required. My understanding is that GCloud administrator (Han-Wen) would set-up the tool chain up and running, and it should just work, and GCloud SDK shouldn\u0027t be needed.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 10
+      },
+      "revId": "03458d8d38ef1ab537c3470dc3e6e7b704cee662",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
