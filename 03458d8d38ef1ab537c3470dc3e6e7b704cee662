@@ -94,6 +94,30 @@
       "revId": "03458d8d38ef1ab537c3470dc3e6e7b704cee662",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "519e97cd_85888592",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-09T10:10:09Z",
+      "side": 1,
+      "message": "I believe it was needed before Han-Wen did his \"magic GCloud commands\". Now it isn\u0027t needed anymore on the GCloud workers. It is needed however when builds are run on DavidO or GerritForge\u0027s slave nodes.",
+      "parentUuid": "b1536df4_d31a403d",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 10
+      },
+      "revId": "03458d8d38ef1ab537c3470dc3e6e7b704cee662",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
