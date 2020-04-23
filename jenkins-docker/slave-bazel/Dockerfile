@@ -8,9 +8,15 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     cd /tmp/gerrit && \
     ./tools/setup_gjf.sh 1.7 && \
     ( bazelisk build plugins:core release api || true ) && \
-    git checkout -f stable-3.0 && git submodule update --init && ( bazelisk build plugins:core release api || true ) && \
-    git checkout -f stable-3.1 && git submodule update --init && ( bazelisk build plugins:core release api || true ) && \
-    git checkout -f master && git submodule update --init && ( bazelisk build plugins:core release api || true ) && \
+    git checkout -f stable-3.0 && \
+    git submodule update --init && \
+    ( bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api || true ) && \
+    git checkout -f stable-3.1 && \
+    git submodule update --init && \
+    ( bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api || true ) && \
+    git checkout -f master && \
+    git submodule update --init && \
+    ( bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api || true ) && \
     cd /tmp/gerrit && mv tools/format ~ && \
     rm -Rf /tmp/gerrit'
 
