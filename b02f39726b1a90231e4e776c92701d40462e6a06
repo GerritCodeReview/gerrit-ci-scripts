@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "840996c0_db1a6d6c",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-24T03:41:53Z",
+      "side": 1,
+      "message": "White listing is only required for writing to the cache or also for reading?",
+      "revId": "b02f39726b1a90231e4e776c92701d40462e6a06",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
