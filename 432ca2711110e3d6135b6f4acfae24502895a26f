@@ -22,6 +22,30 @@
       "revId": "432ca2711110e3d6135b6f4acfae24502895a26f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a02be1f0_428ba819",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-25T09:07:48Z",
+      "side": 1,
+      "message": "I have just published Ubuntu 20.04 and JDK 11 based Docker image to build gerrit: [1], and it works as expected. To try, use:\n\n  $ docker pull davido42/bazel-build-gerrit-ubuntu\n  $ docker run -ti davido42/bazel-build-gerrit-ubuntu\n\nWith this docker image and even though JDK 11 is used, gerrit build works as expected, but Java 8 byte code is produced.\n\n* [1] https://github.com/davido/bazel-build-gerrit/blob/master/Dockerfile.ubuntu",
+      "parentUuid": "dcda2038_2e3d7110",
+      "range": {
+        "startLine": 10,
+        "startChar": 66,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "432ca2711110e3d6135b6f4acfae24502895a26f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
