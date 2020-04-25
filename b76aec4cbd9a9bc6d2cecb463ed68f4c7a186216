@@ -94,6 +94,30 @@
       "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8467484_4cbecdcf",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-25T09:43:19Z",
+      "side": 1,
+      "message": "This file is just a text file with checks definition. By submitting thing change, the checker wouldn\u0027t be defined, someone with the Admin Checker Permission would have to execute `curl` command.\n\nEvidently, the checkers are not defined yet: [1] for changes for new stable-3.2 branch:\n\n  No checks ran for this code review\n  Configure checkers to view the results here.\n\n* [1] https://gerrit-review.googlesource.com/c/gerrit/+/264315",
+      "parentUuid": "091845c3_a277a771",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
