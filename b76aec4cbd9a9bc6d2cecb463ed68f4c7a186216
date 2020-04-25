@@ -142,6 +142,30 @@
       "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "24224207_bc64cc20",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-25T13:12:38Z",
+      "side": 1,
+      "message": "Note that I\u0027m aware of. First time as I uploaded this file, I executed curl program for each checker.\n\nWith stable-3.1 I think Luca did the update (me didn\u0027t)? Thomas Dräbing tried to set-up some machinery to create/update checker in GerritForge integration, but then abandoned that approach.\n\nBottom line: what program/or what person would call this Update Checker REST endpoint:\n\nhttps://github.com/GerritCodeReview/plugins_checks/blob/master/resources/Documentation/rest-api-checkers.md#-update-checker\n\nwith this updated body? Query attribute in that case.\n\nNext question is Zuul CI integration: Has James created some update mechanism for checker for Core Plugin projects?",
+      "parentUuid": "78592fd0_f07175ef",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
