@@ -2,6 +2,7 @@
 cd gerrit
 bazelisk version
 if ([ "$TARGET_BRANCH" == "master" ] || \
+    [ "$TARGET_BRANCH" == "stable-3.2" ] || \
     [ "$TARGET_BRANCH" == "stable-3.1" ] || \
     [ "$TARGET_BRANCH" == "stable-3.0" ] || \
     [ "$TARGET_BRANCH" == "stable-2.16" ]) \
