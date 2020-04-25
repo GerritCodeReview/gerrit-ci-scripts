@@ -22,6 +22,30 @@
       "revId": "9aa97efd5fdf5014ef0d5dcb2c5538b4dd694f25",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "54cd5d20_3f77f829",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-25T10:16:46Z",
+      "side": 1,
+      "message": "I would keep only master and stable-3.2, we have a shared che now. it can be done as. follow up",
+      "parentUuid": "df2c5005_6c9b0fe3",
+      "range": {
+        "startLine": 7,
+        "startChar": 24,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "9aa97efd5fdf5014ef0d5dcb2c5538b4dd694f25",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
