@@ -166,6 +166,30 @@
       "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b86de351_e13afd81",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-25T14:09:03Z",
+      "side": 1,
+      "message": "I figured, I have the ACL and can update the checker form the UI, by hitting configure button:\n\n[1] https://imgur.com/a/hkYpq8x",
+      "parentUuid": "24224207_bc64cc20",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
