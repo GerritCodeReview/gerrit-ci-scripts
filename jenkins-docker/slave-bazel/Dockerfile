@@ -14,6 +14,9 @@ RUN bash -c '. /usr/bin/set-java.sh 8 && \
     git checkout -f stable-3.1 && \
     git submodule update --init && \
     ( bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api || true ) && \
+    git checkout -f stable-3.2 && \
+    git submodule update --init && \
+    ( bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api || true ) && \
     git checkout -f master && \
     git submodule update --init && \
     ( bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api || true ) && \
