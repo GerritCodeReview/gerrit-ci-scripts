@@ -70,6 +70,30 @@
       "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "091845c3_a277a771",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-04-25T09:23:26Z",
+      "side": 1,
+      "message": "I\u0027m not sure what you mean by \"run the Rest API\".\n\nAs far as I know we just remove stable-2.16 from this line (and below)",
+      "parentUuid": "98e9a52f_91b721a3",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
