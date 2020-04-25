@@ -81,6 +81,7 @@
     name: Gerrit-bazel
     branch:
       - master
+      - stable-3.2
       - stable-3.1
       - stable-3.0
       - stable-2.16
@@ -91,6 +92,7 @@
     name: Gerrit-bazel-java11
     branch:
       - master
+      - stable-3.2
     jobs:
       - 'Gerrit-bazel-java11-{branch}'
 
