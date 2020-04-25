@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dcda2038_2e3d7110",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-04-25T08:33:56Z",
+      "side": 1,
+      "message": "We should look into other build system, used in that docker image: Maven and SBT and if required configure the corresponding project to configure Java 8 support.",
+      "range": {
+        "startLine": 10,
+        "startChar": 66,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "432ca2711110e3d6135b6f4acfae24502895a26f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
