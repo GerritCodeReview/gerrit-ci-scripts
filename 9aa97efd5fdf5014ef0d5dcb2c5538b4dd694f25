@@ -46,6 +46,30 @@
       "revId": "9aa97efd5fdf5014ef0d5dcb2c5538b4dd694f25",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fd57f046_188dc1a6",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-25T10:17:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "54cd5d20_3f77f829",
+      "range": {
+        "startLine": 7,
+        "startChar": 24,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "9aa97efd5fdf5014ef0d5dcb2c5538b4dd694f25",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
