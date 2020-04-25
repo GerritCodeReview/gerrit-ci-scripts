@@ -22,6 +22,30 @@
       "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad56d92c_855b603d",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-04-25T06:37:26Z",
+      "side": 1,
+      "message": "After the final 3.2 release.",
+      "parentUuid": "0370bafa_12276098",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "b76aec4cbd9a9bc6d2cecb463ed68f4c7a186216",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
