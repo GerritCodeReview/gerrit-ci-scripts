@@ -5,7 +5,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "name": "Build/Tests",
     "description": "Builds the code base and executes unit/integration tests",
     "repository": "gerrit",
-    "query": "branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:master",
+    "query": "branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:stable-3.2 OR branch:master",
     "blocking": []
   }
 
@@ -27,7 +27,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "name": "PolyGerrit UI Tests",
     "description": "Executes unit/integration tests for PolyGerrit UI",
     "repository": "gerrit",
-    "query": "(directory:polygerit-ui OR file:WORKSPACE) AND (branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:master)",
+    "query": "(directory:polygerit-ui OR file:WORKSPACE) AND (branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:stable-3.2 OR branch:master)",
     "blocking": []
   }
 
@@ -38,6 +38,6 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "name": "Code Style",
     "description": "Executes Code Style tests",
     "repository": "gerrit",
-    "query": "branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:master",
+    "query": "branch:stable-2.16 OR branch:stable-3.0 OR branch:stable-3.1 OR branch:stable-3.2 OR branch:master",
     "blocking": []
   }
