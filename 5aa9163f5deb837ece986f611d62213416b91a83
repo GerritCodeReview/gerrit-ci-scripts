@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7577c956_2c2bda1c",
+        "filename": "jenkins/gerrit-bazel-plugin-project-group-structure.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-04-27T23:32:44Z",
+      "side": 1,
+      "message": "Note: we should make a stable-3.1 branch on the plugin",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "5aa9163f5deb837ece986f611d62213416b91a83",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
