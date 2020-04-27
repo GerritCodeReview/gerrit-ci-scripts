@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a8aa3975_61cc3144",
+        "filename": "jenkins/gerrit-bazel-plugin-gc-conductor.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-04-27T23:32:11Z",
+      "side": 1,
+      "message": "Note: This plugin needs a stable-3.1 branch",
+      "revId": "d506bfb00113e5217e2a916081fb75f8ccf4f245",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
