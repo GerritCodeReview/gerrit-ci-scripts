@@ -52,10 +52,16 @@
 - project:
     name: owners
     jobs:
-      - 'plugin-owners-bazel-{branch}':
+      - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
           targets: 'plugins/owners plugins/owners-autoassign'
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-3.2
+      - 'plugin-owners-bazel-{branch}':
+          targets: 'plugins/owners plugins/owners-autoassign'
+          branch:
             - stable-3.1
             - stable-3.0
             - stable-2.16
