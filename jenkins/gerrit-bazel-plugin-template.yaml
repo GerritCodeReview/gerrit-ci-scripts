@@ -158,7 +158,7 @@
       - last-failure
       - last-duration
       - build-button
-    regex: 'plugin-.+-{branch}'
+    regex: '(plugin|module}-.+-{branch}'
 
 - project:
     name: 'plugin-views'
