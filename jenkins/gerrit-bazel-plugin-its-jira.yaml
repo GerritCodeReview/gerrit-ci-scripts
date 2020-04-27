@@ -1,9 +1,14 @@
 - project:
     name: jira
     jobs:
-      - 'plugin-its-{name}-bazel-{branch}':
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-3.2
+      - 'plugin-its-{name}-bazel-{branch}':
+          branch:
             - stable-3.1
             - stable-3.0
             - stable-2.16
