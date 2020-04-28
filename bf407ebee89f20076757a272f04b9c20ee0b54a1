@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "21daf396_10eab8d4",
+        "filename": "jenkins/gerrit-bazel-plugin-ref-protection.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-04-28T06:59:12Z",
+      "side": 1,
+      "message": "These need to be moved below.",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 24
+      },
+      "revId": "bf407ebee89f20076757a272f04b9c20ee0b54a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
