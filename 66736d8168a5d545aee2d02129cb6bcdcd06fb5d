@@ -22,6 +22,30 @@
       "revId": "66736d8168a5d545aee2d02129cb6bcdcd06fb5d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7007a157_c11ee28c",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-28T14:56:38Z",
+      "side": 0,
+      "message": "Good that you fixed it :-) ... we remove stable-2.16 altogether :-D",
+      "parentUuid": "bdbceba6_d6a40ec1",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 45
+      },
+      "revId": "66736d8168a5d545aee2d02129cb6bcdcd06fb5d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
