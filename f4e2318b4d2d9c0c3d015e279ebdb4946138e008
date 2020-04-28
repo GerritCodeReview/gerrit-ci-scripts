@@ -16,6 +16,24 @@
       "revId": "f4e2318b4d2d9c0c3d015e279ebdb4946138e008",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae5e4b51_e4b01696",
+        "filename": "jenkins/gerrit-bazel-plugin-project-download-commands.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-28T10:23:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "22998d08_cf2cc554",
+      "revId": "f4e2318b4d2d9c0c3d015e279ebdb4946138e008",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
