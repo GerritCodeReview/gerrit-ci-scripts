@@ -1,7 +1,12 @@
 - project:
     name: checks
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-3.2
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
             - stable-3.1
