@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "67db6188_b5d8614e",
+        "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-04-28T07:07:51Z",
+      "side": 1,
+      "message": "Should we also use {name} here? At least we should be consistent between the two jobs types.",
+      "revId": "b6801061be6fa938e284826143c29dbf79ae9512",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
