@@ -22,6 +22,30 @@
       "revId": "0981c76c62d8b11ca8b7e35886df31ad003b19fa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d250e7b3_47d6c5af",
+        "filename": "jenkins/gerrit-bazel-plugin-its-jira.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-28T23:40:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "949be5ff_24acdfb3",
+      "range": {
+        "startLine": 4,
+        "startChar": 16,
+        "endLine": 4,
+        "endChar": 22
+      },
+      "revId": "0981c76c62d8b11ca8b7e35886df31ad003b19fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
