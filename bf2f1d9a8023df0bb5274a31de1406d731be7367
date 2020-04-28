@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b7057492_f3072884",
+        "filename": "jenkins/gerrit-bazel-plugin-ref-protection.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-04-28T07:17:18Z",
+      "side": 1,
+      "message": "This could be removed now. Otherwise we build the plugin twice on master branch",
+      "revId": "bf2f1d9a8023df0bb5274a31de1406d731be7367",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
