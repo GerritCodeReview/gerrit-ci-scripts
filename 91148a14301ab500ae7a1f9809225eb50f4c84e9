@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e0fd16b_abf5a452",
+        "filename": "jenkins/gerrit-bazel-plugin-kafka-events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-04-28T06:59:24Z",
+      "side": 1,
+      "message": "There is a stable-3.1 branch for this plugin by now.",
+      "revId": "91148a14301ab500ae7a1f9809225eb50f4c84e9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
