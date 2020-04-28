@@ -34,6 +34,29 @@
       "revId": "bf2f1d9a8023df0bb5274a31de1406d731be7367",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8e573006_f1c3189b",
+        "filename": "jenkins/gerrit-bazel-plugin-ref-protection.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-04-28T07:29:14Z",
+      "side": 1,
+      "message": "Should it be removed here instead?",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 11,
+        "endChar": 20
+      },
+      "revId": "bf2f1d9a8023df0bb5274a31de1406d731be7367",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
