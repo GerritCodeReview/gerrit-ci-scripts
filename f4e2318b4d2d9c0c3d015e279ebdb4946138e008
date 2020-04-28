@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "22998d08_cf2cc554",
+        "filename": "jenkins/gerrit-bazel-plugin-project-download-commands.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-04-28T06:57:05Z",
+      "side": 1,
+      "message": "With that we would build the plugin (master-branch) against Gerrit master branch two times. I would either remove the job below or this list entry.",
+      "revId": "f4e2318b4d2d9c0c3d015e279ebdb4946138e008",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
