@@ -16,6 +16,24 @@
       "revId": "bf2f1d9a8023df0bb5274a31de1406d731be7367",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "37c9659d_0d55f79e",
+        "filename": "jenkins/gerrit-bazel-plugin-ref-protection.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-04-28T07:28:12Z",
+      "side": 1,
+      "message": "In the next change the stable-3.2 branch is getting added. I left it here to avoid just having to add it back in the next change.",
+      "parentUuid": "b7057492_f3072884",
+      "revId": "bf2f1d9a8023df0bb5274a31de1406d731be7367",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
