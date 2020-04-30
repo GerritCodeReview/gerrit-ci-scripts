@@ -16,6 +16,24 @@
       "revId": "91148a14301ab500ae7a1f9809225eb50f4c84e9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7c4e8340_d28b4dcc",
+        "filename": "jenkins/gerrit-bazel-plugin-kafka-events.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-04-30T00:28:19Z",
+      "side": 1,
+      "message": "Well spotted, let me fix it.",
+      "parentUuid": "4e0fd16b_abf5a452",
+      "revId": "91148a14301ab500ae7a1f9809225eb50f4c84e9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
