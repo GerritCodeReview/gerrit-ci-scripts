@@ -125,6 +125,41 @@
             gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
 
+- job-template:
+    name: Gerrit-verifier-bazel-{branch}
+    description: 'Gerrit build of open change on {branch} with Bazel'
+    defaults: verifier-defaults
+    node: bazel-debian-${branch}
+    properties:
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+    builders:
+      - merge-target-branch
+      - fetch-all-submodules
+      - shell: !include-raw-escape: gerrit-bazel-build.sh
+      - shell: !include-raw-escape: set-docker-host.sh
+      - shell: !include-raw-escape: gerrit-bazel-verifier-test.sh
+      - shell: !include-raw-escape: gerrit-bazel-cat-test-log.sh
+    publishers:
+      - archive:
+          artifacts: >
+            gerrit/bazel-bin/*.war,gerrit/bazel-bin/plugins/*/*.jar,
+            gerrit/bazel-bin/*api/*api.jar,
+            gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
+          excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
+
+- job:
+    name: Gerrit-verifier-jobs
+    branch:
+      - master
+      - stable-3.2
+      - stable-3.1
+      - stable-3.0
+      - stable-2.16
+    jobs:
+      - 'Gerrit-verifier-bazel-{branch}'
+
 - job:
     name: Gerrit-codestyle
     description: 'Gerrit code-style checker for an open change'
