@@ -101,11 +101,11 @@
             (manager.logContains('timed out') || manager.logContains('TIMEOUT in ')) \
               ? manager.buildAborted() : false
 
-- job:
-    name: Gerrit-verifier-bazel
-    description: 'Gerrit build of open change with Bazel'
+- job-template:
+    name: Gerrit-verifier-{config}
+    description: 'Gerrit build of open change with {config}'
     defaults: verifier-defaults
-    node: bazel-debian
+    node: bazel-{config}
     properties:
       - inject:
           properties-content: >
@@ -124,6 +124,12 @@
             gerrit/bazel-bin/*api/*api.jar,
             gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
+
+- project:
+    name: Gerrit-verifier-bazel
+    config:
+      - bazel
+      - bazel-chrome80
 
 - job:
     name: Gerrit-codestyle
