@@ -66,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "6e5d7c71_c6818db6",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-06T10:43:09Z",
+      "side": 1,
+      "message": "Yes, but I needed to keep it outside for now, so that existing builds can still work.",
+      "parentUuid": "70385411_40b7a910",
+      "revId": "7233a337cef10826e4f7cadbc895773f349e4821",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "01cf354d_8684627c",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 11
@@ -86,6 +104,30 @@
       "revId": "7233a337cef10826e4f7cadbc895773f349e4821",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "36b5cfc7_360f813c",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-06T10:43:09Z",
+      "side": 1,
+      "message": "Because my next change would be having Java11 and Java14 verifications :-)",
+      "parentUuid": "01cf354d_8684627c",
+      "range": {
+        "startLine": 154,
+        "startChar": 4,
+        "endLine": 154,
+        "endChar": 10
+      },
+      "revId": "7233a337cef10826e4f7cadbc895773f349e4821",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
