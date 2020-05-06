@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9802826a_2508535d",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-05-06T07:15:47Z",
+      "side": 1,
+      "message": "Does not have to be done here, but we should change this to bazel-debian-chrome69. In the end the bazel-debian-chrome80 could become the default label bazel-debian, since this is more likely to change, while this container will be removed in a couple of versions.",
+      "range": {
+        "startLine": 88,
+        "startChar": 23,
+        "endLine": 88,
+        "endChar": 35
+      },
+      "revId": "7233a337cef10826e4f7cadbc895773f349e4821",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "70385411_40b7a910",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-05-06T07:15:47Z",
+      "side": 1,
+      "message": "I think we should move that to the Gerrit-verifier-bazel project and also use the config-variable to configure this job.",
+      "revId": "7233a337cef10826e4f7cadbc895773f349e4821",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01cf354d_8684627c",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-05-06T07:15:47Z",
+      "side": 1,
+      "message": "Why config? Why not explicitly name it chrome?",
+      "range": {
+        "startLine": 154,
+        "startChar": 4,
+        "endLine": 154,
+        "endChar": 10
+      },
+      "revId": "7233a337cef10826e4f7cadbc895773f349e4821",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
