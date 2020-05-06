@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "12133cf2_9b8d3379",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 11
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-06T10:10:39Z",
+      "side": 1,
+      "message": "I left it compatible on purpose, for allowing current builds to continue working as normal.\nIt must be done in a follow-up change once we\u0027ll have switched also the Jenkinsfiles on the stable branches.",
+      "parentUuid": "9802826a_2508535d",
+      "range": {
+        "startLine": 88,
+        "startChar": 23,
+        "endLine": 88,
+        "endChar": 35
+      },
+      "revId": "7233a337cef10826e4f7cadbc895773f349e4821",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "70385411_40b7a910",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 11
