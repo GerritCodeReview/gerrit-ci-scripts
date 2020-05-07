@@ -16,6 +16,24 @@
       "revId": "3f1400c6ac2412df7448a13af2e7bd1c3a2e1a6b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1de2bc4e_fde9df40",
+        "filename": "jenkins/gerrit-bazel-plugin-pull-replication.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-07T11:57:42Z",
+      "side": 1,
+      "message": "Good point, let me do it.",
+      "parentUuid": "1a14eb07_7e2f7cf3",
+      "revId": "3f1400c6ac2412df7448a13af2e7bd1c3a2e1a6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
