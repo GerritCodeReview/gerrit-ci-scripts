@@ -10,3 +10,4 @@
           branch:
             - master
             - stable-3.1
+      - 'plugin-{name}-verifier'
