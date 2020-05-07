@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a14eb07_7e2f7cf3",
+        "filename": "jenkins/gerrit-bazel-plugin-pull-replication.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-05-07T11:51:28Z",
+      "side": 1,
+      "message": "This would remove the old job and existing logs/artifacts as well as change the URL. Why not keep using the other build job as before?",
+      "revId": "3f1400c6ac2412df7448a13af2e7bd1c3a2e1a6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
