@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-chrome:stretch-80.0.3987.149
+FROM gerritforge/gerrit-ci-slave-chrome:stretch-$CHROME_VER
 
 # Node JS for PolyGerrit build
 
