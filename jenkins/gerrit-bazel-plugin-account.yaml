@@ -2,7 +2,7 @@
     name: 'plugin-account-bazel-{branch}'
     description: 'Plugin account {branch} branch build with Bazel'
     defaults: plugin-template-bazel
-    node: bazel-debian
+    node: bazel-chrome80
     class: plugins
     project-name: plugins%2Faccount
     scm:
