@@ -38,7 +38,7 @@
     name: 'plugin-its-{name}-bazel-{branch}'
     description: 'Plugin its-{name} {branch} branch build with Bazel'
     defaults: plugin-its-template
-    node: bazel-debian
+    node: bazel-chrome80
     builders:
       - shell: !include-raw: gerrit-bazel-build-its-plugin.sh
       - shell: !include-raw: gerrit-bazel-get-its-plugin-info.sh
@@ -52,7 +52,7 @@
     name: 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}'
     description: 'Plugin its-{name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-its-template
-    node: bazel-debian
+    node: bazel-chrome80
     scm:
       - git:
           remotes:

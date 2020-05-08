@@ -105,7 +105,7 @@
     name: Gerrit-verifier-bazel
     description: 'Gerrit build of open change with Bazel'
     defaults: verifier-defaults
-    node: bazel-debian
+    node: bazel-chrome69
     properties:
       - inject:
           properties-content: >
@@ -160,7 +160,7 @@
     name: Gerrit-codestyle
     description: 'Gerrit code-style checker for an open change'
     defaults: verifier-defaults
-    node: bazel-debian
+    node: bazel-chrome80
     builders:
       - merge-target-branch
       - fetch-all-submodules
