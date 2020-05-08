@@ -58,9 +58,16 @@
     node: bazel-debian
 
 - job-template:
-    name: 'Gerrit-bazel-java11-{branch}'
-    description: '{name} {branch} branch build with Bazel and Java 11'
+    name: 'Gerrit-bazel-{branch}-{config}'
+    description: '{name} {branch} branch build with Bazel on {config}'
     defaults: gerrit-bazel-defaults
+    node: bazel-{config}
+
+- job-template:
+    name: 'Gerrit-bazel-java11-{branch}-{config}'
+    description: '{name} {branch} branch build with Bazel and Java 11 on {config}'
+    defaults: gerrit-bazel-defaults
+    node: bazel-{config}
     properties:
       - build-discarder:
           days-to-keep: 20
@@ -78,23 +85,35 @@
             --java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
-    name: Gerrit-bazel
+    name: Gerrit-bazel-chrome69
+    config:
+      - chrome69
     branch:
-      - master
-      - stable-3.2
       - stable-3.1
       - stable-3.0
       - stable-2.16
     jobs:
-      - 'Gerrit-bazel-{branch}'
+      - 'Gerrit-bazel-{branch}-{config}'
 
 - project:
-    name: Gerrit-bazel-java11
+    name: Gerrit-bazel-chrome80
+    config:
+      - chrome80
     branch:
       - master
       - stable-3.2
     jobs:
-      - 'Gerrit-bazel-java11-{branch}'
+      - 'Gerrit-bazel-{branch}-{config}'
+
+- project:
+    name: Gerrit-bazel-java11-chrome80
+    config:
+      - chrome80
+    branch:
+      - master
+      - stable-3.2
+    jobs:
+      - 'Gerrit-bazel-java11-{branch}-{config}'
 
 - view:
     name: Gerrit
