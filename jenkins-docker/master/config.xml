@@ -38,7 +38,7 @@
       <templates>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
-          <labelString>bazel-chrome80</labelString>
+          <labelString>bazel-debian-chrome80</labelString>
           <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
             <sshConnector plugin="ssh-slaves@1.11">
               <port>22</port>
@@ -85,7 +85,7 @@
         </com.nirima.jenkins.plugins.docker.DockerTemplate>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
-          <labelString>bazel-chrome69</labelString>
+          <labelString>bazel-debian</labelString>
           <launcher class="com.nirima.jenkins.plugins.docker.launcher.DockerComputerSSHLauncher">
             <sshConnector plugin="ssh-slaves@1.11">
               <port>22</port>

@@ -46,7 +46,7 @@
     name: 'plugin-{name}-bazel-{branch}'
     description: 'Plugin {name} {branch} branch build with Bazel'
     defaults: plugin-template-bazel
-    node: bazel-chrome80
+    node: bazel-debian
     class: plugins
     project-name: plugins%2F{name}
     scm:
@@ -75,7 +75,7 @@
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
     class: plugins
-    node: bazel-chrome80
+    node: bazel-debian
     description: 'Plugin {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
     scm:
@@ -99,7 +99,7 @@
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
     class: modules
-    node: bazel-chrome80
+    node: bazel-debian
     description: 'Lib module {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
     scm:
@@ -123,7 +123,7 @@
 - job-template:
     name: 'module-{name}-bazel-{branch}'
     class: modules
-    node: bazel-chrome80
+    node: bazel-debian
     description: 'Lib module {name} {branch} branch Bazel build'
     defaults: plugin-template-bazel
     scm:

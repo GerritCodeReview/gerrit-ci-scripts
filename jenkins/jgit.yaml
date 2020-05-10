@@ -1,7 +1,7 @@
 - job:
     name: 'jgit-master'
     description: 'JGit Bazel build on master'
-    node: bazel-chrome80
+    node: bazel-debian
     wrappers:
       - timeout:
           timeout: 30
