@@ -1,0 +1,8 @@
+- project:
+    name: code-owners
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - master
