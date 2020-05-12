@@ -69,6 +69,7 @@ COPY number-executors.groovy $JENKINS_REF/init.groovy.d/
 COPY setCredentials.groovy $JENKINS_REF/init.groovy.d/
 COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
 COPY gerrit-ci-scripts-manual.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
+COPY org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml $JENKINS_REF/
 
 RUN echo "2.0" > $JENKINS_REF/jenkins.install.UpgradeWizard.state && \
     echo "2.0" > $JENKINS_REF/upgraded && \
