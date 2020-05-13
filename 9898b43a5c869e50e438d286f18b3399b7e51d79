@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d957056d_892628dc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-13T15:08:31Z",
+      "side": 1,
+      "message": "The better question is, why are we waisting valuable CI resources and network bandwidth for no-op changes? Gai Palkin has a change on checks plugins to carry-on the checks from previous patch set on trivial rebase.",
+      "revId": "9898b43a5c869e50e438d286f18b3399b7e51d79",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
