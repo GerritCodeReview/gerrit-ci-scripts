@@ -27,7 +27,6 @@ def call(Map parm = [:]) {
 
         if (hasChangeNumber()) {
             stage('Preparing'){
-                gerritReview labels: ['Verified': 0, 'Code-Style': 0]
                 collectBuildModes()
             }
         }
