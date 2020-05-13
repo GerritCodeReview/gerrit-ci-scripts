@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7eff8e15_07fca8a7",
+        "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-graphite.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-13T00:12:15Z",
+      "side": 1,
+      "message": "This branch actually exists on the plugin, can be moved to L12",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "b1ea6e313365983841d8a8e9a41e5adfb1a5dc56",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "443cfac7_a399b286",
+        "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-graphite.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-13T00:12:15Z",
+      "side": 1,
+      "message": "There is no stable-2.16 branch on the plugin",
+      "range": {
+        "startLine": 14,
+        "startChar": 11,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "b1ea6e313365983841d8a8e9a41e5adfb1a5dc56",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
