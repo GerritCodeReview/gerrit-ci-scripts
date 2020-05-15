@@ -1,6 +1,0 @@
-- project:
-    name: x-docs
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master
