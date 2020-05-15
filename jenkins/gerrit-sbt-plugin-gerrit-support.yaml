@@ -1,6 +1,0 @@
-- project:
-    name: gerrit-support
-    jobs:
-      - 'plugin-{name}-sbt-{branch}':
-          branch:
-            - master

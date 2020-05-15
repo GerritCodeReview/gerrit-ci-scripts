@@ -1,6 +1,0 @@
-- project:
-    name: storyboard
-    jobs:
-      - 'plugin-its-{name}-bazel-{branch}':
-          branch:
-            - master
