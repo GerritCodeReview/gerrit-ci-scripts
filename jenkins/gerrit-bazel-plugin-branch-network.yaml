@@ -1,9 +1,0 @@
-- project:
-    name: branch-network
-    jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
-            - master
-            - stable-3.2

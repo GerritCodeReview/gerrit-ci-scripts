@@ -1,9 +1,0 @@
-- project:
-    name: zuul-status
-    jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
-            - master
-            - stable-2.16

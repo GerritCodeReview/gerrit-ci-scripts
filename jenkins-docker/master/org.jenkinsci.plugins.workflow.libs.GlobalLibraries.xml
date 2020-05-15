@@ -30,7 +30,7 @@
           </traits>
         </scm>
       </retriever>
-      <defaultVersion>master</defaultVersion>
+      <defaultVersion>private</defaultVersion>
       <implicit>true</implicit>
       <allowVersionOverride>true</allowVersionOverride>
       <includeInChangesets>true</includeInChangesets>
