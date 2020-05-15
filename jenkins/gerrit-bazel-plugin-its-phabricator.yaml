@@ -1,6 +1,0 @@
-- project:
-    name: phabricator
-    jobs:
-      - 'plugin-its-{name}-bazel-{branch}':
-          branch:
-            - master
