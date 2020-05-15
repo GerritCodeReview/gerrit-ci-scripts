@@ -1,8 +1,0 @@
-- project:
-    name: reviewit
-    branch:
-      - master
-    jobs:
-      - 'app-{name}-{branch}'
-    commands: !include-raw-escape: gerrit-app-reviewit-build.sh
-    artifacts: 'app/build/outputs/apk/*.apk'

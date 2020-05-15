@@ -1,8 +1,0 @@
-- project:
-    name: checks
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master
-            - stable-3.2
-            - stable-3.1
