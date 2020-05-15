@@ -1,6 +1,0 @@
-- project:
-    name: reject-private-submit
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master
