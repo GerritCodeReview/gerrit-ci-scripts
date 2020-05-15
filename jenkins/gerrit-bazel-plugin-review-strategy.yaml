@@ -1,6 +1,0 @@
-- project:
-    name: review-strategy
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master
