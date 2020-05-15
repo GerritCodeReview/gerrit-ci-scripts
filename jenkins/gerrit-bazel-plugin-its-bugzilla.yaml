@@ -1,8 +1,0 @@
-- project:
-    name: bugzilla
-    jobs:
-      - 'plugin-its-{name}-bazel-{branch}':
-          branch:
-            - master
-            - stable-2.16
-          targets: 'plugins/its-bugzilla:its-bugzilla plugins/its-bugzilla:its_bugzilla_tests'
