@@ -7,7 +7,7 @@
           url: https://gerrit.googlesource.com/gerrit-ci-scripts
           credentials-id: gerrit.googlesource.com
           branches:
-            - '*/master'
+            - '*/private'
           skip-tag: true
     triggers:
       - pollscm:
@@ -24,7 +24,7 @@
           url: https://gerrit.googlesource.com/gerrit-ci-scripts
           credentials-id: gerrit.googlesource.com
           branches:
-            - '*/master'
+            - '*/private'
           skip-tag: true
     triggers:
       - timed: '@midnight'
@@ -83,21 +83,3 @@
           else
             jenkins-jobs update --delete-old jenkins
           fi
-
-- job:
-    name: gerrit-ci-scripts-pipeline
-    description: Multi-branch pipeline to validate Gerrit's Jenkins Job Builder Scripts
-    project-type: multibranch
-    node: master
-    scm:
-      - gerrit:
-          url: https://gerrit-review.googlesource.com/a/gerrit-ci-scripts
-          credentials-id: gerrit.googlesource.com
-          refspecs:
-            - '+refs/heads/*:refs/remotes/@{remote}/*'
-            - '+refs/changes/*:refs/remotes/@{remote}/*'
-          property-strategies:
-            all-branches:
-              - suppress-scm-triggering: false
-              - pipeline-branch-durability-override: max-survivability
-    periodic-folder-trigger: 10m
