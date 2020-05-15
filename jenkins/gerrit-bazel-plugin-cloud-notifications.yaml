@@ -1,6 +1,0 @@
-- project:
-    name: cloud-notifications
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master

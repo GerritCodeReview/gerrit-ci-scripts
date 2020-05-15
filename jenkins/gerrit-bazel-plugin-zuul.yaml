@@ -1,6 +1,0 @@
-- project:
-    name: zuul
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master
