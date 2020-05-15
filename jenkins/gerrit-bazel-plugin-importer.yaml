@@ -1,6 +1,0 @@
-- project:
-    name: importer
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master

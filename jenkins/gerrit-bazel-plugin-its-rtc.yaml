@@ -1,6 +1,0 @@
-- project:
-    name: rtc
-    jobs:
-      - 'plugin-its-{name}-bazel-{branch}':
-          branch:
-            - master

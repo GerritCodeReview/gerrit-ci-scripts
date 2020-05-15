@@ -1,6 +1,0 @@
-- project:
-    name: gitiles
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - stable-2.16
