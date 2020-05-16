@@ -33,6 +33,23 @@
       "revId": "473892102c88c7f5a7c04b93286c7e06a01328f5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "31464b66_c95ebee5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-16T01:47:19Z",
+      "side": 1,
+      "message": "Licenses have been checked as expected:\n[38 / 39] 1 / 1 tests; Testing //Documentation:check_licenses; 0s local, remote-cache\nTarget //Documentation:check_licenses up-to-date:\n  bazel-bin/Documentation/check_licenses\nINFO: Elapsed time: 18.113s, Critical Path: 6.67s\nINFO: 9 processes: 8 remote cache hit, 1 local.\nINFO: Build completed successfully, 33 total actions\nTest cases: finished with 1 passing and 0 failing out of 1 test cases",
+      "revId": "473892102c88c7f5a7c04b93286c7e06a01328f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
