@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3581caa4_c4337164",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-16T01:30:57Z",
+      "side": 1,
+      "message": "Testing it right now with a dummy change on PolyGerrit: it should trigger the Documentation/license check as well.",
+      "revId": "473892102c88c7f5a7c04b93286c7e06a01328f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
