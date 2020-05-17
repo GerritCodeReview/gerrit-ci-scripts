@@ -40,8 +40,11 @@ then
     bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
   fi
 
-  echo 'Running license verification...'
-  bazelisk test $BAZEL_OPTS //Documentation:check_licenses
+  if bazel query 'deps(//Documentation:check_licenses)' > /devnull 2> /dev/null
+  then
+    echo 'Running Documentation license verification...'
+    bazelisk test $BAZEL_OPTS //Documentation:check_licenses
+  fi
 
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then
