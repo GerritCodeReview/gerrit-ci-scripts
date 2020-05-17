@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "21d2c1c6_cc5e772a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-17T21:27:56Z",
+      "side": 1,
+      "message": "@DavidO is this the best way to check if a Bazel target exists?",
+      "revId": "cfad0accf8824d85f9efe78c04a52e428797049a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
