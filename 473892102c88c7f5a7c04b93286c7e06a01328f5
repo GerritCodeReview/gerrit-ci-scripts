@@ -50,6 +50,23 @@
       "revId": "473892102c88c7f5a7c04b93286c7e06a01328f5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c2cd5882_3595256f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-05-17T03:24:13Z",
+      "side": 1,
+      "message": "This breaks validation on stable-2.16 because the //Documentation:check_licenses target does not exist there:\n\n  ERROR: no such target \u0027//Documentation:check_licenses\u0027: target \u0027check_licenses\u0027 not declared in package \u0027Documentation\u0027 defined by /home/jenkins/workspace/Gerrit-verifier bazel/gerrit/Documentation/BUILD",
+      "revId": "473892102c88c7f5a7c04b93286c7e06a01328f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
