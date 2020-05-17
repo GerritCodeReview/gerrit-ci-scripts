@@ -16,6 +16,24 @@
       "revId": "cfad0accf8824d85f9efe78c04a52e428797049a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84363966_bafd84b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-17T21:54:27Z",
+      "side": 1,
+      "message": "Why test at all? Just run:\n\n  $ bazelisk test Documentation/...\n\non master I see this:\n\n  INFO: Build completed successfully, 33 total actions\n  //Documentation:check_licenses        PASSED in 0.1s\n\nand on stable-2.16 I see this:\n\n  $ bazelisk test Documentation/...\n  INFO: Found 0 test targets...\n  INFO: Elapsed time: 4.086s, Critical Path: 0.24s\n  INFO: 0 processes.\n\nMoreover, is on stable-3.5 someone would add more test targets like:\n\n* Documentation:check_javascript_licenses \n* Documentation:check_typescript_licenses\n\nYou would miss them or would require another adaptation for the CI. So that the best check, is the check that does not exst.",
+      "parentUuid": "21d2c1c6_cc5e772a",
+      "revId": "cfad0accf8824d85f9efe78c04a52e428797049a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
