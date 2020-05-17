@@ -34,6 +34,24 @@
       "revId": "cfad0accf8824d85f9efe78c04a52e428797049a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7f5868b0_fe045cf3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-17T22:00:58Z",
+      "side": 1,
+      "message": "Thanks, DavidO. I\u0027ll change it according to your suggestion :-)",
+      "parentUuid": "84363966_bafd84b2",
+      "revId": "cfad0accf8824d85f9efe78c04a52e428797049a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
