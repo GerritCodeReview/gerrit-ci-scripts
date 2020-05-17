@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8bab15f0_b93df369",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-17T23:32:08Z",
+      "side": 1,
+      "message": "This isn\u0027t working, as it still fails on stable-2.16:\nERROR: No test targets were found, yet testing was requested",
+      "revId": "8b5e72ab6b4c423d4893d3e3381d821f8b710b61",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
