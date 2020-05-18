@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "779a2584_bd7aa90e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-05-18T12:22:02Z",
+      "side": 1,
+      "message": "Hasn\u0027t it been working for ages?  What caused it to break now?\n",
+      "revId": "293898c984ea139079fc9a310d84d9873a5e8991",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
