@@ -16,6 +16,24 @@
       "revId": "293898c984ea139079fc9a310d84d9873a5e8991",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dd7f7e3b_5e33915a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-18T14:10:05Z",
+      "side": 1,
+      "message": "One of the recent git upgrades broke the conditional: outside of the \u0027git submodule foreach\u0027 worked but inside broke.\n\nThe if/then/fi always works.",
+      "parentUuid": "779a2584_bd7aa90e",
+      "revId": "293898c984ea139079fc9a310d84d9873a5e8991",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
