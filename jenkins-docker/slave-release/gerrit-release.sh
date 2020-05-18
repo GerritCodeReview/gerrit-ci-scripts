@@ -87,7 +87,8 @@ gsutil cp gerrit-$version.war gs://gerrit-releases/gerrit-$version.war
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
 pushd Documentation
-gsutil cp -r . gs://gerrit-documentation/Documentation/$version
+version_no_rc=$(echo "%version" | cut -d '-' -f 1)
+gsutil cp -r . gs://gerrit-documentation/Documentation/$version_no_rc
 popd
 
 echo "Setting next version tag to $nextversion ..."
