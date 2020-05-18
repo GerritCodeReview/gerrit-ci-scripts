@@ -40,7 +40,7 @@ git commit -a -m "Set version to $version"
 git push origin HEAD:refs/for/$branch
 
 git tag -f -s -m "v$version" "v$version"
-git submodule foreach '[ "$path" == "modules/jgit" ] || git tag -f -s -m "v$version" "v$version"'
+git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
 
 bazelisk build release Documentation:searchfree
 ./tools/maven/api.sh install
