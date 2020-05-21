@@ -12,17 +12,24 @@ then
 fi
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
-TEST_TARGET=$(grep -2 junit_tests plugins/{name}/BUILD | grep -o 'name = "[^"]*"' | cut -d '"' -f 2)
-
 . set-java.sh 8
 
 java -fullversion
 bazelisk version
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
-if [ "$TEST_TARGET" != "" ]
+echo 'Running tests...'
+set +e
+bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST plugins/{name}/...
+TEST_RES=$?
+set -e
+if [ $TEST_RES -eq 4 ]
 then
-    bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST plugins/{name}:$TEST_TARGET
+    echo 'No tests found for this plugin (tell this to the plugin maintainers?).'
+elif [ ! $TEST_RES -eq 0 ]
+then
+    echo 'Tests failed'
+    exit 1
 fi
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
