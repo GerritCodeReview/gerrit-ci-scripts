@@ -17,22 +17,30 @@ then
 fi
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
-BUILD_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep -v test)
-
 java -fullversion
 bazelisk version
-bazelisk build $BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_TARGETS
+bazelisk build $BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
-if TEST_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep test)
-then
-    BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
+BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_output errors \
                    --test_summary detailed --flaky_test_attempts 3 \
                    --test_verbose_timeout_warnings --build_tests_only \
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
-    bazelisk test $BAZEL_OPTS $TEST_TARGETS
+
+echo 'Running tests...'
+set +e
+bazelisk test $BAZEL_OPTS plugins/{name}/...
+TEST_RES=$?
+set -e
+if [ $TEST_RES -eq 4 ]
+then
+    echo 'No tests found for this plugin (tell this to the plugin maintainers?).'
+elif [ ! $TEST_RES -eq 0 ]
+then
+    echo 'Tests failed'
+    exit 1
 fi
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
