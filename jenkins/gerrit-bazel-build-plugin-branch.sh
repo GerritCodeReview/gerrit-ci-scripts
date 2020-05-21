@@ -16,24 +16,17 @@ then
   cp -f plugins/{name}/external_plugin_deps.bzl plugins/
 fi
 
-TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
-BUILD_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep -v test)
-
 java -fullversion
 bazelisk version
 bazelisk build $BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone $BUILD_TARGETS
-
-if TEST_TARGETS=$(echo "$TARGETS" | tr ' ' '\n' | grep test)
-then
-    BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
+BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
                    --test_output errors \
                    --test_summary detailed --flaky_test_attempts 3 \
                    --test_verbose_timeout_warnings --build_tests_only \
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
-    bazelisk test $BAZEL_OPTS $TEST_TARGETS
-fi
+bazelisk test $BAZEL_OPTS plugins/{name}/...
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
 do
