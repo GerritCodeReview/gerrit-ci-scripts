@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8c6864f3_efb0aefc",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-21T17:26:01Z",
+      "side": 1,
+      "message": "The code in bazel is here: [1]. The return code 4 is hard coded and even documented in their documentation: [2]:\n\n  Return codes for commands bazel build, bazel test:\n  1 - Build failed.\n  3 - Build OK, but some tests failed or timed out.\n  4 - Build successful but no tests were found even though testing was requested.\n\n* [1] https://github.com/bazelbuild/bazel/blob/master/src/main/java/com/google/devtools/build/lib/runtime/commands/TestCommand.java#L165-L187\n* [2] https://docs.bazel.build/versions/master/guide.html#what-exit-code-will-i-get",
+      "range": {
+        "startLine": 48,
+        "startChar": 9,
+        "endLine": 48,
+        "endChar": 24
+      },
+      "revId": "7a701f41769a55fe8288f4f8e55d2a025bb6642b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
