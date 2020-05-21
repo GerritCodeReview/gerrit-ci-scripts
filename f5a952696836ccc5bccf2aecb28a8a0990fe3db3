@@ -46,6 +46,30 @@
       "revId": "f5a952696836ccc5bccf2aecb28a8a0990fe3db3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e5fc3f34_a89493e7",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-21T15:49:49Z",
+      "side": 1,
+      "message": "\u003e I have found this issue: [1] and added a comment there. My tests show, that on stable-2.16, where there is no test in Documentation package:\n\u003e \n\u003e   $ davido@wizball:~/projects/gerrit (stable-2.16 %\u003d)$ b10 test Documentation/...\n\u003e INFO: Invocation ID: bb4c98c4-60fe-4a8e-9462-1914e4e6c536\n\u003e DEBUG: /home/davido/.cache/bazel/_bazel_davido/27a001f4182820ef315d8d2d4f1edafe/external/bazel_toolchains/rules/version_check.bzl:45:14: \n\u003e Current running Bazel is not a release version and one was not defined explicitly in rbe_autoconfig target. Falling back to \u00270.25.2\u0027\n\u003e INFO: Analyzed 0 targets (1 packages loaded, 0 targets configured).\n\u003e INFO: Found 0 test targets...\n\u003e INFO: Elapsed time: 1.042s, Critical Path: 0.24s\n\u003e INFO: 0 processes.\n\u003e INFO: Build completed successfully, 1 total action\n\u003e INFO: Build completed successfully, 1 total action\n\u003e \n\u003e   $ echo $?\n\u003e   4\n\u003e \n\u003e Should we check for that return code explicitly?\n\nYep, we should. It\u0027s a bit annoying though, as it requires extra boilerplate :-(",
+      "parentUuid": "9802809d_ac7496b8",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 69
+      },
+      "revId": "f5a952696836ccc5bccf2aecb28a8a0990fe3db3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
