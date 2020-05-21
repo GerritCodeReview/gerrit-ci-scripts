@@ -22,6 +22,30 @@
       "revId": "f5a952696836ccc5bccf2aecb28a8a0990fe3db3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9802809d_ac7496b8",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-21T15:46:55Z",
+      "side": 1,
+      "message": "I have found this issue: [1] and added a comment there. My tests show, that on stable-2.16, where there is no test in Documentation package:\n\n  $ davido@wizball:~/projects/gerrit (stable-2.16 %\u003d)$ b10 test Documentation/...\nINFO: Invocation ID: bb4c98c4-60fe-4a8e-9462-1914e4e6c536\nDEBUG: /home/davido/.cache/bazel/_bazel_davido/27a001f4182820ef315d8d2d4f1edafe/external/bazel_toolchains/rules/version_check.bzl:45:14: \nCurrent running Bazel is not a release version and one was not defined explicitly in rbe_autoconfig target. Falling back to \u00270.25.2\u0027\nINFO: Analyzed 0 targets (1 packages loaded, 0 targets configured).\nINFO: Found 0 test targets...\nINFO: Elapsed time: 1.042s, Critical Path: 0.24s\nINFO: 0 processes.\nINFO: Build completed successfully, 1 total action\nINFO: Build completed successfully, 1 total action\n\n  $ echo $?\n  4\n\nShould we check for that return code explicitly?\n\n* [1] https://github.com/bazelbuild/bazel/issues/7291",
+      "parentUuid": "4b32a24b_ab3e29f9",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 69
+      },
+      "revId": "f5a952696836ccc5bccf2aecb28a8a0990fe3db3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
