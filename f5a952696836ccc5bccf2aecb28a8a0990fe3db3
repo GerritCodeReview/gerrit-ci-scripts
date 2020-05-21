@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b32a24b_ab3e29f9",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-21T12:27:35Z",
+      "side": 1,
+      "message": "We are missing the conditional though: bazelisk test would actually fail with an error code if there are no tests.\n\nWe should apply the same logic used in:\nhttps://github.com/GerritCodeReview/gerrit-ci-scripts/blob/7a701f41769a55fe8288f4f8e55d2a025bb6642b/jenkins/gerrit-bazel-verifier-test.sh#L44",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 69
+      },
+      "revId": "f5a952696836ccc5bccf2aecb28a8a0990fe3db3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
