@@ -10,7 +10,13 @@ git read-tree -u --prefix=plugins/its-{name} plugin/{branch}
 git fetch --tags origin
 
 # Try first the Gerrit-specific branch of its-base and then fallback to the one of the plugin
-git read-tree -u --prefix=plugins/its-base base/{gerrit-branch} || git read-tree -u --prefix=plugins/its-base base/{branch}
+if git read-tree -u --prefix=plugins/its-base base/{gerrit-branch}
+then
+  BASE_BRANCH="{gerrit-branch}"
+else
+  git read-tree -u --prefix=plugins/its-base base/{branch}
+  BASE_BRANCH="{branch}"
+fi
 
 rm -Rf bazel-bin
 
@@ -35,7 +41,7 @@ fi
 
 for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)
 do
-    PLUGIN_VERSION=$(git describe --always plugin/{branch})
+    PLUGIN_VERSION="{gerrit-branch}-$(git describe --always plugin/{branch})/$(git describe --always base/"$BASE_BRANCH")"
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=bazel-bin/plugins/its-{name}/$(basename $JAR)

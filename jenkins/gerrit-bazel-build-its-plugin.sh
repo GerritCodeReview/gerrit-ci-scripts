@@ -31,7 +31,7 @@ fi
 
 for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)
 do
-    PLUGIN_VERSION=$(git describe --always plugin/{branch})
+    PLUGIN_VERSION="{branch}-$(git describe --always plugin/{branch})/$(git describe --always base/{branch})"
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
     jar ufm $JAR MANIFEST.MF && rm MANIFEST.MF
     DEST_JAR=bazel-bin/plugins/its-{name}/$(basename $JAR)
