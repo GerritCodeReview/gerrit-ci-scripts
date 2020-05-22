@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e6ce718_df6a4736",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-05-22T17:06:03Z",
+      "side": 1,
+      "message": "Related to my other comment: here, if these plugin tests end up being present and failing, then these scripts are no longer exiting with a code 1.",
+      "range": {
+        "startLine": 31,
+        "startChar": 79,
+        "endLine": 31,
+        "endChar": 98
+      },
+      "revId": "bef0d9975594d221de15df2b1b0426e25ef672be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
