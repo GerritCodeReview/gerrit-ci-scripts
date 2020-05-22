@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f47647fa_762eeeea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-22T13:47:36Z",
+      "side": 1,
+      "message": "See my comment on the issue: this plugin looks like remained orphan, there is no group of maintainers for it :-(\n\nBut yes, we should first create stable branches and then make builds on it.\n\nStill to be clarified who\u0027s the owner and create the group.",
+      "parentUuid": "07cd01b0_2b53de6d",
+      "range": {
+        "startLine": 11,
+        "startChar": 126,
+        "endLine": 11,
+        "endChar": 145
+      },
+      "revId": "75e5875bc9e2fc1c727c337d3ce3baa3d014be6c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3e54c84e_aae6bd93",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
