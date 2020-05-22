@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0c395931_de38226e",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-22T10:53:53Z",
+      "side": 0,
+      "message": "It isn\u0027t unused at all and, actually, removing it have broken the build. I\u0027ve fixed that already.",
+      "parentUuid": "679a2b6a_51e612c4",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 58
+      },
+      "revId": "7a701f41769a55fe8288f4f8e55d2a025bb6642b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4197a3ff_6a200b19",
         "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
         "patchSetId": 8
@@ -45,6 +69,30 @@
       "revId": "7a701f41769a55fe8288f4f8e55d2a025bb6642b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d63e1c4f_93354ac6",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-22T10:53:53Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "4197a3ff_6a200b19",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 58
+      },
+      "revId": "7a701f41769a55fe8288f4f8e55d2a025bb6642b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
