@@ -1,11 +1,6 @@
 - project:
     name: project-download-commands
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-          gerrit-branch:
-            - master
-            - stable-3.2
-            - stable-3.1
-            - stable-3.0
