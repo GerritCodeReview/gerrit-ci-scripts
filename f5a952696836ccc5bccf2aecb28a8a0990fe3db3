@@ -94,6 +94,30 @@
       "revId": "f5a952696836ccc5bccf2aecb28a8a0990fe3db3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "57b2d0b2_ea70f566",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-22T08:47:33Z",
+      "side": 1,
+      "message": "\u003e It\u0027s a bit annoying though, as it requires extra boilerplate :-(\n\nI wrote this feature request: [1]. If and when it is implemented we can remove the boilerplate again.\n\nhttps://github.com/bazelbuild/bazel/issues/11465",
+      "parentUuid": "0f8bcd6c_30b4f5aa",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 69
+      },
+      "revId": "f5a952696836ccc5bccf2aecb28a8a0990fe3db3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
