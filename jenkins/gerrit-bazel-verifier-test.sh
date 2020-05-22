@@ -41,15 +41,7 @@ then
   fi
 
   echo 'Running Documentation tests...'
-  set +e
-  bazelisk test $BAZEL_OPTS Documentation/...
-  TEST_RES=$?
-  set -e
-  if [ ! $TEST_RES -eq 4 ] && [ ! $TEST_RES -eq 0 ]
-  then
-    echo 'Documentation tests failed'
-    exit 1
-  fi
+  bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then

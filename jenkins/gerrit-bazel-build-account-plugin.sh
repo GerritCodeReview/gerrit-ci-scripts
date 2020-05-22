@@ -28,20 +28,7 @@ popd
 java -fullversion
 bazelisk version
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
-
-echo 'Running tests...'
-set +e
-bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST plugins/account/...
-TEST_RES=$?
-set -e
-if [ $TEST_RES -eq 4 ]
-then
-    echo 'No tests found for account plugin (tell this to the plugin maintainers?).'
-elif [ ! $TEST_RES -eq 0 ]
-then
-    echo 'Tests failed'
-    exit 1
-fi
+bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/account/...
 
 for JAR in $(find bazel-bin/plugins/account -name account*.jar)
 do
