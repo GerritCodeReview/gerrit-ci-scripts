@@ -17,20 +17,7 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 java -fullversion
 bazelisk version
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
-
-echo 'Running tests...'
-set +e
-bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST plugins/{name}/...
-TEST_RES=$?
-set -e
-if [ $TEST_RES -eq 4 ]
-then
-    echo 'No tests found for this plugin (tell this to the plugin maintainers?).'
-elif [ ! $TEST_RES -eq 0 ]
-then
-    echo 'Tests failed'
-    exit 1
-fi
+bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
 do

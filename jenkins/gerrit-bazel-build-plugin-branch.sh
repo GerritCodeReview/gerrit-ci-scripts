@@ -28,20 +28,7 @@ BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalon
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
-
-echo 'Running tests...'
-set +e
-bazelisk test $BAZEL_OPTS plugins/{name}/...
-TEST_RES=$?
-set -e
-if [ $TEST_RES -eq 4 ]
-then
-    echo 'No tests found for this plugin (tell this to the plugin maintainers?).'
-elif [ ! $TEST_RES -eq 0 ]
-then
-    echo 'Tests failed'
-    exit 1
-fi
+bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test plugins/{name}/...
 
 for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
 do
