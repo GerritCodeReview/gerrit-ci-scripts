@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a7970c9_88de19e6",
+        "filename": "jenkins/gerrit-bazel-plugin-its-phabricator.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-24T10:43:27Z",
+      "side": 1,
+      "message": "This is the only green branch: can you restrict this change to this branch only?\nAlternatively, you can fix it on the other branches and keep this change as-is.",
+      "range": {
+        "startLine": 8,
+        "startChar": 12,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "ecfbb82bcd33bdaa3c5e5198bbdc378ee2e3826c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
