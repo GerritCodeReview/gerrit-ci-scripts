@@ -22,6 +22,30 @@
       "revId": "bef0d9975594d221de15df2b1b0426e25ef672be",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63cadade_fc65f57a",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-25T07:28:23Z",
+      "side": 1,
+      "message": "How that? What is hapenning is:\n\n* 1. `bazel test plugins/account/...` matches the target pattern against the existing rule in that package, in the case above it would scan all Bazel packages in account plugin and try to find any existing test rules.\n* 2. Say we have two tests: account_1 and account_2. If one of those tests fail, the return code would be 1, see the list of the return code from `test` command: [1].\n* 3. Say the plugin foo does not have any test rules. In that case the test command would return 4, unless we specify yet another rule //tools/bzl:always_pass_test on the command line that would always succeed and that\u0027s why we would get 0 instead of 4 in the \"no tests found\" use case.\n\nI think what you are missing is the fact, the the Bazel return code is a combined return code for both targets: //tools/bzl:always_pass_test + test plugins/account/... . If any of the would fail, then the return code would be still: 1. Only if all of them succeed, the return code would be 0. Given that //tools/bzl:always_pass_test is always present and will always succeed, we would never ever get 4: not test found. That\u0027s why we don\u0027t need to check for that return code any more.\n\nLet me know, if you think the commit message could be improved with the above information.\n\n[1] https://docs.bazel.build/versions/master/guide.html#what-exit-code-will-i-get",
+      "parentUuid": "5e6ce718_df6a4736",
+      "range": {
+        "startLine": 31,
+        "startChar": 79,
+        "endLine": 31,
+        "endChar": 98
+      },
+      "revId": "bef0d9975594d221de15df2b1b0426e25ef672be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
