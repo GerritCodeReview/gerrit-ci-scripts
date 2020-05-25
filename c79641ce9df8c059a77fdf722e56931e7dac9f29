@@ -46,6 +46,30 @@
       "revId": "c79641ce9df8c059a77fdf722e56931e7dac9f29",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "83e9a9af_b4b69f62",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-05-25T14:18:46Z",
+      "side": 0,
+      "message": "Yes, so CI is to fail the job if either test fails (with code 1). That\u0027s what I meant by \"negative\" above but we agree.\n\nNow, how is CI failing the job in such a test failure case, exactly? I\u0027m asking because this change removes the explicit script code above, which was doing an exit-1 upon TEST_RES -eq 1, which in turn was the likely mechanism allowing CI to fail the job; isn\u0027t it?",
+      "parentUuid": "6871acc7_0743ae00",
+      "range": {
+        "startLine": 40,
+        "startChar": 2,
+        "endLine": 44,
+        "endChar": 2
+      },
+      "revId": "c79641ce9df8c059a77fdf722e56931e7dac9f29",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
