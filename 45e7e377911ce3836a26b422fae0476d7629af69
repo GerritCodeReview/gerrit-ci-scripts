@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ca81bfde_937688de",
+        "filename": "jenkins/gerrit-bazel-plugin-project-download-commands.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-26T09:03:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bdb4818b_a7db3106",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 53
+      },
+      "revId": "45e7e377911ce3836a26b422fae0476d7629af69",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "af7c714d_941b49e5",
         "filename": "jenkins/gerrit-bazel-plugin-project-download-commands.yaml",
         "patchSetId": 2
@@ -69,6 +93,30 @@
       "revId": "45e7e377911ce3836a26b422fae0476d7629af69",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "897b58a2_0e786932",
+        "filename": "jenkins/gerrit-bazel-plugin-project-download-commands.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-26T09:03:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c7d8ccee_c8b56bdc",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "45e7e377911ce3836a26b422fae0476d7629af69",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
