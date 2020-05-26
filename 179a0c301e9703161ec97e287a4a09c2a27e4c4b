@@ -16,6 +16,24 @@
       "revId": "179a0c301e9703161ec97e287a4a09c2a27e4c4b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3cd1f3e4_644c4865",
+        "filename": "jenkins/gerrit-plugin-saml.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-26T00:08:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1f3ed37d_e15090a5",
+      "revId": "179a0c301e9703161ec97e287a4a09c2a27e4c4b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
