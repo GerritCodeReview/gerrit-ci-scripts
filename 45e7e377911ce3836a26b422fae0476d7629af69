@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bdb4818b_a7db3106",
+        "filename": "jenkins/gerrit-bazel-plugin-project-download-commands.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-26T08:50:18Z",
+      "side": 1,
+      "message": "This isn\u0027t needed",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 53
+      },
+      "revId": "45e7e377911ce3836a26b422fae0476d7629af69",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af7c714d_941b49e5",
+        "filename": "jenkins/gerrit-bazel-plugin-project-download-commands.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-26T08:50:18Z",
+      "side": 1,
+      "message": "These should go, as the plugin has its own stable-3.1 branch now",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "45e7e377911ce3836a26b422fae0476d7629af69",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
