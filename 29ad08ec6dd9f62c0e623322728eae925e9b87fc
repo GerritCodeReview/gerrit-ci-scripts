@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6883feb_ece8128e",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-26T16:21:32Z",
+      "side": 1,
+      "message": "Unrelated to this change: the subsequent run of the bazelisk test is clearing out the test output log (created at L40 by running the PolyGerrit tests), which is bad because in case of a PolyGerrit failure we can\u0027t cat the output anymore.\n\nSee the problem at: https://gerrit-ci.gerritforge.com/job/Gerrit-verifier-bazel/86519/console",
+      "revId": "29ad08ec6dd9f62c0e623322728eae925e9b87fc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
