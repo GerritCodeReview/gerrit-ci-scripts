@@ -70,6 +70,30 @@
       "revId": "c79641ce9df8c059a77fdf722e56931e7dac9f29",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb6010cf_57101e15",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-26T07:59:41Z",
+      "side": 0,
+      "message": "\u003e Now, how is CI failing the job in such a test failure case, exactly?\n\nCI doesn\u0027t fail the script. Bash does it. The line you are missing is the line 1 in this file:\n\n  #!/bin/bash -e\n\nSee very good explanation in this SO answer: [1], what this line is doing. How it worked in the past? Before revisting of plugin tests detection change: [2] we searched manually for the test targets, and only ran them iff test targets exist:\n\n  TEST_TARGET\u003d$(grep -2 junit_tests plugins/account/BUILD | grep -o \u0027name \u003d \"[^\"]*\"\u0027 | cut -d \u0027\"\u0027 -f 2)\n  if [ \"$TEST_TARGET\" !\u003d \"\" ]\n  then\n    bazelisk test --test_env DOCKER_HOST\u003d$DOCKER_HOST plugins/account:$TEST_TARGET\n  fi\n\nThe above command will always return exactly two return codes: 0 or 1. In case of 0 all is fine, next command is executed, in case of 1 \"bash -e\" will immediately fail the entire script and will return back and give the control to the CI.\n\nSince: [2], we don\u0027t grep or bazel query any more for test targets but just unconditionally run:\n\n  bazelisk test --test_env DOCKER_HOST\u003d$DOCKER_HOST plugins/account/...\n\nThat where the problem from: [3] shows up: there is no way to ask Bazel to avoid return code 4 in no tests found case. But, exit code 4 is failure with \"bash -e\" options and that why the entire job would fail, if there is no tests. But that\u0027s not what we want here. We want to treat \"no tests found\" use case as success.\n\nThat why we have to disable \"bash -e\" instruction from line 1:\n\n  set +e\n\nIn that case, bash would not fail the script with non 0 command outcome (1 or 4). Now we have to check on our own and exit ourself with exit 1.\n\nWith this change: [4] in gerrit core, that this change depends on, we have introduced a dummy test that would always succeed and calling it together with the (possibly) existing tests in plugin package would eliminate exit code 4 that is poisoning the entire CI job outcome. Now, as before: [2], we would only get 0: OK, 1: some test failed, in which case we can avoid the whole boilerplate altogether and just run one single ccmmand (given that #!/bin/bash -e is still in place on line 1):\n\n  bazelisk test --test_env DOCKER_HOST\u003d$DOCKER_HOST //tools/bzl:always_pass_test plugins/account/...\n\nLet me know, if I can improve the commit message somehow to make the change more obvious.\n\n[1] https://stackoverflow.com/questions/2870992/automatic-exit-from-bash-shell-script-on-error/2871034#2871034\n[2] https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/268512\n[3] https://github.com/bazelbuild/bazel/issues/11465\n[4] https://gerrit-review.googlesource.com/c/gerrit/+/268641",
+      "parentUuid": "83e9a9af_b4b69f62",
+      "range": {
+        "startLine": 40,
+        "startChar": 2,
+        "endLine": 44,
+        "endChar": 2
+      },
+      "revId": "c79641ce9df8c059a77fdf722e56931e7dac9f29",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
