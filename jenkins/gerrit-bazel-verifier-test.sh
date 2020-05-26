@@ -40,8 +40,10 @@ then
     bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
   fi
 
-  echo 'Running Documentation tests...'
-  bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
+  if [ ! -f ~/polygerrit-failed ]
+    echo 'Running Documentation tests...'
+    bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
+  fi
 
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then
