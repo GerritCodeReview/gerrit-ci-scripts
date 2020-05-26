@@ -16,6 +16,24 @@
       "revId": "29ad08ec6dd9f62c0e623322728eae925e9b87fc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c2546b0_619f7715",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-26T16:22:53Z",
+      "side": 1,
+      "message": "Will address in a follow-up change.",
+      "parentUuid": "d6883feb_ece8128e",
+      "revId": "29ad08ec6dd9f62c0e623322728eae925e9b87fc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
