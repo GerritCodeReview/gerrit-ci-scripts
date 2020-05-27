@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8aa5741c_c15666a0",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-27T04:50:38Z",
+      "side": 1,
+      "message": "Why?",
+      "range": {
+        "startLine": 40,
+        "startChar": 41,
+        "endLine": 40,
+        "endChar": 69
+      },
+      "revId": "edc10ca8886bf45d51fd05aa2e1ac12a8731ef21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cd165536_e782470f",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-27T04:50:38Z",
+      "side": 1,
+      "message": "What for? The above script ./polygerrit-ui/app/run_test.sh  already provides the correct exit code:\n\n  ${bazel_bin} test \\\n      --test_env\u003d\"HOME\u003d$HOME\" \\\n      --test_env\u003d\"WCT_ARGS\u003d${WCT_ARGS}\" \\\n      --test_env\u003d\"DISPLAY\u003d${DISPLAY}\" \\\n      --test_env\u003d\"WCT_HEADLESS_MODE\u003d${WCT_HEADLESS_MODE}\" \\\n      \"$@\" \\\n      //polygerrit-ui/app:wct_test \\\n      //polygerrit-ui:karma_test\n\nJust replace the cline above:\n\n    bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed\n\nwith:\n\n  ./polygerrit-ui/app/run_test.sh\n\nDone.",
+      "range": {
+        "startLine": 43,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 4
+      },
+      "revId": "edc10ca8886bf45d51fd05aa2e1ac12a8731ef21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a7326401_39acae03",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-05-27T04:50:38Z",
+      "side": 1,
+      "message": "Here and in all future addition to that file you would have to add (totally unneeded, see my previous comments):\n\n  [ ! -f ~/polygerrit-failed ] \u0026\u0026 ....",
+      "range": {
+        "startLine": 49,
+        "startChar": 2,
+        "endLine": 55,
+        "endChar": 4
+      },
+      "revId": "edc10ca8886bf45d51fd05aa2e1ac12a8731ef21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
