@@ -22,6 +22,30 @@
       "revId": "ecfbb82bcd33bdaa3c5e5198bbdc378ee2e3826c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "55d6f11e_1741e7aa",
+        "filename": "jenkins/gerrit-bazel-plugin-its-phabricator.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1012155
+      },
+      "writtenOn": "2020-05-31T18:54:18Z",
+      "side": 1,
+      "message": "Addressed in PS3",
+      "parentUuid": "1a7970c9_88de19e6",
+      "range": {
+        "startLine": 8,
+        "startChar": 12,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "ecfbb82bcd33bdaa3c5e5198bbdc378ee2e3826c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
