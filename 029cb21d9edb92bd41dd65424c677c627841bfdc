@@ -34,6 +34,24 @@
       "revId": "029cb21d9edb92bd41dd65424c677c627841bfdc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f2dadf40_5ffc2ec9",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-03T15:02:05Z",
+      "side": 1,
+      "message": "Fixed with Change-Id: Ie461fa16e3eeed",
+      "parentUuid": "c27e4808_a3744e33",
+      "revId": "029cb21d9edb92bd41dd65424c677c627841bfdc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
