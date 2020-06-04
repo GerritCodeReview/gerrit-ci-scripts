@@ -11,7 +11,6 @@ then
 fi
 
 TARGETS=$(echo "plugins/account:account" | sed -e 's/account/account/g')
-TEST_TARGET=$(grep -2 junit_tests plugins/account/BUILD | grep -o 'name = "[^"]*"' | cut -d '"' -f 2)
 
 . set-java.sh 8
 
@@ -29,11 +28,7 @@ popd
 java -fullversion
 bazelisk version
 bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
-
-if [ "$TEST_TARGET" != "" ]
-then
-    bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST plugins/account:$TEST_TARGET
-fi
+bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/account/...
 
 for JAR in $(find bazel-bin/plugins/account -name account*.jar)
 do

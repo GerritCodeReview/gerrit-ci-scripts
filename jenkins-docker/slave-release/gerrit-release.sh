@@ -40,7 +40,7 @@ git commit -a -m "Set version to $version"
 git push origin HEAD:refs/for/$branch
 
 git tag -f -s -m "v$version" "v$version"
-git submodule foreach '[ "$path" == "modules/jgit" ] || git tag -f -s -m "v$version" "v$version"'
+git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
 
 bazelisk build release Documentation:searchfree
 ./tools/maven/api.sh install
@@ -87,7 +87,8 @@ gsutil cp gerrit-$version.war gs://gerrit-releases/gerrit-$version.war
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
 pushd Documentation
-gsutil cp -r . gs://gerrit-documentation/Documentation/$version
+version_no_rc=$(echo "%version" | cut -d '-' -f 1)
+gsutil cp -r . gs://gerrit-documentation/Documentation/$version_no_rc
 popd
 
 echo "Setting next version tag to $nextversion ..."
