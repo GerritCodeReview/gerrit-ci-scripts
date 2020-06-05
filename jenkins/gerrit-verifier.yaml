@@ -68,6 +68,7 @@
     scm:
       - git:
           url: https://gerrit.googlesource.com/gerrit
+          credentials-id: gerrit.googlesource.com
           refspec: $REFSPEC
           branches:
             - $BRANCH
@@ -180,7 +181,7 @@
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit
-          credentials-id: gerrit-review.googlesource.com
+          credentials-id: gerrit.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
           filter-checks:
