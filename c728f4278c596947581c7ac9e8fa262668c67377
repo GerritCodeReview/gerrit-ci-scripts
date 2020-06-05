@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "12cf40e6_1bf2f2d1",
+        "filename": "jenkins-docker/master/gerrit-ci-scripts-manual.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T11:23:22Z",
+      "side": 1,
+      "message": "/a/ missing",
+      "range": {
+        "startLine": 32,
+        "startChar": 51,
+        "endLine": 32,
+        "endChar": 52
+      },
+      "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ee4fe93_09b1f8b3",
+        "filename": "jenkins-docker/master/gerrit-ci-scripts.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T11:23:22Z",
+      "side": 1,
+      "message": "/a/ still missing",
+      "range": {
+        "startLine": 17,
+        "startChar": 44,
+        "endLine": 17,
+        "endChar": 45
+      },
+      "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ed4fce92_df26526c",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T11:23:22Z",
+      "side": 1,
+      "message": "Github doesn\u0027t need the \u0027/a/\u0027",
+      "range": {
+        "startLine": 22,
+        "startChar": 39,
+        "endLine": 22,
+        "endChar": 42
+      },
+      "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f331d758_74a282df",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T11:23:22Z",
+      "side": 1,
+      "message": "double /a/",
+      "range": {
+        "startLine": 32,
+        "startChar": 54,
+        "endLine": 32,
+        "endChar": 58
+      },
+      "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
