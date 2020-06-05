@@ -4,7 +4,7 @@
 
 echo "Building plugin {name}/{branch} with Gerrit/{gerrit-branch}"
 
-git remote add gerrit https://gerrit.googlesource.com/gerrit
+git remote add gerrit https://gerrit.googlesource.com/a/gerrit
 git fetch gerrit {gerrit-branch}
 git checkout -fb {gerrit-branch} gerrit/{gerrit-branch}
 git submodule update --init

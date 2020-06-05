@@ -121,7 +121,7 @@ def postCheck(check) {
 }
 
 def queryChangedFiles(url) {
-    def queryUrl = "${url}changes/${env.GERRIT_CHANGE_NUMBER}/revisions/${env.GERRIT_PATCHSET_REVISION}/files/"
+    def queryUrl = "${url}a/changes/${env.GERRIT_CHANGE_NUMBER}/revisions/${env.GERRIT_PATCHSET_REVISION}/files/"
     def response = httpRequest(url: queryUrl, authentication: env.GERRIT_CREDENTIALS_ID)
     def files = response.getContent().substring(5)
     def filesJson = new JsonSlurper().parseText(files)
