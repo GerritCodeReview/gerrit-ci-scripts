@@ -16,6 +16,24 @@
       "revId": "8ecad6b701a8c5168eb41174f92ba08a8c93c754",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a33dfd9f_cc034af1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T10:24:03Z",
+      "side": 1,
+      "message": "\u003e We should use the same credentials then as well for the plugin verifier.\n\nI was actually thinking about that: it isn\u0027t required at the moment, but yes, it would be a good idea.\n\n\u003e We could even think of doing it consistently for every build.\n\nThat\u0027s the intention: not just the private builds for all builds would use the authenticated credentials. That should in theory help as well in avoiding throttling from the gerrit.googlesource.com servers.",
+      "parentUuid": "1cb9bc89_9e7243f4",
+      "revId": "8ecad6b701a8c5168eb41174f92ba08a8c93c754",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
