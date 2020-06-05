@@ -34,7 +34,7 @@ def call(Map parm = [:]) {
     def pluginName = parm.name ?: "${env.GERRIT_PROJECT}".split('/').last()
     def formatCheck = parm.formatCheckId
     def buildCheck = parm.buildCheckId
-    def pluginScmUrl = "https://gerrit.googlesource.com/${env.GERRIT_PROJECT}"
+    def pluginScmUrl = "https://gerrit.googlesource.com/a/${env.GERRIT_PROJECT}"
     def gjfVersion = '1.7'
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')
@@ -47,8 +47,12 @@ def call(Map parm = [:]) {
         stages {
             stage('Checkout') {
                 steps {
-                    sh "git clone -b ${env.GERRIT_BRANCH} ${pluginScmUrl}"
-                    sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
+                        sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
+                        sh 'chmod 600 ~/.netrc'
+                        sh "git clone -b ${env.GERRIT_BRANCH} ${pluginScmUrl}"
+                        sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+                    }
                 }
             }
             stage('Formatting') {
