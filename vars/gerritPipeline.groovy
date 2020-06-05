@@ -129,9 +129,15 @@ def queryChangedFiles(url) {
 }
 
 def collectBuildModes() {
-    Builds.modes = ["notedb"]
-    if (env.GERRIT_BRANCH == "stable-2.16") {
-        Builds.modes += "reviewdb"
+    Builds.modes = []
+    if (env.GERRIT_BRANCH ==~ /stable-3.*/) {
+        Builds.modes = ["notedb"]
+    } else if (env.GERRIT_BRANCH == "stable-2.16") {
+        Builds.modes = ["notedb", "reviewdb"]
+    } else if (env.GERRIT_BRANCH ==~ /stable-2.1[0-5]/) {
+        Builds.modes = ["reviewdb"]
+    } else {
+        throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")
     }
 
     def changedFiles = queryChangedFiles(Globals.gerritUrl)
