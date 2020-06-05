@@ -129,9 +129,15 @@ def queryChangedFiles(url) {
 }
 
 def collectBuildModes() {
-    Builds.modes = ["notedb"]
+    Builds.modes = []
+    if (env.GERRIT_BRANCH ==~ /stable-3.*/) {
+        Builds.modes = ["notedb"]
+    }
     if (env.GERRIT_BRANCH == "stable-2.16") {
-        Builds.modes += "reviewdb"
+        Builds.modes = ["notedb", "reviewdb"]
+    }
+    if (env.GERRIT_BRANCH ==~ /stable-2.1[0-5]/) {
+        Builds.modes = ["reviewdb"]
     }
 
     def changedFiles = queryChangedFiles(Globals.gerritUrl)
