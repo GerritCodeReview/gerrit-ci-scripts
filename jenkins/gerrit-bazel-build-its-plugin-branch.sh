@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-git remote add origin https://gerrit.googlesource.com/gerrit
+git remote add origin https://gerrit.googlesource.com/a/gerrit
 git fetch origin
 git checkout origin/{gerrit-branch}
 git submodule update --init

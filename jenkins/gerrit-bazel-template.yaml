@@ -12,7 +12,8 @@
             - job-extended-read
     scm:
       - git:
-          url: https://gerrit.googlesource.com/gerrit
+          url: https://gerrit.googlesource.com/a/gerrit
+          credentials-id: gerrit.googlesource.com
           branches:
             - origin/{branch}
           submodule:
@@ -37,7 +38,13 @@
           additional-options: -fbdir /tmp
           debug: true
           shutdown-with-build: false
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: gerrit.googlesource.com
+              username: GS_GIT_USER
+              password: GS_GIT_PASS
     builders:
+      - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build.sh
       - shell: !include-raw-escape: set-docker-host.sh
       - shell: !include-raw: gerrit-bazel-test.sh

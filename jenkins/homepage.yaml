@@ -4,7 +4,8 @@
     pipeline-scm:
       scm:
         - git:
-            url: https://gerrit.googlesource.com/homepage
+            credentials-id: gerrit.googlesource.com
+            url: https://gerrit.googlesource.com/a/homepage
             branches:
               - master
     triggers:
