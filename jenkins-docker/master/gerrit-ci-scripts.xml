@@ -15,6 +15,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>https://gerrit.googlesource.com/gerrit-ci-scripts</url>
+        <credentialsId>gerrit.googlesource.com</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>

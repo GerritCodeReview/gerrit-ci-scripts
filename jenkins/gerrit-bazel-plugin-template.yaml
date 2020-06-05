@@ -30,7 +30,7 @@
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/plugins/{name}
-          credentials-id: gerrit-review.googlesource.com
+          credentials-id: gerrit.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
@@ -51,6 +51,7 @@
     project-name: plugins%2F{name}
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/plugins/{name}
@@ -80,6 +81,7 @@
     defaults: plugin-template-bazel
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/plugins/{name}
@@ -104,6 +106,7 @@
     defaults: plugin-template-bazel
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/modules/{name}
@@ -128,6 +131,7 @@
     defaults: plugin-template-bazel
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/modules/{name}

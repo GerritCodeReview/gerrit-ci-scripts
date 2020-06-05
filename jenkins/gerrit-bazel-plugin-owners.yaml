@@ -4,6 +4,7 @@
     defaults: plugin-template-bazel
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/plugins/{name}
@@ -29,6 +30,7 @@
     defaults: plugin-template-bazel
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/plugins/{name}
