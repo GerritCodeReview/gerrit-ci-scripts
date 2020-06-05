@@ -6,6 +6,11 @@
           timeout: 30
           fail: true
       - timestamps
+      - credentials-binding:
+          - username-password-separated:
+             credential-id: gerrit.googlesource.com
+             username: GS_GIT_USER
+             password: GS_GIT_PASS
     properties:
       - build-discarder:
           days-to-keep: 20
@@ -17,11 +22,12 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+                url: https://gerrit.googlesource.com/a/plugins/scripting/{name}
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - origin/{branch}
           submodule:
@@ -37,15 +43,17 @@
     defaults: plugin-scripting-template
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+                url: https://gerrit.googlesource.com/a/plugins/scripting/{name}
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - origin/{branch}
           skip-tag: true
     builders:
+      - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build-plugin.sh
       - shell: !include-raw: gerrit-bazel-get-scripting-plugin-info.sh
     publishers:
@@ -59,13 +67,15 @@
     defaults: plugin-scripting-template
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+                url: https://gerrit.googlesource.com/a/plugins/scripting/{name}
           branches:
             - origin/{branch}
           skip-tag: true
     builders:
+      - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build-plugin-branch.sh
       - shell: !include-raw: gerrit-bazel-get-scripting-plugin-info.sh
     publishers:

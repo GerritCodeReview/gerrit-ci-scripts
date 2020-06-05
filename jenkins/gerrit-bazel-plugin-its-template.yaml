@@ -6,6 +6,11 @@
           timeout: 30
           fail: true
       - timestamps
+      - credentials-binding:
+          - username-password-separated:
+             credential-id: gerrit.googlesource.com
+             username: GS_GIT_USER
+             password: GS_GIT_PASS
     properties:
       - build-discarder:
           days-to-keep: 20
@@ -17,13 +22,14 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - plugin:
-                url: https://gerrit.googlesource.com/plugins/its-{name}
+                url: https://gerrit.googlesource.com/a/plugins/its-{name}
             - origin:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
             - base:
-                url: https://gerrit.googlesource.com/plugins/its-base
+                url: https://gerrit.googlesource.com/a/plugins/its-base
           branches:
             - plugin/{branch}
           submodule:
@@ -40,6 +46,7 @@
     defaults: plugin-its-template
     node: bazel-debian
     builders:
+      - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build-its-plugin.sh
       - shell: !include-raw: gerrit-bazel-get-its-plugin-info.sh
     publishers:
@@ -55,11 +62,12 @@
     node: bazel-debian
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - plugin:
-                url: https://gerrit.googlesource.com/plugins/its-{name}
+                url: https://gerrit.googlesource.com/a/plugins/its-{name}
             - base:
-                url: https://gerrit.googlesource.com/plugins/its-base
+                url: https://gerrit.googlesource.com/a/plugins/its-base
           branches:
             - plugin/{branch}
           skip-tag: true
