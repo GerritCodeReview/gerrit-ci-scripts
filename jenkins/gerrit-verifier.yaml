@@ -67,7 +67,7 @@
           days-to-keep: 30
     scm:
       - git:
-          url: https://gerrit.googlesource.com/gerrit
+          url: https://gerrit.googlesource.com/a/gerrit
           credentials-id: gerrit.googlesource.com
           refspec: $REFSPEC
           branches:

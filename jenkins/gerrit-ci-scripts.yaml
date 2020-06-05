@@ -4,7 +4,7 @@
     node: master
     scm:
       - git:
-          url: https://gerrit.googlesource.com/gerrit-ci-scripts
+          url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
           credentials-id: gerrit.googlesource.com
           branches:
             - '*/private'
@@ -21,7 +21,7 @@
     node: master
     scm:
       - git:
-          url: https://gerrit.googlesource.com/gerrit-ci-scripts
+          url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
           credentials-id: gerrit.googlesource.com
           branches:
             - '*/private'
@@ -70,7 +70,11 @@
           override-build-parameters: true
     scm:
       - git:
+<<<<<<< HEAD
           url: https://gerrit.googlesource.com/gerrit-ci-scripts
+=======
+          url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
+>>>>>>> master
           credentials-id: gerrit.googlesource.com
           refspec: +refs/changes/*:refs/remotes/origin/*
           branches:
@@ -83,3 +87,24 @@
           else
             jenkins-jobs update --delete-old jenkins
           fi
+<<<<<<< HEAD
+=======
+
+- job:
+    name: gerrit-ci-scripts-pipeline
+    description: Multi-branch pipeline to validate Gerrit's Jenkins Job Builder Scripts
+    project-type: multibranch
+    node: master
+    scm:
+      - gerrit:
+          url: https://gerrit-review.googlesource.com/a/gerrit-ci-scripts
+          credentials-id: gerrit.googlesource.com
+          refspecs:
+            - '+refs/heads/*:refs/remotes/@{remote}/*'
+            - '+refs/changes/*:refs/remotes/@{remote}/*'
+          property-strategies:
+            all-branches:
+              - suppress-scm-triggering: false
+              - pipeline-branch-durability-override: max-survivability
+    periodic-folder-trigger: 10m
+>>>>>>> master
