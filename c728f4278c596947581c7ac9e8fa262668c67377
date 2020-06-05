@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "540eea89_18e2e9da",
+        "filename": "jenkins-docker/master/gerrit-ci-scripts-manual.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T11:26:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "12cf40e6_1bf2f2d1",
+      "range": {
+        "startLine": 32,
+        "startChar": 51,
+        "endLine": 32,
+        "endChar": 52
+      },
+      "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ee4fe93_09b1f8b3",
         "filename": "jenkins-docker/master/gerrit-ci-scripts.xml",
         "patchSetId": 4
@@ -45,6 +69,30 @@
       "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "67d2ddfd_3b9a5b72",
+        "filename": "jenkins-docker/master/gerrit-ci-scripts.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T11:26:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3ee4fe93_09b1f8b3",
+      "range": {
+        "startLine": 17,
+        "startChar": 44,
+        "endLine": 17,
+        "endChar": 45
+      },
+      "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "88c42cb6_040af73d",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T11:26:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ed4fce92_df26526c",
+      "range": {
+        "startLine": 22,
+        "startChar": 39,
+        "endLine": 22,
+        "endChar": 42
+      },
+      "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f331d758_74a282df",
         "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
         "patchSetId": 4
@@ -91,6 +163,30 @@
       "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c77388b7_b9f2cce0",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T11:26:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f331d758_74a282df",
+      "range": {
+        "startLine": 32,
+        "startChar": 54,
+        "endLine": 32,
+        "endChar": 58
+      },
+      "revId": "c728f4278c596947581c7ac9e8fa262668c67377",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
