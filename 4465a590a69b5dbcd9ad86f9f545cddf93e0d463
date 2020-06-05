@@ -22,6 +22,30 @@
       "revId": "4465a590a69b5dbcd9ad86f9f545cddf93e0d463",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f282c626_b4fb7b9f",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-05T14:56:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04c8ad78_d6e86c66",
+      "range": {
+        "startLine": 136,
+        "startChar": 4,
+        "endLine": 136,
+        "endChar": 6
+      },
+      "revId": "4465a590a69b5dbcd9ad86f9f545cddf93e0d463",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
