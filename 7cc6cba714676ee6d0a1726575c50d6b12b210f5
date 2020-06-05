@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6f911f84_324f5f4b",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-06-05T13:47:32Z",
+      "side": 1,
+      "message": "$GS_GIT_PASS",
+      "range": {
+        "startLine": 6,
+        "startChar": 77,
+        "endLine": 6,
+        "endChar": 87
+      },
+      "revId": "7cc6cba714676ee6d0a1726575c50d6b12b210f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
