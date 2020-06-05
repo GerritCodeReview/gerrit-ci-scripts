@@ -24,37 +24,41 @@ import groovy.json.JsonOutput
 
 def call(Map parm = [:]) {
     node ('master') {
+        withCredentials([usernamePassword(credentialsId: env.GERRIT_CREDENTIALS_ID,
+                                          usernameVariable: 'GERRIT_USER',
+                                          passwordVariable: 'GERRIT_PASSWORD')]) {
 
-        if (hasChangeNumber()) {
-            stage('Preparing'){
-                collectBuildModes()
+            if (hasChangeNumber()) {
+                stage('Preparing'){
+                    collectBuildModes()
+                }
             }
-        }
 
-        parallel(collectBuilds())
+            parallel(collectBuilds())
 
-        if (hasChangeNumber()) {
-            stage('Retry Flaky Builds'){
-                def flakyBuildsModes = findFlakyBuilds()
-                if (flakyBuildsModes.size() > 0){
-                    parallel flakyBuildsModes.collectEntries {
-                        ["Gerrit-verification(${it})" :
-                            prepareBuildsForMode("Gerrit-verifier-bazel", it, 3)]
+            if (hasChangeNumber()) {
+                stage('Retry Flaky Builds'){
+                    def flakyBuildsModes = findFlakyBuilds()
+                    if (flakyBuildsModes.size() > 0){
+                        parallel flakyBuildsModes.collectEntries {
+                            ["Gerrit-verification(${it})" :
+                                prepareBuildsForMode("Gerrit-verifier-bazel", it, 3)]
+                        }
                     }
                 }
-            }
 
-            stage('Report to Gerrit'){
-                resCodeStyle = getLabelValue(1, Builds.codeStyle.result)
-                gerritReview labels: ['Code-Style': resCodeStyle]
+                stage('Report to Gerrit'){
+                    resCodeStyle = getLabelValue(1, Builds.codeStyle.result)
+                    gerritReview labels: ['Code-Style': resCodeStyle]
 
-                def verificationResults = Builds.verification.collect { k, v -> v }
-                def resVerify = verificationResults.inject(1) {
-                    acc, build -> getLabelValue(acc, build.result)
+                    def verificationResults = Builds.verification.collect { k, v -> v }
+                    def resVerify = verificationResults.inject(1) {
+                        acc, build -> getLabelValue(acc, build.result)
+                    }
+                    gerritReview labels: ['Verified': resVerify]
+
+                    setResult(resVerify, resCodeStyle)
                 }
-                gerritReview labels: ['Verified': resVerify]
-
-                setResult(resVerify, resCodeStyle)
             }
         }
     }
@@ -122,7 +126,8 @@ def postCheck(check) {
 
 def queryChangedFiles(url) {
     def queryUrl = "${url}changes/${env.GERRIT_CHANGE_NUMBER}/revisions/${env.GERRIT_PATCHSET_REVISION}/files/"
-    def response = httpRequest queryUrl
+    def basicAuth = "${env.GERRIT_USER}:${env.GERRIT_PASSWORD}".bytes.encodeBase64().toString()
+    def response = httpRequest(url: queryUrl, authentication: "Basic ${basicAuth}")
     def files = response.getContent().substring(5)
     def filesJson = new JsonSlurper().parseText(files)
     return filesJson.keySet().findAll { it != "/COMMIT_MSG" }
