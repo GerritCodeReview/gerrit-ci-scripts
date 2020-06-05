@@ -7,6 +7,11 @@
           timeout: 30
           fail: true
       - timestamps
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: gerrit.googlesource.com
+              username: GS_GIT_USER
+              password: GS_GIT_PASS
     properties:
       - build-discarder:
           days-to-keep: 20
@@ -18,11 +23,12 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/{repo}
+                url: https://gerrit.googlesource.com/a/plugins/{repo}
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - origin/{branch}
           submodule:
@@ -32,6 +38,7 @@
       - pollscm:
           cron: 'H/50 * * * *'
     builders:
+      - set-git-credentials
       - shell:
           !include-raw: gerrit-mvn-build-plugin.sh
     publishers:

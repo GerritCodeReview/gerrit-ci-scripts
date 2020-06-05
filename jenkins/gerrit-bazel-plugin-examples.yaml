@@ -5,13 +5,21 @@
     targets: ''
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/examples
+                url: https://gerrit.googlesource.com/a/plugins/examples
           branches:
             - origin/{branch}
           skip-tag: true
+    wrappers:
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: gerrit.googlesource.com
+              username: GS_GIT_USER
+              password: GS_GIT_PASS
     builders:
+      - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build-examples-plugin.sh
     publishers:
       - archive:

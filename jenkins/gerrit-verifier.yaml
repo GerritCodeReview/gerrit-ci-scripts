@@ -1,4 +1,12 @@
 - builder:
+    name: set-git-credentials
+    builders:
+      - shell: |
+          #!/bin/bash -e
+          echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS" >> ~/.netrc
+          chmod 600 ~/.netrc
+
+- builder:
     name: merge-target-branch
     builders:
       - shell: |
@@ -67,7 +75,8 @@
           days-to-keep: 30
     scm:
       - git:
-          url: https://gerrit.googlesource.com/gerrit
+          url: https://gerrit.googlesource.com/a/gerrit
+          credentials-id: gerrit.googlesource.com
           refspec: $REFSPEC
           branches:
             - $BRANCH
@@ -85,6 +94,11 @@
           additional-options: -fbdir /tmp
           debug: true
           shutdown-with-build: false
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: gerrit.googlesource.com
+              username: GS_GIT_USER
+              password: GS_GIT_PASS
       - raw:
           xml: |
             <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.16">
@@ -111,6 +125,7 @@
           properties-content: >
             BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
     builders:
+      - set-git-credentials
       - merge-target-branch
       - fetch-all-submodules
       - shell: !include-raw-escape: gerrit-bazel-build.sh
@@ -135,6 +150,7 @@
           properties-content: >
             BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
     builders:
+      - set-git-credentials
       - merge-target-branch
       - fetch-all-submodules
       - shell: !include-raw-escape: gerrit-bazel-build.sh
@@ -162,6 +178,7 @@
     defaults: verifier-defaults
     node: bazel-debian
     builders:
+      - set-git-credentials
       - merge-target-branch
       - fetch-all-submodules
       - shell: !include-raw-escape: gerrit-codestyle-gjf.sh
@@ -180,7 +197,7 @@
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit
-          credentials-id: gerrit-review.googlesource.com
+          credentials-id: gerrit.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
           filter-checks:
