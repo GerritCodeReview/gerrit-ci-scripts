@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1cb9bc89_9e7243f4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-06-05T10:20:15Z",
+      "side": 1,
+      "message": "We should use the same credentials then as well for the plugin verifier.\n\nWe could even think of doing it consistently for every build.",
+      "revId": "8ecad6b701a8c5168eb41174f92ba08a8c93c754",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
