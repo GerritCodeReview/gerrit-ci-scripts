@@ -29,8 +29,8 @@
     prune-dead-branches: true
     scm:
       - gerrit:
-          url: https://gerrit-review.googlesource.com/a/plugins/{name}
-          credentials-id: gerrit-review.googlesource.com
+          url: https://gerrit-review.googlesource.com/a/a/plugins/{name}
+          credentials-id: gerrit.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
@@ -51,11 +51,12 @@
     project-name: plugins%2F{name}
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/{name}
+                url: https://gerrit.googlesource.com/a/plugins/{name}
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - origin/{branch}
           submodule:
@@ -80,9 +81,10 @@
     defaults: plugin-template-bazel
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/{name}
+                url: https://gerrit.googlesource.com/a/plugins/{name}
           branches:
             - '*/{branch}'
           skip-tag: true
@@ -104,9 +106,10 @@
     defaults: plugin-template-bazel
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/modules/{name}
+                url: https://gerrit.googlesource.com/a/modules/{name}
           branches:
             - '*/{branch}'
           skip-tag: true
@@ -128,11 +131,12 @@
     defaults: plugin-template-bazel
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/modules/{name}
+                url: https://gerrit.googlesource.com/a/modules/{name}
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - '*/{branch}'
           skip-tag: true

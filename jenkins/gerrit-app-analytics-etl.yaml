@@ -19,9 +19,10 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/apps/{name}
+                url: https://gerrit.googlesource.com/a/apps/{name}
           branches:
             - origin/{branch}
           submodule:

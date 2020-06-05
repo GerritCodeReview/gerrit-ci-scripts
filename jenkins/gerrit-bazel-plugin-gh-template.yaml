@@ -19,9 +19,10 @@
       - git:
           remotes:
             - origin:
-                url: https://github.com/{organization}/{repo}
+                url: https://github.com/a/{organization}/{repo}
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
           branches:
             - origin/{branch}
           submodule:

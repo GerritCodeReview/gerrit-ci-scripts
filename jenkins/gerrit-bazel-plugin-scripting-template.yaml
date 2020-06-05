@@ -17,11 +17,12 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+                url: https://gerrit.googlesource.com/a/plugins/scripting/{name}
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - origin/{branch}
           submodule:
@@ -37,11 +38,12 @@
     defaults: plugin-scripting-template
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+                url: https://gerrit.googlesource.com/a/plugins/scripting/{name}
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - origin/{branch}
           skip-tag: true
@@ -59,9 +61,10 @@
     defaults: plugin-scripting-template
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/scripting/{name}
+                url: https://gerrit.googlesource.com/a/plugins/scripting/{name}
           branches:
             - origin/{branch}
           skip-tag: true

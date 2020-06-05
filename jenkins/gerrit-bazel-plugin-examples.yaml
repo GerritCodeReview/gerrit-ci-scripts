@@ -5,9 +5,10 @@
     targets: ''
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/examples
+                url: https://gerrit.googlesource.com/a/plugins/examples
           branches:
             - origin/{branch}
           skip-tag: true
