@@ -30,6 +30,7 @@
       <hudson.plugins.git.UserRemoteConfig>
         <refspec>+refs/changes/*:refs/remotes/origin/*</refspec>
         <url>https://gerrit-review.googlesource.com/gerrit-ci-scripts</url>
+        <credentialsId>gerrit.googlesource.com</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
