@@ -5,6 +5,11 @@
           timeout: 30
           fail: true
       - timestamps
+      - credentials-binding:
+          - username-password-separated:
+             credential-id: gerrit.googlesource.com
+             username: GS_GIT_USER
+             password: GS_GIT_PASS
     properties:
       - build-discarder:
           days-to-keep: 20
@@ -16,13 +21,14 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/gitblit
+                url: https://gerrit.googlesource.com/a/plugins/gitblit
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
             - gitblit:
-                url: https://gerrit.googlesource.com/gitblit
+                url: https://gerrit.googlesource.com/a/gitblit
           branches:
             - origin/{branch}
           submodule:
@@ -41,19 +47,21 @@
     node: bazel-debian
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/gitblit
+                url: https://gerrit.googlesource.com/a/plugins/gitblit
             - gitblit:
-                url: https://gerrit.googlesource.com/gitblit
+                url: https://gerrit.googlesource.com/a/gitblit
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - origin/{branch}
           submodule:
             recursive: true
           skip-tag: true
     builders:
+      - set-git-credentials
       - shell: !include-raw: gitblit-ant-build.sh
       - shell: !include-raw: gerrit-bazel-build-plugin.sh
       - shell: !include-raw: gerrit-bazel-get-project-info.sh
