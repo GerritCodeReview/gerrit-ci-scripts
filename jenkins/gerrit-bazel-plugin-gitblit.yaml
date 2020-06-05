@@ -16,13 +16,14 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/gitblit
+                url: https://gerrit.googlesource.com/a/plugins/gitblit
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
             - gitblit:
-                url: https://gerrit.googlesource.com/gitblit
+                url: https://gerrit.googlesource.com/a/gitblit
           branches:
             - origin/{branch}
           submodule:
@@ -41,13 +42,14 @@
     node: bazel-debian
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/plugins/gitblit
+                url: https://gerrit.googlesource.com/a/plugins/gitblit
             - gitblit:
-                url: https://gerrit.googlesource.com/gitblit
+                url: https://gerrit.googlesource.com/a/gitblit
             - gerrit:
-                url: https://gerrit.googlesource.com/gerrit
+                url: https://gerrit.googlesource.com/a/gerrit
           branches:
             - origin/{branch}
           submodule:
