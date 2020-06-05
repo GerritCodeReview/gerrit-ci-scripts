@@ -17,6 +17,7 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           url: https://gerrit.googlesource.com/gitiles
           branches:
             - master

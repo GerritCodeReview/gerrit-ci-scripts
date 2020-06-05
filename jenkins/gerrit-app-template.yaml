@@ -20,6 +20,7 @@
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/apps/{name}
+                credentials-id: gerrit.googlesource.com
           branches:
             - origin/{branch}
           submodule:

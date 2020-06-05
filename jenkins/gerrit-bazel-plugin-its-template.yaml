@@ -17,6 +17,7 @@
             - job-extended-read
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - plugin:
                 url: https://gerrit.googlesource.com/plugins/its-{name}
@@ -55,6 +56,7 @@
     node: bazel-debian
     scm:
       - git:
+          credentials-id: gerrit.googlesource.com
           remotes:
             - plugin:
                 url: https://gerrit.googlesource.com/plugins/its-{name}
