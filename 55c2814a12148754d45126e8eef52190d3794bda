@@ -22,6 +22,30 @@
       "revId": "55c2814a12148754d45126e8eef52190d3794bda",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "829147e6_a3ecaf3a",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-06-10T08:45:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "13fa9c53_458ac4cf",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "55c2814a12148754d45126e8eef52190d3794bda",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
