@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e340c70f_4d96ebb6",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-12T19:57:26Z",
+      "side": 1,
+      "message": "This whole section can go. Master branch can be added before L11",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "673961a6fc6841b348322b6abbf8bb2bc191ac76",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
