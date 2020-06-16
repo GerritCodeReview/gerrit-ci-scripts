@@ -5,10 +5,13 @@ git submodule update --init
 rm -rf plugins/account
 git read-tree -u --prefix=plugins/account origin/{branch}
 
-if [ -f plugins/account/external_plugin_deps.bzl ]
-then
-  cp -f plugins/account/external_plugin_deps.bzl plugins/
-fi
+for file in external_plugin_deps.bzl package.json
+do
+  if [ -f plugins/account/$file ]
+  then
+    cp -f plugins/account/$file plugins/
+  fi
+done
 
 TARGETS=$(echo "plugins/account:account" | sed -e 's/account/account/g')
 
