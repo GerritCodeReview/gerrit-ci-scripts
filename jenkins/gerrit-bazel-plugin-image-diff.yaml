@@ -1,0 +1,45 @@
+- job-template:
+    name: 'plugin-image-diff-bazel-{branch}'
+    description: 'Plugin image-diff {branch} branch build with Bazel'
+    defaults: plugin-template-bazel
+    node: bazel-debian
+    class: plugins
+    project-name: plugins%2Fimage-diff
+    scm:
+      - git:
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/a/plugins/{name}
+                credentials-id: gerrit.googlesource.com
+            - gerrit:
+                url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
+          branches:
+            - origin/{branch}
+          submodule:
+            recursive: true
+            parent-credentials: true
+          skip-tag: true
+    wrappers:
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: gerrit.googlesource.com
+              username: GS_GIT_USER
+              password: GS_GIT_PASS
+    builders:
+      - set-git-credentials
+      - shell: !include-raw: gerrit-bazel-build-plugin.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
+    publishers:
+      - archive:
+          artifacts: >
+            bazel-bin/plugins/image-diff/image-diff.js,
+            bazel-bin/plugins/image-diff/image-diff.html,
+            bazel-bin/plugins/{name}/{name}.json
+
+- project:
+    name: image-diff
+    jobs:
+      - 'plugin-image-diff-bazel-{branch}':
+          branch:
+            - master
