@@ -7,10 +7,13 @@ git fetch --tags origin
 ln -s plugins/{name}-plugin/owners-common .
 pushd plugins && ln -s owners-plugin/{{owners,owners-autoassign}} . && popd
 
-if [ -f plugins/{name}-plugin/external_plugin_deps.bzl ]
-then
-  cp -f plugins/{name}-plugin/external_plugin_deps.bzl plugins/
-fi
+for file in external_plugin_deps.bzl package.json
+do
+  if [ -f plugins/{name}-plugin/$file ]
+  then
+    cp -f plugins/{name}-plugin/$file plugins/
+  fi
+done
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
