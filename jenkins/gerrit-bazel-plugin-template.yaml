@@ -82,6 +82,40 @@
             bazel-bin/plugins/{name}/{name}.json
 
 - job-template:
+    name: 'ui-plugin-{name}-bazel-{branch}'
+    description: 'UI Plugin {name} {branch} branch build with Bazel'
+    defaults: plugin-template-bazel
+    node: bazel-debian
+    class: plugins
+    project-name: plugins%2F{name}
+    scm:
+      - git:
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/a/plugins/{name}
+                credentials-id: gerrit.googlesource.com
+            - gerrit:
+                url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
+          branches:
+            - origin/{branch}
+          submodule:
+            recursive: true
+            parent-credentials: true
+          skip-tag: true
+          do-not-fetch-tags: true
+    builders:
+      - set-git-credentials
+      - shell: !include-raw: gerrit-bazel-build-plugin.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
+    publishers:
+      - archive:
+          artifacts: >
+            bazel-bin/plugins/{name}/*.js,
+            bazel-bin/plugins/{name}/*.html,
+            bazel-bin/plugins/{name}/{name}.json
+
+- job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
     class: plugins
     node: bazel-debian
@@ -174,7 +208,7 @@
       - last-failure
       - last-duration
       - build-button
-    regex: '(plugin|module)-.+-{branch}'
+    regex: '(ui-plugin|plugin|module)-.+-{branch}'
 
 - project:
     name: 'plugin-views'
