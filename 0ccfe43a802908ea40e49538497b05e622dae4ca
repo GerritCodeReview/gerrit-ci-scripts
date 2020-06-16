@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7b72e81e_8966a574",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-06-16T08:31:25Z",
+      "side": 1,
+      "message": "Does this then work for the master-branch?",
+      "revId": "0ccfe43a802908ea40e49538497b05e622dae4ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
