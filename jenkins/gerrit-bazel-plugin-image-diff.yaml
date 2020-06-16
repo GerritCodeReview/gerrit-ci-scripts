@@ -1,0 +1,6 @@
+- project:
+    name: image-diff
+    jobs:
+      - 'ui-plugin-{name}-bazel-{branch}':
+          branch:
+            - master
