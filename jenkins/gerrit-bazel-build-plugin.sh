@@ -6,10 +6,13 @@ rm -rf plugins/{name}
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 git fetch --tags origin
 
-if [ -f plugins/{name}/external_plugin_deps.bzl ]
-then
-  cp -f plugins/{name}/external_plugin_deps.bzl plugins/
-fi
+for file in external_plugin_deps.bzl package.json
+do
+  if [ -f plugins/{name}/$file ]
+  then
+    cp -f plugins/{name}/$file plugins/
+  fi
+done
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 . set-java.sh 8

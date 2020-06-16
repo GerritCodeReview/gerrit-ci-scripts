@@ -10,10 +10,13 @@ git fetch --tags origin
 
 rm -Rf bazel-bin
 
-if [ -f plugins/its-{name}/external_plugin_deps.bzl ]
-then
-  cp -f plugins/its-{name}/external_plugin_deps.bzl plugins/
-fi
+for file in external_plugin_deps.bzl package.json
+do
+  if [ -f plugins/its-{name}/$file ]
+  then
+    cp -f plugins/its-{name}/$file plugins/
+  fi
+done
 
 TARGETS=$(echo "{targets}" | sed -e 's/its-{{name}}/its-{name}/g')
 
@@ -33,4 +36,3 @@ do
     [ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
     echo "$PLUGIN_VERSION" > bazel-bin/plugins/its-{name}/$(basename $JAR-version)
 done
-
