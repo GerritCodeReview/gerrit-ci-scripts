@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ba620771_b8d6b446",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-16T13:45:22Z",
+      "side": 0,
+      "message": "True, but not in its current form. Let me upload a reduced version for it.",
+      "parentUuid": "9605155d_618081a5",
+      "revId": "1349f8ef070fc13089acc90bac47a9ce3cc0695c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fe84c16f_ea68e0df",
         "filename": "jenkins/set-docker-host.sh",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2020-06-04T12:58:04Z",
       "side": 0,
       "message": "Why did you change the file permissions?",
+      "revId": "1349f8ef070fc13089acc90bac47a9ce3cc0695c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c55b46b0_7d451a86",
+        "filename": "jenkins/set-docker-host.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-16T13:45:22Z",
+      "side": 0,
+      "message": "True, it isn\u0027t needed. Let me restore it.",
+      "parentUuid": "fe84c16f_ea68e0df",
       "revId": "1349f8ef070fc13089acc90bac47a9ce3cc0695c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
