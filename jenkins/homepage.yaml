@@ -10,5 +10,5 @@
               - master
     triggers:
       - pollscm:
-          cron: "H/10 * * * *"
+          cron: "H/4 * * * *"
       - timed: "@midnight"
