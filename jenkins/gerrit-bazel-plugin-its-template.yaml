@@ -76,6 +76,7 @@
           skip-tag: true
           do-not-fetch-tags: true
     builders:
+      - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build-its-plugin-branch.sh
       - shell: !include-raw: gerrit-bazel-get-its-plugin-info.sh
     publishers:
