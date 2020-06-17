@@ -16,6 +16,24 @@
       "revId": "9307423ed5e1fb5abcbaed2985ea6142353d5f67",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "20c7c4b5_40ba001b",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-06-17T11:46:30Z",
+      "side": 1,
+      "message": "Sure, we could add some `sed` command to do that, but I would think it would rather make sense to adapt the build to not fail in these cases, e.g. to ignore the devDependencies, if the package.json is provided by a plugin. This would then also prevent users building and testing plugins in-tree of running into that issue.",
+      "parentUuid": "7f1d700a_0bba6416",
+      "revId": "9307423ed5e1fb5abcbaed2985ea6142353d5f67",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
