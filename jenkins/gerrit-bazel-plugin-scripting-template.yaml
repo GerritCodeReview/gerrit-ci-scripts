@@ -22,7 +22,7 @@
             - job-extended-read
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/plugins/scripting/{name}
@@ -43,7 +43,7 @@
     defaults: plugin-scripting-template
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/plugins/scripting/{name}
@@ -67,7 +67,7 @@
     defaults: plugin-scripting-template
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/plugins/scripting/{name}

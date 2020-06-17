@@ -4,7 +4,7 @@
     pipeline-scm:
       scm:
         - git:
-            credentials-id: gerrit.googlesource.com
+            credential-id: gerrit.googlesource.com
             url: https://gerrit.googlesource.com/a/homepage
             branches:
               - master

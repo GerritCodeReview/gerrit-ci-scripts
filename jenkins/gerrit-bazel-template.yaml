@@ -13,7 +13,7 @@
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           branches:
             - origin/{branch}
           submodule:

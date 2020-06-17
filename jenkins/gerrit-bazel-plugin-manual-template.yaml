@@ -31,7 +31,7 @@
           override-build-parameters: true
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/plugins/{name}

@@ -5,7 +5,7 @@
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           branches:
             - '*/master'
           skip-tag: true
@@ -22,7 +22,7 @@
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           branches:
             - '*/master'
           skip-tag: true
@@ -71,7 +71,7 @@
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           refspec: +refs/changes/*:refs/remotes/origin/*
           branches:
             - '${CHANGE_COMMIT}'
@@ -92,7 +92,7 @@
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit-ci-scripts
-          credentials-id: gerrit.googlesource.com
+          credential-id: gerrit.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
             - '+refs/changes/*:refs/remotes/@{remote}/*'
