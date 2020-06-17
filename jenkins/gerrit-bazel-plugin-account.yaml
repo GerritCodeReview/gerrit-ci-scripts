@@ -13,6 +13,7 @@
                 credentials-id: gerrit.googlesource.com
             - gerrit:
                 url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
           branches:
             - origin/{branch}
           submodule:
