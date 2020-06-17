@@ -7,10 +7,10 @@
     project-name: plugins%2Faccount
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/plugins/{name}
+                credentials-id: gerrit.googlesource.com
             - gerrit:
                 url: https://gerrit.googlesource.com/a/gerrit
           branches:

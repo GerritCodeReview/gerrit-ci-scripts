@@ -56,12 +56,13 @@
     project-name: plugins%2F{name}
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/plugins/{name}
+                credentials-id: gerrit.googlesource.com
             - gerrit:
                 url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
           branches:
             - origin/{branch}
           submodule:
@@ -87,10 +88,10 @@
     defaults: plugin-template-bazel
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/plugins/{name}
+                credentials-id: gerrit.googlesource.com
           branches:
             - '*/{branch}'
           skip-tag: true
@@ -113,10 +114,10 @@
     defaults: plugin-template-bazel
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/modules/{name}
+                credentials-id: gerrit.googlesource.com
           branches:
             - '*/{branch}'
           skip-tag: true
@@ -139,12 +140,13 @@
     defaults: plugin-template-bazel
     scm:
       - git:
-          credentials-id: gerrit.googlesource.com
           remotes:
             - origin:
                 url: https://gerrit.googlesource.com/a/modules/{name}
+                credentials-id: gerrit.googlesource.com
             - gerrit:
                 url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
           branches:
             - '*/{branch}'
           skip-tag: true
