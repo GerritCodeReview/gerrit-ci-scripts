@@ -32,6 +32,7 @@
             - origin/{branch}
           submodule:
             disable: true
+            parent-credentials: true
           skip-tag: true
     triggers:
       - pollscm:

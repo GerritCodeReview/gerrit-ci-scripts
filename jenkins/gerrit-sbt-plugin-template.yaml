@@ -28,6 +28,7 @@
             - origin/{branch}
           submodule:
             recursive: true
+            parent-credentials: true
           skip-tag: true
           do-not-fetch-tags: true
     triggers:

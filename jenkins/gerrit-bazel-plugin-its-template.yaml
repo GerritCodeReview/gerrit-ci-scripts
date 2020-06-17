@@ -36,6 +36,7 @@
             - plugin/{branch}
           submodule:
             recursive: false
+            parent-credentials: true
           skip-tag: true
           do-not-fetch-tags: true
     triggers:

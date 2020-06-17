@@ -35,6 +35,7 @@
             - origin/{branch}
           submodule:
             recursive: true
+            parent-credentials: true
           skip-tag: true
     triggers:
       - pollscm:
