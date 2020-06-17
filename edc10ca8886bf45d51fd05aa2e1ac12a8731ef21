@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1ef17494_4c458922",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-17T21:20:46Z",
+      "side": 1,
+      "message": "See the explanation below.",
+      "parentUuid": "8aa5741c_c15666a0",
+      "range": {
+        "startLine": 40,
+        "startChar": 41,
+        "endLine": 40,
+        "endChar": 69
+      },
+      "revId": "edc10ca8886bf45d51fd05aa2e1ac12a8731ef21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cd165536_e782470f",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "daf8a679_0f843ab5",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-17T21:20:46Z",
+      "side": 1,
+      "message": "That\u0027s the point: we do not want to fail the script when the test returns the exist code \u003c\u003e 0 but rather \"remember\" the failure in a flag-file. That is needed for displaying it at the end of the build.",
+      "parentUuid": "cd165536_e782470f",
+      "range": {
+        "startLine": 43,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 4
+      },
+      "revId": "edc10ca8886bf45d51fd05aa2e1ac12a8731ef21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a7326401_39acae03",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2020-05-27T04:50:38Z",
       "side": 1,
       "message": "Here and in all future addition to that file you would have to add (totally unneeded, see my previous comments):\n\n  [ ! -f ~/polygerrit-failed ] \u0026\u0026 ....",
+      "range": {
+        "startLine": 49,
+        "startChar": 2,
+        "endLine": 55,
+        "endChar": 4
+      },
+      "revId": "edc10ca8886bf45d51fd05aa2e1ac12a8731ef21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f0c736b7_6d77c95b",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-17T21:20:46Z",
+      "side": 1,
+      "message": "This SAUCE_* part was added by the PolyGerrit Team: we never used it though and we could just get rid of it. Follow-up change?",
+      "parentUuid": "a7326401_39acae03",
       "range": {
         "startLine": 49,
         "startChar": 2,
