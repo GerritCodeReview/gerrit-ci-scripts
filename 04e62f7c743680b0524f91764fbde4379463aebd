@@ -88,6 +88,24 @@
       "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "835e8b90_688067ff",
+        "filename": "jenkins/gerrit-bazel-plugin-image-diff.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-18T17:25:30Z",
+      "side": 1,
+      "message": "\u003e thats a really good question, I am not sure how that process looks like in upstream tbh. As in gerrit-review, we always serve all generated artifacts on cdn and also gerrit server. so in your example it will be served at:  `https://gerrit-review.googlesource.com/plugins/x/static/` from gerrit server, including all of them: foo.html, bar.js, myasset.txt, another-asset.png\n\nI believe that when you have multiple assets to be served, then *you have to* have a .jar file packaging. The plain HTML and JS is allowed only when you don\u0027t have additional assets as a shortcut for avoiding packages for the simplest plugins.\n\nSo I believe that if we include the HTML+JS template we should be good for covering the simplest front-end plugins IMHO.",
+      "parentUuid": "d27301ba_0de7ff0d",
+      "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
