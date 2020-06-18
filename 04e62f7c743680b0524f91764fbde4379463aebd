@@ -34,6 +34,24 @@
       "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0811cd5a_2ac0a8af",
+        "filename": "jenkins/gerrit-bazel-plugin-image-diff.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-06-18T16:39:15Z",
+      "side": 1,
+      "message": "as of now, we always generate a html and js with same name, but most of the polymer 3 plugins now can just have the js file.\n\nSome plugins actually have their own assets they want to be included, like codemirror as some part of the code are lazy loaded, some may even have some images that they want to be included and its doable as well. so it will be a bit hard to find a good pattern.",
+      "parentUuid": "1c1c90f0_708dca5a",
+      "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
