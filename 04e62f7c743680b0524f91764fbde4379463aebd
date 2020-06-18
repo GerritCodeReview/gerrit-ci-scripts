@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "664549b8_caabdfac",
+        "filename": "jenkins/gerrit-bazel-plugin-image-diff.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-18T16:18:58Z",
+      "side": 1,
+      "message": "Is this really a completely atypical plugin? Or are the front-end plugins very likely to respect this structure? (one HTML + one JS?)\n\nIf the structure is quite common, we could just make this template generic and include in the gerrit-bazel-plugin-template.yaml\n\nWDYT?",
+      "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
