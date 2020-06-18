@@ -70,6 +70,24 @@
       "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d27301ba_0de7ff0d",
+        "filename": "jenkins/gerrit-bazel-plugin-image-diff.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-06-18T17:21:51Z",
+      "side": 1,
+      "message": "thats a really good question, I am not sure how that process looks like in upstream tbh. As in gerrit-review, we always serve all generated artifacts on cdn and also gerrit server. so in your example it will be served at:  `https://gerrit-review.googlesource.com/plugins/x/static/` from gerrit server, including all of them: foo.html, bar.js, myasset.txt, another-asset.png",
+      "parentUuid": "9fec6ca8_da3db258",
+      "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
