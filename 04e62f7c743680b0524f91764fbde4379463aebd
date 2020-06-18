@@ -16,6 +16,24 @@
       "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c1c90f0_708dca5a",
+        "filename": "jenkins/gerrit-bazel-plugin-image-diff.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-06-18T16:31:05Z",
+      "side": 1,
+      "message": "Yes that is probably a good idea. I guess that there might be even more html-and js files, but wildcards should be fine.\n@Tao: Can you comment on how artifacts of pure UI plugins in general look like, so that we can find a good way to publish them?\nIf there are multiple files, it might be worth to zip them.",
+      "parentUuid": "664549b8_caabdfac",
+      "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
