@@ -52,6 +52,24 @@
       "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9fec6ca8_da3db258",
+        "filename": "jenkins/gerrit-bazel-plugin-image-diff.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-18T17:12:50Z",
+      "side": 1,
+      "message": "\u003e as of now, we always generate a html and js with same name, but most of the polymer 3 plugins now can just have the js file.\n\nAnd I guess in that case you just put the js file into the $GERRIT_SITE/plugins directory, correct?\n\n\u003e Some plugins actually have their own assets they want to be included, like codemirror as some part of the code are lazy loaded\n\ncodemirror is packaged as a single .jar, if I am not mistakend.\n\n\u003e some may even have some images that they want to be included and its doable as well. so it will be a bit hard to find a good pattern.\n\nLet\u0027s say that a plugin X has the following files:\nfoo.html\nbar.js\nmyasset.txt\nanother-asset.png\n\nHow the plugin is going to be packaged then? How is it getting deployed into the $GERRIT_SITE/plugins ?",
+      "parentUuid": "0811cd5a_2ac0a8af",
+      "revId": "04e62f7c743680b0524f91764fbde4379463aebd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
