@@ -6,6 +6,11 @@
           timeout: 30
           fail: true
       - timestamps
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: gerrit.googlesource.com
+              username: GS_GIT_USER
+              password: GS_GIT_PASS
     properties:
       - build-discarder:
           days-to-keep: 20
@@ -35,6 +40,7 @@
       - pollscm:
           cron: 'H/50 * * * *'
     builders:
+      - set-git-credentials
       - shell:
           !include-raw: gerrit-sbt-build-branch-plugin.sh
     publishers:
@@ -46,6 +52,7 @@
     description: 'Plugin {name} {branch} branch build with Sbt on top of Gerrit {gerrit-branch}'
     defaults: sbt-build-defaults
     builders:
+      - set-git-credentials
       - shell:
           !include-raw: gerrit-sbt-build-branch-plugin.sh
 
@@ -54,5 +61,6 @@
     description: 'Plugin {name} build with Sbt on top of Gerrit {branch}'
     defaults: sbt-build-defaults
     builders:
+      - set-git-credentials
       - shell:
           !include-raw: gerrit-sbt-build-plugin.sh
