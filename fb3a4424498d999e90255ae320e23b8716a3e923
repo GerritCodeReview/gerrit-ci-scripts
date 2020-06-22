@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "372ca75f_3fc25ee9",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-22T11:39:36Z",
+      "side": 1,
+      "message": "Why you need this as artifact? Instead of asking git for the version, you could extract MANIFEST.MV from the JAR and include it as root based artifact. In reviewers plugin, for example we have this content:\n\n  Manifest-Version: 1.0\n  Gerrit-ApiType: plugin\n  Gerrit-ApiVersion: 3.3.0-SNAPSHOT\n  Implementation-Version: fe40508900\n  Gerrit-Module: com.googlesource.gerrit.plugins.reviewers.Module\n  Gerrit-PluginName: reviewers\n  Created-By: singlejar\n  Main-Class: Dummy\n\nWouldn\u0027t the line: \"Implementation-Version: fe40508900\" also be included afher the above section is removed entirely?\n\nOne reason we donÄt want to mess around with the stamping version in the CI, is because plugin may want to implement some more sophisticated logic, like for it-base/its-phabriactor plugin.\n\nAlso we don\u0027t touch stamping in release.war, why would we overwrite stamp in plugin build tool chain?",
+      "range": {
+        "startLine": 31,
+        "startChar": 27,
+        "endLine": 31,
+        "endChar": 76
+      },
+      "revId": "fb3a4424498d999e90255ae320e23b8716a3e923",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71adc29e_a6826fb3",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-22T11:39:36Z",
+      "side": 1,
+      "message": "Unrelated to this change, but why this is done here at all? All plugins that are built in tree are using workspace_status command to implement stamping. Can these lines just be removed entirely. Cn you remove upgraduing MANIFEST command in the CI?",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 2
+      },
+      "revId": "fb3a4424498d999e90255ae320e23b8716a3e923",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
