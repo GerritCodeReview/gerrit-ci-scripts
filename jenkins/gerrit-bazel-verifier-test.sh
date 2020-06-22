@@ -45,7 +45,7 @@ then
     echo 'Not running local tests because env var "DISPLAY" is not set.'
   else
     echo 'Running local tests...'
-    bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+    bash ./polygerrit-ui/app/run_test.sh
   fi
 
   echo 'Running Documentation tests...'
@@ -56,6 +56,6 @@ then
     echo 'Not running on Sauce Labs because env vars are not set.'
   else
     echo 'Running tests on Sauce Labs...'
-    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh
   fi
 fi
