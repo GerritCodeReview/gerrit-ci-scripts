@@ -40,6 +40,10 @@ fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
 then
+
+  echo 'Running Documentation tests...'
+  bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
+
   if [ -z "$DISPLAY" ]
   then
     echo 'Not running local tests because env var "DISPLAY" is not set.'
@@ -47,9 +51,6 @@ then
     echo 'Running local tests...'
     bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
   fi
-
-  echo 'Running Documentation tests...'
-  bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
   then
