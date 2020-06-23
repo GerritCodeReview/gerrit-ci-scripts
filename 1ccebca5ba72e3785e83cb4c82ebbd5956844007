@@ -81,6 +81,24 @@
       "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3dff0c7_89f2d07e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-23T15:17:27Z",
+      "side": 1,
+      "message": "There is meta-data needed to discover the plugin, and that needs to be exposed *outside* the .jar, for allowing to download a minimal set of information:\n- version of the plugin\n- JSON details of the plugin metadata (e.g. description)",
+      "parentUuid": "bcdaee30_9aedeec9",
+      "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
