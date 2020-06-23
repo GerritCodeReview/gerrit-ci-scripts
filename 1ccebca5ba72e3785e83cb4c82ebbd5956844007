@@ -63,6 +63,24 @@
       "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcdaee30_9aedeec9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-23T14:45:13Z",
+      "side": 1,
+      "message": "Yes. There were multiple fixes. And the script was refactored and migrated from bash to Python to better portable. Can you answer the question. Why:\n\n  echo \"$PLUGIN_VERSION\" \u003e bazel-bin/plugins/{name}/$(basename $JAR-version)\n\nwe need that? plugin-manager plugin?",
+      "parentUuid": "b99c0bf7_5fd4fbaa",
+      "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
