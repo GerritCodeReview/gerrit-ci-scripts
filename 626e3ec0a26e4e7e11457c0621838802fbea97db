@@ -22,6 +22,30 @@
       "revId": "626e3ec0a26e4e7e11457c0621838802fbea97db",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe1c8c36_381f8bf0",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-23T10:18:13Z",
+      "side": 0,
+      "message": "It is probably needed. May be plugin-manager using it?",
+      "parentUuid": "6211aa69_c66e02fb",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 76
+      },
+      "revId": "626e3ec0a26e4e7e11457c0621838802fbea97db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
