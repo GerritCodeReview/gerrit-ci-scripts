@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "45b5efd4_44a9e770",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1012155
+      },
+      "writtenOn": "2020-06-23T10:14:05Z",
+      "side": 1,
+      "message": "This very general commit message made me thing that we remove the manual\nversion stamping from all plugin artifacts. But there are many other\nplugin build scripts that do not have the manual version stamping removed.\nThere\u0027s for example `gerrit-bazel-build-plugin-branch.sh` But in general,\nall the following look affected by manual version stamping\n\n$ grep Implementation-Version:.*MANIFEST jenkins/*.sh\njenkins/gerrit-bazel-build-account-plugin.sh:    echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-bazel-build-its-plugin-branch.sh:    echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-bazel-build-its-plugin.sh:    echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-bazel-build-owners-plugin-branch.sh:    echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-bazel-build-owners-plugin.sh:    echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-bazel-build-plugin-branch.sh:    echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-bazel-build-plugin-manual.sh:    echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-bazel-build-plugin.sh:  echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-mvn-build-plugin.sh:  echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-sbt-build-app.sh:  echo -e \"Implementation-Version: $VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-sbt-build-branch-plugin.sh:  echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\njenkins/gerrit-sbt-build-plugin.sh:  echo -e \"Implementation-Version: $PLUGIN_VERSION\" \u003e MANIFEST.MF\n\nNot saying that we have to remove it from all of them. And maybe (not sure) the `-mvn-` and `-sbt-` scripts\nstill need it. But at least `jenkins/gerrit-bazel-build-plugin-branch.sh` is affected just the same.",
+      "range": {
+        "startLine": 7,
+        "startChar": 7,
+        "endLine": 7,
+        "endChar": 57
+      },
+      "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}

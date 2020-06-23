@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6211aa69_c66e02fb",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1012155
+      },
+      "writtenOn": "2020-06-23T10:14:05Z",
+      "side": 0,
+      "message": "When removing this whole block, we also remove the output file\n\n  bazel-bin/plugins/{name}/$(basename $JAR-version)\n\nwhich is generaned by this last line. This file is not needed by any subsequent tasks, is it?",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 76
+      },
+      "revId": "626e3ec0a26e4e7e11457c0621838802fbea97db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
