@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "7e050935_0002a41f",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-23T12:45:25Z",
+      "side": 1,
+      "message": "If you would like all plugins to be stamped with the Gerrit version, yes, you can go for it, be my guest :-)\n\nPossibly you would like to see the version of the *plugin* rather than the Gerrit version ;-) That\u0027s the reason why the stamping is redone.\n\nWhen we fix the stamping in the Bazel build, then we can remove this workaround, but not before that please :-)",
+      "parentUuid": "869eeaa1_74d97551",
+      "range": {
+        "startLine": 31,
+        "startChar": 27,
+        "endLine": 31,
+        "endChar": 76
+      },
+      "revId": "fb3a4424498d999e90255ae320e23b8716a3e923",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "71adc29e_a6826fb3",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
         "patchSetId": 4
