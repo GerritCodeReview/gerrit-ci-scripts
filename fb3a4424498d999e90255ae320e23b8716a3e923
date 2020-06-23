@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "adda0ab7_e6a9f970",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-23T13:07:32Z",
+      "side": 1,
+      "message": "Can we move this discussion to the coresponding change: Iab3c77a856c35e5411e98aa0a4c16523f05fae72 ?\nCan you test that removed CI stamping change on say reviewer@HEAD plugin on the CI and demonstrate, that the stamping is wrong? Also, can you point me to any open issues in gerrit issue tracker that are claiming that plugin stamping for Bazel plugins is broken? Or is this a CI specific issue?\n\nThe code that do stamping is here: [1].\n\n[1] https://gerrit.googlesource.com/gerrit/+/refs/heads/master/tools/workspace_status.py#39",
+      "parentUuid": "7e050935_0002a41f",
+      "range": {
+        "startLine": 31,
+        "startChar": 27,
+        "endLine": 31,
+        "endChar": 76
+      },
+      "revId": "fb3a4424498d999e90255ae320e23b8716a3e923",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "71adc29e_a6826fb3",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
         "patchSetId": 4
