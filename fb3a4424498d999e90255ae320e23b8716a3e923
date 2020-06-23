@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "be0b1207_c07aabf3",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1012155
+      },
+      "writtenOn": "2020-06-23T09:37:41Z",
+      "side": 1,
+      "message": "I\u0027m with davido on this one.\nBut it\u0027s merged already, so we can adjust later on.\nOnce (if?) the `workspace_status_release.py` changes got merged, maybe it would\nbe an option to switch to that for CI and remove the manual Manifest rewriting\nfor CI altogether?",
+      "parentUuid": "372ca75f_3fc25ee9",
+      "range": {
+        "startLine": 31,
+        "startChar": 27,
+        "endLine": 31,
+        "endChar": 76
+      },
+      "revId": "fb3a4424498d999e90255ae320e23b8716a3e923",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "71adc29e_a6826fb3",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
         "patchSetId": 4
