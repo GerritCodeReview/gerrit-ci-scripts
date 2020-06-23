@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "869eeaa1_74d97551",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1012155
+      },
+      "writtenOn": "2020-06-23T10:14:50Z",
+      "side": 1,
+      "message": "Sure, I\u0027m with you on that. I see that you beat me to uploading such a change :-)\n\nIab3c77a856c35e5411e98aa0a4c16523f05fae72",
+      "parentUuid": "8cc3f288_c12d86f4",
+      "range": {
+        "startLine": 31,
+        "startChar": 27,
+        "endLine": 31,
+        "endChar": 76
+      },
+      "revId": "fb3a4424498d999e90255ae320e23b8716a3e923",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "71adc29e_a6826fb3",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
         "patchSetId": 4
