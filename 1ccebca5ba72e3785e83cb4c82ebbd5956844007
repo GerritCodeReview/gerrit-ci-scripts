@@ -46,6 +46,23 @@
       "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b99c0bf7_5fd4fbaa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-23T14:40:17Z",
+      "side": 1,
+      "message": "Has the stamping being fixed in Bazel? This workaround was introduced because Bazel was stamping all plugins with the Gerrit version. That was a long ago though and situation may have improved since then.",
+      "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
