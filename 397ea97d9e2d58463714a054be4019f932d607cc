@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6dc1b58_e6177b43",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1086906
+      },
+      "writtenOn": "2020-06-24T13:54:00Z",
+      "side": 1,
+      "message": "\u003e Patch Set 2:\n\u003e \n\u003e \u003e Patch Set 2:\n\u003e \u003e \n\u003e \u003e \u003e Patch Set 2:\n\u003e \u003e \u003e \n\u003e \u003e \u003e Hey Tao, have you heard about the Chrome 80/81 crashes on Debian linux?\n\u003e \u003e \u003e I believe that was the issue.\n\u003e \u003e \u003e \n\u003e \u003e \u003e I haven\u0027t tested enough on the CI before rolling it out.\n\u003e \u003e \u003e Going to be more cautious this time, but at least with the flexibility of adding extra Chrome versions more easily this time.\n\u003e \u003e \n\u003e \u003e not yet, do you have any links to the crash issue ?\n\u003e \n\u003e https://support.google.com/chrome/thread/10635049\n\nsince 83 is out, maybe give a try on that ? :) ",
+      "revId": "397ea97d9e2d58463714a054be4019f932d607cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
