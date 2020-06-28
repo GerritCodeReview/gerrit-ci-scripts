@@ -117,6 +117,24 @@
       "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c1f82a6_0cb89cc5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-28T21:29:11Z",
+      "side": 1,
+      "message": "\u003e See this CL: [1], with this Zuul-Job:[2], and this published final artifact: [3]m that contains this META-INF/MANIFEST.MF file:\n\u003e \n\u003e   Implementation-Version: 4a727dc\n\u003e   Manifest-Version: 1.0\n\u003e   Created-By: singlejar\n\u003e   Main-Class: Dummy\n\u003e   Gerrit-PluginName: gerrit-oauth-provider\n\u003e   Gerrit-Module: com.googlesource.gerrit.plugins.oauth.Module\n\u003e   Gerrit-HttpModule: com.googlesource.gerrit.plugins.oauth.HttpModule\n\u003e   Gerrit-InitStep: com.googlesource.gerrit.plugins.oauth.InitOAuth\n\u003e   Implementation-Title: Gerrit OAuth authentication provider\n\u003e   Implementation-URL: https://github.com/davido/gerrit-oauth-provider\n\u003e   Gerrit-ApiType: plugin\n\u003e   Gerrit-ApiVersion: 2.16.22-SNAPSHOT\n\u003e \n\u003e Can we remove it now? You still have not answered my question,\n\nI wrote:\nThere is meta-data needed to discover the plugin, and that needs to be exposed *outside* the .jar, for allowing to download a minimal set of information:\n\n- version of the plugin\n- JSON details of the plugin metadata (e.g. description)\n\nThose details are fetched for composing the data in the plugin-manager GUI.\n\n\u003e what is hand made JSON artifact is used for and what would break, if we submit this change as is?\n\nYes, the extraction of the version outside the jar is needed.",
+      "parentUuid": "cb0cdbd9_65653d8c",
+      "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
