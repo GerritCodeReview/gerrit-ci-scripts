@@ -99,6 +99,24 @@
       "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cb0cdbd9_65653d8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-28T20:43:58Z",
+      "side": 1,
+      "message": "See this CL: [1], with this Zuul-Job:[2], and this published final artifact: [3]m that contains this META-INF/MANIFEST.MF file:\n\n  Implementation-Version: 4a727dc\n  Manifest-Version: 1.0\n  Created-By: singlejar\n  Main-Class: Dummy\n  Gerrit-PluginName: gerrit-oauth-provider\n  Gerrit-Module: com.googlesource.gerrit.plugins.oauth.Module\n  Gerrit-HttpModule: com.googlesource.gerrit.plugins.oauth.HttpModule\n  Gerrit-InitStep: com.googlesource.gerrit.plugins.oauth.InitOAuth\n  Implementation-Title: Gerrit OAuth authentication provider\n  Implementation-URL: https://github.com/davido/gerrit-oauth-provider\n  Gerrit-ApiType: plugin\n  Gerrit-ApiVersion: 2.16.22-SNAPSHOT\n\nCan we remove it now? You still have not answered my question, what is hand made JSON artifact is used for and what would break, if we submit this change as is?\n\n[1] https://gerrit-review.googlesource.com/c/plugins/oauth/+/273552\n[2] https://ci.gerritcodereview.com/t/gerrit/build/dd68f7366121406bb3ab7df9f3c800e0\n[3] https://storage.googleapis.com/gerrit_zuul_logs2/52/273552/3/check/gerrit-plugin-build/dd68f73/artifacts/oauth.jar",
+      "parentUuid": "e3dff0c7_89f2d07e",
+      "revId": "1ccebca5ba72e3785e83cb4c82ebbd5956844007",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
