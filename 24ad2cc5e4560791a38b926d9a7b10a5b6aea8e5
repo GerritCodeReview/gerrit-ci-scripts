@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "acd4b472_94d9fd2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-30T10:21:59Z",
+      "side": 1,
+      "message": "It\u0027s still fixing only one build file. As pointed out by Christian all other places should be fixed as well.",
+      "revId": "24ad2cc5e4560791a38b926d9a7b10a5b6aea8e5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
