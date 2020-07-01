@@ -105,6 +105,24 @@
       "revId": "82f2b1d5d75ee2d6cb7c2b9315ac696ab22b5a7c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "deca8aec_05771281",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-01T14:11:06Z",
+      "side": 1,
+      "message": "\u003e In previous patch set I tried to remove:\n\u003e || touch ~/polygerrit-failed\n\nIf you remove that part, it won\u0027t be possible to get the test failure output.\n\nI also see that the log location has changed, we do need a follow-up to look for all test logs and get them into the output console.",
+      "parentUuid": "268271cb_8277d107",
+      "revId": "82f2b1d5d75ee2d6cb7c2b9315ac696ab22b5a7c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
