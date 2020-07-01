@@ -70,6 +70,41 @@
       "revId": "82f2b1d5d75ee2d6cb7c2b9315ac696ab22b5a7c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "268271cb_8277d107",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-01T14:09:07Z",
+      "side": 1,
+      "message": "Without the change, we have a verification failure but we can\u0027t access the test logs because the documentation test is executed.\n\nSee:\nTest cases: finished with 2 passing and 0 failing out of 2 test cases\nExecuted 0 out of 2 tests: 2 tests pass.\n\nNow running *with* this change ...",
+      "parentUuid": "573bfd29_9ec6aed7",
+      "revId": "82f2b1d5d75ee2d6cb7c2b9315ac696ab22b5a7c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35870e01_e728e182",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-01T14:09:07Z",
+      "side": 1,
+      "message": "This is working as expected.",
+      "revId": "82f2b1d5d75ee2d6cb7c2b9315ac696ab22b5a7c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
