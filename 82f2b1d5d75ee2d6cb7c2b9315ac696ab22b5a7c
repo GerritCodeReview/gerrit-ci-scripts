@@ -34,6 +34,24 @@
       "revId": "82f2b1d5d75ee2d6cb7c2b9315ac696ab22b5a7c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "573bfd29_9ec6aed7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-01T13:43:16Z",
+      "side": 1,
+      "message": "I\u0027ve created Change-Id: Iab073f7904 with a PolyGerrit test failure.\n\nLet\u0027s wait for the current CI to report the Verified -1 and see the situation *before* this change. Then we\u0027ll repeat the same *after* this change and compare the results.",
+      "parentUuid": "1e486741_1ecdee09",
+      "revId": "82f2b1d5d75ee2d6cb7c2b9315ac696ab22b5a7c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
