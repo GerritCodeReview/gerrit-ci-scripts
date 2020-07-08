@@ -135,7 +135,7 @@
     publishers:
       - archive:
           artifacts: >
-            gerrit/bazel-bin/*.war,gerrit/bazel-bin/plugins/*/*.jar,
+            gerrit/bazel-bin/release.war,
             gerrit/bazel-bin/*api/*api.jar,
             gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
