@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b08848a2_0ce4c015",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-07-08T07:04:20Z",
+      "side": 1,
+      "message": "Is this related to Issue 13111?",
+      "revId": "8b15369d7689147af2e78d19466ada3b7e3b6b37",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}

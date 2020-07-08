@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2bb9c726_8512fca9",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-template.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-07-08T07:04:20Z",
+      "side": 0,
+      "message": "Why are you removing 2.16 here? While it can be discussed to remove builds for 2.16, this should be done in a separate change.",
+      "revId": "827b185d2a4d3373b123d50735c7e66023ec8035",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
