@@ -16,6 +16,24 @@
       "revId": "827b185d2a4d3373b123d50735c7e66023ec8035",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "88e1fc8d_598a88af",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-template.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-08T07:39:16Z",
+      "side": 0,
+      "message": "I was thinking: if we remove it from very new branches, let us removed it from EOL branches as well? There is no PG development taking place on stable-2.16 anyway?",
+      "parentUuid": "2bb9c726_8512fca9",
+      "revId": "827b185d2a4d3373b123d50735c7e66023ec8035",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }

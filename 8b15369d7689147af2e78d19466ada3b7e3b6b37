@@ -16,6 +16,24 @@
       "revId": "8b15369d7689147af2e78d19466ada3b7e3b6b37",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d300f83a_3e0f37c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-08T07:39:16Z",
+      "side": 1,
+      "message": "It is related rather to removal of disabled Polymer template tests, see change 274531.",
+      "parentUuid": "b08848a2_0ce4c015",
+      "revId": "8b15369d7689147af2e78d19466ada3b7e3b6b37",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
