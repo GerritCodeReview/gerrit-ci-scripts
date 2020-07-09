@@ -87,6 +87,30 @@
       "revId": "da0e7ec7fa9e09f014bc315a187f27678d6417aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "824b7ca2_82b50ab7",
+        "filename": "jenkins/gerrit-bazel-cat-test-log.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-09T14:20:08Z",
+      "side": 1,
+      "message": "cat $(find ~/.cache/bazel/_bazel_jenkins -name test.log) should just be fine: we do know there is at least one test.log because the PolyGerrit tests failed.",
+      "parentUuid": "ce45acc2_633b5d87",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 64
+      },
+      "revId": "da0e7ec7fa9e09f014bc315a187f27678d6417aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
