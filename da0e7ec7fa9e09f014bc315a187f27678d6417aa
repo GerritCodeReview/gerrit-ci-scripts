@@ -39,6 +39,30 @@
       "revId": "da0e7ec7fa9e09f014bc315a187f27678d6417aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb2b8eab_707de392",
+        "filename": "jenkins/gerrit-bazel-cat-test-log.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-09T09:01:43Z",
+      "side": 1,
+      "message": "xargs would only make sense if we would have *a lot* test.log files:\n\n  cat $(find /Library/ 2\u003e\u0026-) \u003e/dev/null\n  -sh: /bin/cat: Argument list too long\n\nbut we would only have one or two, so it shouldn\u0027t be needed?",
+      "parentUuid": "362688e4_fafc6cd1",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 64
+      },
+      "revId": "da0e7ec7fa9e09f014bc315a187f27678d6417aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
