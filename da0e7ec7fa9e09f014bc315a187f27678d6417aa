@@ -63,6 +63,30 @@
       "revId": "da0e7ec7fa9e09f014bc315a187f27678d6417aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce45acc2_633b5d87",
+        "filename": "jenkins/gerrit-bazel-cat-test-log.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-09T09:15:02Z",
+      "side": 1,
+      "message": "Or even:\n\n  logPaths\u003d$(find ~/.cache/bazel/_bazel_jenkins -name test.log)\n  [ -n \"$logPaths\" ] \u0026\u0026 cat $logPaths\n\n^^^ No log files found, not cat call.",
+      "parentUuid": "fb2b8eab_707de392",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 64
+      },
+      "revId": "da0e7ec7fa9e09f014bc315a187f27678d6417aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
