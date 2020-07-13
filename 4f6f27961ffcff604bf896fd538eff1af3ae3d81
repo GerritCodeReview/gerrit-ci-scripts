@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d9e15d27_8d6f73d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-07-13T16:14:01Z",
+      "side": 1,
+      "message": "VR+1 not in CI: this branch passed plugin building and testing locally.",
+      "revId": "4f6f27961ffcff604bf896fd538eff1af3ae3d81",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
