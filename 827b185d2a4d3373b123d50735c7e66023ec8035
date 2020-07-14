@@ -34,6 +34,24 @@
       "revId": "827b185d2a4d3373b123d50735c7e66023ec8035",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd0a0d06_4aae2de8",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-template.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-07-14T14:50:38Z",
+      "side": 0,
+      "message": "The last change in the polygerrit-ui dir was on July 6th for the stale-2.16 branch [1]. There are still smaller changes and fixes, so I think as long as we still provide builds and verifications on the CI, these tests should still run, as the developer would expect.\nI still think, if we remove stable-2.16 somewhere in the CI, we should stop building/verifying it completely.\n\n[1] https://gerrit-review.googlesource.com/q/project:gerrit+branch:stable-2.16+file:polygerrit-ui",
+      "parentUuid": "88e1fc8d_598a88af",
+      "revId": "827b185d2a4d3373b123d50735c7e66023ec8035",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
