@@ -52,6 +52,24 @@
       "revId": "345b93af69fffca0d24b59fb442b6856cfb9c701",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc6665db_9bb7ff61",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-15T11:02:07Z",
+      "side": 1,
+      "message": "\u003e I am missing something: why would we keep tests that are not meant to be executed?\n\nWe don\u0027t keep them. They are dead. But this is also chicken and egg problem: Because CI is executing the tests, there must be coordnitaion with removing them. First remove the Ci, then remove the dead test.\n\nThis series is doing both: CI and test removal. See topic:\n\n  https://gerrit-review.googlesource.com/q/topic:remove_template_tests",
+      "parentUuid": "f4a0292d_1c81dfb7",
+      "revId": "345b93af69fffca0d24b59fb442b6856cfb9c701",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
