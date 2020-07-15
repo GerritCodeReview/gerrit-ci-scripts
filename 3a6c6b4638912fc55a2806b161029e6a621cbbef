@@ -39,6 +39,24 @@
       "revId": "3a6c6b4638912fc55a2806b161029e6a621cbbef",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "49b32ad7_5eca4bb4",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-15T13:52:39Z",
+      "side": 1,
+      "message": "The merge commit detection logic is in the pipeline already:\n\n    def isMerge \u003d changedFiles.contains(\"/MERGE_LIST\")\n    if(isMerge) {\n        println \"Merge commit detected, adding \u0027polygerrit\u0027 validation...\"\n        Builds.modes +\u003d \"polygerrit\"\n    }",
+      "parentUuid": "94e29ec6_62788dab",
+      "revId": "3a6c6b4638912fc55a2806b161029e6a621cbbef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
