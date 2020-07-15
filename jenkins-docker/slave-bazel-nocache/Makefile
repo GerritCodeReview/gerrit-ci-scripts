@@ -3,7 +3,7 @@ include ../chrome-vers.mk
 NO_CACHE=false
 IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-stretch-nocache
 BAZEL_VER=3.1.0
-BUILDIFIER_VER=3.2.1
+BUILDIFIER_VER=3.3.0
 BAZELISK_VER=1.5.0
 NODE_VER=10
 WCT_VER=6.8.0
