@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e55175f_6fa0eab4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-15T13:48:52Z",
+      "side": 1,
+      "message": "explicitly",
+      "range": {
+        "startLine": 9,
+        "startChar": 47,
+        "endLine": 9,
+        "endChar": 58
+      },
+      "revId": "3a6c6b4638912fc55a2806b161029e6a621cbbef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94e29ec6_62788dab",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-15T13:48:52Z",
+      "side": 1,
+      "message": "What about pipeline logic? Should it also be adapted?\n\n    def polygerritFiles \u003d changedFiles.findAll { it.startsWith(\"polygerrit-ui\") ||\t\t\n        it.startsWith(\"lib/js\") }\n\n    def bazelFiles \u003d changedFiles.findAll { it \u003d\u003d \"WORKSPACE\" || it.endsWith(\"BUILD\") ||\n        it.endsWith(\".bzl\") }\n\t\t\n    if(polygerritFiles.size() \u003e 0) {\n        if(changedFiles.size() \u003d\u003d polygerritFiles.size() \u0026\u0026 bazelFiles.isEmpty()) {\n            println \"Only PolyGerrit UI changes detected, skipping other test modes...\"\n            Builds.modes \u003d [\"polygerrit\"]\n        } else {\n            println \"PolyGerrit UI changes detected, adding \u0027polygerrit\u0027 validation...\"\n            Builds.modes +\u003d \"polygerrit\"\n        }\n    }",
+      "revId": "3a6c6b4638912fc55a2806b161029e6a621cbbef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
