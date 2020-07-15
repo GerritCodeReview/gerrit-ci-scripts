@@ -70,6 +70,24 @@
       "revId": "345b93af69fffca0d24b59fb442b6856cfb9c701",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dff1e7d9_f031cb08",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-15T11:03:46Z",
+      "side": 1,
+      "message": "@Dmitrii are you planning to port the tests to Polymer 2/3? Or just remove them?\n\nIf the plan is to port them, then we could keep running the shell-script and, when they\u0027ll be back, they\u0027ll be executed anyway.\n\nOr we can just remove the invocation of the script, and removing the tests and the script from stable-3.2 onwards. WDYT?",
+      "parentUuid": "f4a0292d_1c81dfb7",
+      "revId": "345b93af69fffca0d24b59fb442b6856cfb9c701",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
