@@ -57,6 +57,24 @@
       "revId": "3a6c6b4638912fc55a2806b161029e6a621cbbef",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f768e504_9a873a00",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-15T13:55:29Z",
+      "side": 1,
+      "message": "Apparently, I was looking at the old code.",
+      "parentUuid": "49b32ad7_5eca4bb4",
+      "revId": "3a6c6b4638912fc55a2806b161029e6a621cbbef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
