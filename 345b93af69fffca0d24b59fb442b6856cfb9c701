@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d2a73bd6_a3c65b02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-15T10:53:27Z",
+      "side": 1,
+      "message": "I am missing something: why would we keep tests that are not meant to be executed?\nIf they don\u0027t make sense anymore on older branches, I am also fine to remove the call to the tests from the CI job of course.",
+      "revId": "345b93af69fffca0d24b59fb442b6856cfb9c701",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
