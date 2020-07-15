@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "57862981_e8467fc4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-15T11:13:01Z",
+      "side": 1,
+      "message": "nit: based on the discussion, the tests are dead and there is no alternative approach, correct?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "ad2bdab151c73d41e9e98666c4691f5940c0ff5d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3e532b06_8fe432cc",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 3
