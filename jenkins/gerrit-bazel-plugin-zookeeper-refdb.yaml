@@ -4,7 +4,17 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-            - stable-3.2
             - stable-3.1
             - stable-3.0
+      - 'plugin-{name}-bazel-{branch}':
+          targets: "plugins/{name}:{name} plugins/{name}:{name}-zk-3.5"
+          branch:
+            - stable-3.2
+          publishers:
+            - archive:
+                artifacts: >
+                  bazel-bin/plugins/{name}/{name}.jar,
+                  bazel-bin/plugins/{name}/{name}.jar-version,
+                  bazel-bin/plugins/{name}/{name}.json,
+                  bazel-bin/plugins/{name}/{name}-zk-3.5.jar
       - 'plugin-{name}-verifier'
