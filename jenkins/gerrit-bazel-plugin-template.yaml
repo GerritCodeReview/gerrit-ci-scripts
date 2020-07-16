@@ -54,6 +54,7 @@
     node: bazel-debian
     class: plugins
     project-name: plugins%2F{name}
+    extra-artifacts:
     scm:
       - git:
           remotes:
@@ -79,7 +80,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts}
 
 - job-template:
     name: 'ui-plugin-{name}-bazel-{branch}'
@@ -88,6 +90,7 @@
     node: bazel-debian
     class: plugins
     project-name: plugins%2F{name}
+    extra-artifacts:
     scm:
       - git:
           remotes:
@@ -113,7 +116,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.js,
             bazel-bin/plugins/{name}/{name}.html,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts}
 
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
@@ -121,6 +125,7 @@
     node: bazel-debian
     description: 'Plugin {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
+    extra-artifacts:
     scm:
       - git:
           remotes:
@@ -139,7 +144,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts}
 
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
@@ -147,6 +153,7 @@
     node: bazel-debian
     description: 'Lib module {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
+    extra-artifacts:
     scm:
       - git:
           remotes:
@@ -165,7 +172,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts}
 
 - job-template:
     name: 'module-{name}-bazel-{branch}'
@@ -173,6 +181,7 @@
     node: bazel-debian
     description: 'Lib module {name} {branch} branch Bazel build'
     defaults: plugin-template-bazel
+    extra-artifacts:
     scm:
       - git:
           remotes:
@@ -195,7 +204,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts}
 
 - view-template:
     name: 'Plugins-{branch}'
