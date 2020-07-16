@@ -76,10 +76,7 @@
       - shell: !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
-          artifacts: >
-            bazel-bin/plugins/{name}/{name}.jar,
-            bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+          artifacts: {artifacts|foo-value}
 
 - job-template:
     name: 'ui-plugin-{name}-bazel-{branch}'
