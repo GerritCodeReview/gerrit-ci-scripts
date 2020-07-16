@@ -79,7 +79,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts|}
 
 - job-template:
     name: 'ui-plugin-{name}-bazel-{branch}'
@@ -113,7 +114,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.js,
             bazel-bin/plugins/{name}/{name}.html,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts|}
 
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
@@ -139,7 +141,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts|}
 
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
@@ -165,7 +168,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts|}
 
 - job-template:
     name: 'module-{name}-bazel-{branch}'
@@ -195,7 +199,8 @@
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts|}
 
 - view-template:
     name: 'Plugins-{branch}'
