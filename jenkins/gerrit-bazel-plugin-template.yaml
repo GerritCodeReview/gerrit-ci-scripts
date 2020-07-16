@@ -54,6 +54,7 @@
     node: bazel-debian
     class: plugins
     project-name: plugins%2F{name}
+    artifacts: 'foo-default'
     scm:
       - git:
           remotes:
@@ -76,10 +77,7 @@
       - shell: !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
-          artifacts: >
-            bazel-bin/plugins/{name}/{name}.jar,
-            bazel-bin/plugins/{name}/{name}.jar-version,
-            bazel-bin/plugins/{name}/{name}.json
+          artifacts: '{artifacts}'
 
 - job-template:
     name: 'ui-plugin-{name}-bazel-{branch}'
