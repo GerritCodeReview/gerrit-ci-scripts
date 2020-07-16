@@ -4,7 +4,15 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-            - stable-3.2
             - stable-3.1
             - stable-3.0
+      - 'plugin-{name}-bazel-{branch}':
+          targets: "plugins/{name}:{name} plugins/{name}:{name}-zk-3.5"
+          branch:
+            - stable-3.2
+          artifacts: >
+            bazel-bin/plugins/zookeeper-refdb/zookeeper-refdb.jar,
+            bazel-bin/plugins/zookeeper-refdb/zookeeper-refdb.jar-version,
+            bazel-bin/plugins/zookeeper-refdb/zookeeper-refdb.json,
+            bazel-bin/plugins/zookeeper-refdb/zookeeper-refdb-zk-3.5.jar
       - 'plugin-{name}-verifier'
