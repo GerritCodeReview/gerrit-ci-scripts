@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91339b3a_11968f75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-16T17:19:14Z",
+      "side": 1,
+      "message": "We had a \u0027find\u0027 before, but because of Issue 12817, we had to remove it.\nCan you suggest a way to support multiple targets and, at the same time, won\u0027t risk to get the wrong file?",
+      "revId": "8ff9622b0aef4c0fd79c4f114b9bfcd402458ae3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
