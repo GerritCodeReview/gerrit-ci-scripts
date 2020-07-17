@@ -22,6 +22,30 @@
       "revId": "4f6f27961ffcff604bf896fd538eff1af3ae3d81",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d0b2263f_77962e11",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-17T07:29:01Z",
+      "side": 0,
+      "message": "Yeah, there is only one jar for this plugin.",
+      "parentUuid": "5dd00d34_635f747d",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 63
+      },
+      "revId": "4f6f27961ffcff604bf896fd538eff1af3ae3d81",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
