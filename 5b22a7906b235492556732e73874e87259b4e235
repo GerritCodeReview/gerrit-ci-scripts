@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9782f3ca_c39454f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-17T07:38:36Z",
+      "side": 1,
+      "message": "Something is wrong: the plugin gets stamped with the \"-dirty\" suffix, which did not happen before.\n\nE.g.: 4e8769c44d-dirty",
+      "revId": "5b22a7906b235492556732e73874e87259b4e235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
