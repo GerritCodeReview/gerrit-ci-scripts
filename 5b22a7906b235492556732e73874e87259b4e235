@@ -106,6 +106,24 @@
       "revId": "5b22a7906b235492556732e73874e87259b4e235",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "39b561ed_9c1d857b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-17T12:58:43Z",
+      "side": 1,
+      "message": "\u003e Could we clone (recoursively) gerrit to gerrit sub-directory, and then move the current working directory to plugins directory and drop git read-tree entirely?\n\nOf course `ln -s` to plugins directory would work too.",
+      "parentUuid": "235cca2d_5c5512a0",
+      "revId": "5b22a7906b235492556732e73874e87259b4e235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
