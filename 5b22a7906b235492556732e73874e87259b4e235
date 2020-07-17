@@ -16,6 +16,24 @@
       "revId": "5b22a7906b235492556732e73874e87259b4e235",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e5e2fbc0_9b58bd2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-17T07:45:34Z",
+      "side": 1,
+      "message": "What plugin? You are copying stuff in plugin\u0027s tree?",
+      "parentUuid": "9782f3ca_c39454f5",
+      "revId": "5b22a7906b235492556732e73874e87259b4e235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
