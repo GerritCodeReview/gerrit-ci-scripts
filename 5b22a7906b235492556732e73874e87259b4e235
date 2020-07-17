@@ -70,6 +70,24 @@
       "revId": "5b22a7906b235492556732e73874e87259b4e235",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a2733ce_5ce72364",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-17T12:49:30Z",
+      "side": 1,
+      "message": "You mean, cloning the same process that is done on the CI but on local Docker container? Let me try.",
+      "parentUuid": "a129dd06_3ef0d039",
+      "revId": "5b22a7906b235492556732e73874e87259b4e235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
