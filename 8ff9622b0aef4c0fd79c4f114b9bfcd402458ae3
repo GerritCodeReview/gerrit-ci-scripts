@@ -16,6 +16,24 @@
       "revId": "8ff9622b0aef4c0fd79c4f114b9bfcd402458ae3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a69f1b7_3c6b19ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-07-17T08:55:08Z",
+      "side": 1,
+      "message": "I had a look on that issue, problem is that we are copying jars from nested directories to bazel-bin/plugins/zookeeper-refdb/ I\u0027m not sure if that is needed. So we can do two things:\n1. Look for jars only in bazel-bin/plugins/zookeeper-refdb/ and skip subdirectories\n2. Do not copy jars to bazel-bin/plugins/zookeeper-refdb/ so basically remove this:\nDEST_JAR\u003dbazel-bin/plugins/{name}/$(basename $JAR)\n[ \"$JAR\" -ef \"$DEST_JAR\" ] || mv $JAR $DEST_JAR\n\nWDYT?",
+      "parentUuid": "91339b3a_11968f75",
+      "revId": "8ff9622b0aef4c0fd79c4f114b9bfcd402458ae3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
