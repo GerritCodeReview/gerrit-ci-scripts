@@ -88,6 +88,24 @@
       "revId": "5b22a7906b235492556732e73874e87259b4e235",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "235cca2d_5c5512a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-17T12:57:13Z",
+      "side": 1,
+      "message": "Have you noticed my last comment? The root cause is:\n\n  git read-tree -u --prefix\u003dplugins/{name} origin/{branch}\n\nThat\u0027s why under the directory plugin, there is gerrit core SHA1.\n\nThe standard build process for plugin should be:\n\n  $ cd workspace\n  $ git clone gerrit\n  $ cd plugins\n  $ git clone plugin-foo\n  $ cd ..\n  $ bazel build plugins/foo\n\nAs you can see, in the above command sequence under plugins directiory we would get SHA1 for plugin foo and not for gerrit.\n\nHow can we achive the same without:\n\n  git read-tree -u --prefix\u003dplugins/{name} origin/{branch}\n\n?\n\nCould we clone (recoursively) gerrit to gerrit sub-directory, and then move the current working directory to plugins directory and drop git read-tree entirely?",
+      "parentUuid": "7a2733ce_5ce72364",
+      "revId": "5b22a7906b235492556732e73874e87259b4e235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
