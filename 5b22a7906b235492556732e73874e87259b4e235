@@ -124,6 +124,24 @@
       "revId": "5b22a7906b235492556732e73874e87259b4e235",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e34f3adf_784224f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-17T13:16:37Z",
+      "side": 1,
+      "message": "Cool that you found the root cause. Do you still need me to do any further testing? I believe it would be best to address the two problems separately:\n1. Change the way plugins are checked out\n2. Use the Bazel-based version stamping (this change)\n\nWDYT?",
+      "parentUuid": "39b561ed_9c1d857b",
+      "revId": "5b22a7906b235492556732e73874e87259b4e235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
