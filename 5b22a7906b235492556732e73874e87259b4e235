@@ -34,6 +34,24 @@
       "revId": "5b22a7906b235492556732e73874e87259b4e235",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa976fce_06f23854",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-17T11:35:50Z",
+      "side": 1,
+      "message": "I tried with the admin-console:\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.2/job/plugin-admin-console-bazel-master-stable-3.2/17/artifact/bazel-bin/plugins/admin-console/admin-console.jar-version/*view*/",
+      "parentUuid": "e5e2fbc0_9b58bd2e",
+      "revId": "5b22a7906b235492556732e73874e87259b4e235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
