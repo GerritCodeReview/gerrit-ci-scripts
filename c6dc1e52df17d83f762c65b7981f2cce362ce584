@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "00e1d880_64716f64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-07-20T16:30:27Z",
+      "side": 1,
+      "message": "Built successfully for [1] https://gerrit-review.googlesource.com/c/plugins/high-availability/+/276032",
+      "revId": "c6dc1e52df17d83f762c65b7981f2cce362ce584",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
