@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0287a80e_feea2f92",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-07-20T16:33:37Z",
+      "side": 1,
+      "message": "Plugin 3.2 builds and passes tests locally (both modes, in-tree especially).",
+      "revId": "d9c78a1f133257040ce2d1ff785c2d080862130c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
