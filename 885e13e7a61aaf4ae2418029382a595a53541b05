@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a525f29e_fefd0729",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-07-30T16:15:21Z",
+      "side": 1,
+      "message": "Branch not up on remote [1] yet, currently.\n\n[1] https://gerrit-review.googlesource.com/admin/repos/plugins/reviewers,branches",
+      "revId": "885e13e7a61aaf4ae2418029382a595a53541b05",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
