@@ -16,6 +16,23 @@
       "revId": "885e13e7a61aaf4ae2418029382a595a53541b05",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28b0d74b_8e40be81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2020-07-30T18:20:11Z",
+      "side": 1,
+      "message": "Anyone wants to push 8fd81a0 to create a \u0027stable-3.2\u0027 so that we have a version that works with Gerrit 3.2.3?",
+      "revId": "885e13e7a61aaf4ae2418029382a595a53541b05",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
