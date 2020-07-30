@@ -70,6 +70,30 @@
       "revId": "d14f853c5c7bd8c98cd6348ad5c3fc78659bd17e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c9362b5_030d02df",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-30T08:26:32Z",
+      "side": 1,
+      "message": "IIRC, we tried that and it didn\u0027t work. May be it works now?",
+      "parentUuid": "0a55035c_e12517bb",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 29
+      },
+      "revId": "d14f853c5c7bd8c98cd6348ad5c3fc78659bd17e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
