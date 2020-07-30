@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a9b5742_fda5fc9b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-30T07:41:13Z",
+      "side": 1,
+      "message": "This applies only on master, where WCT was replaced with Karma tests. What about stable branches, where WCT is still used and therefore Xvfb is still needed?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 29
+      },
+      "revId": "d14f853c5c7bd8c98cd6348ad5c3fc78659bd17e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
