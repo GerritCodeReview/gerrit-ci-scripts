@@ -94,6 +94,23 @@
       "revId": "d14f853c5c7bd8c98cd6348ad5c3fc78659bd17e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a613ae3_7c75e247",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2020-07-30T10:31:19Z",
+      "side": 1,
+      "message": "replacing me by Dmitrii",
+      "revId": "d14f853c5c7bd8c98cd6348ad5c3fc78659bd17e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
