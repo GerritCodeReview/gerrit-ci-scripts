@@ -46,6 +46,30 @@
       "revId": "d14f853c5c7bd8c98cd6348ad5c3fc78659bd17e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0a55035c_e12517bb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-07-30T08:17:40Z",
+      "side": 1,
+      "message": "We could also tell WCT to use Chrome\u0027s headless mode by setting WCT_HEADLESS_MODE\u003d1 right? Or would tests run like this miss something?",
+      "parentUuid": "73cbc1e4_ae889a8f",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 29
+      },
+      "revId": "d14f853c5c7bd8c98cd6348ad5c3fc78659bd17e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
