@@ -68,6 +68,24 @@
       "revId": "2a11353ccabab929cd0c4ed04870619beb29cc92",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f339d802_d1e850f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-31T08:52:19Z",
+      "side": 1,
+      "message": "\u003e You have to skip this commit [1], because it is adjusting the plugin build to newer rules_nodejs version that is only available on master.\n\u003e \n\u003e So the right SHA1 to create stable-3.2 from is: 8fd81a0baf4cc1a68d3e0045a83af9bcb48c2e95\n\nCorrect, \"The latest stable SHA1 for stable-3.2 is 8fd81a0\" as I mentioned.",
+      "parentUuid": "0baf6120_d31457d6",
+      "revId": "2a11353ccabab929cd0c4ed04870619beb29cc92",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
