@@ -51,6 +51,23 @@
       "revId": "2a11353ccabab929cd0c4ed04870619beb29cc92",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f0c0e80_ca6201ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-07-31T08:49:15Z",
+      "side": 1,
+      "message": "Basically, for all plugins from this series: [1] stable-3.2 should be created.\n\n[1] https://gerrit-review.googlesource.com/q/topic:%22bump_rules_nodes_to_2.0.0%22+(status:open%20OR%20status:merged)",
+      "revId": "2a11353ccabab929cd0c4ed04870619beb29cc92",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
