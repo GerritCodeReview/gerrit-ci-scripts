@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "27e93d27_cde2333e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-31T08:20:54Z",
+      "side": 1,
+      "message": "Still fails with \"10:19:58 ERROR: Skipping \u0027plugins/reviewers:reviewers\u0027: error loading package \u0027plugins/reviewers\u0027: cannot load \u0027@npm//@bazel/rollup:index.bzl\u0027: no such file\"\n\nSee the build failure at: https://gerrit-ci.gerritforge.com/job/plugin-reviewers-bazel-stable-3.2/2/console",
+      "revId": "2a11353ccabab929cd0c4ed04870619beb29cc92",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
