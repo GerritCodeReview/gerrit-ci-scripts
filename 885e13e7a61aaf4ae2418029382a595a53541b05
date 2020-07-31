@@ -33,6 +33,23 @@
       "revId": "885e13e7a61aaf4ae2418029382a595a53541b05",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8af12c42_5d27ff75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-31T08:10:34Z",
+      "side": 1,
+      "message": "The reviewers plugin doesn\u0027t have (yet) a stable-3.2 branch.\nCreating it now.",
+      "revId": "885e13e7a61aaf4ae2418029382a595a53541b05",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
