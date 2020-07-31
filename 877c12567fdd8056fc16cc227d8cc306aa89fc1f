@@ -16,6 +16,24 @@
       "revId": "877c12567fdd8056fc16cc227d8cc306aa89fc1f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9abb9a9b_4003016e",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 26
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-31T12:17:56Z",
+      "side": 1,
+      "message": "My bad, this change was actually for getting rid of Xvfb and use instead WCT in headless mode.\n\nDoes it make sense to have WCT_HEADLESS_MODE\u003d1 set globally?",
+      "parentUuid": "be3bbcf8_5da46a7b",
+      "revId": "877c12567fdd8056fc16cc227d8cc306aa89fc1f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
