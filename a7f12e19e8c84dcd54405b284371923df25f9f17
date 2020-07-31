@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0236ff7d_4c21fb3e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1085901
+      },
+      "writtenOn": "2020-07-31T12:34:54Z",
+      "side": 1,
+      "message": "Sorry, what is the status of this change?\nHave you checked already that HEADLESS_MODE works for WCT tests or do you want to submit it as is?\n",
+      "revId": "a7f12e19e8c84dcd54405b284371923df25f9f17",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
