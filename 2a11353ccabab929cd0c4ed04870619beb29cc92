@@ -16,6 +16,23 @@
       "revId": "2a11353ccabab929cd0c4ed04870619beb29cc92",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7374400f_f061b293",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-07-31T08:31:25Z",
+      "side": 1,
+      "message": "The latest stable SHA1 for stable-3.2 is 8fd81a0.\nGoing to create a stable-3.2 from that.",
+      "revId": "2a11353ccabab929cd0c4ed04870619beb29cc92",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
