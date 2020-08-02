@@ -16,6 +16,24 @@
       "revId": "d0af041baf8ef6e2f70e4bbe6ee11c67ac03cb25",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a589d219_c158d5cb",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-02T11:00:13Z",
+      "side": 1,
+      "message": "\u003e what if one build produces multiple artifacts?\n\nIt\u0027s a valid point. However, this is the verification job which isn\u0027t supposed to be kept as long-term storage of the artifacts.",
+      "parentUuid": "36d9197a_3a695030",
+      "revId": "d0af041baf8ef6e2f70e4bbe6ee11c67ac03cb25",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
