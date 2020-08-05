@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dcfa385b_08730b01",
+        "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-cloudwatch.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-05T22:45:28Z",
+      "side": 1,
+      "message": "The master branch is broken: should we first fix it and then merge this? Alternatively, we can remove the master branch from the build, for now.",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "b7aac888876285e8045d90728a91d0769f5a841a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
