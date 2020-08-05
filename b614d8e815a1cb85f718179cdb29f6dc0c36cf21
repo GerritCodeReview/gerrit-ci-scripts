@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3b615649_2bd402e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-08-05T09:00:11Z",
+      "side": 1,
+      "message": "We should also verify the codestyle job since it now also uses the cache, but I wouldn\u0027t expect it to break.",
+      "revId": "b614d8e815a1cb85f718179cdb29f6dc0c36cf21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
