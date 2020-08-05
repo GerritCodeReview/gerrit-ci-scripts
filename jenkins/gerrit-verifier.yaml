@@ -73,6 +73,9 @@
             - job-extended-read
       - build-discarder:
           days-to-keep: 30
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
@@ -120,10 +123,6 @@
     description: 'Gerrit build of open change with Bazel'
     defaults: verifier-defaults
     node: bazel-debian
-    properties:
-      - inject:
-          properties-content: >
-            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
     builders:
       - set-git-credentials
       - merge-target-branch
@@ -145,10 +144,6 @@
     description: 'Gerrit build of open change with {config}'
     defaults: verifier-defaults
     node: bazel-{config}
-    properties:
-      - inject:
-          properties-content: >
-            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
     builders:
       - set-git-credentials
       - merge-target-branch
