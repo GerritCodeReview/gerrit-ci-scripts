@@ -1,13 +1,9 @@
 - project:
     name: project-group-structure
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
-            - master
       - 'plugin-{name}-bazel-{branch}':
           branch:
+            - master
             - stable-3.2
             - stable-3.1
             - stable-3.0
