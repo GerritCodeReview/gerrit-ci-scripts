@@ -34,6 +34,24 @@
       "revId": "b614d8e815a1cb85f718179cdb29f6dc0c36cf21",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "735c8d71_c4118b57",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-08-05T13:18:59Z",
+      "side": 1,
+      "message": "That doesn\u0027t hurt :-)",
+      "parentUuid": "d82f2ed2_fcb2f1d6",
+      "revId": "b614d8e815a1cb85f718179cdb29f6dc0c36cf21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
