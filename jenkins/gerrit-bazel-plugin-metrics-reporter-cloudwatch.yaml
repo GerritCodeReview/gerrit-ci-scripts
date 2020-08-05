@@ -1,9 +1,7 @@
 - project:
     name: metrics-reporter-cloudwatch
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
-            - master
-          gerrit-branch:
             - master
             - stable-3.2
