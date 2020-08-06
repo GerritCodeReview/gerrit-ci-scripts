@@ -37,6 +37,23 @@
     },
     {
       "key": {
+        "uuid": "8869af63_9367bec4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-06T07:45:05Z",
+      "side": 1,
+      "message": "Oh yes, the build is now green. Thanks, Tony.",
+      "revId": "b7aac888876285e8045d90728a91d0769f5a841a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dcfa385b_08730b01",
         "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-cloudwatch.yaml",
         "patchSetId": 2
