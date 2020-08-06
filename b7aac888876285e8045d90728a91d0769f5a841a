@@ -22,6 +22,30 @@
       "revId": "b7aac888876285e8045d90728a91d0769f5a841a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5372fa73_1eaf8ac3",
+        "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-cloudwatch.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-08-06T06:29:36Z",
+      "side": 1,
+      "message": "yes, it\u0027s probably best.\nLet me fix that.",
+      "parentUuid": "dcfa385b_08730b01",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "b7aac888876285e8045d90728a91d0769f5a841a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
