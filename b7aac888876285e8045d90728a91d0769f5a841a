@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "40a95979_708ce6ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-08-06T07:37:56Z",
+      "side": 1,
+      "message": "Build is now successful for both master[1] and stable-3.2\n\n\n[1] https://gerrit-ci.gerritforge.com/job/plugin-metrics-reporter-cloudwatch-bazel-master/2/\n[2] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.2/job/plugin-metrics-reporter-cloudwatch-bazel-stable-3.2/1/\n\n@Luca are you happy with this change?",
+      "revId": "b7aac888876285e8045d90728a91d0769f5a841a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dcfa385b_08730b01",
         "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-cloudwatch.yaml",
         "patchSetId": 2
