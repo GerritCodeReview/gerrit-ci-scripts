@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0bfa196f_4a6f6e56",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-13T08:31:37Z",
+      "side": 1,
+      "message": "@Marcin bump",
+      "revId": "e9d9028e1c40070c8a713329f1c18616e36a0dae",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a9815dca_817e4ba8",
         "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
         "patchSetId": 5
