@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "72bc3acf_00fdbddb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-08-17T12:45:09Z",
+      "side": 1,
+      "message": "This seems to be fine now:\n- 3.0 [1] 👍\n- 3.1 [2] 👍\n- master [3] 👍\n\nThe only failing one is 3.2 [4]\n\nAnd that\u0027s because:\n\n14:14:06 ERROR: Skipping \u0027plugins/zookeeper-refdb:zookeeper-refdb-zk-3.5\u0027: no such target \u0027//plugins/zookeeper-refdb:zookeeper-refdb-zk-3.5\u0027: target \u0027zookeeper-refdb-zk-3.5\u0027 not declared in package \u0027plugins/zookeeper-refdb\u0027 defined by /home/jenkins/workspace/plugin-zookeeper-refdb-bazel-stable-3.2/plugins/zookeeper-refdb/BUILD\n14:14:06 WARNING: Target pattern parsing failed.\n\nWhich is expected until [5] is merged.\n\n[1] https://gerrit-ci.gerritforge.com/job/plugin-zookeeper-refdb-bazel-stable-3.0/17/\n[2] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.0/job/plugin-zookeeper-refdb-bazel-stable-3.1/12/\n[3] https://gerrit-ci.gerritforge.com/job/plugin-zookeeper-refdb-bazel-master/10/\n[4] https://gerrit-ci.gerritforge.com/job/plugin-zookeeper-refdb-bazel-stable-3.2/13/\n[5] https://gerrit-review.googlesource.com/c/plugins/zookeeper-refdb/+/266052/5\n\nI think this change is good to go? @luca, @marcin?\n\n",
+      "revId": "66885603dd50147467d8523b5dca8a1fd54b99c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
