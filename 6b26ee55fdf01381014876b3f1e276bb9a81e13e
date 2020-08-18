@@ -69,6 +69,29 @@
       "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83ea3b5b_eef85b59",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-18T09:11:40Z",
+      "side": 1,
+      "message": "This won\u0027t catch the extra the \"-3.5.jar\" prefix",
+      "range": {
+        "startLine": 25,
+        "startChar": 36,
+        "endLine": 25,
+        "endChar": 43
+      },
+      "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
