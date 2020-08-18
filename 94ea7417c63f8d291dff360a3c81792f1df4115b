@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f307ab7c_0ee60a84",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-18T16:24:27Z",
+      "side": 1,
+      "message": "Please have a quick review before I will do manual deploy. This solution is based on: https://docs.openstack.org/infra/jenkins-job-builder/definition.html and particularly on this example:\n- project:\n    name: template_variable_defaults\n    jobs:\n        - \u0027template-variable-defaults-{num}\u0027:\n            num: 1\n            disabled_var: true\n        - \u0027template-variable-defaults-{num}\u0027:\n            test_var: Goodbye World\n            num: 2\n\n- job-template:\n    # template specific defaults\n    # empty value causes disabled_var to be ignored internally\n    disabled_var:\n    test_var: Hello World\n    type: periodic\n\n    # template settings\n    name: \u0027template-variable-defaults-{num}-{type}\u0027\n    id: \u0027template-variable-defaults-{num}\u0027\n    disabled: \u0027{obj:disabled_var}\u0027\n    builders:\n      - shell: |\n         echo \"Job Name: template-variable-defaults-{num}-{type}\"\n         echo \"Variable: {test_var}\" ",
+      "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
