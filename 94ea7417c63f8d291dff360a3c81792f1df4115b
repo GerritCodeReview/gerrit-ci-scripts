@@ -16,6 +16,23 @@
       "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f876624b_4f0bb79b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-18T16:41:18Z",
+      "side": 1,
+      "message": "We can also build separate job-template as we did with javamelody plugin. WDYT?",
+      "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
