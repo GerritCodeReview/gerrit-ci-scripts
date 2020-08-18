@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "59917771_b5a30fc4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-18T09:11:57Z",
+      "side": 1,
+      "message": "Now it\u0027s fine: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.2/job/plugin-zookeeper-refdb-bazel-stable-3.2/17/\n\nThe build we were looking into didn\u0027t have lastest changes",
+      "parentUuid": "59fb69de_be592dee",
+      "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "83ea3b5b_eef85b59",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
         "patchSetId": 8
