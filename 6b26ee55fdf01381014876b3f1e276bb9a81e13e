@@ -16,6 +16,24 @@
       "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c88d73b0_447284d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-18T08:52:55Z",
+      "side": 1,
+      "message": "Hmm when I do build locally: bazelisk build plugins/zookeeper-refdb:zookeeper-refdb plugins/zookeeper-refdb:zookeeper-refdb-zk-3.5\n\nin bazel-bin/plugins/zookeeper-refdb/ I see both jars",
+      "parentUuid": "1435dc82_17da642c",
+      "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
