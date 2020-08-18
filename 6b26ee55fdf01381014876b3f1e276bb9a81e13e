@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1435dc82_17da642c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-18T08:39:42Z",
+      "side": 1,
+      "message": "I don\u0027t see where the additional target jars are getting collected.\nAs a matter of fact, the extra zk-3.5 target isn\u0027t in the final build output artifacts list.",
+      "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
