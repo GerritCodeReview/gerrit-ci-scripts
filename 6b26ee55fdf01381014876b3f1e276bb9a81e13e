@@ -51,6 +51,24 @@
       "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59fb69de_be592dee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-18T09:01:40Z",
+      "side": 1,
+      "message": "The problem is that they are not getting collected by Jenkins.",
+      "parentUuid": "c88d73b0_447284d6",
+      "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
