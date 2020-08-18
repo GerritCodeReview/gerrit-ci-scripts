@@ -34,6 +34,24 @@
       "revId": "877c12567fdd8056fc16cc227d8cc306aa89fc1f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d4b70149_ce67c0a7",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 26
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-18T08:23:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abb9a9b_4003016e",
+      "revId": "877c12567fdd8056fc16cc227d8cc306aa89fc1f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
