@@ -34,6 +34,23 @@
       "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f0054811_158ba090",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-18T08:56:03Z",
+      "side": 1,
+      "message": "The general template also needs adaptations: the TARGETS is always overwritten in the shell script and it must respect any existing values, correct?",
+      "revId": "6b26ee55fdf01381014876b3f1e276bb9a81e13e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
