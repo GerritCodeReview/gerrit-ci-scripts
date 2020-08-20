@@ -80,6 +80,30 @@
       "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "06f7be36_31bbc6be",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-20T14:09:20Z",
+      "side": 1,
+      "message": "\u003e me neither that\u0027s why I wanted to test it, but it should be because we can define variables here and use them later. Only thing is if \u003e will work correctly if not we can put jars as a single line\n\nThe \u0027\u003e\u0027 is working fine, as it was used before already. The issue is about variables. The ones you see here are job template properties, and NOT general variables. You cannot put what you would like here. artifactsToPublish isn\u0027t a supported property.",
+      "parentUuid": "321caaf9_e4aa994d",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 42
+      },
+      "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
