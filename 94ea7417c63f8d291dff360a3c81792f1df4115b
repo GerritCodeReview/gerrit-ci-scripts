@@ -104,6 +104,30 @@
       "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c3c622e_06d987e2",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-20T15:31:38Z",
+      "side": 1,
+      "message": "Not sure if I understand, I\u0027ve created artifactsToPublish ina a template with default value and I\u0027m overriding it in the job definition based on that template\n\nThis solution is based on: https://docs.openstack.org/infra/jenkins-job-builder/definition.html and particularly on this example:\n\nproject:\n    name: template_variable_defaults\n    jobs:\n        - \u0027template-variable-defaults-{num}\u0027:\n            num: 1\n            disabled_var: true\n        - \u0027template-variable-defaults-{num}\u0027:\n            test_var: Goodbye World\n            num: 2\njob-template:\n    # template specific defaults\n    # empty value causes disabled_var to be ignored internally\n    disabled_var:\n    test_var: Hello World\n    type: periodic\n    # template settings\n    name: \u0027template-variable-defaults-{num}-{type}\u0027\n    id: \u0027template-variable-defaults-{num}\u0027\n    disabled: \u0027{obj:disabled_var}\u0027\n    builders:\n      - shell: |\n         echo \"Job Name: template-variable-defaults-{num}-{type}\"\n         echo \"Variable: {test_var}\"",
+      "parentUuid": "06f7be36_31bbc6be",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 42
+      },
+      "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
