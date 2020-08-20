@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77c189ff_32a55354",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-20T23:21:41Z",
+      "side": 1,
+      "message": "This is finally working. @Marcin WDYT?\nAdding Thomas also for having another pair of eyes on it.",
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
