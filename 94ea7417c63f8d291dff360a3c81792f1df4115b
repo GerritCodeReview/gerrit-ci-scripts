@@ -56,6 +56,30 @@
       "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "321caaf9_e4aa994d",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-20T13:51:41Z",
+      "side": 1,
+      "message": "me neither that\u0027s why I wanted to test it, but it should be because we can define variables here and use them later. Only thing is if \u003e will work correctly if not we can put jars as a single line",
+      "parentUuid": "acf1e369_e4fe9a0a",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 42
+      },
+      "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
