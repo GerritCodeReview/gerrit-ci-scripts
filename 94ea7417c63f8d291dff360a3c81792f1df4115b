@@ -33,6 +33,29 @@
       "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "acf1e369_e4fe9a0a",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-20T13:39:12Z",
+      "side": 1,
+      "message": "Not sure this will be actually expanded below at L83",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 42
+      },
+      "revId": "94ea7417c63f8d291dff360a3c81792f1df4115b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
