@@ -16,6 +16,24 @@
       "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "904b8fdd_927d4b30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-21T06:58:36Z",
+      "side": 1,
+      "message": "\u003e This is finally working. @Marcin WDYT?\n\u003e Adding Thomas also for having another pair of eyes on it.\n\nMy solution was more flexible because you could override all jars not only add new 😄 But yep working code always win. I think we should go with it",
+      "parentUuid": "77c189ff_32a55354",
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
