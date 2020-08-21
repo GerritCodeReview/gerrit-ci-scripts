@@ -34,6 +34,24 @@
       "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "53561d90_c75f4c6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-21T07:02:00Z",
+      "side": 1,
+      "message": "\u003e \u003e This is finally working. @Marcin WDYT?\n\u003e \u003e Adding Thomas also for having another pair of eyes on it.\n\u003e \n\u003e My solution was more flexible because you could override all jars not only add new 😄 \n\nThe problem is that when specifying defaults, you cannot have variables in it. If you put variables, they won\u0027t be expanded.\n\n\u003e But yep working code always win. I think we should go with it\n\nBear in mind that\u0027s the rule for Gerrit plugins: if you develop something that isn\u0027t generating *at least* a plugin\u0027s jar, then you should use a different template. The solution should then be still flexible enough for what is needed.",
+      "parentUuid": "904b8fdd_927d4b30",
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
