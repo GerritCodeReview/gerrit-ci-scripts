@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "32448ea0_93e65317",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 26
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-08-24T07:37:11Z",
+      "side": 1,
+      "message": "nit: missing space",
+      "range": {
+        "startLine": 10,
+        "startChar": 8,
+        "endLine": 10,
+        "endChar": 9
+      },
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "77c189ff_32a55354",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 26
@@ -52,6 +75,52 @@
       "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a1f5fcde_1461129e",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-08-24T07:37:11Z",
+      "side": 1,
+      "message": "nit: {name}",
+      "range": {
+        "startLine": 13,
+        "startChar": 46,
+        "endLine": 13,
+        "endChar": 61
+      },
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "659e1f28_b3575c39",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-08-24T07:37:11Z",
+      "side": 1,
+      "message": "{name}",
+      "range": {
+        "startLine": 13,
+        "startChar": 62,
+        "endLine": 13,
+        "endChar": 77
+      },
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
