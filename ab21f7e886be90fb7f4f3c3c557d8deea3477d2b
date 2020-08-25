@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "29127520_66142e03",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 26
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-25T09:14:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "32448ea0_93e65317",
+      "range": {
+        "startLine": 10,
+        "startChar": 8,
+        "endLine": 10,
+        "endChar": 9
+      },
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "77c189ff_32a55354",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 26
@@ -121,6 +145,54 @@
       "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "abca96ea_16a9d63b",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-25T09:14:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "659e1f28_b3575c39",
+      "range": {
+        "startLine": 13,
+        "startChar": 62,
+        "endLine": 13,
+        "endChar": 77
+      },
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5070ed88_641d585a",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 26
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-08-25T09:14:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a1f5fcde_1461129e",
+      "range": {
+        "startLine": 13,
+        "startChar": 46,
+        "endLine": 13,
+        "endChar": 61
+      },
+      "revId": "ab21f7e886be90fb7f4f3c3c557d8deea3477d2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
