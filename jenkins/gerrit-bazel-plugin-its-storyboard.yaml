@@ -4,3 +4,4 @@
       - 'plugin-its-{name}-bazel-{branch}':
           branch:
             - master
+            - stable-2.16
