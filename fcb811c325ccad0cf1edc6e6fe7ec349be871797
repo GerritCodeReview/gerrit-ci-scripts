@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b9ccea34_f4b93f4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-08-26T07:41:47Z",
+      "side": 1,
+      "message": "This is needed for the OpenStack upgrade",
+      "revId": "fcb811c325ccad0cf1edc6e6fe7ec349be871797",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
