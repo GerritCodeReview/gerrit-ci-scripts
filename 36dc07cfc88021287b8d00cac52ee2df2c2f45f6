@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e8f6a03_c7fbadd1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-09-03T15:42:27Z",
+      "side": 1,
+      "message": "The 3.2 build will require https://gerrit-review.googlesource.com/c/plugins/imagare/+/280604 to be merged.",
+      "revId": "36dc07cfc88021287b8d00cac52ee2df2c2f45f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
