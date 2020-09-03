@@ -16,6 +16,23 @@
       "revId": "36dc07cfc88021287b8d00cac52ee2df2c2f45f6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23f040ae_57180521",
+        "filename": "jenkins/gerrit-bazel-plugin-imagare.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-03T15:47:13Z",
+      "side": 1,
+      "message": "Why not adding stable-3.1 as well?",
+      "revId": "36dc07cfc88021287b8d00cac52ee2df2c2f45f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
