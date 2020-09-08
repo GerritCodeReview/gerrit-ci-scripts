@@ -33,6 +33,24 @@
       "revId": "36dc07cfc88021287b8d00cac52ee2df2c2f45f6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2138dffd_43c48827",
+        "filename": "jenkins/gerrit-bazel-plugin-imagare.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-09-08T14:37:37Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "23f040ae_57180521",
+      "revId": "36dc07cfc88021287b8d00cac52ee2df2c2f45f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }

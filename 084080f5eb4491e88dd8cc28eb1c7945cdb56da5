@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e588b539_feeb4f4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2020-09-08T14:37:37Z",
+      "side": 1,
+      "message": "The fixes for the plugin will have to be submitted first, so that the build can work.",
+      "revId": "084080f5eb4491e88dd8cc28eb1c7945cdb56da5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
