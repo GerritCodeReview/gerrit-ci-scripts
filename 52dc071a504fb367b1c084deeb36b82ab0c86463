@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "94895e91_32eb881a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-09-15T10:23:17Z",
+      "side": 1,
+      "message": "To perform tests we would need to use a Provisioned EFS: if we used bursting, the capacity would diminish as we test, until we ran out of credits.\n\nThe problems with creating and leaving a Provisioned EFS are:\n- Price: provisioned throughput EFS are more expensive and they will consume money even when we don\u0027t use them.\n\n- Cleanup and GC: our gatling tests are disruptive so leaving the EFS for re-use will cause subsequent test to work on repositories that have been used and modified already. We would need to clean up \u0026\u0026 GC before/after the tests or alternatively copy from an immutable repository stored on EFS and test against that.",
+      "parentUuid": "af4d9eff_e4096d49",
+      "revId": "52dc071a504fb367b1c084deeb36b82ab0c86463",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9d7bf735_2fb33e68",
         "filename": "vars/gatlingTestPipeline",
         "patchSetId": 3
