@@ -1,0 +1,15 @@
+- job:
+    name: gatling-gerrit-test
+    project-type: pipeline
+    pipeline-scm:
+      scm:
+        - git:
+            credentials-id: gerrit.googlesource.com
+            url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
+            branches:
+              - master
+      script-path: jenkins/gatlingTestPipeline
+    triggers:
+      - pollscm:
+          cron: "H/20 * * * *"
+      - timed: "@midnight"
