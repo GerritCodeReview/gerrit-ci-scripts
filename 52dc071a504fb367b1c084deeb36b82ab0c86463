@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "af4d9eff_e4096d49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-15T09:10:28Z",
+      "side": 1,
+      "message": "Currently this pipeline looks over-engineered we could use normal job template but the idea is to add stage to create aws stack and shut it down after the execution. For that we need to do some changes in aws-gerrit project to allow reusing of EFS volume",
+      "revId": "52dc071a504fb367b1c084deeb36b82ab0c86463",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9d7bf735_2fb33e68",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-15T09:10:28Z",
+      "side": 1,
+      "message": "We could use the environment variable instead of parameters. I don\u0027t have access to this part of the Jenkins UI so I\u0027m not sure how we are passing environment variables(by default jenkins has global env variables, there are some plugins for job specific env variables). Parameters are a bit annoying because we have to pass them every time",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 106
+      },
+      "revId": "52dc071a504fb367b1c084deeb36b82ab0c86463",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa512d4b_f2271a60",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-15T09:10:28Z",
+      "side": 1,
+      "message": "we could use checkout scm but this will require extra configuration on the UI which we can avoid. Maybe branch should be passed as environment variable. This is similar to what we have in pluginPipeline.groovy.",
+      "range": {
+        "startLine": 16,
+        "startChar": 2,
+        "endLine": 21,
+        "endChar": 17
+      },
+      "revId": "52dc071a504fb367b1c084deeb36b82ab0c86463",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
