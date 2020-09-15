@@ -1,0 +1,6 @@
+- job:
+    name: gatling-gerrit-test
+    project-type: pipeline
+    dsl: !include-raw: gatlingTestPipeline.groovy
+    triggers:
+      - timed: "@midnight"
