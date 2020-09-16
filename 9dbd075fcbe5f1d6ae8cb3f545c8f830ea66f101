@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "aaed538f_1b2147de",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-16T10:03:12Z",
+      "side": 1,
+      "message": "The pipeline should also have a step where the Gerrit instance gets started. It can be addressed in a follow-up change though.",
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ab4dfb0_388c48a2",
         "filename": "jenkins-docker/slave-sbt-gatling/.gitconfig",
         "patchSetId": 4
