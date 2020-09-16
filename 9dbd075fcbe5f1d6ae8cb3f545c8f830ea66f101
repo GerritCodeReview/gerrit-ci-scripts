@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "89cf0566_032e4a45",
+        "filename": "jenkins-docker/slave-sbt-gatling/.gitconfig",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-16T13:46:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ab4dfb0_388c48a2",
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "28e5aad5_5ea92499",
         "filename": "jenkins-docker/slave-sbt-gatling/Dockerfile",
         "patchSetId": 4
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "243f41d4_e4866299",
+        "filename": "jenkins-docker/slave-sbt-gatling/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-16T13:46:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "28e5aad5_5ea92499",
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "db53c1f2_9162b035",
         "filename": "vars/gatlingTestPipeline",
         "patchSetId": 4
@@ -64,6 +100,24 @@
       "writtenOn": "2020-09-16T10:01:40Z",
       "side": 1,
       "message": "Putting in here is more for reuse *IF* it can be referenced in more jobs.\nThis pipeline is more for a single test job, so it should stay in the jenkins directory and included from a JJB YAML file.\n\nLook at the homepage pipeline as a reference.",
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e9659b1_e509ef68",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-16T13:46:24Z",
+      "side": 1,
+      "message": "Done, but I\u0027m wondering if we should move pipeline definition file to gatling-sbt-gerrit-test project.",
+      "parentUuid": "db53c1f2_9162b035",
       "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
@@ -93,6 +147,30 @@
     },
     {
       "key": {
+        "uuid": "4cd2d3bf_9862e4dd",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-16T13:46:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "825188b0_3ea55fd9",
+      "range": {
+        "startLine": 4,
+        "startChar": 44,
+        "endLine": 4,
+        "endChar": 117
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "132e201d_5a78c10d",
         "filename": "vars/gatlingTestPipeline",
         "patchSetId": 4
@@ -113,6 +191,30 @@
       "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ec2111ed_efd5ec58",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-16T13:46:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "132e201d_5a78c10d",
+      "range": {
+        "startLine": 5,
+        "startChar": 43,
+        "endLine": 5,
+        "endChar": 132
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     },
     {
       "key": {
@@ -139,6 +241,30 @@
     },
     {
       "key": {
+        "uuid": "10dd9d9b_36c1fe42",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-16T13:46:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3af4cbb9_2ffb37e3",
+      "range": {
+        "startLine": 6,
+        "startChar": 61,
+        "endLine": 6,
+        "endChar": 72
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ec29868f_6e9c7d50",
         "filename": "vars/gatlingTestPipeline",
         "patchSetId": 4
@@ -162,6 +288,30 @@
     },
     {
       "key": {
+        "uuid": "700034b6_8cc6c0d0",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-16T13:46:24Z",
+      "side": 1,
+      "message": "That was my initial approach.\nBut then we need jenkins slave with docker, so we have docker inside docker which is not great(see https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci) It\u0027s also mentioned  here: https://hub.docker.com/_/docker\n\nDo we have jenkins slave with Docker? I saw slave-bazel-docker but this one just install docker but never starts it. I was trying to use it locally but no luck.",
+      "parentUuid": "ec29868f_6e9c7d50",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 13
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3d321ee_32f2e0a9",
         "filename": "vars/gatlingTestPipeline",
         "patchSetId": 4
@@ -173,6 +323,30 @@
       "writtenOn": "2020-09-16T10:01:40Z",
       "side": 1,
       "message": "for simulation in GerritGitSimulation GerritRestSimulation\n  do\n    docker run --rm -v `pwd`/target/gatling:/opt/gatling/results gerritforge/gatling-sbt-gerrit-test -s gerritforge.$simulation\n  done",
+      "range": {
+        "startLine": 38,
+        "startChar": 24,
+        "endLine": 38,
+        "endChar": 45
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3a4effcd_50c40386",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-16T13:46:24Z",
+      "side": 1,
+      "message": "yep I was trying that but see above",
+      "parentUuid": "b3d321ee_32f2e0a9",
       "range": {
         "startLine": 38,
         "startChar": 24,
