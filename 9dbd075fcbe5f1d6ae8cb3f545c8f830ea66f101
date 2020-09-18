@@ -124,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "c8d0f898_d91b8731",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-18T21:11:02Z",
+      "side": 1,
+      "message": "Not really, because the purpose of the pipeline isn\u0027t making sure that the gatling-sbt-gerrit-test works, building and archiving it. It is rather making sure that Gerrit is scalable, which is a different target.",
+      "parentUuid": "2e9659b1_e509ef68",
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "825188b0_3ea55fd9",
         "filename": "vars/gatlingTestPipeline",
         "patchSetId": 4
@@ -312,6 +330,30 @@
     },
     {
       "key": {
+        "uuid": "4d184036_afeda486",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-18T21:11:02Z",
+      "side": 1,
+      "message": "Yes, our slaves *DO HAVE* the ability to talk to Docker, because they need it for the docker-compose tests.",
+      "parentUuid": "700034b6_8cc6c0d0",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 13
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3d321ee_32f2e0a9",
         "filename": "vars/gatlingTestPipeline",
         "patchSetId": 4
@@ -347,6 +389,30 @@
       "side": 1,
       "message": "yep I was trying that but see above",
       "parentUuid": "b3d321ee_32f2e0a9",
+      "range": {
+        "startLine": 38,
+        "startChar": 24,
+        "endLine": 38,
+        "endChar": 45
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe27ef30_14754ee2",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-18T21:11:02Z",
+      "side": 1,
+      "message": "Our slaves have Docker, so there are no issues in relying on it.",
+      "parentUuid": "3a4effcd_50c40386",
       "range": {
         "startLine": 38,
         "startChar": 24,
