@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "350beb4a_2b0dedc4",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-22T21:19:42Z",
+      "side": 1,
+      "message": "If we add the .groovy extension, then the editor would be happier in finding the correct formatting :-)",
+      "revId": "e706eb0d3e5637542bd4f051d76e387951e686a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "db615978_0ecee3ea",
         "filename": "jenkins/gatlingTestPipeline",
         "patchSetId": 9
@@ -18,6 +35,122 @@
         "startChar": 23,
         "endLine": 2,
         "endChar": 34
+      },
+      "revId": "e706eb0d3e5637542bd4f051d76e387951e686a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8fd81fae_28d27560",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 9
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-22T21:19:42Z",
+      "side": 1,
+      "message": "The normal Gerrit build agent has docker already: it is called \u0027bazel-debian\u0027",
+      "parentUuid": "db615978_0ecee3ea",
+      "range": {
+        "startLine": 2,
+        "startChar": 23,
+        "endLine": 2,
+        "endChar": 34
+      },
+      "revId": "e706eb0d3e5637542bd4f051d76e387951e686a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f2b371b_685eb9ea",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 9
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-22T21:19:42Z",
+      "side": 1,
+      "message": "You can use a Groovy for loop",
+      "range": {
+        "startLine": 40,
+        "startChar": 25,
+        "endLine": 40,
+        "endChar": 84
+      },
+      "revId": "e706eb0d3e5637542bd4f051d76e387951e686a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "45cfdea6_c223043f",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 9
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-22T21:19:42Z",
+      "side": 1,
+      "message": "I do not believe this is needed",
+      "range": {
+        "startLine": 41,
+        "startChar": 44,
+        "endLine": 41,
+        "endChar": 47
+      },
+      "revId": "e706eb0d3e5637542bd4f051d76e387951e686a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0467d4b9_dcf35ec4",
+        "filename": "jenkins/gatlingTestPipeline.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-22T21:19:42Z",
+      "side": 1,
+      "message": "It would be a lot easier just doing:\n\ndsl: !include-raw-escape: gatlingTestPipeline.groovy",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 11,
+        "endChar": 46
+      },
+      "revId": "e706eb0d3e5637542bd4f051d76e387951e686a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3bc295f7_af0d817a",
+        "filename": "jenkins/gatlingTestPipeline.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-22T21:19:42Z",
+      "side": 1,
+      "message": "It is going to be more complex than that: it should be re-run when the Docker container of the tests is changing AND when a Gerrit change is merged. I believe it is too complex for now, so best to leave just the nightly for this change and then address the issue later.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 30
       },
       "revId": "e706eb0d3e5637542bd4f051d76e387951e686a1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
