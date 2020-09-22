@@ -372,6 +372,30 @@
     },
     {
       "key": {
+        "uuid": "67f3f0e9_46972208",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-22T09:07:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d184036_afeda486",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 13
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b3d321ee_32f2e0a9",
         "filename": "vars/gatlingTestPipeline",
         "patchSetId": 4
@@ -440,6 +464,30 @@
       "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a550737_aea3b6f4",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-22T09:07:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fe27ef30_14754ee2",
+      "range": {
+        "startLine": 38,
+        "startChar": 24,
+        "endLine": 38,
+        "endChar": 45
+      },
+      "revId": "9dbd075fcbe5f1d6ae8cb3f545c8f830ea66f101",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
