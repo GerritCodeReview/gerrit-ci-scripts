@@ -80,6 +80,30 @@
       "revId": "52dc071a504fb367b1c084deeb36b82ab0c86463",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce3e1664_20770e9e",
+        "filename": "vars/gatlingTestPipeline",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-22T09:07:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "aa512d4b_f2271a60",
+      "range": {
+        "startLine": 16,
+        "startChar": 2,
+        "endLine": 21,
+        "endChar": 17
+      },
+      "revId": "52dc071a504fb367b1c084deeb36b82ab0c86463",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
