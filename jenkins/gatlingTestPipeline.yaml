@@ -1,6 +1,12 @@
 - job:
     name: gatling-gerrit-test
-    project-type: pipeline
+    project-type: multibranch
+    scm:
+      - git:
+          credentials-id: gerrit.googlesource.com
+          url: https://gerrit.googlesource.com/a/aws-gerrit
+          branches:
+            - master
     dsl: !include-raw: gatlingTestPipeline.groovy
     triggers:
       - timed: "@midnight"
