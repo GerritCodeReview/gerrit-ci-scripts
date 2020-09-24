@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ecfe5641_d8bd6011",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-24T23:23:37Z",
+      "side": 1,
+      "message": "Where is this environment variable set?",
+      "range": {
+        "startLine": 24,
+        "startChar": 77,
+        "endLine": 24,
+        "endChar": 99
+      },
+      "revId": "8467b1008faf8cd785f00287e69698a5ac946d26",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
