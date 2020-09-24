@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8cf9c265_f549fbe1",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-24T23:35:40Z",
+      "side": 1,
+      "message": "Who is going to set this environment variable?",
+      "range": {
+        "startLine": 82,
+        "startChar": 135,
+        "endLine": 82,
+        "endChar": 168
+      },
+      "revId": "136dd244314103db78f6c62f336d8e6bdcb6152f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aad09656_15ad62d8",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-24T23:35:40Z",
+      "side": 1,
+      "message": "All of this can be simplified with:\n- external retry block\n- use of the \u0027--fail\u0027 in curl\n\nExample:\n\n  retry(20) {\n    sh \"curl --fail -L -I \u0027${GERRIT_HTTP_URL}\u0027 2\u003e/dev/null\"\n    sleep(5)\n  }",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 29
+      },
+      "revId": "136dd244314103db78f6c62f336d8e6bdcb6152f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
