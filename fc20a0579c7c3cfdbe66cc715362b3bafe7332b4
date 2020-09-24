@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb704469_9715483b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-09-24T17:35:51Z",
+      "side": 1,
+      "message": "Running buildifier locally on all gerrit-master BUILD files didn\u0027t flag anything.",
+      "revId": "fc20a0579c7c3cfdbe66cc715362b3bafe7332b4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
