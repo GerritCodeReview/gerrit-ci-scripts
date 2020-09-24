@@ -1,3 +1,6 @@
+def accountCookie = ''
+def xsrfToken = ''
+
 pipeline {
         agent { label 'aws' }
 
@@ -29,8 +32,6 @@ pipeline {
             string(name: 'GIT_HTTP_USERNAME', description: 'Username for Git/HTTP testing')
             string(name: 'GIT_HTTP_PASSWORD', description: 'Password for Git/HTTP testing')
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
-            string(name: 'ACCOUNT_COOKIE', description: 'HTTP Cookie to access the Gerrit GUI')
-            string(name: 'XSRF_TOKEN', description: 'XSRF_TOKEN Cookie to access the Gerrit GUI for pOST operations')
             string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
         }
@@ -77,6 +78,31 @@ pipeline {
                      }
                 }
             }
+            stage('Setup Gatling test user credentials') {
+                steps {
+                    withCredentials([usernamePassword(usernameVariable: "GERRIT_USER", passwordVariable: "GERRIT_PASS", credentialsId: "gatling-user-credentials-id")]) {
+                        retry(50) {
+                            sh "curl --fail -L -I '${GERRIT_HTTP_URL}' 2>/dev/null"
+                            sleep(10)
+                        }
+                        sh "curl -L -c cookies -i -X POST '${GERRIT_HTTP_URL}/login/%23%2F?username=${GERRIT_USER}&password=${GERRIT_PASS}'"
+                        script {
+                            def cookies = readFile(file:"cookies")
+                            def cookiesMap = cookies
+                                .split('\n')
+                                .findAll{it.contains('GerritAccount') || it.contains('XSRF_TOKEN')}
+                                .inject([:]) { map, token ->
+                                    def tokens = token.split('\t')
+                                    map[tokens[5].trim()] = tokens[6].trim()
+                                    map
+                                }
+
+                           accountCookie = cookiesMap['GerritAccount']
+                           xsrfToken = cookiesMap['XSRF_TOKEN']
+                        }
+                    }
+                }
+            }
             stage('Pull newest Gatling tests docker image') {
                 steps {
                     sh 'docker pull gerritforge/gatling-sbt-gerrit-test'
@@ -87,20 +113,21 @@ pipeline {
                 steps {
                     script {
                         writeFile(file:"simulation.env", text: """
-                                GERRIT_HTTP_URL="${GERRIT_HTTP_URL}"
-                                GERRIT_SSH_URL="${GERRIT_SSH_URL}"
-                                ACCOUNT_COOKIE="${ACCOUNT_COOKIE}"
-                                GIT_HTTP_USERNAME="${GIT_HTTP_USERNAME}"
-                                GIT_HTTP_PASSWORD="${GIT_HTTP_PASSWORD}"
-                                XSRF_TOKEN="${XSRF_TOKEN}"
-                                GERRIT_PROJECT="${GERRIT_PROJECT}"
+                                GERRIT_HTTP_URL=${GERRIT_HTTP_URL}
+                                GERRIT_SSH_URL=${GERRIT_SSH_URL}
+                                ACCOUNT_COOKIE=${accountCookie}
+                                GIT_HTTP_USERNAME=${GIT_HTTP_USERNAME}
+                                GIT_HTTP_PASSWORD=${GIT_HTTP_PASSWORD}
+                                XSRF_TOKEN=${xsrfToken}
+                                GERRIT_PROJECT=${GERRIT_PROJECT}
                                 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
                            """)
                     }
+                    sh "mkdir -p ${WORKSPACE}/results"
                     script {
                         for (simulation in ["GerritGitSimulation", "GerritRestSimulation"]) {
                             sh """\
-                                docker run --rm --env-file simulation.env -v `pwd`/target/gatling:/opt/gatling/results \
+                                docker run --rm --env-file simulation.env -v ${WORKSPACE}/results:/opt/gatling/results \
                                 gerritforge/gatling-sbt-gerrit-test -s gerritforge.${simulation}
                                """
                         }
