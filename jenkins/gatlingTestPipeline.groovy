@@ -1,3 +1,6 @@
+def accountCookie = ''
+def xsrfToken = ''
+
 pipeline {
         agent { label 'aws' }
 
@@ -11,6 +14,8 @@ pipeline {
             string(name: 'DOCKER_REGISTRY_URI', description: 'URI of the Docker registry')
             string(name: 'SSL_CERTIFICATE_ARN', description: 'ARN of the wildcard SSL Certificate')
 
+            string(name: 'GERRIT_VOLUME_SHAPSHOT_ID', description: 'Id of the EBS volume snapshot')
+
             string(name: 'METRICS_CLOUDWATCH_NAMESPACE', defaultValue: 'jenkins', description: 'The CloudWatch namespace for Gerrit metrics')
             string(name: 'SUBDOMAIN', defaultValue: '$(AWS_PREFIX)-master-demo', description: 'Name of the master sub domain')
             string(name: 'GERRIT_KEY_PREFIX', defaultValue: 'gerrit_secret', description: 'Secrets prefix')
@@ -20,8 +25,6 @@ pipeline {
             string(name: 'GIT_HTTP_USERNAME', description: 'Username for Git/HTTP testing')
             string(name: 'GIT_HTTP_PASSWORD', description: 'Password for Git/HTTP testing')
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
-            string(name: 'ACCOUNT_COOKIE', description: 'HTTP Cookie to access the Gerrit GUI')
-            string(name: 'XSRF_TOKEN', description: 'XSRF_TOKEN Cookie to access the Gerrit GUI for pOST operations')
             string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
         }
@@ -59,12 +62,36 @@ pipeline {
                                 setupData = resolveParameter(setupData, 'SUBDOMAIN', SUBDOMAIN)
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${GERRIT_KEY_PREFIX}"
+                                setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${GERRIT_VOLUME_SHAPSHOT_ID}"
 
                                 writeFile(file:"setup.env", text: setupData)
                             }
                             sh "make AWS_REGION=${AWS_REGION} AWS_PREFIX=${AWS_PREFIX} create-all"
                          }
                      }
+                }
+            }
+            stage('Extract Gatling test user credentials from Gerrit') {
+                steps {
+                    retry(50) {
+                        sleep(10)
+                        sh "curl --fail -L -I '${GERRIT_HTTP_URL}' 2>/dev/null"
+                    }
+                    sh "curl -L -c cookies -i -X POST '${GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip?account_id=1000000'"
+                    script {
+                        def cookies = readFile(file:"cookies")
+                        def cookiesMap = cookies
+                            .split('\n')
+                            .findAll{it.contains('GerritAccount') || it.contains('XSRF_TOKEN')}
+                            .inject([:]) { map, token ->
+                                def tokens = token.split('\t')
+                                map[tokens[5].trim()] = tokens[6].trim()
+                                map
+                            }
+
+                        accountCookie = cookiesMap['GerritAccount']
+                        xsrfToken = cookiesMap['XSRF_TOKEN']
+                    }
                 }
             }
             stage('Pull newest Gatling tests docker image') {
@@ -77,24 +104,35 @@ pipeline {
                 steps {
                     script {
                         writeFile(file:"simulation.env", text: """
-                                GERRIT_HTTP_URL="${GERRIT_HTTP_URL}"
-                                GERRIT_SSH_URL="${GERRIT_SSH_URL}"
-                                ACCOUNT_COOKIE="${ACCOUNT_COOKIE}"
-                                GIT_HTTP_USERNAME="${GIT_HTTP_USERNAME}"
-                                GIT_HTTP_PASSWORD="${GIT_HTTP_PASSWORD}"
-                                XSRF_TOKEN="${XSRF_TOKEN}"
-                                GERRIT_PROJECT="${GERRIT_PROJECT}"
+                                GERRIT_HTTP_URL=${GERRIT_HTTP_URL}
+                                GERRIT_SSH_URL=${GERRIT_SSH_URL}
+                                ACCOUNT_COOKIE=${accountCookie}
+                                GIT_HTTP_USERNAME=${GIT_HTTP_USERNAME}
+                                GIT_HTTP_PASSWORD=${GIT_HTTP_PASSWORD}
+                                XSRF_TOKEN=${xsrfToken}
+                                GERRIT_PROJECT=${GERRIT_PROJECT}
                                 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
                            """)
                     }
+                    sh "mkdir -p ${WORKSPACE}/results"
+                    // If Jenkins agent uses Docker remote server mounting local directory will mount directory
+                    // from Docker server host not agent host. Gatling reports will not be visible in build workspace.
+                    // Use Docker volume to avoid this situation.
+                    sh "docker volume create gatling-results"
                     script {
                         for (simulation in ["GerritGitSimulation", "GerritRestSimulation"]) {
                             sh """\
-                                docker run --rm --env-file simulation.env -v `pwd`/target/gatling:/opt/gatling/results \
+                                docker run --rm --env-file simulation.env -v gatling-results:/opt/gatling/results \
                                 gerritforge/gatling-sbt-gerrit-test -s gerritforge.${simulation}
                                """
                         }
                     }
+                    //Copy data from Docker volume to Jenkins build workspace
+                    sh "docker create -v gatling-results:/data --name gatling-results-container busybox true"
+                    sh "docker cp gatling-results-container:/data/. ${WORKSPACE}/results/"
+                    // Clean up
+                    sh "docker rm gatling-results-container"
+                    sh "docker volume rm gatling-results"
 
                     gatlingArchive()
                 }
