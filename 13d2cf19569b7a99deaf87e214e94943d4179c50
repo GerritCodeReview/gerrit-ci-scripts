@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6f1e03ce_9abde37a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-24T23:04:15Z",
+      "side": 1,
+      "message": "LGTM, let me test this on the gerrit-ci-2 environment (the Gerrit-CI staging)",
+      "revId": "13d2cf19569b7a99deaf87e214e94943d4179c50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
