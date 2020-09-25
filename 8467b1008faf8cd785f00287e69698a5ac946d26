@@ -46,6 +46,30 @@
       "revId": "8467b1008faf8cd785f00287e69698a5ac946d26",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6510c52c_ae85502b",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-25T07:51:11Z",
+      "side": 1,
+      "message": "\u003e It\u0027s identical to what we have in vars/pluginPipeline.groovy. Jenkins admin has to create sshUserPrivateKey credentials with some id.\n\nGotcha, so we need also to add those parts into the Gerrit master docker definition.\n\n\u003e Then has to create jenkins environment variable(GATLING_CREDENTIALS_ID) pointing to that shh credentials id\n\nAll the logic should then go into the /jenkins-docker/master definition. The creation of credentials based on an SSH public key isn\u0027t implemented yet and needs to be added to the setCredentials.groovy script.",
+      "parentUuid": "745fa0b8_6d41c097",
+      "range": {
+        "startLine": 24,
+        "startChar": 77,
+        "endLine": 24,
+        "endChar": 99
+      },
+      "revId": "8467b1008faf8cd785f00287e69698a5ac946d26",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
