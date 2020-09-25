@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4eb5a6cc_c65a369f",
+        "filename": "jenkins-docker/slave-aws/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-25T10:55:37Z",
+      "side": 1,
+      "message": "No we don\u0027t but all our images even mvn and sbt are based on this one 😊",
+      "parentUuid": "ff33079a_0b3f205d",
+      "range": {
+        "startLine": 1,
+        "startChar": 32,
+        "endLine": 1,
+        "endChar": 38
+      },
+      "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c7657853_fc0774c6",
         "filename": "jenkins/gatlingTestPipeline",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2020-09-24T23:29:09Z",
       "side": 1,
       "message": "Do we need LDAP for this test?",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 0
+      },
+      "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c46b7936_b92cdb8e",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-25T10:55:37Z",
+      "side": 1,
+      "message": "Currently it\u0027s hardcoded in the gerrit.config.template. It is possible to override the template during the build but then we need to rebuild the image as well. For that we need slave with docker and aws client. So the best approach would be to make it configurable in aws-gerrit and then just configure it here. But this should be done in a followup change",
+      "parentUuid": "c7657853_fc0774c6",
       "range": {
         "startLine": 13,
         "startChar": 0,
