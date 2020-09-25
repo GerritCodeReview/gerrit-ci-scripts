@@ -22,6 +22,30 @@
       "revId": "8467b1008faf8cd785f00287e69698a5ac946d26",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "745fa0b8_6d41c097",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-25T07:27:25Z",
+      "side": 1,
+      "message": "It\u0027s identical to what we have in vars/pluginPipeline.groovy. Jenkins admin has to create sshUserPrivateKey credentials with some id. Then has to create jenkins environment variable(GATLING_CREDENTIALS_ID) pointing to that shh credentials id",
+      "parentUuid": "ecfe5641_d8bd6011",
+      "range": {
+        "startLine": 24,
+        "startChar": 77,
+        "endLine": 24,
+        "endChar": 99
+      },
+      "revId": "8467b1008faf8cd785f00287e69698a5ac946d26",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
