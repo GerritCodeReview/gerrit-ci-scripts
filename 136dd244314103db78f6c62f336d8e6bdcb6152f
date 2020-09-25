@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e43ee7bc_a3d17dea",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-25T13:51:40Z",
+      "side": 1,
+      "message": "that\u0027s need to be added. I\u0027ve checked jenkins-docker/master and it looks like that setCredentials.groovy should add it automatically is we put it to the ${JENKINS_HOME}/.secrets file. But it looks like we have to manually add GATLING_GERRIT_CREDENTIALS_ID to the Jenkins environment variable. I don\u0027t see an place where we are adding already used GERRIT_CREDENTIALS_ID.\n\nPlus I believe I\u0027ve found small issue. In theory our secrets should be kept in ./secret file but in jenkins-docker/master/Makefile in start:build target we are correctly attach it with: -v ${JENKINS_HOME}/.secrets:/var/jenkins_home/.secrets \\\n\nbut in start_osx we are using wrong file:\n-v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.secrets \\",
+      "parentUuid": "8cf9c265_f549fbe1",
+      "range": {
+        "startLine": 82,
+        "startChar": 135,
+        "endLine": 82,
+        "endChar": 168
+      },
+      "revId": "136dd244314103db78f6c62f336d8e6bdcb6152f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aad09656_15ad62d8",
         "filename": "jenkins/gatlingTestPipeline",
         "patchSetId": 1
@@ -45,6 +69,30 @@
       "revId": "136dd244314103db78f6c62f336d8e6bdcb6152f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8675e3f3_5127c8e1",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-25T13:51:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aad09656_15ad62d8",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 29
+      },
+      "revId": "136dd244314103db78f6c62f336d8e6bdcb6152f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
