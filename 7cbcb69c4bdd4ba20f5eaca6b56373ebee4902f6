@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffdb3fb6_43c22520",
+        "filename": "jenkins-docker/slave-aws/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-29T21:56:17Z",
+      "side": 1,
+      "message": "nit: these can be done in the same RUN step",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 17
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9f6df48d_f5c7f8b0",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-29T21:56:17Z",
+      "side": 1,
+      "message": "This pipeline can be tied to the aws-gerrit project, so that it can be triggered whenever there is any change to the repository.\n\nAlso, the entire section becomes redundant, as the declarative pipeline would automatically checkout the project.",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 91
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e68228d0_65fd9bd3",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-29T21:56:17Z",
+      "side": 1,
+      "message": "Where is this environment variable set?",
+      "range": {
+        "startLine": 48,
+        "startChar": 50,
+        "endLine": 48,
+        "endChar": 68
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8eb48703_727bdcc6",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-29T21:56:17Z",
+      "side": 1,
+      "message": "why not simply create-all?",
+      "range": {
+        "startLine": 72,
+        "startChar": 126,
+        "endLine": 74,
+        "endChar": 73
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
