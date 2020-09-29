@@ -70,6 +70,24 @@
       "revId": "a7f12e19e8c84dcd54405b284371923df25f9f17",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d3b8eca7_ac0a2e05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1085901
+      },
+      "writtenOn": "2020-09-29T06:25:52Z",
+      "side": 1,
+      "message": "Parent was merged \u003e1 month ago and seems everything fine.\nMaybe this change can be merged?",
+      "parentUuid": "7565446d_e4154f39",
+      "revId": "a7f12e19e8c84dcd54405b284371923df25f9f17",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
