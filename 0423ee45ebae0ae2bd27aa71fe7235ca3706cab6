@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3e44f9a1_47bffb62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:18:31Z",
+      "side": 1,
+      "message": "\u003e Patch Set 8:\n\u003e \n\u003e Why not use wikimedia apt repo for java8 [1]? It\u0027ll allow you to upgrade from stretch to buster without having one version for java11 and another for java8.\n\u003e \n\u003e We use it for our production gerrit host (which runs buster with java8 now).\n\u003e \n\u003e [1] https://apt.wikimedia.org/wikimedia/dists/buster-wikimedia/component/jdk8/\n\nI have actually added directly the AdoptOpenJDK repository and it works fine.",
+      "revId": "0423ee45ebae0ae2bd27aa71fe7235ca3706cab6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
