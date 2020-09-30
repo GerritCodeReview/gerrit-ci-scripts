@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b92ec85e_bebaa0f9",
+        "filename": "jenkins-docker/slave-debian/set-java.sh",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:19:34Z",
+      "side": 0,
+      "message": "This would need to stay, as we may still want to switch between Java8 and Java11",
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
