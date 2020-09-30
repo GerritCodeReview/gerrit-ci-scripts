@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "f846cb6b_bcc7b1f8",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T22:32:36Z",
+      "side": 1,
+      "message": "But when you change the aws-gerrit deployment, you may also impact the overall performance, isn\u0027t it?\n\nAlso, we would have to update the aws-gerrit master branch and get the latest snapshot Gerrit war to install, otherwise this pipeline would test the same version of Gerrit over and over again.",
+      "parentUuid": "b0333291_c5374c67",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 91
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e68228d0_65fd9bd3",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 5
@@ -119,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "45a6a190_5c5cfd11",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T22:32:36Z",
+      "side": 1,
+      "message": "Why not just calling this \u0027aws-credentials-id\u0027 and just setting it on the ${JENKINS_HOME}/.secrets file then? What is this level of redirection providing as value?",
+      "parentUuid": "2a137f1d_6c3bc858",
+      "range": {
+        "startLine": 48,
+        "startChar": 50,
+        "endLine": 48,
+        "endChar": 68
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8eb48703_727bdcc6",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 5
@@ -154,6 +202,30 @@
       "side": 1,
       "message": "create-all build docker image and slave-aws doesn\u0027t have docker installed. We have to use slave-aws because we need aws-cli",
       "parentUuid": "8eb48703_727bdcc6",
+      "range": {
+        "startLine": 72,
+        "startChar": 126,
+        "endLine": 74,
+        "endChar": 73
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1c77f888_c0af2a78",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T22:32:36Z",
+      "side": 1,
+      "message": "Can we install Docker as well? Otherwise the whole system wouldn\u0027t work out of the box: it would still require someone to build and publish the image to ECR.",
+      "parentUuid": "b9a99248_2c64709a",
       "range": {
         "startLine": 72,
         "startChar": 126,
