@@ -39,6 +39,351 @@
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8e793cd_2ddbefe4",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "This should become a parameter of the release: we need to decide if we are creating and testing a Java8 or Java11 release",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f98bb94e_212b1dea",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 18,
+        "startChar": 14,
+        "endLine": 18,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4b4b03e_af2b01f9",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin-branch.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f1fb00fb_dec6a9ae",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "340e9c13_be218c57",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin-branch.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9bc410e7_ac7b9a8a",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c867a64e_6fdf439b",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9d6fdbd1_328eeb03",
+        "filename": "jenkins/gerrit-bazel-build-plugin-manual.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f8fedb0c_8f997392",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e9890789_2dfaabe0",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 4,
+        "startChar": 14,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29bc16ef_3e6cc479",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4c52429c_e7e2fb80",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e61d2b1b_168876ad",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5aeaa75_f7625544",
+        "filename": "jenkins/gerrit-sbt-build-branch-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4fd7a7d_6cf67cd7",
+        "filename": "jenkins/gerrit-sbt-build-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:27:38Z",
+      "side": 0,
+      "message": "The version should depend on the branch we build",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
