@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "f8834819_efba5049",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 14
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T23:21:06Z",
+      "side": 0,
+      "message": "This should stay, as the build scripts may want to switch the Java version",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b92ec85e_bebaa0f9",
         "filename": "jenkins-docker/slave-debian/set-java.sh",
         "patchSetId": 13
