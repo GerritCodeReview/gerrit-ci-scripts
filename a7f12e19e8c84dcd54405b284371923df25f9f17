@@ -88,6 +88,24 @@
       "revId": "a7f12e19e8c84dcd54405b284371923df25f9f17",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7386416f_c49d6a00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-09-30T15:57:12Z",
+      "side": 1,
+      "message": "Sure, let\u0027s merge and see how it goes. Worst case, we\u0027ll do a revert ;-)",
+      "parentUuid": "d3b8eca7_ac0a2e05",
+      "revId": "a7f12e19e8c84dcd54405b284371923df25f9f17",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
