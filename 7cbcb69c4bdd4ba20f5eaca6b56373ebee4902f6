@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "b0333291_c5374c67",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-30T07:42:25Z",
+      "side": 1,
+      "message": "I thought that we want to trigger it manually or when we have merge to gerrit core. This is performance test so what\u0027s the point of testing changes in aws-gerrit",
+      "parentUuid": "9f6df48d_f5c7f8b0",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 91
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e68228d0_65fd9bd3",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 5
@@ -71,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "2a137f1d_6c3bc858",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-30T07:42:25Z",
+      "side": 1,
+      "message": "Similar to the follow up change setCredentials.groovy should add it automatically is we put it to the ${JENKINS_HOME}/.secrets file. But it looks like we have to manually add AWS_CREDENTIALS_ID environment variable to point to the credentials from .secrets file",
+      "parentUuid": "e68228d0_65fd9bd3",
+      "range": {
+        "startLine": 48,
+        "startChar": 50,
+        "endLine": 48,
+        "endChar": 68
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8eb48703_727bdcc6",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 5
@@ -82,6 +130,30 @@
       "writtenOn": "2020-09-29T21:56:17Z",
       "side": 1,
       "message": "why not simply create-all?",
+      "range": {
+        "startLine": 72,
+        "startChar": 126,
+        "endLine": 74,
+        "endChar": 73
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9a99248_2c64709a",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-09-30T07:42:25Z",
+      "side": 1,
+      "message": "create-all build docker image and slave-aws doesn\u0027t have docker installed. We have to use slave-aws because we need aws-cli",
+      "parentUuid": "8eb48703_727bdcc6",
       "range": {
         "startLine": 72,
         "startChar": 126,
