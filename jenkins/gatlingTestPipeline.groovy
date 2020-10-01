@@ -14,6 +14,8 @@ pipeline {
             string(name: 'DOCKER_REGISTRY_URI', description: 'URI of the Docker registry')
             string(name: 'SSL_CERTIFICATE_ARN', description: 'ARN of the wildcard SSL Certificate')
 
+            string(name: 'GERRIT_VOLUME_SHAPSHOT_ID', description: 'Id of the EBS volume snapshot')
+
             string(name: 'LDAP_SERVER', description:'URL of the organization’s LDAP server to query for user information and group membership from')
             string(name: 'LDAP_USERNAME', description: 'Username to bind to the LDAP server with')
             string(name: 'LDAP_ACCOUNT_BASE', description: 'Root of the tree containing all user accounts')
@@ -70,6 +72,7 @@ pipeline {
                                 setupData = resolveParameter(setupData, 'SUBDOMAIN', SUBDOMAIN)
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${GERRIT_KEY_PREFIX}"
+                                setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${GERRIT_VOLUME_SHAPSHOT_ID}"
 
                                 writeFile(file:"setup.env", text: setupData)
                             }
