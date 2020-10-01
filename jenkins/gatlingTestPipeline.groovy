@@ -14,6 +14,8 @@ pipeline {
             string(name: 'DOCKER_REGISTRY_URI', description: 'URI of the Docker registry')
             string(name: 'SSL_CERTIFICATE_ARN', description: 'ARN of the wildcard SSL Certificate')
 
+            string(name: 'GERRIT_VOLUME_SHAPSHOT_ID', description: 'Id of the EBS volume snapshot')
+
             string(name: 'METRICS_CLOUDWATCH_NAMESPACE', defaultValue: 'jenkins', description: 'The CloudWatch namespace for Gerrit metrics')
             string(name: 'SUBDOMAIN', defaultValue: '$(AWS_PREFIX)-master-demo', description: 'Name of the master sub domain')
             string(name: 'GERRIT_KEY_PREFIX', defaultValue: 'gerrit_secret', description: 'Secrets prefix')
@@ -60,6 +62,7 @@ pipeline {
                                 setupData = resolveParameter(setupData, 'SUBDOMAIN', SUBDOMAIN)
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${GERRIT_KEY_PREFIX}"
+                                setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${GERRIT_VOLUME_SHAPSHOT_ID}"
 
                                 writeFile(file:"setup.env", text: setupData)
                             }
