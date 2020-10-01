@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4eefc0f6_482a18bf",
+        "filename": "jenkins-docker/slave-aws/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-01T13:35:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ffdb3fb6_43c22520",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 17
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f6df48d_f5c7f8b0",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 5
@@ -167,6 +191,30 @@
     },
     {
       "key": {
+        "uuid": "d36e6bb1_1e304364",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-01T13:35:03Z",
+      "side": 1,
+      "message": "I\u0027ve copied that functionality from pluginPipeline.groovy. My understanding was that we want to separate script from jenkins instance. So the developer doesn\u0027t know even credential id. But as I said we already have that in pluginPipeline.groovy so I thought that it\u0027s our standard but if not I\u0027m more than happy to remove it.",
+      "parentUuid": "45a6a190_5c5cfd11",
+      "range": {
+        "startLine": 48,
+        "startChar": 50,
+        "endLine": 48,
+        "endChar": 68
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8eb48703_727bdcc6",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 5
@@ -235,6 +283,30 @@
       "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2f7f4c27_9c574c98",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-01T13:35:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c77f888_c0af2a78",
+      "range": {
+        "startLine": 72,
+        "startChar": 126,
+        "endLine": 74,
+        "endChar": 73
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
