@@ -120,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "81fe4fac_cfaa2d8a",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-05T07:47:21Z",
+      "side": 1,
+      "message": "I\u0027ve spent some time on this point I cannot find easy solution. `checkout scm` can be used only with pipeline-scm from gatlingTestPipeline.yml or with multi-branch pipeline. But if I use pipeline-scm I have to point to the project with the pipeline because I cannot mix with dsl: !include-raw: gatlingTestPipeline.groovy so pipeline-scm has to point to gerrit-ci-script instead of aws-gerrit. For multi-branch projects currently it works in that way that each project must have Jenkinsfile in root folder of the project. I\u0027ve found this discussion https://stackoverflow.com/questions/39041342/jenkins-multibranch-pipeline-with-jenkinsfile-from-different-repository . Could we do that in follow up change?",
+      "parentUuid": "f846cb6b_bcc7b1f8",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 91
+      },
+      "revId": "7cbcb69c4bdd4ba20f5eaca6b56373ebee4902f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e68228d0_65fd9bd3",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 5
