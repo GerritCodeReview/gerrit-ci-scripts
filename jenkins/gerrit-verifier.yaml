@@ -76,6 +76,7 @@
       - inject:
           properties-content: >
             BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+            --java_toolchain=//tools:error_prone_warnings_toolchain
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
