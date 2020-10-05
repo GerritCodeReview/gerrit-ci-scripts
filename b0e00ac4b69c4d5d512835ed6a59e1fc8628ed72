@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "ff33079a_0b3f205d",
         "filename": "jenkins-docker/slave-aws/Dockerfile",
@@ -20,10 +21,10 @@
         "endChar": 38
       },
       "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "4eb5a6cc_c65a369f",
         "filename": "jenkins-docker/slave-aws/Dockerfile",
@@ -44,10 +45,10 @@
         "endChar": 38
       },
       "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": false
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "c7657853_fc0774c6",
         "filename": "jenkins/gatlingTestPipeline",
@@ -67,10 +68,10 @@
         "endChar": 0
       },
       "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "c46b7936_b92cdb8e",
         "filename": "jenkins/gatlingTestPipeline",
@@ -91,10 +92,34 @@
         "endChar": 0
       },
       "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c7bd387_e6cf5ac1",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-05T13:43:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c46b7936_b92cdb8e",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 0
+      },
+      "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "7dcf4298_54244d13",
         "filename": "jenkins/gatlingTestPipeline",
@@ -114,8 +139,31 @@
         "endChar": 125
       },
       "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c1baa8a_c382a720",
+        "filename": "jenkins/gatlingTestPipeline",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-05T13:43:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7dcf4298_54244d13",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 125
+      },
+      "revId": "b0e00ac4b69c4d5d512835ed6a59e1fc8628ed72",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
