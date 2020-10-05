@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b8b63ef5_e2df319b",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 20
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-05T07:47:21Z",
+      "side": 1,
+      "message": "My understanding was that they withCredentials exposes variables AWS_ACCESS_KEY_ID and AWS_ACCESS_KEY_ID but for aws client I need *environment* variables so I have to export them",
+      "parentUuid": "f05b564d_f140e255",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 82
+      },
+      "revId": "e3733cc2ddd0d0613382acae7325b34e39f897c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "80863610_48c4af1a",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 20
@@ -36,6 +60,30 @@
       "writtenOn": "2020-10-03T00:19:39Z",
       "side": 1,
       "message": "What\u0027s the purpose of these variables reassignments?",
+      "range": {
+        "startLine": 119,
+        "startChar": 0,
+        "endLine": 120,
+        "endChar": 82
+      },
+      "revId": "e3733cc2ddd0d0613382acae7325b34e39f897c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e9dd2494_998d51d6",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 20
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-05T07:47:21Z",
+      "side": 1,
+      "message": "Same as above",
+      "parentUuid": "80863610_48c4af1a",
       "range": {
         "startLine": 119,
         "startChar": 0,
