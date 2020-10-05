@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "48d924d0_a169912b",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-05T23:09:59Z",
+      "side": 1,
+      "message": "Best to keep this with its own template",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 72
+      },
+      "revId": "92da5839bc1c80cb5f6a008dba525a1a0165b3df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
