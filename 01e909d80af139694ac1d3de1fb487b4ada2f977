@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "736daa59_3cb6b8ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-05T23:14:07Z",
+      "side": 1,
+      "message": "This worked: the validation job is kept with Java8 compatibility.\n\n  BAZEL_OPTS\u003d--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache -- \n  java_toolchain\u003d//tools:error_prone_warnings_toolchain\n\n",
+      "revId": "01e909d80af139694ac1d3de1fb487b4ada2f977",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
