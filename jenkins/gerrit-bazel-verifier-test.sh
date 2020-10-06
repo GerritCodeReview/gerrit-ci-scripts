@@ -7,7 +7,7 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
-TEST_TAG_FILTERS="-flaky"
+TEST_TAG_FILTERS="-flaky,-replication"
 if [ "$TARGET_BRANCH" == "stable-2.16" ]
 then
   TEST_TAG_FILTERS="$TEST_TAG_FILTERS,-elastic"
