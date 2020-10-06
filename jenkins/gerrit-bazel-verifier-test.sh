@@ -7,7 +7,7 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
-TEST_TAG_FILTER="-flaky,-elastic"
+TEST_TAG_FILTER="-flaky,-elastic,-replication"
 
 export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
                  --test_output errors \
