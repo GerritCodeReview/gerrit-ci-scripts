@@ -9,7 +9,7 @@ then
   export BAZEL_OPTS=""
 fi
 
-TEST_TAG_FILTERS="-flaky"
+TEST_TAG_FILTERS="-flaky,-replication"
 if [ "{branch}" == "stable-2.16" ]
 then
   TEST_TAG_FILTERS="$TEST_TAG_FILTERS,-elastic"
