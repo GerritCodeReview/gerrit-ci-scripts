@@ -72,6 +72,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcb4d395_0b595a76",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-06T20:52:14Z",
+      "side": 1,
+      "message": "OK, hopefully nobody would ask to run validations against v2.14 or v2.15 ;-) otherwise they may fail because of elasticsearch tests.",
+      "parentUuid": "1f5cc237_c49dbf03",
+      "range": {
+        "startLine": 11,
+        "startChar": 11,
+        "endLine": 11,
+        "endChar": 12
+      },
+      "revId": "20576f7e304889d231ca5a3f07dbf24048cd31e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5f6f3728_bed6e1e3",

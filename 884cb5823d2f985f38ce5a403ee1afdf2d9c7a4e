@@ -22,6 +22,30 @@
       },
       "revId": "884cb5823d2f985f38ce5a403ee1afdf2d9c7a4e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be03aabc_ab0b02aa",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-06T20:52:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e8632e8_b7f1ed5d",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 4
+      },
+      "revId": "884cb5823d2f985f38ce5a403ee1afdf2d9c7a4e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
