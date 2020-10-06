@@ -96,6 +96,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "39273761_d91146b4",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-06T20:55:59Z",
+      "side": 1,
+      "message": "Ack. At least this fix is consistent with the currently reported issue and the rest of this change, as a whole for now.",
+      "parentUuid": "dcb4d395_0b595a76",
+      "range": {
+        "startLine": 11,
+        "startChar": 11,
+        "endLine": 11,
+        "endChar": 12
+      },
+      "revId": "20576f7e304889d231ca5a3f07dbf24048cd31e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5f6f3728_bed6e1e3",
