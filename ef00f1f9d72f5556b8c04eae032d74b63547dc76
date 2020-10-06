@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de9f10d8_4c536fb9",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-10-06T20:23:59Z",
+      "side": 1,
+      "message": "move starting quote before $TEST_TAG_FILTERS ?",
+      "revId": "ef00f1f9d72f5556b8c04eae032d74b63547dc76",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd8d66f1_27ebc559",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-10-06T20:23:59Z",
+      "side": 1,
+      "message": "move starting quote before $TEST_TAG_FILTERS ?",
+      "revId": "ef00f1f9d72f5556b8c04eae032d74b63547dc76",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
