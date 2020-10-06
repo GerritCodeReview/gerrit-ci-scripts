@@ -16,6 +16,24 @@
       "message": "in issue 13473 you say it\u0027s flaky in stable-2.16 shouldn\u0027t this then be moved to line 30 ? Same question below.",
       "revId": "a78ed0e6d21a5b2f95c854f422bf4606d1eff586",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8edb4db_2ae5f91f",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-06T22:05:58Z",
+      "side": 1,
+      "message": "Yes, I should create the other tickets for the other stable branches as well. Let me do it and add to the commit message.",
+      "parentUuid": "c007fd7c_45b453e9",
+      "revId": "a78ed0e6d21a5b2f95c854f422bf4606d1eff586",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
