@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "48d924d0_a169912b",
         "filename": "jenkins/gerrit-bazel-template.yaml",
@@ -20,8 +21,31 @@
         "endChar": 72
       },
       "revId": "92da5839bc1c80cb5f6a008dba525a1a0165b3df",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8f484a7_ff7a0e77",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-06T09:51:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "48d924d0_a169912b",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 72
+      },
+      "revId": "92da5839bc1c80cb5f6a008dba525a1a0165b3df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
