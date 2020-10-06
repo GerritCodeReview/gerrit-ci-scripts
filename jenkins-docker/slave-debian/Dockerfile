@@ -13,7 +13,6 @@ COPY set-java.sh /usr/bin/
 RUN apt-get update && apt-get install -y \
     openssh-server \
     curl \
-    xvfb \
     python-dev \
     python-pip \
     python-yaml \
