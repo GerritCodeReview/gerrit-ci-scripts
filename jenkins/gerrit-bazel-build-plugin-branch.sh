@@ -31,7 +31,7 @@ java -fullversion
 bazelisk version
 bazelisk build $BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
 
-TEST_TAG_FILTERS="-flaky"
+TEST_TAG_FILTERS="-flaky,-replication"
 if [ "{branch}" == "stable-2.16" ]
 then
   TEST_TAG_FILTERS="$TEST_TAG_FILTERS,-elastic"
