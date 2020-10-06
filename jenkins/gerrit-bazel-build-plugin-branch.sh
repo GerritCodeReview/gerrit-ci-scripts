@@ -29,7 +29,7 @@ BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalon
                    --test_summary detailed --flaky_test_attempts 3 \
                    --test_verbose_timeout_warnings --build_tests_only \
                    --test_timeout 3600 \
-                   --test_tag_filters=-flaky \
+                   --test_tag_filters=-flaky,-elastic \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
 bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test plugins/{name}/...
 
