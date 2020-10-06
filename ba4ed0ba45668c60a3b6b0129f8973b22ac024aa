@@ -16,6 +16,24 @@
       "message": "This prevents any feedback about the (other) replication tests. Beside making them formally flaky for now, which is another /already pushed (-1\u0027ed) change, I wonder: could we still get that needful test feedback, but without breaking the build? I don\u0027t know how myself for this CI.",
       "revId": "ba4ed0ba45668c60a3b6b0129f8973b22ac024aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "916a5acb_c6762f66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-06T19:46:11Z",
+      "side": 1,
+      "message": "\u003e This prevents any feedback about the (other) replication tests. Beside making them formally flaky for now, which is another /already pushed (-1\u0027ed) change,\n\nYes. Of course, fixing them would be best, however, it may take time. Flaky tests are very hard to hunt and fix.\n\n\u003e I wonder: could we still get that needful test feedback, but without breaking the build? I don\u0027t know how myself for this CI.\n\nThe Zuul CI already provides that feedback: this change is more for avoiding to break everyone else\u0027s changes because of the replication flakiness.",
+      "parentUuid": "f210ad42_19596d63",
+      "revId": "ba4ed0ba45668c60a3b6b0129f8973b22ac024aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
