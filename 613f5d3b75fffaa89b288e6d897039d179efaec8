@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec7751f8_4e971721",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-06T15:51:59Z",
+      "side": 1,
+      "message": "Issue 13474 only states the stable-2.16 case. Should this change be adapted to only target that branch? I suspect not, in which case maybe slightly update Issue 13474 accordingly?",
+      "revId": "613f5d3b75fffaa89b288e6d897039d179efaec8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
