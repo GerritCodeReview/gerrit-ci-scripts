@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f210ad42_19596d63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-06T15:56:39Z",
+      "side": 1,
+      "message": "This prevents any feedback about the (other) replication tests. Beside making them formally flaky for now, which is another /already pushed (-1\u0027ed) change, I wonder: could we still get that needful test feedback, but without breaking the build? I don\u0027t know how myself for this CI.",
+      "revId": "ba4ed0ba45668c60a3b6b0129f8973b22ac024aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
