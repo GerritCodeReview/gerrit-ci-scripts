@@ -9,10 +9,10 @@ echo '----------------------------------------------'
 
 case $TARGET_BRANCH in
   stable-2.*)
-    TEST_TAG_FILTER="-flaky,-elastic"
+    TEST_TAG_FILTER="-flaky,-replication,-elastic"
     ;;
   *)
-    TEST_TAG_FILTER="-flaky"
+    TEST_TAG_FILTER="-flaky,-replication"
 esac
 
 export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
