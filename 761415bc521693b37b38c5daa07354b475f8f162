@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bd8ea00_6cec28d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-07T20:46:50Z",
+      "side": 1,
+      "message": "Testing it now, making sure that we keep on validating that incoming changes are still compatible with Java 8.",
+      "revId": "761415bc521693b37b38c5daa07354b475f8f162",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
