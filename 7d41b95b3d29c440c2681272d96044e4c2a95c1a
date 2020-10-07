@@ -16,6 +16,29 @@
       "message": "This is now fully working on gerrit-ci",
       "revId": "7d41b95b3d29c440c2681272d96044e4c2a95c1a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "699902ef_1b34c337",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-07T20:04:03Z",
+      "side": 1,
+      "message": "$BAZEL_OPTS --",
+      "range": {
+        "startLine": 33,
+        "startChar": 15,
+        "endLine": 33,
+        "endChar": 28
+      },
+      "revId": "7d41b95b3d29c440c2681272d96044e4c2a95c1a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
