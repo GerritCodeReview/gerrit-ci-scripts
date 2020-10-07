@@ -47,6 +47,54 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5581a158_562f9ece",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-07T21:27:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c7ea540b_698dd517",
+      "range": {
+        "startLine": 12,
+        "startChar": 47,
+        "endLine": 12,
+        "endChar": 50
+      },
+      "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2043a78_40fa543f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-07T21:27:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a69e18cc_7ba6aac8",
+      "range": {
+        "startLine": 12,
+        "startChar": 47,
+        "endLine": 12,
+        "endChar": 50
+      },
+      "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3a33fac7_2d285d7d",
@@ -96,6 +144,24 @@
       "side": 1,
       "message": "then I would stick to the current configuration to ensure stable-3.2 continues to work with Java 11",
       "parentUuid": "81745824_de3b5d5e",
+      "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29950395_705046ef",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-07T21:27:05Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7ad9836c_d9d0fe51",
       "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
