@@ -107,6 +107,7 @@
     name: Gerrit-bazel-java11
     branch:
       - master
+      - stable-3.3
     jobs:
       - 'Gerrit-bazel-java11-{branch}'
 
