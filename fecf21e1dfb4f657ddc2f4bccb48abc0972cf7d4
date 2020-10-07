@@ -22,6 +22,46 @@
       },
       "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a69e18cc_7ba6aac8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-10-07T20:34:38Z",
+      "side": 1,
+      "message": "on",
+      "range": {
+        "startLine": 12,
+        "startChar": 47,
+        "endLine": 12,
+        "endChar": 50
+      },
+      "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a33fac7_2d285d7d",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-10-07T20:34:38Z",
+      "side": 1,
+      "message": "Why do we need a separate project defined for stable-3.2 but not for stable-3.3 ?\nCould this be also moved up to the project above ?",
+      "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
