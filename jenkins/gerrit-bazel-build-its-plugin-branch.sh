@@ -28,8 +28,8 @@ TARGETS=$(echo "{targets}" | sed -e 's/its-{{name}}/its-{name}/g')
 
 java -fullversion
 bazelisk version
-bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
-bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/its-{name}/...
+bazelisk build $BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/its-{name}/...
 
 for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)
 do
