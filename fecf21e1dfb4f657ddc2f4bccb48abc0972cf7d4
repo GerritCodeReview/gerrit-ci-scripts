@@ -62,6 +62,24 @@
       "message": "Why do we need a separate project defined for stable-3.2 but not for stable-3.3 ?\nCould this be also moved up to the project above ?",
       "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81745824_de3b5d5e",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-07T20:39:26Z",
+      "side": 1,
+      "message": "Unfortunately not: that is because Gerrit on stable-3.2 is built by default for Java 8 and the Java 11 is a \"non-standard\" build. With stable-3.3 and master, the Java 11 is the standard build. They do need two different templates.\n\nWe could actually drop the build of stable-3.2 for Java 11, because we achieved what we wanted: making sure that it would have continued building and working until now.\n\nWDYT?",
+      "parentUuid": "3a33fac7_2d285d7d",
+      "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
