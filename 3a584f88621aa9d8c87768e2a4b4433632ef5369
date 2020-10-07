@@ -16,6 +16,24 @@
       "message": "you said on Slack that the offending commit seems to be: https://gerrit.googlesource.com/plugins/replication/+/05042b1051b2e2b0d67f5a9dbdabe62ae2cfb648\n\nThen I\u0027d say we should only mark these tests as flaky instead of all replication tests.",
       "revId": "3a584f88621aa9d8c87768e2a4b4433632ef5369",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "693f6fc3_604c2575",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-07T20:32:45Z",
+      "side": 1,
+      "message": "It could be done in Change-Id: I5b437673f2",
+      "parentUuid": "f84a9ee9_33859cb5",
+      "revId": "3a584f88621aa9d8c87768e2a4b4433632ef5369",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
