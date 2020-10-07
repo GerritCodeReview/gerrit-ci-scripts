@@ -80,6 +80,24 @@
       "parentUuid": "3a33fac7_2d285d7d",
       "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ad9836c_d9d0fe51",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-10-07T20:45:39Z",
+      "side": 1,
+      "message": "then I would stick to the current configuration to ensure stable-3.2 continues to work with Java 11",
+      "parentUuid": "81745824_de3b5d5e",
+      "revId": "fecf21e1dfb4f657ddc2f4bccb48abc0972cf7d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
