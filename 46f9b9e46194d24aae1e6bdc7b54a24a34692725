@@ -16,6 +16,24 @@
       "message": "On slack you said the offending commit seems to be: https://gerrit.googlesource.com/plugins/replication/+/05042b1051b2e2b0d67f5a9dbdabe62ae2cfb648\nwouldn\u0027t it be then sufficient to disable these tests instead of all replication tests?",
       "revId": "46f9b9e46194d24aae1e6bdc7b54a24a34692725",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b62302ef_92941012",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-08T14:09:39Z",
+      "side": 1,
+      "message": "\u003e On slack you said the offending commit seems to be: https://gerrit.googlesource.com/plugins/replication/+/05042b1051b2e2b0d67f5a9dbdabe62ae2cfb648\n\u003e wouldn\u0027t it be then sufficient to disable these tests instead of all replication tests?\n\nOf flag those tests are flaky. From what I see, however, the overall mechanism of loading the replication.config became flaky, which means it could potentially impact *any* of the test. It looks like a general issue with the structure of the tests IMHO.\n\nIt requires more digging into the tests, but the problem is that, in the meantime, we would fail many builds and Gerrit core validations, which is very inconvenient.\n\nThis change isn\u0027t directed to *resolve* the issue, but rather mitigating the failure of validations for everything else.\n\nHope that clarifies.",
+      "parentUuid": "7eb9d884_601d1a0b",
+      "revId": "46f9b9e46194d24aae1e6bdc7b54a24a34692725",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
