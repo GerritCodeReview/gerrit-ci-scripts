@@ -1,0 +1,8 @@
+- project:
+    name: cache-chroniclemap
+    jobs:
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-3.3
+      - 'module-{name}-verifier'
