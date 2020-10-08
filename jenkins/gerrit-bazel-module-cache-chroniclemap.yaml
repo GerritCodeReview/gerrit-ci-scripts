@@ -1,0 +1,9 @@
+- project:
+    name: cache-chroniclemap
+    jobs:
+      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - master
+            - stable-3.3
