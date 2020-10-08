@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abfa5812_f412fdd4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2020-10-08T16:50:48Z",
+      "side": 1,
+      "message": "I\u0027m quite opposed to disabling tests on stable branches (especially in as broad a manner as this). It should be possible to bisect test flakiness and revert the offending commit.",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
