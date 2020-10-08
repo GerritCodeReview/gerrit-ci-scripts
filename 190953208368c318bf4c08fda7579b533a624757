@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5919af01_b3589c7f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-08T19:38:20Z",
+      "side": 1,
+      "message": "@Marcin we need THIS change to enable the plugin\u0027s validation on Java 8",
+      "revId": "190953208368c318bf4c08fda7579b533a624757",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
