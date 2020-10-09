@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05823cde_88a89788",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-09T22:22:08Z",
+      "side": 1,
+      "message": "It works:\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-metrics-reporter-prometheus-bazel-master-stable-3.3/",
+      "revId": "05c1273d15ccd85f59f77f17dedbaf731e9c2fd5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
