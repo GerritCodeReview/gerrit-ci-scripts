@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9bdb04c_cb7d0104",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 34
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-12T15:46:36Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b40c61e1_294e8d98",
+      "range": {
+        "startLine": 21,
+        "startChar": 3,
+        "endLine": 21,
+        "endChar": 21
+      },
+      "revId": "ca21737b6d2da0bc2826fcaa7b27e4efd530c9bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e136ce76_955e64f2",
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "It looks like the SBT downloaded in the sbt package with Debian buster doesn\u0027t support anymore the input-stream arguments.\n\nThis is a workaround to pass the name in the command line.",
       "parentUuid": "e136ce76_955e64f2",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 53
+      },
+      "revId": "ca21737b6d2da0bc2826fcaa7b27e4efd530c9bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cfbac4e_08a78967",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 34
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-10-12T15:46:36Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "22447f4b_31460f4c",
       "range": {
         "startLine": 14,
         "startChar": 0,
