@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bda14ba_aafa9dc1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 34
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-12T20:43:41Z",
+      "side": 1,
+      "message": "Images are built as expected. Gerrit can be built inside the images as expected.",
+      "revId": "ca21737b6d2da0bc2826fcaa7b27e4efd530c9bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8b4e86a0_804a94a3",
