@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "6d5f74e7_a23c0501",
         "filename": "jenkins/gerrit-mvn-build-plugin.sh",
@@ -20,10 +21,34 @@
         "endChar": 11
       },
       "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "665c21b7_69aeb3b4",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 1,
+      "message": "The source/dest byte code version is defined in the plugin\u0027s pom.xml. The CI scripts should not assume anything by default IMHO.",
+      "parentUuid": "6d5f74e7_a23c0501",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "11cea171_4dea901f",
         "filename": "jenkins/gerrit-sbt-build-branch-plugin.sh",
@@ -43,10 +68,10 @@
         "endChar": 36
       },
       "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "e8ff280a_609b669b",
         "filename": "jenkins/gerrit-sbt-build-branch-plugin.sh",
@@ -67,8 +92,31 @@
         "endChar": 36
       },
       "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6fc00b3_7bd112f1",
+        "filename": "jenkins/gerrit-sbt-build-branch-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 1,
+      "message": "Now both Java8 and Java11 are included in the Debian/Buster image: both mvn and sbt could then work unaffected by this change.",
+      "parentUuid": "e8ff280a_609b669b",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 36
+      },
+      "revId": "d6764bc2333ad337e0e92c5f7c45d0a49dad652e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

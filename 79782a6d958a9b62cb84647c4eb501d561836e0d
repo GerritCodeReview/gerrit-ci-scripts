@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "f8834819_efba5049",
         "filename": "jenkins-docker/slave-debian/Dockerfile",
@@ -20,10 +21,34 @@
         "endChar": 26
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7ebad85_3e81fc60",
+        "filename": "jenkins-docker/slave-debian/Dockerfile",
+        "patchSetId": 14
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "f8834819_efba5049",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "b92ec85e_bebaa0f9",
         "filename": "jenkins-docker/slave-debian/set-java.sh",
@@ -37,10 +62,28 @@
       "side": 0,
       "message": "This would need to stay, as we may still want to switch between Java8 and Java11",
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a613e93a_146d5f13",
+        "filename": "jenkins-docker/slave-debian/set-java.sh",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "b92ec85e_bebaa0f9",
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "a8e793cd_2ddbefe4",
         "filename": "jenkins-docker/slave-release/gerrit-release.sh",
@@ -60,10 +103,34 @@
         "endChar": 20
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "338f3e78_15bd55b2",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "a8e793cd_2ddbefe4",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 20
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "f98bb94e_212b1dea",
         "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
@@ -83,10 +150,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "00db7f66_9c36dd9b",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "f98bb94e_212b1dea",
+      "range": {
+        "startLine": 18,
+        "startChar": 14,
+        "endLine": 18,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "f4b4b03e_af2b01f9",
         "filename": "jenkins/gerrit-bazel-build-its-plugin-branch.sh",
@@ -106,10 +197,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "98c05ec8_aa18360f",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin-branch.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "f4b4b03e_af2b01f9",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "f1fb00fb_dec6a9ae",
         "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
@@ -129,10 +244,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c1f4dac_313828d1",
+        "filename": "jenkins/gerrit-bazel-build-its-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "f1fb00fb_dec6a9ae",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "340e9c13_be218c57",
         "filename": "jenkins/gerrit-bazel-build-owners-plugin-branch.sh",
@@ -152,10 +291,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b177464_416e32cf",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin-branch.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "340e9c13_be218c57",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "9bc410e7_ac7b9a8a",
         "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
@@ -175,10 +338,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d706f31f_9c240c27",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "9bc410e7_ac7b9a8a",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "c867a64e_6fdf439b",
         "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
@@ -198,10 +385,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "976786be_0abf719d",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "c867a64e_6fdf439b",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "9d6fdbd1_328eeb03",
         "filename": "jenkins/gerrit-bazel-build-plugin-manual.sh",
@@ -221,10 +432,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "78b31e70_09a193ba",
+        "filename": "jenkins/gerrit-bazel-build-plugin-manual.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "9d6fdbd1_328eeb03",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "f8fedb0c_8f997392",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
@@ -244,10 +479,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "57c1415f_7ac3cff9",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "f8fedb0c_8f997392",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "e9890789_2dfaabe0",
         "filename": "jenkins/gerrit-bazel-build.sh",
@@ -267,10 +526,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "48d7deb4_54d5e026",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "e9890789_2dfaabe0",
+      "range": {
+        "startLine": 4,
+        "startChar": 14,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "29bc16ef_3e6cc479",
         "filename": "jenkins/gerrit-bazel-test.sh",
@@ -290,10 +573,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "973238f4_6882f7e8",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "29bc16ef_3e6cc479",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "4c52429c_e7e2fb80",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
@@ -313,10 +620,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd866d68_d21bc302",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "4c52429c_e7e2fb80",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "e61d2b1b_168876ad",
         "filename": "jenkins/gerrit-mvn-build-plugin.sh",
@@ -336,10 +667,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4be35620_0ac72e24",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "e61d2b1b_168876ad",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "d5aeaa75_f7625544",
         "filename": "jenkins/gerrit-sbt-build-branch-plugin.sh",
@@ -359,10 +714,34 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "21765745_b4e743c2",
+        "filename": "jenkins/gerrit-sbt-build-branch-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "d5aeaa75_f7625544",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "a4fd7a7d_6cf67cd7",
         "filename": "jenkins/gerrit-sbt-build-plugin.sh",
@@ -382,8 +761,31 @@
         "endChar": 15
       },
       "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87525156_067bc29d",
+        "filename": "jenkins/gerrit-sbt-build-plugin.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 0,
+      "message": "Java8 is the default anyway, this this change makes sense for now.",
+      "parentUuid": "a4fd7a7d_6cf67cd7",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "79782a6d958a9b62cb84647c4eb501d561836e0d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

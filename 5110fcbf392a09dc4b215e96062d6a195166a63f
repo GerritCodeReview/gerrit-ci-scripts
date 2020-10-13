@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "b75df7e1_d24d4b40",
         "filename": "/COMMIT_MSG",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "What about running the tests? (integration and e2e)\nWe still need to support the builds of Gerrit v2.16, v3.0 and v3.1, where we support officially Java 8.\n\nWould we need to have two Docker containers per build? One with Java 11 and another with Java 8?",
       "revId": "5110fcbf392a09dc4b215e96062d6a195166a63f",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "81668367_fd40695b",
         "filename": "/COMMIT_MSG",
@@ -32,8 +33,25 @@
       "message": "Very good point. I have built all docker images from this change, and confirmed that Java 11 is installed only:\n\n  $ jenkins@90266cf550da:~/gerrit$ java -fullversion\n  openjdk full version \"11.0.5+10-post-Debian-1deb10u1\"\n\nAlmost all tests are passing. The two failing tests is a known issue:\n\n* //javatests/com/google/gerrit/acceptance/server/mail:MailIT\n* //javatests/com/google/gerrit/server:server_tests\n\nand we already have a special handling for those breakages. However, this specific handling is only active, if Java 11 tool chain is used. It is a small change to make the additional parameters also used if we build with default java toolchain, we just omit condition on java11 configuration parameter.\n\nThis is the change that fixed it: [1]. Now all tests are passing on docker image based on Debian Buster, with Java 11 installed only, without passing any parameters, also only with:\n\n  $ bazelisk test //javatests/...\n\nWe also probably want to move the fix: [1] to stable-2.16 branch.\n\n[1] https://gerrit-review.googlesource.com/c/gerrit/+/246604",
       "parentUuid": "b75df7e1_d24d4b40",
       "revId": "5110fcbf392a09dc4b215e96062d6a195166a63f",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e26c3ad1_20e7b49d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 1,
+      "message": "The image now includes both Java8 and Java11, the issue is then resolved anyway.",
+      "parentUuid": "81668367_fd40695b",
+      "revId": "5110fcbf392a09dc4b215e96062d6a195166a63f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

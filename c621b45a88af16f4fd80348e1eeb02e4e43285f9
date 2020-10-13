@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "d1a69135_8555c522",
         "filename": "jenkins-docker/slave-debian/Makefile",
@@ -14,8 +15,25 @@
       "side": 1,
       "message": "It might be time to remove the _$DEBIAN_VER suffix. I think we left it in originally because there is always the possibility that we again need to build parallel versions (although we should try to avoid that), but I think there are less cumbersome ways.\n\nI would suggest to set the DEBIAN_VER parameter at the top and remove the suffix. If we set the variable for each image and use it to create the image tag (removing the hard-coded uses in the Dockerfiles), we would also always be clear about, which container image is based on which debian version.\n\nThis can be of course done in a separate change :-).",
       "revId": "c621b45a88af16f4fd80348e1eeb02e4e43285f9",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "216b9457_f3bbb852",
+        "filename": "jenkins-docker/slave-debian/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 1,
+      "message": "Done with Change-Id: I85bcc62",
+      "parentUuid": "d1a69135_8555c522",
+      "revId": "c621b45a88af16f4fd80348e1eeb02e4e43285f9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

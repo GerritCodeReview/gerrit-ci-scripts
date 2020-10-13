@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "dcda2038_2e3d7110",
         "filename": "/COMMIT_MSG",
@@ -20,10 +21,10 @@
         "endChar": 38
       },
       "revId": "432ca2711110e3d6135b6f4acfae24502895a26f",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "a02be1f0_428ba819",
         "filename": "/COMMIT_MSG",
@@ -44,8 +45,31 @@
         "endChar": 38
       },
       "revId": "432ca2711110e3d6135b6f4acfae24502895a26f",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1369a8c2_037c57fa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-13T20:15:32Z",
+      "side": 1,
+      "message": "Now Java8 is included as well, which enables the SBT and Maven builds.",
+      "parentUuid": "a02be1f0_428ba819",
+      "range": {
+        "startLine": 10,
+        "startChar": 66,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "432ca2711110e3d6135b6f4acfae24502895a26f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
