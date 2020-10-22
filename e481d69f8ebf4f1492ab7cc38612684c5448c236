@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1a67455_89cc6d13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-22T19:45:31Z",
+      "side": 1,
+      "message": "This is only my own VR vote, based on local experiences with it; CI\u0027s?",
+      "revId": "e481d69f8ebf4f1492ab7cc38612684c5448c236",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
