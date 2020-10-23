@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y nodejs npm gcc g++ make && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && apt-get install yarn
 
-COPY wct.conf.json /home/jenkins/
-RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
+COPY --chown=jenkins:jenkins wct.conf.json /home/jenkins/
+COPY --chown=jenkins:jenkins npmrc /home/jenkins/.npmrc
 
 RUN npm install --unsafe-perm -g \
       eslint@"=6.6.0" \
