@@ -28,6 +28,7 @@
     builders:
       - shell: |
           set +x
+          . set-java.sh 8
           echo "Building gitiles webapp master"
           echo '=============================='
           bazelisk version

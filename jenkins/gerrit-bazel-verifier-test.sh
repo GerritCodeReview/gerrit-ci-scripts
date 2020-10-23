@@ -1,5 +1,7 @@
 #!/bin/bash -ex
 
+. set-java.sh 8
+
 cd gerrit
 
 echo "Test with mode=$MODE"

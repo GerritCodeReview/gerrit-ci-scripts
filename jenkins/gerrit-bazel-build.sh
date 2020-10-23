@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. set-java.sh 8
+
 cd gerrit
 
 export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone"

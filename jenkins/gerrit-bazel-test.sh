@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. set-java.sh 8
+
 cd gerrit
 
 TEST_TAG_FILTERS="-flaky"

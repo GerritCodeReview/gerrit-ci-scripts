@@ -1,4 +1,7 @@
 #!/bin/bash -xe
+
+. set-java.sh 8
+
 cd gerrit
 bazelisk version
 if ([ "$TARGET_BRANCH" == "master" ] || \

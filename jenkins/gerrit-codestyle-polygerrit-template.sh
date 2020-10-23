@@ -1,4 +1,7 @@
 #!/bin/bash -xe
+
+. set-java.sh 8
+
 cd gerrit
 if ([ "$TARGET_BRANCH" == "stable-3.1" ] || \
     [ "$TARGET_BRANCH" == "stable-3.0" ] || \

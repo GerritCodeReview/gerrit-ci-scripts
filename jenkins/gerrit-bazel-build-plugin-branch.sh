@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. set-java.sh 8
+
 echo "Building plugin {name}/{branch} with Gerrit/{gerrit-branch}"
 
 git remote add gerrit https://gerrit.googlesource.com/a/gerrit

@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. set-java.sh 8
+
 git remote add origin https://gerrit.googlesource.com/a/gerrit
 git fetch origin
 git checkout origin/{gerrit-branch}

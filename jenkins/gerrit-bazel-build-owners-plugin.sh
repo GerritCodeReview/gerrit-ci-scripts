@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. set-java.sh 8
+
 git checkout -fb {branch} gerrit/{branch}
 git submodule update --init
 git read-tree -u --prefix=plugins/{name}-plugin origin/{branch}
