@@ -1,6 +1,13 @@
 #!/bin/bash -e
 
-. set-java.sh 8
+case "{branch}" in
+  stable-2.16|stable-3.0|stable-3.1|stable-3.2)
+    . set-java.sh 8
+    ;;
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 echo "Building plugin {name}/{branch} with Gerrit/{gerrit-branch}"
 
