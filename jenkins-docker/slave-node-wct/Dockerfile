@@ -20,3 +20,7 @@ RUN npm install --unsafe-perm -g \
       fried-twinkie@"^0.2.2" \
       polylint polymer-cli
 RUN npm install --unsafe-perm -g 'web-component-tester@$WCT_VER'
+
+# This is needed for the JavaScript lint check performed by PolyGerrit
+# which creates a symbolic link into the eslint's bin directory
+RUN chmod a+w /usr/local/lib/node_modules/eslint/bin
