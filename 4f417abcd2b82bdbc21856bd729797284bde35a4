@@ -34,6 +34,24 @@
       "parentUuid": "abfa5812_f412fdd4",
       "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6689ea43_1b019a4c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2020-10-23T23:18:55Z",
+      "side": 1,
+      "message": "Waiting for reviews on 285380: Refactor storage-based ITs into ReplicationStorageIT | https://gerrit-review.googlesource.com/c/plugins/replication/+/285380 :)",
+      "parentUuid": "c04c9572_a325667f",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
