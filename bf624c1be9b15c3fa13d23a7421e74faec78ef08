@@ -16,6 +16,24 @@
       "message": "Ping for whenever you get a chance. I know you\u0027ve been busy again lately with CI matters. -Thanks.",
       "revId": "bf624c1be9b15c3fa13d23a7421e74faec78ef08",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c623abc_1502570d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-23T20:01:58Z",
+      "side": 1,
+      "message": "Apologies for being late: I\u0027m focusing to resume a green build on the major branches and then I\u0027ll look at the Bazel upgrade :-)",
+      "parentUuid": "773244aa_ec9a0d14",
+      "revId": "bf624c1be9b15c3fa13d23a7421e74faec78ef08",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
