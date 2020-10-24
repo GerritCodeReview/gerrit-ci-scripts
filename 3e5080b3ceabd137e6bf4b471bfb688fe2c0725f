@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f19fd05_116b7d58",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-24T12:01:13Z",
+      "side": 1,
+      "message": "This is the wrong approach: there will be more PolyGerrit operations that would require to change the NPM modules.\n",
+      "revId": "3e5080b3ceabd137e6bf4b471bfb688fe2c0725f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
