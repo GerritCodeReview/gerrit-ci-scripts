@@ -22,6 +22,30 @@
       },
       "revId": "8db40b83cf92cdb596d451f3d4d69389234e09f3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef6b2d5d_2503d805",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-24T00:36:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ab45970e_29bbdeb8",
+      "range": {
+        "startLine": 96,
+        "startChar": 28,
+        "endLine": 96,
+        "endChar": 56
+      },
+      "revId": "8db40b83cf92cdb596d451f3d4d69389234e09f3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
