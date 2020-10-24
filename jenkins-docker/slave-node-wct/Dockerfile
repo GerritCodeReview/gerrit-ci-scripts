@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y nodejs npm gcc g++ make && \
 COPY wct.conf.json /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/wct.conf.json
 
+USER jenkins
+
 RUN npm install --unsafe-perm -g \
       eslint@"=6.6.0" \
       eslint-config-google@"=0.13.0" \
@@ -20,3 +22,5 @@ RUN npm install --unsafe-perm -g \
       fried-twinkie@"^0.2.2" \
       polylint polymer-cli
 RUN npm install --unsafe-perm -g 'web-component-tester@$WCT_VER'
+
+USER root
