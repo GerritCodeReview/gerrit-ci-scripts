@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "180a5700_7d576466",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-24T16:55:25Z",
+      "side": 1,
+      "message": "Incompatible terms together here I think.",
+      "range": {
+        "startLine": 13,
+        "startChar": 3,
+        "endLine": 13,
+        "endChar": 22
+      },
+      "revId": "a75bbafeccaac75b5c976a6cbe7f187dcd88a292",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7a3bbc7_84a76e58",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-24T16:55:25Z",
+      "side": 1,
+      "message": "Sorry if this change wasn\u0027t ready for review.",
+      "revId": "a75bbafeccaac75b5c976a6cbe7f187dcd88a292",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13598f52_e8720801",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-24T16:55:25Z",
+      "side": 1,
+      "message": "Idem.",
+      "range": {
+        "startLine": 4,
+        "startChar": 46,
+        "endLine": 4,
+        "endChar": 47
+      },
+      "revId": "a75bbafeccaac75b5c976a6cbe7f187dcd88a292",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a05da726_9142c6cd",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-24T16:55:25Z",
+      "side": 1,
+      "message": "(Same.)",
+      "revId": "a75bbafeccaac75b5c976a6cbe7f187dcd88a292",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3142588f_6b5c992c",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-24T16:55:25Z",
+      "side": 1,
+      "message": "Does this work?",
+      "range": {
+        "startLine": 4,
+        "startChar": 46,
+        "endLine": 4,
+        "endChar": 47
+      },
+      "revId": "a75bbafeccaac75b5c976a6cbe7f187dcd88a292",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "641aecef_d35b4eaf",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-24T16:55:25Z",
+      "side": 1,
+      "message": "Extra blank line?",
+      "revId": "a75bbafeccaac75b5c976a6cbe7f187dcd88a292",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
