@@ -1,5 +1,5 @@
-NO_CACHE=false
-IMAGE=gerritforge/gerrit-release-bazel:debian-buster
+NO_CACHE=true
+IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-80.0.3987.149
 
 build:
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
