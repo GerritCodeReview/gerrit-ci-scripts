@@ -170,7 +170,6 @@
       - fetch-all-submodules
       - shell: !include-raw-escape: gerrit-codestyle-gjf.sh
       - shell: !include-raw-escape: gerrit-codestyle-polygerrit-lint.sh
-      - shell: !include-raw-escape: gerrit-codestyle-polygerrit-template.sh
       - shell: !include-raw-escape: gerrit-codestyle-buildifier.sh
 
 - job:
