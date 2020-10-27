@@ -16,6 +16,24 @@
       "message": "@Tao @Dmitrii this is the most pragmatic approach I could see to face the issue of the lint tests failing on stable-2.16/3.0/3.1. Do you have other proposals?",
       "revId": "43c29ebb3c872c950103e2ce9a8a8745ebac2be0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f400f170_471126e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1085901
+      },
+      "writtenOn": "2020-10-27T12:40:19Z",
+      "side": 1,
+      "message": "Yes, I agree.",
+      "parentUuid": "2167e8cd_46cd112d",
+      "revId": "43c29ebb3c872c950103e2ce9a8a8745ebac2be0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
