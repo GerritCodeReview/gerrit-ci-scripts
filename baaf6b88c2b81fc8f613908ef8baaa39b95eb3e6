@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c95552d_3a1cd119",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-27T20:49:36Z",
+      "side": 1,
+      "message": "Let me do a full rebuild and test of Gerrit using Bazel 3.7.0",
+      "revId": "baaf6b88c2b81fc8f613908ef8baaa39b95eb3e6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
