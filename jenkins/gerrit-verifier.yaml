@@ -119,6 +119,7 @@
       - set-git-credentials
       - merge-target-branch
       - fetch-all-submodules
+      - shell: !include-raw-escape: gerrit-bazel-cleancache.sh
       - shell: !include-raw-escape: gerrit-bazel-build.sh
       - shell: !include-raw-escape: set-docker-host.sh
       - shell: !include-raw-escape: gerrit-bazel-verifier-test.sh
@@ -140,6 +141,7 @@
       - set-git-credentials
       - merge-target-branch
       - fetch-all-submodules
+      - shell: !include-raw-escape: gerrit-bazel-cleancache.sh
       - shell: !include-raw-escape: gerrit-bazel-build.sh
       - shell: !include-raw-escape: set-docker-host.sh
       - shell: !include-raw-escape: gerrit-bazel-verifier-test.sh
@@ -168,6 +170,7 @@
       - set-git-credentials
       - merge-target-branch
       - fetch-all-submodules
+      - shell: !include-raw-escape: gerrit-bazel-cleancache.sh
       - shell: !include-raw-escape: gerrit-codestyle-gjf.sh
       - shell: !include-raw-escape: gerrit-codestyle-polygerrit-lint.sh
       - shell: !include-raw-escape: gerrit-codestyle-buildifier.sh
