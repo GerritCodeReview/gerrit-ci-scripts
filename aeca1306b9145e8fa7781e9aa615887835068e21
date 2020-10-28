@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bac7663_de33b69c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-28T18:00:23Z",
+      "side": 1,
+      "message": "I have tested this E2E on gerrit-ci-2.gerritforge.com and it works as expected.\n\n@Marco @Marcin can you re-check?",
+      "revId": "aeca1306b9145e8fa7781e9aa615887835068e21",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
