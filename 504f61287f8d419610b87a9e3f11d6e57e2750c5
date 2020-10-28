@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45530cc6_46de7d0d",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-28T17:36:42Z",
+      "side": 1,
+      "message": "\u0027}\u0027 missing at the end of the line",
+      "revId": "504f61287f8d419610b87a9e3f11d6e57e2750c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
