@@ -194,6 +194,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "761850e4_6869c50d",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-28T13:10:19Z",
+      "side": 1,
+      "message": "I was mislead by this parenthesis; sorry for the hassle.",
+      "parentUuid": "5998f0f3_43822105",
+      "range": {
+        "startLine": 4,
+        "startChar": 46,
+        "endLine": 4,
+        "endChar": 47
+      },
+      "revId": "a75bbafeccaac75b5c976a6cbe7f187dcd88a292",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "641aecef_d35b4eaf",
