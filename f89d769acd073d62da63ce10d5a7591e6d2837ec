@@ -22,6 +22,30 @@
       },
       "revId": "f89d769acd073d62da63ce10d5a7591e6d2837ec",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42015f65_6ba6d0c9",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-29T20:52:46Z",
+      "side": 1,
+      "message": "That\u0027s the start of the build, then yes, there is nothing as the nodes are all ephemeral.",
+      "parentUuid": "a7e8d189_f06a70fc",
+      "range": {
+        "startLine": 6,
+        "startChar": 29,
+        "endLine": 6,
+        "endChar": 37
+      },
+      "revId": "f89d769acd073d62da63ce10d5a7591e6d2837ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
