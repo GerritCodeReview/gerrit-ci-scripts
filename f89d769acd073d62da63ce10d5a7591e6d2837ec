@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7e8d189_f06a70fc",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T20:48:04Z",
+      "side": 1,
+      "message": "Assuming that nothing else than disposable bazel files land under here, on that node.",
+      "range": {
+        "startLine": 6,
+        "startChar": 29,
+        "endLine": 6,
+        "endChar": 37
+      },
+      "revId": "f89d769acd073d62da63ce10d5a7591e6d2837ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
