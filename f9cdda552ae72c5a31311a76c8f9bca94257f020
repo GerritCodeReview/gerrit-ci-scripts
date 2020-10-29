@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6dce22ed_8de475e8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T13:19:46Z",
+      "side": 1,
+      "message": "reset, or resets",
+      "range": {
+        "startLine": 12,
+        "startChar": 5,
+        "endLine": 12,
+        "endChar": 11
+      },
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a24a5b92_730efb55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T13:19:46Z",
+      "side": 1,
+      "message": "Nits and a question.",
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c406e867_549debde",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T13:19:46Z",
+      "side": 1,
+      "message": "caches, rather?",
+      "range": {
+        "startLine": 5,
+        "startChar": 94,
+        "endLine": 5,
+        "endChar": 99
+      },
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54947b0e_b8851871",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T13:19:46Z",
+      "side": 1,
+      "message": "This also removes .gerritcodereview/tmp, beside .gerritcodereview/bazel-cache, which should be fine too.\n\nOn the CI nodes, does this directory structure [1] (below) also gets populated by bazel? If so, worth cleaning as well?\n\n[1] /private/var/tmp/_bazel_\"$USER\"",
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
