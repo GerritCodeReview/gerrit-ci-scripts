@@ -16,6 +16,24 @@
       "message": "Formally tested up to gerrit-release.sh\u0027s line 37, which caused Issue 13577.\n\nThe shell-check warnings pertaining to this specific warning fix are all gone locally.",
       "revId": "44d5968ee8856db81ae7d4d031c8bc87551f7e1c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7fe024f8_7d99aa21",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T21:07:28Z",
+      "side": 1,
+      "message": "\u003e Formally tested up to gerrit-release.sh\u0027s line 37, which caused Issue 13577.\n\u003e \n\u003e The shell-check warnings pertaining to this specific warning fix are all gone locally.\n\nSame context (as above) prevailing.",
+      "parentUuid": "d0006b93_41aa6fa6",
+      "revId": "44d5968ee8856db81ae7d4d031c8bc87551f7e1c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
