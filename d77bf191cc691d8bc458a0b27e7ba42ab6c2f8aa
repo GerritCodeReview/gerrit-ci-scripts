@@ -16,6 +16,24 @@
       "message": "Need to remove ~/.cache as well",
       "revId": "d77bf191cc691d8bc458a0b27e7ba42ab6c2f8aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3767ca08_96d7e4ca",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-29T20:18:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a31001c7_76dd53bc",
+      "revId": "d77bf191cc691d8bc458a0b27e7ba42ab6c2f8aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
