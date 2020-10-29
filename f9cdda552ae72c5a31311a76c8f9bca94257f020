@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "b0d091cb_2a863b7f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-29T20:12:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6dce22ed_8de475e8",
+      "range": {
+        "startLine": 12,
+        "startChar": 5,
+        "endLine": 12,
+        "endChar": 11
+      },
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "a24a5b92_730efb55",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 3
@@ -64,6 +88,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59832f46_dd870969",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-29T20:12:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c406e867_549debde",
+      "range": {
+        "startLine": 5,
+        "startChar": 94,
+        "endLine": 5,
+        "endChar": 99
+      },
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "54947b0e_b8851871",
@@ -83,6 +131,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bc35b60e_9673c0dd",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-29T20:12:17Z",
+      "side": 1,
+      "message": "Good catch, let me check.",
+      "parentUuid": "54947b0e_b8851871",
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1e1c67b9_8614e54b",
         "filename": "vars/gerritPipeline.groovy",
         "patchSetId": 3
@@ -94,6 +160,30 @@
       "writtenOn": "2020-10-29T14:26:18Z",
       "side": 1,
       "message": "Bazel file changes ?",
+      "range": {
+        "startLine": 161,
+        "startChar": 17,
+        "endLine": 161,
+        "endChar": 38
+      },
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e829154c_d2951b41",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-29T20:12:17Z",
+      "side": 1,
+      "message": "Bazel files changes would be the right form IMHO.",
+      "parentUuid": "1e1c67b9_8614e54b",
       "range": {
         "startLine": 161,
         "startChar": 17,
