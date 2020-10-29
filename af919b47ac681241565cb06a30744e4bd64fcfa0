@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9aa88aa8_7378155b",
+        "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-elasticsearch.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-29T21:41:51Z",
+      "side": 1,
+      "message": "unneeded",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 53
+      },
+      "revId": "af919b47ac681241565cb06a30744e4bd64fcfa0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a66950e5_93a8215e",
+        "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-elasticsearch.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-29T21:41:51Z",
+      "side": 1,
+      "message": "unneeded",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "af919b47ac681241565cb06a30744e4bd64fcfa0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
