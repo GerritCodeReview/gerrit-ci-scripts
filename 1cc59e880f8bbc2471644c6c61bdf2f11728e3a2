@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c7a118b9_64cbc06f",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T21:01:24Z",
+      "side": 1,
+      "message": "This target fails if no container ran prior.",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 16
+      },
+      "revId": "1cc59e880f8bbc2471644c6c61bdf2f11728e3a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3aba79f8_71f548ff",
         "filename": "jenkins-docker/slave-release/Makefile",
         "patchSetId": 1
@@ -26,6 +49,53 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8f8178d9_7536bfa7",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T21:01:24Z",
+      "side": 1,
+      "message": "Fails as well if no prior container.",
+      "range": {
+        "startLine": 16,
+        "startChar": 7,
+        "endLine": 16,
+        "endChar": 16
+      },
+      "revId": "1cc59e880f8bbc2471644c6c61bdf2f11728e3a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2ebfc32_c1b3c1d7",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T21:01:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3aba79f8_71f548ff",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 5
+      },
+      "revId": "1cc59e880f8bbc2471644c6c61bdf2f11728e3a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d12f0abb_a814088b",
         "filename": "jenkins-docker/slave-release/Makefile",
         "patchSetId": 1
@@ -37,6 +107,30 @@
       "writtenOn": "2020-10-29T20:48:05Z",
       "side": 1,
       "message": "clean-container?",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 9
+      },
+      "revId": "1cc59e880f8bbc2471644c6c61bdf2f11728e3a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69b6f87d_86e24ae4",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-29T21:01:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d12f0abb_a814088b",
       "range": {
         "startLine": 19,
         "startChar": 0,
