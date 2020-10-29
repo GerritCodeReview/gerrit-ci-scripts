@@ -52,6 +52,24 @@
       "parentUuid": "c04c9572_a325667f",
       "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61cc76a8_bc242944",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2020-10-29T22:34:29Z",
+      "side": 1,
+      "message": "stable-3.0 should be passing CI always now.\nstable-3.1 will be after the series ending with 286100: Replication*IT: Share getRef method | https://gerrit-review.googlesource.com/c/plugins/replication/+/286100 is merged\nI\u0027ll keep merging up and fixing as changes get reviewed.",
+      "parentUuid": "6689ea43_1b019a4c",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
