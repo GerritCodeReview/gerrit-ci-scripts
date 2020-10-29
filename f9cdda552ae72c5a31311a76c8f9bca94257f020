@@ -79,6 +79,29 @@
       "message": "This also removes .gerritcodereview/tmp, beside .gerritcodereview/bazel-cache, which should be fine too.\n\nOn the CI nodes, does this directory structure [1] (below) also gets populated by bazel? If so, worth cleaning as well?\n\n[1] /private/var/tmp/_bazel_\"$USER\"",
       "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e1c67b9_8614e54b",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-10-29T14:26:18Z",
+      "side": 1,
+      "message": "Bazel file changes ?",
+      "range": {
+        "startLine": 161,
+        "startChar": 17,
+        "endLine": 161,
+        "endChar": 38
+      },
+      "revId": "f9cdda552ae72c5a31311a76c8f9bca94257f020",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
