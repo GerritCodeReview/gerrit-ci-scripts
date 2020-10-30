@@ -106,6 +106,24 @@
       "parentUuid": "37f44687_f06f9981",
       "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0b9256c_a9c15ca7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-30T14:39:33Z",
+      "side": 1,
+      "message": "They failed again 😭 on stable-2.16 today (see [1]):\n10:12:40 There was 1 failure:\n10:12:40 1) shouldFireAndCompletePendingChangeRefs(com.googlesource.gerrit.plugins.replication.ReplicationStorageIT)\n10:12:40 expected: true\n10:12:40 but was : false\n10:12:40 \tat com.googlesource.gerrit.plugins.replication.ReplicationStorageIT.shouldFireAndCompletePendingChangeRefs(ReplicationStorageIT.java:160)\n10:12:40 \n10:12:40 FAILURES!!!\n10:12:40 Tests run: 19,  Failures: 1\n\n[1] https://gerrit-ci.gerritforge.com/job/Gerrit-bazel-stable-2.16/114/console",
+      "parentUuid": "cd04afeb_5523b586",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
