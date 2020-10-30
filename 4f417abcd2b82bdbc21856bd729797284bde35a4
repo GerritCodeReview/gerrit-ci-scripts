@@ -124,6 +124,24 @@
       "parentUuid": "cd04afeb_5523b586",
       "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e89639f0_e6ca6895",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2020-10-30T15:27:02Z",
+      "side": 1,
+      "message": "Ah, I see why. That test is setting 2 urls each for 2 different remote blocks. Each remote block will only have 1 thread by default. When we reload tasks from storage, we don\u0027t know the order, so changeRef2 might replicate to target2 first at the same time as changeRef2 to target 1, and then changeRef1 replicates to target2 at the same time as changeRef1 to target1. Our timeout assumed tasks were replayed in the same order, which is a bad assumption. I\u0027m working on a fix now.",
+      "parentUuid": "a0b9256c_a9c15ca7",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
