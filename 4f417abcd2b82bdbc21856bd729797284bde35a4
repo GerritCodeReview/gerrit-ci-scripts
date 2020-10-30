@@ -142,6 +142,24 @@
       "parentUuid": "a0b9256c_a9c15ca7",
       "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08a86bb6_f8a10769",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2020-10-30T17:37:31Z",
+      "side": 1,
+      "message": "286339: ReplicationStorageIT: Wait for all pushes without order | https://gerrit-review.googlesource.com/c/plugins/replication/+/286339",
+      "parentUuid": "e89639f0_e6ca6895",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
