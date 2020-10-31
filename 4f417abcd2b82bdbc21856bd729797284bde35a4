@@ -160,6 +160,24 @@
       "parentUuid": "e89639f0_e6ca6895",
       "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66316eca_9e8e7c91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2020-10-31T15:29:16Z",
+      "side": 1,
+      "message": "Changes are merged through stable-3.3. https://gerrit-review.googlesource.com/c/plugins/replication/+/286499 brings everything up to master.",
+      "parentUuid": "08a86bb6_f8a10769",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
