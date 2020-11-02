@@ -178,6 +178,24 @@
       "parentUuid": "08a86bb6_f8a10769",
       "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8220b07d_6f555e04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2020-11-02T15:40:30Z",
+      "side": 1,
+      "message": "All changes are merged now, including another fix I found by running the ITs 1000 times each.",
+      "parentUuid": "66316eca_9e8e7c91",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
