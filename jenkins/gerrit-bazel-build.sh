@@ -1,7 +1,13 @@
 #!/bin/bash -e
 
-cd gerrit
 . set-java.sh 8
+
+cd gerrit
+
+if [git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion]
+then
+  export BAZEL_OPTS=""
+fi
 
 export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone"
 

@@ -36,6 +36,11 @@ def call(Map parm = [:]) {
     def buildCheck = parm.buildCheckId
     def pluginScmUrl = "https://gerrit.googlesource.com/a/${env.GERRIT_PROJECT}"
     def gjfVersion = '1.7'
+    def javaVersion = 11
+    if (["stable-2.16", "stable-3.0", "stable-3.1", "stable-3.2"].contains("${env.GERRIT_BRANCH}")) {
+        javaVersion = 8
+    }
+    def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh ${javaVersion} && bazelisk"
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')
     echo "Change : ${env.GERRIT_CHANGE_NUMBER}/${GERRIT_PATCHSET_NUMBER} '${env.GERRIT_CHANGE_SUBJECT}'"
@@ -87,8 +92,9 @@ def call(Map parm = [:]) {
                     dir ('gerrit') {
                         sh "cd plugins && ln -s ../../${pluginName} ."
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
-                        sh "bazelisk build plugins/${pluginName}"
-                        sh 'bazelisk test --test_env DOCKER_HOST=$DOCKER_HOST ' + "plugins/${pluginName}/..."
+                        sh "if [ -f ../${pluginName}/package.json ]; then cd plugins && ln -sf ../../${pluginName}/package.json .; fi"
+                        sh "${bazeliskCmd} build plugins/${pluginName}"
+                        sh "${bazeliskCmd} test --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }
                 }
         }
