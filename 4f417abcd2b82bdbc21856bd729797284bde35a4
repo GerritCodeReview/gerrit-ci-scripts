@@ -196,6 +196,24 @@
       "parentUuid": "66316eca_9e8e7c91",
       "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52cf6cfb_d45ef794",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-03T21:11:05Z",
+      "side": 1,
+      "message": "Sounds good, thanks for that. Let\u0027s see how it goes for the next few days on the stable branches.",
+      "parentUuid": "8220b07d_6f555e04",
+      "revId": "4f417abcd2b82bdbc21856bd729797284bde35a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
