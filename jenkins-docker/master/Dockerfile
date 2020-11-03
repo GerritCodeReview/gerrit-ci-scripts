@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \
     python-yaml \
-    python-jenkins \
+    python-jenkinsapi \
     default-jdk \
     autoconf \
     automake \
@@ -50,7 +50,6 @@ COPY edit-config.xslt $JENKINS_REF
 COPY config.xml $JENKINS_REF
 COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 COPY jenkins.model.JenkinsLocationConfiguration.xml $JENKINS_REF
-COPY org.jenkinsci.plugins.xvfb.Xvfb.xml $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/.ssh && \
     chown -R jenkins:jenkins $JENKINS_REF/.ssh && \
@@ -83,7 +82,7 @@ RUN apt-get install -y \
      curl \
      dirmngr gnupg gpgv && \
      curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
-     echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" >> etc/apt/sources.list && \
+     echo "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" >> etc/apt/sources.list && \
      apt-get update && \
      apt-cache policy docker-engine && \
      apt-get install -y docker-ce=18.03.1~ce-0~debian

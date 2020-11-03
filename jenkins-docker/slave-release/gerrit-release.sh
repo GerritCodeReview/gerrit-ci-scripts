@@ -24,20 +24,18 @@ then
 fi
 
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
-git clone https://gerrit.googlesource.com/gerrit && (cd gerrit && f=`git rev-parse --git-dir`/hooks/commit-msg ; curl -Lo $f https://gerrit-review.googlesource.com/tools/hooks/commit-msg ; chmod +x $f)
+git clone https://gerrit.googlesource.com/gerrit && (cd gerrit && f=$(git rev-parse --git-dir)/hooks/commit-msg ; curl -Lo "$f" https://gerrit-review.googlesource.com/tools/hooks/commit-msg ; chmod +x "$f")
 
 pushd gerrit
 
-source set-java.sh 8
-
-git checkout $branch
-git fetch && git reset --hard origin/$branch
+git checkout "$branch"
+git fetch && git reset --hard origin/"$branch"
 git submodule update --init
 
 git clean -fdx
-./tools/version.py $version
+./tools/version.py "$version"
 git commit -a -m "Set version to $version"
-git push origin HEAD:refs/for/$branch
+git push origin HEAD:refs/for/"$branch"
 
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
@@ -71,32 +69,32 @@ echo "logging in using your credentials"
 popd
 
 cp -f gerrit/bazel-bin/Documentation/searchfree.zip .
-cp -f gerrit/bazel-bin/release.war gerrit-$version.war
+cp -f gerrit/bazel-bin/release.war gerrit-"$version".war
 
 echo "gerrit.war checksums"
-shasum gerrit-$version.war
-shasum -a 256 gerrit-$version.war
-md5sum gerrit-$version.war
+shasum gerrit-"$version".war
+shasum -a 256 gerrit-"$version".war
+md5sum gerrit-"$version".war
 
 echo "Pushing to Google Cloud Buckets"
 gcloud auth login
 
 echo "Pushing gerrit.war to gerrit-releases ..."
-gsutil cp gerrit-$version.war gs://gerrit-releases/gerrit-$version.war
+gsutil cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
 
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
 pushd Documentation
 version_no_rc=$(echo "%version" | cut -d '-' -f 1)
-gsutil cp -r . gs://gerrit-documentation/Documentation/$version_no_rc
+gsutil cp -r . gs://gerrit-documentation/Documentation/"$version_no_rc"
 popd
 
 echo "Setting next version tag to $nextversion ..."
 pushd gerrit
 git clean -fdx
-./tools/version.py $nextversion
+./tools/version.py "$nextversion"
 git commit -a -m "Set version to $nextversion"
-git push origin HEAD:refs/for/$branch
+git push origin HEAD:refs/for/"$branch"
 popd
 
 echo "Release completed"

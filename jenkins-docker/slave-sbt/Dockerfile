@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-stretch-80.0.3987.149
+FROM gerritforge/gerrit-ci-slave-bazel:debian-buster-80.0.3987.149
 
 # SBT Setup
 RUN apt-get update && \
@@ -11,7 +11,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # SBT warm-up
-RUN cd /tmp && echo hello | sbt new sbt/scala-seed.g8
+RUN cd /tmp && sbt new sbt/scala-seed.g8 --name=hello
 RUN echo 'addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")' >> /tmp/hello/project/plugins.sbt
 RUN chown -R jenkins: /tmp/hello
 
