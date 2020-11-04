@@ -1,5 +1,7 @@
 #!/bin/bash
 
+JENKINS_URL=${JENKINS_URL:-http://localhost:8080}
+
 if [ -f $JENKINS_HOME/config.xml ]
 then
   CONFIG=$JENKINS_HOME/config.xml
@@ -25,6 +27,7 @@ function config {
 
 config jenkins.user $JENKINS_API_USER
 config jenkins.password $JENKINS_API_PASSWORD
+config jenkins.url $JENKINS_URL
 
 mv /etc/jenkins_jobs/jenkins_jobs.ini /tmp/
 cat /tmp/jenkins_jobs.ini | tr '-' '_' | tr '\t' '' > /etc/jenkins_jobs/jenkins_jobs.ini
