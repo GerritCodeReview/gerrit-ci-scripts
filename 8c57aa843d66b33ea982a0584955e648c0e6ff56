@@ -33,6 +33,24 @@
       "message": "Do I see deletions when comparing to auto-merge because the private CI pipeline only builds gerrit core + the core plugins ?",
       "revId": "8c57aa843d66b33ea982a0584955e648c0e6ff56",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0dec8c0c_e46b8c2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-04T13:16:01Z",
+      "side": 1,
+      "message": "Yes, correct.",
+      "parentUuid": "308ceb3f_aecc038f",
+      "revId": "8c57aa843d66b33ea982a0584955e648c0e6ff56",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
