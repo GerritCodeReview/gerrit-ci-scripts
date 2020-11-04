@@ -9,6 +9,7 @@ JENKINS_API_PASSWORD=pass
 JENKINS_WAR_VER=2.204.1
 JENKINS_WAR_SHA=924d2c9fabfdcacee1bae757337a07d7599eaa35
 JENKINS_HOME?=~/jenkins_home_private
+JENKINS_URL=http://nginx:8081
 DOCKER_GID?=993
 IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}
 
@@ -22,6 +23,7 @@ start: build
           -e OAUTH_SECRET=${OAUTH_SECRET} \
           -e JENKINS_API_USER=${JENKINS_API_USER} \
           -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
+          -e JENKINS_URL=${JENKINS_URL} \
           -e DOCKER_GID=${DOCKER_GID} \
           -v /var/run/docker.sock:/var/run/docker.sock \
           -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
@@ -40,6 +42,7 @@ start_osx:
           -e OAUTH_ID=${OAUTH_ID} \
           -e OAUTH_SECRET=${OAUTH_SECRET} \
           -e JENKINS_API_USER=${JENKINS_API_USER} \
+          -e JENKINS_URL=${JENKINS_URL} \
           -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
           -e DOCKER_GID=${DOCKER_GID} \
           -e DOCKER_HOST="tcp://host.docker.internal:1234" \
