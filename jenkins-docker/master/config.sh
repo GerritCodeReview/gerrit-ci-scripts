@@ -1,5 +1,7 @@
 #!/bin/bash
 
+JENKINS_URL=${JENKINS_URL:-http://localhost:8080}
+
 if [ -f $JENKINS_HOME/config.xml ]
 then
   CONFIG=$JENKINS_HOME/config.xml
@@ -21,6 +23,7 @@ mv /tmp/config.xml.new $CONFIG
 
 sed -i -e "s/user=.*/user=$JENKINS_API_USER/" /etc/jenkins_jobs/jenkins_jobs.ini
 sed -i -e "s/password=.*/password=$JENKINS_API_PASSWORD/" /etc/jenkins_jobs/jenkins_jobs.ini
+git config -f /etc/jenkins_jobs/jenkins_jobs.ini jenkins.url $JENKINS_URL
 
 cp -R $JENKINS_REF/.ssh ~jenkins/.
 chown -R jenkins:dockergroup ~jenkins
