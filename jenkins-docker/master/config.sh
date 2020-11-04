@@ -19,8 +19,15 @@ xsltproc \
   $JENKINS_REF/edit-config.xslt $CONFIG > /tmp/config.xml.new
 mv /tmp/config.xml.new $CONFIG
 
-sed -i -e "s/user=.*/user=$JENKINS_API_USER/" /etc/jenkins_jobs/jenkins_jobs.ini
-sed -i -e "s/password=.*/password=$JENKINS_API_PASSWORD/" /etc/jenkins_jobs/jenkins_jobs.ini
+function config {
+  git config -f /etc/jenkins_jobs/jenkins_jobs.ini $1 $2
+}
+
+config jenkins.user $JENKINS_API_USER
+config jenkins.password $JENKINS_API_PASSWORD
+
+mv /etc/jenkins_jobs/jenkins_jobs.ini /tmp/
+cat /tmp/jenkins_jobs.ini | tr '-' '_' > /etc/jenkins_jobs/jenkins_jobs.ini
 
 cp -R $JENKINS_REF/.ssh ~jenkins/.
 chown -R jenkins:dockergroup ~jenkins
