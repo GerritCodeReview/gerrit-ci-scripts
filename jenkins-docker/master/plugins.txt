@@ -28,12 +28,8 @@ credentials:2.3.0
 credentials-binding:1.18
 display-url-api:2.3.2
 docker-commons:1.13
-<<<<<<< HEAD   (10c64f Add Gerrit pipeline rule for building 2020-11.notedb-refs-ta)
 docker-java-api:3.0.14
 docker-plugin:1.1.4
-=======
-docker-plugin:1.1.9
->>>>>>> CHANGE (8b4250 Switch from GitHub OAuth to certificate-based authentication)
 docker-workflow:1.17
 durable-task:1.30
 embeddable-build-status:2.0.3
