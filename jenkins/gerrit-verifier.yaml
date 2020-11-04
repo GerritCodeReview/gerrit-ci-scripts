@@ -79,7 +79,7 @@
             --java_toolchain=//tools:error_prone_warnings_toolchain
     scm:
       - git:
-          url: https://gerrit.googlesource.com/a/gerrit
+          url: https://gerrit.googlesource.com/a/gerrit-security-fixes
           credentials-id: gerrit.googlesource.com
           refspec: $REFSPEC
           branches:
@@ -184,7 +184,7 @@
     prune-dead-branches: true
     scm:
       - gerrit:
-          url: https://gerrit-review.googlesource.com/a/gerrit
+          url: https://gerrit-review.googlesource.com/a/gerrit-security-fixes
           credentials-id: gerrit.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
