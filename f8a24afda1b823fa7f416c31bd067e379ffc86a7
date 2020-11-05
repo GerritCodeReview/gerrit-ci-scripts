@@ -22,6 +22,30 @@
       },
       "revId": "f8a24afda1b823fa7f416c31bd067e379ffc86a7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a6c1461_10fa7692",
+        "filename": "jenkins-docker/master/plugins.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-05T10:15:06Z",
+      "side": 0,
+      "message": "Actually, that\u0027s the reason why I did not apply this change: we had failures in the past with the upgrade of the docker-plugin. I am fine in upgrading it further, but that needs to be properly tested.\n\nI am keeping the v1.1.4 which is currently in the master branch.\n\nHope that makes sense.",
+      "parentUuid": "3d97d1c6_0a7b5e09",
+      "range": {
+        "startLine": 33,
+        "startChar": 14,
+        "endLine": 35,
+        "endChar": 19
+      },
+      "revId": "f8a24afda1b823fa7f416c31bd067e379ffc86a7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
