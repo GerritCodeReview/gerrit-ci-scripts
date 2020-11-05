@@ -41,6 +41,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "29b298d1_2b243c2b",
+        "filename": "jenkins-docker/master/plugins.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-05T21:36:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04b54da4_7612f768",
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f9288fe5_0f8b1f54",
@@ -54,6 +72,30 @@
       "writtenOn": "2020-11-05T17:11:27Z",
       "side": 1,
       "message": "/",
+      "range": {
+        "startLine": 8,
+        "startChar": 22,
+        "endLine": 8,
+        "endChar": 31
+      },
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e8742e7_4e0af356",
+        "filename": "jenkins-docker/nginx-proxy/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-05T21:36:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f9288fe5_0f8b1f54",
       "range": {
         "startLine": 8,
         "startChar": 22,
