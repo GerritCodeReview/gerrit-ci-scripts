@@ -1,0 +1,227 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "519e9f76_8c0815b0",
+        "filename": "jenkins-docker/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "`config.xml` of",
+      "range": {
+        "startLine": 60,
+        "startChar": 26,
+        "endLine": 60,
+        "endChar": 40
+      },
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04b54da4_7612f768",
+        "filename": "jenkins-docker/master/plugins.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "To remove, here and below.",
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9288fe5_0f8b1f54",
+        "filename": "jenkins-docker/nginx-proxy/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "/",
+      "range": {
+        "startLine": 8,
+        "startChar": 22,
+        "endLine": 8,
+        "endChar": 31
+      },
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99ddca99_df845fc1",
+        "filename": "jenkins-docker/nginx-proxy/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "This file has issues similar to [1] https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/285739",
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e167f69_37fe3fca",
+        "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "Similar comments would apply in this file too.",
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6831e54_de7969f1",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "Reduce to just one space, then update the above line accordingly?",
+      "range": {
+        "startLine": 11,
+        "startChar": 23,
+        "endLine": 11,
+        "endChar": 30
+      },
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d205878_92c481be",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "Spacing doesn\u0027t fit with below ones.",
+      "range": {
+        "startLine": 25,
+        "startChar": 22,
+        "endLine": 25,
+        "endChar": 27
+      },
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81320c12_75a231b0",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "Ok?",
+      "range": {
+        "startLine": 44,
+        "startChar": 35,
+        "endLine": 44,
+        "endChar": 39
+      },
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80c90fed_68ca57aa",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "Would do the same here and for the line right above.",
+      "range": {
+        "startLine": 50,
+        "startChar": 31,
+        "endLine": 50,
+        "endChar": 35
+      },
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e3ed7b9_e154605b",
+        "filename": "jenkins-docker/nginx-proxy/jenkins.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "Extra blank line.",
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06bc3de5_e66359ef",
+        "filename": "jenkins-docker/nginx-proxy/jjb.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T17:11:27Z",
+      "side": 1,
+      "message": "And potentially here too.",
+      "revId": "e2797af489d56b747d7d2a8da56310d3fc9a61cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
