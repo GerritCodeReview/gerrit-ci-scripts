@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d97d1c6_0a7b5e09",
+        "filename": "jenkins-docker/master/plugins.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-05T01:12:19Z",
+      "side": 0,
+      "message": "Is this downgrade ok?",
+      "range": {
+        "startLine": 33,
+        "startChar": 14,
+        "endLine": 35,
+        "endChar": 19
+      },
+      "revId": "f8a24afda1b823fa7f416c31bd067e379ffc86a7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
