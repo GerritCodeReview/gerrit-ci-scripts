@@ -44,6 +44,7 @@ ENV OAUTH_SECRET secret
 ENV JENKINS_API_USER user
 ENV JENKINS_API_PASSWORD pass
 ENV DOCKER_HOST unix:///var/run/docker.sock
+ENV BINTRAY_URL https://dl.bintray.com/lucamilanesio
 
 COPY edit-config.xslt $JENKINS_REF
 COPY config.xml $JENKINS_REF
@@ -56,6 +57,8 @@ RUN mkdir -p $JENKINS_REF/.ssh && \
 
 COPY plugins.txt $JENKINS_REF
 RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
+# Snapshot build of the Jenkins Docker Plugin (includes unix:/// sockets fix)
+ADD $BINTRAY_URL/jenkins-snapshots/com/nirima/docker-plugin/0.16.1-54-gc5c5be1/docker-plugin-0.16.1-54-gc5c5be1.hpi $JENKINS_REF/plugins/docker-plugin.jpi
 RUN chown -R jenkins:jenkins $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
