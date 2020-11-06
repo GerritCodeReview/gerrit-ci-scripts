@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9a7843e_1fb19b41",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-06T21:50:13Z",
+      "side": 1,
+      "message": "Tiny nit left.",
+      "revId": "5d1f1646232e5777d0409e19c23bb5b977078424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3894e42c_b8442dd7",
+        "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-06T21:50:13Z",
+      "side": 1,
+      "message": "Extra space compared to sibling files.",
+      "range": {
+        "startLine": 47,
+        "startChar": 22,
+        "endLine": 47,
+        "endChar": 23
+      },
+      "revId": "5d1f1646232e5777d0409e19c23bb5b977078424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
