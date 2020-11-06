@@ -45,9 +45,6 @@ def call(Map parm = [:]) {
             }
 
             stage('Report to Gerrit'){
-                resCodeStyle = getLabelValue(1, Builds.codeStyle.result)
-                gerritReview labels: ['Code-Style': resCodeStyle]
-
                 def verificationResults = Builds.verification.collect { k, v -> v }
                 def resVerify = verificationResults.inject(1) {
                     acc, build -> getLabelValue(acc, build.result)
