@@ -39,6 +39,30 @@
       },
       "revId": "5d1f1646232e5777d0409e19c23bb5b977078424",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "582ea53c_cf8c6392",
+        "filename": "jenkins-docker/nginx-proxy/jenkins-cert-auth.conf",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-06T21:52:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3894e42c_b8442dd7",
+      "range": {
+        "startLine": 47,
+        "startChar": 22,
+        "endLine": 47,
+        "endChar": 23
+      },
+      "revId": "5d1f1646232e5777d0409e19c23bb5b977078424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
