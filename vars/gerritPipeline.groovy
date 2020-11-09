@@ -87,8 +87,7 @@ class GerritCheck {
     String consoleUrl
 
     GerritCheck(name, build) {
-        this.uuid = "gerritforge:" + name.replaceAll("(bazel/)", "") +
-            Globals.gerritRepositoryNameSha1Suffix
+        this.uuid = "gerritforge:${env.GERRIT_PROJECT}-${name}"
         this.build = build
         this.consoleUrl = "${build.url}console"
     }
