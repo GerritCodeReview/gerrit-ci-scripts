@@ -128,9 +128,9 @@ def collectBuildModes() {
     Builds.modes = []
     if (env.GERRIT_BRANCH ==~ /stable-3.*/ || env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "2020-11.notedb-refs-tags") {
         Builds.modes = ["notedb"]
-    } else if (env.GERRIT_BRANCH == "stable-2.16") {
+    } else if (env.GERRIT_BRANCH ==~ /stable-2.16.*/) {
         Builds.modes = ["notedb", "reviewdb"]
-    } else if (env.GERRIT_BRANCH ==~ /stable-2.1[0-5]/) {
+    } else if (env.GERRIT_BRANCH ==~ /stable-2.1[0-5].*/) {
         Builds.modes = ["reviewdb"]
     } else {
         throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")
