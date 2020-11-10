@@ -86,8 +86,8 @@ class GerritCheck {
     Build build
     String consoleUrl
 
-    GerritCheck(name, build) {
-        this.uuid = "gerritforge:${env.GERRIT_PROJECT}-${name}"
+    GerritCheck(project, name, build) {
+        this.uuid = "gerritforge:${project}-${name}"
         this.build = build
         this.consoleUrl = "${build.url}console"
     }
@@ -165,6 +165,7 @@ def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
             def slaveBuild = null
             for (int i = 1; i <= retryTimes; i++) {
                 postCheck(new GerritCheck(
+                    env.GERRIT_PROJECT,
                     (buildName == "Gerrit-codestyle") ? "codestyle" : mode,
                     new Build(currentBuild.getAbsoluteUrl(), null)))
                 try {
@@ -179,11 +180,11 @@ def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
                     if (buildName == "Gerrit-codestyle"){
                         Builds.codeStyle = new Build(
                             slaveBuild.getAbsoluteUrl(), slaveBuild.getResult())
-                        postCheck(new GerritCheck("codestyle", Builds.codeStyle))
+                        postCheck(new GerritCheck(env.GERRIT_PROJECT, "codestyle", Builds.codeStyle))
                     } else {
                         Builds.verification[mode] = new Build(
                             slaveBuild.getAbsoluteUrl(), slaveBuild.getResult())
-                        postCheck(new GerritCheck(mode, Builds.verification[mode]))
+                        postCheck(new GerritCheck(env.GERRIT_PROJECT, mode, Builds.verification[mode]))
                     }
                     if (slaveBuild.getResult() == "SUCCESS") {
                         break
