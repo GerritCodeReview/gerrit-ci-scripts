@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-if [ "$1" == "" ] || [ "$2" == "" ]
+if [ "$1" == "--help" ] || [ "$1" == "" ] || [ "$2" == "" ]
 then
   echo "Gerrit Code Review - release automation script"
   echo "----------------------------------------------"
@@ -23,7 +23,13 @@ then
   rm -Rf gerrit
 fi
 
+if [ -f $HOME/.gitconfig.template ]
+then
+  cp $HOME/.gitconfig.template $HOME/.gitconfig
+fi
+
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
+git config --global credential.helper credential-cache
 git clone https://gerrit.googlesource.com/gerrit && (cd gerrit && f=$(git rev-parse --git-dir)/hooks/commit-msg ; curl -Lo "$f" https://gerrit-review.googlesource.com/tools/hooks/commit-msg ; chmod +x "$f")
 
 pushd gerrit

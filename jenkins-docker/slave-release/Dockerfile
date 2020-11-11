@@ -10,6 +10,10 @@ RUN apt-get update && \
 
 COPY gerrit-release.sh /usr/local/bin
 
-ENTRYPOINT /bin/bash
+ENTRYPOINT [ "/usr/local/bin/gerrit-release.sh" ]
+
+CMD [ "--help" ]
 
 USER jenkins
+
+WORKDIR /home/jenkins
