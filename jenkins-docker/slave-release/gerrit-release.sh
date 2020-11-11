@@ -91,7 +91,7 @@ gsutil cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
 pushd Documentation
-version_no_rc=$(echo "%version" | cut -d '-' -f 1)
+version_no_rc=$(echo "$version" | cut -d '-' -f 1)
 gsutil cp -r . gs://gerrit-documentation/Documentation/"$version_no_rc"
 popd
 
@@ -103,4 +103,19 @@ git commit -a -m "Set version to $nextversion"
 git push origin HEAD:refs/for/"$branch"
 popd
 
-echo "Release completed"
+echo 'Release completed, now verify the release E2E:
+- Init a new site from scratch
+- Migrate an existing site from the old version
+- Run the gatling-git tests for at least 5 minutes
+'
+
+read -p 'Are all the the above tests successful? [y/n] ' RES
+if [ $(echo $RES | tr '[:upper:]' '[:lower:]') == "y" ]
+then
+  echo "Pushing the release tags "v$version"
+  git push origin "v$version"
+  git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git push origin "v$version"; fi'
+else
+  echo "Release tages NOT pushed"
+fi
+
