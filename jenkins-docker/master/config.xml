@@ -297,6 +297,7 @@
             </dnsHosts>
             <volumes>
               <string>/dev/urandom:/dev/random</string>
+              <string>/var/run/docker.sock:/var/run/docker.sock</string>
             </volumes>
             <volumesFrom2/>
             <environment/>
