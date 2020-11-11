@@ -97,4 +97,9 @@ git commit -a -m "Set version to $nextversion"
 git push origin HEAD:refs/for/"$branch"
 popd
 
-echo "Release completed"
+echo "Release completed: verify the release E2E and, once it is all done, press enter to push all tags upstream."
+
+paus
+
+git push origin "v$version"
+git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git push origin "v$version"; fi'
