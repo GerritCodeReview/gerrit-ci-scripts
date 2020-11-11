@@ -28,11 +28,16 @@ pipeline {
             string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
         }
+
+       environment {
+            DOCKER_HOST = """${sh(
+                returnStdout: true,
+                script: '/sbin/ip route|awk \'/default/ {print "tcp://"\$3":2375"}\''
+            )}"""
+        }
+
         stages{
             stage("Setup single-master aws stack") {
-                environment {
-                    DOCKER_HOST = sh(script: """/sbin/ip route|awk '/default/ {print "tcp://"\$3":2375"}'""", , returnStdout: true).trim()
-                }
                 steps {
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: "gerrit.googlesource.com")]) {
                         sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
