@@ -8,7 +8,7 @@ echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
 TEST_TAG_FILTERS="-flaky"
-if [ "$TARGET_BRANCH" == "stable-2.16" ]
+if [[ "$TARGET_BRANCH" = stable-2.1* ]]
 then
   TEST_TAG_FILTERS="$TEST_TAG_FILTERS,-elastic"
 fi
