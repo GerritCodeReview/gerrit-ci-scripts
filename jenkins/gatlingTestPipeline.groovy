@@ -30,8 +30,11 @@ pipeline {
         }
         stages{
             stage("Setup single-master aws stack") {
+                environment {
+                    DOCKER_HOST = sh(script: """/sbin/ip route|awk '/default/ {print "tcp://"\$3":2375"}'""", , returnStdout: true).trim()
+                }
                 steps {
-                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
+                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: "gerrit.googlesource.com")]) {
                         sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
                         sh 'chmod 600 ~/.netrc'
                         sh 'rm -rf aws-gerrit'
@@ -66,6 +69,7 @@ pipeline {
 
                                 writeFile(file:"setup.env", text: setupData)
                             }
+                            sh 'echo "Docker host: $DOCKER_HOST"'
                             sh "make AWS_REGION=${AWS_REGION} AWS_PREFIX=${AWS_PREFIX} create-all"
                          }
                      }
