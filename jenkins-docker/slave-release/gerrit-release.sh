@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-if [ "$1" == "" ] || [ "$2" == "" ]
+if [ "$1" == "--help" ] || [ "$1" == "" ] || [ "$2" == "" ]
 then
   echo "Gerrit Code Review - release automation script"
   echo "----------------------------------------------"
