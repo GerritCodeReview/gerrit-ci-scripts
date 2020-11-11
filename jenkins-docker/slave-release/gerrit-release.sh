@@ -1,10 +1,10 @@
 #!/bin/bash -e
 
-if [ "$1" == "--help" ] || [ "$1" == "" ] || [ "$2" == "" ]
+if [ "$1" == "--help" ] || [ "$1" == "" ] || [ "$2" == "" ] || [ "$REPOSITORY_URL" == "" ]
 then
   echo "Gerrit Code Review - release automation script"
   echo "----------------------------------------------"
-  echo "Use: $0 <branch> <version> <next-version>"
+  echo "Use: REPOSITORY_URL=https://gerrit.googlesource.com/gerrit $0 <branch> <version> <next-version>"
   echo ""
   echo "Where: branch  Gerrit branch name where the release must be cut"
   echo "       version Gerrit semantic release number"
@@ -23,8 +23,8 @@ then
   rm -Rf gerrit
 fi
 
-echo "Cloning and building Gerrit Code Review on branch $branch ..."
-git clone https://gerrit.googlesource.com/gerrit && (cd gerrit && f=$(git rev-parse --git-dir)/hooks/commit-msg ; curl -Lo "$f" https://gerrit-review.googlesource.com/tools/hooks/commit-msg ; chmod +x "$f")
+echo "Cloning $REPOSITORY_URL and building Gerrit Code Review on branch $branch ..."
+git clone "$REPOSITORY_URL" gerrit && (cd gerrit && f=$(git rev-parse --git-dir)/hooks/commit-msg ; curl -Lo "$f" https://gerrit-review.googlesource.com/tools/hooks/commit-msg ; chmod +x "$f")
 
 pushd gerrit
 

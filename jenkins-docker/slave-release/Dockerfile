@@ -1,5 +1,7 @@
 FROM gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-80.0.3987.149
 
+ENV REPOSITORY_URL
+
 RUN apt-get update && \
     apt-get install -y gnupg2 && \
     export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \

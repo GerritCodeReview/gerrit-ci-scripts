@@ -6,6 +6,9 @@ CONTAINER=release
 # Customize the parameters below for running a release
 ######################################################
 
+# Gerrit repository URL
+REPOSITORY_URL=https://gerrit.googlesource.com/gerrit
+
 # Branch from where the release will be cut
 BRANCH=stable-3.3
 
@@ -28,6 +31,7 @@ GIT_COOKIES=${HOME}/.gitcookies
 
 run:
 	docker run --rm -it --name ${CONTAINER} ${IMAGE} ${BRANCH} ${RELEASE} ${SNAPSHOT} \
+		-e REPOSITORY_URL=${REPOSITORY_URL} \
 		-v `pwd`/.gerritcodereview:/home/jenkins/.gerritcodereview \
                 -v ~/.m2:/home/jenkins/.m2 \
 		-v ${GNUPG}:/home/jenkins/.gnupg  \
