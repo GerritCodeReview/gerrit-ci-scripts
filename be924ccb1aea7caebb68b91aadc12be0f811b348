@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58657dae_0978cf06",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-11-12T08:30:16Z",
+      "side": 1,
+      "message": "move this above BRANCH and compute branch from RELEASE by\nremoving third component of version and prepending \"stable-\" ?",
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d1f2efd_9ef634cb",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-11-12T08:30:16Z",
+      "side": 1,
+      "message": "this could be computed from RELEASE by increasing third component of the version number",
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98550232_0e7cb816",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-11-12T08:30:16Z",
+      "side": 1,
+      "message": "I have authentication cookies stored in a separate file which has permissions restricted to my user\nI think that file would also need to be mounted into the container",
+      "range": {
+        "startLine": 21,
+        "startChar": 41,
+        "endLine": 21,
+        "endChar": 48
+      },
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69487bb3_81109b52",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-11-12T08:30:16Z",
+      "side": 1,
+      "message": "isn\u0027t that located in the release manager\u0027s home directory ?",
+      "range": {
+        "startLine": 30,
+        "startChar": 5,
+        "endLine": 30,
+        "endChar": 28
+      },
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8f5d1ec_711e0f9b",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-11-12T08:30:16Z",
+      "side": 1,
+      "message": "how about -h ?",
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb02e1c0_258769c4",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-11-12T08:30:16Z",
+      "side": 1,
+      "message": "why isn\u0027t the template located in this repository but taken from the release manager\u0027s home directory ?",
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
