@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a5d1267_02cfbcce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-12T13:44:28Z",
+      "side": 1,
+      "message": "A nit.",
+      "revId": "3075a80ae7394809e712a54ab8bf4d78adcc4afc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d0e70fc_f3121026",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-12T13:44:28Z",
+      "side": 1,
+      "message": "Unrelated: would also use tabs here, consistently with the surrounding lines.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 16
+      },
+      "revId": "3075a80ae7394809e712a54ab8bf4d78adcc4afc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
