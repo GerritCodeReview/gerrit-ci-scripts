@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e261a8e_9efdb7a6",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-12T07:21:54Z",
+      "side": 1,
+      "message": "Windows\u0027 reminiscences?",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 108,
+        "endChar": 4
+      },
+      "revId": "f0044965c610beacd8490284ac2274d695104e39",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
