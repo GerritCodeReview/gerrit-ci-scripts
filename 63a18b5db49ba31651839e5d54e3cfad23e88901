@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6a5837d_7f324ef4",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2020-11-12T08:37:11Z",
+      "side": 1,
+      "message": "use read -p ?\n\nhttps://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script\n\nand exit if response isn\u0027t \u0027y\u0027 or \u0027Y\u0027 to allow step out here without using CTRL-C ?",
+      "revId": "63a18b5db49ba31651839e5d54e3cfad23e88901",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
