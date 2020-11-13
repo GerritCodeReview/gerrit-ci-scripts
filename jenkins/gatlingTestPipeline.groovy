@@ -8,6 +8,9 @@ pipeline {
             string(name: 'AWS_PREFIX', defaultValue:"jenkins", description: 'A string to prefix stacks and resources with')
             string(name: 'AWS_REGION', defaultValue:"us-east-1", description: 'Which region to deploy to')
 
+            string(name: 'GERRIT_VERSION', defaultValue:"3.2", description: 'The gerrit version under test')
+            string(name: 'GERRIT_PATCH', defaultValue:"3", description: 'The gerrit version patch under test')
+
             string(name: 'HOSTED_ZONE_NAME', description: 'Name of the hosted zone')
             string(name: 'CLUSTER_INSTANCE_TYPE', defaultValue: 'm4.xlarge', description:'The EC2 instance Type used to run the cluster')
 
@@ -75,7 +78,7 @@ pipeline {
                                 writeFile(file:"setup.env", text: setupData)
                             }
                             sh 'echo "Docker host: $DOCKER_HOST"'
-                            sh "make AWS_REGION=${AWS_REGION} AWS_PREFIX=${AWS_PREFIX} create-all"
+                            sh "make AWS_REGION=${AWS_REGION} AWS_PREFIX=${AWS_PREFIX} GERRIT_VERSION=${GERRIT_VERSION} GERRIT_PATCH=${GERRIT_PATCH} create-all"
                          }
                      }
                 }
