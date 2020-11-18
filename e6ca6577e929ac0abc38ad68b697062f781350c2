@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1177a362_3e32fd35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-11-18T14:30:40Z",
+      "side": 1,
+      "message": "manually built this job:\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-metrics-reporter-cloudwatch-bazel-stable-3.3/",
+      "revId": "e6ca6577e929ac0abc38ad68b697062f781350c2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
