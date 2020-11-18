@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ad8772e_242dae2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-11-18T12:53:45Z",
+      "side": 1,
+      "message": "+1 because I\u0027m not sure if we should have build before the official release",
+      "revId": "af8bddcb8cb0c6d782442f8a60eeae8500cf0384",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
