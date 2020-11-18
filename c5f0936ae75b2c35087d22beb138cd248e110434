@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3baac518_a5f37eea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-11-18T14:30:09Z",
+      "side": 1,
+      "message": "Manually built this job:\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-healthcheck-bazel-stable-3.3/",
+      "revId": "c5f0936ae75b2c35087d22beb138cd248e110434",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
