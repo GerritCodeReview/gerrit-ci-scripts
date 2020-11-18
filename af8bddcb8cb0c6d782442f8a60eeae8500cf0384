@@ -33,6 +33,42 @@
       "message": "Should we also switch to Java 11?",
       "revId": "af8bddcb8cb0c6d782442f8a60eeae8500cf0384",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b011a20_90047710",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-11-18T14:06:32Z",
+      "side": 1,
+      "message": "This is already running on java11[1]:\n\n15:01:04 openjdk full version \"11.0.9+11-post-Debian-1deb10u1\"\n\n\n[1]https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-javamelody-bazel-master-stable-3.3/1/console",
+      "parentUuid": "4a9d92fe_9a9e1cc7",
+      "revId": "af8bddcb8cb0c6d782442f8a60eeae8500cf0384",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9a8ac1a_fb495a2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2020-11-18T14:06:32Z",
+      "side": 1,
+      "message": "We already have plugins built for 3.3. An example[1]\n\n[1]https://gerrit.googlesource.com/gerrit-ci-scripts/+/05c1273d15ccd85f59f77f17dedbaf731e9c2fd5",
+      "parentUuid": "0ad8772e_242dae2e",
+      "revId": "af8bddcb8cb0c6d782442f8a60eeae8500cf0384",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
