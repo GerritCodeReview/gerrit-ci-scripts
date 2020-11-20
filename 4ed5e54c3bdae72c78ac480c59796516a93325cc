@@ -16,6 +16,24 @@
       "message": "Thanks, Marco. Let me run this manually on the CI and see if we\u0027ve got green builds again 👍",
       "revId": "4ed5e54c3bdae72c78ac480c59796516a93325cc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd43a88d_19c2a9e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-20T18:45:28Z",
+      "side": 1,
+      "message": "\u003e Thanks, Marco. Let me run this manually on the CI and see if we\u0027ve got green builds again 👍\n\nThanks. The corresponding core change or fix is being merged up as we speak.",
+      "parentUuid": "257198db_b3998f95",
+      "revId": "4ed5e54c3bdae72c78ac480c59796516a93325cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
