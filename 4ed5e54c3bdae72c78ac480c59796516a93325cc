@@ -52,6 +52,24 @@
       "parentUuid": "cd43a88d_19c2a9e6",
       "revId": "4ed5e54c3bdae72c78ac480c59796516a93325cc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b66f43d5_9c483126",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-20T19:46:40Z",
+      "side": 1,
+      "message": "This for me locally takes ~13 minutes and completes successfully with all elastic tests passing, with 389aa94e checked-out:\n\nbazel clean --expunge\nbazel build gerrit\nbazel test \\\n  --nocache_test_results \\\n  --test_arg\u003d--jvm_flags\u003d-Xmx1024m \\\n  --test_tag_filters\u003delastic //...\n\nNote that the above \u0027clean\u0027 and nocache_test_results are redundant.\nOn macOS 11.0.1, 2.3 GHz 8-Core Intel Core i9 with 32 GB of memory.",
+      "parentUuid": "11cab367_38134b3c",
+      "revId": "4ed5e54c3bdae72c78ac480c59796516a93325cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
