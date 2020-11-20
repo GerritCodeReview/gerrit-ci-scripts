@@ -106,6 +106,24 @@
       "parentUuid": "a0f75f66_5c2e0de8",
       "revId": "4ed5e54c3bdae72c78ac480c59796516a93325cc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21890978_835927ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-20T21:26:34Z",
+      "side": 1,
+      "message": "We don\u0027t have in our CI the flag: \u0027--test_arg\u003d--jvm_flags\u003d-Xmx1024m\u0027.\n\nHave you tried running the tests without it?",
+      "parentUuid": "c7d8d022_5459e74f",
+      "revId": "4ed5e54c3bdae72c78ac480c59796516a93325cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
