@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "254ffc1d_5b8ee00b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-11-21T08:15:20Z",
+      "side": 1,
+      "message": "code-owners plugin doesn\u0027t build against Gerrit stable-3.3 branch. I filed issue 13719.",
+      "revId": "0664de0c0c96629b89baf038b835db5bdf13ca52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
