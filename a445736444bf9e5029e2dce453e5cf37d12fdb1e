@@ -16,6 +16,24 @@
       "message": "There are no stable-3.2/3.3 branches yet, so this build won\u0027t work",
       "revId": "a445736444bf9e5029e2dce453e5cf37d12fdb1e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4be9ab71_9e38c05e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-11-23T09:55:09Z",
+      "side": 1,
+      "message": "I think I was trying to build from plugin master branch against gerrit stable-3.2 and stable-3.3 branch, but screwed up this change.",
+      "parentUuid": "36286a57_94dacd03",
+      "revId": "a445736444bf9e5029e2dce453e5cf37d12fdb1e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
