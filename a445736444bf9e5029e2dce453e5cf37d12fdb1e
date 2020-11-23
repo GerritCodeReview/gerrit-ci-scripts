@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36286a57_94dacd03",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-23T09:53:18Z",
+      "side": 1,
+      "message": "There are no stable-3.2/3.3 branches yet, so this build won\u0027t work",
+      "revId": "a445736444bf9e5029e2dce453e5cf37d12fdb1e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
