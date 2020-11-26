@@ -1,11 +1,14 @@
 - project:
     name: groovy-provider
     jobs:
+      - 'plugin-scripting-{name}-bazel-{branch}':
+          branch:
+            - master
       - 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
           gerrit-branch:
-            - master
+            - stable-3.3
             - stable-3.2
             - stable-3.1
             - stable-3.0
