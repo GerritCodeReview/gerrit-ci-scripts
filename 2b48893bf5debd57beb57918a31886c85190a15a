@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "154e84d9_be60e774",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-26T18:11:40Z",
+      "side": 1,
+      "message": "Already verified through [1] https://gerrit-review.googlesource.com/c/plugins/batch/+/288363",
+      "revId": "2b48893bf5debd57beb57918a31886c85190a15a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
