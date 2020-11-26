@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7f045a8_ccd0284b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2020-11-26T22:23:11Z",
+      "side": 1,
+      "message": "I don\u0027t have +2 power ",
+      "revId": "57f66ee49e45ae45ad61206f6e7e348324c9911a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
