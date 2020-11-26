@@ -5,6 +5,7 @@
           targets: 'plugins/kafka-events plugins/kafka-events:kafka_events_tests'
           branch:
             - master
+            - stable-3.3
             - stable-3.2
       - 'plugin-{name}-bazel-{branch}':
           branch:
