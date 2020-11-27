@@ -33,6 +33,24 @@
       "message": "Can we reduce amount of ES docker based integration tests? My point is: none is using the ES setup yet in production (correct me if I wrong). Nevertheless we are spending quite some time on each and every test to verify different ES versions. What if we only support one single ES version and discontinue all other versions?",
       "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "081283bd_e5457918",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-27T16:26:08Z",
+      "side": 1,
+      "message": "\u003e Can we reduce amount of ES docker based integration tests? My point is: none is using the ES setup yet in production (correct me if I wrong).\n\nI believe Marco did a survey on that. Also, Alibaba answered that they are using it in production.\n\n\u003e Nevertheless we are spending quite some time on each and every test to verify different ES versions. What if we only support one single ES version and discontinue all other versions?\n\nThat\u0027s more a question for @Marco.\n\nI believe there is value in checking ES because we had in the past changes to the Gerrit index code that was breaking when executed on ES. We should detect those type of breakages before they actually are merged.\n\nI am a bit surprised that Bazel doesn\u0027t cache them though, as they should not be run if the code doesn\u0027t change. Is there anything in the output of the Bazel build that can give you a clue on why those are still run even if they aren\u0027t needed?",
+      "parentUuid": "46748fb2_e34c11c7",
+      "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
