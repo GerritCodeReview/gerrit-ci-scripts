@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea0170fb_f66c9523",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-11-27T09:50:27Z",
+      "side": 1,
+      "message": "The stable-3.3 build failed (see https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-code-owners-bazel-master-stable-3.3/1/console)",
+      "revId": "540284dbe97c2e97fe4c004bf413ff00f6c9172b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
