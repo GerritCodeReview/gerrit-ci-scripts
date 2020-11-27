@@ -86,6 +86,24 @@
       "parentUuid": "081283bd_e5457918",
       "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c40e5bf_b22e8004",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-11-27T17:54:24Z",
+      "side": 1,
+      "message": "Thanks for the feedback. Should we announce the deprecation of support for ES 6 ASAP? We could communicate it now and add it in release notes 3.3?",
+      "parentUuid": "bd9d1ad0_9f66ddaf",
+      "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
