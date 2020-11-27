@@ -51,6 +51,41 @@
       "parentUuid": "46748fb2_e34c11c7",
       "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5255aad5_17877097",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-27T16:45:42Z",
+      "side": 1,
+      "message": "Feedback herein.",
+      "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd9d1ad0_9f66ddaf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-27T16:45:42Z",
+      "side": 1,
+      "message": "\u003e \u003e Can we reduce amount of ES docker based integration tests? My point is: none is using the ES setup yet in production (correct me if I wrong).\n\u003e \n\u003e I believe Marco did a survey on that. Also, Alibaba answered that they are using it in production.\n\nThat is also what I recall, based on that past survey. The latter didn\u0027t reveal more than one active user of ES. Maybe some more added themselves since that survey though.\n\nEricsson (yours truly) keeps maintaining ES in core as we were the ones co-introducing its support originally, along with you \u0026co. We might use it eventually (2021?) -but not by this ending 2020 definitely.\n\n\u003e \u003e Nevertheless we are spending quite some time on each and every test to verify different ES versions. What if we only support one single ES version and discontinue all other versions?\n\u003e \n\u003e That\u0027s more a question for @Marco.\n\u003e \n\u003e I believe there is value in checking ES because we had in the past changes to the Gerrit index code that was breaking when executed on ES. We should detect those type of breakages before they actually are merged.\n\nYes; exactly. Note that V6 has been fully EOL\u0027ed through eol 6.8.x on 2020-11-20 [1]. I at least didn\u0027t have the time yet to update Gerrit accordingly, as we usually do already for eol ES versions.\n\n[1] https://www.elastic.co/support/eol\n\nDoing that would help this change\u0027s cause I think, as far as we don\u0027t have Gerrit users relying on V6 in their deployments. -Because removing V6 completely would mean only supporting V7, along with soon potentially supporting V8 (or not, or not yet). Now ES still has value in Gerrit overall I believe.",
+      "parentUuid": "081283bd_e5457918",
+      "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
