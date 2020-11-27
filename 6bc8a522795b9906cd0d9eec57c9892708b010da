@@ -16,6 +16,23 @@
       "message": "We do need this, for now, until we have decoupled the Docker-based tests from everything else :-(",
       "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46748fb2_e34c11c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-11-27T15:02:52Z",
+      "side": 1,
+      "message": "Can we reduce amount of ES docker based integration tests? My point is: none is using the ES setup yet in production (correct me if I wrong). Nevertheless we are spending quite some time on each and every test to verify different ES versions. What if we only support one single ES version and discontinue all other versions?",
+      "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
