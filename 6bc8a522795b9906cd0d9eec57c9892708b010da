@@ -104,6 +104,24 @@
       "parentUuid": "bd9d1ad0_9f66ddaf",
       "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c18f5129_323d6aa4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-11-27T18:15:47Z",
+      "side": 1,
+      "message": "We could, but I think only (jointly) after pushing changes to remove V6 entirely and properly from Gerrit first. I don\u0027t have that time myself as we speak unfortunately, so maybe later if me -or I can review if somebody else does so.\n\nI propose to wait for after 3.3 (next Monday) so we don\u0027t rush that whole V6 removal. Especially knowing the starting week-end with unavailabilities from our ends, at least for me this time around.",
+      "parentUuid": "9c40e5bf_b22e8004",
+      "revId": "6bc8a522795b9906cd0d9eec57c9892708b010da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
