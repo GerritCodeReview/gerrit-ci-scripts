@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37b94cd6_e6c0d366",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-02T23:21:59Z",
+      "side": 1,
+      "message": "This is my last step needed for upgrading GerritHub.io to Gerrit v3.3 :-)",
+      "revId": "4f3d9165984ca8cf80cd787b22c2a0d3a4cbf294",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
