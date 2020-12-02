@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63e5a13b_3c95daee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-02T10:54:50Z",
+      "side": 1,
+      "message": "We should create checkers for kafka-events plugins first.\n\n",
+      "revId": "39c935b46e6e45570514d8e3c1ea177d2949719b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
