@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce877925_cd362e58",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-04T15:07:47Z",
+      "side": 1,
+      "message": "I created stable-3.1 branch for this plugin, that is compatible with gerrit\u0027s stable-3.1 and stable-3.2 branches.\n\nPlugin\u0027s main branch is compatible with gerrit\u0027s stable-3.3 branch and main branch.",
+      "revId": "b1f65f415d2576ac5bbbff381036ec1fce6ff25f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
