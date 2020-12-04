@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "404e5728_3e103203",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-04T22:45:29Z",
+      "side": 1,
+      "message": "It looks like it\u0027s broken on stable-3.1:\nhttps://gerrit-ci.gerritforge.com/job/plugin-verify-status-bazel-stable-3.1/1/console",
+      "revId": "b1737e583b5284925972025699883009a5387aff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
