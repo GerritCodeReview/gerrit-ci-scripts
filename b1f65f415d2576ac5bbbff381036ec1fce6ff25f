@@ -16,6 +16,47 @@
       "message": "I created stable-3.1 branch for this plugin, that is compatible with gerrit\u0027s stable-3.1 and stable-3.2 branches.\n\nPlugin\u0027s main branch is compatible with gerrit\u0027s stable-3.3 branch and main branch.",
       "revId": "b1f65f415d2576ac5bbbff381036ec1fce6ff25f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57dce6b1_76f99919",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-12-04T20:58:04Z",
+      "side": 1,
+      "message": "\u003e Plugin\u0027s main branch is compatible with gerrit\u0027s stable-3.3 branch and main branch.\n\nRelated comment inline.",
+      "parentUuid": "ce877925_cd362e58",
+      "revId": "b1f65f415d2576ac5bbbff381036ec1fce6ff25f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4b485f3_9636c58e",
+        "filename": "jenkins/gerrit-bazel-plugin-verify-status.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-12-04T20:58:04Z",
+      "side": 1,
+      "message": "Add a short line about this in the commit message too?",
+      "range": {
+        "startLine": 13,
+        "startChar": 14,
+        "endLine": 13,
+        "endChar": 24
+      },
+      "revId": "b1f65f415d2576ac5bbbff381036ec1fce6ff25f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
