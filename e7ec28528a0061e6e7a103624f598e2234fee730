@@ -46,6 +46,30 @@
       },
       "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8976a35_506c38e4",
+        "filename": "jenkins/gerrit-bazel-plugin-verify-status.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-04T22:07:35Z",
+      "side": 0,
+      "message": "\u003e It\u0027s supported, but, there is no stable-3.2 branch in verify-status.\n\u003e \n\u003e there are only 2 stable branches for recent gerrit releases:\n\u003e \n\u003e * 2.16: support gerrit 2.16\n\u003e * 3.1: supports gerrit 3.1 and 3.2\n\u003e * main branch: supports gerrit 3.3 and later\n\nI would suggest then to create a stable-3.2 branch that points to stable-3.1 and then enable the build on both.\n\nIn that way, the Gerrit v3.2 will show verify-status plugin in his plugin-manager screen.\n\nWDYT?",
+      "parentUuid": "390a0816_0887958d",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
