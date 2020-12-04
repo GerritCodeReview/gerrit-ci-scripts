@@ -22,6 +22,30 @@
       },
       "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "390a0816_0887958d",
+        "filename": "jenkins/gerrit-bazel-plugin-verify-status.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-04T22:04:40Z",
+      "side": 0,
+      "message": "It\u0027s supported, but, there is no stable-3.2 branch in verify-status.\n\nthere are only 2 stable branches for recent gerrit releases:\n\n* 2.16: support gerrit 2.16\n* 3.1: supports gerrit 3.1 and 3.2\n* main branch: supports gerrit 3.3 and later",
+      "parentUuid": "f92f39db_122615e8",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
