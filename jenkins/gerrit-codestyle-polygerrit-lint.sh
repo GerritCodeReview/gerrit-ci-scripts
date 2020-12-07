@@ -2,7 +2,7 @@
 
 . set-java.sh 8
 
-if [git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion]
+if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
 then
   export BAZEL_OPTS=""
 fi
