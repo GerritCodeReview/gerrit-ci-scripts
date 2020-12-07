@@ -46,6 +46,29 @@
       },
       "revId": "1420a45c40417425b164cfb82ddc8a0e6cb8d24a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4874bf9_57759b4c",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2020-12-07T20:06:02Z",
+      "side": 1,
+      "message": "I\u0027m seeing \n\n\n+ \u0027[git\u0027 show --diff-filter\u003dAM --name-only --pretty\u003d HEAD\n+ grep -q \u0027.bazelversion]\u0027\n/tmp/jenkins8827558880595175205.sh: line 5: [git: command not found\n\nin CI logs. Did you mean\n\nif [ git ... ?",
+      "range": {
+        "startLine": 3,
+        "startChar": 3,
+        "endLine": 3,
+        "endChar": 8
+      },
+      "revId": "1420a45c40417425b164cfb82ddc8a0e6cb8d24a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
