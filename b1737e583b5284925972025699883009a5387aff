@@ -16,6 +16,24 @@
       "message": "It looks like it\u0027s broken on stable-3.1:\nhttps://gerrit-ci.gerritforge.com/job/plugin-verify-status-bazel-stable-3.1/1/console",
       "revId": "b1737e583b5284925972025699883009a5387aff",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fded71c_027105f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-07T23:03:16Z",
+      "side": 1,
+      "message": "Fixed in change: 290769. Done.",
+      "parentUuid": "404e5728_3e103203",
+      "revId": "b1737e583b5284925972025699883009a5387aff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
