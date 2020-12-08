@@ -33,6 +33,24 @@
       "message": "Extra blank line, also compared to sibling files; would remove it.",
       "revId": "ab3eacd7c26081b33ff95ff3bd8e266a5ace976e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c32f027a_0c4aaaf4",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-08T13:54:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "397996c1_9b18f6dc",
+      "revId": "ab3eacd7c26081b33ff95ff3bd8e266a5ace976e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
