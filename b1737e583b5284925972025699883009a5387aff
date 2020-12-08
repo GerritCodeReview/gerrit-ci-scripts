@@ -34,6 +34,24 @@
       "parentUuid": "404e5728_3e103203",
       "revId": "b1737e583b5284925972025699883009a5387aff",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a469be67_52f1c9cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-08T07:16:00Z",
+      "side": 1,
+      "message": "The relevant commits were approved and merged.",
+      "parentUuid": "0fded71c_027105f2",
+      "revId": "b1737e583b5284925972025699883009a5387aff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
