@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff1ce740_b60466ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-12-08T14:02:52Z",
+      "side": 1,
+      "message": "I\u0027m currently working on preparing plugin\u0027s stable-3.3 branch.",
+      "revId": "cc5ba885be2f007cb24d9f4b021c25453f4fc3a0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
