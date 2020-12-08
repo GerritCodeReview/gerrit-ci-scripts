@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e51816d9_86a92a09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-12-08T13:51:45Z",
+      "side": 1,
+      "message": "Thanks David. Nit.",
+      "revId": "ab3eacd7c26081b33ff95ff3bd8e266a5ace976e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "397996c1_9b18f6dc",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-12-08T13:51:45Z",
+      "side": 1,
+      "message": "Extra blank line, also compared to sibling files; would remove it.",
+      "revId": "ab3eacd7c26081b33ff95ff3bd8e266a5ace976e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
