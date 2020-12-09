@@ -70,6 +70,30 @@
       },
       "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bff0a721_46831e66",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-12-09T08:51:07Z",
+      "side": 0,
+      "message": "In this config file we have two jenkins job definitions, first is without zk 3.5 build - we keep it for branches without need for that jar. Second one has two targets plugins/{name}:{name} plugins/{name}:{name}-zk-3.5 and extra artifact: extra-artifacts: \u0027bazel-bin/plugins/{name}/{name}-zk-3.5.jar\u0027",
+      "parentUuid": "36599d6a_cf9bc2a5",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
