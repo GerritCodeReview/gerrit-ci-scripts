@@ -22,6 +22,30 @@
       },
       "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82c8f84a_b34b83ba",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2020-12-09T08:31:27Z",
+      "side": 0,
+      "message": "those branches builds only jar for zk 3.4 after moving it below build will produce two jars one for zk 3.4 and one for zk 3.5",
+      "parentUuid": "c3412f9f_fbf05d8b",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
