@@ -94,6 +94,30 @@
       },
       "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8f30873_5bee7e77",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-09T08:59:44Z",
+      "side": 0,
+      "message": "Thanks makes sense. I misread, that the both sections are for the same job:\n\n  \u0027plugin-{name}-bazel-{branch}\u0027",
+      "parentUuid": "bff0a721_46831e66",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
