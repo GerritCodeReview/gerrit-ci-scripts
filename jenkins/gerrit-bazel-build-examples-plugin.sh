@@ -6,4 +6,4 @@ git checkout {branch}
 
 java -fullversion
 bazelisk version
-bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone all
+bazelisk build --spawn_strategy=worker --genrule_strategy=standalone all

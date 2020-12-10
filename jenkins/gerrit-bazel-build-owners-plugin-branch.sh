@@ -21,7 +21,7 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 java -fullversion
 bazelisk version
-bazelisk build --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+bazelisk build --spawn_strategy=worker --genrule_strategy=standalone $TARGETS
 
 for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)
 do

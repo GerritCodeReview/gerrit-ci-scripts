@@ -9,7 +9,7 @@ then
   export BAZEL_OPTS=""
 fi
 
-export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone"
+export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=worker --genrule_strategy=standalone"
 
 java -fullversion
 bazelisk version

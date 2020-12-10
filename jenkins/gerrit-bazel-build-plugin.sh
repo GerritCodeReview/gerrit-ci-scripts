@@ -27,7 +27,7 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 java -fullversion
 bazelisk version
-bazelisk build $BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone $TARGETS
+bazelisk build $BAZEL_OPTS --spawn_strategy=worker --genrule_strategy=standalone $TARGETS
 bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
 
 for JAR in $(find bazel-bin/plugins/{name} -maxdepth 1 -name {name}*.jar)
