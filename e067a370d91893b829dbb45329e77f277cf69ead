@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c64f8f16_ef8fc50a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-10T14:18:05Z",
+      "side": 1,
+      "message": "Thanks for fixing it. I see this documentation: [1]\n\n --spawn_strategy strategy\n This option controls where and how commands are executed.\n\n* standalone causes commands to be executed as local subprocesses. This value is deprecated. Please use local instead.\n* worker causes commands to be executed using a persistent worker, if available.\n\nThe question is why it has to be changed at all? Isn\u0027t it\u0027s the default? gerrit/.bazelrc has only this line (but it alsonot needed, as we removed closure library starting from 3.3 release).\n\n  --strategy\u003dClosure\u003dworker\n\nSo just remove --spawn_strategy option entirely?\n\n[1] https://docs.bazel.build/versions/master/user-manual.html",
+      "revId": "e067a370d91893b829dbb45329e77f277cf69ead",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
