@@ -11,4 +11,10 @@
             - stable-2.16
             - stable-2.15
             - stable-2.14
+      - 'plugin-{name}-bazel-{gerrit-tag}-{plugin-tag}':
+          gerrit-tag: v3.0.15
+          plugin-tag: v3.0.0
+      - 'plugin-{name}-bazel-{gerrit-tag}-{plugin-tag}':
+          gerrit-tag: v3.1.10
+          plugin-tag: v3.1.0
       - plugin-{name}-verifier
