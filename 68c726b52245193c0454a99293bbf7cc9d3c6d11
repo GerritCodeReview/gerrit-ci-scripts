@@ -39,6 +39,30 @@
       },
       "revId": "68c726b52245193c0454a99293bbf7cc9d3c6d11",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "457c63f7_86d055aa",
+        "filename": "jenkins/gerrit-bazel-plugin-verify-status.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-21T19:31:54Z",
+      "side": 1,
+      "message": "Timeout in Bazel build was too optimistic:\n\n  //plugins/verify-status:verify-status_tests PASSED in 56.8s\n\nIt\u0027s below 60 seconds in my laptop, but apparently higher on the CI. Removing it should fix the CI breakage. Done in: change 292029.",
+      "parentUuid": "897d76c4_901804b7",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 24
+      },
+      "revId": "68c726b52245193c0454a99293bbf7cc9d3c6d11",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
