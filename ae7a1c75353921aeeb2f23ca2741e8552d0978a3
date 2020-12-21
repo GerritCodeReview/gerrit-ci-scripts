@@ -16,6 +16,24 @@
       "message": "Build failed:\nhttps://gerrit-ci.gerritforge.com/job/plugin-code-owners-bazel-stable-3.3/1/console",
       "revId": "ae7a1c75353921aeeb2f23ca2741e8552d0978a3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93a2153c_6ece3595",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-21T19:57:05Z",
+      "side": 1,
+      "message": "api-tests are failing with timeout of 900 seconds. Locally it works just fine:\n\n  //plugins/code-owners/javatests/com/google/gerrit/plugins/codeowners/acceptance/api:acceptance_api PASSED in 507.1s\n\n\nSo, with 500 seconds it\u0027s quite huge. Should we shard the test suites across test class boundaries?",
+      "parentUuid": "894feb10_ef6d2d83",
+      "revId": "ae7a1c75353921aeeb2f23ca2741e8552d0978a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
