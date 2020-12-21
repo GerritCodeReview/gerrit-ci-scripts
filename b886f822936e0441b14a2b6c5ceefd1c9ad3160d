@@ -16,6 +16,24 @@
       "message": "The commit message should also mention that:\n- drops build on stable-3.0/3.2\n- add build for stable-3.3",
       "revId": "b886f822936e0441b14a2b6c5ceefd1c9ad3160d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11c5d691_aaed709c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-21T14:38:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa78d64f_1d0499d4",
+      "revId": "b886f822936e0441b14a2b6c5ceefd1c9ad3160d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
