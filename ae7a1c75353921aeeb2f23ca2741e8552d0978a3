@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "894feb10_ef6d2d83",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-21T17:10:17Z",
+      "side": 1,
+      "message": "Build failed:\nhttps://gerrit-ci.gerritforge.com/job/plugin-code-owners-bazel-stable-3.3/1/console",
+      "revId": "ae7a1c75353921aeeb2f23ca2741e8552d0978a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
