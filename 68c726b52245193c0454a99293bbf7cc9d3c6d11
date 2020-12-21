@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "532c9c61_f1e899a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-21T17:13:00Z",
+      "side": 1,
+      "message": "Succeeded on stable-3.3, but failed on stable-3.1.\nWhat about merging only the stable-3.3 build?",
+      "revId": "68c726b52245193c0454a99293bbf7cc9d3c6d11",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "897d76c4_901804b7",
+        "filename": "jenkins/gerrit-bazel-plugin-verify-status.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-21T17:13:00Z",
+      "side": 1,
+      "message": "Build failed:\nhttps://gerrit-ci.gerritforge.com/job/plugin-verify-status-bazel-stable-3.1/1/console",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 24
+      },
+      "revId": "68c726b52245193c0454a99293bbf7cc9d3c6d11",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
