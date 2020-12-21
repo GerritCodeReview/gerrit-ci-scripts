@@ -63,6 +63,30 @@
       },
       "revId": "68c726b52245193c0454a99293bbf7cc9d3c6d11",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41a57c04_519adb3a",
+        "filename": "jenkins/gerrit-bazel-plugin-verify-status.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-21T19:54:35Z",
+      "side": 1,
+      "message": "The fix change was just merged. PTAL.",
+      "parentUuid": "457c63f7_86d055aa",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 24
+      },
+      "revId": "68c726b52245193c0454a99293bbf7cc9d3c6d11",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
