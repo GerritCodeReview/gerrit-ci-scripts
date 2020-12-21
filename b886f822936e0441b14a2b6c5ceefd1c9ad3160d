@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa78d64f_1d0499d4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-21T14:31:52Z",
+      "side": 1,
+      "message": "The commit message should also mention that:\n- drops build on stable-3.0/3.2\n- add build for stable-3.3",
+      "revId": "b886f822936e0441b14a2b6c5ceefd1c9ad3160d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
