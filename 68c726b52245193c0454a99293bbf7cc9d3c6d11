@@ -87,6 +87,30 @@
       },
       "revId": "68c726b52245193c0454a99293bbf7cc9d3c6d11",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc4a0d47_9f1e8745",
+        "filename": "jenkins/gerrit-bazel-plugin-verify-status.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-12-22T19:02:10Z",
+      "side": 1,
+      "message": "\u003e The fix change was just merged. PTAL.\n\nIt ([1]) is not merged yet though, and I\u0027m not sure if it can. Leaving this up to you guys.\n\n[1] https://gerrit-review.googlesource.com/c/plugins/verify-status/+/292029/",
+      "parentUuid": "41a57c04_519adb3a",
+      "range": {
+        "startLine": 6,
+        "startChar": 12,
+        "endLine": 6,
+        "endChar": 24
+      },
+      "revId": "68c726b52245193c0454a99293bbf7cc9d3c6d11",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
