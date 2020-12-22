@@ -16,6 +16,24 @@
       "message": "Thanks for the code-review.\nWhat is the process to \u0027verify\u0027 this CI-scripts changes? Is there anything I can do to speed things up?",
       "revId": "c3ba3a55b6acceb3ef1f99cfae70bd3c59b09ebe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bad4875a_b8e3fd77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-12-22T19:08:32Z",
+      "side": 1,
+      "message": "\u003e Thanks for the code-review.\n\u003e What is the process to \u0027verify\u0027 this CI-scripts changes? Is there anything I can do to speed things up?\n\nA colleague with CI access usually does this, however you can score your own based on your ability to locally build and pass plugin tests in the branch(es). In-tree bazel mode, for CI purposes.",
+      "parentUuid": "c367c4d0_c788aff0",
+      "revId": "c3ba3a55b6acceb3ef1f99cfae70bd3c59b09ebe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
