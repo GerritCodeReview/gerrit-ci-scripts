@@ -22,6 +22,30 @@
       },
       "revId": "1b266abc74cb7a3d48724131e6fe645df3a06fab",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e74d8d27_72663c82",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-28T22:34:08Z",
+      "side": 1,
+      "message": "\u003e I think nothing was broken in the old implementation,\n\nIn theory, no, in reality yes, because all the plugins\u0027 builds were run with Java 11. It looks like the Jenkins CPS won\u0027t recognise the individual string as contained in the list.\n\n\u003e though the proposed new implementation seems more concise\n\n+1",
+      "parentUuid": "c334587e_bdc0ec78",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 3
+      },
+      "revId": "1b266abc74cb7a3d48724131e6fe645df3a06fab",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
