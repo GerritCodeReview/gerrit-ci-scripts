@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b056cf7_e428dd3a",
+        "filename": "jenkins/gerrit-bazel-plugin-oauth.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-28T23:36:00Z",
+      "side": 1,
+      "message": "Also these two then should be swapped, to keep the ordering consistent (from the latest to the oldest)",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "f3d8db145d6b06626c189859d908a6fe27230bd8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
