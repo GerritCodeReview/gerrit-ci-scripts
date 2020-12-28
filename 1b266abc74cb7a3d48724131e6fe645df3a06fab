@@ -70,6 +70,30 @@
       },
       "revId": "1b266abc74cb7a3d48724131e6fe645df3a06fab",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9d77ac5_5e3bfbc6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-28T23:32:39Z",
+      "side": 1,
+      "message": "\u003e The old code looks similar to [1] which was reported on SO to not work.\n\u003e If their observation is correct, calling toString() should workaround this issue:\n\u003e \n\u003e  if ([\"stable-2.16\", \"stable-3.0\", \"stable-3.1\", \"stable-3.2\"].contains(\"${env.GERRIT_BRANCH}\".toString())) {\n\u003e         javaVersion \u003d 8\n\u003e  }\n\u003e \n\u003e though your proposal in this change looks nicer (if it works)\n\n+1, I confirm that I tested E2E and it works.\n\nThanks for the pointer :-)\n\n\u003e \n\u003e [1] https://stackoverflow.com/questions/56829842/groovy-check-array-contains-string-does-not-work-identically-with-literal-string",
+      "parentUuid": "55800640_12281912",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 3
+      },
+      "revId": "1b266abc74cb7a3d48724131e6fe645df3a06fab",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
