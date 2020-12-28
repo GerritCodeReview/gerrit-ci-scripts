@@ -57,6 +57,30 @@
       },
       "revId": "7645de72109d88e142ab9b701c1052253bdde52f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d753dc1b_cd356d22",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-28T23:06:06Z",
+      "side": 1,
+      "message": "It was part of Change-Id: If3605b5bd6b3c. If the Bazel version is bumped, it reset all the project-level settings that could have used remote caching.",
+      "parentUuid": "6f60f607_2627080d",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 2
+      },
+      "revId": "7645de72109d88e142ab9b701c1052253bdde52f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
