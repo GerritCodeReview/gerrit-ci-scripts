@@ -31,8 +31,7 @@ java -fullversion
 bazelisk version
 bazelisk build $BAZEL_OPTS $TARGETS
 
-BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
-                   --test_output errors \
+BAZEL_OPTS="$BAZEL_OPTS --test_output errors \
                    --test_summary detailed --flaky_test_attempts 3 \
                    --test_verbose_timeout_warnings --build_tests_only \
                    --test_timeout 3600 \
