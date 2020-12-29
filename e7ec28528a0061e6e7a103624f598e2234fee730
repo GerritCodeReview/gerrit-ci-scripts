@@ -118,6 +118,30 @@
       },
       "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64920cf7_65b8b70b",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-29T00:46:15Z",
+      "side": 0,
+      "message": "Ack",
+      "parentUuid": "a8f30873_5bee7e77",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "e7ec28528a0061e6e7a103624f598e2234fee730",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
