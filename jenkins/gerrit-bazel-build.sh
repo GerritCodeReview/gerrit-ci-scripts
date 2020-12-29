@@ -4,6 +4,9 @@
 
 cd gerrit
 
+echo "Build with mode=$MODE"
+echo '----------------------------------------------'
+
 if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
 then
   export BAZEL_OPTS=""
@@ -11,6 +14,13 @@ fi
 
 java -fullversion
 bazelisk version
-bazelisk build $BAZEL_OPTS plugins:core release api
-tools/maven/api.sh install
-tools/eclipse/project.py --bazel bazelisk
+
+if [[ "$MODE" == *"rbe"* ]]
+then
+  # TODO(davido): Figure out why javadoc part of api-rule doesn't work on RBE
+  bazelisk build $BAZEL_RBE_OPTS plugins:core release
+else
+  bazelisk build $BAZEL_OPTS plugins:core release api
+  tools/maven/api.sh install
+  tools/eclipse/project.py --bazel bazelisk  
+fi
