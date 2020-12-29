@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11cba2f8_b9d5d91f",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-12-29T22:05:28Z",
+      "side": 1,
+      "message": "This should be excluded for now on RBE.",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 41
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
