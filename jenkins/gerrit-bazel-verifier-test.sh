@@ -7,7 +7,14 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
-case $TARGET_BRANCH in
+case $TARGET_BRANCH$MODE in
+  masterrbe)
+    TEST_TAG_FILTER="-flaky,-elastic,-git-protocol-v2"
+    BAZEL_OPTS="$BAZEL_RBE_OPTS"
+    ;;
+  masterNoteDb)
+    TEST_TAG_FILTER="-flaky,elastic,git-protocol-v2"
+    ;;
   stable-2.*)
     TEST_TAG_FILTER="-flaky,-elastic"
     ;;
@@ -30,7 +37,7 @@ bazelisk version
 if [[ "$MODE" == *"reviewdb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=OFF"
-  bazelisk test $BAZEL_OPTS //...
+  bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"notedb"* ]]
@@ -39,9 +46,13 @@ then
   bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
+if [[ "$MODE" == *"rbe"* ]]
+then
+  bazelisk test $BAZEL_OPTS //...
+fi
+
 if [[ "$MODE" == *"polygerrit"* ]]
 then
-
   echo 'Running Documentation tests...'
   bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
