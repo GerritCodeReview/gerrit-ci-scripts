@@ -15,13 +15,31 @@ case $TARGET_BRANCH in
     TEST_TAG_FILTER="-flaky"
 esac
 
+if [[ "$MODE" == *"rbe"* ]]
+then
+  TEST_TAG_FILTER="-flaky,-elastic,-git-protocol-v2"
+  export BAZEL_OPTS="$BAZEL_OPTS $BAZEL_RBE_OPTS"
+else
+  export BAZEL_OPTS="$BAZEL_OPTS \
+                   $BAZEL_REMOTE_OPTS \
+                   --test_env DOCKER_HOST=$DOCKER_HOST"
+fi
+
+# Only verify that cannot be tested on RBE
+if [[ "$MODE" == *"notedb"* && "$TARGET_BRANCH" == "master" ]]
+  TEST_TAG_FILTER="-flaky,elastic,git-protocol-v2"
+fi
+
 export BAZEL_OPTS="$BAZEL_OPTS \
                  --test_output errors \
                  --test_summary detailed --flaky_test_attempts 3 \
                  --test_verbose_timeout_warnings --build_tests_only \
                  --test_timeout 3600 \
-                 --test_tag_filters=$TEST_TAG_FILTER \
-                 --test_env DOCKER_HOST=$DOCKER_HOST"
+                 --test_tag_filters=$TEST_TAG_FILTER"
+
+echo "BAZEL_OPTS is:"
+echo $BAZEL_OPTS
+
 export WCT_HEADLESS_MODE=1
 
 java -fullversion
@@ -39,9 +57,13 @@ then
   bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
+if [[ "$MODE" == *"rbe"* ]]
+then
+  bazelisk test $BAZEL_OPTS //...
+fi
+
 if [[ "$MODE" == *"polygerrit"* ]]
 then
-
   echo 'Running Documentation tests...'
   bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 

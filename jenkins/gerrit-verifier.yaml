@@ -64,6 +64,7 @@
             - reviewdb
             - notedb
             - polygerrit
+            - rbe
           description: 'Type of verification to execute'
     properties:
       - authorization:
@@ -75,8 +76,10 @@
           days-to-keep: 30
       - inject:
           properties-content: >
-            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
-            --java_toolchain=//tools:error_prone_warnings_toolchain
+            BAZEL_OPTS=--java_toolchain=//tools:error_prone_warnings_toolchain
+            BAZEL_REMOTE_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+            BAZEL_RBE_OPTS=--config=remote
+            --remote_instance_name=projects/api-project-164060093628/instances/default_instance
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
