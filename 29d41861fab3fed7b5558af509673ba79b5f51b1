@@ -16,6 +16,24 @@
       "message": "Those changes to checkers definition should be applied manually though.",
       "revId": "29d41861fab3fed7b5558af509673ba79b5f51b1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a09ecbf3_b3e280f2",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-31T14:00:52Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ba91c0ca_c8c267dd",
+      "revId": "29d41861fab3fed7b5558af509673ba79b5f51b1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
