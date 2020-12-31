@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f32a450c_150e203f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-31T15:59:24Z",
+      "side": 1,
+      "message": "Needs rebase.",
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11cba2f8_b9d5d91f",
@@ -19,6 +36,116 @@
         "startChar": 0,
         "endLine": 30,
         "endChar": 41
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "390bee9b_1c635098",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-31T15:59:24Z",
+      "side": 1,
+      "message": "Are you suggesting to just run the tests on RBE and everything else in the traditional way?",
+      "parentUuid": "11cba2f8_b9d5d91f",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 41
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c49411b6_20d973e3",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-31T15:59:24Z",
+      "side": 1,
+      "message": "This is a bit confusing, as you set the TEST_TAG_FILTER in two conditionals.\n\nWhy not just do:\n\ncase $TARGET_BRANCH$MODE in\n  case *rbe*)\n     TEST_TAG_FILTER\u003d\"-flaky,-elastic,-git-protocol-v2\"\n     ;;\n  stable-2.*)\n    TEST_TAG_FILTER\u003d\"-flaky,-elastic\"\n    ;;\n  *)\n    TEST_TAG_FILTER\u003d\"-flaky\"\nesac",
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3f1b761_c4dca48b",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-31T15:59:24Z",
+      "side": 1,
+      "message": "I know it isn\u0027t used, but is it actually harmful for the RBE build?",
+      "range": {
+        "startLine": 25,
+        "startChar": 19,
+        "endLine": 25,
+        "endChar": 54
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da2e3e1f_1c4bc680",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-31T15:59:24Z",
+      "side": 1,
+      "message": "Leftover to remove?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 2
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfa6cce6_568fe706",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-12-31T15:59:24Z",
+      "side": 1,
+      "message": "Why should this be relevant only for RBE? I believe we want to use caching also for the current builds, or not?",
+      "range": {
+        "startLine": 80,
+        "startChar": 12,
+        "endLine": 80,
+        "endChar": 30
       },
       "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
