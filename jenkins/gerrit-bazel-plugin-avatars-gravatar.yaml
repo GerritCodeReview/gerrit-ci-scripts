@@ -11,5 +11,4 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-            - stable-3.0
             - stable-2.16

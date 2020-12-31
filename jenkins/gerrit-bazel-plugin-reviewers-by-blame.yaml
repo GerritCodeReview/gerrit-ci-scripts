@@ -3,7 +3,6 @@
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           branch:
-            - stable-3.0
             - stable-2.16
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:

@@ -10,5 +10,4 @@
             - stable-3.1
       - 'plugin-{name}-bazel-{branch}':
           branch:
-            - stable-3.0
             - stable-2.16

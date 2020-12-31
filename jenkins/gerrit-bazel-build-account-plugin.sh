@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 case "{branch}" in
-  stable-2.16|stable-3.0|stable-3.1|stable-3.2)
+  stable-2.16|stable-3.1|stable-3.2)
     . set-java.sh 8
     ;;
   *)
