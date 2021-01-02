@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5326abd3_5c79b6df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-02T16:54:33Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "f32a450c_150e203f",
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11cba2f8_b9d5d91f",
@@ -65,6 +83,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e39dabaa_e0769cb4",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-02T16:54:33Z",
+      "side": 1,
+      "message": "No, only skip in RBE mode to publish to local Maven repository and create .classpath for Eclipse IDE. Note, that in NoteDb mode, this test will still be executed. The reason for skipping: those command will run internally Bazel command, but without passing Bazel RBE-options, so that they unnecessarily would build in standalone mode, and that\u0027s not what we are trying to achieve in RBE mode.",
+      "parentUuid": "390bee9b_1c635098",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 41
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c49411b6_20d973e3",
@@ -82,6 +124,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "69450058_d52b848a",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-02T16:54:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c49411b6_20d973e3",
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e3f1b761_c4dca48b",
@@ -95,6 +155,30 @@
       "writtenOn": "2020-12-31T15:59:24Z",
       "side": 1,
       "message": "I know it isn\u0027t used, but is it actually harmful for the RBE build?",
+      "range": {
+        "startLine": 25,
+        "startChar": 19,
+        "endLine": 25,
+        "endChar": 54
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8db83e29_a5c436cb",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-02T16:54:33Z",
+      "side": 1,
+      "message": "Restored. Done.",
+      "parentUuid": "e3f1b761_c4dca48b",
       "range": {
         "startLine": 25,
         "startChar": 19,
@@ -128,6 +212,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4c8e831_abac6cc3",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-02T16:54:33Z",
+      "side": 1,
+      "message": "We would need to set to only include explicitly tests we want to run on master and NoteDb mode. Done.",
+      "parentUuid": "da2e3e1f_1c4bc680",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 2
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dfa6cce6_568fe706",
@@ -141,6 +249,30 @@
       "writtenOn": "2020-12-31T15:59:24Z",
       "side": 1,
       "message": "Why should this be relevant only for RBE? I believe we want to use caching also for the current builds, or not?",
+      "range": {
+        "startLine": 80,
+        "startChar": 12,
+        "endLine": 80,
+        "endChar": 30
+      },
+      "revId": "e9154249c334fb4e1e817c9ec609c81005ab9a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b291cb7_471c0e0e",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-02T16:54:33Z",
+      "side": 1,
+      "message": "It shouldn\u0027t. The idea was to split monolithic environment variable in multiple options. But this would be intrusive change that in fact would also influence non RBE case. Restored original option and only defined single BAZEL_RBE_OPTS. Done.",
+      "parentUuid": "dfa6cce6_568fe706",
       "range": {
         "startLine": 80,
         "startChar": 12,
