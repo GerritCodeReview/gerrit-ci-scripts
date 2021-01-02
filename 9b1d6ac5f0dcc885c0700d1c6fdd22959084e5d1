@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "418c2830_9ae70dd7",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-02T17:17:59Z",
+      "side": 1,
+      "message": "This doesn\u0027t work on RBE:\n\n  $ bazel build \u003cRBE-options\u003e api\n  [...]\n  javadoc: error - Error fetching URL: https://docs.oracle.com/en/java/javase/11/docs/api/\n  javadoc: error - Error fetching URL: https://download.eclipse.org/jgit/site/5.5.0.201909110433-r/apidocs/\n  javadoc: error - Error fetching URL: https://google.github.io/guava/releases/29.0-jre/api/docs/\n  3 errors\n  Target //:api failed to build\n  FAILED: Build did NOT complete successfully",
+      "range": {
+        "startLine": 22,
+        "startChar": 48,
+        "endLine": 22,
+        "endChar": 51
+      },
+      "revId": "9b1d6ac5f0dcc885c0700d1c6fdd22959084e5d1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ae6c0968_f3656eac",
         "filename": "jenkins/gerrit-bazel-verifier-test.sh",
         "patchSetId": 10
