@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc54f1f4_f6c837ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-05T00:01:07Z",
+      "side": 1,
+      "message": "LGTM, good job.\nI\u0027ll wait for you to find out the javadoc thinghy and then happy to +2 on it.",
+      "revId": "510ba531bd1dec90df0c03fe997e61a3e0782b50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e85ae92_4e35fc32",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-05T00:01:07Z",
+      "side": 1,
+      "message": "Good catch, that was missed earlier.",
+      "range": {
+        "startLine": 40,
+        "startChar": 16,
+        "endLine": 40,
+        "endChar": 31
+      },
+      "revId": "510ba531bd1dec90df0c03fe997e61a3e0782b50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
