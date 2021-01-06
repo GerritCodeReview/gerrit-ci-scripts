@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "f2c2c2d6_72b2e53b",
         "filename": "jenkins/gerrit-bazel-build-plugin-manual.sh",
@@ -20,10 +21,34 @@
         "endChar": 30
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8c473ce_bdea198b",
+        "filename": "jenkins/gerrit-bazel-build-plugin-manual.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:56:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2c2c2d6_72b2e53b",
+      "range": {
+        "startLine": 20,
+        "startChar": 15,
+        "endLine": 20,
+        "endChar": 30
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "bb96013c_7f56452c",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
@@ -43,10 +68,10 @@
         "endChar": 30
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "0bcfe2db_8c36f07c",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
@@ -67,10 +92,10 @@
         "endChar": 30
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "fd5ab60d_5b6f7c35",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
@@ -91,10 +116,34 @@
         "endChar": 30
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a16e6d9c_c77009df",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:56:19Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fd5ab60d_5b6f7c35",
+      "range": {
+        "startLine": 21,
+        "startChar": 15,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "4a2c4ce8_769e032e",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
@@ -114,10 +163,10 @@
         "endChar": 68
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "633d9764_bb307f41",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
@@ -137,10 +186,10 @@
         "endChar": 36
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "6e2f3f77_c11817c2",
         "filename": "jenkins/gerrit-bazel-build-plugin.sh",
@@ -161,10 +210,58 @@
         "endChar": 36
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ecea3cdc_de5cfa97",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:56:19Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "6e2f3f77_c11817c2",
+      "range": {
+        "startLine": 25,
+        "startChar": 20,
+        "endLine": 25,
+        "endChar": 36
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96b3dcfd_8baab841",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:56:19Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4a2c4ce8_769e032e",
+      "range": {
+        "startLine": 25,
+        "startChar": 45,
+        "endLine": 25,
+        "endChar": 68
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "733f193c_3c059502",
         "filename": "jenkins/gerrit-verifier.yaml",
@@ -184,10 +281,10 @@
         "endChar": 96
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "8d4b9bcb_fa90ddfe",
         "filename": "jenkins/gerrit-verifier.yaml",
@@ -208,10 +305,10 @@
         "endChar": 96
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "f82642b9_32da0e2a",
         "filename": "jenkins/gerrit-verifier.yaml",
@@ -232,8 +329,31 @@
         "endChar": 96
       },
       "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c06443e6_241877d6",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:56:19Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f82642b9_32da0e2a",
+      "range": {
+        "startLine": 113,
+        "startChar": 10,
+        "endLine": 116,
+        "endChar": 96
+      },
+      "revId": "0163f53fc411a57aa2937dff5a340decfde7c441",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

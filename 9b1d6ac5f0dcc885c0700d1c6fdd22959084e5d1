@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf862b60_914f6dba",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:56:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "418c2830_9ae70dd7",
+      "range": {
+        "startLine": 22,
+        "startChar": 48,
+        "endLine": 22,
+        "endChar": 51
+      },
+      "revId": "9b1d6ac5f0dcc885c0700d1c6fdd22959084e5d1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ae6c0968_f3656eac",
@@ -37,6 +61,30 @@
       "writtenOn": "2021-01-02T17:00:45Z",
       "side": 1,
       "message": "This is actually unrelated change. Should it be extracted in its own change? Another option would be to remove ReviewDb test mode altogether.",
+      "range": {
+        "startLine": 40,
+        "startChar": 16,
+        "endLine": 40,
+        "endChar": 30
+      },
+      "revId": "9b1d6ac5f0dcc885c0700d1c6fdd22959084e5d1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "301c3508_3c4ce1fa",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:56:19Z",
+      "side": 1,
+      "message": "We can\u0027t remove reviewdb mode because we\u0027re still building Gerrit v2.16",
+      "parentUuid": "ae6c0968_f3656eac",
       "range": {
         "startLine": 40,
         "startChar": 16,
