@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afb3e48c_66c7beb1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:50:16Z",
+      "side": 1,
+      "message": "Looks all good, but because this contains a Groovy pipeline change in the library, we\u0027ll have to merge it to test it E2E.",
+      "revId": "9f0da9ad75bad8d4f812dd0b057d4d4a28e64413",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
