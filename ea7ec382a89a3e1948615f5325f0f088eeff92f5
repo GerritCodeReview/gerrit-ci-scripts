@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "cfadc32f_7e650a26",
         "filename": "/COMMIT_MSG",
@@ -20,10 +21,10 @@
         "endChar": 40
       },
       "revId": "ea7ec382a89a3e1948615f5325f0f088eeff92f5",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "a76629af_1d21f2ce",
         "filename": "/COMMIT_MSG",
@@ -44,10 +45,10 @@
         "endChar": 40
       },
       "revId": "ea7ec382a89a3e1948615f5325f0f088eeff92f5",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": false
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "d1108735_1bf52a36",
         "filename": "jenkins/gerrit-bazel-build.sh",
@@ -61,8 +62,25 @@
       "side": 1,
       "message": "Not needed: just remove the export altogether",
       "revId": "ea7ec382a89a3e1948615f5325f0f088eeff92f5",
-      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
-      "unresolved": true
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6275e1e5_a1e1b41a",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-06T21:56:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1108735_1bf52a36",
+      "revId": "ea7ec382a89a3e1948615f5325f0f088eeff92f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
