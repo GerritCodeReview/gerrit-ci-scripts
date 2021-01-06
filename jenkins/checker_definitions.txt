@@ -1,17 +1,6 @@
 POST /plugins/checks/checkers/ HTTP/1.0
   Content-Type: application/json; charset=UTF-8
   {
-    "uuid": "gerritforge:rbe-a6a0e4682515f3521897c5f950d1394f4619d928",
-    "name": "RBE Build/Tests",
-    "description": "Builds the code base and executes unit/integration tests on RBE",
-    "repository": "gerrit",
-    "query": "branch:master",
-    "blocking": []
-  }
-
-POST /plugins/checks/checkers/ HTTP/1.0
-  Content-Type: application/json; charset=UTF-8
-  {
     "uuid": "gerritforge:notedb-a6a0e4682515f3521897c5f950d1394f4619d928",
     "name": "Build/Tests",
     "description": "Builds the code base and executes unit/integration tests",

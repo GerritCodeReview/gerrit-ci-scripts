@@ -7,14 +7,7 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
-case $TARGET_BRANCH$MODE in
-  masterrbe)
-    TEST_TAG_FILTER="-flaky,-elastic,-git-protocol-v2"
-    BAZEL_OPTS="$BAZEL_RBE_OPTS"
-    ;;
-  masterNoteDb)
-    TEST_TAG_FILTER="-flaky,elastic,git-protocol-v2"
-    ;;
+case $TARGET_BRANCH in
   stable-2.*)
     TEST_TAG_FILTER="-flaky,-elastic"
     ;;
@@ -37,18 +30,13 @@ bazelisk version
 if [[ "$MODE" == *"reviewdb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=OFF"
-  bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
+  bazelisk test $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"notedb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=ON"
   bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
-fi
-
-if [[ "$MODE" == *"rbe"* ]]
-then
-  bazelisk test $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
