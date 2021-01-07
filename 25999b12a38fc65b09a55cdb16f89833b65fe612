@@ -16,6 +16,24 @@
       "message": "@DavidO can you put a Verified +1, as you did manual verification on gerrit-ci-2.gerritforge.com?",
       "revId": "25999b12a38fc65b09a55cdb16f89833b65fe612",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48f99d17_0e0b9946",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-07T18:35:48Z",
+      "side": 1,
+      "message": "Yes, let me also verify that RBE is working on the latest patch set.",
+      "parentUuid": "8754adfa_1c571a45",
+      "revId": "25999b12a38fc65b09a55cdb16f89833b65fe612",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
