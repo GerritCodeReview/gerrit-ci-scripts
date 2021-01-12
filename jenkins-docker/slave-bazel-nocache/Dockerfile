@@ -28,7 +28,7 @@ RUN cd /tmp && \
     git checkout v${BAZELISK_VER} && \
     rm -f .bazelversion && \
     bazel build --stamp --workspace_status_command=`pwd`/stamp.sh --platforms=@io_bazel_rules_go//go/toolchain:linux_amd64 //:bazelisk && \
-    cp bazel-bin/linux_amd64_pure_stripped/bazelisk /usr/bin && \
+    cp bazel-bin/bazelisk_/bazelisk /usr/bin && \
     rm -rf /tmp/bazelisk
 
 USER root
