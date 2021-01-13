@@ -58,7 +58,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-stretch-80.0.3987.149</image>
+            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-buster-80.0.3987.149</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
@@ -105,7 +105,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-stretch-69.0.3497.92</image>
+            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-buster-69.0.3497.92</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
