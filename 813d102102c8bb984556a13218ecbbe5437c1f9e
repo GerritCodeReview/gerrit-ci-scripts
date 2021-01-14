@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d678231_8988e1fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-14T17:31:34Z",
+      "side": 1,
+      "message": "I\u0027ve already used this change to publish the latest images: what do you think?",
+      "revId": "813d102102c8bb984556a13218ecbbe5437c1f9e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
