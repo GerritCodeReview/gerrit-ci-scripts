@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26d572df_7b90089a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-14T10:06:17Z",
+      "side": 1,
+      "message": "LGTM. Working on a fix for this plugin on stable-3.3 branch.",
+      "revId": "e2b41f36e143016e7b18dffac6ba77bfbfd93045",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
