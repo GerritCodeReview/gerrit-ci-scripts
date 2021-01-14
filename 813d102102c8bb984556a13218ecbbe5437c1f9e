@@ -16,6 +16,23 @@
       "message": "I\u0027ve already used this change to publish the latest images: what do you think?",
       "revId": "813d102102c8bb984556a13218ecbbe5437c1f9e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9149189_4ce1ffda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-14T17:43:56Z",
+      "side": 1,
+      "message": "I uploaded a different change but this approach is fine.",
+      "revId": "813d102102c8bb984556a13218ecbbe5437c1f9e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
