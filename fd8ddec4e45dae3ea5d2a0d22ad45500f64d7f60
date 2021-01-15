@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b8a6ccf_9168d44b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-15T10:11:18Z",
+      "side": 1,
+      "message": "There is this known issue with LFS plugin: [1].\n\n[1] https://crbug.com/gerrit/13849",
+      "revId": "fd8ddec4e45dae3ea5d2a0d22ad45500f64d7f60",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
