@@ -1,4 +1,4 @@
-FROM jenkins:latest
+FROM jenkins/jenkins
 
 USER root
 
