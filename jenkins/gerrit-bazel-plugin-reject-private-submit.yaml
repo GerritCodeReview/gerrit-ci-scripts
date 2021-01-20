@@ -1,6 +1,13 @@
 - project:
     name: reject-private-submit
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-3.3
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - stable-3.2
+            - stable-3.1
