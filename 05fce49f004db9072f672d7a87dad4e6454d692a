@@ -16,6 +16,24 @@
       "message": "Depends on [1] to work on master and 3.3.\n\n[1] https://gerrit-review.googlesource.com/c/plugins/reject-private-submit/+/294183",
       "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1665223b_55179798",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1017568
+      },
+      "writtenOn": "2021-01-21T17:50:46Z",
+      "side": 1,
+      "message": "Patch submitted, should be fine now.",
+      "parentUuid": "fecc8f7f_564d4841",
+      "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
