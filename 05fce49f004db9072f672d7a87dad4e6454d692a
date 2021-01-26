@@ -36,6 +36,46 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc96d644_e270e0e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-26T13:55:47Z",
+      "side": 1,
+      "message": "Please do not add CI builds for Gerrit v3.0, which isn\u0027t support and we only host an archive of CI builds but we don\u0027t build new artifacts anymore.",
+      "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3070d0f1_f78132ae",
+        "filename": "jenkins/gerrit-bazel-plugin-reject-private-submit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-26T13:55:47Z",
+      "side": 1,
+      "message": "This branch doesn\u0027t exist: do you mean stable-3.3?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 17
+      },
+      "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a18fabaa_91de49ca",
@@ -52,6 +92,29 @@
       "range": {
         "startLine": 14,
         "startChar": 12,
+        "endLine": 14,
+        "endChar": 17
+      },
+      "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7729abbd_9df0fddc",
+        "filename": "jenkins/gerrit-bazel-plugin-reject-private-submit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-01-26T13:55:47Z",
+      "side": 1,
+      "message": "None of those branches exist: do you mean stable-3.1, stable-3.2?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
         "endLine": 14,
         "endChar": 17
       },
