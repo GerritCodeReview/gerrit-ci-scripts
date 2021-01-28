@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96aa491d_c4b6ae1d",
+        "filename": "jenkins/gerrit-bazel-module-events-broker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-01-28T20:38:27Z",
+      "side": 1,
+      "message": "It doesn\u0027t work, because it\u0027s a module and not a plugin, so that the clone is failing:\n\n  https://gerrit.googlesource.com/a/plugins/events-broker\n  fatal: remote error: Git repository not found\n\nWe would be needed is a new job:\n\n  modul-{name}-bazel-{branch}",
+      "range": {
+        "startLine": 4,
+        "startChar": 8,
+        "endLine": 4,
+        "endChar": 38
+      },
+      "revId": "7fb7cd3a1d9ec21b53a5a9d228c482b183f68c38",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
