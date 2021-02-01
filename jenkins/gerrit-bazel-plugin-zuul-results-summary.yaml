@@ -1,0 +1,9 @@
+- project:
+    name: zuul-results-summary
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - main
+          gerrit-branch:
+            - master
+            - stable-3.3
