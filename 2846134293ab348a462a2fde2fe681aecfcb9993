@@ -16,6 +16,29 @@
       "message": "Doesn\u0027t seem to work: [1].\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-zuul-results-summary-bazel-master-stable-3.3/2/console",
       "revId": "2846134293ab348a462a2fde2fe681aecfcb9993",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed8d3ee2_c195d540",
+        "filename": "jenkins/gerrit-bazel-plugin-zuul-results-summary.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-01T13:28:51Z",
+      "side": 1,
+      "message": "main\n\nThis plugin doesn\u0027t have a master branch but a \u0027main\u0027 branch.",
+      "range": {
+        "startLine": 6,
+        "startChar": 14,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "2846134293ab348a462a2fde2fe681aecfcb9993",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
