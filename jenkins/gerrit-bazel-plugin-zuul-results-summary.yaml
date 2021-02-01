@@ -1,0 +1,37 @@
+- job-template:
+    name: 'plugin-zuul-results-summary-bazel-{branch}-{gerrit-branch}'
+    description: 'Zuul-results-summary plugin {branch} branch build with Bazel'
+    defaults: plugin-template-bazel
+    scm:
+      - git:
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/a/plugins/{name}
+                credentials-id: gerrit.googlesource.com
+            - gerrit:
+                url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
+          branches:
+            - origin/{branch}
+          submodule:
+            recursive: true
+            parent-credentials: true
+          skip-tag: true
+          do-not-fetch-tags: true
+    builders:
+      - set-git-credentials
+      - shell: !include-raw: gerrit-bazel-build-plugin.sh
+    publishers:
+      - archive:
+          artifacts: >
+            bazel-bin/plugins/zuul-results-summary/zuul-results-summary.js,bazel-bin/plugins/zuul-results-summary/zuul-results-summary.html
+
+- project:
+    name: zuul-results-summary
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - main
+          gerrit-branch:
+            - master
+            - stable-3.3
