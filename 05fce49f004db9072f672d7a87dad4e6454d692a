@@ -76,6 +76,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a7ef932_2ccafac5",
+        "filename": "jenkins/gerrit-bazel-plugin-reject-private-submit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1017568
+      },
+      "writtenOn": "2021-02-03T15:14:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3070d0f1_f78132ae",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 17
+      },
+      "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a18fabaa_91de49ca",
@@ -112,6 +136,30 @@
       "writtenOn": "2021-01-26T13:55:47Z",
       "side": 1,
       "message": "None of those branches exist: do you mean stable-3.1, stable-3.2?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 17
+      },
+      "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b06f903a_e77a9b82",
+        "filename": "jenkins/gerrit-bazel-plugin-reject-private-submit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1017568
+      },
+      "writtenOn": "2021-02-03T15:14:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7729abbd_9df0fddc",
       "range": {
         "startLine": 12,
         "startChar": 0,
