@@ -16,6 +16,24 @@
       "message": "Nice, but what was wrong with my change for zuul-results-summary plugin?",
       "revId": "f7fd2f0658ed341e3aa03b96ea817d80190f464d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c20d6dae_10f165dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-04T23:01:49Z",
+      "side": 1,
+      "message": "We already had the ui-plugin-* template, which is used by other frontend plugins. The only missing thing was the ability of doing cross-compile, but everything else was there already.",
+      "parentUuid": "74bc8023_9a7c2e93",
+      "revId": "f7fd2f0658ed341e3aa03b96ea817d80190f464d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
