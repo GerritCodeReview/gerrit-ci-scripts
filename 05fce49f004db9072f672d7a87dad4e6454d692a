@@ -168,6 +168,30 @@
       },
       "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b25048ec_72efae7e",
+        "filename": "jenkins/gerrit-bazel-plugin-reject-private-submit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-05T23:47:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a18fabaa_91de49ca",
+      "range": {
+        "startLine": 14,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 17
+      },
+      "revId": "05fce49f004db9072f672d7a87dad4e6454d692a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
