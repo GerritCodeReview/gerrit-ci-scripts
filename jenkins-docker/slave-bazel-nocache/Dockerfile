@@ -22,12 +22,14 @@ RUN cd /tmp && \
     buildifier --version'
 
 # Install Bazelisk
+# TODO:(davido) Remove --incompatible_restrict_string_escapes=false, when this is fixed:
+# https://github.com/bazelbuild/bazelisk/issues/213
 RUN cd /tmp && \
     git clone https://github.com/bazelbuild/bazelisk.git && \
     cd bazelisk && \
     git checkout v${BAZELISK_VER} && \
     rm -f .bazelversion && \
-    bazel build --stamp --workspace_status_command=`pwd`/stamp.sh --platforms=@io_bazel_rules_go//go/toolchain:linux_amd64 //:bazelisk && \
+    bazel build --config=release --incompatible_restrict_string_escapes=false //:bazelisk && \
     cp bazel-bin/*/bazelisk /usr/bin && \
     rm -rf /tmp/bazelisk
 
