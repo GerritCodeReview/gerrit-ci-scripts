@@ -17,7 +17,7 @@ RUN cd /tmp && \
     cd buildtools && \
     git checkout ${BUILDIFIER_VER} && \
     bazel build --config=release //buildifier && \
-    cp bazel-bin/buildifier/linux_amd64_stripped/buildifier /usr/bin && \
+    cp bazel-bin/buildifier/buildifier_/buildifier /usr/bin && \
     rm -rf /tmp/buildtools && \
     buildifier --version'
 
