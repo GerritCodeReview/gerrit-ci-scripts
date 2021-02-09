@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2785ccbd_b757121a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-09T23:32:59Z",
+      "side": 1,
+      "message": "It looks that the Bazel upgrade broken the Bazelisk build:\nERROR: /root/.cache/bazel/_bazel_root/b288066cd87f615197395c866ba8b5e2/external/build_bazel_rules_nodejs/internal/node/node.bzl:89:45: invalid escape sequence: \\/. You can enable unknown escape sequences by passing the flag --incompatible_restrict_string_escapes\u003dfalse\nERROR: /root/.cache/bazel/_bazel_root/b288066cd87f615197395c866ba8b5e2/external/build_bazel_rules_nodejs/internal/node/node.bzl:89:64: invalid escape sequence: \\.. You can enable unknown escape sequences by passing the flag --incompatible_restrict_string_escapes\u003dfalse\nERROR: error loading package \u0027\u0027: in /root/.cache/bazel/_bazel_root/b288066cd87f615197395c866ba8b5e2/external/build_bazel_rules_nodejs/index.bzl: Extension \u0027internal/node/node.bzl\u0027 has errors\nINFO: Elapsed time: 2.616s\nINFO: 0 processes.\nFAILED: Build did NOT complete successfully (0 packages loaded)\nFAILED: Build did NOT complete successfully (0 packages loaded)\nThe command \u0027/bin/sh -c cd /tmp \u0026\u0026     git clone https://github.com/bazelbuild/bazelisk.git \u0026\u0026     cd bazelisk \u0026\u0026     git checkout v1.7.4 \u0026\u0026     rm -f .bazelversion \u0026\u0026     bazel build --stamp --workspace_status_command\u003d`pwd`/stamp.sh --platforms\u003d@io_bazel_rules_go//go/toolchain:linux_amd64 //:bazelisk \u0026\u0026     cp bazel-bin/*/bazelisk /usr/bin \u0026\u0026     rm -rf /tmp/bazelisk\u0027 returned a non-zero code: 1\nmake: *** [build] Error 1",
+      "revId": "9931307d1d3a0dbe8535d6bd683907c9348fc686",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
