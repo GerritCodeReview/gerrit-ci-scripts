@@ -39,6 +39,30 @@
       },
       "revId": "3075a80ae7394809e712a54ab8bf4d78adcc4afc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "699eb2bd_e4f3a07a",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-02-09T20:18:16Z",
+      "side": 1,
+      "message": "\u003e Unrelated: would also use tabs here, consistently with the surrounding lines.\n\n(Ping.)",
+      "parentUuid": "4d0e70fc_f3121026",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 16
+      },
+      "revId": "3075a80ae7394809e712a54ab8bf4d78adcc4afc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
