@@ -87,6 +87,30 @@
       },
       "revId": "9931307d1d3a0dbe8535d6bd683907c9348fc686",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb2f3236_32bc9119",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-10T23:59:53Z",
+      "side": 1,
+      "message": "Cool, let\u0027s apply the workaround then.",
+      "parentUuid": "5fcf88d4_87a01e80",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "9931307d1d3a0dbe8535d6bd683907c9348fc686",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
