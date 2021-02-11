@@ -12,25 +12,16 @@ RUN apt-get update && \
     bash -c 'bazel version'
 
 # Install Buildifier
-RUN cd /tmp && \
-    bash -c 'git clone https://github.com/bazelbuild/buildtools.git && \
-    cd buildtools && \
-    git checkout ${BUILDIFIER_VER} && \
-    bazel build --config=release //buildifier && \
-    cp bazel-bin/buildifier/buildifier_/buildifier /usr/bin && \
-    rm -rf /tmp/buildtools && \
-    buildifier --version'
+RUN wget -O /tmp/buildifier-${BUILDIFIER_VER}-linux-amd64 https://github.com/bazelbuild/buildtools/releases/download/${BUILDIFIER_VER}/buildifier-linux-amd64 && \
+    chmod chmod a+x /tmp/buildifier-${BUILDIFIER_VER}-linux-amd64 && \
+    cp /tmp/buildifier-${BUILDIFIER_VER}-linux-amd64 /usr/bin/buildifier && \
+    rm -rf /tmp/buildifier-${BUILDIFIER_VER}-linux-amd64 && \
+    buildifier --version
 
 # Install Bazelisk
-# TODO:(davido) Remove --incompatible_restrict_string_escapes=false, when this is fixed:
-# https://github.com/bazelbuild/bazelisk/issues/213
-RUN cd /tmp && \
-    git clone https://github.com/bazelbuild/bazelisk.git && \
-    cd bazelisk && \
-    git checkout v${BAZELISK_VER} && \
-    rm -f .bazelversion && \
-    bazel build --config=release --incompatible_restrict_string_escapes=false //:bazelisk && \
-    cp bazel-bin/*/bazelisk /usr/bin && \
-    rm -rf /tmp/bazelisk
+RUN wget -O /tmp/bazelisk-${BAZELISK_VER}-linux-amd64 https://github.com/bazelbuild/bazelisk/releases/download/v${BAZELISK_VER}/bazelisk-linux-amd64 && \
+    chmod chmod a+x /tmp/bazelisk-${BAZELISK_VER}-linux-amd64 && \
+    cp /tmp/bazelisk-${BAZELISK_VER}-linux-amd64 /usr/bin/bazelisk && \
+    rm -rf /tmp/bazelisk-${BAZELISK_VER}-linux-amd64
 
 USER root
