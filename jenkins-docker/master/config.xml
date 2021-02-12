@@ -62,10 +62,6 @@
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
-            <dnsHosts>
-              <string>8.8.8.8</string>
-              <string>8.8.4.4</string>
-            </dnsHosts>
             <volumes>
               <string>/dev/urandom:/dev/random</string>
             </volumes>
@@ -109,10 +105,6 @@
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
-            <dnsHosts>
-              <string>8.8.8.8</string>
-              <string>8.8.4.4</string>
-            </dnsHosts>
             <volumes>
               <string>/dev/urandom:/dev/random</string>
             </volumes>
@@ -244,10 +236,6 @@
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
-            <dnsHosts>
-              <string>8.8.8.8</string>
-              <string>8.8.4.4</string>
-            </dnsHosts>
             <volumes>
               <string>/dev/urandom:/dev/random</string>
             </volumes>
@@ -291,10 +279,6 @@
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
-            <dnsHosts>
-              <string>8.8.8.8</string>
-              <string>8.8.4.4</string>
-            </dnsHosts>
             <volumes>
               <string>/dev/urandom:/dev/random</string>
             </volumes>
