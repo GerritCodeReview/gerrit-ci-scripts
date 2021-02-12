@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b605fe0_99a03af7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2021-02-12T21:27:40Z",
+      "side": 1,
+      "message": "corresponding change for the server-config plugin:\nhttps://gerrit-review.googlesource.com/c/plugins/server-config/+/296765",
+      "revId": "71d40955229d198997a3d7ea5a30ba37a4f80c40",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
