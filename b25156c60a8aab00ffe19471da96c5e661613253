@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7bcc2fd_9e7d06fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-13T00:13:59Z",
+      "side": 1,
+      "message": "We were initially installing Bazelisk from the binaries, but that implied the need to have a specific version of Go installed (see Change-Id: Ie1a8bb110).\n\nThen Davido proposed to build Bazelisk from source, so that we could just use the Go version that was already in place, without having to worry about different versions.\n\nIs that not a concern anymore?",
+      "revId": "b25156c60a8aab00ffe19471da96c5e661613253",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
