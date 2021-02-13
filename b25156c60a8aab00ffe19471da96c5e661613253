@@ -34,6 +34,24 @@
       "parentUuid": "b7bcc2fd_9e7d06fb",
       "revId": "b25156c60a8aab00ffe19471da96c5e661613253",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd35c565_5635517e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-13T07:11:27Z",
+      "side": 1,
+      "message": "\u003e In this change Ie1a8bb110, from the first version we have built Bazelisk from source[...]\n\nAh, I see, it was done differently in patch set 1 of this change, but there golang was used with get, that will fetch go package: https://golang.org/pkg/cmd/go/internal/get.\n\n  Package get implements the “go get” command.\n\nThe new approach in this change is just to fetch binary distribution form GitHub:\n\n  $ wget https://github.com/bazelbuild/bazelisk/releases/download/v1.7.5/bazelisk-linux-amd64\n\n  $ file ./bazelisk-linux-amd64\n  bazelisk-linux-amd64: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), \n  statically linked, Go BuildID\u003dredacted, stripped\n\n^^^ \"statically linked\". You can see with\n\n  $ strace ./bazelisk-linux-amd64\n\nthat no other libraries are loaded, so we should be fine.",
+      "parentUuid": "a3e8ea01_64cd1a95",
+      "revId": "b25156c60a8aab00ffe19471da96c5e661613253",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
