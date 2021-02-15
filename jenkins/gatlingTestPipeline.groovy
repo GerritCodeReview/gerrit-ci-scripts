@@ -11,22 +11,24 @@ pipeline {
             string(name: 'GERRIT_VERSION', defaultValue:"3.2", description: 'The gerrit version under test')
             string(name: 'GERRIT_PATCH', defaultValue:"3", description: 'The gerrit version patch under test')
 
-            string(name: 'HOSTED_ZONE_NAME', description: 'Name of the hosted zone')
+            string(name: 'HOSTED_ZONE_NAME', defaultValue: "gerritforgeaws.com", description: 'Name of the hosted zone')
             string(name: 'CLUSTER_INSTANCE_TYPE', defaultValue: 'm4.xlarge', description:'The EC2 instance Type used to run the cluster')
 
-            string(name: 'DOCKER_REGISTRY_URI', description: 'URI of the Docker registry')
-            string(name: 'SSL_CERTIFICATE_ARN', description: 'ARN of the wildcard SSL Certificate')
+            string(name: 'DOCKER_REGISTRY_URI', defaultValue: '117385740707.dkr.ecr.$(AWS_REGION).amazonaws.com', description: 'URI of the Docker registry')
+            string(name: 'SSL_CERTIFICATE_ARN', defaultValue: "arn:aws:acm:us-east-1:117385740707:certificate/33e2c235-a4d1-42b7-b866-18d8d744975c", description: 'ARN of the wildcard SSL Certificate')
 
-            string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', description: 'Id of the EBS volume snapshot')
+            string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-01c12c75ead9e9cd4", description: 'Id of the EBS volume snapshot')
 
             string(name: 'METRICS_CLOUDWATCH_NAMESPACE', defaultValue: 'jenkins', description: 'The CloudWatch namespace for Gerrit metrics')
-            string(name: 'SUBDOMAIN', defaultValue: '$(AWS_PREFIX)-master-demo', description: 'Name of the master sub domain')
+            string(name: 'SUBDOMAIN', defaultValue: '$(AWS_PREFIX)-master-demo.gerrit-demo', description: 'Name of the master sub domain')
             string(name: 'GERRIT_KEY_PREFIX', defaultValue: 'gerrit_secret', description: 'Secrets prefix')
 
-            string(name: 'GERRIT_HTTP_URL', description: 'Gerrit GUI URL')
-            string(name: 'GERRIT_SSH_URL', description: 'Gerrit SSH URL')
-            string(name: 'GIT_HTTP_USERNAME', description: 'Username for Git/HTTP testing')
-            string(name: 'GIT_HTTP_PASSWORD', description: 'Password for Git/HTTP testing')
+            string(name: 'GERRIT_HTTP_URL', defaultValue: 'https://jenkins-master-demo.gerrit-demo.gerritforgeaws.com', description: 'Gerrit GUI URL')
+            string(name: 'GERRIT_SSH_URL', defaultValue: 'ssh://gerritadmin@jenkins-master-demo.gerrit-demo.gerritforgeaws.com:29418', description: 'Gerrit SSH URL')
+
+            string(name: 'GIT_HTTP_USERNAME', description: 'Username for Git/HTTP testing, use vault by default')
+            password(name: 'GIT_HTTP_PASSWORD', description: 'Password for Git/HTTP testing, use vault by default')
+
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
             string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
@@ -89,6 +91,7 @@ pipeline {
                         sleep(10)
                         sh "curl --fail -L -I '${GERRIT_HTTP_URL}' 2>/dev/null"
                     }
+                    sleep(5) // Make sure Gerrit is fully loaded for login
                     sh "curl -L -c cookies -i -X POST '${GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip?account_id=1000000'"
                     script {
                         def cookies = readFile(file:"cookies")
@@ -114,39 +117,49 @@ pipeline {
 
             stage('Run Gatling tests') {
                 steps {
-                    script {
-                        writeFile(file:"simulation.env", text: """
-                                GERRIT_HTTP_URL=${GERRIT_HTTP_URL}
-                                GERRIT_SSH_URL=${GERRIT_SSH_URL}
-                                ACCOUNT_COOKIE=${accountCookie}
-                                GIT_HTTP_USERNAME=${GIT_HTTP_USERNAME}
-                                GIT_HTTP_PASSWORD=${GIT_HTTP_PASSWORD}
-                                XSRF_TOKEN=${xsrfToken}
-                                GERRIT_PROJECT=${GERRIT_PROJECT}
-                                GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-                           """)
-                    }
-                    sh "mkdir -p ${WORKSPACE}/results"
-                    // If Jenkins agent uses Docker remote server mounting local directory will mount directory
-                    // from Docker server host not agent host. Gatling reports will not be visible in build workspace.
-                    // Use Docker volume to avoid this situation.
-                    sh "docker volume create gatling-results"
-                    script {
-                        for (simulation in ["GerritGitSimulation", "GerritRestSimulation"]) {
-                            sh """\
-                                docker run --rm --env-file simulation.env -v gatling-results:/opt/gatling/results \
-                                gerritforge/gatling-sbt-gerrit-test -s gerritforge.${simulation}
-                               """
-                        }
-                    }
-                    //Copy data from Docker volume to Jenkins build workspace
-                    sh "docker create -v gatling-results:/data --name gatling-results-container busybox true"
-                    sh "docker cp gatling-results-container:/data/. ${WORKSPACE}/results/"
-                    // Clean up
-                    sh "docker rm gatling-results-container"
-                    sh "docker volume rm gatling-results"
+                    withCredentials([usernamePassword(usernameVariable: "DEFAULT_GIT_HTTP_USERNAME",
+                            passwordVariable: "DEFAULT_GIT_HTTP_PASSWORD",
+                            credentialsId: "gatlingHttp")]) {
+                        script {
 
-                    gatlingArchive()
+                            def gitHttpUsername = "${params.GIT_HTTP_USERNAME}" ?: "${env.DEFAULT_GIT_HTTP_USERNAME}"
+                            def gitHttpPassword = "${params.GIT_HTTP_PASSWORD}" ?: "${env.DEFAULT_GIT_HTTP_PASSWORD}"
+
+                            writeFile(file: "simulation.env", text: """
+                                    GERRIT_HTTP_URL=${GERRIT_HTTP_URL}
+                                    GERRIT_SSH_URL=${GERRIT_SSH_URL}
+                                    ACCOUNT_COOKIE=${accountCookie}
+                                    GIT_HTTP_USERNAME=${gitHttpUsername}
+                                    GIT_HTTP_PASSWORD=${gitHttpPassword}
+                                    XSRF_TOKEN=${xsrfToken}
+                                    GERRIT_PROJECT=${GERRIT_PROJECT}
+                                    NUM_USERS=${NUM_USERS}
+                                    DURATION=${DURATION}
+                                    GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+                               """)
+                        }
+                        sh "mkdir -p ${WORKSPACE}/results"
+                        // If Jenkins agent uses Docker remote server mounting local directory will mount directory
+                        // from Docker server host not agent host. Gatling reports will not be visible in build workspace.
+                        // Use Docker volume to avoid this situation.
+                        sh "docker volume create gatling-results"
+                        script {
+                            for (simulation in ["GerritGitSimulation", "GerritRestSimulation"]) {
+                                sh """\
+                                    docker run --rm --env-file simulation.env -v gatling-results:/opt/gatling/results \
+                                    gerritforge/gatling-sbt-gerrit-test -s gerritforge.${simulation}
+                                   """
+                            }
+                        }
+                        //Copy data from Docker volume to Jenkins build workspace
+                        sh "docker create -v gatling-results:/data --name gatling-results-container busybox true"
+                        sh "docker cp gatling-results-container:/data/. ${WORKSPACE}/results/"
+                        // Clean up
+                        sh "docker rm gatling-results-container"
+                        sh "docker volume rm gatling-results"
+
+                        gatlingArchive()
+                    }
                 }
             }
 
