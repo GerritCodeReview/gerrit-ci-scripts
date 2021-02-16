@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "85253a99_88a7b25a",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T16:50:05Z",
+      "side": 1,
+      "message": "I\u0027m confused as well 😄 we had defaults and we removed them( https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/281536/4..14/vars/gatlingTestPipeline#b4) so I was sure that we will use one of those plugins to provide default params:\nhttps://wiki.jenkins.io/pages/viewpage.action?pageId\u003d44826755\nhttps://plugins.jenkins.io/persistent-parameter/\n\n@luca WDYT?\n\n\u003e Isn\u0027t this job supposed to help the community testing Gerrit releases? What other organizations are we expecting to use it?\nI believe this is just one purpose, another one was to allow anyone to take this job provide params and run gatling tests for gerrit",
+      "parentUuid": "b9d04b1c_b199a79b",
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a5bded01_d75dd9f3",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 3
