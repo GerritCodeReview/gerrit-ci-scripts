@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0ad1f96_a5bc69d1",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T11:42:58Z",
+      "side": 1,
+      "message": "So we decided to bring back defaults? We had some previously but during the initial conversation we decided that defaults should be provided by jenkins and not hardoced: https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/281536/4..14/vars/gatlingTestPipeline#b4",
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5bded01_d75dd9f3",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T11:42:58Z",
+      "side": 1,
+      "message": "LDAP was removed as not needed for that test:\nhttps://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/282172/2/jenkins/gatlingTestPipeline#17",
+      "range": {
+        "startLine": 32,
+        "startChar": 5,
+        "endLine": 35,
+        "endChar": 114
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c03a53c5_c86a3352",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T11:42:58Z",
+      "side": 1,
+      "message": "smtp was removed as not needed to that test:https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/282172/2/jenkins/gatlingTestPipeline#20",
+      "range": {
+        "startLine": 37,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 108
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a235dedb_8825af70",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T11:42:58Z",
+      "side": 1,
+      "message": "LDAP was removed as not needed for that test:\nhttps://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/282172/2/jenkins/gatlingTestPipeline#17",
+      "range": {
+        "startLine": 81,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 107
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39887331_50d36f3c",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T11:42:58Z",
+      "side": 1,
+      "message": "smtp was removed as not needed to that test:https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/282172/2/jenkins/gatlingTestPipeline#20",
+      "range": {
+        "startLine": 87,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 99
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14dc976a_2483bb50",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T11:42:58Z",
+      "side": 1,
+      "message": "same as above: what\u0027s the point of storing these credentials in jenkins. They are strictly related to the Gerrit test installation not to the jenkins environment",
+      "range": {
+        "startLine": 134,
+        "startChar": 18,
+        "endLine": 136,
+        "endChar": 59
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
