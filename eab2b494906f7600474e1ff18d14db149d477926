@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "857ff9f8_695cce7f",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T14:40:47Z",
+      "side": 1,
+      "message": "Yes, that\u0027s why I started adding default in the original change. Then we had a discussion and we agreed that this is more like a jenkins job template to be reused by different organisations so we should not put any defaults. My understanding from this conversation was that we will use some jenkins plugin to use defaults:\nhttps://wiki.jenkins.io/pages/viewpage.action?pageId\u003d44826755\nhttps://plugins.jenkins.io/persistent-parameter/\nThere is also this way to provide defaults:\nhttps://issues.jenkins.io/browse/JENKINS-46542",
+      "parentUuid": "769bfbe5_260449b5",
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a5bded01_d75dd9f3",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 3
@@ -85,6 +103,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cda6d5cf_e8b42cd1",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T14:40:47Z",
+      "side": 1,
+      "message": "Check line 62 we are changing to DEVELOPMENT_BECOME_ANY_ACCOUNT. I agree this should be done as a parameter, but at this point aws-gerrit do not allow to choose auth.type. We are switching to DEVELOPMENT_BECOME_ANY_ACCOUNT because we want to test Gerrit not LDAP which is usually provided by the organisation",
+      "parentUuid": "cf4e4852_963b56da",
+      "range": {
+        "startLine": 32,
+        "startChar": 5,
+        "endLine": 35,
+        "endChar": 114
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c03a53c5_c86a3352",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 3
@@ -120,6 +162,30 @@
       "side": 1,
       "message": "See my reply above, SMTP is also a required parameter[1] and I think it would be better to test Gerrit in an environment where its dependencies are working, rather than relying on the fact that (currently) Gerrit doesn\u0027t break when they aren\u0027t.\n\n[1]https://gerrit.googlesource.com/aws-gerrit/+/refs/heads/master/Configuration.md#smtp",
       "parentUuid": "c03a53c5_c86a3352",
+      "range": {
+        "startLine": 37,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 108
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb545dee_d4804c50",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T14:40:47Z",
+      "side": 1,
+      "message": "Check line 63, we are disabling smtp. We decided to do that during the discussion in the original change. We do not want to produce massive amount of emails. Sam as above, we can change aws-gerrit to allow to disable SMTP via parameter and then we can have those settings, but I believe it should be a follow up change",
+      "parentUuid": "97628f0f_e75f8298",
       "range": {
         "startLine": 37,
         "startChar": 2,
