@@ -22,6 +22,30 @@
       },
       "revId": "71d40955229d198997a3d7ea5a30ba37a4f80c40",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c56fd0f_03192a50",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T13:42:59Z",
+      "side": 0,
+      "message": "\u003e why we are providing those as a jenkins secrets? User name and password is baked in to the docker image and it\u0027s used just for tests. If someone changes credentials in the docker image he has to reconfigure jenkins as well\n\n\nUsename and password are not baked into the docker image, but in the snapshot we provide, however yes, I think it\u0027s a good point.\n\nThe thing is that if we want this job to run without human intervention (say once a day, for example) we need to provide sensible defaults so we need a password provider, too.\n\nOne thing we could do is to allow to override the default credentials from a *password* parameter.\n\nBut I suggest to do this in a follow up change, this issue was more to stop the job from failing.\n\nWDYT?",
+      "parentUuid": "38a208df_86f520f7",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 91
+      },
+      "revId": "71d40955229d198997a3d7ea5a30ba37a4f80c40",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
