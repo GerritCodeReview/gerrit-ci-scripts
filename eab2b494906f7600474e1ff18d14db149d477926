@@ -92,6 +92,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a6969e87_be5eb28e",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T16:59:34Z",
+      "side": 1,
+      "message": "\u003e I\u0027m confused as well 😄 we had defaults and we removed them( https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/281536/4..14/vars/gatlingTestPipeline#b4) so I was sure that we will use one of those plugins to provide default params:\n\u003e https://wiki.jenkins.io/pages/viewpage.action?pageId\u003d44826755\n\u003e https://plugins.jenkins.io/persistent-parameter/\n\u003e \n\u003e @luca WDYT?\n\u003e \n\u003e \u003e Isn\u0027t this job supposed to help the community testing Gerrit releases? What other organizations are we expecting to use it?\n\u003e I believe this is just one purpose, another one was to allow anyone to take this job provide params and run gatling tests for gerrit\n\nThis can still be done: parameters can be changed, defaults are just to allow an \"automatic\" execution of the job. The limitation is that it will need to be in *one* cloud environment (Gerritforge, as requested by 13829).\n\nThe definition of the AWS credentials to be used is not done as part of this change and I believe the ability of running this job on an arbitrary AWS account, if needed, is out of scope.",
+      "parentUuid": "85253a99_88a7b25a",
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a5bded01_d75dd9f3",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 3
