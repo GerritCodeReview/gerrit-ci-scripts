@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38a208df_86f520f7",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-02-16T11:42:58Z",
+      "side": 0,
+      "message": "why we are providing those as a jenkins secrets? User name and password is baked in to the docker image and it\u0027s used just for tests. If someone changes credentials in the docker image he has to reconfigure jenkins as well",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 91
+      },
+      "revId": "71d40955229d198997a3d7ea5a30ba37a4f80c40",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
