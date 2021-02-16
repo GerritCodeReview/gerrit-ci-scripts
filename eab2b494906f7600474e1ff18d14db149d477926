@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "769bfbe5_260449b5",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T13:42:59Z",
+      "side": 1,
+      "message": "Yes, I think this is the whole point of this CR, unless we provide defaults, the job would fail, when run automatically.\n\nIn the monorail issue[1], we decided to use the gerritforge AWS accounts.\n\n[1]https://bugs.chromium.org/p/gerrit/issues/detail?id\u003d13829#c1",
+      "parentUuid": "d0ad1f96_a5bc69d1",
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a5bded01_d75dd9f3",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 3
@@ -31,6 +49,30 @@
       "writtenOn": "2021-02-16T11:42:58Z",
       "side": 1,
       "message": "LDAP was removed as not needed for that test:\nhttps://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/282172/2/jenkins/gatlingTestPipeline#17",
+      "range": {
+        "startLine": 32,
+        "startChar": 5,
+        "endLine": 35,
+        "endChar": 114
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf4e4852_963b56da",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T13:42:59Z",
+      "side": 1,
+      "message": "Looking at aws-gerrit docs, all the aws recipes require LDAP settings[1]\n\nIf we weren\u0027t setting these credentials, aws-gerrit would default to \"mycompany.com\".\n\nIt\u0027s true, it would work, but it would cause to test Gerrit in an environment where LDAP is not reachable, which is not a common case and it defies the purpose of E2E testing.\n\n[1]https://gerrit.googlesource.com/aws-gerrit/+/refs/heads/master/Configuration.md#ldap",
+      "parentUuid": "a5bded01_d75dd9f3",
       "range": {
         "startLine": 32,
         "startChar": 5,
@@ -66,6 +108,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "97628f0f_e75f8298",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T13:42:59Z",
+      "side": 1,
+      "message": "See my reply above, SMTP is also a required parameter[1] and I think it would be better to test Gerrit in an environment where its dependencies are working, rather than relying on the fact that (currently) Gerrit doesn\u0027t break when they aren\u0027t.\n\n[1]https://gerrit.googlesource.com/aws-gerrit/+/refs/heads/master/Configuration.md#smtp",
+      "parentUuid": "c03a53c5_c86a3352",
+      "range": {
+        "startLine": 37,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 108
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a235dedb_8825af70",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 3
@@ -77,6 +143,30 @@
       "writtenOn": "2021-02-16T11:42:58Z",
       "side": 1,
       "message": "LDAP was removed as not needed for that test:\nhttps://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/282172/2/jenkins/gatlingTestPipeline#17",
+      "range": {
+        "startLine": 81,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 107
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04d37a61_51b29049",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T13:42:59Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "a235dedb_8825af70",
       "range": {
         "startLine": 81,
         "startChar": 0,
@@ -112,6 +202,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c2775747_83893c3a",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T13:42:59Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "39887331_50d36f3c",
+      "range": {
+        "startLine": 87,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 99
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "14dc976a_2483bb50",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 3
@@ -123,6 +237,30 @@
       "writtenOn": "2021-02-16T11:42:58Z",
       "side": 1,
       "message": "same as above: what\u0027s the point of storing these credentials in jenkins. They are strictly related to the Gerrit test installation not to the jenkins environment",
+      "range": {
+        "startLine": 134,
+        "startChar": 18,
+        "endLine": 136,
+        "endChar": 59
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdf13718_f6754008",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T13:42:59Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "14dc976a_2483bb50",
       "range": {
         "startLine": 134,
         "startChar": 18,
