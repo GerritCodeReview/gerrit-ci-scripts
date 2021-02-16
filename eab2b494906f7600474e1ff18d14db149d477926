@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b9d04b1c_b199a79b",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T16:33:18Z",
+      "side": 1,
+      "message": "OK, I am a bit confused, so forgive if I have few questions 😊\n\n\u003e Then we had a discussion and we agreed that this is more like a jenkins job template to be reused by different organisations\n\nIsn\u0027t this job supposed to help the community testing Gerrit releases? What other organizations are we expecting to use it?\n\nThe AWS credentials that we are using (via vault) are tied to gerritforge AWS account.\n\n\u003e we should not put any defaults.\n\nThe issue ticket states:\n\n```\nGatling Gerrit automatic tests are failing on the CI\nWhat is the expected output? The job should be green and working.\n```\n\nWhat\u0027s an alternative way to allow this job to automatically pass, without configuring defaults params?\n\nDid I misunderstand the task?",
+      "parentUuid": "857ff9f8_695cce7f",
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a5bded01_d75dd9f3",
         "filename": "jenkins/gatlingTestPipeline.groovy",
         "patchSetId": 3
@@ -139,6 +157,30 @@
       "side": 1,
       "message": "I understand, I didn\u0027t notice that line.",
       "parentUuid": "cda6d5cf_e8b42cd1",
+      "range": {
+        "startLine": 32,
+        "startChar": 5,
+        "endLine": 35,
+        "endChar": 114
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17fc4ae9_1aa6d0a2",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T16:33:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06691b4d_bfbc9d14",
       "range": {
         "startLine": 32,
         "startChar": 5,
@@ -234,6 +276,30 @@
       "side": 1,
       "message": "I understand, I didn\u0027t notice that line.",
       "parentUuid": "eb545dee_d4804c50",
+      "range": {
+        "startLine": 37,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 108
+      },
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f408999d_d50a42fb",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-16T16:33:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "83346e16_5953738f",
       "range": {
         "startLine": 37,
         "startChar": 2,
