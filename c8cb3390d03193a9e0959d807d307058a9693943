@@ -16,6 +16,24 @@
       "message": "Alternative approach:\n\nWe are about to switch to RBE, where the build+tests takes seconds: max 300 seconds.\nSuggestion: we move PolyGerrit tests also to RBE, and always run all tests: backend + frontend without any optimizations.",
       "revId": "c8cb3390d03193a9e0959d807d307058a9693943",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df51e78f_e2a98ef2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-17T09:46:56Z",
+      "side": 1,
+      "message": "\u003e Alternative approach:\n\u003e \n\u003e We are about to switch to RBE, where the build+tests takes seconds: max 300 seconds.\n\nSure, but then we are running a verification that *may fail* on code that hasn\u0027t changed and that would impact the validation of a polygerrit-only change, which would be unfair to the author of the change.",
+      "parentUuid": "5563325a_7baaba3b",
+      "revId": "c8cb3390d03193a9e0959d807d307058a9693943",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
