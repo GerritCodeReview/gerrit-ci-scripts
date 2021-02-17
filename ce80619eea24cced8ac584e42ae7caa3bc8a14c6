@@ -34,6 +34,24 @@
       "parentUuid": "457d6cb8_975fffb9",
       "revId": "ce80619eea24cced8ac584e42ae7caa3bc8a14c6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10b3425d_526f5865",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-17T08:53:19Z",
+      "side": 1,
+      "message": "Yes. Let me upload the merges.",
+      "parentUuid": "79892a09_0565b8ca",
+      "revId": "ce80619eea24cced8ac584e42ae7caa3bc8a14c6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
