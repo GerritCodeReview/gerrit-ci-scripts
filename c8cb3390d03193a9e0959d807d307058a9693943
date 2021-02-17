@@ -52,6 +52,24 @@
       "parentUuid": "df51e78f_e2a98ef2",
       "revId": "c8cb3390d03193a9e0959d807d307058a9693943",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46fe3de8_507de404",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-17T10:05:53Z",
+      "side": 1,
+      "message": "\u003e Bazel would solve that for us too: on RBE everything is cached. So, running a backend build and tests would just be a no-op. \n\nYeah, it *SHOULD* but it isn\u0027t really. We already have server-side cache enabled and still cache is not hit as much as it should.\n\nI believe the environment variables are invalidating the cache and we use them.\n\n\u003e We should make checks plugins and Jenkins groovy script unnecessary over engineered.\n\nIn theory, we should get rid of Jenkins and get rid of Checks altogether and have just Bazel running the build and expose his results. In reality, we\u0027re not there yet.",
+      "parentUuid": "a15f192d_d13d7c14",
+      "revId": "c8cb3390d03193a9e0959d807d307058a9693943",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
