@@ -89,14 +89,17 @@ class GerritCheck {
     Build build
     String consoleUrl
 
-    GerritCheck(name, build) {
+    GerritCheck(name, build = null) {
         this.uuid = "gerritforge:" + name.replaceAll("(bazel/)", "") +
             Globals.gerritRepositoryNameSha1Suffix
         this.build = build
-        this.consoleUrl = "${build.url}console"
+        this.consoleUrl = build == null ? "" : "${build.url}console"
     }
 
     def getCheckResultFromBuild() {
+        if (build == null) {
+            return "NOT_RELEVANT"
+        }
         if (!build.getResult()) {
             return "RUNNING"
         }
@@ -153,6 +156,7 @@ def collectBuildModes() {
         if(changedFiles.size() == polygerritFiles.size() && bazelFiles.isEmpty()) {
             println "Only PolyGerrit UI changes detected, skipping other test modes..."
             Builds.modes = ["polygerrit"]
+            postCheck(new GerritCheck("notedb"))
         } else {
             println "PolyGerrit UI changes detected, adding 'polygerrit' validation..."
             Builds.modes += "polygerrit"
