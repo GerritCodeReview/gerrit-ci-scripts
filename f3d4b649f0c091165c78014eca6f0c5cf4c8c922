@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1102a25_2b19779f",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-17T08:45:09Z",
+      "side": 1,
+      "message": "needs a \u0027\u003dnull\u0027 default value.",
+      "range": {
+        "startLine": 92,
+        "startChar": 22,
+        "endLine": 92,
+        "endChar": 27
+      },
+      "revId": "f3d4b649f0c091165c78014eca6f0c5cf4c8c922",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
