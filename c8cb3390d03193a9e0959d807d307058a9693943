@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5563325a_7baaba3b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-17T08:54:49Z",
+      "side": 1,
+      "message": "Alternative approach:\n\nWe are about to switch to RBE, where the build+tests takes seconds: max 300 seconds.\nSuggestion: we move PolyGerrit tests also to RBE, and always run all tests: backend + frontend without any optimizations.",
+      "revId": "c8cb3390d03193a9e0959d807d307058a9693943",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
