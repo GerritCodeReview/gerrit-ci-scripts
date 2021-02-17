@@ -34,6 +34,24 @@
       "parentUuid": "5563325a_7baaba3b",
       "revId": "c8cb3390d03193a9e0959d807d307058a9693943",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a15f192d_d13d7c14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-17T09:58:09Z",
+      "side": 1,
+      "message": "Bazel would solve that for us too: on RBE everything is cached. So, running a backend build and tests would just be a no-op. We should make checks plugins and Jenkins groovy script unnecessary over engineered. If build takes 1.5 hours you have to work hard to avoid running it. If it takes seconds and is heavily caches, your shouldn\u0027t care, so that all three checks:\n\n* frontend\n* backend\n* code style\n\nare run on each and ervey change, not matter what was changed.",
+      "parentUuid": "df51e78f_e2a98ef2",
+      "revId": "c8cb3390d03193a9e0959d807d307058a9693943",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
