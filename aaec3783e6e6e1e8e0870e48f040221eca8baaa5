@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfa3c1b0_eb73afcc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-17T13:38:39Z",
+      "side": 1,
+      "message": "Verified on [1]\n\n\n[1]https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/195/",
+      "revId": "aaec3783e6e6e1e8e0870e48f040221eca8baaa5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
