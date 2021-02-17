@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45ace796_19e8b7c9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-17T13:28:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "99c046ac_1b7278a5",
+      "range": {
+        "startLine": 12,
+        "startChar": 23,
+        "endLine": 12,
+        "endChar": 29
+      },
+      "revId": "e4a8a2a489e0e05aad78efbd72dbb8452d740075",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a8649e9b_f6aa4426",
@@ -37,6 +61,30 @@
       "writtenOn": "2021-02-17T00:12:46Z",
       "side": 1,
       "message": "That\u0027s a bit arbitrary: can we instead call the healthcheck API for that and loop if it isn\u0027t ready?",
+      "range": {
+        "startLine": 94,
+        "startChar": 20,
+        "endLine": 94,
+        "endChar": 74
+      },
+      "revId": "e4a8a2a489e0e05aad78efbd72dbb8452d740075",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca6e37e8_879c58e5",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-02-17T13:28:42Z",
+      "side": 1,
+      "message": "Good point! I am now querying directly the healthcheck enpoint at L92, so that we are considering the endpoint ready when the healthcheck says so.",
+      "parentUuid": "a8649e9b_f6aa4426",
       "range": {
         "startLine": 94,
         "startChar": 20,
