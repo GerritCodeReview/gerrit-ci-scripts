@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5945b8b_c03b8968",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-17T21:45:57Z",
+      "side": 1,
+      "message": "Removed Davido\u0027s -2 because the change mentioned as a reason has now been merged and therefore this is unblocked and ready for being merged.",
+      "revId": "1004735639852d6950ce7f104d1877ad9c590a09",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
