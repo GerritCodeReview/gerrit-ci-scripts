@@ -108,6 +108,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4af9792_50db2a91",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-17T00:12:46Z",
+      "side": 1,
+      "message": "The comment was more for using environment variables, set in the docker-compose.yaml externally, rather than hardcoded defaults.\nIt could be still addressed in a follow-up change though.",
+      "parentUuid": "a6969e87_be5eb28e",
+      "revId": "eab2b494906f7600474e1ff18d14db149d477926",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a5bded01_d75dd9f3",
