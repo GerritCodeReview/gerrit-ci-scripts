@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3d3164b_71c7b24c",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-18T13:40:15Z",
+      "side": 1,
+      "message": "This should also disable the `rbe` execution as NOT_RELEVANT.",
+      "revId": "bc40cdc67fccee096d1c51f0567405f6beab936e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
