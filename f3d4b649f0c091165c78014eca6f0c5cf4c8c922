@@ -39,6 +39,30 @@
       },
       "revId": "f3d4b649f0c091165c78014eca6f0c5cf4c8c922",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d80d977e_921fa0dd",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-18T13:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c1102a25_2b19779f",
+      "range": {
+        "startLine": 92,
+        "startChar": 22,
+        "endLine": 92,
+        "endChar": 27
+      },
+      "revId": "f3d4b649f0c091165c78014eca6f0c5cf4c8c922",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
