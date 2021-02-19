@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "4cb61f9e_3bde6953",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-19T17:03:45Z",
+      "side": 1,
+      "message": "We don\u0027t have an easy way to define a query for identifying backend change, like we do for PolyGerrit checker:\n\n  (directory:\"polygerrit-ui\" OR file:WORKSPACE)\n  AND (branch:stable-2.16 OR branch:stable-3.1\n  OR branch:stable-3.2 OR branch:stable-3.3 OR branch:master)\n\nIf we had backend main directory, we could say:\n\n  (directory:\"backend\" OR file:WORKSPACE)\n\nthat way we would also avoid having alien checker added to PolyGerrit only changes.\n\nRight now we could still do this for Build/Tests checkers:\n\n  (directory:antlr3 OR\n  directory:java OR\n  directory:javatests OR\n  directory:lib OR\n  directory:modules OR\n  directory:plugins OR\n  directory:prolog OR\n  directory:prologtests OR\n  directory:proto OR\n  directory:tools OR\n  file:WORKSPACE OR\n  file:BUILD\n  AND (branch:stable-2.16 OR branch:stable-3.1\n  OR branch:stable-3.2 OR branch:stable-3.3 OR branch:master)\n\nIf I change only one single TypeScript file:\n\n  polygerrit-ui/app/elements/change/gr-change-view/gr-change-view.ts\n\nthen Build/Tests checker wouldn\u0027t be reported in the first place.",
+      "revId": "32fc8cd74de9fb6e22a0e7876b183c0aa1229954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "3d26fc00_9125d961",
