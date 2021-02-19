@@ -33,6 +33,24 @@
       "message": "Thanks for the fix!",
       "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35565838_308084bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-19T07:42:43Z",
+      "side": 1,
+      "message": "I also noticed the problem, that even after split into RBE and non-RBE build, the non-RBE build still takes more than 1 hours, but I haven\u0027t had tie to investigate the issue.",
+      "parentUuid": "5d9d864e_9de0a120",
+      "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
