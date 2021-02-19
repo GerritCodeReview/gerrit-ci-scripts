@@ -28,7 +28,8 @@ export BAZEL_OPTS="$BAZEL_OPTS \
                  --test_verbose_timeout_warnings --build_tests_only \
                  --test_timeout 3600 \
                  --test_tag_filters=$TEST_TAG_FILTER \
-                 --test_env DOCKER_HOST=$DOCKER_HOST"
+                 --test_env DOCKER_HOST=$DOCKER_HOST \
+                 --test_env=HOME"
 export WCT_HEADLESS_MODE=1
 
 java -fullversion
