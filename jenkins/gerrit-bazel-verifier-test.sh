@@ -12,7 +12,7 @@ case $TARGET_BRANCH$MODE in
     TEST_TAG_FILTER="-flaky,-elastic,-git-protocol-v2"
     BAZEL_OPTS="--config=remote --remote_instance_name=projects/api-project-164060093628/instances/default_instance"
     ;;
-  masterNoteDb)
+  masternotedb)
     TEST_TAG_FILTER="-flaky,elastic,git-protocol-v2"
     ;;
   stable-2.*)
