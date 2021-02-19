@@ -16,6 +16,23 @@
       "message": "I found out that we were re-running all RBE tests also on the standard workers 😭",
       "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d9d864e_9de0a120",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-19T07:00:24Z",
+      "side": 1,
+      "message": "Thanks for the fix!",
+      "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
