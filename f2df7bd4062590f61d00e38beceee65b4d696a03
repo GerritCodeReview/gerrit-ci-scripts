@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b71b7235_3e2321de",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-19T15:40:05Z",
+      "side": 1,
+      "message": "Surprising, but true. I\u0027ve tested that E2E with Davido.",
+      "revId": "f2df7bd4062590f61d00e38beceee65b4d696a03",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
