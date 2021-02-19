@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cefcdbfc_6253a8bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-19T16:32:17Z",
+      "side": 1,
+      "message": "See my change in gerrit and the comments on that option in change 297355.\n",
+      "revId": "49be9af025291e202c672a4f311438054b84befb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
