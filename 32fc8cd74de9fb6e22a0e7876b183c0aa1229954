@@ -36,6 +36,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "91cede78_316a590d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-20T09:21:04Z",
+      "side": 1,
+      "message": "\u003e Yes, we could make the expression a lot more complicated, but it would then be subject to many more modifications moving forward.\n\n\nWhile the suggested query for detecting backend changes is more involved as for frontend changes, it\u0027s still manageable.\n \n\u003e Also, it would become very fragile as we add files/directories to the source tree.\n\nHave you actually examined my query? It\u0027s only referencing root directories. And we have not added any new directories/files in the gerrit root directory for years. Last time I changed the root directory structure was my major re-work ob Bazel package hierarchy in this \"flatten-directory-structure\" series: [1], that was done in October 2017. Nothing changed since then so that the above query would be static and wouldn\u0027t change for years (we would rather replace checks plugin with something completely  different before we apply yet another round of major overhaul of root directory structure in gerrit).\n\n\u003e We either accept this limitation [...]\n\nBut we do use the checker query approach already today for detecting PolyGerrit changes only, see my previous comment: \"(directory:\"polygerrit-ui\" OR file:WORKSPACE)\", and that\u0027s why you don\u0027t see \"PolyGerrit Build/Test\" checker reported on non frontend changes. So why re-invent the new approach, complicate the CI toolchain that is already quite complex, and not just use the checker query?\n\nAlso the major drawback in your suggestions: we would still preserve backend checker on frontend changes, with different status. With checker query based query approach, the checkers are not reported in the first place: in the same manner as for backend only changes.\n\nShould I apply the above query and upload test PolyGerrit only change to verify my suggested approach?\n\n[1] https://gerrit-review.googlesource.com/q/topic:flatten-directory-structure",
+      "parentUuid": "269c027b_4bfef3d4",
+      "revId": "32fc8cd74de9fb6e22a0e7876b183c0aa1229954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "3d26fc00_9125d961",
