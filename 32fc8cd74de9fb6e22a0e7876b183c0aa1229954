@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "269c027b_4bfef3d4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-20T02:21:45Z",
+      "side": 1,
+      "message": "Yes, we could make the expression a lot more complicated, but it would then be subject to many more modifications moving forward.\n\nAlso, it would become very fragile as we add files/directories to the source tree.\n\nWe either accept this limitation OR just get rid of the Checkers auto-assignment logic and DO not assign any query string and leave to the pipeline to add the check as needed.\n\nAlso, the NOT_RELEVANT could be a workable workaround.\n\nAt the moment, it shows it as \"pending build\" which is very misleading.",
+      "parentUuid": "4cb61f9e_3bde6953",
+      "revId": "32fc8cd74de9fb6e22a0e7876b183c0aa1229954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "3d26fc00_9125d961",
