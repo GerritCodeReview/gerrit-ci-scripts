@@ -68,6 +68,24 @@
       "message": "curious. What is the value of $HOME for these invocations?",
       "revId": "49be9af025291e202c672a4f311438054b84befb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28456a5e_0c8412f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-22T10:24:12Z",
+      "side": 1,
+      "message": "\u003e What is the value of $HOME for these invocations?\n\nAsk Bazel team why they do it and got 100% cache hits, for all projects, Bazel,  Gerrit, etc, e.g.: [1]?\n\n  bazel build --show_progress_rate_limit\u003d5 --curses\u003dyes \\\n  --color\u003dyes --terminal_columns\u003d143 --show_timestamps \\\n  --verbose_failures --jobs\u003d75 --announce_rc \\\n  --experimental_repository_cache_hardlinks --disk_cache\u003d \\\n  --sandbox_tmpfs_path\u003d/tmp --config\u003dubuntu1604_java8 \\\n  --remote_executor\u003dgrpcs://remotebuildexecution.googleapis.com \\\n  --jobs\u003d200 --experimental_remote_download_outputs\u003dminimal \\\n  --experimental_inmemory_jdeps_files --experimental_inmemory_dotd_files \\\n  --experimental_generate_json_trace_profile --experimental_profile_cpu_usage \\\n  --experimental_json_trace_compression \\\n  --profile\u003d/tmp/tmpqsoh7dzz/build.profile.gz \\\n  --test_env\u003dHOME \\\n  -- //src:bazel //src:bazel_jdk_minimal\n\n[1] https://buildkite.com/bazel/bazel-bazel/builds/15487#0121ac34-8629-4cda-950f-bedfed5e87aa",
+      "parentUuid": "8891c283_c28ed907",
+      "revId": "49be9af025291e202c672a4f311438054b84befb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
