@@ -86,6 +86,24 @@
       "parentUuid": "8891c283_c28ed907",
       "revId": "49be9af025291e202c672a4f311438054b84befb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5e4c7d6_b352062a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-22T10:36:57Z",
+      "side": 1,
+      "message": "Of course, instead of just guessing and sporadic copy/paste of some options from Bazel Buildkite enveironment, we should do a systematic approach to debug remote cache misses on RBE, as described in: [1].\n\nUse Case:\n\n1. Login per SSH to GCP instance, e.g.: gerrit-ci-workers-61\n2. Clone gerrit recursively\n3. Checkout commit foo\n4. Run all tests on RBE\n5. Disconnnect\n6. Login per SSH to GCP instance, e.g.: gerrit-ci-workers-62\n7. Clone gerrit recursively\n8. Checkout commit foo\n9. Run all tests on RBE\n\nExpected: 100% remote cache hits. Compare the execution logs to troubleshoot remote cache misses.\n\n[1] https://docs.bazel.build/versions/master/remote-execution-caching-debug.html",
+      "parentUuid": "28456a5e_0c8412f6",
+      "revId": "49be9af025291e202c672a4f311438054b84befb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
