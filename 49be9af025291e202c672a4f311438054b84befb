@@ -104,6 +104,24 @@
       "parentUuid": "28456a5e_0c8412f6",
       "revId": "49be9af025291e202c672a4f311438054b84befb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9146a991_9459480b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2021-02-22T10:39:03Z",
+      "side": 1,
+      "message": "you\u0027re not answering the question, though. what happens if you add\n\n  echo $HOME \n\nto the script? What does it print?",
+      "parentUuid": "d5e4c7d6_b352062a",
+      "revId": "49be9af025291e202c672a4f311438054b84befb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
