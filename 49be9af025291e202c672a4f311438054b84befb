@@ -140,6 +140,24 @@
       "parentUuid": "9146a991_9459480b",
       "revId": "49be9af025291e202c672a4f311438054b84befb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6918b57_94b2903e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-22T16:20:46Z",
+      "side": 1,
+      "message": "I tried to reproduce the problem on GCP and was not able to reproduce it, even without --test_env\u003dHOME.\n\nI was building Gerrit@HEAD on gerrit-ci-workers-61 (HOME\u003d/home/jenkins)\n\n  $ $ bazelisk test --execution_log_binary_file\u003d/tmp/exec1.log --config\u003dremote \\\n  --remote_instance_name\u003d\u003cPROJECT_NAME\u003e --test_output errors \\\n  --flaky_test_attempts 3 --build_tests_only --test_timeout 3600 \\\n  javatests/com/google/gerrit/acceptance/server/change:server_change\n\nINFO: Elapsed time: 432.440s, Critical Path: 394.98s\nINFO: 899 processes: 737 remote cache hit, 142 internal, 20 remote.\nINFO: Build completed successfully, 899 total actions\n//javatests/com/google/gerrit/acceptance/server/change:server_change     PASSED in 332.2s\n\nINFO: Build completed successfully, 899 total actions\n\n\nAfter that I was running the same command on gerrit-ci-workers-62. For the reference I am doing the following:\n\n  [david_ostrovsky@gerrit-ci-workers-62 ~]$ pwd\n  /home/david_ostrovsky\n\n  sudo docker run --privileged -it --entrypoint\u003dbash gerritforge/jenkins-slave-bazel-docker:debian-buster-69.0.3497.92\n\n  root@cfce504d7e30:/# su - jenkins\n\n  jenkins@cfce504d7e30:~$ git clone --recursive https://gerrit-review.googlesource.com/gerrit\n\n  enkins@cfce504d7e30:~$ cd gerrit/\njenkins@cfce504d7e30:~/gerrit$ echo $HOME\n  /home/jenkins\n\n  jenkins@cfce504d7e30:~/gerrit$ git show\n  commit d22d4a8b489debf3f28a5ede993e4a5716d0398d (HEAD -\u003e master, origin/master, origin/HEAD)\n\n  $ bazelisk test --report_ca \\\n  --execution_log_binary_file\u003d/tmp/exec2.log --config\u003dremote \\\n  --remote_instance_name\u003d\u003cPROJECT_NAME\u003e --test_output errors \\\n  --flaky_test_attempts 3 --build_tests_only --test_timeout 3600 \\\n  javatests/com/google/gerrit/acceptance/server/change:server_change\n\narget //javatests/com/google/gerrit/acceptance/server/change:server_change up-to-date:\n  bazel-bin/javatests/com/google/gerrit/acceptance/server/change/server_change.jar\n  bazel-bin/javatests/com/google/gerrit/acceptance/server/change/server_change\nINFO: Elapsed time: 49.509s, Critical Path: 14.84s\nINFO: 899 processes: 756 remote cache hit, 142 internal, 1 remote.\nINFO: Build completed successfully, 899 total actions\n//javatests/com/google/gerrit/acceptance/server/change:server_change (cached) PASSED in 0.3s\n\nExecuted 0 out of 1 test: 1 test passes.\n\nAs can be seen, it just works, even without any addition --test_env\u003dHOME, we should investigate cache misses further to actually understand what is going on.",
+      "parentUuid": "3750d8d7_f6b04e57",
+      "revId": "49be9af025291e202c672a4f311438054b84befb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
