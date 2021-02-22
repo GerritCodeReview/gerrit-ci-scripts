@@ -51,6 +51,29 @@
       "parentUuid": "5d9d864e_9de0a120",
       "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "49ebba6f_68946be8",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1024147
+      },
+      "writtenOn": "2021-02-22T12:12:00Z",
+      "side": 1,
+      "message": "could you make this more specific? Then the *) case is just for typos and can generate an error message",
+      "range": {
+        "startLine": 21,
+        "startChar": 3,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
