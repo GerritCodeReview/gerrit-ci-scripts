@@ -98,6 +98,30 @@
       },
       "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afcc6c79_6fefd49a",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-23T06:59:34Z",
+      "side": 1,
+      "message": "I activated RBE on stable branches in change 297613. Done.",
+      "parentUuid": "ec941e74_df61e940",
+      "range": {
+        "startLine": 21,
+        "startChar": 3,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
