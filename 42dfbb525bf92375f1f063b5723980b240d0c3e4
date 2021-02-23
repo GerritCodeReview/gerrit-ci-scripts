@@ -74,6 +74,30 @@
       },
       "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec941e74_df61e940",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-23T06:23:04Z",
+      "side": 1,
+      "message": "\u003e could you make this more specific?\n\nThe code is convoluted, and it would have to be adapted when we cut off stable-3.4 branch.\n\n\u003e Then the *) case is just for typos and can generate an error message\n\nThat case is not the just for typos, but a valid branch:\n\n* stable-3.1\n* stable-3.2\n* stable-3.3\n\nTo understand why, you would have to consult RBE Build/Test checker definition. For the beginning we decided to only activate RBE on master: branch:master. Later we would like to activate RBE also on stable branches (once we have fixed/understood remote cache misses issue).\n\nThat\u0027s why on stable branches, there is not RBE check exposed, and that\u0027s why TEST_TAG_FILTER should include the whole world of gerrit tests.\n\nIf we adapt the RBE checker, to also apply for stable-3.* branches, we would be able to do what you are suggesting.",
+      "parentUuid": "49ebba6f_68946be8",
+      "range": {
+        "startLine": 21,
+        "startChar": 3,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "42dfbb525bf92375f1f063b5723980b240d0c3e4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
