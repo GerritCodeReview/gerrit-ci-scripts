@@ -14,6 +14,7 @@ case $TARGET_BRANCH$MODE in
     ;;
   masternotedb|stable-3.*notedb)
     TEST_TAG_FILTER="-flaky,elastic,git-protocol-v2"
+    BAZEL_OPTS="--test_env DOCKER_HOST=$DOCKER_HOST"
     ;;
   stable-2.*)
     TEST_TAG_FILTER="-flaky,-elastic"
@@ -27,8 +28,7 @@ export BAZEL_OPTS="$BAZEL_OPTS \
                  --test_summary detailed --flaky_test_attempts 3 \
                  --test_verbose_timeout_warnings --build_tests_only \
                  --test_timeout 3600 \
-                 --test_tag_filters=$TEST_TAG_FILTER \
-                 --test_env DOCKER_HOST=$DOCKER_HOST"
+                 --test_tag_filters=$TEST_TAG_FILTER"
 export WCT_HEADLESS_MODE=1
 
 java -fullversion
