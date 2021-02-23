@@ -33,6 +33,24 @@
       "message": "It doesn\u0027t work right now on stable branches. At least change 292419 would need to be backported to stable-branches first:\n\n  ERROR: no such target \u0027//:api-skip-javadoc\u0027: target \u0027api-skip-javadoc\u0027\n  not declared in package \u0027\u0027 defined by /home/jenkins/gerrit/BUILD",
       "revId": "49f5b03b8b6564a7881ed91eeff873c00705be81",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1947b4c5_7f360af4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-23T08:35:30Z",
+      "side": 1,
+      "message": "Cherry-picked as change 297583.",
+      "parentUuid": "cfb38cfa_b612e807",
+      "revId": "49f5b03b8b6564a7881ed91eeff873c00705be81",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
