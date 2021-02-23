@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6fb7ea8_6c3c4471",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-23T07:00:19Z",
+      "side": 1,
+      "message": "Blocking, until RBE Build/Test checker is adapted.",
+      "revId": "49f5b03b8b6564a7881ed91eeff873c00705be81",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
