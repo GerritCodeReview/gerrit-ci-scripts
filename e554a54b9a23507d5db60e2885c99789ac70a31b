@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b44063c8_f6e8385d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-23T23:53:19Z",
+      "side": 1,
+      "message": "I agree that knowing if a test execution was cached or not is useful.\nWhat are we going to lose in term of details of test failures?",
+      "revId": "e554a54b9a23507d5db60e2885c99789ac70a31b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
