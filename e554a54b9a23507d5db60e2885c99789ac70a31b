@@ -16,6 +16,93 @@
       "message": "I agree that knowing if a test execution was cached or not is useful.\nWhat are we going to lose in term of details of test failures?",
       "revId": "e554a54b9a23507d5db60e2885c99789ac70a31b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3bd3dd06_d50289ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-24T10:53:30Z",
+      "side": 1,
+      "message": "This options only affects the summary, not the errors:\n\nWithout this option we get:\n\n  $ bazel test //javatests/com/google/gerrit/server/...\n  //javatests/com/google/gerrit/server/cache:server_cache         (cached) PASSED in 39.9s\n//javatests/com/google/gerrit/server/cache:tests                (cached) PASSED in 3.8s\n//javatests/com/google/gerrit/server/cache/h2:tests             (cached) PASSED in 6.5s\n//javatests/com/google/gerrit/server/cache/serialize:tests      (cached) PASSED in 2.3s\n//javatests/com/google/gerrit/server/cache/serialize/entities:tests (cached) PASSED in 4.6s\n//javatests/com/google/gerrit/server/events:events_tests        (cached) PASSED in 2.3s\n//javatests/com/google/gerrit/server/group/db:db_tests          (cached) PASSED in 8.7s\n//javatests/com/google/gerrit/server/ioutil:ioutil_tests        (cached) PASSED in 1.5s\n//javatests/com/google/gerrit/server/query/account:lucene_query_test (cached) PASSED in 84.6s\n//javatests/com/google/gerrit/server/query/change:LuceneQueryChangesLatestIndexVersionTest (cached) PASSED in 338.4s\n//javatests/com/google/gerrit/server/query/change:LuceneQueryChangesPreviousIndexVersionTest (cached) PASSED in 320.1s\n//javatests/com/google/gerrit/server/query/change:small_tests   (cached) PASSED in 5.3s\n//javatests/com/google/gerrit/server/query/group:lucene_query_test (cached) PASSED in 65.0s\n//javatests/com/google/gerrit/server/query/project:lucene_query_test (cached) PASSED in 57.7s\n//javatests/com/google/gerrit/server/rules:prolog_tests         (cached) PASSED in 8.5s\n//javatests/com/google/gerrit/server/submit:submit_tests        (cached) PASSED in 8.3s\n//javatests/com/google/gerrit/server/update:small_tests         (cached) PASSED in 25.5s\n//javatests/com/google/gerrit/server/util/git:git_tests         (cached) PASSED in 0.7s\n//javatests/com/google/gerrit/server:server_tests                        FAILED in 29.9s\n\n\nWith this option we get:\n\n  $ bazel test --test_summary\u003ddetailed //javatests/com/google/gerrit/server/...\n  INFO: Elapsed time: 38.424s, Critical Path: 38.14s\n  INFO: 3 processes: 1 internal, 2 linux-sandbox.\n  INFO: Build completed, 1 test FAILED, 3 total actions\n  //javatests/com/google/gerrit/server:server_tests                        FAILED in 37.7s\n    FAILED  com.google.gerrit.server.IdentifiedUserTest.emailsExistence (0.4s)\n  Test cases: finished with 1007 passing and 1 failing out of 1025 test cases\n  (some targets did not have test case information)\n  Executed 2 out of 19 tests: 18 tests pass and 1 fails locally.\n\n\nNote, that the failure (simulated) is reported in the same way (with and without that option):\n\nTime: 29.073\nThere was 1 failure:\n1) emailsExistence(com.google.gerrit.server.IdentifiedUserTest)\nexpected to be false\n\tat com.google.gerrit.server.IdentifiedUserTest.emailsExistence(IdentifiedUserTest.java:115)\n\nFAILURES!!!\nTests run: 988,  Failures: 1",
+      "parentUuid": "b44063c8_f6e8385d",
+      "revId": "e554a54b9a23507d5db60e2885c99789ac70a31b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20c637d0_af85fd57",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-24T10:53:30Z",
+      "side": 1,
+      "message": "We don\u0027t need this option, as it\u0027s already included in .bazelrc in gerrit per default.",
+      "range": {
+        "startLine": 26,
+        "startChar": 17,
+        "endLine": 26,
+        "endChar": 38
+      },
+      "revId": "e554a54b9a23507d5db60e2885c99789ac70a31b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b30bb4e_081c978a",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-24T10:53:30Z",
+      "side": 1,
+      "message": "Not needed, we do have this already in .bazelrc, and thus enabled per default.",
+      "range": {
+        "startLine": 28,
+        "startChar": 49,
+        "endLine": 28,
+        "endChar": 67
+      },
+      "revId": "e554a54b9a23507d5db60e2885c99789ac70a31b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fabd0ee8_61437ec5",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-24T10:53:30Z",
+      "side": 1,
+      "message": "I would rather remove that option, why it\u0027s needed on the CI (Warnings about sizing of test rule).",
+      "range": {
+        "startLine": 28,
+        "startChar": 17,
+        "endLine": 28,
+        "endChar": 48
+      },
+      "revId": "e554a54b9a23507d5db60e2885c99789ac70a31b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
