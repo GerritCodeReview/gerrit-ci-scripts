@@ -70,6 +70,30 @@
       },
       "revId": "56a312019aa41e8221abe99bf51f991944dfaa3e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c018eb9f_f75a21d6",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-24T18:00:16Z",
+      "side": 1,
+      "message": "Yes, you are right. It doesn\u0027t matter for RBE mode, but for non-RBE mode we are overriding the BAZEL_OPTS defined:\n\n    BAZEL_OPTS\u003d--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache\n    --java_toolchain\u003d//tools:error_prone_warnings_toolchain",
+      "parentUuid": "db0c7b0a_f82fcbd4",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 17,
+        "endChar": 52
+      },
+      "revId": "56a312019aa41e8221abe99bf51f991944dfaa3e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
