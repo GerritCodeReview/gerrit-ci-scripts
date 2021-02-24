@@ -18,6 +18,6 @@ if ([ "$TARGET_BRANCH" == "master" ] || \
 then
   echo 'Running PolyGerrit lint check...'
   java -fullversion
-  bazelisk test //polygerrit-ui/app:lint_test --test_output errors
-  bazelisk test //polygerrit-ui/app:polylint_test --test_output errors
+  bazelisk test //polygerrit-ui/app:lint_test
+  bazelisk test //polygerrit-ui/app:polylint_test
 fi
