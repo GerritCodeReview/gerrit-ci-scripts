@@ -107,6 +107,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9be388a_4580f450",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-24T18:08:23Z",
+      "side": 1,
+      "message": "Done in change 297970.",
+      "parentUuid": "41ec7842_d3fe2751",
+      "range": {
+        "startLine": 26,
+        "startChar": 17,
+        "endLine": 26,
+        "endChar": 38
+      },
+      "revId": "e554a54b9a23507d5db60e2885c99789ac70a31b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5b30bb4e_081c978a",
@@ -215,6 +239,30 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "9522eea3_709f0788",
+      "range": {
+        "startLine": 28,
+        "startChar": 49,
+        "endLine": 28,
+        "endChar": 67
+      },
+      "revId": "e554a54b9a23507d5db60e2885c99789ac70a31b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a42b0e0_6565a038",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-24T18:08:23Z",
+      "side": 1,
+      "message": "Done in change 297971.",
+      "parentUuid": "9a1398b7_db2606a9",
       "range": {
         "startLine": 28,
         "startChar": 49,
