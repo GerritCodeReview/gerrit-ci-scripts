@@ -22,6 +22,30 @@
       },
       "revId": "56a312019aa41e8221abe99bf51f991944dfaa3e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d57d97dc_10e321dc",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-24T10:04:06Z",
+      "side": 1,
+      "message": "I considered this, but on line 20 we say:\n\n  TEST_TAG_FILTER\u003d\"-flaky,-elastic\"\n\nand effectively filter out tests that depend on Docker (ES), so that we should be safe, right?",
+      "parentUuid": "d0f22527_e9f6e0f1",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 17,
+        "endChar": 52
+      },
+      "revId": "56a312019aa41e8221abe99bf51f991944dfaa3e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
