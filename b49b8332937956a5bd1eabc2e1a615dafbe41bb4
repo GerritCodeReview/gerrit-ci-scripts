@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a127339_137e7710",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-25T09:31:32Z",
+      "side": 1,
+      "message": "Example for messed up test results: change 297503, and open build log for \"RBE Build/Tests\" check.",
+      "revId": "b49b8332937956a5bd1eabc2e1a615dafbe41bb4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
