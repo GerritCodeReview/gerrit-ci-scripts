@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "369f449f_c16292de",
+        "filename": "jenkins-docker/master/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-02-25T23:44:37Z",
+      "side": 1,
+      "message": "What if the version we need isn\u0027t published on Docker?",
+      "range": {
+        "startLine": 1,
+        "startChar": 21,
+        "endLine": 1,
+        "endChar": 39
+      },
+      "revId": "85687b7ed80a0707c4b21a9c9725233564ec48e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
