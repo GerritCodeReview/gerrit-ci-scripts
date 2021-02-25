@@ -24,7 +24,6 @@ esac
 
 export BAZEL_OPTS="$BAZEL_OPTS \
                  --flaky_test_attempts 3 \
-                 --test_verbose_timeout_warnings \
                  --test_timeout 3600 \
                  --test_tag_filters=$TEST_TAG_FILTER \
                  --test_env DOCKER_HOST=$DOCKER_HOST"
