@@ -53,9 +53,9 @@ id_rsa:
 	chmod a+r id_rsa*
 
 build: id_rsa
+	 cat Dockerfile | JENKINS_WAR_VER=${JENKINS_WAR_VER} JENKINS_WAR_SHA=${JENKINS_WAR_SHA} envsubst \$$JENKINS_WAR_VER,\$$JENKINS_WAR_SHA > Dockerfile-subst
 	docker build --no-cache=$(NO_CACHE) \
-        --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
-        --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} -t ${IMAGE} .
+        -t ${IMAGE} -f Dockerfile-subst .
 
 publish:
 	docker push ${IMAGE}
@@ -76,4 +76,3 @@ status:
           echo -e "\n${NAME} is *RUNNING*\n"
 
 .PHONY: clean image publish
-

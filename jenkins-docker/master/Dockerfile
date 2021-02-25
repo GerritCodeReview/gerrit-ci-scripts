@@ -1,14 +1,8 @@
-FROM jenkins/jenkins
+FROM jenkins/jenkins:${JENKINS_WAR_VER}
 
 USER root
 
-ARG JENKINS_WAR_VER=2.204.1
-ARG JENKINS_WAR_SHA=924d2c9fabfdcacee1bae757337a07d7599eaa35
-
-# could use ADD but this one does not check Last-Modified header
-# see https://github.com/docker/docker/issues/8331
-RUN curl -fsSL http://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/${JENKINS_WAR_VER}/jenkins-war-${JENKINS_WAR_VER}.war -o /usr/share/jenkins/jenkins.war \
-  && echo "$JENKINS_WAR_SHA  /usr/share/jenkins/jenkins.war" | sha1sum -c -
+RUN echo "$JENKINS_WAR_SHA  /usr/share/jenkins/jenkins.war" | sha1sum -c -
 
 # Override Jenkins start-up script
 RUN mv /usr/local/bin/jenkins.sh /usr/local/bin/run-jenkins.sh
