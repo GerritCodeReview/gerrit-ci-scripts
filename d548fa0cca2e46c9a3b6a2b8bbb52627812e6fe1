@@ -34,6 +34,24 @@
       "parentUuid": "4793395c_8ab7baa1",
       "revId": "d548fa0cca2e46c9a3b6a2b8bbb52627812e6fe1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77317bf7_efac304d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-02-26T07:41:26Z",
+      "side": 1,
+      "message": "Yes, that was my original concern as well. However, couldn\u0027t we use templating to automatically fill in the correct tags. As long as we always build all images in one go and restart Jenkins as soon as the images are available, we would always be consistent.",
+      "parentUuid": "48a5b579_6382839a",
+      "revId": "d548fa0cca2e46c9a3b6a2b8bbb52627812e6fe1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
