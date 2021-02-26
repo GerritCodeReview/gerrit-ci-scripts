@@ -16,6 +16,24 @@
       "message": "I\u0027m proposing this change again, as the current \u0027latest\u0027 tag produced a lot of manual work recently.",
       "revId": "d548fa0cca2e46c9a3b6a2b8bbb52627812e6fe1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48a5b579_6382839a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-02-26T07:01:47Z",
+      "side": 1,
+      "message": "Wouldn\u0027t this mean, that we would have always to adapt jenkins master for that to have effect? Otherwise, Jenkins, would still use outdated images:\n\n  $ git grep debian-buster jenkins-docker/master/config.xml\n  jenkins-docker/master/config.xml:            \u003cimage\u003egerritforge/gerrit-ci-slave-bazel-docker:debian-buster-80.0.3987.149\u003c/image\u003e\n  jenkins-docker/master/config.xml:            \u003cimage\u003egerritforge/gerrit-ci-slave-bazel-docker:debian-buster-69.0.3497.92\u003c/image\u003e",
+      "parentUuid": "4793395c_8ab7baa1",
+      "revId": "d548fa0cca2e46c9a3b6a2b8bbb52627812e6fe1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
