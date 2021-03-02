@@ -16,6 +16,24 @@
       "message": "Can you also explain why is this needed now?\n(it wasn\u0027t needed before)",
       "revId": "54cc253603e6cd75f035e7b65471d9bbc74970df",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdae0b23_085eda26",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-03-02T16:35:46Z",
+      "side": 1,
+      "message": "I don\u0027t know what changed. I only see that Polygerrit verification on stable-3.1 is inherently broken.\n\nI can reproduce it, as described on the linked issue. After investigation, it appears, that WCT for some reasons is trying to load babel runtime package that is missing:\n\n  /usr/local/lib/node_modules/web-component-tester/node_modules/regenerator-transform/lib/visit.js:9:31\n\nis trying to load: @bael/runtime parts.\n  \nAnyway, with this change the PolyGerrit tests are passing again.",
+      "parentUuid": "ba6c3d43_84fb3ad5",
+      "revId": "54cc253603e6cd75f035e7b65471d9bbc74970df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
