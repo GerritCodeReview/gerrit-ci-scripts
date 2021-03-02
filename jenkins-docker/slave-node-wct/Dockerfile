@@ -18,5 +18,6 @@ RUN npm install --unsafe-perm -g \
       eslint-plugin-promise@"=4.0.1" \
       typescript \
       fried-twinkie@"^0.2.2" \
-      polylint polymer-cli
+      polylint polymer-cli \
+      @babel/runtime@"^7.13.9"
 RUN npm install --unsafe-perm -g 'web-component-tester@$WCT_VER'
