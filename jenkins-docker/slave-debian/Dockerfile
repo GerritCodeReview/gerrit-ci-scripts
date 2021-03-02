@@ -71,7 +71,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 RUN apt-get update && apt-get install -y lib32stdc++6 lib32z1
 
 # Install OpenJDK 8 for legacy stable Gerrit versions builds, releases and E2E tests
-# TODO: to be removed when Gerrit v3.2 will be EOL
+# TODO: to be removed when Gerrit v3.4 will be EOL
 RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && \
     add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ && \
     apt-get update && apt-get install -y adoptopenjdk-8-hotspot && \
