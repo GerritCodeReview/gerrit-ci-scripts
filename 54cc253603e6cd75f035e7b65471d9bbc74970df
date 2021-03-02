@@ -52,6 +52,24 @@
       "parentUuid": "fdae0b23_085eda26",
       "revId": "54cc253603e6cd75f035e7b65471d9bbc74970df",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a21acd00_f3033e54",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-03-02T16:56:07Z",
+      "side": 1,
+      "message": "\u003e I see, this was the last change,\n\nI meant this change 293242.",
+      "parentUuid": "8f6443b9_e239583e",
+      "revId": "54cc253603e6cd75f035e7b65471d9bbc74970df",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
