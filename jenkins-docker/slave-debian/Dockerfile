@@ -74,7 +74,7 @@ RUN apt-get update && apt-get install -y lib32stdc++6 lib32z1
 # TODO: to be removed when Gerrit v3.2 will be EOL
 RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && \
     add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ && \
-    apt-get update && apt-get install adoptopenjdk-8-hotspot && \
+    apt-get update && apt-get install -y adoptopenjdk-8-hotspot && \
     ln -sf /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64 /usr/lib/jvm/java-8-openjdk-amd64 && \
     ln -sf /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java /etc/alternatives/java
 
