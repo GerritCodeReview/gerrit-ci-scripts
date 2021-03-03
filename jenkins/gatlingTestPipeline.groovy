@@ -66,13 +66,13 @@ pipeline {
                         dir ('aws-gerrit/single-master') {
                             script {
                                 def setupData = readFile(file:"setup.env.template")
-                                setupData = resolveParameter(setupData, "HOSTED_ZONE_NAME", HOSTED_ZONE_NAME)
-                                setupData = resolveParameter(setupData, "CLUSTER_INSTANCE_TYPE", CLUSTER_INSTANCE_TYPE)
-                                setupData = resolveParameter(setupData, "DOCKER_REGISTRY_URI", DOCKER_REGISTRY_URI)
-                                setupData = resolveParameter(setupData, "SSL_CERTIFICATE_ARN", SSL_CERTIFICATE_ARN)
+                                setupData = resolveParameter(setupData, "HOSTED_ZONE_NAME", "${params.HOSTED_ZONE_NAME}")
+                                setupData = resolveParameter(setupData, "CLUSTER_INSTANCE_TYPE", "${params.CLUSTER_INSTANCE_TYPE}")
+                                setupData = resolveParameter(setupData, "DOCKER_REGISTRY_URI", "${params.DOCKER_REGISTRY_URI}")
+                                setupData = resolveParameter(setupData, "SSL_CERTIFICATE_ARN", "${params.SSL_CERTIFICATE_ARN}")
 
-                                setupData = resolveParameter(setupData, "METRICS_CLOUDWATCH_NAMESPACE",METRICS_CLOUDWATCH_NAMESPACE)
-                                setupData = resolveParameter(setupData, 'SUBDOMAIN', SUBDOMAIN)
+                                setupData = resolveParameter(setupData, "METRICS_CLOUDWATCH_NAMESPACE", "${params.METRICS_CLOUDWATCH_NAMESPACE}")
+                                setupData = resolveParameter(setupData, 'SUBDOMAIN', "${params.SUBDOMAIN}")
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${GERRIT_KEY_PREFIX}"
                                 setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${GERRIT_VOLUME_SNAPSHOT_ID}"
