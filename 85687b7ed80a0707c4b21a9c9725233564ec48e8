@@ -22,6 +22,30 @@
       },
       "revId": "85687b7ed80a0707c4b21a9c9725233564ec48e8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06002969_d3f310ab",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-03-03T22:23:25Z",
+      "side": 0,
+      "message": "Old: directory:polygerit-ui\nNew: dir:polygerrit-ui\n\nThere are two different issues:\n\n* 1. s/directory/dir/ : dir is just alias for directory and is shorter.\n* 2. s/polygerit-ui/polygerrit-ui : was a typo, but it was already fixed in checker definition, but wasn\u0027t adapted in this text file, sit just was stale.\n\nThe actual fix was a different one: Addition of (not dir:polygerrit-ui) for checker above:\n\n* RBE Build/Tests\n* Build/Tests\n\nThat way, those checker are not reported for frontend only changes (because \"not dir:polygerrit-ui\" predicate would be false). \n\nIf you prefer, I could split this in two different changes.",
+      "parentUuid": "e7a9d764_a07448a6",
+      "range": {
+        "startLine": 41,
+        "startChar": 15,
+        "endLine": 41,
+        "endChar": 24
+      },
+      "revId": "85687b7ed80a0707c4b21a9c9725233564ec48e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
