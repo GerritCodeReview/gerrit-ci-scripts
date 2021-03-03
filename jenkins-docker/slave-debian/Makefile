@@ -1,5 +1,6 @@
 NO_CACHE ?= false
-IMAGE=gerritforge/gerrit-ci-slave-debian
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-debian
 MAVEN_VER=3.6.3
 GIT_VER=2.26.2
 DEBIAN_VER=buster

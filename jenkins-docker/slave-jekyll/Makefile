@@ -1,5 +1,6 @@
 NO_CACHE ?= false
-IMAGE=gerritforge/gerrit-ci-slave-jekyll
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-jekyll
 
 build:  Dockerfile Makefile
 	docker build --no-cache=$(NO_CACHE) -f Dockerfile -t $(IMAGE) .

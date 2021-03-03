@@ -1,5 +1,6 @@
 NO_CACHE=true
-IMAGE=gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-80.0.3987.149
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-bazel:debian-buster-nocache-80.0.3987.149
 CONTAINER=release
 
 build:

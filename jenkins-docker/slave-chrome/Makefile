@@ -2,7 +2,8 @@ include ../chrome-vers.mk
 
 NO_CACHE ?= false
 DEBIAN_VER ?= buster
-IMAGE=gerritforge/gerrit-ci-slave-chrome:$(DEBIAN_VER)
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-chrome:$(DEBIAN_VER)
 
 build: Makefile Dockerfile
 	@for chrome_ver in $(CHROME_VERS); \

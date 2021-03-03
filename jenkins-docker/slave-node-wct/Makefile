@@ -3,7 +3,8 @@ include ../chrome-vers.mk
 NO_CACHE ?= false
 NODE_VER ?= 10
 WCT_VER ?= 6.8.0
-IMAGE=gerritforge/gerrit-ci-slave-node-wct:$(NODE_VER)-$(WCT_VER)
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-node-wct:$(NODE_VER)-$(WCT_VER)
 
 build:  Dockerfile Makefile
 	@for chrome_ver in $(CHROME_VERS); \

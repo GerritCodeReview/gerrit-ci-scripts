@@ -1,5 +1,6 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-aws
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-aws
 
 # Targets
 
