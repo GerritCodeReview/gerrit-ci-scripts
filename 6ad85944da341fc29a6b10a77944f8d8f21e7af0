@@ -45,6 +45,30 @@
       },
       "revId": "6ad85944da341fc29a6b10a77944f8d8f21e7af0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bacd9173_33f3739f",
+        "filename": "jenkins/gerrit-bazel-plugin-automerger.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-03-03T22:08:34Z",
+      "side": 1,
+      "message": "Fixed by cherry-picking Edwin\u0027s change 298932, that removed offending test,",
+      "parentUuid": "06ed96a1_a626ccf7",
+      "range": {
+        "startLine": 14,
+        "startChar": 14,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "6ad85944da341fc29a6b10a77944f8d8f21e7af0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
