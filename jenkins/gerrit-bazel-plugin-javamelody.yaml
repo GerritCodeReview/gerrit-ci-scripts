@@ -37,6 +37,7 @@
             plugins/javamelody:javamelody \
       - 'plugin-javamelody-bazel-{branch}':
           branch:
+            - stable-3.2
             - stable-3.1
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
@@ -44,4 +45,3 @@
           gerrit-branch:
             - master
             - stable-3.3
-            - stable-3.2
