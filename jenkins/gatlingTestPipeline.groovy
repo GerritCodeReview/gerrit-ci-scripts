@@ -42,7 +42,7 @@ pipeline {
         }
 
         stages{
-            stage("Setup single-master aws stack") {
+            stage("Setup single-primary aws stack") {
                 steps {
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: "gerrit.googlesource.com")]) {
                         sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
@@ -63,7 +63,7 @@ pipeline {
                     withCredentials([usernamePassword(usernameVariable: "AWS_ACCESS_KEY_ID",
                     passwordVariable: "AWS_SECRET_ACCESS_KEY",
                     credentialsId: "aws-credentials-id")]) {
-                        dir ('aws-gerrit/single-master') {
+                        dir ('aws-gerrit/single-primary') {
                             script {
                                 def setupData = readFile(file:"setup.env.template")
                                 setupData = resolveParameter(setupData, "HOSTED_ZONE_NAME", "${params.HOSTED_ZONE_NAME}")
@@ -168,7 +168,7 @@ pipeline {
                 withCredentials([usernamePassword(usernameVariable: "AWS_ACCESS_KEY_ID", 
                     passwordVariable: "AWS_SECRET_ACCESS_KEY",
                     credentialsId: "aws-credentials-id")]) {
-                        dir ('aws-gerrit/single-master') {
+                        dir ('aws-gerrit/single-primary') {
                             sh "make AWS_REGION=${AWS_REGION} AWS_PREFIX=${AWS_PREFIX} delete-all"
                         }
                 }
