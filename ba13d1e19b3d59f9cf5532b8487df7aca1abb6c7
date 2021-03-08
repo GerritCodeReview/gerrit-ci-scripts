@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1c64bb7_4823e20a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-03-08T14:53:10Z",
+      "side": 1,
+      "message": "The test now consistently pass:\nhttps://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/230/\nhttps://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/231/\nhttps://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/232/",
+      "revId": "ba13d1e19b3d59f9cf5532b8487df7aca1abb6c7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
