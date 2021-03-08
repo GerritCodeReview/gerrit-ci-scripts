@@ -1,5 +1,6 @@
 def accountCookie = ''
 def xsrfToken = ''
+def epochTime = new Date().getTime()
 
 pipeline {
         agent { label 'aws' }
@@ -20,12 +21,13 @@ pipeline {
             string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-01c12c75ead9e9cd4", description: 'Id of the EBS volume snapshot')
 
             string(name: 'METRICS_CLOUDWATCH_NAMESPACE', defaultValue: 'jenkins', description: 'The CloudWatch namespace for Gerrit metrics')
-            string(name: 'SUBDOMAIN', defaultValue: '$(AWS_PREFIX)-master-demo.gerrit-demo', description: 'Name of the master sub domain')
+            string(name: 'BASE_SUBDOMAIN', defaultValue: 'gerrit-demo', description: 'Name of the master sub domain')
             string(name: 'GERRIT_KEY_PREFIX', defaultValue: 'gerrit_secret', description: 'Secrets prefix')
 
-            string(name: 'GERRIT_HTTP_URL', defaultValue: 'https://jenkins-master-demo.gerrit-demo.gerritforgeaws.com', description: 'Gerrit GUI URL')
-            string(name: 'GERRIT_SSH_URL', defaultValue: 'ssh://gerritadmin@jenkins-master-demo.gerrit-demo.gerritforgeaws.com:29418', description: 'Gerrit SSH URL')
+            string(name: 'GERRIT_SSH_USERNAME', defaultValue: 'gerritadmin', description: 'Gerrit SSH username')
+            string(name: 'GERRIT_SSH_PORT', defaultValue: '29418', description: 'Gerrit SSH port')
 
+            string(name: 'GERRIT_HTTP_SCHEMA', defaultValue: 'https', description: 'Gerrit HTTP schema')
             string(name: 'GIT_HTTP_USERNAME', description: 'Username for Git/HTTP testing, use vault by default')
             password(name: 'GIT_HTTP_PASSWORD', description: 'Password for Git/HTTP testing, use vault by default')
 
@@ -39,7 +41,11 @@ pipeline {
                 returnStdout: true,
                 script: '/sbin/ip route|awk \'/default/ {print "tcp://"\$3":2375"}\''
             )}"""
-        }
+            SUBDOMAIN = String.format("%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
+            BASE_URL = String.format("%s.%s", SUBDOMAIN, "${params.HOSTED_ZONE_NAME}")
+            GERRIT_HTTP_URL = String.format("%s://%s", "${params.GERRIT_HTTP_SCHEMA}", BASE_URL)
+            GERRIT_SSH_URL = String.format("ssh://%s@%s:%s", "${params.GERRIT_SSH_USERNAME}", BASE_URL, "${params.GERRIT_SSH_PORT}")
+         }
 
         stages{
             stage("Setup single-master aws stack") {
@@ -72,13 +78,18 @@ pipeline {
                                 setupData = resolveParameter(setupData, "SSL_CERTIFICATE_ARN", "${params.SSL_CERTIFICATE_ARN}")
 
                                 setupData = resolveParameter(setupData, "METRICS_CLOUDWATCH_NAMESPACE", "${params.METRICS_CLOUDWATCH_NAMESPACE}")
-                                setupData = resolveParameter(setupData, 'SUBDOMAIN', "${params.SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'SUBDOMAIN', "${env.SUBDOMAIN}")
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${GERRIT_KEY_PREFIX}"
                                 setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${GERRIT_VOLUME_SNAPSHOT_ID}"
 
                                 writeFile(file:"setup.env", text: setupData)
                             }
+                            sh 'echo "*** Computed values:"'
+                            sh 'echo "* Subdomain: $SUBDOMAIN"'
+                            sh 'echo "* Base URL: $BASE_URL"'
+                            sh 'echo "* Gerrit HTTP URL: $GERRIT_HTTP_URL"'
+                            sh 'echo "* Gerrit SSH URL: $GERRIT_SSH_URL"'
                             sh 'echo "Docker host: $DOCKER_HOST"'
                             sh "make AWS_REGION=${AWS_REGION} AWS_PREFIX=${AWS_PREFIX} GERRIT_VERSION=${GERRIT_VERSION} GERRIT_PATCH=${GERRIT_PATCH} create-all"
                          }
