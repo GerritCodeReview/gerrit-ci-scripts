@@ -101,8 +101,8 @@ pipeline {
                     retry(50) {
                         sleep(10)
                         sh "curl --fail -L -I '${GERRIT_HTTP_URL}/config/server/healthcheck~status' 2>/dev/null"
+                        sh "curl -L -c cookies -i -X POST '${GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip?account_id=1000000'"
                     }
-                    sh "curl -L -c cookies -i -X POST '${GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip?account_id=1000000'"
                     script {
                         def cookies = readFile(file:"cookies")
                         def cookiesMap = cookies
