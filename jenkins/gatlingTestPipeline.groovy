@@ -28,8 +28,8 @@ pipeline {
             string(name: 'GERRIT_SSH_PORT', defaultValue: '29418', description: 'Gerrit SSH port')
 
             string(name: 'GERRIT_HTTP_SCHEMA', defaultValue: 'https', description: 'Gerrit HTTP schema')
-            string(name: 'GIT_HTTP_USERNAME', description: 'Username for Git/HTTP testing, use vault by default')
-            password(name: 'GIT_HTTP_PASSWORD', description: 'Password for Git/HTTP testing, use vault by default')
+            string(name: 'GIT_HTTP_USERNAME', defaultValue: '', description: 'Username for Git/HTTP testing, use vault by default')
+            password(name: 'GIT_HTTP_PASSWORD', defaultValue: '', description: 'Password for Git/HTTP testing, use vault by default')
 
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
             string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
@@ -132,8 +132,8 @@ pipeline {
                             credentialsId: "gatlingHttp")]) {
                         script {
 
-                            def gitHttpUsername = "${params.GIT_HTTP_USERNAME}" ?: "${env.DEFAULT_GIT_HTTP_USERNAME}"
-                            def gitHttpPassword = "${params.GIT_HTTP_PASSWORD}" ?: "${env.DEFAULT_GIT_HTTP_PASSWORD}"
+                            def gitHttpUsername = ("${params.GIT_HTTP_USERNAME}"?.trim()) ?: "${env.DEFAULT_GIT_HTTP_USERNAME}"
+                            def gitHttpPassword = ("${params.GIT_HTTP_PASSWORD}"?.trim()) ?: "${env.DEFAULT_GIT_HTTP_PASSWORD}"
 
                             writeFile(file: "simulation.env", text: """
                                     GERRIT_HTTP_URL=${GERRIT_HTTP_URL}
