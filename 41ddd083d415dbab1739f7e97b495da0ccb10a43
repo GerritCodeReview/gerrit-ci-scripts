@@ -16,6 +16,23 @@
       "message": "@Tony can you please verify?",
       "revId": "41ddd083d415dbab1739f7e97b495da0ccb10a43",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "935a4970_3e01835a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-03-09T11:48:30Z",
+      "side": 1,
+      "message": "Verified here:\n\nhttps://gerrit-ci.gerritforge.com/blue/organizations/jenkins/gatling-gerrit-test/detail/gatling-gerrit-test/234/pipeline/9",
+      "revId": "41ddd083d415dbab1739f7e97b495da0ccb10a43",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
