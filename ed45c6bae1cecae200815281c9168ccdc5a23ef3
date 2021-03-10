@@ -166,6 +166,30 @@
       },
       "revId": "ed45c6bae1cecae200815281c9168ccdc5a23ef3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc7e0fa0_18c2bcfd",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-03-10T11:41:38Z",
+      "side": 1,
+      "message": "This is what I thought too, but actually that was not the case.\nIf you look at the results[1] you will see that every time the job was triggered automatically by jenkins it was failing (look for 12:04AM runs)\n\nThe green runs where always run by me during development, either manually or by amending the executing time. I know it is a weird issue indeed, which doesn\u0027t seem to be appearing consistently.\n\nHopefully this plus other changes make the job more resilient.\n\nThanks for reviewing\n\n[1]https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/",
+      "parentUuid": "f0e78b8f_71956b6b",
+      "range": {
+        "startLine": 31,
+        "startChar": 46,
+        "endLine": 31,
+        "endChar": 62
+      },
+      "revId": "ed45c6bae1cecae200815281c9168ccdc5a23ef3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
