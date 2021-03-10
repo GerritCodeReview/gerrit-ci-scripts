@@ -66,6 +66,7 @@
           gerrit-branch:
             - master
             - stable-3.2
+            - stable-3.3
       - 'plugin-owners-bazel-{branch}':
           targets: 'plugins/owners plugins/owners-autoassign'
           branch:
