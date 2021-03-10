@@ -70,6 +70,30 @@
       },
       "revId": "55b3e783058afe8583389dd6d6a90944afb27505",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b2049ad_922a0aa3",
+        "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-10T22:03:54Z",
+      "side": 1,
+      "message": "Yep:\npublic class com.googlesource.gerrit.owners.CompileStub\n  minor version: 0\n  major version: 55\n\nMajor version \u003d 55 is Java11",
+      "parentUuid": "271fa021_29b4adc8",
+      "range": {
+        "startLine": 69,
+        "startChar": 14,
+        "endLine": 69,
+        "endChar": 24
+      },
+      "revId": "55b3e783058afe8583389dd6d6a90944afb27505",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
