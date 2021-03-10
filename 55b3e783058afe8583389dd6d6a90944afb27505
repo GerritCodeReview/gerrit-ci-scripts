@@ -22,6 +22,30 @@
       },
       "revId": "55b3e783058afe8583389dd6d6a90944afb27505",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15ced2b2_b782ea41",
+        "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-03-10T21:30:29Z",
+      "side": 1,
+      "message": "I suppose so. Let me try to build it locally.",
+      "parentUuid": "6b931b14_802c3906",
+      "range": {
+        "startLine": 69,
+        "startChar": 14,
+        "endLine": 69,
+        "endChar": 24
+      },
+      "revId": "55b3e783058afe8583389dd6d6a90944afb27505",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
