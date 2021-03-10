@@ -70,6 +70,30 @@
       },
       "revId": "ed45c6bae1cecae200815281c9168ccdc5a23ef3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a30bbba_d2b9b773",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-03-10T10:21:21Z",
+      "side": 1,
+      "message": "If username and password are NOT provided by param, the Jenkins job will always use the vault one, which cannot be empty, as we configured directly on the jenkins node (if for some reason, that was misconfigured, then yes, the job will fail)\n\nDefaulting to empty string, rather than not setting the default at all, solves the problem stated in the ticket:\n\n```\nIllegalArgumentException: Null value not allowed as an environment\nvariable: GIT_HTTP_USERNAME\n```\n\nParams are loaded as environment variables and, not defaulting the to empty string causes the exception above, which is related to the GIT_HTTP_USERNAME parameter, not to the vault one.\n\nHope it makes sense",
+      "parentUuid": "f5a8809e_7268d1e0",
+      "range": {
+        "startLine": 31,
+        "startChar": 46,
+        "endLine": 31,
+        "endChar": 62
+      },
+      "revId": "ed45c6bae1cecae200815281c9168ccdc5a23ef3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
