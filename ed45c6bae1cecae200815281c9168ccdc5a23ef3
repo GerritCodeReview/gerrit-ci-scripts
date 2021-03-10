@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b586b182_05ec97f7",
+        "filename": "jenkins/gatlingTestPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-03-10T08:11:22Z",
+      "side": 1,
+      "message": "but how it\u0027s going to work? We always should have username/password populated by the jenkins job. Empty value will cause job failure anyway",
+      "range": {
+        "startLine": 31,
+        "startChar": 46,
+        "endLine": 31,
+        "endChar": 62
+      },
+      "revId": "ed45c6bae1cecae200815281c9168ccdc5a23ef3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
