@@ -16,6 +16,24 @@
       "message": "You should also change the schedule, so that we can verify if this would work.",
       "revId": "8d109491fbc5ff38eafa466699e3f3d84341ce47",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14552fb6_4e016453",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-03-12T17:41:13Z",
+      "side": 1,
+      "message": "Done as a follow up change",
+      "parentUuid": "eb941146_930173f1",
+      "revId": "8d109491fbc5ff38eafa466699e3f3d84341ce47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
