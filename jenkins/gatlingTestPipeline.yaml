@@ -9,4 +9,4 @@
             - master
     dsl: !include-raw: gatlingTestPipeline.groovy
     triggers:
-      - timed: "@midnight"
+      - timed: 'H/15 17 * * *'
