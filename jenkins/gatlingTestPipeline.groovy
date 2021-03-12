@@ -80,8 +80,8 @@ pipeline {
                                 setupData = resolveParameter(setupData, "METRICS_CLOUDWATCH_NAMESPACE", "${params.METRICS_CLOUDWATCH_NAMESPACE}")
                                 setupData = resolveParameter(setupData, 'SUBDOMAIN', "${env.SUBDOMAIN}")
 
-                                setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${GERRIT_KEY_PREFIX}"
-                                setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${GERRIT_VOLUME_SNAPSHOT_ID}"
+                                setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${params.GERRIT_KEY_PREFIX}"
+                                setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${params.GERRIT_VOLUME_SNAPSHOT_ID}"
 
                                 writeFile(file:"setup.env", text: setupData)
                             }
@@ -91,7 +91,7 @@ pipeline {
                             sh 'echo "* Gerrit HTTP URL: $GERRIT_HTTP_URL"'
                             sh 'echo "* Gerrit SSH URL: $GERRIT_SSH_URL"'
                             sh 'echo "Docker host: $DOCKER_HOST"'
-                            sh "make AWS_REGION=${AWS_REGION} AWS_PREFIX=${AWS_PREFIX} GERRIT_VERSION=${GERRIT_VERSION} GERRIT_PATCH=${GERRIT_PATCH} create-all"
+                            sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} GERRIT_VERSION=${params.GERRIT_VERSION} GERRIT_PATCH=${params.GERRIT_PATCH} create-all"
                          }
                      }
                 }
@@ -100,8 +100,8 @@ pipeline {
                 steps {
                     retry(50) {
                         sleep(10)
-                        sh "curl --fail -L -I '${GERRIT_HTTP_URL}/config/server/healthcheck~status' 2>/dev/null"
-                        sh "curl -L -c cookies -i -X POST '${GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip?account_id=1000000'"
+                        sh "curl --fail -L -I '${env.GERRIT_HTTP_URL}/config/server/healthcheck~status' 2>/dev/null"
+                        sh "curl -L -c cookies -i -X POST '${env.GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip?account_id=1000000'"
                     }
                     script {
                         def cookies = readFile(file:"cookies")
@@ -136,15 +136,15 @@ pipeline {
                             def gitHttpPassword = ("${params.GIT_HTTP_PASSWORD}"?.trim()) ?: "${env.DEFAULT_GIT_HTTP_PASSWORD}"
 
                             writeFile(file: "simulation.env", text: """
-                                    GERRIT_HTTP_URL=${GERRIT_HTTP_URL}
-                                    GERRIT_SSH_URL=${GERRIT_SSH_URL}
+                                    GERRIT_HTTP_URL=${env.GERRIT_HTTP_URL}
+                                    GERRIT_SSH_URL=${env.GERRIT_SSH_URL}
                                     ACCOUNT_COOKIE=${accountCookie}
                                     GIT_HTTP_USERNAME=${gitHttpUsername}
                                     GIT_HTTP_PASSWORD=${gitHttpPassword}
                                     XSRF_TOKEN=${xsrfToken}
-                                    GERRIT_PROJECT=${GERRIT_PROJECT}
-                                    NUM_USERS=${NUM_USERS}
-                                    DURATION=${DURATION}
+                                    GERRIT_PROJECT=${params.GERRIT_PROJECT}
+                                    NUM_USERS=${params.NUM_USERS}
+                                    DURATION=${params.DURATION}
                                     GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
                                """)
                         }
@@ -180,7 +180,7 @@ pipeline {
                     passwordVariable: "AWS_SECRET_ACCESS_KEY",
                     credentialsId: "aws-credentials-id")]) {
                         dir ('aws-gerrit/single-primary') {
-                            sh "make AWS_REGION=${AWS_REGION} AWS_PREFIX=${AWS_PREFIX} delete-all"
+                            sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} delete-all"
                         }
                 }
             }
