@@ -1,0 +1,8 @@
+- project:
+    name: kinesis-events
+    repo: kinesis-events
+    organization: GerritForge
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}'
