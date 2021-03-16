@@ -11,7 +11,7 @@ esac
 
 echo "Building plugin {name}/{branch} with Gerrit/{gerrit-branch}"
 
-git remote add gerrit https://gerrit.googlesource.com/a/gerrit
+git remote show gerrit > /dev/null 2>&1 || git remote add gerrit https://gerrit.googlesource.com/a/gerrit
 git fetch gerrit {gerrit-branch}
 git checkout -fb {gerrit-branch} gerrit/{gerrit-branch}
 git submodule update --init
