@@ -1,0 +1,10 @@
+- project:
+    name: gcloud-pubsub-events
+    repo: gcloud-pubsub-events
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}'
+        branch:
+          - master
+        gerrit-branch:
+          - stable-3.3
