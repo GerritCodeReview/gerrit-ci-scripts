@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4550a37_67c6f042",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-03-23T23:26:42Z",
+      "side": 1,
+      "message": "Is this bit related to the change ?",
+      "range": {
+        "startLine": 14,
+        "startChar": 11,
+        "endLine": 14,
+        "endChar": 42
+      },
+      "revId": "5d66f320f8b0603db64fc43c6fa8458ae9d28fa6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "faa9b141_5327f938",
+        "filename": "jenkins/gerrit-bazel-plugin-gcloud-pubsub-events.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-03-23T23:26:42Z",
+      "side": 1,
+      "message": "what does \"gh\" stands for?",
+      "range": {
+        "startLine": 6,
+        "startChar": 23,
+        "endLine": 6,
+        "endChar": 25
+      },
+      "revId": "5d66f320f8b0603db64fc43c6fa8458ae9d28fa6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
