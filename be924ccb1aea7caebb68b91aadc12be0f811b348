@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff67f5fc_cd8c7ade",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-24T00:23:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "58657dae_0978cf06",
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1d1f2efd_9ef634cb",
@@ -31,6 +49,24 @@
       "writtenOn": "2020-11-12T08:30:16Z",
       "side": 1,
       "message": "this could be computed from RELEASE by increasing third component of the version number",
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e992baf1_645804ad",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-24T00:23:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1d1f2efd_9ef634cb",
       "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -58,6 +94,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d93798b8_5dca27c9",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-24T00:23:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98550232_0e7cb816",
+      "range": {
+        "startLine": 21,
+        "startChar": 41,
+        "endLine": 21,
+        "endChar": 48
+      },
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "69487bb3_81109b52",
@@ -71,6 +131,30 @@
       "writtenOn": "2020-11-12T08:30:16Z",
       "side": 1,
       "message": "isn\u0027t that located in the release manager\u0027s home directory ?",
+      "range": {
+        "startLine": 30,
+        "startChar": 5,
+        "endLine": 30,
+        "endChar": 28
+      },
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95ea9d0d_9c7a15e0",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-24T00:23:07Z",
+      "side": 1,
+      "message": "When making a release, you *DO NOT* want to reuse your local Bazel cache that you are using for the day-by-day development.\n\nThat\u0027s why I\u0027m using another \u0027.gerritcodereview\u0027 from the CWD.",
+      "parentUuid": "69487bb3_81109b52",
       "range": {
         "startLine": 30,
         "startChar": 5,
@@ -129,6 +213,24 @@
       "writtenOn": "2020-11-12T08:30:16Z",
       "side": 1,
       "message": "why isn\u0027t the template located in this repository but taken from the release manager\u0027s home directory ?",
+      "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dff1771d_36f28bf2",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-24T00:23:07Z",
+      "side": 1,
+      "message": "Yes, it is externally mounted.",
+      "parentUuid": "fb02e1c0_258769c4",
       "revId": "be924ccb1aea7caebb68b91aadc12be0f811b348",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
