@@ -33,6 +33,24 @@
       "message": "how can I test this ?",
       "revId": "f11dac3d400e91ca6c10c9335929a95bc8c2633a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f38b5fb3_40027439",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-29T20:04:07Z",
+      "side": 1,
+      "message": "By making a release BUT not publishing it.",
+      "parentUuid": "86a591cf_100116c6",
+      "revId": "f11dac3d400e91ca6c10c9335929a95bc8c2633a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
