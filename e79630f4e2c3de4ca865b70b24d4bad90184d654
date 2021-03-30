@@ -52,6 +52,24 @@
       "parentUuid": "ac02fb01_a033624f",
       "revId": "e79630f4e2c3de4ca865b70b24d4bad90184d654",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52b11f4c_04953a5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-03-30T21:52:29Z",
+      "side": 1,
+      "message": "\u003e according to the log I pasted in my last comment make run mounted my ~/.gitconfig\n\nRight, but you haven\u0027t defined the user (-u jenkins) so the .gitconfig isn\u0027t read from /home/jenkins/.gitconfig.\n\nSee the differences between your CLI and mine.",
+      "parentUuid": "afbcdd47_dbc0c7a8",
+      "revId": "e79630f4e2c3de4ca865b70b24d4bad90184d654",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
