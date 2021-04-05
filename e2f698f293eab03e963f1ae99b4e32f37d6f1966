@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2533d740_4b3f2c25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-05T22:01:21Z",
+      "side": 1,
+      "message": "Let me test this on the gerrit-ci-2",
+      "revId": "e2f698f293eab03e963f1ae99b4e32f37d6f1966",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
