@@ -8,7 +8,7 @@ echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
 case $TARGET_BRANCH$MODE in
-  masterrbe)
+  masterrbe|stable-3.4rbe)
     TEST_TAG_FILTER="-flaky,-elastic,-git-protocol-v2"
     BAZEL_OPTS="--config=remote --remote_instance_name=projects/api-project-164060093628/instances/default_instance"
     ;;
