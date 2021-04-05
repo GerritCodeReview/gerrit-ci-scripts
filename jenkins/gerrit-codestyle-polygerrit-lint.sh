@@ -10,6 +10,7 @@ fi
 cd gerrit
 bazelisk version
 if ([ "$TARGET_BRANCH" == "master" ] || \
+    [ "$TARGET_BRANCH" == "stable-3.4" ] || \
     [ "$TARGET_BRANCH" == "stable-3.3" ] || \
     [ "$TARGET_BRANCH" == "stable-3.2" ]) && \
    ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit-ui) || \
