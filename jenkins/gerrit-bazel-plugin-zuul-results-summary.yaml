@@ -1,7 +1,7 @@
 - project:
     name: zuul-results-summary
     jobs:
-      - 'ui-plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - main
           gerrit-branch:
