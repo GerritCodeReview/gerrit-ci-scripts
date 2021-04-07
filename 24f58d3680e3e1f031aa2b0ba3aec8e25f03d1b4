@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61b81988_03e18f24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-07T19:44:33Z",
+      "side": 1,
+      "message": "It works as expected: [1].\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-zuul-results-summary-bazel-main-stable-3.3/1/",
+      "revId": "24f58d3680e3e1f031aa2b0ba3aec8e25f03d1b4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
