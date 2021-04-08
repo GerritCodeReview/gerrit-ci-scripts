@@ -16,6 +16,23 @@
       "message": "@Davido @Matthias ping?",
       "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c46b068_df97b162",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-08T18:41:57Z",
+      "side": 1,
+      "message": "LGTM. It\u0027s really helpful and I used some parts of this script to perform real Gerrit release, but I haven\u0027t tried to verify it yet. Also some steps still missing like pushing tags or was it externalized on purpose? Should be the missing steps be documented somewhere?",
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
