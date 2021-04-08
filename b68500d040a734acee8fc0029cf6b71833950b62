@@ -46,6 +46,30 @@
       },
       "revId": "b68500d040a734acee8fc0029cf6b71833950b62",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2684f1be_b17e034b",
+        "filename": "jenkins/gerrit-sbt-plugin-analytics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-08T19:40:21Z",
+      "side": 1,
+      "message": "Actually, the SBT build really looks like a standalone Bazel build: the branch is *always* needed. Let me create it.",
+      "parentUuid": "19ea48d2_025d2352",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 24
+      },
+      "revId": "b68500d040a734acee8fc0029cf6b71833950b62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
