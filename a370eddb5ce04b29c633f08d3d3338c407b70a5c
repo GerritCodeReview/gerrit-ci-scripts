@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f95ef474_f5574115",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-08T18:31:03Z",
+      "side": 1,
+      "message": "It looks like the build fails on stable-3.4: fixing needed.",
+      "revId": "a370eddb5ce04b29c633f08d3d3338c407b70a5c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
