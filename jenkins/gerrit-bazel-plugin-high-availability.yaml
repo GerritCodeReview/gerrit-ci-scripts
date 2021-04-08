@@ -10,4 +10,9 @@
             - stable-2.16
             - stable-2.15
             - stable-2.14
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.4
       - plugin-{name}-verifier
