@@ -22,6 +22,30 @@
       },
       "revId": "b68500d040a734acee8fc0029cf6b71833950b62",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19ea48d2_025d2352",
+        "filename": "jenkins/gerrit-sbt-plugin-analytics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-08T18:44:18Z",
+      "side": 1,
+      "message": "Oh yes, I was adding too many Bazel driven builds recently 😕. So what is the procedure to build against stable gerrit branch against main plugin branch for SBT plugin? Would we need to cut of stable-3.4 branch only to satisfy the CI? That sucks.",
+      "parentUuid": "0f0ad3b2_109bda71",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 24
+      },
+      "revId": "b68500d040a734acee8fc0029cf6b71833950b62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
