@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f066630e_ee50591a",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-04-09T15:14:29Z",
+      "side": 0,
+      "message": "Mention the removal of this target in the commit message (and why)?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 5
+      },
+      "revId": "b8594afc4c4276a43bc98301559c419b17699cfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

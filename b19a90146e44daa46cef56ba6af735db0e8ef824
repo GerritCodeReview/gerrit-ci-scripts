@@ -33,6 +33,161 @@
       "message": "LGTM. It\u0027s really helpful and I used some parts of this script to perform real Gerrit release, but I haven\u0027t tried to verify it yet. Also some steps still missing like pushing tags or was it externalized on purpose? Should be the missing steps be documented somewhere?",
       "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "789f888f_409c947a",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-04-09T15:14:29Z",
+      "side": 1,
+      "message": "${HOME} might be cleaner.",
+      "range": {
+        "startLine": 35,
+        "startChar": 19,
+        "endLine": 35,
+        "endChar": 20
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fa9ae8f_c6e2087f",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-04-09T15:14:29Z",
+      "side": 1,
+      "message": "Tabs missing.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 16
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "476b4135_3c901a9c",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-04-09T15:14:29Z",
+      "side": 1,
+      "message": "g \\",
+      "range": {
+        "startLine": 36,
+        "startChar": 33,
+        "endLine": 36,
+        "endChar": 37
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d868f336_37679d57",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-04-09T15:14:29Z",
+      "side": 1,
+      "message": "GIT_COOKIES",
+      "range": {
+        "startLine": 38,
+        "startChar": 7,
+        "endLine": 38,
+        "endChar": 17
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94b57fe8_c9708b0f",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-04-09T15:14:29Z",
+      "side": 1,
+      "message": "Extra blank line added?",
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac303e23_76b21b2b",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 12
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-04-09T15:14:29Z",
+      "side": 1,
+      "message": "] || [ \"$3\" \u003d\u003d \"\" ]\n\nis (was already) missing I think.",
+      "range": {
+        "startLine": 3,
+        "startChar": 58,
+        "endLine": 3,
+        "endChar": 59
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc99a809_ed4dbde7",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 12
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-04-09T15:14:29Z",
+      "side": 1,
+      "message": "What happens if this specific file is missing, should this script flag it somehow? Say, in some case where not called through the Makefile, or if the latter has a mount bug or so.",
+      "range": {
+        "startLine": 26,
+        "startChar": 24,
+        "endLine": 26,
+        "endChar": 33
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
