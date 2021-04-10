@@ -81,6 +81,54 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d85d6c9_37333394",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-10T02:32:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5fa9ae8f_c6e2087f",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 16
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "286106ef_11055940",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-10T02:32:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "789f888f_409c947a",
+      "range": {
+        "startLine": 35,
+        "startChar": 19,
+        "endLine": 35,
+        "endChar": 20
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "476b4135_3c901a9c",
@@ -104,6 +152,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8d603a8_c78b78a8",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-10T02:32:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "476b4135_3c901a9c",
+      "range": {
+        "startLine": 36,
+        "startChar": 33,
+        "endLine": 36,
+        "endChar": 37
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d868f336_37679d57",
@@ -117,6 +189,30 @@
       "writtenOn": "2021-04-09T15:14:29Z",
       "side": 1,
       "message": "GIT_COOKIES",
+      "range": {
+        "startLine": 38,
+        "startChar": 7,
+        "endLine": 38,
+        "endChar": 17
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a0178be_066f0c75",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 12
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-10T02:32:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d868f336_37679d57",
       "range": {
         "startLine": 38,
         "startChar": 7,
@@ -167,6 +263,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "540d0503_16124aef",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 12
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-10T02:32:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ac303e23_76b21b2b",
+      "range": {
+        "startLine": 3,
+        "startChar": 58,
+        "endLine": 3,
+        "endChar": 59
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dc99a809_ed4dbde7",
@@ -180,6 +300,30 @@
       "writtenOn": "2021-04-09T15:14:29Z",
       "side": 1,
       "message": "What happens if this specific file is missing, should this script flag it somehow? Say, in some case where not called through the Makefile, or if the latter has a mount bug or so.",
+      "range": {
+        "startLine": 26,
+        "startChar": 24,
+        "endLine": 26,
+        "endChar": 33
+      },
+      "revId": "b19a90146e44daa46cef56ba6af735db0e8ef824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3892921d_3d7b9f27",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 12
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-10T02:32:48Z",
+      "side": 1,
+      "message": "You may actually run it without a .gitconfig and it would just use whatever is the default.",
+      "parentUuid": "dc99a809_ed4dbde7",
       "range": {
         "startLine": 26,
         "startChar": 24,
