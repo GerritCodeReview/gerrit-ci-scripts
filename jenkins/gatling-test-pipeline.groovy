@@ -11,6 +11,7 @@ pipeline {
 
             string(name: 'GERRIT_VERSION', defaultValue:"3.4", description: 'The gerrit version under test')
             string(name: 'GERRIT_PATCH', defaultValue:"0-rc1", description: 'The gerrit version patch under test')
+            string(name: 'GERRIT_WAR_URL', defaultValue:"", description: 'The gerrit.war URL to use as override of the gerrit version under test')
 
             string(name: 'HOSTED_ZONE_NAME', defaultValue: "gerritforgeaws.com", description: 'Name of the hosted zone')
             string(name: 'CLUSTER_INSTANCE_TYPE', defaultValue: 'm4.xlarge', description:'The EC2 instance Type used to run the cluster')
@@ -91,7 +92,7 @@ pipeline {
                             sh 'echo "* Gerrit HTTP URL: $GERRIT_HTTP_URL"'
                             sh 'echo "* Gerrit SSH URL: $GERRIT_SSH_URL"'
                             sh 'echo "Docker host: $DOCKER_HOST"'
-                            sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} GERRIT_VERSION=${params.GERRIT_VERSION} GERRIT_PATCH=${params.GERRIT_PATCH} create-all"
+                            sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} GERRIT_VERSION=${params.GERRIT_VERSION} GERRIT_WAR_URL=${param.GERRIT_WAR_URL} GERRIT_PATCH=${params.GERRIT_PATCH} create-all"
                          }
                      }
                 }
