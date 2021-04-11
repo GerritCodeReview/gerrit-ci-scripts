@@ -6,6 +6,7 @@
             - master
           gerrit-branch:
             - master
+            - stable-3.4
             - stable-3.3
           targets: 'plugins/its-base:its-base plugins/its-base:its_base_tests'
       - 'plugin-{name}-bazel-{branch}':
