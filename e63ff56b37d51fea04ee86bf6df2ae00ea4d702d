@@ -16,6 +16,24 @@
       "message": "I think the egit plugin is obsolete, since a long time EGit doesn\u0027t need a special format anymore to download a change. You can use e.g. the change URL or the change numeric ID. See [1]\n\n[1] https://wiki.eclipse.org/EGit/User_Guide#Fetching_a_change_from_a_Gerrit_Code_Review_Server",
       "revId": "e63ff56b37d51fea04ee86bf6df2ae00ea4d702d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36747c83_1899a569",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-12T09:30:01Z",
+      "side": 1,
+      "message": "Should we set the plugin to readonly then? I just added build jobs for all plugins, that already exist on stable-3.3 branch.",
+      "parentUuid": "465b2be4_d4116ff6",
+      "revId": "e63ff56b37d51fea04ee86bf6df2ae00ea4d702d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
