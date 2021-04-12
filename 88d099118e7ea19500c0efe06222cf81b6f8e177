@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fecc8966_fd474fac",
+        "filename": "jenkins/gerrit-bazel-plugin-account.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-12T11:54:53Z",
+      "side": 1,
+      "message": "It doesn\u0027t work: the job is not generated, so that we have to create stable-3.4 branch?\n\n  + jenkins-jobs update jenkins plugin-account-bazel-master-stable-3.4\n  INFO:jenkins_jobs.cli.subcommand.update:Updating jobs in [\u0027jenkins\u0027] ([\u0027plugin- \n account-bazel-master-stable-3.4\u0027])\n  INFO:jenkins_jobs.builder:Number of jobs generated:  0\n  INFO:jenkins_jobs.cli.subcommand.update:Number of jobs updated: 0\n  INFO:jenkins_jobs.builder:Number of views generated:  0\n  INFO:jenkins_jobs.cli.subcommand.update:Number of views updated: 0",
+      "range": {
+        "startLine": 41,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 24
+      },
+      "revId": "88d099118e7ea19500c0efe06222cf81b6f8e177",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
