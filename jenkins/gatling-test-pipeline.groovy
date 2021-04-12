@@ -10,7 +10,7 @@ pipeline {
             string(name: 'AWS_REGION', defaultValue:"us-east-1", description: 'Which region to deploy to')
 
             string(name: 'GERRIT_VERSION', defaultValue:"3.4", description: 'The gerrit version under test')
-            string(name: 'GERRIT_PATCH', defaultValue:"0-rc0", description: 'The gerrit version patch under test')
+            string(name: 'GERRIT_PATCH', defaultValue:"0-rc1", description: 'The gerrit version patch under test')
 
             string(name: 'HOSTED_ZONE_NAME', defaultValue: "gerritforgeaws.com", description: 'Name of the hosted zone')
             string(name: 'CLUSTER_INSTANCE_TYPE', defaultValue: 'm4.xlarge', description:'The EC2 instance Type used to run the cluster')
