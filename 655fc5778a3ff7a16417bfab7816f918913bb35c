@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86bd2ba8_a3732b55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2021-04-12T08:15:36Z",
+      "side": 1,
+      "message": "Is this just the Code-Style only? If that is the case then it works ;)",
+      "revId": "655fc5778a3ff7a16417bfab7816f918913bb35c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
