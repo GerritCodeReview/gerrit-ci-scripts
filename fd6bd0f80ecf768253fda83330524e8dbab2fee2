@@ -133,6 +133,30 @@
       },
       "revId": "fd6bd0f80ecf768253fda83330524e8dbab2fee2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a31d8c00_00508d19",
+        "filename": "jenkins-docker/slave-release/gerrit-release.sh",
+        "patchSetId": 13
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-13T02:00:10Z",
+      "side": 1,
+      "message": "Yep, but it isn\u0027t the scope of this change, which is just a simplification of the script itself.\n\nThe warning you see is a performance improvement on the GCP upload of the documentation.",
+      "parentUuid": "debdf625_3cdf7c89",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 95,
+        "endChar": 71
+      },
+      "revId": "fd6bd0f80ecf768253fda83330524e8dbab2fee2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
