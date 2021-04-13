@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9d47bd1_129872f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-13T16:24:37Z",
+      "side": 1,
+      "message": "Re-apply the +2 from Ponch",
+      "revId": "1561c80def0bd12f11a1ec139ea0759f62735f4c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b82825ba_0c3228ea",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-13T16:24:37Z",
+      "side": 1,
+      "message": "nit: unrelated change",
+      "revId": "1561c80def0bd12f11a1ec139ea0759f62735f4c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
