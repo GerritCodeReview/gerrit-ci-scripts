@@ -33,6 +33,24 @@
       "message": "Got first successful build: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-analytics-sbt-stable-3.4/",
       "revId": "369f09fc79c05d05dd4d85f7b83f324267486f22",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6378e024_501580be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-13T14:46:27Z",
+      "side": 1,
+      "message": "🎉",
+      "parentUuid": "4078a0f0_b4fbaac1",
+      "revId": "369f09fc79c05d05dd4d85f7b83f324267486f22",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
