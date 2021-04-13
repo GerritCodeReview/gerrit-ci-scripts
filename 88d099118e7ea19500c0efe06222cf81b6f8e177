@@ -22,6 +22,30 @@
       },
       "revId": "88d099118e7ea19500c0efe06222cf81b6f8e177",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2ba629c_a6f5a8e8",
+        "filename": "jenkins/gerrit-bazel-plugin-account.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-13T18:15:10Z",
+      "side": 1,
+      "message": "Due to custom build template own stable branch must be created.",
+      "parentUuid": "fecc8966_fd474fac",
+      "range": {
+        "startLine": 41,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 24
+      },
+      "revId": "88d099118e7ea19500c0efe06222cf81b6f8e177",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
