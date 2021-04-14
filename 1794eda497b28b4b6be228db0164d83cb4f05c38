@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76fb6285_de7bfac2",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-14T01:26:37Z",
+      "side": 1,
+      "message": "params",
+      "range": {
+        "startLine": 95,
+        "startChar": 158,
+        "endLine": 95,
+        "endChar": 163
+      },
+      "revId": "1794eda497b28b4b6be228db0164d83cb4f05c38",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
