@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa467887_0df10ae9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-14T01:46:49Z",
+      "side": 1,
+      "message": "This is working E2E, see:\nhttps://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/296/console",
+      "revId": "2f3ead125252527b2eaeb64702c65f138f5e52ea",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
