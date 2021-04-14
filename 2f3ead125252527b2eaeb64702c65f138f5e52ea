@@ -16,6 +16,29 @@
       "message": "This is working E2E, see:\nhttps://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/296/console",
       "revId": "2f3ead125252527b2eaeb64702c65f138f5e52ea",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "391b42a3_fc985031",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-04-14T20:53:23Z",
+      "side": 1,
+      "message": "this will be populated manually or by jenkins? If by jenkins how we will do that?",
+      "range": {
+        "startLine": 14,
+        "startChar": 26,
+        "endLine": 14,
+        "endChar": 40
+      },
+      "revId": "2f3ead125252527b2eaeb64702c65f138f5e52ea",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
