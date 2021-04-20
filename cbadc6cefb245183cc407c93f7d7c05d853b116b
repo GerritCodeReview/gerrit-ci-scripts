@@ -22,6 +22,30 @@
       },
       "revId": "cbadc6cefb245183cc407c93f7d7c05d853b116b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0fed631_f6384438",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-20T18:03:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "16d05c45_c299f4e9",
+      "range": {
+        "startLine": 5,
+        "startChar": 10,
+        "endLine": 5,
+        "endChar": 81
+      },
+      "revId": "cbadc6cefb245183cc407c93f7d7c05d853b116b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
