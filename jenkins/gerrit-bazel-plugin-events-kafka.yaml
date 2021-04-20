@@ -1,15 +1,15 @@
 - project:
-    name: kafka-events
+    name: events-kafka
     jobs:
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          targets: 'plugins/kafka-events plugins/kafka-events:kafka_events_tests'
+          targets: 'plugins/events-kafka plugins/events-kafka:events_kafka_tests'
           branch:
             - master
           gerrit-branch:
             - master
             - stable-3.4
       - 'plugin-{name}-bazel-{branch}':
-          targets: 'plugins/kafka-events plugins/kafka-events:kafka_events_tests'
+          targets: 'plugins/events-kafka plugins/events-kafka:events_kafka_tests'
           branch:
             - stable-3.3
             - stable-3.2
