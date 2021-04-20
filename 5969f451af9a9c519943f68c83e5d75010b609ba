@@ -16,6 +16,29 @@
       "message": "Success: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-events-gcloud-pubsub-bazel-master-stable-3.3/",
       "revId": "5969f451af9a9c519943f68c83e5d75010b609ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ba49845_8e321bbf",
+        "filename": "jenkins/gerrit-bazel-plugin-events-gcloud-pubsub.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-20T17:09:17Z",
+      "side": 1,
+      "message": "This is not needed",
+      "range": {
+        "startLine": 3,
+        "startChar": 4,
+        "endLine": 3,
+        "endChar": 30
+      },
+      "revId": "5969f451af9a9c519943f68c83e5d75010b609ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
