@@ -1,0 +1,9 @@
+- project:
+    name: events-gcloud-pubsub
+    repo: events-gcloud-pubsub
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.3
