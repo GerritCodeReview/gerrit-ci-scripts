@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d95ea6f_3b0d42ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-04-20T14:14:02Z",
+      "side": 1,
+      "message": "https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-events-aws-kinesis-bazel-master-stable-3.3/",
+      "revId": "2b901ed64b79b45902547594bc936f6c92aa6528",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
