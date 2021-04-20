@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     python-pip \
     python-yaml \
     python-jenkinsapi \
+    python3-distutils \
     ant \
     autoconf \
     automake \
