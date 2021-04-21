@@ -37,7 +37,7 @@ BAZEL_OPTS="$BAZEL_OPTS --flaky_test_attempts 3 \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
 bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test plugins/{name}/...
 
-for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)
+for JAR in $(find bazel-bin/plugins/{name} -maxdepth 1 -name {name}*.jar)
 do
     PLUGIN_VERSION=$(git describe  --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
