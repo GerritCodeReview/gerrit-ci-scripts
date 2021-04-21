@@ -16,6 +16,23 @@
       "message": "Thanks for the quick fix. Should we also do the same in gerrit-bazel-build-plugin-manual.sh?",
       "revId": "adc21ecb6b20eacb2692a1fec82416eb6b962537",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75c241f6_7a6c0f6e",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-04-21T13:18:15Z",
+      "side": 1,
+      "message": "Looks like there are other scripts not using the maxdepth. Shall we fix them as well in a follow up change?\n\n➜  gerrit-ci-scripts git:(master) git grep \"for JAR\" . | grep -v maxdepth\njenkins/gerrit-bazel-build-account-plugin.sh:for JAR in $(find bazel-bin/plugins/account -name account*.jar)\njenkins/gerrit-bazel-build-its-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)\njenkins/gerrit-bazel-build-its-plugin.sh:for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)\njenkins/gerrit-bazel-build-owners-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)\njenkins/gerrit-bazel-build-owners-plugin.sh:for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)\njenkins/gerrit-bazel-build-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)\njenkins/gerrit-bazel-build-plugin-manual.sh:for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)",
+      "revId": "adc21ecb6b20eacb2692a1fec82416eb6b962537",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
