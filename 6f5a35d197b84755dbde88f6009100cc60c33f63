@@ -16,6 +16,23 @@
       "message": "The tests are failing in the same way as in gcloud-pubsub-events plugin:\n\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-kinesis-events-gh-bazel-master-stable-3.4/1/console",
       "revId": "6f5a35d197b84755dbde88f6009100cc60c33f63",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "842854cb_4bd23c89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-04-21T18:31:26Z",
+      "side": 1,
+      "message": "@davido, shall we abandon this?\nA similar exercise should be done for the new events-aws-kinesis repo.",
+      "revId": "6f5a35d197b84755dbde88f6009100cc60c33f63",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
