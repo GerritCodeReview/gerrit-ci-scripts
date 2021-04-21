@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c7128d4_4fc91cd4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-04-21T18:15:44Z",
+      "side": 1,
+      "message": "Verified at: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-events-gcloud-pubsub-bazel-stable-3.3/",
+      "revId": "23715c82c725c87253b92b534e5f694d7a79120c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
