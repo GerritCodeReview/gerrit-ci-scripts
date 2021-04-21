@@ -5,8 +5,11 @@
           branch:
             - master
           gerrit-branch:
-            - stable-3.0
+            - stable-3.4
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - stable-2.16
+            - stable-3.1
+            - stable-3.2
+            - stable-3.3
       - 'plugin-{name}-verifier'
