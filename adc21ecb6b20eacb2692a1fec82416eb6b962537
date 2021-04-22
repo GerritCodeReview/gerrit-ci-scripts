@@ -33,6 +33,24 @@
       "message": "Looks like there are other scripts not using the maxdepth. Shall we fix them as well in a follow up change?\n\n➜  gerrit-ci-scripts git:(master) git grep \"for JAR\" . | grep -v maxdepth\njenkins/gerrit-bazel-build-account-plugin.sh:for JAR in $(find bazel-bin/plugins/account -name account*.jar)\njenkins/gerrit-bazel-build-its-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)\njenkins/gerrit-bazel-build-its-plugin.sh:for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)\njenkins/gerrit-bazel-build-owners-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)\njenkins/gerrit-bazel-build-owners-plugin.sh:for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)\njenkins/gerrit-bazel-build-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)\njenkins/gerrit-bazel-build-plugin-manual.sh:for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)",
       "revId": "adc21ecb6b20eacb2692a1fec82416eb6b962537",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d364ce0_02a83a75",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-22T08:52:55Z",
+      "side": 1,
+      "message": "\u003e Looks like there are other scripts not using the maxdepth. Shall we fix them as well in a follow up change?\n\u003e \n\u003e ➜  gerrit-ci-scripts git:(master) git grep \"for JAR\" . | grep -v maxdepth\n\u003e jenkins/gerrit-bazel-build-account-plugin.sh:for JAR in $(find bazel-bin/plugins/account -name account*.jar)\n\u003e jenkins/gerrit-bazel-build-its-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)\n\u003e jenkins/gerrit-bazel-build-its-plugin.sh:for JAR in $(find bazel-bin/plugins/its-{name} -name its-{name}*.jar)\n\u003e jenkins/gerrit-bazel-build-owners-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)\n\u003e jenkins/gerrit-bazel-build-owners-plugin.sh:for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)\n\nNone of those plugins have the same issue of the duplicates.\n\n\u003e jenkins/gerrit-bazel-build-plugin-branch.sh:for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)\n\nThis is fixed in this change.\n\n\u003e jenkins/gerrit-bazel-build-plugin-manual.sh:for JAR in $(find bazel-bin/plugins/{name} -name {name}*.jar)\n\nThis should be unused, let me address his removal in a follow-up change.",
+      "parentUuid": "75c241f6_7a6c0f6e",
+      "revId": "adc21ecb6b20eacb2692a1fec82416eb6b962537",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
