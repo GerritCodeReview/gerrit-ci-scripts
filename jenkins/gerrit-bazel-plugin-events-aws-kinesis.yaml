@@ -1,6 +1,11 @@
 - project:
     name: events-aws-kinesis
     jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.4
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - stable-3.3
