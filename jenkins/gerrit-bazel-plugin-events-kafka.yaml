@@ -1,15 +1,12 @@
 - project:
     name: events-kafka
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
-            - stable-3.4
       - 'plugin-{name}-bazel-{branch}':
           branch:
-            - stable-2.16
-            - stable-3.1
-            - stable-3.2
+            - master
+            - stable-3.4
             - stable-3.3
+            - stable-3.2
+            - stable-3.1
+            - stable-2.16
       - 'plugin-{name}-verifier'
