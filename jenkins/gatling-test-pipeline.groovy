@@ -32,6 +32,8 @@ pipeline {
             string(name: 'GIT_HTTP_USERNAME', defaultValue: '', description: 'Username for Git/HTTP testing, use vault by default')
             password(name: 'GIT_HTTP_PASSWORD', defaultValue: '', description: 'Password for Git/HTTP testing, use vault by default')
 
+            string(name: 'S3_EXPORT_LOGS_BUCKET_NAME', defaultValue: 'gerritforge-export-logs', description: 'S3 bucket to export logs to')
+
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
             string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
@@ -173,7 +175,17 @@ pipeline {
                     }
                 }
             }
-
+            stage("Export Cloudwatch logs to S3") {
+                steps {
+                    withCredentials([usernamePassword(usernameVariable: "AWS_ACCESS_KEY_ID",
+                            passwordVariable: "AWS_SECRET_ACCESS_KEY",
+                            credentialsId: "aws-credentials-id")]) {
+                        dir ('aws-gerrit/single-primary') {
+                            sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} EXPORT_FROM_MILLIS=${epochTime} S3_EXPORT_LOGS_BUCKET_NAME=${params.S3_EXPORT_LOGS_BUCKET_NAME} export-logs"
+                        }
+                    }
+                }
+            }
         }
         post {
             cleanup {
