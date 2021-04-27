@@ -16,6 +16,23 @@
       "message": "CI does not have jq, so it fails with:\n\n+ make AWS_REGION\u003dus-east-1 AWS_PREFIX\u003djenkins EXPORT_FROM_MILLIS\u003d1619515206443 S3_EXPORT_LOGS_BUCKET_NAME\u003dgerritforge-export-logs export-logs\n/bin/bash: jq: command not found\nException ignored in: \u003c_io.TextIOWrapper name\u003d\u0027\u003cstdout\u003e\u0027 mode\u003d\u0027w\u0027 encoding\u003d\u0027utf-8\u0027\u003e\nBrokenPipeError: [Errno 32] Broken pipe\nLaunched export task id  from 0000000000000 to 1619516355000\nwhile [[ $(aws logs describe-export-tasks --task-id \"\" | jq -r \u0027.exportTasks[0].status.code\u0027) \u003d~ RUNNING|PENDING|PENDING_CANCEL ]]; do \\\n  \t\techo \"Wait for task gerrit-export-logs-ts-1619516354 (id: ) to complete\"; \\\n  \t\tsleep 5; \\\n  \tdone;\n/bin/bash: jq: command not found",
       "revId": "6bfcde0e65256a0f8598854632e5fc5b1fe6cdd8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21f6076d_85383ee4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-04-27T10:16:12Z",
+      "side": 1,
+      "message": "Failing run: https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/318/console",
+      "revId": "6bfcde0e65256a0f8598854632e5fc5b1fe6cdd8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
