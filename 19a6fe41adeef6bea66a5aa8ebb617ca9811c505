@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9abc14a_6f7330d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-04-28T07:54:34Z",
+      "side": 1,
+      "message": "The logs are now exported and available from the console log.\nAn example:\n\nhttps://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/327/console",
+      "revId": "19a6fe41adeef6bea66a5aa8ebb617ca9811c505",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
