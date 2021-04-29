@@ -186,6 +186,14 @@ pipeline {
                     }
                 }
             }
+            stage('Check results') {
+                steps {
+                    sh 'echo check gatling test results'
+                    gatlingCheck(metrics: [
+                            'global.okRate = 100',
+                    ])
+                }
+            }
         }
         post {
             cleanup {
