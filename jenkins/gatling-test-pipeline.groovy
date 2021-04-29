@@ -186,6 +186,19 @@ pipeline {
                     }
                 }
             }
+            stage('Check tests results') {
+                steps {
+                    script {
+                        def failed_tests = sh(
+                                returnStdout: true,
+                                script: "for i in `find ${WORKSPACE} -name \"global_stats.json\"`; do cat \$i | jq '.numberOfRequests.ko'| grep -v '0' || true;  done;"
+                        )
+                        if (failed_tests.trim()) {
+                            error("Setting build as failed because some gatling tests were not OK")
+                        }
+                    }
+                }
+            }
         }
         post {
             cleanup {
