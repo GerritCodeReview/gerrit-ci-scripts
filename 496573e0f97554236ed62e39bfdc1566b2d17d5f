@@ -16,6 +16,23 @@
       "message": "Despite different attempts, the gatlingCheck plugin did not work.\nIt kept failing with \"FileNotFound\" even though the stats.json files exist, have content and have the right permissions. You can find an example of this failure here[1].\n\nI looked at get the source code of the gatlingCheck. This is where the error occurs[2] and I can\u0027t see no reasons why it should fail, since the stats.json file exists.\n\nHaving said that, our requirement is so easy (just check for any failure), that this solution works without any need for us to use the plugin, so I provided this solution, which works as expected.\n\n\n\n\n[1]https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/339/console\n[2]https://github.com/jenkinsci/gatling-check-plugin/blob/master/src/main/java/org/jenkinsci/plugins/gatlingcheck/GatlingChecker.java#L61",
       "revId": "496573e0f97554236ed62e39bfdc1566b2d17d5f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbe6e1f0_3bcc29cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-04-30T14:36:04Z",
+      "side": 1,
+      "message": "Nice.",
+      "revId": "496573e0f97554236ed62e39bfdc1566b2d17d5f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
