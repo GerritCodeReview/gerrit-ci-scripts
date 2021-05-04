@@ -1,0 +1,7 @@
+- project:
+    name: events-rabbitmq
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+      - 'plugin-{name}-verifier'
