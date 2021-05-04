@@ -1,0 +1,12 @@
+- job:
+    name: multi-site-e2e-tests
+    project-type: pipeline
+    scm:
+      - git:
+          credentials-id: gerrit.googlesource.com
+          url: https://gerrit.googlesource.com/a/multi-site
+          branches:
+            - master
+    dsl: !include-raw: multi-site-e2e-tests.groovy
+    triggers:
+      - timed: "@midnight"
