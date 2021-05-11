@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-node-wct:$NODE_VER-$WCT_VER-$CHROME_VER
+FROM gerritforge/gerrit-ci-slave-node-wct:$NODE_VER-$WCT_VER-latest
 
 ARG BAZEL_VER
 ARG BUILDIFIER_VER

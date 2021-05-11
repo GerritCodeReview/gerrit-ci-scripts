@@ -1,29 +1,17 @@
-include ../chrome-vers.mk
-
 NO_CACHE=false
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-slave-bazel:debian-buster
+IMAGE=${PREFIX}/gerrit-ci-slave-bazel:debian-buster-latest
 
 # Targets
 
 build:
-	@for chrome_ver in $(CHROME_VERS); \
-        do \
-		cat Dockerfile | CHROME_VER=$$chrome_ver envsubst > Dockerfile-subst ; \
-		docker build --no-cache=$(NO_CACHE) -f Dockerfile-subst -t ${IMAGE}-$$chrome_ver . ; \
-	done
+	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
 
 publish:
-	@for chrome_ver in $(CHROME_VERS); \
-        do \
-		docker push ${IMAGE}-$$chrome_ver ; \
-	done
+	docker push ${IMAGE}
 
 clean:
-	@for chrome_ver in $(CHROME_VERS); \
-        do \
-		docker rmi -f ${IMAGE}-$$chrome_ver ; \
-	done
+	docker rmi -f ${IMAGE}
 
 .PHONY: clean image publish
 
