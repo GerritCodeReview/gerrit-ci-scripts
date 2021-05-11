@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-80.0.3987.149
+FROM gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-latest
 
 RUN apt-get update --allow-releaseinfo-change && \
     apt-get install -y gnupg2 && \
