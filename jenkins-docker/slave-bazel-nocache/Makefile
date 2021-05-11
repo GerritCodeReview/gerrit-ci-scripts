@@ -1,8 +1,6 @@
-include ../chrome-vers.mk
-
 NO_CACHE=false
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-slave-bazel:debian-buster-nocache
+IMAGE=${PREFIX}/gerrit-ci-slave-bazel:debian-buster-nocache-latest
 BAZEL_VER=4.0.0
 BUILDIFIER_VER=4.0.0
 BAZELISK_VER=1.7.4
@@ -12,31 +10,22 @@ WCT_VER=6.8.0
 # Targets
 
 build:
-	@for chrome_ver in $(CHROME_VERS); \
-	do \
-		cat Dockerfile | \
-		BAZEL_VER=${BAZEL_VER} \
-		BUILDIFIER_VER=${BUILDIFIER_VER} \
-		BAZELISK_VER=${BAZELISK_VER} \
-		NODE_VER=${NODE_VER} \
-		WCT_VER=${WCT_VER} \
-		CHROME_VER=$$chrome_ver envsubst > Dockerfile-subst; \
-		docker build --no-cache=$(NO_CACHE) \
-		-f Dockerfile-subst \
-		-t ${IMAGE}-$$chrome_ver . ; \
-	done
+	cat Dockerfile | \
+	BAZEL_VER=${BAZEL_VER} \
+	BUILDIFIER_VER=${BUILDIFIER_VER} \
+	BAZELISK_VER=${BAZELISK_VER} \
+	NODE_VER=${NODE_VER} \
+	WCT_VER=${WCT_VER} \
+	envsubst > Dockerfile-subst
+	docker build --no-cache=$(NO_CACHE) \
+	-f Dockerfile-subst \
+	-t ${IMAGE} .
 
 publish:
-	@for chrome_ver in $(CHROME_VERS); \
-	do \
-		docker push ${IMAGE}-$$chrome_ver; \
-	done
+	docker push ${IMAGE}
 
 clean:
-	@for chrome_ver in $(CHROME_VERS); \
-        do \
-		docker rmi -f ${IMAGE}-$$chrome_ver; \
-	done
+	docker rmi -f ${IMAGE}
 
 .PHONY: clean image publish
 

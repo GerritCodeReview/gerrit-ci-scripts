@@ -1,30 +1,19 @@
-include ../chrome-vers.mk
-
 NO_CACHE ?= false
 DEBIAN_VER ?= buster
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-slave-chrome:$(DEBIAN_VER)
+IMAGE=${PREFIX}/gerrit-ci-slave-chrome:$(DEBIAN_VER)-latest
 
 build: Makefile Dockerfile
-	@for chrome_ver in $(CHROME_VERS); \
-	do \
-		echo "Building Docker for $(DEBIAN_VER) / Chrome v$$chrome_ver"; \
-		echo "========================================================"; \
-		cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$$chrome_ver envsubst > Dockerfile-$(DEBIAN_VER)-$$chrome_ver; \
-		docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$$chrome_ver -t "$(IMAGE)-$$chrome_ver" .;  \
-	done
+	echo "Building Docker for $(DEBIAN_VER)
+	echo "========================================================"
+	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)-latest
+	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-latest -t "$(IMAGE)"
 
 publish:
-	for chrome_ver in $(CHROME_VERS); \
-	do \
-		docker push $(IMAGE)-$$chrome_ver; \
-	done
+	docker push $(IMAGE)
 
 clean:
-	for chrome_ver in $(CHROME_VERS); \
-	do \
-		docker rmi -f $(IMAGE)-$$chrome_ver; \
-	done
+	docker rmi -f $(IMAGE)
 
 .PHONY: build publish clean
 

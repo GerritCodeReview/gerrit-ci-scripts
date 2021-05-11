@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-slave-bazel:debian-buster-80.0.3987.149
+FROM gerritforge/gerrit-ci-slave-bazel:debian-buster-latest
 
 # SBT Setup
 RUN apt-get update && \
