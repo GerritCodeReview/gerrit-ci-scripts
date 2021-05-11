@@ -39,7 +39,7 @@ def call(Map parm = [:]) {
                 if (flakyBuildsModes.size() > 0){
                     parallel flakyBuildsModes.collectEntries {
                         ["Gerrit-verification(${it})" :
-                            prepareBuildsForMode("Gerrit-verifier-bazel", it, 3)]
+                            prepareBuildsForMode(buildVerificationJob(), it, 3)]
                     }
                 }
             }
@@ -165,6 +165,10 @@ def collectBuildModes() {
     }
 }
 
+def buildVerificationJob() {
+    (env.GERRIT_BRANCH == "master") ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-bazel"
+}
+
 def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
     return {
         stage("${buildName}/${mode}") {
@@ -205,7 +209,7 @@ def collectBuilds() {
     if (hasChangeNumber()) {
        builds["Gerrit-codestyle"] = prepareBuildsForMode("Gerrit-codestyle")
        Builds.modes.each {
-          builds["Gerrit-verification(${it})"] = prepareBuildsForMode("Gerrit-verifier-bazel", it)
+          builds["Gerrit-verification(${it})"] = prepareBuildsForMode((buildVerificationJob()), it)
        }
     } else {
        builds["java8"] = { -> build "Gerrit-bazel-${env.BRANCH_NAME}" }
