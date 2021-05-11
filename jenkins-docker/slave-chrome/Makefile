@@ -17,7 +17,10 @@ build: Makefile Dockerfile
 publish:
 	for chrome_ver in $(CHROME_VERS); \
 	do \
-		docker push $(IMAGE)-$$chrome_ver; \
+		chrome_curr_ver=$$(docker run --entrypoint=/usr/bin/google-chrome -ti $(IMAGE)-$$chrome_ver --version | awk '{print $$3}'); \
+		docker tag $(IMAGE)-$$chrome_ver $(IMAGE)-$$chrome_curr_ver \
+		echo "Pushing $(IMAGE)-$$chrome_curr_ver"; \
+		docker push $(IMAGE)-$$chrome_curr_ver; \
 	done
 
 clean:
