@@ -1,9 +1,8 @@
-include ../chrome-vers.mk
-
 NO_CACHE ?= false
 DEBIAN_VER ?= buster
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-slave-chrome:$(DEBIAN_VER)
+CHROME_VERS=latest 69.0.3497.92
 
 build: Makefile Dockerfile
 	@for chrome_ver in $(CHROME_VERS); \
@@ -15,9 +14,14 @@ build: Makefile Dockerfile
 	done
 
 publish:
+	echo "CHROME_VERS ?="
 	for chrome_ver in $(CHROME_VERS); \
 	do \
-		docker push $(IMAGE)-$$chrome_ver; \
+		chrome_curr_ver=$$(docker run --entrypoint=/usr/bin/google-chrome -ti $(IMAGE)-$$chrome_ver --version | awk '{print $$3}'); \
+		docker tag $(IMAGE)-$$chrome_ver $(IMAGE)-$$chrome_curr_ver \
+		echo "Pushing $(IMAGE)-$$chrome_curr_ver"; \
+		docker push $(IMAGE)-$$chrome_curr_ver; \
+		echo -n " $$chrome_curr_ver" >> ../chrome-vers.mk \
 	done
 
 clean:
