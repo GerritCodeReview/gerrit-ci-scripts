@@ -38,7 +38,7 @@
       <templates>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
-          <labelString>bazel-debian-chrome80</labelString>
+          <labelString>bazel-debian-chrome-latest</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
           </connector>
@@ -52,7 +52,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-buster-80.0.3987.149</image>
+            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-buster-latest</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>

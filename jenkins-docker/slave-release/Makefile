@@ -39,7 +39,7 @@ run:
 		-v ${GIT_COOKIES}:/home/jenkins/.gitcookies
 
 pull:
-	docker pull gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-80.0.3987.149
+	docker pull gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-latest
 
 build: pull
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
