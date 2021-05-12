@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbac58f4_09883239",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-12T23:31:24Z",
+      "side": 1,
+      "message": "Actually, we tried hard to run the PolyGerrit tests on any Chrome more recent than v69 and they failed. That\u0027s why we are stuck with v69.\n\nDo we really need to embed a browser for running the PolyGerrit tests? I believe we don\u0027t isn\u0027t it, thanks to the Karma-test runner.",
+      "parentUuid": "c1abd618_a48d9fd4",
+      "range": {
+        "startLine": 7,
+        "startChar": 50,
+        "endLine": 7,
+        "endChar": 53
+      },
+      "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "eda6dc3c_42a38de8",
@@ -61,6 +85,24 @@
       "writtenOn": "2021-05-12T15:12:10Z",
       "side": 1,
       "message": "@Luca, how can we split 2.16 CI so that it\u0027s the only thing that needs this old chrome version and newer branches can move to a newer version?",
+      "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07aeb4f0_911dbd6e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-12T23:31:24Z",
+      "side": 1,
+      "message": "We are not expecting any more fix on PolyGerrit in v2.16: that version is technically EOL but we keep it alive only for allowing people to migrate to NoteDb.\n\nWe can just drop the execution of PolyGerrit tests in v2.16 and also drop the browser in it.",
+      "parentUuid": "eda6dc3c_42a38de8",
       "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
