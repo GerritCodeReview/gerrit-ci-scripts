@@ -22,6 +22,30 @@
       },
       "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1abd618_a48d9fd4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2021-05-12T13:41:46Z",
+      "side": 1,
+      "message": "Do the PolyGerrit UI Tests run on every version in chrome-vers.mk? I can only see tests with v69 when searching through the CI pages for my change, even though chrome-vers also has v80. I expected to find a passing build somewhere that was using v80.\n\nhttps://gerrit-ci.gerritforge.com/job/Gerrit-verifier-bazel/105594/console\n\nShould I be updating both v80 and v69 references in config.xml to v90 and remove v80 as well?",
+      "parentUuid": "41f65968_a6cb685e",
+      "range": {
+        "startLine": 7,
+        "startChar": 50,
+        "endLine": 7,
+        "endChar": 53
+      },
+      "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
