@@ -46,6 +46,30 @@
       },
       "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05f6ca5f_4ff91a4d",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2021-05-12T13:41:46Z",
+      "side": 0,
+      "message": "Is the concern that -any- branch would fail with the new chrome version and stable-3.1 is just the most likely to have an issue being the oldest/Polymer migration? I think users are mostly using the much newer Chrome versions anyway (v69 was from 9/2018), so we should update the CI chrome version regardless and then fix any failures for supported branches. WDYT?",
+      "parentUuid": "f6ca3632_93c6d156",
+      "range": {
+        "startLine": 104,
+        "startChar": 74,
+        "endLine": 104,
+        "endChar": 86
+      },
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
