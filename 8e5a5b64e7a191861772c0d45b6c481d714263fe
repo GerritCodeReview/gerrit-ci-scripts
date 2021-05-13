@@ -72,6 +72,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c5a4b85_61bbbea2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-13T06:24:45Z",
+      "side": 1,
+      "message": "We do need Chrome installed locally:\n\n  $ bazel test //polygerrit-ui:karma_test\n  [...]\nSTART:\n13 05 2021 05:52:53.555:INFO [karma-server]: Karma v4.4.1 server started at http://0.0.0.0:9876/\n13 05 2021 05:52:53.557:INFO [launcher]: Launching browsers CustomChromeHeadless with concurrency unlimited\n13 05 2021 05:52:53.562:INFO [launcher]: Starting browser ChromeHeadless\n13 05 2021 05:53:13.029:INFO [HeadlessChrome 90.0.4430 (Linux 0.0.0)]: Connected on socket AqV2QPY-w07na2P2AAAA with id \n\n\n^^^You see, that my local Chrome version is used in Headless mode: 90.0.4430.\n\nMy Chrome browser is reporting here:\n\n  Version 90.0.4430.72 (Official Build) beta (64-bit)\n\nSo the plan would be:\n\n* 1. Drop PolyGerrit WCT build on 2.16 CI job\n* 2. Bump Google Chrome version to the latest available in CI docker image\n* 3. According to the release plan, gerrit release 3.1 is going to be discontinued and all CI build jobs for core and plugin will be arhived. Gerrit 3.1 is the last release that is using outdated PolyGerrit version. Starting from Gerrit 3.2, Polymer 3.0 is used. We should verify though, that it works fine against latest Chrome releases. (basically, just rebuild docker image with the latest chrome and verify that the tests on all supported branches (stable-3.2/stable-3.3/stable-3.4) are still passing.",
+      "parentUuid": "bbac58f4_09883239",
+      "range": {
+        "startLine": 7,
+        "startChar": 50,
+        "endLine": 7,
+        "endChar": 53
+      },
+      "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "eda6dc3c_42a38de8",
@@ -103,6 +127,24 @@
       "side": 1,
       "message": "We are not expecting any more fix on PolyGerrit in v2.16: that version is technically EOL but we keep it alive only for allowing people to migrate to NoteDb.\n\nWe can just drop the execution of PolyGerrit tests in v2.16 and also drop the browser in it.",
       "parentUuid": "eda6dc3c_42a38de8",
+      "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c3d89f5_250c2e1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-13T06:24:45Z",
+      "side": 1,
+      "message": "We discussed this yesterday, during virtual gerrit hackathon. We need older Chron version for PolyGerrit WCT tests only, that is used in 2.16 release.\n\nWe discussed three options:\n\n1. Discontinue 2.16 and remove any community support for 2.16 including CI job for gerrit core an plgins\n2. Remove PolyGerrit WCT checker on 2.16 and not verify it any more during the build on 2.16 branch\n3. Continue to support outdated Chrome versions in its own docker image and continue to verify PolyGerrit WCT on 2.16 branch\n\nConsclusion:\n\nApproach 1. was rejected, at least for now, but should be re-considered. We should probably conduct a poll about it. But in 1 or 2 years we should be there.\n\nApproach 2. is good to go.\n\nApproach 3. wood be the best, but it\u0027s clear that it would require more maintenance efforts, e.g. to maintain outdated/discontinued Chrome releases in CI docker images.",
+      "parentUuid": "07aeb4f0_911dbd6e",
       "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
