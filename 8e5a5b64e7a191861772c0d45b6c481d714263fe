@@ -147,6 +147,29 @@
       "parentUuid": "07aeb4f0_911dbd6e",
       "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88feeb4d_d5b561ec",
+        "filename": "jenkins-docker/chrome-vers.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-13T07:52:57Z",
+      "side": 1,
+      "message": "This doesn\u0027t work if you try to build docker image:\n\nhttp://www.slimjetbrowser.com/chrome/files/90.0.4430/google-chrome-stable_current_amd64.deb\nResolving www.slimjetbrowser.com (www.slimjetbrowser.com)... 172.67.173.50, 104.21.30.153, 2606:4700:3037::6815:1e99, ...\nConnecting to www.slimjetbrowser.com (www.slimjetbrowser.com)|172.67.173.50|:80... connected.\nHTTP request sent, awaiting response... 404 Not Found\n2021-05-13 07:51:25 ERROR 404: Not Found.",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 24
+      },
+      "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
