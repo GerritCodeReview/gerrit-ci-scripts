@@ -135,6 +135,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fcb8e190_21229336",
+        "filename": "jenkins-docker/slave-chrome/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T03:56:21Z",
+      "side": 1,
+      "message": "Running HeadlessChrome without sandbox solved it, this diff:\n\ndiff --git a/polygerrit-ui/karma.conf.js b/polygerrit-ui/karma.conf.js\nindex fe3fa0ceea..bb68732fd7 100644\n--- a/polygerrit-ui/karma.conf.js\n+++ b/polygerrit-ui/karma.conf.js\n@@ -209,7 +209,7 @@ module.exports \u003d function(config) {\n       // Based on https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai\n       \"CustomChromeHeadless\": {\n         base: \u0027ChromeHeadless\u0027,\n-        flags: [\u0027--disable-translate\u0027, \u0027--disable-extensions\u0027],\n+        flags: [\u0027--disable-translate\u0027, \u0027--disable-extensions\u0027, \u0027--no-sandbox\u0027],\n       },\n       \"ChromeDev\": {\n         base: \u0027Chrome\u0027,\n\nthe log is:\n\n  START:\n14 05 2021 03:50:44.749:INFO [karma-server]: Karma v4.4.1 server started at http://0.0.0.0:9876/\n14 05 2021 03:50:44.751:INFO [launcher]: Launching browsers CustomChromeHeadless with concurrency unlimited\n14 05 2021 03:50:44.757:INFO [launcher]: Starting browser ChromeHeadless\n14 05 2021 03:50:47.722:INFO [HeadlessChrome 86.0.4240 (Linux 0.0.0)]: Connected on socket rpBeg828d7w0SAX0AAAA with id 35603074\n  [...]\n  //polygerrit-ui:karma_test                                               PASSED in 117.1s",
+      "parentUuid": "a0aa17bf_f9a6d815",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 49
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b131a2b5_b0f9fa7e",
         "filename": "jenkins-docker/slave-node-wct/Dockerfile",
         "patchSetId": 3
