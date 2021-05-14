@@ -111,6 +111,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a0aa17bf_f9a6d815",
+        "filename": "jenkins-docker/slave-chrome/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T02:59:53Z",
+      "side": 1,
+      "message": "Besides all the above arguments, Karma tests just don\u0027t work against latest Chrome version, at least not in docker. (It works for me locally)\n\nSteps to reproduce the problem in docker with the latest Chrome distribution:\n\n1. apply this change\n2. build slave-debian image\n3. build slave-chrome image\n4. build slave-bazel-nocache\n5. run resulting docker image\n\n  $ docker run  -it gerritforge/gerrit-ci-slave-bazel:debian-buster-nocache-90.0.4430 bash\n\n6. change to jenkins user:\n\n  $ su - jenkins\n\n7. clone gerrit:\n\n  $ git clone https://gerrit-review.googlesource.com/gerrit\n\n8. change to gerrit directory\n\n  $ cd gerrit\n\n9. Run karma tests on Gerrit@HEAD:\n\n  jenkins@6b20363584dd:~/projects/gerrit$ ./polygerrit-ui/app/run_test.sh\n  [...]\n\nThe tests is failing with:\n\n4 05 2021 02:38:29.404:ERROR [launcher]: ChromeHeadless stderr: mkdir: cannot create directory \u0027/.local\u0027: Permission denied\ntouch: cannot touch \u0027/.local/share/applications/mimeapps.list\u0027: No such file or directory\nFailed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno \u003d Operation not permitted\nFailed to generate minidump.\n14 05 2021 02:38:29.405:ERROR [launcher]: ChromeHeadless failed 2 times (cannot start). Giving up.\n\nComplete error log is here: [1].\n\n[1] http://paste.openstack.org/show/805372",
+      "parentUuid": "7b72d834_11b6be9b",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 49
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b131a2b5_b0f9fa7e",
         "filename": "jenkins-docker/slave-node-wct/Dockerfile",
         "patchSetId": 3

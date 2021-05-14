@@ -116,6 +116,30 @@
       },
       "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eabd5401_3784eb67",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T02:59:53Z",
+      "side": 0,
+      "message": "Moved that part to Chrome Dockerfile.",
+      "parentUuid": "4798c5b6_69f24ef9",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 42
+      },
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
