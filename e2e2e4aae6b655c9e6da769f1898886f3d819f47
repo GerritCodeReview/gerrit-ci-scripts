@@ -69,6 +69,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6b88da9_2d1f7a3a",
+        "filename": "jenkins-docker/chrome-vers.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T05:57:12Z",
+      "side": 1,
+      "message": "Chrome 90.0.4430.72 works as expected (with --no-sandbox option).",
+      "parentUuid": "7109a027_bd334908",
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "acbd6518_e6405e27",
@@ -157,6 +175,48 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0511279_8aea8351",
+        "filename": "jenkins-docker/slave-chrome/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T05:57:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fcb8e190_21229336",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 49
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "308697da_80ab477c",
+        "filename": "jenkins-docker/slave-chrome/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T05:57:12Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "acbd6518_e6405e27",
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b131a2b5_b0f9fa7e",
@@ -215,6 +275,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "09694772_5d960c8a",
+        "filename": "jenkins-docker/slave-release/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T05:57:12Z",
+      "side": 1,
+      "message": "Reverted. Done.",
+      "parentUuid": "e8430790_756dc931",
+      "range": {
+        "startLine": 1,
+        "startChar": 61,
+        "endLine": 1,
+        "endChar": 70
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b8433783_a5c61179",
@@ -238,6 +322,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "851f74a9_64648cf5",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T05:57:12Z",
+      "side": 1,
+      "message": "Reverted. Done.",
+      "parentUuid": "b8433783_a5c61179",
+      "range": {
+        "startLine": 42,
+        "startChar": 69,
+        "endLine": 42,
+        "endChar": 78
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "897e4be5_1c9d3727",
@@ -251,6 +359,30 @@
       "writtenOn": "2021-05-14T00:59:56Z",
       "side": 1,
       "message": "latest",
+      "range": {
+        "startLine": 1,
+        "startChar": 53,
+        "endLine": 1,
+        "endChar": 62
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4f68c91_2478b739",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-14T05:57:12Z",
+      "side": 1,
+      "message": "Reverted. Done.",
+      "parentUuid": "897e4be5_1c9d3727",
       "range": {
         "startLine": 1,
         "startChar": 53,
