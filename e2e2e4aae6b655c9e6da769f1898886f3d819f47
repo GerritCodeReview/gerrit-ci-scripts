@@ -18,6 +18,40 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "17937a48_6d123f10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-14T00:59:56Z",
+      "side": 1,
+      "message": "I am fine to accept dropping old Chrome versions and WCT altogether.\nHowever, that would have the consequence of dropping the validation of Gerrit v2.16 and declaring a de-facto EOL of that release (with the exception of the NoteDb migration process, which does not actually require to even run Gerrit).\n\nWe do need the ESC to discuss with the Community and make a decision about it.\nUntil then, I believe this change cannot proceed as-is.",
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7109a027_bd334908",
+        "filename": "jenkins-docker/chrome-vers.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-14T00:59:56Z",
+      "side": 1,
+      "message": "We should also keep 69.0.3497.92 for now, until we decide to drop support and validation for v2.16 (with the exception of NoteDb conversion of course)",
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "acbd6518_e6405e27",
@@ -31,6 +65,115 @@
       "writtenOn": "2021-05-13T08:55:40Z",
       "side": 1,
       "message": "This is the latest release: 90.0.4430.212-1\n\n  Selecting previously unselected package google-chrome-stable.\n(Reading database ... 39251 files and directories currently installed.)\nPreparing to unpack /tmp/chrome.deb ...\nUnpacking google-chrome-stable (90.0.4430.212-1) ...\ndpkg: dependency problems prevent configuration of google-chrome-stable:\n google-chrome-stable depends on fonts-liberation; however:\n  Package fonts-liberation is not installed.",
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b72d834_11b6be9b",
+        "filename": "jenkins-docker/slave-chrome/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-14T00:59:56Z",
+      "side": 1,
+      "message": "AFAIK Google doesn\u0027t provide the old versions of Chrome for download.\n\nAlso, the release is not going to be 90.0.4430.212-1 for longer: it will create the nasty situation where a rebuild of the same image twice would produce two different results that may also break existing tests.\n\nI know that Google always updates Gerrit master with the latest Chrome version and keep the tests green, however, that does not necessarily happens for stable branches.",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 49
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b131a2b5_b0f9fa7e",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-14T00:59:56Z",
+      "side": 1,
+      "message": "We need an ESC decision to drop v2.16 (with exclusion of just the NoteDb migration) before accepting this removal.",
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8430790_756dc931",
+        "filename": "jenkins-docker/slave-release/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-14T00:59:56Z",
+      "side": 1,
+      "message": "This version is misleading: the Dockerfile actually just gets the \"latest and greatest\". Should this be called just \u0027latest\u0027 ?",
+      "range": {
+        "startLine": 1,
+        "startChar": 61,
+        "endLine": 1,
+        "endChar": 70
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8433783_a5c61179",
+        "filename": "jenkins-docker/slave-release/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-14T00:59:56Z",
+      "side": 1,
+      "message": "latest",
+      "range": {
+        "startLine": 42,
+        "startChar": 69,
+        "endLine": 42,
+        "endChar": 78
+      },
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "897e4be5_1c9d3727",
+        "filename": "jenkins-docker/slave-sbt/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-14T00:59:56Z",
+      "side": 1,
+      "message": "latest",
+      "range": {
+        "startLine": 1,
+        "startChar": 53,
+        "endLine": 1,
+        "endChar": 62
+      },
       "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
