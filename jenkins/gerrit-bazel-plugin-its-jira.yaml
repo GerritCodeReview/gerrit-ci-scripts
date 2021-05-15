@@ -12,6 +12,5 @@
       - 'plugin-its-{name}-bazel-{branch}':
           branch:
             - stable-3.2
-            - stable-3.1
             - stable-2.16
           targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'

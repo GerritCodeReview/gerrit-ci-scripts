@@ -12,6 +12,5 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - stable-3.2
-            - stable-3.1
             - stable-2.16
           targets: 'plugins/its-base:its-base plugins/its-base:its_base_tests'

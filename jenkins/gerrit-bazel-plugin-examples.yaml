@@ -32,5 +32,4 @@
       - 'plugin-examples-bazel-{branch}':
           branch:
             - master
-            - stable-3.1
             - stable-2.16
