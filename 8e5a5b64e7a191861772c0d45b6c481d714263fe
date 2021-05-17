@@ -120,6 +120,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae8e2319_82dcfd0c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-05-17T06:57:32Z",
+      "side": 1,
+      "message": "I am also in favor of dropping PolyGerrit WCT builds for the 2.16 CI job to be able to use newer Chrome versions. This would create less work than creating legacy build jobs to keep supporting the old PolyGerrit versions next to the new versions. If not already clearly documented, we should announce that UI changes in 2.16 will not be accepted anymore. Since 2.16 is only still supported for the notedb migration, this should be acceptable IMHO.",
+      "parentUuid": "a833283c_9066676e",
+      "range": {
+        "startLine": 7,
+        "startChar": 50,
+        "endLine": 7,
+        "endChar": 53
+      },
+      "revId": "8e5a5b64e7a191861772c0d45b6c481d714263fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "eda6dc3c_42a38de8",
