@@ -55,14 +55,20 @@ then
   echo 'Running Documentation tests...'
   bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
-  echo 'Running local tests...'
-  bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
-
-  if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
+  if [ "$TARGET_BRANCH" == "stable-2.16" ]
   then
-    echo 'Not running on Sauce Labs because env vars are not set.'
+    echo 'PolyGerrit verification is disabled on stable-2.16 branch' | tee ~/polygerrit-failed
+    false
   else
-    echo 'Running tests on Sauce Labs...'
-    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+    echo 'Running local tests...'
+    bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+
+    if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
+    then
+      echo 'Not running on Sauce Labs because env vars are not set.'
+    else
+      echo 'Running tests on Sauce Labs...'
+      WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+    fi
   fi
 fi

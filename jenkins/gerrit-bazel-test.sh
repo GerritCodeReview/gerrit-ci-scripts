@@ -30,9 +30,15 @@ echo 'Test in NoteDb mode'
 echo '----------------------------------------------'
 bazelisk test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
 
-echo 'Test PolyGerrit locally'
-echo '----------------------------------------------'
-bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+if [ "{branch}" == "stable-2.16" ]
+then
+  echo 'PolyGerrit verification is disabled on stable-2.16 branch'
+  echo '----------------------------------------------'
+else
+  echo 'Test PolyGerrit locally'
+  echo '----------------------------------------------'
+  bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+fi
 
 if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
 then
