@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24a51a49_2921451d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-18T07:19:11Z",
+      "side": 1,
+      "message": "3.4.0 is released. This can be merged now?",
+      "revId": "62cc11ccfcf2da1f598cfa16ab41a6dea566a673",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
