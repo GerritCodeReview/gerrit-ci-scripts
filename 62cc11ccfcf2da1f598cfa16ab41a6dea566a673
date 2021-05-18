@@ -16,6 +16,41 @@
       "message": "3.4.0 is released. This can be merged now?",
       "revId": "62cc11ccfcf2da1f598cfa16ab41a6dea566a673",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a6e2e24_f10c4f0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-18T07:52:17Z",
+      "side": 1,
+      "message": "Let me copy all artifacts to archive-ci.gerritforge.com and *then* we can merge it.",
+      "parentUuid": "24a51a49_2921451d",
+      "revId": "62cc11ccfcf2da1f598cfa16ab41a6dea566a673",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b5460c6_65754b64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-18T07:52:17Z",
+      "side": 1,
+      "message": "Blocking this until I confirm that all existing artifacts have been copied to archive-ci.gerritforge.com",
+      "revId": "62cc11ccfcf2da1f598cfa16ab41a6dea566a673",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
