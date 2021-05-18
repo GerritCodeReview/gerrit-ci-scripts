@@ -86,6 +86,23 @@
       "parentUuid": "3a6e2e24_f10c4f0d",
       "revId": "62cc11ccfcf2da1f598cfa16ab41a6dea566a673",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c2099cb_0fed6e69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-18T21:15:26Z",
+      "side": 1,
+      "message": "Farewell to Gerrit v3.1 and its plugins.",
+      "revId": "62cc11ccfcf2da1f598cfa16ab41a6dea566a673",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
