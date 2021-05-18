@@ -51,6 +51,23 @@
       "message": "Blocking this until I confirm that all existing artifacts have been copied to archive-ci.gerritforge.com",
       "revId": "62cc11ccfcf2da1f598cfa16ab41a6dea566a673",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "badf591c_202b9e09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-18T21:10:10Z",
+      "side": 1,
+      "message": "All builds have been archived now",
+      "revId": "62cc11ccfcf2da1f598cfa16ab41a6dea566a673",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
