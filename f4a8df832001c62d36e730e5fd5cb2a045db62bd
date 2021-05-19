@@ -16,6 +16,23 @@
       "message": "Alternative approach would be to keep the PG checker on stable-2.16 branch as is, but actually disable the verification on the CI side and always vote PG-1 from the CI.",
       "revId": "f4a8df832001c62d36e730e5fd5cb2a045db62bd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02d3b806_533333e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-19T00:06:51Z",
+      "side": 1,
+      "message": "This is dangerous, because people won\u0027t realise that the change isn\u0027t tested on PolyGerrit anymore and assume that their changes work.\n\nWe should instead introduce a checker test that is rejecting anything that is modifying the files under polygerrit for v2.16",
+      "revId": "f4a8df832001c62d36e730e5fd5cb2a045db62bd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
