@@ -22,6 +22,30 @@
       },
       "revId": "bfe6386f11f733b7dd9c44287963c4f64b36c17e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60c6e632_785f85a2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-19T07:53:07Z",
+      "side": 1,
+      "message": "\u003e Can we officially declare the PolyGerrit UI in Gerrit v2.16 unsupported?\n\nYes, it was discussed during the virtual hackathon. My proposal to disable verification of PolyGerrit changes on stable-2.16 was accepted.\n\nThe easiest way to implement this, would be just to adapt the \"PolyGerrit UI Tests\" checker\u0027s quety:\n\nCurrently active query:\n\n  (directory:\"polygerrit-ui\" OR file:WORKSPACE) AND (branch:stable-2.16 OR branch:stable-3.2 OR branch:stable-3.3 OR branch:stable-3.4 OR branch:master)\n\nNew query after removal of PolyGerrit verification support for stable-2.16 branch (this part is \"branch:stable-2.16 OR\"):\n\n  (directory:\"polygerrit-ui\" OR file:WORKSPACE) AND (branch:stable-3.2 OR branch:stable-3.3 OR branch:stable-3.4 OR branch:master)",
+      "parentUuid": "72b01f8c_5b558f7a",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 15
+      },
+      "revId": "bfe6386f11f733b7dd9c44287963c4f64b36c17e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
