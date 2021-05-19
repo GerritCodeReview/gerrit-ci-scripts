@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72b01f8c_5b558f7a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-19T00:17:41Z",
+      "side": 1,
+      "message": "Can we officially declare the PolyGerrit UI in Gerrit v2.16 unsupported?\nIf yes, we can ignore those failures, if not, we have to fix them I believe.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 15
+      },
+      "revId": "bfe6386f11f733b7dd9c44287963c4f64b36c17e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
