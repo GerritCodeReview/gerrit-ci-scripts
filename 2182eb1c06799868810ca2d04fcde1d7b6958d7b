@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50c90b42_780075a0",
+        "filename": "jenkins-docker/chrome-vers.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-20T00:17:33Z",
+      "side": 1,
+      "message": "Do we still need this variable?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 27
+      },
+      "revId": "2182eb1c06799868810ca2d04fcde1d7b6958d7b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
