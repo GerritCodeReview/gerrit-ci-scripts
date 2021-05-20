@@ -16,6 +16,24 @@
       "message": "LGTM, but let\u0027s wait for the ESC to approve the stop the support of Gerrit v2.16 GUI.",
       "revId": "81ba19cde961cef5342a760c83edca4b5099bf88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3846c889_faadfc46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-20T04:59:26Z",
+      "side": 1,
+      "message": "\u003e LGTM, but let\u0027s wait for the ESC to approve the stop the support of Gerrit v2.16 GUI.\n\nThat\u0027s not accurate. We are not removing UI support for 2.16. GWT UI, that is still the main UI in this release, is still full functional and the Java-JUnit-tests are still validated during the CI build.\n\nWe also not removing or changing in any way PolyGerrit UI on 2.16 release. All what we are doing is to stop CI verification of PolyGerrit-UI changes, because it was using discontinued PolyGerrit 1 farmework and thus requires a special and outdated toolchain for CI verification: WCT on Chrome 60.x version and would significantly complicate Docker images support, with no real gain for this community.\n\nSo that it\u0027s still possible to upload critical fixes related to PolyGerrit UI but those would require manual verification (after removal of VRFY-1 voted by the CI).\n\nAlso note, that the \"PolyGerrit UI Tests\" checker is already smart enough and would only trigger verification iff some files were changed in polygerrit-ui directory and WORKSPACE file:\n\n  (directory:\"polygerrit-ui\" OR file:WORKSPACE)\n  AND (branch:stable-2.16 OR branch:stable-3.2 OR branch:stable-3.3\n  OR branch:stable-3.4 OR branch:master)\n\nAlso looking into stable-2.16 branch, polygerrit-ui directory: the last changes were done years ago. So that this is probably a no-op change, that nobody would really notice.\n\nConclusion: I wouldn\u0027t wait for ESC but just submit this series and move forward with rollout of latest Chrome release for Polymer 3 based PolyGerrit UI on supported branches.",
+      "parentUuid": "b3c18095_d53b4d01",
+      "revId": "81ba19cde961cef5342a760c83edca4b5099bf88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
