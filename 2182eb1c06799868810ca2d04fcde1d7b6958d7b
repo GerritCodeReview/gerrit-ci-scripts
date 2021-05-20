@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "867a440e_2889e269",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-20T05:07:54Z",
+      "side": 1,
+      "message": "As discussed, fetching of pinned Chrome version should be removed.",
+      "revId": "2182eb1c06799868810ca2d04fcde1d7b6958d7b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "50c90b42_780075a0",
@@ -14,6 +31,30 @@
       "writtenOn": "2021-05-20T00:17:33Z",
       "side": 1,
       "message": "Do we still need this variable?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 27
+      },
+      "revId": "2182eb1c06799868810ca2d04fcde1d7b6958d7b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1350b330_1da1decb",
+        "filename": "jenkins-docker/chrome-vers.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-05-20T05:07:54Z",
+      "side": 1,
+      "message": "I did a similar change patch set 2 of that change, but reverted it in recent patch sets.\n\nRight now, we are still fetching pinned Chrome release from slimjetbrowser.com project. Bu we could switch to consuming Chrome project latest and greatest distribution from Chromium project:\n\n  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb\n\nIn that case we wouldn\u0027t control any more, what version we really consuming, and potentially, it could happen, that after just rebuilding of CI docker image, we would get Chrome release 99.99.9999, that is broken for gerrit. This is actually a theoretical case, and we could revert to consuming of pinned Chrome releases in that error case.\n\nSo, let\u0027s do that.",
+      "parentUuid": "50c90b42_780075a0",
       "range": {
         "startLine": 1,
         "startChar": 0,
