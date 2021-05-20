@@ -34,6 +34,24 @@
       "parentUuid": "b3c18095_d53b4d01",
       "revId": "81ba19cde961cef5342a760c83edca4b5099bf88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "799b53f0_4253b1aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-05-20T08:01:11Z",
+      "side": 1,
+      "message": "\u003e \u003e LGTM, but let\u0027s wait for the ESC to approve the stop the support of Gerrit v2.16 GUI.\n\u003e \n\u003e That\u0027s not accurate. We are not removing UI support for 2.16. GWT UI, that is still the main UI in this release, is still full functional and the Java-JUnit-tests are still validated during the CI build.\n\nRight, only PolyGerrit UI won\u0027t be supported anymore. That is quite surprising though as GWT is technically dead and unsupported, however, it will be the only supported and tested UI on v2.16 :-(\n\nI am wondering if we should then hold and discuss again.\n\n\u003e We also not removing or changing in any way PolyGerrit UI on 2.16 release. All what we are doing is to stop CI verification of PolyGerrit-UI changes, because it was using discontinued PolyGerrit 1 farmework and thus requires a special and outdated toolchain for CI verification: WCT on Chrome 60.x version and would significantly complicate Docker images support, with no real gain for this community.\n\nNot verifying \u003d not supporting. Support is the actions of troubleshooting and fixing problems. If we don\u0027t verify or modify the code anymore, we\u0027re not supporting it.\n\n\u003e So that it\u0027s still possible to upload critical fixes related to PolyGerrit UI but those would require manual verification (after removal of VRFY-1 voted by the CI).\n\nHow people would manually verify if we don\u0027t have a regression test suite?\n\n\u003e Also note, that the \"PolyGerrit UI Tests\" checker is already smart enough and would only trigger verification iff some files were changed in polygerrit-ui directory and WORKSPACE file:\n\u003e \n\u003e   (directory:\"polygerrit-ui\" OR file:WORKSPACE)\n\u003e   AND (branch:stable-2.16 OR branch:stable-3.2 OR branch:stable-3.3\n\u003e   OR branch:stable-3.4 OR branch:master)\n\u003e \n\u003e Also looking into stable-2.16 branch, polygerrit-ui directory: the last changes were done years ago. So that this is probably a no-op change, that nobody would really notice.\n\nyears \u003d 1 year :-)\n\n\u003e Conclusion: I wouldn\u0027t wait for ESC but just submit this series and move forward with rollout of latest Chrome release for Polymer 3 based PolyGerrit UI on supported branches.\n\n2.16 is still supported ATM.",
+      "parentUuid": "3846c889_faadfc46",
+      "revId": "81ba19cde961cef5342a760c83edca4b5099bf88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
