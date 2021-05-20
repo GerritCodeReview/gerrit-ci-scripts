@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6087e230_7f8f4987",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2021-05-20T16:05:30Z",
+      "side": 1,
+      "message": "Zuul (in-tree) scored positively through [1] for this new plugin branch.\n\n[1] https://gerrit-review.googlesource.com/c/plugins/go-import/+/307282",
+      "revId": "027c2efebf2f4638d65df5d64f8a54a5bcc1802d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
