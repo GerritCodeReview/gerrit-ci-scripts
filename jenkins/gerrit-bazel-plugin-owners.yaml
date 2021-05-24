@@ -24,7 +24,7 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-autoassign.jar*
+            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*
 
 - job-template:
     name: 'plugin-owners-bazel-{branch}-{gerrit-branch}'
@@ -54,20 +54,20 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-autoassign.jar*
+            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*
 
 - project:
     name: owners
     jobs:
       - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
-          targets: 'plugins/owners plugins/owners-autoassign'
+          targets: 'plugins/owners*'
           branch:
             - master
           gerrit-branch:
             - master
             - stable-3.4
       - 'plugin-owners-bazel-{branch}':
-          targets: 'plugins/owners plugins/owners-autoassign'
+          targets: 'plugins/owners*'
           branch:
             - stable-3.3
             - stable-3.2
