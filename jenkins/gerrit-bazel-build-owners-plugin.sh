@@ -7,7 +7,7 @@ git submodule update --init
 git read-tree -u --prefix=plugins/{name}-plugin origin/{branch}
 git fetch --tags origin
 ln -s plugins/{name}-plugin/owners-common .
-pushd plugins && ln -s owners-plugin/{{owners,owners-autoassign}} . && popd
+pushd plugins && ln -s owners-plugin/owners owners-plugin/a* . && popd
 
 for file in external_plugin_deps.bzl package.json
 do
