@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ca68b6c_4a335311",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-01T22:49:20Z",
+      "side": 1,
+      "message": "Now it works and allows to detects the failures on the owners plugin.",
+      "revId": "b5ff72568d4393affc6fd634c3c7ac3a1dc4e358",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
