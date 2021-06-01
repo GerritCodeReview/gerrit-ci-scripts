@@ -23,6 +23,11 @@ java -fullversion
 bazelisk version
 bazelisk build $TARGETS
 
+for target in $TARGETS
+do
+    bazelisk test $target/... //tools/bzl:always_pass_test
+done
+
 for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)
 do
     PLUGIN_VERSION=$(git describe  --always origin/{branch})

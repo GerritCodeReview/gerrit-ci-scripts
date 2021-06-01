@@ -22,6 +22,10 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 java -fullversion
 bazelisk version
 bazelisk build $TARGETS
+for target in $TARGETS
+do
+    bazelisk test $target/... //tools/bzl:always_pass_test
+done
 
 for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)
 do
