@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fde918a7_4f3a49dc",
+        "filename": "jenkins-docker/slave-chrome/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-03T00:02:44Z",
+      "side": 1,
+      "message": "Can we record somewhere the actual version that was downloaded?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 106
+      },
+      "revId": "45efbcc9d4d22536e159dde8b18e00750581e94f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
