@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4487b94b_cb1df803",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-03T00:02:44Z",
+      "side": 0,
+      "message": "Why are we removing all those images builds?",
+      "range": {
+        "startLine": 1,
+        "startChar": 106,
+        "endLine": 1,
+        "endChar": 176
+      },
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "13a97ff8_f2b7dc00",
         "filename": "jenkins-docker/master/config.xml",
         "patchSetId": 1
