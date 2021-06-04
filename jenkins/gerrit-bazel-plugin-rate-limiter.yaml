@@ -1,8 +1,14 @@
 - project:
     name: rate-limiter
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
+          gerrit-branch:
+            - master
+            - stable-3.4
+            - stable-3.3
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
             - stable-3.2
             - stable-2.16
