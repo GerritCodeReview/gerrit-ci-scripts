@@ -46,6 +46,30 @@
       },
       "revId": "45efbcc9d4d22536e159dde8b18e00750581e94f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a72d855_1ea0d1a2",
+        "filename": "jenkins-docker/slave-chrome/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-23T17:27:16Z",
+      "side": 1,
+      "message": "This sounds a great idea: can we do that in a separate change?",
+      "parentUuid": "3e8460f9_459ebef7",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 106
+      },
+      "revId": "45efbcc9d4d22536e159dde8b18e00750581e94f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
