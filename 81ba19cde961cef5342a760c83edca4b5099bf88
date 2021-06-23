@@ -88,6 +88,23 @@
       "parentUuid": "ed87e876_24bf995a",
       "revId": "81ba19cde961cef5342a760c83edca4b5099bf88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5116c7a8_5b3f5f36",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-23T19:14:00Z",
+      "side": 1,
+      "message": "I don\u0027t believe we should merge this, until the Gerrit v2.16 is declared EOL without exceptions.\nThe deadline is just a few months in front of us: can we resist until then?",
+      "revId": "81ba19cde961cef5342a760c83edca4b5099bf88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
