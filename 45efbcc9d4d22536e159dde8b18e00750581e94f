@@ -94,6 +94,30 @@
       },
       "revId": "45efbcc9d4d22536e159dde8b18e00750581e94f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53a80193_1ee23ea0",
+        "filename": "jenkins-docker/slave-chrome/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-06-24T06:25:43Z",
+      "side": 1,
+      "message": "Done here: https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/310222",
+      "parentUuid": "d8b09a5a_f2c8a866",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 106
+      },
+      "revId": "45efbcc9d4d22536e159dde8b18e00750581e94f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
