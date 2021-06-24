@@ -30,7 +30,7 @@ echo 'Test in NoteDb mode'
 echo '----------------------------------------------'
 bazelisk test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
 
-echo 'Test PolyGerrit locally'
+echo "Test PolyGerrit locally in $(google-chrome --version)"
 echo '----------------------------------------------'
 bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
 

@@ -55,7 +55,7 @@ then
   echo 'Running Documentation tests...'
   bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
-  echo 'Running local tests...'
+  echo "Running local tests in $(google-chrome --version)"
   bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
 
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
