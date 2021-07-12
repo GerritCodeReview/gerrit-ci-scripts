@@ -1,5 +1,6 @@
 NO_CACHE=false
-IMAGE=gerritforge/bazel-cache
+PREFIX=gerritforge
+IMAGE=${PREFIX}/bazel-cache
 CACHE_ALLOW=0.0.0.0/0
 
 # Targets

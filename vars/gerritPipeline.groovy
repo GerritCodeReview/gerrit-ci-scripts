@@ -45,6 +45,9 @@ def call(Map parm = [:]) {
             }
 
             stage('Report to Gerrit'){
+                resCodeStyle = getLabelValue(1, Builds.codeStyle.result)
+                gerritReview labels: ['Code-Style': resCodeStyle]
+
                 def verificationResults = Builds.verification.collect { k, v -> v }
                 def resVerify = verificationResults.inject(1) {
                     acc, build -> getLabelValue(acc, build.result)
@@ -87,7 +90,8 @@ class GerritCheck {
     String consoleUrl
 
     GerritCheck(name, build) {
-        this.uuid = "gerritforge:${env.GERRIT_PROJECT}-${name}"
+        this.uuid = "gerritforge:" + name.replaceAll("(bazel/)", "") +
+            Globals.gerritRepositoryNameSha1Suffix
         this.build = build
         this.consoleUrl = "${build.url}console"
     }
@@ -126,11 +130,13 @@ def queryChangedFiles(url) {
 
 def collectBuildModes() {
     Builds.modes = []
-    if (env.GERRIT_BRANCH ==~ /stable-3.*/ || env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.4-2021-07.sticky-approvals") {
+    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.4" || env.GERRIT_BRANCH == "stable-3.4-2021-07.sticky-approvals") {
+        Builds.modes = ["notedb", "rbe"]
+    } else if (env.GERRIT_BRANCH ==~ /stable-3.[0-3]/) {
         Builds.modes = ["notedb"]
-    } else if (env.GERRIT_BRANCH ==~ /stable-2.16.*/) {
+    } else if (env.GERRIT_BRANCH == "stable-2.16") {
         Builds.modes = ["notedb", "reviewdb"]
-    } else if (env.GERRIT_BRANCH ==~ /stable-2.1[0-5].*/) {
+    } else if (env.GERRIT_BRANCH ==~ /stable-2.1[0-5]/) {
         Builds.modes = ["reviewdb"]
     } else {
         throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")

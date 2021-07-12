@@ -7,18 +7,25 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
-TEST_TAG_FILTERS="-flaky"
-if [[ "$TARGET_BRANCH" = stable-2.1* ]]
-then
-  TEST_TAG_FILTERS="$TEST_TAG_FILTERS,-elastic"
-fi
+case $TARGET_BRANCH$MODE in
+  masterrbe|stable-3.4rbe|stable-3.4-2021-07.sticky-approvalsrbe)
+    TEST_TAG_FILTER="-flaky,-elastic,-git-protocol-v2"
+    BAZEL_OPTS="--config=remote --remote_instance_name=projects/api-project-164060093628/instances/default_instance"
+    ;;
+  masternotedb|stable-3.4notedb)
+    TEST_TAG_FILTER="-flaky,elastic,git-protocol-v2"
+    ;;
+  stable-2.*)
+    TEST_TAG_FILTER="-flaky,-elastic"
+    ;;
+  *)
+    TEST_TAG_FILTER="-flaky"
+esac
 
-export BAZEL_OPTS="$BAZEL_OPTS --spawn_strategy=standalone --genrule_strategy=standalone \
-                 --test_output errors \
-                 --test_summary detailed --flaky_test_attempts 3 \
-                 --test_verbose_timeout_warnings --build_tests_only \
+export BAZEL_OPTS="$BAZEL_OPTS \
+                 --flaky_test_attempts 3 \
                  --test_timeout 3600 \
-                 --test_tag_filters=$TEST_TAG_FILTERS \
+                 --test_tag_filters=$TEST_TAG_FILTER \
                  --test_env DOCKER_HOST=$DOCKER_HOST"
 export WCT_HEADLESS_MODE=1
 
@@ -28,7 +35,7 @@ bazelisk version
 if [[ "$MODE" == *"reviewdb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=OFF"
-  bazelisk test $BAZEL_OPTS //...
+  bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"notedb"* ]]
@@ -37,13 +44,18 @@ then
   bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
+if [[ "$MODE" == *"rbe"* ]]
+then
+  bazelisk test $BAZEL_OPTS //...
+fi
+
 if [[ "$MODE" == *"polygerrit"* ]]
 then
 
   echo 'Running Documentation tests...'
   bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
-  echo 'Running local tests...'
+  echo "Running local tests in $(google-chrome --version)"
   bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
 
   if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]

@@ -37,7 +37,7 @@ def call(Map parm = [:]) {
     def pluginScmUrl = "https://gerrit.googlesource.com/a/${env.GERRIT_PROJECT}"
     def gjfVersion = '1.7'
     def javaVersion = 11
-    if (["stable-2.16", "stable-3.0", "stable-3.1", "stable-3.2"].contains("${env.GERRIT_BRANCH}")) {
+    if (env.GERRIT_BRANCH in ["stable-2.16", "stable-3.2"]) {
         javaVersion = 8
     }
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh ${javaVersion} && bazelisk"

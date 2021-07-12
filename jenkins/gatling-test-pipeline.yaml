@@ -7,6 +7,6 @@
           url: https://gerrit.googlesource.com/a/aws-gerrit
           branches:
             - master
-    dsl: !include-raw: gatlingTestPipeline.groovy
+    dsl: !include-raw: gatling-test-pipeline.groovy
     triggers:
       - timed: "@midnight"

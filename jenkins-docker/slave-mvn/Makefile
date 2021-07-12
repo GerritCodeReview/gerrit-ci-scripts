@@ -1,5 +1,6 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-mvn
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-mvn
 
 # Targets
 

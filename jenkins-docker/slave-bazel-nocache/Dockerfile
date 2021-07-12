@@ -12,23 +12,16 @@ RUN apt-get update && \
     bash -c 'bazel version'
 
 # Install Buildifier
-RUN cd /tmp && \
-    bash -c 'git clone https://github.com/bazelbuild/buildtools.git && \
-    cd buildtools && \
-    git checkout ${BUILDIFIER_VER} && \
-    bazel build --config=release //buildifier && \
-    cp bazel-bin/buildifier/linux_amd64_stripped/buildifier /usr/bin && \
-    rm -rf /tmp/buildtools && \
-    buildifier --version'
+RUN wget -O /tmp/buildifier-${BUILDIFIER_VER}-linux-amd64 https://github.com/bazelbuild/buildtools/releases/download/${BUILDIFIER_VER}/buildifier-linux-amd64 && \
+    chmod a+x /tmp/buildifier-${BUILDIFIER_VER}-linux-amd64 && \
+    cp /tmp/buildifier-${BUILDIFIER_VER}-linux-amd64 /usr/bin/buildifier && \
+    rm -rf /tmp/buildifier-${BUILDIFIER_VER}-linux-amd64 && \
+    buildifier --version
 
 # Install Bazelisk
-RUN cd /tmp && \
-    git clone https://github.com/bazelbuild/bazelisk.git && \
-    cd bazelisk && \
-    git checkout v${BAZELISK_VER} && \
-    rm -f .bazelversion && \
-    bazel build --stamp --workspace_status_command=`pwd`/stamp.sh --platforms=@io_bazel_rules_go//go/toolchain:linux_amd64 //:bazelisk && \
-    cp bazel-bin/linux_amd64_pure_stripped/bazelisk /usr/bin && \
-    rm -rf /tmp/bazelisk
+RUN wget -O /tmp/bazelisk-${BAZELISK_VER}-linux-amd64 https://github.com/bazelbuild/bazelisk/releases/download/v${BAZELISK_VER}/bazelisk-linux-amd64 && \
+    chmod a+x /tmp/bazelisk-${BAZELISK_VER}-linux-amd64 && \
+    cp /tmp/bazelisk-${BAZELISK_VER}-linux-amd64 /usr/bin/bazelisk && \
+    rm -rf /tmp/bazelisk-${BAZELISK_VER}-linux-amd64
 
 USER root

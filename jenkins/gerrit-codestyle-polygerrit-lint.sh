@@ -2,7 +2,7 @@
 
 . set-java.sh 8
 
-if [git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion]
+if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
 then
   export BAZEL_OPTS=""
 fi
@@ -10,6 +10,7 @@ fi
 cd gerrit
 bazelisk version
 if ([ "$TARGET_BRANCH" == "master" ] || \
+    [ "$TARGET_BRANCH" == "stable-3.4" ] || \
     [ "$TARGET_BRANCH" == "stable-3.3" ] || \
     [ "$TARGET_BRANCH" == "stable-3.2" ]) && \
    ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit-ui) || \
@@ -18,6 +19,6 @@ if ([ "$TARGET_BRANCH" == "master" ] || \
 then
   echo 'Running PolyGerrit lint check...'
   java -fullversion
-  bazelisk test //polygerrit-ui/app:lint_test --test_output errors
-  bazelisk test //polygerrit-ui/app:polylint_test --test_output errors
+  bazelisk test //polygerrit-ui/app:lint_test
+  bazelisk test //polygerrit-ui/app:polylint_test
 fi

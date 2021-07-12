@@ -1,5 +1,6 @@
 NO_CACHE=false
-IMAGE=gerritforge/gerrit-ci-slave-bazel-sbt
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-bazel-sbt
 
 # Targets
 

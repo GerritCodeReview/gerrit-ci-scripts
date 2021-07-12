@@ -64,6 +64,7 @@
             - reviewdb
             - notedb
             - polygerrit
+            - rbe
           description: 'Type of verification to execute'
     properties:
       - authorization:

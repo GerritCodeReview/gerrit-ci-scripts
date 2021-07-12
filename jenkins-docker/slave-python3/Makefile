@@ -1,6 +1,7 @@
 NO_CACHE ?= false
 DEBIAN_VER ?= buster
-IMAGE=gerritforge/gerrit-ci-slave-python3:$(DEBIAN_VER)
+PREFIX=gerritforge
+IMAGE=${PREFIX}/gerrit-ci-slave-python3:$(DEBIAN_VER)
 
 build:  Dockerfile Makefile
 	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
