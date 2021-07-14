@@ -117,7 +117,8 @@ def hasChangeNumber() {
 }
 
 def postCheck(check) {
-    gerritCheck(checks: [ "${check.uuid}" : "${check.getCheckResultFromBuild()}" ], url: "${check.consoleUrl}")
+    // Checks are disabled on security fixes
+    // gerritCheck(checks: [ "${check.uuid}" : "${check.getCheckResultFromBuild()}" ], url: "${check.consoleUrl}")
 }
 
 def queryChangedFiles(url) {
