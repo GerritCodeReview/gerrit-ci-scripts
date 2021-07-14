@@ -129,7 +129,7 @@ def queryChangedFiles(url) {
 
 def collectBuildModes() {
     Builds.modes = []
-    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.4" || env.GERRIT_BRANCH == "stable-3.4-2021-07.sticky-approvals") {
+    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.4" || env.GERRIT_BRANCH == "stable-3.4-2021-07.sticky-approvals" || env.GERRIT_BRANCH == "stable-3.1-2021-07.includedIn") {
         Builds.modes = ["notedb", "rbe"]
     } else if (env.GERRIT_BRANCH ==~ /stable-3.[0-3]/) {
         Builds.modes = ["notedb"]
