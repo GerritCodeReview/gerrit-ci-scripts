@@ -16,6 +16,24 @@
       "message": "I lack context to review this change\n- what\u0027s the purpose of the private branch ?\n- why are so many files deleted compared to auto-merge ?",
       "revId": "6f64fdb642aaae8c67a782f25a4d7f5c1ad7e5ec",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76b1b549_7aa3b3d8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-07-15T18:52:04Z",
+      "side": 1,
+      "message": "\u003e I lack context to review this change\n\u003e - what\u0027s the purpose of the private branch ?\n\nThis branch is for the sole validation of the security fixes. We cannot use the normal pipeline because it would be visible and therefore leak data about a security fix currently in development.\n\n\u003e - why are so many files deleted compared to auto-merge ?\n\nWe don\u0027t build/validate anything other than the security fixes. That\u0027s the reason behind the deleted files.",
+      "parentUuid": "adc7fd6d_8988709f",
+      "revId": "6f64fdb642aaae8c67a782f25a4d7f5c1ad7e5ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
