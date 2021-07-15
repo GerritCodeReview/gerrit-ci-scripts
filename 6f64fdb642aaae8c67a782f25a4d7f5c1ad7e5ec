@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "adc7fd6d_8988709f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2021-07-15T07:08:08Z",
+      "side": 1,
+      "message": "I lack context to review this change\n- what\u0027s the purpose of the private branch ?\n- why are so many files deleted compared to auto-merge ?",
+      "revId": "6f64fdb642aaae8c67a782f25a4d7f5c1ad7e5ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
