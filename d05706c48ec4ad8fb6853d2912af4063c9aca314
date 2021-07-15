@@ -16,6 +16,24 @@
       "message": "should we instead define the missing label to ensure codestyle doesn\u0027t break ?",
       "revId": "d05706c48ec4ad8fb6853d2912af4063c9aca314",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3d3e204_1ba5b7cc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-07-15T18:10:48Z",
+      "side": 1,
+      "message": "\u003e should we instead define the missing label to ensure codestyle doesn\u0027t break ?\n\nThat would be best, do we have the permissions to do it?",
+      "parentUuid": "76b7597a_e5968d95",
+      "revId": "d05706c48ec4ad8fb6853d2912af4063c9aca314",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
