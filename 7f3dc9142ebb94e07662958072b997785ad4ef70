@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0531b2e_3f1f4555",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-07-20T14:50:10Z",
+      "side": 1,
+      "message": "Verified for all branches:\n\n- https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-replication-status-bazel-stable-3.3/\n\n- https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.2/job/plugin-replication-status-bazel-stable-3.2/\n\n-https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-replication-status-bazel-master-stable-3.4/",
+      "revId": "7f3dc9142ebb94e07662958072b997785ad4ef70",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
