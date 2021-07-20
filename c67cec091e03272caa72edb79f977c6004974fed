@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e47d6c1_7fe4514d",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2021-07-20T06:09:13Z",
+      "side": 1,
+      "message": "I think we\u0027ll also need 3.2 and 3.3 as we merge forward?",
+      "range": {
+        "startLine": 132,
+        "startChar": 171,
+        "endLine": 132,
+        "endChar": 172
+      },
+      "revId": "c67cec091e03272caa72edb79f977c6004974fed",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
