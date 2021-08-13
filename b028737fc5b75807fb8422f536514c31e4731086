@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ce4625f_3923233c",
+        "filename": "jenkins/gerrit-bazel-plugin-multi-site.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-13T08:24:31Z",
+      "side": 0,
+      "message": "This wasn\u0027t supposed to be removed. Addressed with I2423718f15f",
+      "revId": "b028737fc5b75807fb8422f536514c31e4731086",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
