@@ -1,11 +1,11 @@
 FROM gerritforge/gerrit-ci-slave-bazel:debian-buster-80.0.3987.149
 
 # SBT Setup
-RUN apt-get update && \
+RUN apt-get update --allow-releaseinfo-change && \
     apt-get -y install apt-transport-https && \
     echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823 && \
-    apt-get update && \
+    apt-get update --allow-releaseinfo-change && \
     apt-get -y install --no-install-recommends sbt && \
     rm -rf /etc/apt/sources.list.d/* && \
     rm -rf /var/lib/apt/lists/*
