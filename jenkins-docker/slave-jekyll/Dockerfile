@@ -1,6 +1,6 @@
 FROM gerritforge/gerrit-ci-slave-python3:buster
 
-RUN apt-get update && \
+RUN apt-get update --allow-releaseinfo-change && \
     apt-get install -y ruby-full && \
     apt-get clean && \
     rm -Rf /var/lib/apt/lists && \
