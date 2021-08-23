@@ -5,7 +5,7 @@ ARG BUILDIFIER_VER
 ARG BAZELISK_VER
 
 # Install Bazel
-RUN apt-get update && \
+RUN apt-get update --allow-releaseinfo-change && \
     wget -O /tmp/bazel_${BAZEL_VER}-linux-x86_64.deb https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VER}/bazel_${BAZEL_VER}-linux-x86_64.deb && \
     (dpkg -i /tmp/bazel_${BAZEL_VER}-linux-x86_64.deb; apt-get install -f -y) && \
     rm /tmp/bazel_${BAZEL_VER}-linux-x86_64.deb && \
