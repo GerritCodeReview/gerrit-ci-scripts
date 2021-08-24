@@ -65,6 +65,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "02e7fb34_6eded078",
+        "filename": "jenkins-docker/chrome-vers.mk",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:49:58Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "fe84370b_9c00effb",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "13a97ff8_f2b7dc00",
