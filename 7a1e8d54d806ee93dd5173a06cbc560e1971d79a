@@ -24,6 +24,47 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3084df7_a65956b0",
+        "filename": "jenkins-docker/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "Restored the original version.",
+      "parentUuid": "4487b94b_cb1df803",
+      "range": {
+        "startLine": 1,
+        "startChar": 106,
+        "endLine": 1,
+        "endChar": 176
+      },
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe84370b_9c00effb",
+        "filename": "jenkins-docker/chrome-vers.mk",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "This should stay: we would still need to build against v69 for old releases",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "13a97ff8_f2b7dc00",
@@ -119,6 +160,64 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "417e93de_52623501",
+        "filename": "jenkins-docker/master/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "Keeping the v69",
+      "parentUuid": "505e5d28_79ba3a89",
+      "range": {
+        "startLine": 104,
+        "startChar": 74,
+        "endLine": 104,
+        "endChar": 86
+      },
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da5c5784_8624f2f4",
+        "filename": "jenkins-docker/slave-bazel-docker/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "Not needed",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10eda201_62999d99",
+        "filename": "jenkins-docker/slave-bazel-docker/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "This should stay for multiple chrome versions",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cee7bde8_71501e61",
@@ -162,6 +261,74 @@
         "endLine": 1,
         "endChar": 51
       },
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b0fb7c9_0199523c",
+        "filename": "jenkins-docker/slave-bazel-nocache/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "This should stay.",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9188c11c_e0e32111",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "This should stay",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "532876bb_ddce7f58",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "This should stay",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60cae02b_b49c281d",
+        "filename": "jenkins-docker/slave-bazel/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 0,
+      "message": "This should stay",
       "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },

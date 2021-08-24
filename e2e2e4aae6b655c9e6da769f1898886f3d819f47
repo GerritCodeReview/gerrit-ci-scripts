@@ -252,6 +252,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "96c82c07_2b5ab6c2",
+        "filename": "jenkins-docker/slave-node-wct/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:46:18Z",
+      "side": 1,
+      "message": "We still need to keep Chrome v69 for now.",
+      "parentUuid": "7aaec7e7_f3a95515",
+      "revId": "e2e2e4aae6b655c9e6da769f1898886f3d819f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e8430790_756dc931",
