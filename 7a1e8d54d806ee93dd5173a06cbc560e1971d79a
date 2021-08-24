@@ -299,6 +299,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0a11b05_cf160485",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:49:39Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "9188c11c_e0e32111",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "532876bb_ddce7f58",
@@ -316,6 +334,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d22604cd_cf747dc9",
+        "filename": "jenkins-docker/slave-bazel/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:49:39Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "532876bb_ddce7f58",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "60cae02b_b49c281d",
@@ -329,6 +365,24 @@
       "writtenOn": "2021-08-24T00:46:18Z",
       "side": 0,
       "message": "This should stay",
+      "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d890716a_1789a66d",
+        "filename": "jenkins-docker/slave-bazel/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:49:39Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "60cae02b_b49c281d",
       "revId": "7a1e8d54d806ee93dd5173a06cbc560e1971d79a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },

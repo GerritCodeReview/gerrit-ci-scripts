@@ -63,6 +63,30 @@
       },
       "revId": "2182eb1c06799868810ca2d04fcde1d7b6958d7b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2fb7d0d6_2eaf3670",
+        "filename": "jenkins-docker/chrome-vers.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T00:49:39Z",
+      "side": 1,
+      "message": "I kept the variable and used \u0027latest\u0027 for denoting the download of the latest version of Chrome",
+      "parentUuid": "1350b330_1da1decb",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 27
+      },
+      "revId": "2182eb1c06799868810ca2d04fcde1d7b6958d7b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
