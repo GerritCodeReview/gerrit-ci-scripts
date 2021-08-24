@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9017acb3_c002bade",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T20:57:36Z",
+      "side": 1,
+      "message": "I managed to build the whole chain successfully and published:\nhttps://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/305980\n\n@Ben do you have an example of a change that would require Chrome v92 to be verified?",
+      "revId": "bda0b4b53d30e5bb6cd42aa67e4da8273d9ab895",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
