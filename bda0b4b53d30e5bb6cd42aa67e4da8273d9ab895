@@ -51,6 +51,23 @@
       "message": "To verify:\ndocker run -ti --entrypoint\u003d/usr/bin/google-chrome gerritforge/gerrit-ci-slave-bazel-docker:debian-buster-92.0.4515.159 -version\nGoogle Chrome 92.0.4515.159\n",
       "revId": "bda0b4b53d30e5bb6cd42aa67e4da8273d9ab895",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1da4a71d_eabadb3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-24T22:25:04Z",
+      "side": 1,
+      "message": "I\u0027ve successfully run the PolyGerrit tests on master:\nINFO: Elapsed time: 146.839s, Critical Path: 135.14s\nINFO: 14 processes: 10 internal, 2 local, 2 processwrapper-sandbox.\nINFO: Build completed successfully, 14 total actions\n//polygerrit-ui:karma_test                                               PASSED in 105.6s\n\nThe Docker container requires a new option for Chrome v92: --cap-add\u003dSYS_ADMIN\n\nThe reason behind this is explained at:\nhttps://awesomeopensource.com/project/yukinying/chrome-headless-browser-docker",
+      "revId": "bda0b4b53d30e5bb6cd42aa67e4da8273d9ab895",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
