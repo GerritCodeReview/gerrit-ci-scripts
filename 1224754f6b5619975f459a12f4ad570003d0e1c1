@@ -16,6 +16,23 @@
       "message": "@Thomas I am attempting again to upgrade the Docker connector to the latest release :-) Can you doublecheck and wish me luck? 👍",
       "revId": "1224754f6b5619975f459a12f4ad570003d0e1c1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d78722cb_f3118886",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-25T21:40:13Z",
+      "side": 1,
+      "message": "It looks like the upgrade broke BlueOcean GUI. Let me dig into it.",
+      "revId": "1224754f6b5619975f459a12f4ad570003d0e1c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
