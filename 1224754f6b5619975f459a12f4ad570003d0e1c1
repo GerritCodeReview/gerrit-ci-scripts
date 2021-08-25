@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fea35104_00992d3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-25T21:24:44Z",
+      "side": 1,
+      "message": "@Thomas I am attempting again to upgrade the Docker connector to the latest release :-) Can you doublecheck and wish me luck? 👍",
+      "revId": "1224754f6b5619975f459a12f4ad570003d0e1c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
