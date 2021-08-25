@@ -85,6 +85,24 @@
       "message": "Flagging Verified -1 until the docker-plugin is upgraded to docker-plugin-1.2.x which includes the ability to add the extra container capabilities required by Chrome v92 / headless",
       "revId": "bda0b4b53d30e5bb6cd42aa67e4da8273d9ab895",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cccfea12_e0ca8e4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2021-08-25T06:45:35Z",
+      "side": 1,
+      "message": "https://gerrit-review.googlesource.com/c/gerrit/+/315968 is an example.",
+      "parentUuid": "4d34e45a_a47ac155",
+      "revId": "bda0b4b53d30e5bb6cd42aa67e4da8273d9ab895",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
