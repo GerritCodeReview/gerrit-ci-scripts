@@ -33,6 +33,24 @@
       "message": "It looks like the upgrade broke BlueOcean GUI. Let me dig into it.",
       "revId": "1224754f6b5619975f459a12f4ad570003d0e1c1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de6a60fc_3e89be64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-26T01:16:05Z",
+      "side": 1,
+      "message": "I am going to address this as a follow-up change, so that the blueocean update is going to be tracked as a separate change.",
+      "parentUuid": "d78722cb_f3118886",
+      "revId": "1224754f6b5619975f459a12f4ad570003d0e1c1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
