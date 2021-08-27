@@ -16,6 +16,23 @@
       "message": "This is now working E2E, together with the upward chain of changes",
       "revId": "e818fbf5f86554c209c25e8b241b88b884a183d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "649e3ea5_5f286306",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-08-27T23:31:58Z",
+      "side": 1,
+      "message": "This is finally live on https://gerrit-ci.gerritforge.com !\n\nFrom now on all changes on master will be validated against Google Chrome v92. All existing stable branches will continued to be verified against the old Chrome version.",
+      "revId": "e818fbf5f86554c209c25e8b241b88b884a183d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
