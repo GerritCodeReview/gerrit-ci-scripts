@@ -85,7 +85,7 @@
     name: 'Gerrit-bazel-java11-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
-    node: bazel-debian
+    node: {label}
     properties:
       - inject:
           properties-content: >
@@ -104,11 +104,21 @@
 - project:
     name: Gerrit-bazel-java11
     branch:
-      - master
       - stable-3.4
       - stable-3.3
+    label:
+      - bazel-debian
     jobs:
       - 'Gerrit-bazel-java11-{branch}'
+
+#- project:
+#    name: Gerrit-bazel-java11-chrome-latest
+#    branch:
+#      - master
+#    label:
+#      - bazel-debian-chrome-latest
+#    jobs:
+#      - 'Gerrit-bazel-java11-{branch}'
 
 - project:
     name: Gerrit-bazel-java11-stable-3.2
