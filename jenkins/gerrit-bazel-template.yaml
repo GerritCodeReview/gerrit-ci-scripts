@@ -94,6 +94,19 @@
             --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
+    name: 'Gerrit-bazel-java11-master'
+    branch: master
+    description: 'Gerrit-bazel-java11-master build with Bazel'
+    defaults: gerrit-bazel-defaults
+    node: bazel-debian-chrome-latest
+    properties:
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11
+            --javabase=@bazel_tools//tools/jdk:remote_jdk11
+            --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
+
+- project:
     name: Gerrit-bazel
     branch:
       - stable-3.2
@@ -104,7 +117,6 @@
 - project:
     name: Gerrit-bazel-java11
     branch:
-      - master
       - stable-3.4
       - stable-3.3
     jobs:
