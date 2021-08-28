@@ -54,7 +54,7 @@
     name: 'Gerrit-bazel-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
-    node: bazel-debian
+    node: 'bazel-{browser}'
     properties:
       - inject:
           properties-content: >
@@ -64,7 +64,7 @@
     name: 'Gerrit-bazel-java11-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
-    node: bazel-debian
+    node: 'bazel-{browser}'
     properties:
       - inject:
           properties-content: >
@@ -73,19 +73,28 @@
             --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
-    name: Gerrit-bazel
+    name: Gerrit-bazel-java8-chrome-69
     branch:
       - stable-3.2
       - stable-2.16
+    browser: chrome-69
     jobs:
       - 'Gerrit-bazel-{branch}'
 
 - project:
-    name: Gerrit-bazel-java11
+    name: Gerrit-bazel-java11-chrome-69
     branch:
-      - master
       - stable-3.4
       - stable-3.3
+    browser: chrome-69
+    jobs:
+      - 'Gerrit-bazel-java11-{branch}'
+
+- project:
+    name: Gerrit-bazel-java11-chrome-latest
+    branch:
+      - master
+    browser: chrome-latest
     jobs:
       - 'Gerrit-bazel-java11-{branch}'
 
