@@ -16,6 +16,29 @@
       "message": "it should be working now. Finding now a way to have a better naming for the generated jobs",
       "revId": "f40e4661f9fdb1f1a6074bb99589da4f00003a16",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bbd210d_f0c0f40b",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-08-30T08:07:52Z",
+      "side": 1,
+      "message": "nit: debian is not part of the browser. Why not use `node: bazel-debian-{browser}` in L88 and `chrome-latest` here?",
+      "range": {
+        "startLine": 119,
+        "startChar": 8,
+        "endLine": 119,
+        "endChar": 14
+      },
+      "revId": "f40e4661f9fdb1f1a6074bb99589da4f00003a16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
