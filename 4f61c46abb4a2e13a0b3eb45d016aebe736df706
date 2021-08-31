@@ -16,6 +16,24 @@
       "message": "This script is used for validating the code-style for all changes in all branches, including stable-2.16.\n\nThis is still valid also for earlier releases?",
       "revId": "4f61c46abb4a2e13a0b3eb45d016aebe736df706",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87427d8c_16708489",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2021-08-31T22:28:07Z",
+      "side": 0,
+      "message": "Ah, interesting. No this should only hold for the latest release.",
+      "parentUuid": "ce601656_9fab90c7",
+      "revId": "4f61c46abb4a2e13a0b3eb45d016aebe736df706",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
