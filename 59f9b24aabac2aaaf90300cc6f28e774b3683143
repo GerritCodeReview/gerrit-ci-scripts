@@ -16,6 +16,24 @@
       "message": "I believe this needs to be also applied to the remote execution agents, as the builds are happening on a Docker host remotely.",
       "revId": "59f9b24aabac2aaaf90300cc6f28e774b3683143",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "31b004af_92e32cb7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-09-02T06:38:59Z",
+      "side": 1,
+      "message": "I don\u0027t think so. It is only an issue of displaying the character not writing it and that is only done in the Jenkins master UI. If you look at the plain text of the log, the character is actually rendered correctly by the browser.\nThere could only be an issue, if Jenkins tries to send UTF-8 chars to the agent.",
+      "parentUuid": "ac2b8495_2273d530",
+      "revId": "59f9b24aabac2aaaf90300cc6f28e774b3683143",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
