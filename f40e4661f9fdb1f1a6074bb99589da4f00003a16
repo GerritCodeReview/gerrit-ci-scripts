@@ -39,6 +39,30 @@
       },
       "revId": "f40e4661f9fdb1f1a6074bb99589da4f00003a16",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03abf064_565a8978",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-03T22:57:14Z",
+      "side": 1,
+      "message": "Agreed, the \u0027debian\u0027 should go.",
+      "parentUuid": "2bbd210d_f0c0f40b",
+      "range": {
+        "startLine": 119,
+        "startChar": 8,
+        "endLine": 119,
+        "endChar": 14
+      },
+      "revId": "f40e4661f9fdb1f1a6074bb99589da4f00003a16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
