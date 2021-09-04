@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "deb232c9_548e8e49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-04T02:38:13Z",
+      "side": 1,
+      "message": "@Ben this fixes the delays you\u0027ve seen today on the CI. It was actually a bug that I\u0027ve fixed already on the gerrit-code-review plugin for Jenkins.",
+      "revId": "5938246da9b79f9b51b9893292fff607053be1e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
