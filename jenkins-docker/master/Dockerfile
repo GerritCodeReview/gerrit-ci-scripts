@@ -51,6 +51,8 @@ RUN mkdir -p $JENKINS_REF/.ssh && \
 
 COPY plugins.txt $JENKINS_REF
 RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
+# TODO: To update on plugins.txt once the permission issues on repo.jenkins-ci.org are resolved
+ADD https://github.com/jenkinsci/gerrit-code-review-plugin/releases/download/gerrit-code-review-0.4.6/gerrit-code-review.jpi $JENKINS_REF/plugins/gerrit-code-review.jpi
 RUN chown -R jenkins:jenkins $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
