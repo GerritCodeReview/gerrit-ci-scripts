@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdccb006_d7648d71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-06T21:59:52Z",
+      "side": 1,
+      "message": "@Ben @Edwin the SCHEDULED state in Checks created some trouble recently: the v0.4.7 of the gerrit-code-review plugin doesn\u0027t use that status anymore.\n\nI\u0027ve tested it and it works as expected: all changes that aren\u0027t yet RUNNING\nwill trigger a new build.",
+      "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
