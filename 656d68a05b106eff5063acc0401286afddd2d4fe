@@ -16,6 +16,23 @@
       "message": "@Ben @Edwin the SCHEDULED state in Checks created some trouble recently: the v0.4.7 of the gerrit-code-review plugin doesn\u0027t use that status anymore.\n\nI\u0027ve tested it and it works as expected: all changes that aren\u0027t yet RUNNING\nwill trigger a new build.",
       "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fa77f53_c7ea455e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-06T22:00:22Z",
+      "side": 1,
+      "message": "@Thomas do you recall why we used the SCHEDULED state? Was it just for visibility in checks that a Jenkins build was about to start?",
+      "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
