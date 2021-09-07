@@ -33,6 +33,23 @@
       "message": "@Thomas do you recall why we used the SCHEDULED state? Was it just for visibility in checks that a Jenkins build was about to start?",
       "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1509780_0642d157",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1013302
+      },
+      "writtenOn": "2021-09-07T06:17:09Z",
+      "side": 1,
+      "message": "Note that the Checks UI plugin can also be told to ignore SCHEDULED when it converts from the (old) Checks plugin to the (new) Checks API here:\n\nhttps://gerrit.googlesource.com/plugins/checks/+/9702d6e37f7d582e98be4486c49f4442adf268be/gr-checks/plugin.js#63",
+      "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
