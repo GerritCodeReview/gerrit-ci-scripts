@@ -68,6 +68,24 @@
       "parentUuid": "9fa77f53_c7ea455e",
       "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b30994bd_7374deb0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-07T10:09:01Z",
+      "side": 1,
+      "message": "I believe that was good for visibility, but the problem is that the SCHEDULED becomes a limbo state without any retry in case of failures. The check isn\u0027t considered pending anymore when it is in SCHEDULED state and, if for whatever reason the build doesn\u0027t start, you have no way to retry it :-(",
+      "parentUuid": "a6eb93cf_a07ec1fe",
+      "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
