@@ -77,7 +77,6 @@
       - inject:
           properties-content: >
             BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
-            --java_toolchain=//tools:error_prone_warnings_toolchain
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
@@ -132,6 +131,11 @@
             gerrit/bazel-bin/*api/*api.jar,
             gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
+    properties:
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+            --java_toolchain=//tools:error_prone_warnings_toolchain
 
 - job-template:
     name: Gerrit-verifier-{config}
@@ -154,11 +158,17 @@
             gerrit/bazel-bin/*api/*api.jar,
             gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
+    properties:
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+            --java_toolchain=//tools:{java-toolchain}
 
 - project:
     name: Gerrit-verifier-bazel
     config:
       - chrome-latest
+    java-toolchain: error_prone_warnings_toolchain_java11
     jobs:
       - 'Gerrit-verifier-{config}'
 
