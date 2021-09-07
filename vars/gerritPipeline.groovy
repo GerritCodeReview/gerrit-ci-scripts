@@ -166,7 +166,8 @@ def collectBuildModes() {
 }
 
 def buildVerificationJob() {
-    (env.GERRIT_BRANCH == "master") ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-bazel"
+    (env.GERRIT_BRANCH == "stable-2.16" || env.GERRIT_BRANCH == "stable-3.2") ?
+        "Gerrit-verifier-chrome-69" : "Gerrit-verifier-chrome-latest"
 }
 
 def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {

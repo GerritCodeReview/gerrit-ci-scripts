@@ -48,7 +48,7 @@ def call(Map parm = [:]) {
 
     pipeline {
         options { skipDefaultCheckout true }
-        agent { label 'bazel-debian' }
+        agent { label 'bazel-chrome-latest' }
         stages {
             stage('Checkout') {
                 steps {

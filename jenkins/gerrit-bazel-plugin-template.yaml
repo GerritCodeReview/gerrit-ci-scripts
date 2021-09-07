@@ -74,7 +74,7 @@
     name: 'plugin-{name}-bazel-{branch}'
     description: 'Plugin {name} {branch} branch build with Bazel'
     defaults: plugin-template-bazel
-    node: bazel-debian
+    node: bazel-chrome-latest
     class: plugins
     project-name: plugins%2F{name}
     extra-artifacts: ''
@@ -110,7 +110,7 @@
     name: 'ui-plugin-{name}-bazel-{branch}'
     description: 'UI Plugin {name} {branch} branch build with Bazel'
     defaults: plugin-template-bazel
-    node: bazel-debian
+    node: bazel-chrome-latest
     class: plugins
     project-name: plugins%2F{name}
     extra-artifacts: ''
@@ -146,7 +146,7 @@
     name: 'ui-plugin-{name}-bazel-{branch}-{gerrit-branch}'
     description: 'UI Plugin {name} {branch} branch build with Bazel for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
-    node: bazel-debian
+    node: bazel-chrome-latest
     class: plugins
     project-name: plugins%2F{name}
     extra-artifacts: ''
@@ -178,7 +178,7 @@
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
     class: plugins
-    node: bazel-debian
+    node: bazel-chrome-latest
     description: 'Plugin {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
     extra-artifacts: ''
@@ -206,7 +206,7 @@
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
     class: modules
-    node: bazel-debian
+    node: bazel-chrome-latest
     description: 'Lib module {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
     extra-artifacts: ''
@@ -234,7 +234,7 @@
 - job-template:
     name: 'module-{name}-bazel-{branch}'
     class: modules
-    node: bazel-debian
+    node: bazel-chrome-latest
     description: 'Lib module {name} {branch} branch Bazel build'
     defaults: plugin-template-bazel
     extra-artifacts: ''
