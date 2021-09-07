@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b29648a1_67322711",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-07T20:24:00Z",
+      "side": 1,
+      "message": "This has been already deployed on Gerrit-CI and it works as expected.",
+      "revId": "7d25e164867541b77d7795687a4c3d331d7e0da1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
