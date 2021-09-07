@@ -50,6 +50,24 @@
       "message": "Note that the Checks UI plugin can also be told to ignore SCHEDULED when it converts from the (old) Checks plugin to the (new) Checks API here:\n\nhttps://gerrit.googlesource.com/plugins/checks/+/9702d6e37f7d582e98be4486c49f4442adf268be/gr-checks/plugin.js#63",
       "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6eb93cf_a07ec1fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-09-07T06:18:04Z",
+      "side": 1,
+      "message": "Yes, I think I remember. Basically, when a scan for changes finds a change, the status is set to pending (SCHEDULED) until the actual build starts, which might be some time depending on the configuration (concurrent builds and so on).",
+      "parentUuid": "9fa77f53_c7ea455e",
+      "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
