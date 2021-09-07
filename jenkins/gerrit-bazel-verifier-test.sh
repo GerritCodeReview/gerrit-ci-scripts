@@ -1,6 +1,13 @@
 #!/bin/bash -ex
 
-. set-java.sh 8
+case "$TARGET_BRANCH" in
+  stable-2.16|stable-3.2|stable-3.3|stable-3.4)
+    . set-java.sh 8
+    ;;
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 cd gerrit
 

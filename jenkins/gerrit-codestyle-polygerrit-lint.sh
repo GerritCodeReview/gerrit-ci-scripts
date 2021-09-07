@@ -1,6 +1,13 @@
 #!/bin/bash -xe
 
-. set-java.sh 8
+case "{branch}" in
+  stable-2.16|stable-3.2|stable-3.3|stable-3.4)
+    . set-java.sh 8
+    ;;
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
 then
