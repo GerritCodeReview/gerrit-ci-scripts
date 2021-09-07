@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a98d82a0_996e3229",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-07T21:06:20Z",
+      "side": 1,
+      "message": "Today the ESC has decided to stop validating Gerrit master on Java-8: we officially move to Java 11 on master, including the language level.",
+      "revId": "a71d300fd3097f482676d4f199075cbf480649e0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
