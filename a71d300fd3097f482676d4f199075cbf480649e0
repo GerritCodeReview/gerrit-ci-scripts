@@ -16,6 +16,23 @@
       "message": "Today the ESC has decided to stop validating Gerrit master on Java-8: we officially move to Java 11 on master, including the language level.",
       "revId": "a71d300fd3097f482676d4f199075cbf480649e0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b21fba4_5c7f228e",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2021-09-07T21:13:20Z",
+      "side": 1,
+      "message": "I would invert this\n\n case \"{branch}\" in\n   master)\n     . set-java.sh 11\n     ;;\n   *)\n     . set-java.sh 8\n     ;;\n esac",
+      "revId": "a71d300fd3097f482676d4f199075cbf480649e0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
