@@ -1,6 +1,6 @@
 - defaults:
     name: gerrit-bazel-defaults
-    node: bazel-debian
+    node: bazel-chrome-latest
     properties:
       - build-discarder:
           days-to-keep: 20
