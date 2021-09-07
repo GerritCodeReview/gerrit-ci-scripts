@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b248b0e_a1f8e8db",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-07T11:00:03Z",
+      "side": 0,
+      "message": "This is a nice improvement: removing duplication is always useful :-)\n\nCan you also mention that in the commit message?",
+      "range": {
+        "startLine": 114,
+        "startChar": 1,
+        "endLine": 135,
+        "endChar": 0
+      },
+      "revId": "656d68a05b106eff5063acc0401286afddd2d4fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
