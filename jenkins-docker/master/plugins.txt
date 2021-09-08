@@ -37,7 +37,7 @@ envinject-api:1.7
 favorite:2.3.1
 gatling:1.2.5
 gatling-check:1.0.0
-gerrit-code-review:0.4.3
+gerrit-code-review:0.4.7
 git:3.9.1
 git-client:3.0.0
 github:1.29.5
