@@ -16,6 +16,23 @@
       "message": "This has been already deployed on Gerrit-CI and it works as expected.",
       "revId": "7d25e164867541b77d7795687a4c3d331d7e0da1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9a88006_78098201",
+        "filename": "jenkins-docker/master/jenkins.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-09-08T06:39:04Z",
+      "side": 1,
+      "message": "nit: A very long line. Use \\ to split it.",
+      "revId": "7d25e164867541b77d7795687a4c3d331d7e0da1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
