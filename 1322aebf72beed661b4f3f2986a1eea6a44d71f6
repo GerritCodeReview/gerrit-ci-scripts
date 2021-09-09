@@ -16,6 +16,23 @@
       "message": "the stable-3.4 build is failing: \nhttps://gerrit-ci.gerritforge.com/job/plugin-code-owners-bazel-stable-3.4/1/console",
       "revId": "1322aebf72beed661b4f3f2986a1eea6a44d71f6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0c6f69e_408557fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-09T23:10:20Z",
+      "side": 1,
+      "message": "Going to merge this anyway, so that we can understand what\u0027s wrong in stable-3.4 and fix it on the code-owners.",
+      "revId": "1322aebf72beed661b4f3f2986a1eea6a44d71f6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
