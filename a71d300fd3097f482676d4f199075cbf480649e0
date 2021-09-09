@@ -89,6 +89,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "55955f67_9eb6e8a9",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-09T00:04:52Z",
+      "side": 1,
+      "message": "Yes, but I would also need to change the associated Gerrit pipeline. It\u0027s doable.",
+      "parentUuid": "3cf5426f_5dd41c1f",
+      "revId": "a71d300fd3097f482676d4f199075cbf480649e0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "939a88aa_ff831afc",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 1
@@ -100,6 +118,24 @@
       "writtenOn": "2021-09-08T06:36:38Z",
       "side": 1,
       "message": "This will overwrite the authorization and build-discarder properties from the defaults, I think. Those would have to be copied here as well.",
+      "revId": "a71d300fd3097f482676d4f199075cbf480649e0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91370c7d_7aaa41e4",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-09T00:04:52Z",
+      "side": 1,
+      "message": "Good catch. Done.",
+      "parentUuid": "939a88aa_ff831afc",
       "revId": "a71d300fd3097f482676d4f199075cbf480649e0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
