@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f79c7a1_85947847",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-09T17:29:08Z",
+      "side": 1,
+      "message": "v0.4.7 is now published at https://plugins.jenkins.io/gerrit-code-review/",
+      "revId": "4fe361bda05d5ac3eab58329ba5f3ea54f1705e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
