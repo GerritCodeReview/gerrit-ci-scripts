@@ -72,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6fcee117_3a632e86",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-09-09T00:06:33Z",
+      "side": 1,
+      "message": "WDYT @Matthias?",
+      "parentUuid": "876417ff_4e93e037",
+      "revId": "a71d300fd3097f482676d4f199075cbf480649e0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3cf5426f_5dd41c1f",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 1
