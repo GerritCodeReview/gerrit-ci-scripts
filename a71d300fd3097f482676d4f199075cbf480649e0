@@ -90,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "612e65ae_3dee9b5b",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2021-09-10T08:27:02Z",
+      "side": 1,
+      "message": "Neither of the proposed coding styles stays stable over time. The style proposed by Matthias would also have to be modified in the future after the 3.5 is released:\n\n  case \"{branch}\" in\n    master|stable-3.5)\n      . set-java.sh 11\n    *)\n      . set-java.sh 8\n      ;;\n  esac\n   \nTherefore, I would keep the change owner\u0027s style 😊",
+      "parentUuid": "6fcee117_3a632e86",
+      "revId": "a71d300fd3097f482676d4f199075cbf480649e0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3cf5426f_5dd41c1f",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 1

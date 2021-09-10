@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c194a2f6_c44468fc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2021-09-10T08:27:02Z",
+      "side": 1,
+      "message": "Why is this different for the plugins and the core?",
+      "revId": "98c807ce4aa5348e9214cc38e16b74b7424163c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e220d8a7_4f001621",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2021-09-10T08:27:02Z",
+      "side": 1,
+      "message": "This pattern is repeated N times in the code. Is there a way to have a global constant and maintain it in one place only?",
+      "revId": "98c807ce4aa5348e9214cc38e16b74b7424163c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
