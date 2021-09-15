@@ -3,6 +3,5 @@
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           branch:
-            - master
             - stable-3.2
             - stable-2.16
