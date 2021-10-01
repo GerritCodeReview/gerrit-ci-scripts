@@ -9,6 +9,7 @@ RUN mv /usr/local/bin/jenkins.sh /usr/local/bin/run-jenkins.sh
 COPY jenkins.sh /usr/local/bin/
 
 RUN apt-get update && apt-get install -y \
+    ca-certificates \
     python-dev \
     python-pip \
     python-yaml \
@@ -21,6 +22,9 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/* && \
     pip install pbr==2.0.0 && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
+
+RUN sed -i 's#mozilla/DST_Root_CA_X3.crt#!mozilla/DST_Root_CA_X3.crt#' /etc/ca-certificates.conf && \
+    update-ca-certificates
 
 # Install JJB from source until the support for checks-filters is released
 RUN git clone https://review.opendev.org/jjb/jenkins-job-builder && \
