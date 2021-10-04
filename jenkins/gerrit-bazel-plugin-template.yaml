@@ -26,7 +26,7 @@
 
 - defaults:
     name: verifier-template-bazel
-    node: master
+    node: server
     days-to-keep: 90
     number-to-keep: 500
     prune-dead-branches: true

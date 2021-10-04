@@ -16,7 +16,7 @@
 
 lintOutTrimmed = ""
 
-node ('master') {
+node ('server') {
   gerritReview labels: ['Code-Style': 0]
 
   stage('YAML lint') {

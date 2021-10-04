@@ -180,7 +180,7 @@
     name: 'Gerrit-verifier-pipeline'
     description: Multi-branch pipeline to validate Gerrit
     project-type: multibranch
-    node: master
+    node: server
     days-to-keep: 90
     prune-dead-branches: true
     scm:

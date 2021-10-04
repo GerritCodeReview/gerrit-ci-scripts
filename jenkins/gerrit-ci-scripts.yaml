@@ -1,7 +1,7 @@
 - job:
     name: gerrit-ci-scripts
     description: Gerrit Jenkins Job Builder Scripts
-    node: master
+    node: server
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
@@ -18,7 +18,7 @@
 - job:
     name: gerrit-ci-scripts-docker
     description: Gerrit Jenkins Job Builder Docker images
-    node: master
+    node: server
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
@@ -39,7 +39,7 @@
 - job:
     name: gerrit-ci-scripts-manual
     description: Manually rebuild gerrit-ci-scripts from a specific Change ID and revision
-    node: master
+    node: server
     parameters:
       - string:
           name: CHANGE_NUMBER
@@ -88,7 +88,7 @@
     name: gerrit-ci-scripts-pipeline
     description: Multi-branch pipeline to validate Gerrit's Jenkins Job Builder Scripts
     project-type: multibranch
-    node: master
+    node: server
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit-ci-scripts

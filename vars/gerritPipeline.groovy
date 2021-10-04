@@ -23,7 +23,7 @@ import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 
 def call(Map parm = [:]) {
-    node ('master') {
+    node ('server') {
 
         if (hasChangeNumber()) {
             stage('Preparing'){
