@@ -52,7 +52,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-buster-latest</image>
+            <image>gerritforge/gerrit-ci-agent-bazel-docker:debian-buster-latest</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
@@ -89,7 +89,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-bazel-docker:debian-buster-69.0.3497.92</image>
+            <image>gerritforge/gerrit-ci-agent-bazel-docker:debian-buster-69.0.3497.92</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
@@ -126,7 +126,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-mvn</image>
+            <image>gerritforge/gerrit-ci-agent-mvn</image>
             <dockerCommand></dockerCommand>
             <lxcConfString>mvn</lxcConfString>
             <hostname></hostname>
@@ -164,7 +164,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-bazel-sbt</image>
+            <image>gerritforge/gerrit-ci-agent-bazel-sbt</image>
             <dockerCommand></dockerCommand>
             <lxcConfString>sbt</lxcConfString>
             <hostname></hostname>
@@ -202,7 +202,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-python3:buster</image>
+            <image>gerritforge/gerrit-ci-agent-python3:buster</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
@@ -239,7 +239,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-jekyll</image>
+            <image>gerritforge/gerrit-ci-agent-jekyll</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
@@ -276,7 +276,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-slave-aws</image>
+            <image>gerritforge/gerrit-ci-agent-aws</image>
             <dockerCommand></dockerCommand>
             <lxcConfString>aws</lxcConfString>
             <hostname></hostname>
