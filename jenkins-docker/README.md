@@ -37,15 +37,15 @@ make build
 
 Images available are:
 
-* gerritforge/gerrit-ci-slave: Base Jenkins slave with OS and prerequisites.
+* gerritforge/gerrit-ci-agent: Base Jenkins agent with OS and prerequisites.
 
-* gerritforge/gerrit-ci-slave-debian: Base Jenkins slave with OS and prerequisites.
+* gerritforge/gerrit-ci-agent-debian: Base Jenkins agent with OS and prerequisites.
 
-* gerritforge/gerrit-ci-slave-bazel: Bazel build for gerrit 2.14+.
+* gerritforge/gerrit-ci-agent-bazel: Bazel build for gerrit 2.14+.
 
-* gerritforge/gerrit-ci-slave-bazel-sbt: Setups scala for plugins that use scala.
+* gerritforge/gerrit-ci-agent-bazel-sbt: Setups scala for plugins that use scala.
 
-* gerritforge/gerrit-ci-slave-mvn - Setups maven for plugins that use maven.
+* gerritforge/gerrit-ci-agent-mvn - Setups maven for plugins that use maven.
 
 ## Running the container
 
@@ -53,7 +53,7 @@ Images available are:
 
 If your not familar with docker please follow https://docs.docker.com/get-started/
 
-## Contributing slave to Gerrit Code Review verification
+## Contributing agent to Gerrit Code Review verification
 
 * Set up root server with running docker service.
 * Generate ecdsa SSH key and send public key to CI maintainer:
@@ -62,10 +62,10 @@ If your not familar with docker please follow https://docs.docker.com/get-starte
   $ ssh-keygen -t ecdsa -b 521
 ----
 
-* Ask CI maintainer to generate for you unique slave id.
+* Ask CI maintainer to generate for you unique agent id.
 
 * Run `cat /proc/cpuinfo` and report CI maintainer the number of CPUs, so
-that your slave would not get overloaded.
+that your agent would not get overloaded.
 
 * Clone gerrit-ci-scripts repository:
 
@@ -97,21 +97,21 @@ otherwise, your Docker container could be hijacked.
   $ systemctl restart docker.service
 ----
 
-* Add this line to crontab job (replace <your_slave_id>):
+* Add this line to crontab job (replace <your_agent_id>):
 
 ----
-*/5 * * * * /root/gerrit-ci-scripts/worker/tunnel.sh <your_slave_id>
+*/5 * * * * /root/gerrit-ci-scripts/worker/tunnel.sh <your_agent_id>
 ----
 
 * In case your server is behind a Firewall, open tcp/2375 port for
 incoming requests.
 
 * Check on https://gerrit-ci.gerritforge.com and running `docker ps`
-that your slave is up and running and build jobs are scheduled. If all
+that your agent is up and running and build jobs are scheduled. If all
 went well and when jobs have arrived you should see something like:
 
 ----
   $ docker ps
   CONTAINER ID        IMAGE                                    COMMAND                  CREATED             STATUS              PORTS
-  d9ff4b6a8b1c        gerritforge/jenkins-slave-bazel:debian   "bash -x /bin/star..."   6 minutes ago       Up 6 minutes        0.0.0.0:32792->22/tcp
+  d9ff4b6a8b1c        gerritforge/jenkins-agent-bazel:debian   "bash -x /bin/star..."   6 minutes ago       Up 6 minutes        0.0.0.0:32792->22/tcp
 ----
