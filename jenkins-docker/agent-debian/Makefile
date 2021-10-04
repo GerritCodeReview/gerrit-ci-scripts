@@ -14,7 +14,7 @@ build:  id_rsa.pub
 publish:
 	docker push ${IMAGE}:$(DEBIAN_VER)
 
-id_rsa.pub: ../master/id_rsa.pub
+id_rsa.pub: ../server/id_rsa.pub
 	cp $? $@
 
 clean:
