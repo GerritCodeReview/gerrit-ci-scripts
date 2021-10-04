@@ -172,13 +172,13 @@ def buildVerificationJob() {
 def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
     return {
         stage("${buildName}/${mode}") {
-            def slaveBuild = null
+            def agentBuild = null
             for (int i = 1; i <= retryTimes; i++) {
                 postCheck(new GerritCheck(
                     (buildName == "Gerrit-codestyle") ? "codestyle" : mode,
                     new Build(currentBuild.getAbsoluteUrl(), null)))
                 try {
-                    slaveBuild = build job: "${buildName}", parameters: [
+                    agentBuild = build job: "${buildName}", parameters: [
                         string(name: 'REFSPEC', value: "refs/changes/${env.BRANCH_NAME}"),
                         string(name: 'BRANCH', value: env.GERRIT_PATCHSET_REVISION),
                         string(name: 'CHANGE_URL', value: "${Globals.gerritUrl}c/${env.GERRIT_PROJECT}/+/${env.GERRIT_CHANGE_NUMBER}"),
@@ -188,14 +188,14 @@ def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
                 } finally {
                     if (buildName == "Gerrit-codestyle"){
                         Builds.codeStyle = new Build(
-                            slaveBuild.getAbsoluteUrl(), slaveBuild.getResult())
+                            agentBuild.getAbsoluteUrl(), agentBuild.getResult())
                         postCheck(new GerritCheck("codestyle", Builds.codeStyle))
                     } else {
                         Builds.verification[mode] = new Build(
-                            slaveBuild.getAbsoluteUrl(), slaveBuild.getResult())
+                            agentBuild.getAbsoluteUrl(), agentBuild.getResult())
                         postCheck(new GerritCheck(mode, Builds.verification[mode]))
                     }
-                    if (slaveBuild.getResult() == "SUCCESS") {
+                    if (agentBuild.getResult() == "SUCCESS") {
                         break
                     }
                 }
