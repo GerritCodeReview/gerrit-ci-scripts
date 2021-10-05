@@ -16,6 +16,24 @@
       "message": "We still have occurrences of `node: master`. Was that also adapted? I couldn\u0027t find anything about that.",
       "revId": "1a85bf2b19d22b73ea3a1668e07336294dda732c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5acae88_904b701d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-05T08:52:23Z",
+      "side": 1,
+      "message": "Good catch, done.",
+      "parentUuid": "2900b8de_7b6999d7",
+      "revId": "1a85bf2b19d22b73ea3a1668e07336294dda732c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
