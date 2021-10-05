@@ -1,0 +1,140 @@
+{
+  "comments": [],
+  "submitRequirementResults": [
+    {
+      "submitRequirement": {
+        "name": "Code-Review",
+        "description": {},
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Code-Review\u003dMAX,user\u003dnon_uploader -label:Code-Review\u003dMIN"
+        },
+        "overrideExpression": {},
+        "allowOverrideInChildProjects": true
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "expression": {
+          "expressionString": "label:Code-Review\u003dMAX,user\u003dnon_uploader -label:Code-Review\u003dMIN"
+        },
+        "status": "PASS",
+        "errorMessage": {},
+        "passingAtoms": [
+          "label:Code-Review\u003dMAX,user\u003dnon_uploader",
+          "-label:Code-Review\u003dMIN"
+        ],
+        "failingAtoms": []
+      },
+      "overrideExpressionResult": {},
+      "patchSetCommitId": {
+        "w1": -958686166,
+        "w2": -2139604521,
+        "w3": -1635324187,
+        "w4": -1889913198,
+        "w5": 1600129340
+      },
+      "legacy": true
+    },
+    {
+      "submitRequirement": {
+        "name": "Code-Style",
+        "description": {},
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Code-Style\u003dMAX -label:Code-Style\u003dMIN"
+        },
+        "overrideExpression": {},
+        "allowOverrideInChildProjects": true
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "expression": {
+          "expressionString": "label:Code-Style\u003dMAX -label:Code-Style\u003dMIN"
+        },
+        "status": "PASS",
+        "errorMessage": {},
+        "passingAtoms": [
+          "label:Code-Style\u003dMAX",
+          "-label:Code-Style\u003dMIN"
+        ],
+        "failingAtoms": []
+      },
+      "overrideExpressionResult": {},
+      "patchSetCommitId": {
+        "w1": -958686166,
+        "w2": -2139604521,
+        "w3": -1635324187,
+        "w4": -1889913198,
+        "w5": 1600129340
+      },
+      "legacy": true
+    },
+    {
+      "submitRequirement": {
+        "name": "Verified",
+        "description": {},
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Verified\u003dMAX -label:Verified\u003dMIN"
+        },
+        "overrideExpression": {},
+        "allowOverrideInChildProjects": true
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "expression": {
+          "expressionString": "label:Verified\u003dMAX -label:Verified\u003dMIN"
+        },
+        "status": "PASS",
+        "errorMessage": {},
+        "passingAtoms": [
+          "label:Verified\u003dMAX",
+          "-label:Verified\u003dMIN"
+        ],
+        "failingAtoms": []
+      },
+      "overrideExpressionResult": {},
+      "patchSetCommitId": {
+        "w1": -958686166,
+        "w2": -2139604521,
+        "w3": -1635324187,
+        "w4": -1889913198,
+        "w5": 1600129340
+      },
+      "legacy": true
+    },
+    {
+      "submitRequirement": {
+        "name": "checks~ChecksSubmitRule",
+        "description": {},
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "rule:checks~ChecksSubmitRule"
+        },
+        "overrideExpression": {},
+        "allowOverrideInChildProjects": false
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "expression": {
+          "expressionString": "rule:checks~ChecksSubmitRule"
+        },
+        "status": "PASS",
+        "errorMessage": {},
+        "passingAtoms": [
+          "checks~ChecksSubmitRule"
+        ],
+        "failingAtoms": []
+      },
+      "overrideExpressionResult": {},
+      "patchSetCommitId": {
+        "w1": -958686166,
+        "w2": -2139604521,
+        "w3": -1635324187,
+        "w4": -1889913198,
+        "w5": 1600129340
+      },
+      "legacy": true
+    }
+  ]
+}
