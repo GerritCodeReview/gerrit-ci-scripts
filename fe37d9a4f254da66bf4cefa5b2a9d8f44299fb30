@@ -58,6 +58,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6843c295_fd25296e",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-08T23:12:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f311ca21_6e353a2c",
+      "range": {
+        "startLine": 3,
+        "startChar": 6,
+        "endLine": 3,
+        "endChar": 14
+      },
+      "revId": "fe37d9a4f254da66bf4cefa5b2a9d8f44299fb30",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ed50f166_60fef975",
@@ -71,6 +95,30 @@
       "writtenOn": "2021-10-08T22:31:34Z",
       "side": 1,
       "message": "This isn\u0027t expanded by JJB: it should be instead $TARGET_BRANCH because is triggered by a change validation",
+      "range": {
+        "startLine": 3,
+        "startChar": 6,
+        "endLine": 3,
+        "endChar": 14
+      },
+      "revId": "fe37d9a4f254da66bf4cefa5b2a9d8f44299fb30",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2c48e1d_a2ee8df6",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-08T23:12:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ed50f166_60fef975",
       "range": {
         "startLine": 3,
         "startChar": 6,

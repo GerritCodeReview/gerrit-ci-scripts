@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "179bc799_9b3cf58d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-08T23:12:59Z",
+      "side": 1,
+      "message": "Now it works as expected: Java-11 changes are successful on master but NOT on any stable-* release.",
+      "revId": "68504a71c91f03c47e806ed7469bfa02fd1936c7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
