@@ -16,6 +16,69 @@
       "message": "Can we start validating for Java 11 before cutting stable-3.5?",
       "revId": "fe37d9a4f254da66bf4cefa5b2a9d8f44299fb30",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ae0c6e8_e83baa64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-08T22:31:34Z",
+      "side": 1,
+      "message": "This caused the validation of stable branches with Java 11 which isn\u0027t what we want.",
+      "revId": "fe37d9a4f254da66bf4cefa5b2a9d8f44299fb30",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f311ca21_6e353a2c",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-08T22:31:34Z",
+      "side": 1,
+      "message": "This isn\u0027t expanded by JJB: it should be instead $TARGET_BRANCH because is triggered by a change validation",
+      "range": {
+        "startLine": 3,
+        "startChar": 6,
+        "endLine": 3,
+        "endChar": 14
+      },
+      "revId": "fe37d9a4f254da66bf4cefa5b2a9d8f44299fb30",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed50f166_60fef975",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-08T22:31:34Z",
+      "side": 1,
+      "message": "This isn\u0027t expanded by JJB: it should be instead $TARGET_BRANCH because is triggered by a change validation",
+      "range": {
+        "startLine": 3,
+        "startChar": 6,
+        "endLine": 3,
+        "endChar": 14
+      },
+      "revId": "fe37d9a4f254da66bf4cefa5b2a9d8f44299fb30",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
