@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7cd017d9_df317a77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-08T00:06:11Z",
+      "side": 1,
+      "message": "Can we start validating for Java 11 before cutting stable-3.5?",
+      "revId": "fe37d9a4f254da66bf4cefa5b2a9d8f44299fb30",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
