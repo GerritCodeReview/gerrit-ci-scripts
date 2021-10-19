@@ -3,7 +3,7 @@ include ../chrome-vers.mk
 NO_CACHE=false
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-buster-nocache
-BAZEL_VER=4.0.0
+BAZEL_VER=4.2.0
 BUILDIFIER_VER=4.0.0
 BAZELISK_VER=1.7.4
 NODE_VER=10
