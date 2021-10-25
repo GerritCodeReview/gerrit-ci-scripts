@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "564c4cd7_ce66903a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-10-25T06:29:09Z",
+      "side": 1,
+      "message": "I think you missed to add stable-3.5 in gerrit-codestyle-polygerrit-lint.sh L12ff.",
+      "revId": "0ffac70a5163de8bc1d75f133f29a07d12aba785",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
