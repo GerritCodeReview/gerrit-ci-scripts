@@ -9,7 +9,8 @@ usermod -G docker jenkins
 ALLOW_REMOTING_CLASSES=\
 com.google.gerrit.extensions.common.AvatarInfo,\
 com.google.gerrit.extensions.common.ReviewerUpdateInfo,\
-com.google.gerrit.extensions.common.TrackingIdInfo
+com.google.gerrit.extensions.common.TrackingIdInfo,\
+com.google.gerrit.extensions.common.SubmitRequirementInfo
 
 JAVA_OPTS="-Dfile.encoding=UTF-8 -Dhudson.remoting.ClassFilter=$ALLOW_REMOTING_CLASSES"
 
