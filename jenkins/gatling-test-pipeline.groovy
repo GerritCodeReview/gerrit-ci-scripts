@@ -9,8 +9,8 @@ pipeline {
             string(name: 'AWS_PREFIX', defaultValue:"jenkins", description: 'A string to prefix stacks and resources with')
             string(name: 'AWS_REGION', defaultValue:"us-east-1", description: 'Which region to deploy to')
 
-            string(name: 'GERRIT_VERSION', defaultValue:"3.4", description: 'The gerrit version under test')
-            string(name: 'GERRIT_PATCH', defaultValue:"0-rc5", description: 'The gerrit version patch under test')
+            string(name: 'GERRIT_VERSION', defaultValue:"3.5", description: 'The gerrit version under test')
+            string(name: 'GERRIT_PATCH', defaultValue:"0-rc1", description: 'The gerrit version patch under test')
             string(name: 'GERRIT_WAR_URL', defaultValue:"https://gerrit-ci.gerritforge.com/job/Gerrit-bazel-java11-stable-3.5/lastSuccessfulBuild/artifact/gerrit/bazel-bin/release.war", description: 'The gerrit.war URL to use as override of the gerrit version under test')
 
             string(name: 'HOSTED_ZONE_NAME', defaultValue: "gerritforgeaws.com", description: 'Name of the hosted zone')
