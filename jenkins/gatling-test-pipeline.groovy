@@ -44,10 +44,10 @@ pipeline {
                 returnStdout: true,
                 script: '/sbin/ip route|awk \'/default/ {print "tcp://"\$3":2375"}\''
             )}"""
-            SUBDOMAIN = String.format("%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
-            BASE_URL = String.format("%s.%s", SUBDOMAIN, "${params.HOSTED_ZONE_NAME}")
-            GERRIT_HTTP_URL = String.format("%s://%s", "${params.GERRIT_HTTP_SCHEMA}", BASE_URL)
-            GERRIT_SSH_URL = String.format("ssh://%s@%s:%s", "${params.GERRIT_SSH_USERNAME}", BASE_URL, "${params.GERRIT_SSH_PORT}")
+            HTTP_SUBDOMAIN = String.format("http-%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
+            SSH_SUBDOMAIN = String.format("ssh-%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
+            GERRIT_HTTP_URL = String.format("%s://%s.%s", "${params.GERRIT_HTTP_SCHEMA}", HTTP_SUBDOMAIN, "${params.HOSTED_ZONE_NAME}")
+            GERRIT_SSH_URL = String.format("ssh://%s@%s.%s:%s", "${params.GERRIT_SSH_USERNAME}", SSH_SUBDOMAIN, "${params.HOSTED_ZONE_NAME}", "${params.GERRIT_SSH_PORT}")
          }
 
         stages{
@@ -81,7 +81,8 @@ pipeline {
                                 setupData = resolveParameter(setupData, "SSL_CERTIFICATE_ARN", "${params.SSL_CERTIFICATE_ARN}")
 
                                 setupData = resolveParameter(setupData, "METRICS_CLOUDWATCH_NAMESPACE", "${params.METRICS_CLOUDWATCH_NAMESPACE}")
-                                setupData = resolveParameter(setupData, 'SUBDOMAIN', "${env.SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'HTTP_SUBDOMAIN', "${env.HTTP_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'SSH_SUBDOMAIN', "${env.SSH_SUBDOMAIN}")
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${params.GERRIT_KEY_PREFIX}"
                                 setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${params.GERRIT_VOLUME_SNAPSHOT_ID}"
