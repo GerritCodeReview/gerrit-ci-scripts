@@ -16,6 +16,29 @@
       "message": "https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-events-kafka-bazel-master-stable-3.5/1/console",
       "revId": "c9365d6b256ce63ff1ecfc1d399f39cb160014ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f854502_8e0df629",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-11-17T21:12:46Z",
+      "side": 1,
+      "message": "why we build branch master against stable-3.5?",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "c9365d6b256ce63ff1ecfc1d399f39cb160014ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
