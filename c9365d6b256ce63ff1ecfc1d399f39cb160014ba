@@ -63,6 +63,30 @@
       },
       "revId": "c9365d6b256ce63ff1ecfc1d399f39cb160014ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfb34779_49dae975",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2021-11-17T21:24:32Z",
+      "side": 1,
+      "message": "but why we don\u0027t have a stable-3.5 branch?",
+      "parentUuid": "783d4838_46429dd1",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "c9365d6b256ce63ff1ecfc1d399f39cb160014ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
