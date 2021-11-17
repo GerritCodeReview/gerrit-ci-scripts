@@ -87,6 +87,30 @@
       },
       "revId": "c9365d6b256ce63ff1ecfc1d399f39cb160014ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5075ac71_5f2b9a75",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-11-17T21:41:34Z",
+      "side": 1,
+      "message": "we don\u0027t necessarily need a stable-3.5 branch for the plugin. Plugin branches are created only when the plugin cannot work against a stable branch anymore\n\nSee for example the last branch of the git readonly plugin is stable-3.1\n\n➜  readonly git:(master) ✗ git ls-remote | grep stable\nFrom https://gerrit.googlesource.com/plugins/readonly\nb0a6b873e0f16418a03db4023cfba015b27da92c\trefs/heads/stable-2.14\n63c4730bcf5a3b175fec812125b852a595cbd2f8\trefs/heads/stable-2.15\n638602c039e913fbe4732d1e9fb6c5ac2a71454b\trefs/heads/stable-2.16\n7d42ab509fb9f69d6996951996af1dfe8b871860\trefs/heads/stable-3.0\n5a8ecb08fb0c1a0f89797a7c943560715d3f5f59\trefs/heads/stable-3.1",
+      "parentUuid": "bfb34779_49dae975",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "c9365d6b256ce63ff1ecfc1d399f39cb160014ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
