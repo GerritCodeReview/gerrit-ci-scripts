@@ -39,6 +39,30 @@
       },
       "revId": "c9365d6b256ce63ff1ecfc1d399f39cb160014ba",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "783d4838_46429dd1",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-11-17T21:18:42Z",
+      "side": 1,
+      "message": "We build the master branch of the plugin against gerrit-3.5 ...so we can have an artifact in 3.5",
+      "parentUuid": "5f854502_8e0df629",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "c9365d6b256ce63ff1ecfc1d399f39cb160014ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
