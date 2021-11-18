@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ef4c6c8_67fe5828",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-11-18T19:14:31Z",
+      "side": 1,
+      "message": "Verified at [1]\n\n[1]https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-replication-status-bazel-master-stable-3.5/1/",
+      "revId": "d5eba1f7c64f7540b4f1c973957b44356ba49679",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
