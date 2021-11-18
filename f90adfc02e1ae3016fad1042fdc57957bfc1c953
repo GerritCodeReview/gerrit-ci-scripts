@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a452ca1_27a2a8ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-11-18T12:40:50Z",
+      "side": 1,
+      "message": "https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-quota-bazel-master-stable-3.5/1/console",
+      "revId": "f90adfc02e1ae3016fad1042fdc57957bfc1c953",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
