@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6ecf62c_6b898678",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-11-18T20:30:55Z",
+      "side": 1,
+      "message": "https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-its-base-bazel-master-stable-3.5/1/console",
+      "revId": "0f8dd7f7311255f8b9a79fb06b47199107dee701",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
