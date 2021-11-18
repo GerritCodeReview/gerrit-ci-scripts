@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bcb39a4_964b7bc5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-11-18T23:44:33Z",
+      "side": 1,
+      "message": "It looks like I forgot to enable tests with RBE for stable-3.5, my bad 😞",
+      "revId": "f7d66ad12200040a0ce3d0a49da19b7514f32aa7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
