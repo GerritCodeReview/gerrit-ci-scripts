@@ -32,6 +32,13 @@ pipeline {
             string(name: 'GIT_HTTP_USERNAME', defaultValue: '', description: 'Username for Git/HTTP testing, use vault by default')
             password(name: 'GIT_HTTP_PASSWORD', defaultValue: '', description: 'Password for Git/HTTP testing, use vault by default')
 
+            string(name: 'LDAP_SERVER', defaultValue: 'ldap://ldap.gerritforge.com', description: 'URL of the LDAP server to query for user information and group membership')
+            string(name: 'LDAP_USERNAME', defaultValue: 'cn=admin,dc=gerritforge,dc=com', description: 'Username to bind to the LDAP server with')
+            string(name: 'LDAP_ACCOUNT_BASE', defaultValue: 'dc=gerritforge,dc=com', description: 'Root of the tree containing all user accounts')
+            string(name: 'LDAP_GROUP_BASE', defaultValue: 'dc=gerritforge,dc=com', description: 'Root of the tree containing all group objects')
+            string(name: 'GERRIT_LOGIN_USERNAME', defaultValue: 'gerritadmin', description: 'The login identity to acquire a valid cookie')
+            password(name: 'GERRIT_LOGIN_PASSWORD', defaultValue: 'secret', description: 'The login identity password')
+
             string(name: 'S3_EXPORT_LOGS_BUCKET_NAME', defaultValue: 'gerritforge-export-logs', description: 'S3 bucket to export logs to')
 
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
@@ -63,7 +70,6 @@ pipeline {
                     dir ('aws-gerrit/gerrit/etc') {
                         script {
                             def gerritConfig = readFile(file:"gerrit.config.template")
-                            gerritConfig = gerritConfig.replace("type = ldap","type = DEVELOPMENT_BECOME_ANY_ACCOUNT")
                             gerritConfig = gerritConfig.replace("smtpUser = {{ SMTP_USER }}\n    enable = true","smtpUser = {{ SMTP_USER }}\n    enable = false")
 
                             writeFile(file:"gerrit.config.template", text: gerritConfig)
@@ -83,6 +89,11 @@ pipeline {
                                 setupData = resolveParameter(setupData, "METRICS_CLOUDWATCH_NAMESPACE", "${params.METRICS_CLOUDWATCH_NAMESPACE}")
                                 setupData = resolveParameter(setupData, 'HTTP_SUBDOMAIN', "${env.HTTP_SUBDOMAIN}")
                                 setupData = resolveParameter(setupData, 'SSH_SUBDOMAIN', "${env.SSH_SUBDOMAIN}")
+
+                                setupData = resolveParameter(setupData, "LDAP_SERVER", "${params.LDAP_SERVER}")
+                                setupData = resolveParameter(setupData, "LDAP_USERNAME", "${params.LDAP_USERNAME}")
+                                setupData = resolveParameter(setupData, "LDAP_ACCOUNT_BASE", "${params.LDAP_ACCOUNT_BASE}")
+                                setupData = resolveParameter(setupData, "LDAP_GROUP_BASE", "${params.LDAP_GROUP_BASE}")
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${params.GERRIT_KEY_PREFIX}"
                                 setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${params.GERRIT_VOLUME_SNAPSHOT_ID}"
@@ -105,7 +116,7 @@ pipeline {
                     retry(50) {
                         sleep(10)
                         sh "curl --fail -L -I '${env.GERRIT_HTTP_URL}/config/server/healthcheck~status' 2>/dev/null"
-                        sh "curl -L -c cookies -i -X POST '${env.GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip?account_id=1000000'"
+                        sh "curl -L -c cookies -i '${env.GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip' --data-raw 'username=${params.GERRIT_LOGIN_USERNAME}&password=${params.GERRIT_LOGIN_PASSWORD}'"
                     }
                     script {
                         def cookies = readFile(file:"cookies")
