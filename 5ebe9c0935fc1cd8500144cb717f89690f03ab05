@@ -63,6 +63,30 @@
       },
       "revId": "5ebe9c0935fc1cd8500144cb717f89690f03ab05",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "044c9367_f795dbc3",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-11-24T20:25:09Z",
+      "side": 1,
+      "message": "I have tried with both:\n\nldaps://ldap.gerritforge.com [1]\n\nand\n\nldap://ldap.gerritforge.com:636 [2]\n\nTests are failing with 403\n\n@luca do you know if LDAPS is actually enabled?\n\n[1]https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/593/console\n[2]https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/594/console",
+      "parentUuid": "c5254e7d_942296d2",
+      "range": {
+        "startLine": 35,
+        "startChar": 55,
+        "endLine": 35,
+        "endChar": 82
+      },
+      "revId": "5ebe9c0935fc1cd8500144cb717f89690f03ab05",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
