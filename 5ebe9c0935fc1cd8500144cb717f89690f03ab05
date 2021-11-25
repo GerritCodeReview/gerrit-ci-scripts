@@ -111,6 +111,30 @@
       },
       "revId": "5ebe9c0935fc1cd8500144cb717f89690f03ab05",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a880eae_7a91fede",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2021-11-25T13:07:01Z",
+      "side": 1,
+      "message": "Looks like that the self-signed cert is not the only thing going on.\nThe handshake fails either way.\n\nI am able to replicate with `ldapsearch` only:\n\n- PLAIN connection\n\n```\n➜  source ldapsearch -d8 -H ldap://ldap.gerritforge.com -x -D \"cn\u003dadmin,dc\u003dgerritforge,dc\u003dcom\" -b \"dc\u003dgerritforge,dc\u003dcom\" -W -s sub \u0027(\u0026(objectClass\u003dperson)(uid\u003dgerritadmin))\u0027\nEnter LDAP Password:\n# extended LDIF\n#\n# LDAPv3\n# base \u003cdc\u003dgerritforge,dc\u003dcom\u003e with scope subtree\n# filter: (\u0026(objectClass\u003dperson)(uid\u003dgerritadmin))\n# requesting: ALL\n#\n\n# gerritadmin, gerritforge.com\ndn: cn\u003dgerritadmin,dc\u003dgerritforge,dc\u003dcom\ngivenName: Gerrt\nsn: Admin\ncn: gerritadmin\n...\n```\n\n- SECURE connection (ignoring SSL validation):\n\n```\n➜  source LDAPTLS_REQCERT\u003dnever ldapsearch -d8 -H ldaps://ldap.gerritforge.com -x -D \"cn\u003dadmin,dc\u003dgerritforge,dc\u003dcom\" -b \"dc\u003dgerritforge,dc\u003dcom\" -W -s sub \u0027(\u0026(objectClass\u003dperson)(uid\u003dgerritadmin))\u0027\nEnter LDAP Password:\nTLS: during handshake: peer cert is valid, or was ignored if verification disabled (-9841)\nTLS: during handshake: Allowing untrusted peer certificate\nTLS: during handshake: connection closed via error (-9806)\nTLS: can\u0027t connect: SSLHandshake() failed: connection closed via error (-9806).\nldap_sasl_bind(SIMPLE): Can\u0027t contact LDAP server (-1)\n```\n\nNote, the `peer cert is valid` and `Allowing untrusted peer certificate`\n\n\nSomething else seems going on @luca.\nCould you check whether the server is configured correctly to handle SSL?\nOtherwise could go with plain LDAP for now?",
+      "parentUuid": "d6818fbb_22ea9ede",
+      "range": {
+        "startLine": 35,
+        "startChar": 55,
+        "endLine": 35,
+        "endChar": 82
+      },
+      "revId": "5ebe9c0935fc1cd8500144cb717f89690f03ab05",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
