@@ -53,7 +53,13 @@ fi
 
 if [[ "$MODE" == *"rbe"* ]]
 then
-  bazelisk test $BAZEL_OPTS //...
+  echo "Running tests against index.type=LUCENE"
+  echo "======================================="
+  bazelisk test --test_env=GERRIT_INDEX_TYPE=LUCENE $BAZEL_OPTS //...
+
+  echo "Running tests against index.type=FAKE"
+  echo "======================================="
+  bazelisk test --test_env=GERRIT_INDEX_TYPE=FAKE $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
