@@ -16,6 +16,23 @@
       "message": "Interesting: when running Gerrit tests against Lucene, many of them are failing :-(\n\nNeed to fix those tests first and *THEN* I can enable again the Lucene backend validation.",
       "revId": "60a1468c77847c9f4b81ea5824c66e22adff2261",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "624e245c_9c88272f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2021-11-29T16:00:11Z",
+      "side": 1,
+      "message": "Sorry, I removed your V-1 vote by accident",
+      "revId": "60a1468c77847c9f4b81ea5824c66e22adff2261",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
