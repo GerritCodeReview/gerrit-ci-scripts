@@ -33,6 +33,24 @@
       "message": "Sorry, I removed your V-1 vote by accident",
       "revId": "60a1468c77847c9f4b81ea5824c66e22adff2261",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "264b116c_7ab95ee2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1026112
+      },
+      "writtenOn": "2021-11-30T07:39:39Z",
+      "side": 1,
+      "message": "I ran bazelisk test --test_env\u003dGERRIT_INDEX_TYPE\u003dLUCENE //...\n\nand all tests except these pass (they seem unrealated to any index setup):\n\n\n\n//javatests/com/google/gerrit/acceptance:acceptance_framework_tests      FAILED in 108.0s\n  /private/var/tmp/_bazel_hiesel/7b36257c8cffdb59ae9637ca912913fb/execroot/gerrit/bazel-out/darwin-fastbuild/testlogs/javatests/com/google/gerrit/acceptance/acceptance_framework_tests/test.log\n//javatests/com/google/gerrit/acceptance/pgm:elastic                     FAILED in 3.0s\n  /private/var/tmp/_bazel_hiesel/7b36257c8cffdb59ae9637ca912913fb/execroot/gerrit/bazel-out/darwin-fastbuild/testlogs/javatests/com/google/gerrit/acceptance/pgm/elastic/test.log\n//javatests/com/google/gerrit/acceptance/ssh:elastic                     FAILED in 1.3s\n  /private/var/tmp/_bazel_hiesel/7b36257c8cffdb59ae9637ca912913fb/execroot/gerrit/bazel-out/darwin-fastbuild/testlogs/javatests/com/google/gerrit/acceptance/ssh/elastic/test.log\n//javatests/com/google/gerrit/integration/git:protocol-v2                FAILED in 128.9s\n  /private/var/tmp/_bazel_hiesel/7b36257c8cffdb59ae9637ca912913fb/execroot/gerrit/bazel-out/darwin-fastbuild/testlogs/javatests/com/google/gerrit/integration/git/protocol-v2/test.log\n//javatests/com/google/gerrit/integration/git:upload-archive             FAILED in 94.1s\n  /private/var/tmp/_bazel_hiesel/7b36257c8cffdb59ae9637ca912913fb/execroot/gerrit/bazel-out/darwin-fastbuild/testlogs/javatests/com/google/gerrit/integration/git/upload-archive/test.log\n//javatests/com/google/gerrit/integration/ssh:no-shell                   FAILED in 79.8s\n  /private/var/tmp/_bazel_hiesel/7b36257c8cffdb59ae9637ca912913fb/execroot/gerrit/bazel-out/darwin-fastbuild/testlogs/javatests/com/google/gerrit/integration/ssh/no-shell/test.log\n//javatests/com/google/gerrit/integration/ssh:peer-keys-auth             FAILED in 26.6s\n  /private/var/tmp/_bazel_hiesel/7b36257c8cffdb59ae9637ca912913fb/execroot/gerrit/bazel-out/darwin-fastbuild/testlogs/javatests/com/google/gerrit/integration/ssh/peer-keys-auth/test.log\n//plugins/replication:src_test_java_com_googlesource_gerrit_plugins_replication_ReplicationEventsIT FAILED in 173.5s\n  /private/var/tmp/_bazel_hiesel/7b36257c8cffdb59ae9637ca912913fb/execroot/gerrit/bazel-out/darwin-fastbuild/testlogs/plugins/replication/src_test_java_com_googlesource_gerrit_plugins_replication_ReplicationEventsIT/test.log",
+      "parentUuid": "8713b474_d21c91f7",
+      "revId": "60a1468c77847c9f4b81ea5824c66e22adff2261",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
