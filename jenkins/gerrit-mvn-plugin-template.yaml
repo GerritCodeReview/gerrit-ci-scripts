@@ -1,6 +1,5 @@
-- job-template:
-    name: 'plugin-{repo}-mvn-{branch}'
-    description: 'Plugin {repo} {branch} branch build with Maven'
+- defaults:
+    name: gerrit-mvn-defaults
     node: mvn
     wrappers:
       - timeout:
@@ -49,3 +48,21 @@
     publishers:
       - archive:
           artifacts: '**/target/{repo}*.jar*,**/target/{repo}*.json'
+- job-template:
+    name: 'plugin-{repo}-mvn-{branch}'
+    description: 'Plugin {repo} {branch} branch build with Maven'
+    default: gerrit-mvn-defaults
+    properties:
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--java_toolchain=//tools:error_prone_warnings_toolchain
+- job-template:
+    name: 'plugin-{repo}-mvn-java11-{branch}'
+    description: 'Plugin {repo} {branch} branch build with Maven'
+    default: gerrit-mvn-defaults
+    properties:
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11
+            --javabase=@bazel_tools//tools/jdk:remote_jdk11
+            --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
