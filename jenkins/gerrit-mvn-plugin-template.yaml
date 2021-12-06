@@ -23,7 +23,7 @@
             - job-extended-read
       - inject:
           properties-content: >
-            BAZEL_OPTS=--java_toolchain=//tools:error_prone_warnings_toolchain
+            BAZEL_OPTS=--java_toolchain=//tools:error_prone_warnings_toolchain_java11
     scm:
       - git:
           remotes:
