@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05e450a4_22cbbf74",
+        "filename": "jenkins/gerrit-mvn-plugin-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-07T09:32:31Z",
+      "side": 1,
+      "message": "This is the default: we do not need to add it",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 85
+      },
+      "revId": "a16e9f554673254b8e386fa5d8fa3d27bb18c0de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
