@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 
 case "{branch}" in
-  stable-2.16|stable-3.2|stable-3.3|stable-3.4)
+  stable-3.3|stable-3.4)
     . set-java.sh 8
     ;;
   *)
@@ -16,8 +16,7 @@ fi
 
 cd gerrit
 bazelisk version
-if ([ "$TARGET_BRANCH" != "stable-2.16" ]) && \
-   ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit-ui) || \
+if ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit-ui) || \
     (git show --summary HEAD | grep -q ^Merge:) || \
     (git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion))
 then

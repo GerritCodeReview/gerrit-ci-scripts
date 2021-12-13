@@ -73,15 +73,6 @@
             --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
-    name: Gerrit-bazel-java8-chrome-69
-    branch:
-      - stable-3.2
-      - stable-2.16
-    browser: chrome-69
-    jobs:
-      - 'Gerrit-bazel-{branch}'
-
-- project:
     name: Gerrit-bazel-java11-chrome-69
     branch:
       - stable-3.4

@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 
 case "$TARGET_BRANCH" in
-  stable-2.16|stable-3.2|stable-3.3|stable-3.4)
+  stable-3.3|stable-3.4)
     . set-java.sh 8
     ;;
   *)

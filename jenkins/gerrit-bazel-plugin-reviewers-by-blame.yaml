@@ -1,9 +1,6 @@
 - project:
     name: reviewers-by-blame
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - stable-2.16
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
@@ -12,4 +9,3 @@
             - stable-3.5
             - stable-3.4
             - stable-3.3
-            - stable-3.2

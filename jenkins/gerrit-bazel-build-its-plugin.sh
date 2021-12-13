@@ -1,13 +1,6 @@
 #!/bin/bash -e
 
-case "{branch}" in
-  stable-2.16|stable-3.2)
-    . set-java.sh 8
-    ;;
-  *)
-    . set-java.sh 11
-    ;;
-esac
+. set-java.sh 11
 
 git checkout origin/{branch}
 git submodule update --init
