@@ -9,6 +9,5 @@
             - stable-3.5
       - 'plugin-{name}-bazel-{branch}':
           branch:
-            - stable-3.2
             - stable-3.3
       - 'plugin-{name}-verifier'

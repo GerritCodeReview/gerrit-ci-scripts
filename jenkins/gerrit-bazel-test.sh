@@ -19,13 +19,6 @@ export WCT_HEADLESS_MODE=1
 java -fullversion
 bazelisk version
 
-if [ "{branch}" == "stable-2.16" ]
-then
-  echo 'Test in ReviewDb mode'
-  echo '----------------------------------------------'
-  bazelisk test --test_env=GERRIT_NOTEDB=OFF $BAZEL_OPTS //...
-fi
-
 echo 'Test in NoteDb mode'
 echo '----------------------------------------------'
 bazelisk test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...

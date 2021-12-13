@@ -1,9 +1,6 @@
 - project:
     name: cfoauth
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-          gerrit-branch:
-            - stable-3.2
-            - stable-2.16

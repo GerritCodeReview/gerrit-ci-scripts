@@ -4,6 +4,5 @@
     organization: GerritForge
     branch:
       - master
-      - stable-3.2
     jobs:
       - 'plugin-{name}-gh-bazel-{branch}'

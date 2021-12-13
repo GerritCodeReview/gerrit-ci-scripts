@@ -37,9 +37,6 @@ def call(Map parm = [:]) {
     def pluginScmUrl = "https://gerrit.googlesource.com/a/${env.GERRIT_PROJECT}"
     def gjfVersion = '1.7'
     def javaVersion = 11
-    if (env.GERRIT_BRANCH in ["stable-2.16", "stable-3.2"]) {
-        javaVersion = 8
-    }
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh ${javaVersion} && bazelisk"
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')
