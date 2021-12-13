@@ -1,9 +1,6 @@
 - project:
     name: verify-status
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - stable-2.16
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master

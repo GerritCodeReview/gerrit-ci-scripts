@@ -8,6 +8,5 @@
             - stable-3.5
             - stable-3.4
             - stable-3.3
-            - stable-3.2
           extra-artifacts: 'bazel-bin/plugins/{name}/{name}-zk-3.5.jar'
       - 'plugin-{name}-verifier'

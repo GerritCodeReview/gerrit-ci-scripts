@@ -29,15 +29,6 @@
 - project:
     name: javamelody
     jobs:
-      - 'plugin-javamelody-bazel-{branch}':
-          branch:
-            - stable-2.16
-          targets: >
-            plugins/javamelody:javamelody-deps_deploy.jar
-            plugins/javamelody:javamelody \
-      - 'plugin-javamelody-bazel-{branch}':
-          branch:
-            - stable-3.2
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master

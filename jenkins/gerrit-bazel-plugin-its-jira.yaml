@@ -9,8 +9,3 @@
             - stable-3.4
             - stable-3.3
           targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'
-      - 'plugin-its-{name}-bazel-{branch}':
-          branch:
-            - stable-3.2
-            - stable-2.16
-          targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'

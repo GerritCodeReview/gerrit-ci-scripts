@@ -1,6 +1,9 @@
 - project:
     name: metrics-reporter-prometheus
     jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
@@ -8,8 +11,3 @@
             - stable-3.5
             - stable-3.4
             - stable-3.3
-            - stable-3.2
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master
-            - stable-2.16
