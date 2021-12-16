@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "689fd36b_bf9cd8df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-12-16T08:46:31Z",
+      "side": 1,
+      "message": "Build is not passing but because the jira plugin needs to de amended: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-its-jira-bazel-master-stable-3.5/2/console\n\n\nplugins/its-jira/src/main/java/com/googlesource/gerrit/plugins/its/jira/JiraConfig.java:127: error: incompatible types: Project cannot be converted to NameKey\n09:38:52         projectCache.evict(config.getProject());\n09:38:52                                             ^\n\nNothing to do with the pipeline",
+      "revId": "0677b06ae7f0b1144b553034cde4aa1cfe14421d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
