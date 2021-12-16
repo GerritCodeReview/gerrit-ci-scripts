@@ -16,6 +16,23 @@
       "message": "Looks like a good revert of Ic8a6cf07ade6927acab22cdd1aed94ef19c04151.",
       "revId": "3a00ef0cb48fab3648672e9cac4212d366a0ff8c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92d19482_4c33046e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2021-12-16T08:37:12Z",
+      "side": 1,
+      "message": "Should be based on https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/326278. Java 8 would be required by 2.16 and 3.2 builds.",
+      "revId": "3a00ef0cb48fab3648672e9cac4212d366a0ff8c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
