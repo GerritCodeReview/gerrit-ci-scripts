@@ -50,6 +50,24 @@
       "message": "Add build of plugin\u0027s master branch",
       "revId": "13e46c22b2ce19305324a1b9fa0b81047041fc45",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9b3bcd6_e3744911",
+        "filename": "jenkins/gerrit-bazel-plugin-metrics-reporter-prometheus.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-18T02:32:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6bf746d5_9f0ffe0b",
+      "revId": "13e46c22b2ce19305324a1b9fa0b81047041fc45",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
