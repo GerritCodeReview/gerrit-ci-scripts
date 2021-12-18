@@ -69,6 +69,24 @@
       "parentUuid": "170671aa_9ce95e9c",
       "revId": "0677b06ae7f0b1144b553034cde4aa1cfe14421d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7350572_5cb1c52e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1111258
+      },
+      "writtenOn": "2021-12-18T21:00:26Z",
+      "side": 1,
+      "message": "I did successfully build its-jira against gerrit stable-3.5 using the merge at https://gerrit-review.googlesource.com/c/plugins/its-jira/+/326757.",
+      "parentUuid": "8112e56b_361d9030",
+      "revId": "0677b06ae7f0b1144b553034cde4aa1cfe14421d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
