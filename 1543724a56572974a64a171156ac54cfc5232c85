@@ -33,6 +33,23 @@
       "message": "kris",
       "revId": "1543724a56572974a64a171156ac54cfc5232c85",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05bd8906_ade55214",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1143772
+      },
+      "writtenOn": "2021-12-18T21:18:15Z",
+      "side": 1,
+      "message": "kris",
+      "revId": "1543724a56572974a64a171156ac54cfc5232c85",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
