@@ -51,6 +51,24 @@
       "parentUuid": "b43b77aa_e6936685",
       "revId": "0677b06ae7f0b1144b553034cde4aa1cfe14421d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8112e56b_361d9030",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-12-18T12:51:35Z",
+      "side": 1,
+      "message": "possibly that would fix it. @Ralph any chance you can try to build the plugin with your fix against 3.5?\n\nIf it works we can merge it up to 3.5 and then the build should pass.",
+      "parentUuid": "170671aa_9ce95e9c",
+      "revId": "0677b06ae7f0b1144b553034cde4aa1cfe14421d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
