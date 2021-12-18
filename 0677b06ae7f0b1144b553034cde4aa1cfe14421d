@@ -33,6 +33,24 @@
       "message": "The build is broken for stable-3.5. Needs some fixes before merging it.",
       "revId": "0677b06ae7f0b1144b553034cde4aa1cfe14421d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "170671aa_9ce95e9c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1111258
+      },
+      "writtenOn": "2021-12-18T02:58:09Z",
+      "side": 1,
+      "message": "\u003e The build is broken for stable-3.5. Needs some fixes before merging it.\n\nMaybe https://gerrit-review.googlesource.com/c/plugins/its-jira/+/326737 fixes it.",
+      "parentUuid": "b43b77aa_e6936685",
+      "revId": "0677b06ae7f0b1144b553034cde4aa1cfe14421d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
