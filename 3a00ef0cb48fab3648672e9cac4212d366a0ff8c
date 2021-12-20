@@ -33,6 +33,24 @@
       "message": "Should be based on https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/326278. Java 8 would be required by 2.16 and 3.2 builds.",
       "revId": "3a00ef0cb48fab3648672e9cac4212d366a0ff8c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "400981f4_9aaa5b34",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-20T19:12:11Z",
+      "side": 1,
+      "message": "I believe it is based on it.",
+      "parentUuid": "92d19482_4c33046e",
+      "revId": "3a00ef0cb48fab3648672e9cac4212d366a0ff8c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
