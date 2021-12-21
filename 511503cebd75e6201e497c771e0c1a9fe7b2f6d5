@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ab00ccf_f1e829dc",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-21T11:32:17Z",
+      "side": 1,
+      "message": "stable-3.5 is validated with Java 11 only",
+      "parentUuid": "1e7e1ad1_e5ab9129",
+      "revId": "511503cebd75e6201e497c771e0c1a9fe7b2f6d5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c248abb3_ceb4d3ac",
@@ -31,6 +49,24 @@
       "writtenOn": "2021-12-21T10:24:46Z",
       "side": 1,
       "message": "stable-3.5 as well?",
+      "revId": "511503cebd75e6201e497c771e0c1a9fe7b2f6d5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00c86e74_0f9a1018",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-21T11:32:17Z",
+      "side": 1,
+      "message": "Same as above",
+      "parentUuid": "c248abb3_ceb4d3ac",
       "revId": "511503cebd75e6201e497c771e0c1a9fe7b2f6d5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -52,6 +88,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c90e226d_9a103c38",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-21T11:32:17Z",
+      "side": 1,
+      "message": "Same as above",
+      "parentUuid": "9aab6aca_ffb894c2",
+      "revId": "511503cebd75e6201e497c771e0c1a9fe7b2f6d5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33d364d7_2c83c3c7",
@@ -65,6 +119,30 @@
       "writtenOn": "2021-12-21T10:24:46Z",
       "side": 1,
       "message": "should this ,match 3.3/3.4/3.5 ?",
+      "range": {
+        "startLine": 135,
+        "startChar": 36,
+        "endLine": 135,
+        "endChar": 48
+      },
+      "revId": "511503cebd75e6201e497c771e0c1a9fe7b2f6d5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fad628de_9138efab",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-21T11:32:17Z",
+      "side": 1,
+      "message": "No, because with stable-3.4/3.5 we do [\"notedb\",\"rbe\"] as indicated at L134",
+      "parentUuid": "33d364d7_2c83c3c7",
       "range": {
         "startLine": 135,
         "startChar": 36,
