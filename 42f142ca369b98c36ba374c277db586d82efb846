@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1775be14_9939966b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1111258
+      },
+      "writtenOn": "2021-12-21T22:34:40Z",
+      "side": 1,
+      "message": "`bazel build plugins/reviewers` works for me with reviewers master against gerrit stable-3.5.",
+      "revId": "42f142ca369b98c36ba374c277db586d82efb846",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
