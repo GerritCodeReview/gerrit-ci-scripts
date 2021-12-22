@@ -33,6 +33,24 @@
       "message": "How do I verify a change in the ci-scripts?",
       "revId": "42f142ca369b98c36ba374c277db586d82efb846",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2122170_8525a809",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-12-22T09:00:21Z",
+      "side": 1,
+      "message": "You can trigger the build of the new config here [1] (you need to login).\nOnce the build is done, you will find the pipeline for the branches you have added under the stable-3.X tab.\n\nYou can then manually trigger the build and verify it works.\n\nHope it makes sense.\n\n[1]: https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/",
+      "parentUuid": "b330b273_3c7dd610",
+      "revId": "42f142ca369b98c36ba374c277db586d82efb846",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
