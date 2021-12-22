@@ -122,6 +122,24 @@
       "parentUuid": "95e5f038_bd9de6d5",
       "revId": "42f142ca369b98c36ba374c277db586d82efb846",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efe7cf9a_aec15bd0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-12-22T09:32:54Z",
+      "side": 1,
+      "message": "done. Waiting for an executor.",
+      "parentUuid": "cdc08ef0_2e57d749",
+      "revId": "42f142ca369b98c36ba374c277db586d82efb846",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
