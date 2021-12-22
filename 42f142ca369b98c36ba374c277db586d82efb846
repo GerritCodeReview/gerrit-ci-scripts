@@ -69,6 +69,24 @@
       "parentUuid": "a2122170_8525a809",
       "revId": "42f142ca369b98c36ba374c277db586d82efb846",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95e5f038_bd9de6d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2021-12-22T09:20:09Z",
+      "side": 1,
+      "message": "You probably need to ask Luca to grant you permission. However, I kicked off a build here [1]. Keep an eye on it, if it passes you are done with the verification.\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-reviewers-bazel-stable-3.5/",
+      "parentUuid": "9f8511c5_51fd7259",
+      "revId": "42f142ca369b98c36ba374c277db586d82efb846",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
