@@ -87,6 +87,23 @@
       "parentUuid": "9f8511c5_51fd7259",
       "revId": "42f142ca369b98c36ba374c277db586d82efb846",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3eed334_794a2e0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2021-12-22T09:28:35Z",
+      "side": 1,
+      "message": "Thanks Ponch.\nI have misread the configuration. This assumes a stable-3.5 branch in the reviewers repository which I haven\u0027t created.\nI will do some local verification of current reviewers:master against gerrit:stable-3.5 and create the stable-3.5 branch.",
+      "revId": "42f142ca369b98c36ba374c277db586d82efb846",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
