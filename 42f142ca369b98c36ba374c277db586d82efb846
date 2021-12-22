@@ -16,6 +16,23 @@
       "message": "`bazel build plugins/reviewers` works for me with reviewers master against gerrit stable-3.5.",
       "revId": "42f142ca369b98c36ba374c277db586d82efb846",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b330b273_3c7dd610",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2021-12-22T08:54:08Z",
+      "side": 1,
+      "message": "How do I verify a change in the ci-scripts?",
+      "revId": "42f142ca369b98c36ba374c277db586d82efb846",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
