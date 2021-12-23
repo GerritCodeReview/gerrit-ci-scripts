@@ -12,11 +12,14 @@ RUN apt-get update --allow-releaseinfo-change && \
     rm -rf /var/lib/apt/lists/*
 
 # SBT warm-up
-RUN cd /tmp && sbt new sbt/scala-seed.g8 --name=hello
-RUN echo 'addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")' >> /tmp/hello/project/plugins.sbt
-RUN chown -R jenkins: /tmp/hello
-
 USER jenkins
+
+RUN cd /tmp && sbt new sbt/scala-seed.g8 --name=hello && \
+    echo 'ThisBuild / scalaVersion     := "2.12.15"' && grep -v scalaVersion hello/build.sbt > hello/build.sbt.new && \
+    mv hello/build.sbt.new hello/build.sbt && \
+    echo 'sbt.version=1.5.7' > hello/project/build.properties
+RUN echo 'addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "1.1.0")' >> /tmp/hello/project/plugins.sbt
+RUN chown -R jenkins: /tmp/hello
 RUN cd /tmp/hello && sbt compile test assembly
 
 USER root
