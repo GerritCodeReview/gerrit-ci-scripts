@@ -16,6 +16,29 @@
       "message": "This should also get rid of vulnerable Log4J jars from SBT template agent",
       "revId": "b3d450ee01b706d69792040b07e55d111fa3b44e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "089621a8_2f1d2bdc",
+        "filename": "jenkins-docker/agent-sbt/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-23T23:40:09Z",
+      "side": 1,
+      "message": "use \u0027tee\u0027 for consistency",
+      "range": {
+        "startLine": 21,
+        "startChar": 29,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "b3d450ee01b706d69792040b07e55d111fa3b44e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
