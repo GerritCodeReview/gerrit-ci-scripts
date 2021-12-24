@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec4bf442_7a3f2066",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2021-12-24T10:47:15Z",
+      "side": 1,
+      "message": "scala 2.12.15 was released in September hence I think it cannot include the patched log4j version released mid December\n\nhttps://github.com/scala/scala/releases/tag/v2.12.15\nhttps://logging.apache.org/log4j/2.x/changes-report.html",
+      "range": {
+        "startLine": 9,
+        "startChar": 30,
+        "endLine": 9,
+        "endChar": 35
+      },
+      "revId": "01d26a595c208c20cc2e4f25059d92331c21d6fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b7756ed_2daacab5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2021-12-24T10:47:15Z",
+      "side": 1,
+      "message": "Specify which version of log4j is included ?\nlog4j did 3 releases to address vulnerabilities: 2.15.0, 2.16.0, 2.17.0\n\nhttps://logging.apache.org/log4j/2.x/changes-report.html",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 13
+      },
+      "revId": "01d26a595c208c20cc2e4f25059d92331c21d6fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "458fb465_749aee74",
+        "filename": "jenkins-docker/agent-sbt/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2021-12-24T10:47:15Z",
+      "side": 1,
+      "message": "update to 1.5.8 which includes the latest log4j 2.17.0 fixing another vulnerability ?",
+      "range": {
+        "startLine": 21,
+        "startChar": 22,
+        "endLine": 21,
+        "endChar": 27
+      },
+      "revId": "01d26a595c208c20cc2e4f25059d92331c21d6fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
