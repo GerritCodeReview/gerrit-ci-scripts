@@ -17,12 +17,7 @@ echo '----------------------------------------------'
 case $TARGET_BRANCH$MODE in
   masterrbe|stable-3.4rbe|stable-3.5rbe)
     TEST_TAG_FILTER="-flaky,-elastic,-git-protocol-v2"
-    # TODO(luca): RBE should be disabled because of instability with the following suites:
-    # //javatests/com/google/gerrit/server:server_tests
-    # //javatests/com/google/gerrit/pgm:pgm_tests
-    # The above two tests take hours on RBE, which is inexplicable as they are supposed
-    # to take just a few minutes
-    # BAZEL_OPTS="--config=remote --remote_instance_name=projects/api-project-164060093628/instances/default_instance"
+    BAZEL_OPTS="--config=remote --remote_instance_name=projects/api-project-164060093628/instances/default_instance"
     ;;
   masternotedb|stable-3.4notedb|stable-3.5notedb)
     TEST_TAG_FILTER="-flaky,elastic,git-protocol-v2"
