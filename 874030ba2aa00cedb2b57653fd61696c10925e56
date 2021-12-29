@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f0b3566_b4841c2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-12-29T00:30:06Z",
+      "side": 1,
+      "message": "The tests excluded from RBE are getting executed on the local node:\n//javatests/com/google/gerrit/integration/git:protocol-v2                PASSED in 23.4s\n//javatests/com/google/gerrit/pgm:pgm_tests                              PASSED in 4.9s\n//javatests/com/google/gerrit/server:server_tests                        PASSED in 32.7s",
+      "revId": "874030ba2aa00cedb2b57653fd61696c10925e56",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
