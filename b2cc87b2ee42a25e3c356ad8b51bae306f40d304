@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1d31b6b_c305a787",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-12-30T08:53:11Z",
+      "side": 1,
+      "message": "Note, we can only merge this, one this issue 15491 is fixed, and we removed no_rbe tag from all affected tests suites on stable-3.4 branch and merge it up to master.\n\nNote, that since this change 264178, the validation on non RBE checker only include 3 JGit related test, that were affected by JGit dead lock issue:\n\n  INFO: Elapsed time: 67.003s, Critical Path: 62.97s\nINFO: 37 processes: 13 internal, 14 processwrapper-sandbox, 10 worker.\n  INFO: Build completed successfully, 37 total actions\n  //javatests/com/google/gerrit/git:medium_tests                           PASSED in 3.9s\n  //javatests/com/google/gerrit/pgm:pgm_tests                              PASSED in 5.1s\n  //javatests/com/google/gerrit/server:server_tests                        PASSED in 46.6s\n  \nAll other tests were running in RBE environment on the above change already, with total verification time: 323 seconds including Git protocol V2 tests:\n\n  INFO: Elapsed time: 323.144s, Critical Path: 306.44s\n  INFO: 1251 processes: 779 internal, 472 remote.\n  INFO: Build completed successfully, 1251 total actions\n  [...]\n  //javatests/com/google/gerrit/integration/git:protocol-v2                PASSED in 51.2s\n  [...]\n  Executed 192 out of 192 tests: 192 tests pass.\n ",
+      "revId": "b2cc87b2ee42a25e3c356ad8b51bae306f40d304",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
