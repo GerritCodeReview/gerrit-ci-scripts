@@ -44,6 +44,9 @@ pipeline {
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
             string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
+
+            string(name: 'SERVICE_PRIMARY1_STACK_NAME', defaultValue: 'jenkins-service-primary-1', description: '')
+            string(name: 'SERVICE_PRIMARY2_STACK_NAME', defaultValue: 'jenkins-service-primary-2', description: '')
         }
 
        environment {
@@ -55,10 +58,20 @@ pipeline {
             SSH_SUBDOMAIN = String.format("ssh-%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
             GERRIT_HTTP_URL = String.format("%s://%s.%s", "${params.GERRIT_HTTP_SCHEMA}", HTTP_SUBDOMAIN, "${params.HOSTED_ZONE_NAME}")
             GERRIT_SSH_URL = String.format("ssh://%s@%s.%s:%s", "${params.GERRIT_SSH_USERNAME}", SSH_SUBDOMAIN, "${params.HOSTED_ZONE_NAME}", "${params.GERRIT_SSH_PORT}")
+
+            PRIMARY1_SUBDOMAIN = String.format("%s-%s-primary1.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
+            PRIMARY2_SUBDOMAIN = String.format("%s-%s-primary2.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
+            HTTP_PRIMARY1_SUBDOMAIN = String.format("%s-%s-http-primary1.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}") //$(AWS_PREFIX)-http-primary-1.gerrit-demo
+            SSH_PRIMARY1_SUBDOMAIN = String.format("%s-%s-ssh-primary1.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}") //$(AWS_PREFIX)-ssh-primary-1.gerrit-demo
+            HTTP_PRIMARY2_SUBDOMAIN = String.format("%s-%s-http-primary2.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}") //$(AWS_PREFIX)-http-primary-2.gerrit-demo
+            SSH_PRIMARY2_SUBDOMAIN = String.format("%s-%s-ssh-primary2.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}") //$(AWS_PREFIX)-ssh-primary-2.gerrit-demo
+            HTTP_PRIMARIES_GERRIT_SUBDOMAIN = String.format("%s-http-primaries.%s", "jenkins", "${params.BASE_SUBDOMAIN}") //$(AWS_PREFIX)-http-primaries.gerrit-demo
+            SSH_PRIMARIES_GERRIT_SUBDOMAIN = String.format("%s-ssh-primaries.%s", "jenkins", "${params.BASE_SUBDOMAIN}") //$(AWS_PREFIX)-ssh-primaries.gerrit-demo
+
          }
 
         stages{
-            stage("Setup single-primary aws stack") {
+            stage("Setup dual-primary aws stack") {
                 steps {
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: "gerrit.googlesource.com")]) {
                         sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
@@ -75,10 +88,16 @@ pipeline {
                             writeFile(file:"gerrit.config.template", text: gerritConfig)
                         }
                     }
+                    dir ('aws-gerrit/primary-replica') {
+                        script {
+                            def setupData = readFile(file:"setup.env.template")
+                            writeFile(file:"setup.env", text: setupData)
+                        }
+                    }
                     withCredentials([usernamePassword(usernameVariable: "AWS_ACCESS_KEY_ID",
                     passwordVariable: "AWS_SECRET_ACCESS_KEY",
                     credentialsId: "aws-credentials-id")]) {
-                        dir ('aws-gerrit/single-primary') {
+                        dir ('aws-gerrit/dual-primary') {
                             script {
                                 def setupData = readFile(file:"setup.env.template")
                                 setupData = resolveParameter(setupData, "HOSTED_ZONE_NAME", "${params.HOSTED_ZONE_NAME}")
@@ -94,6 +113,15 @@ pipeline {
                                 setupData = resolveParameter(setupData, "LDAP_USERNAME", "${params.LDAP_USERNAME}")
                                 setupData = resolveParameter(setupData, "LDAP_ACCOUNT_BASE", "${params.LDAP_ACCOUNT_BASE}")
                                 setupData = resolveParameter(setupData, "LDAP_GROUP_BASE", "${params.LDAP_GROUP_BASE}")
+
+                                setupData = resolveParameter(setupData, 'PRIMARY1_SUBDOMAIN', "${env.PRIMARY1_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'PRIMARY2_SUBDOMAIN', "${env.PRIMARY2_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'HTTP_PRIMARY1_SUBDOMAIN', "${env.HTTP_PRIMARY1_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'SSH_PRIMARY1_SUBDOMAIN', "${env.SSH_PRIMARY1_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'HTTP_PRIMARY2_SUBDOMAIN', "${env.HTTP_PRIMARY2_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'SSH_PRIMARY2_SUBDOMAIN', "${env.SSH_PRIMARY2_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'HTTP_PRIMARIES_GERRIT_SUBDOMAIN', "${env.HTTP_PRIMARIES_GERRIT_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'SSH_PRIMARIES_GERRIT_SUBDOMAIN', "${env.SSH_PRIMARIES_GERRIT_SUBDOMAIN}")
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${params.GERRIT_KEY_PREFIX}"
                                 setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${params.GERRIT_VOLUME_SNAPSHOT_ID}"
@@ -147,6 +175,17 @@ pipeline {
                   }
                 }
             }
+
+            stage('Create test project') {
+                steps {
+                    script {
+                        def ldapUsername = ("${params.LDAP_LOGIN_USERNAME}"?.trim()) ?: "${env.DEFAULT_LDAP_USERNAME}"
+                        def ldapPassword = ("${params.LDAP_LOGIN_PASSWORD}"?.trim()) ?: "${env.DEFAULT_LDAP_PASSWORD}"
+                        sh "curl -X POST -u ${ldapUsername}:${ldapPassword} '${env.GERRIT_HTTP_URL}/a/projects/${params.GERRIT_PROJECT}'"
+                    }
+                }
+            }
+
             stage('Pull newest Gatling tests docker image') {
                 steps {
                     sh 'docker pull gerritforge/gatling-sbt-gerrit-test'
@@ -205,7 +244,7 @@ pipeline {
                     withCredentials([usernamePassword(usernameVariable: "AWS_ACCESS_KEY_ID",
                             passwordVariable: "AWS_SECRET_ACCESS_KEY",
                             credentialsId: "aws-credentials-id")]) {
-                        dir ('aws-gerrit/single-primary') {
+                        dir ('aws-gerrit/dual-primary') {
                             sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} EXPORT_FROM_MILLIS=${epochTime} S3_EXPORT_LOGS_BUCKET_NAME=${params.S3_EXPORT_LOGS_BUCKET_NAME} export-logs"
                         }
                     }
@@ -230,7 +269,7 @@ pipeline {
                 withCredentials([usernamePassword(usernameVariable: "AWS_ACCESS_KEY_ID", 
                     passwordVariable: "AWS_SECRET_ACCESS_KEY",
                     credentialsId: "aws-credentials-id")]) {
-                        dir ('aws-gerrit/single-primary') {
+                        dir ('aws-gerrit/dual-primary') {
                             sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} delete-all"
                         }
                 }
