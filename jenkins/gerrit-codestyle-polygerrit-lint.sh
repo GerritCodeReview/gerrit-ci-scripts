@@ -24,4 +24,8 @@ then
   java -fullversion
   bazelisk test //polygerrit-ui/app:lint_test
   bazelisk test //polygerrit-ui/app:polylint_test
+  if [[ "$TARGET_BRANCH" == "master" ]]
+  then
+    bazelisk test //polygerrit-ui/app:lit_analysis
+  fi
 fi
