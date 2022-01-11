@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba635337_306fa23b",
+        "filename": "project.config",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2022-01-11T13:52:22Z",
+      "side": 1,
+      "message": "[optional] to be consistent with existing submit requirements (e.g. [1]) should this be something like:\n\n  At least one maximum vote for label \u0027Code-Style\u0027 is required\n  \n?\n\n[1] https://gerrit.googlesource.com/All-Projects/+/refs/meta/config/project.config#167",
+      "range": {
+        "startLine": 32,
+        "startChar": 15,
+        "endLine": 32,
+        "endChar": 60
+      },
+      "revId": "287ba883d21bab888b9416bf0bf1f91bd3b9e6e7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
