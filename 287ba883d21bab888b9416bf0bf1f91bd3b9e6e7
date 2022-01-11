@@ -22,6 +22,30 @@
       },
       "revId": "287ba883d21bab888b9416bf0bf1f91bd3b9e6e7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20b0b485_03ed929e",
+        "filename": "project.config",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2022-01-11T14:01:12Z",
+      "side": 1,
+      "message": "This was answered here:\n\nhttps://gerrit-review.googlesource.com/c/zuul/ops/+/327157/1/project.config",
+      "parentUuid": "ba635337_306fa23b",
+      "range": {
+        "startLine": 32,
+        "startChar": 15,
+        "endLine": 32,
+        "endChar": 60
+      },
+      "revId": "287ba883d21bab888b9416bf0bf1f91bd3b9e6e7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
