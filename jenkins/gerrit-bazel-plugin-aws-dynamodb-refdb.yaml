@@ -1,10 +1,8 @@
 - project:
     name: aws-dynamodb-refdb
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
-            - master
-          gerrit-branch:
             - stable-3.3
             - stable-3.4
             - stable-3.5
