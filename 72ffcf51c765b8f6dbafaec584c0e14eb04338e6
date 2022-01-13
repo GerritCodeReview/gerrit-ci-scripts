@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d7f9d91_044e18e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-01-13T10:13:36Z",
+      "side": 1,
+      "message": "Works as expected:\n\n* https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-saml-bazel-stable-3.4\n* https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-saml-bazel-master-stable-3.5",
+      "revId": "72ffcf51c765b8f6dbafaec584c0e14eb04338e6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
