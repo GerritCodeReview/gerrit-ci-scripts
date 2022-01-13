@@ -39,6 +39,30 @@
       },
       "revId": "623ea3b7491c7141e17272542331b37f1ea9b2b6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18b527a4_575a73ef",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2022-01-13T11:56:46Z",
+      "side": 1,
+      "message": "That\u0027s good idea. Should I use {branch} or TARGET_BRANCH?",
+      "parentUuid": "ac209195_48affe43",
+      "range": {
+        "startLine": 27,
+        "startChar": 36,
+        "endLine": 27,
+        "endChar": 48
+      },
+      "revId": "623ea3b7491c7141e17272542331b37f1ea9b2b6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
