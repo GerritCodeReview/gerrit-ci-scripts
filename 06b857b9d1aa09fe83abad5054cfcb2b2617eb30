@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb726c75_ec0313a1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-01-15T11:16:18Z",
+      "side": 1,
+      "message": "Have we already upgraded the Docker image used in RBE? Otherwise the git version won\u0027t enable to perform the git protocol v2 tests.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 49
+      },
+      "revId": "06b857b9d1aa09fe83abad5054cfcb2b2617eb30",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
