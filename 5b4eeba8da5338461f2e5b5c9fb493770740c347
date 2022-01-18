@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a50ebacf_3182c484",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-01-18T11:48:24Z",
+      "side": 1,
+      "message": "This fails with:\n+ \u0027[stable-3.4\u0027 \u003d \u0027master]\u0027\n/tmp/jenkins4861799872667170128.sh: line 27: [stable-3.4: command not found\n\nDo you mean instead:\n[ \"$TARGET_BRANCH\" \u003d\u003d \"master\" ]\n\nThe above would work and doesn\u0027t need the \u0027()\u0027.",
+      "range": {
+        "startLine": 27,
+        "startChar": 5,
+        "endLine": 27,
+        "endChar": 36
+      },
+      "revId": "5b4eeba8da5338461f2e5b5c9fb493770740c347",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
