@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e41b716_ef3513d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-01-18T21:40:00Z",
+      "side": 1,
+      "message": "Thanks, Milutin, for your patience and perseverance. It works now 🎉",
+      "revId": "1a7f12bc2b8bf8c3687c884579d07837e9b4cfd8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
