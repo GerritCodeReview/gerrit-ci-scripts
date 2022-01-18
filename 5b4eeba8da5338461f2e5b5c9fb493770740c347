@@ -22,6 +22,30 @@
       },
       "revId": "5b4eeba8da5338461f2e5b5c9fb493770740c347",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac280c15_cb1923c4",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2022-01-18T12:20:16Z",
+      "side": 1,
+      "message": "Thank, yes you are right. \n\nI tested it locally\nand there must be space between [ and \"\nand there must be two \"\"\nand then must be on next line.\n\nBut then it works. It\u0027s same as in \nif [[ \"$MODE\" \u003d\u003d *\"reviewdb\"* ]]\nin jenkins/gerrit-bazel-verifier-test.sh",
+      "parentUuid": "a50ebacf_3182c484",
+      "range": {
+        "startLine": 27,
+        "startChar": 5,
+        "endLine": 27,
+        "endChar": 36
+      },
+      "revId": "5b4eeba8da5338461f2e5b5c9fb493770740c347",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
