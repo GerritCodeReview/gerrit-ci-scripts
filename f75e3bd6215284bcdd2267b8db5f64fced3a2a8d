@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c438e3c3_16ed29bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-01-20T21:50:47Z",
+      "side": 1,
+      "message": "Let me apply this to Gerrit-CI and see if the builds work.",
+      "revId": "f75e3bd6215284bcdd2267b8db5f64fced3a2a8d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
