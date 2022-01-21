@@ -33,6 +33,23 @@
       "message": "Thanks for the deployment. Looks like all three new jobs had successful build:\n\n* https://gerrit-ci.gerritforge.com/job/plugin-zuul-bazel-master-stable-3.3/\n* https://gerrit-ci.gerritforge.com/job/plugin-zuul-bazel-master-stable-3.4/\n* https://gerrit-ci.gerritforge.com/job/plugin-zuul-bazel-master-stable-3.5/\n\n\\o/",
       "revId": "f75e3bd6215284bcdd2267b8db5f64fced3a2a8d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "696a242f_86c2a645",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010788
+      },
+      "writtenOn": "2022-01-21T18:06:56Z",
+      "side": 1,
+      "message": "Would gerrit-ci test changes proposed to the master branch or do I need to add some more magic? ;)",
+      "revId": "f75e3bd6215284bcdd2267b8db5f64fced3a2a8d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
