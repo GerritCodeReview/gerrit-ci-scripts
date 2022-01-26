@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26da9a17_9cde1236",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-01-26T14:01:51Z",
+      "side": 0,
+      "message": "I believe this should say. If you are building Gerrit on stable-3.3, the Gerrit-bazel-{branch} at L53 will build with Java 8 (default) and this Gerrit-bazel-java11-{branch} at L63 will need to force the build with Java 11.",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 74
+      },
+      "revId": "6575fbed9ddf81534a63a9b0082c2fb7a49ab3ab",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
