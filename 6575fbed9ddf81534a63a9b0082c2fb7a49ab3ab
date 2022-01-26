@@ -22,6 +22,30 @@
       },
       "revId": "6575fbed9ddf81534a63a9b0082c2fb7a49ab3ab",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3910aa07_e2553411",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-01-26T15:04:38Z",
+      "side": 0,
+      "message": "But why would we need to build Java 11 on stable-3.3 and stable-3.4 branches in the first place?\n\nThe result of the survey was to preserve Java 8 on both branches. Starting from stable-3.5 we also don\u0027t need to pass anything. So that the right toolchain will be picked per default.\n\nAlso note the latest \"Bazel toolchain resolution for java\" series: we shouldn\u0027t pass any option, except --config java17 or other config: [1].\n\nBottom line: we should just remove the Gerrit-bazel-java11-{branch} jobs, and de-emphasize Java target byte code version. We also don\u0027t have:\n\n  Gerrit-bazel-java8-{branch}\u0027\n\nfor stable-3.3 and stable-3.4 branches.\n\n[1] https://gerrit-review.googlesource.com/c/gerrit/+/291864",
+      "parentUuid": "26da9a17_9cde1236",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 74
+      },
+      "revId": "6575fbed9ddf81534a63a9b0082c2fb7a49ab3ab",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
