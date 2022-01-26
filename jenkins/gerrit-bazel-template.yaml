@@ -51,7 +51,7 @@
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
 
 - job-template:
-    name: 'Gerrit-bazel-{branch}'
+    name: 'Gerrit-bazel-java11-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
     node: 'bazel-{browser}'
@@ -61,6 +61,13 @@
             BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11
             --javabase=@bazel_tools//tools/jdk:remote_jdk11
             --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
+            --java_toolchain=//tools:error_prone_warnings_toolchain_java11
+
+- job-template:
+    name: 'Gerrit-bazel-{branch}'
+    description: '{name} {branch} branch build with Bazel'
+    defaults: gerrit-bazel-defaults
+    node: 'bazel-{browser}'
 
 - project:
     name: Gerrit-bazel-chrome-69
@@ -69,7 +76,7 @@
       - stable-3.3
     browser: chrome-69
     jobs:
-      - 'Gerrit-bazel-{branch}'
+      - 'Gerrit-bazel-java11-{branch}'
 
 - project:
     name: Gerrit-bazel-chrome-latest
