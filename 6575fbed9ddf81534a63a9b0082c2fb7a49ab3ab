@@ -46,6 +46,30 @@
       },
       "revId": "6575fbed9ddf81534a63a9b0082c2fb7a49ab3ab",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "018085ea_20d0ef67",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-01-26T15:20:17Z",
+      "side": 0,
+      "message": "\u003e But why would we need to build Java 11 on stable-3.3 and stable-3.4 branches in the first place?\n\nWe do release on Java 11, therefore we need to build stable branches on Java 11 as well and run tests on it.\n\nGerrit wasn\u0027t compatible with Java 11 in the past, until we created this job and started verifying on it.\n\n\u003e The result of the survey was to preserve Java 8 on both branches. Starting from stable-3.5 we also don\u0027t need to pass anything. So that the right toolchain will be picked per default.\n\nNot exactly: the survey says that *everyone* uses Java 11, except one. That means we do need to support Java 11, and also be compatible with Java 8. If we break Java 11, we actually create problems to *everyone* except one.\n\nHope that makes sense.",
+      "parentUuid": "3910aa07_e2553411",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 74
+      },
+      "revId": "6575fbed9ddf81534a63a9b0082c2fb7a49ab3ab",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
