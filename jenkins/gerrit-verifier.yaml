@@ -143,13 +143,11 @@
       - inject:
           properties-content: >
             BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
-            --java_toolchain=//tools:{java-toolchain}
 
 - project:
     name: Gerrit-verifier-bazel-chrome-latest
     config:
       - chrome-latest
-    java-toolchain: error_prone_warnings_toolchain_java11
     jobs:
       - 'Gerrit-verifier-{config}'
 
@@ -157,7 +155,6 @@
     name: Gerrit-verifier-bazel-chrome-69
     config:
       - chrome-69
-    java-toolchain: error_prone_warnings_toolchain
     jobs:
       - 'Gerrit-verifier-{config}'
 

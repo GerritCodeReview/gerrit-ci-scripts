@@ -55,22 +55,12 @@
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
     node: 'bazel-{browser}'
-    properties:
-      - inject:
-          properties-content: >
-            BAZEL_OPTS=--java_toolchain=//tools:error_prone_warnings_toolchain
 
 - job-template:
     name: 'Gerrit-bazel-java11-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
     node: 'bazel-{browser}'
-    properties:
-      - inject:
-          properties-content: >
-            BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11
-            --javabase=@bazel_tools//tools/jdk:remote_jdk11
-            --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
     name: Gerrit-bazel-java11-chrome-69
