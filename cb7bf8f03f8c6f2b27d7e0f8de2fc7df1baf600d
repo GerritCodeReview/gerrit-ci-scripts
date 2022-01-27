@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1955a843_ed29645d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-01-27T21:31:24Z",
+      "side": 1,
+      "message": "Works as expected:\n\n* https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.3/job/plugin-oauth-bazel-stable-3.3\n* https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-oauth-bazel-stable-3.4",
+      "revId": "cb7bf8f03f8c6f2b27d7e0f8de2fc7df1baf600d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
