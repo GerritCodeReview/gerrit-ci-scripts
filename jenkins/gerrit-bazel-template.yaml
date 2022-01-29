@@ -51,16 +51,6 @@
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
 
 - job-template:
-    name: 'Gerrit-bazel-{branch}'
-    description: '{name} {branch} branch build with Bazel'
-    defaults: gerrit-bazel-defaults
-    node: 'bazel-{browser}'
-    properties:
-      - inject:
-          properties-content: >
-            BAZEL_OPTS=--java_toolchain=//tools:error_prone_warnings_toolchain
-
-- job-template:
     name: 'Gerrit-bazel-java11-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
