@@ -39,12 +39,6 @@ export WCT_HEADLESS_MODE=1
 java -fullversion
 bazelisk version
 
-if [[ "$MODE" == *"reviewdb"* ]]
-then
-  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=OFF"
-  bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
-fi
-
 if [[ "$MODE" == *"notedb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=ON"
