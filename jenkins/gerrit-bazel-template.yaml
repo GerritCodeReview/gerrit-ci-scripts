@@ -51,7 +51,7 @@
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
 
 - job-template:
-    name: 'Gerrit-bazel-java11-{branch}'
+    name: 'Gerrit-bazel-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
     node: 'bazel-{browser}'
@@ -63,22 +63,22 @@
             --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
 
 - project:
-    name: Gerrit-bazel-java11-chrome-69
+    name: Gerrit-bazel-chrome-69
     branch:
       - stable-3.4
       - stable-3.3
     browser: chrome-69
     jobs:
-      - 'Gerrit-bazel-java11-{branch}'
+      - 'Gerrit-bazel-{branch}'
 
 - project:
-    name: Gerrit-bazel-java11-chrome-latest
+    name: Gerrit-bazel-chrome-latest
     branch:
       - master
       - stable-3.5
     browser: chrome-latest
     jobs:
-      - 'Gerrit-bazel-java11-{branch}'
+      - 'Gerrit-bazel-{branch}'
 
 - view:
     name: Gerrit
