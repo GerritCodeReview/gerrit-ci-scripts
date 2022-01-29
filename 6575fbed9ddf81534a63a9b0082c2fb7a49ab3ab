@@ -70,6 +70,30 @@
       },
       "revId": "6575fbed9ddf81534a63a9b0082c2fb7a49ab3ab",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3daf47d6_2753fa0e",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-01-29T09:48:55Z",
+      "side": 0,
+      "message": "\u003e We do release on Java 11, therefore we need to build stable branches on Java 11 as well and run tests on it.\n\nWe do it per default until now on all supported branches. You are referencing my change where I changed to build against Java 8 on stable-3.3 and stable-3.4 branches per default?\n\nNote, that the removed code didn\u0027t provide java_toolchain option, but only selected javabase and remote JDK11. We don\u0027t need to pass those options on Docker image chrome-latest, as it \u0027s already set to Java 11 per default, see: [1]:\n\n  23:28:14 openjdk full version \"11.0.12+7-post-Debian-2deb10u1\"\n\nThe removed options are deprecated on Bazel 5.0 and don\u0027t actually work any more. And this change is also a preparation change for both changes: update Bazel to 5.0 (change 291864) and downgrade java toolchain for stable-3.3 and stable-3.4 branches to Java 8 per default (change 327911 and fix Zuul build for all plugins in change 327757).\n\nWhat we also need to do, is to split the template in two: for legacy bazel version and docker image chrome-69 that is still using Java 8: [2]:\n\n  openjdk full version \"1.8.0_292-b10\"\n\nand keep the removed options, plus pass Java 11 toolchain, because it will be changed, once the change 327911 is merged.\n\nDone.\n\n[1] https://gerrit-ci.gerritforge.com/view/Gerrit/job/Gerrit-bazel-java11-stable-3.3/46/console\n[2] https://gerrit-ci.gerritforge.com/view/Gerrit/job/Gerrit-verifier-chrome-69/837/console",
+      "parentUuid": "018085ea_20d0ef67",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 74
+      },
+      "revId": "6575fbed9ddf81534a63a9b0082c2fb7a49ab3ab",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
