@@ -165,7 +165,7 @@ def buildVerificationJob() {
     (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.5") ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-chrome-69"
 }
 
-def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
+def prepareBuildsForMode(buildName, mode="notedb", retryTimes = 1) {
     return {
         stage("${buildName}/${mode}") {
             def agentBuild = null
