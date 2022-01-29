@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ed7080b_3925ca20",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-01-29T08:55:56Z",
+      "side": 0,
+      "message": "Fixed in change 329368.",
+      "parentUuid": "777e8499_9538f653",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 78
+      },
+      "revId": "1543724a56572974a64a171156ac54cfc5232c85",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1660f14f_478aabc0",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-01-29T08:50:45Z",
       "side": 0,
       "message": "This was the last usage of job-template on line 53.",
+      "range": {
+        "startLine": 82,
+        "startChar": 8,
+        "endLine": 82,
+        "endChar": 31
+      },
+      "revId": "1543724a56572974a64a171156ac54cfc5232c85",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1450b964_8f9ffb5d",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-01-29T08:55:56Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "1660f14f_478aabc0",
       "range": {
         "startLine": 82,
         "startChar": 8,
