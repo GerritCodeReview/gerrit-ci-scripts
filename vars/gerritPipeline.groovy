@@ -208,11 +208,7 @@ def collectBuilds() {
           builds["Gerrit-verification(${it})"] = prepareBuildsForMode((buildVerificationJob()), it)
        }
     } else {
-       builds["java8"] = { -> build "Gerrit-bazel-${env.BRANCH_NAME}" }
-
-       if (env.BRANCH_NAME == "master") {
-          builds["java11"] = { -> build "Gerrit-bazel-java11-${env.BRANCH_NAME}" }
-       }
+       builds["java11"] = { -> build "Gerrit-bazel-java11-${env.BRANCH_NAME}" }
     }
     return builds
 }
