@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b4ec88b_9b25ab0d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2022-02-03T22:38:23Z",
+      "side": 1,
+      "message": "nit: branches",
+      "range": {
+        "startLine": 12,
+        "startChar": 61,
+        "endLine": 12,
+        "endChar": 68
+      },
+      "revId": "913a7112a3326abd27353247663641314c83678b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "279ea602_4a5e196e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2022-02-03T22:38:23Z",
+      "side": 1,
+      "message": "Should this change to be \"to additionally build\"?",
+      "range": {
+        "startLine": 13,
+        "startChar": 23,
+        "endLine": 13,
+        "endChar": 31
+      },
+      "revId": "913a7112a3326abd27353247663641314c83678b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
