@@ -70,6 +70,30 @@
       },
       "revId": "e81a460636f04719a233408a8c602c51eddc0fd0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae8d5025_63a2449b",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-02-04T14:38:15Z",
+      "side": 1,
+      "message": "Absolutely. It\u0027s a left over of NoteDB/ReviewDb era and should be definitely cleaned up. It will need some coordination, though. I will file an issue.",
+      "parentUuid": "f3da0b09_ae3db14a",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 20
+      },
+      "revId": "e81a460636f04719a233408a8c602c51eddc0fd0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
