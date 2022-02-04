@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69540c09_582953bb",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-02-04T10:25:20Z",
+      "side": 1,
+      "message": "Can we find a better name for this? It represents the java11 build on stable-3.3 and stable-3.4. \n\nWhat about \u0027java11\u0027? 😊",
+      "range": {
+        "startLine": 54,
+        "startChar": 24,
+        "endLine": 54,
+        "endChar": 30
+      },
+      "revId": "57dfca1ff9c8bba0dd785eb8e889d15a395559d6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
