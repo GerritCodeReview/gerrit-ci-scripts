@@ -46,6 +46,30 @@
       },
       "revId": "e81a460636f04719a233408a8c602c51eddc0fd0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3da0b09_ae3db14a",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-02-04T14:36:12Z",
+      "side": 1,
+      "message": "\u003e Unfortunately, we cannot yet drop notedb entirely. RBE cannot build Javadoc artifact, see this known issue: [1]. Even if we don\u0027t run tests in notedb mode, we still have to build in notedb mode.\n\u003e \n\u003e [1] https://github.com/bazelbuild/bazel/issues/12765\n\nUnderstood: why not calling it differently then? It has nothing to do with a notedb-specific build isn\u0027t it?",
+      "parentUuid": "da54f5e6_0bd04028",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 20
+      },
+      "revId": "e81a460636f04719a233408a8c602c51eddc0fd0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
