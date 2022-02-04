@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54465b39_ead058ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-02-04T10:21:14Z",
+      "side": 1,
+      "message": "I\u0027m not against it (as a matter of fact I gave +2) but as we\u0027ll start also building on java17, does it make sense to keep it in the name of the job anyway?",
+      "revId": "c4e4f3a697e533461541f53559425eeffdc69539",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "082f3563_874775d9",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-02-04T10:21:14Z",
+      "side": 1,
+      "message": "nit: unrelated change",
+      "revId": "c4e4f3a697e533461541f53559425eeffdc69539",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
