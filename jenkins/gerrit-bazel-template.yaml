@@ -64,6 +64,15 @@
             --java_toolchain=//tools:error_prone_warnings_toolchain_java11
 
 - job-template:
+    name: 'Gerrit-bazel-java17-{branch}'
+    description: '{name} {branch} branch build with Bazel'
+    defaults: gerrit-bazel-defaults
+    node: 'bazel-{browser}'
+    properties:
+      - inject:
+          properties-content: BAZEL_OPTS=--config java17
+
+- job-template:
     name: 'Gerrit-bazel-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
@@ -76,6 +85,15 @@
     browser: chrome-69
     jobs:
       - 'Gerrit-bazel-java11-{branch}'
+
+- project:
+    name: Gerrit-bazel-java17-chrome-latest
+    branch:
+      - master
+      - stable-3.6
+    browser: chrome-latest
+    jobs:
+      - 'Gerrit-bazel-java17-{branch}'
 
 - project:
     name: Gerrit-bazel-chrome-latest
