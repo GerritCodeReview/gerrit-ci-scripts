@@ -53,18 +53,33 @@
 
 - job-template:
     name: 'Gerrit-bazel-{branch}'
-    description: '{name} {branch} branch build with Bazel'
+    description: '{name} {branch} branch build with Bazel using Java 17'
+    defaults: gerrit-bazel-defaults
+    node: 'bazel-{browser}'
+
+- job-template:
+    name: 'Gerrit-bazel-java11-{branch}'
+    description: '{name} {branch} branch build with Bazel using Java 11'
     defaults: gerrit-bazel-defaults
     node: 'bazel-{browser}'
     properties:
       - inject:
           properties-content: >
-            BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11
-            --javabase=@bazel_tools//tools/jdk:remote_jdk11
-            --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
+            BAZEL_OPTS=--java_language_version=11
+            --java_runtime_version=remotejdk_11
+            --tool_java_language_version=11
+            --tool_java_runtime_version=remotejdk_11
 
 - project:
     name: Gerrit-bazel-chrome-latest
+    branch:
+      - master
+    browser: chrome-latest
+    jobs:
+      - 'Gerrit-bazel-{branch}'
+
+- project:
+    name: Gerrit-bazel-java11-chrome-latest
     branch:
       - master
       - stable-3.9
@@ -73,7 +88,7 @@
       - stable-3.6
     browser: chrome-latest
     jobs:
-      - 'Gerrit-bazel-{branch}':
+      - 'Gerrit-bazel-java11-{branch}':
 
 - view:
     name: Gerrit
