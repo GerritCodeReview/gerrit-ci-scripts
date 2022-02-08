@@ -28,7 +28,7 @@ do
     bazelisk test $target/... //tools/bzl:always_pass_test
 done
 
-for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)
+for JAR in $(find bazel-bin/plugins/ -name {name}*.jar | egrep -e '(stamped|tests|header)' -v)
 do
     PLUGIN_VERSION=$(git describe  --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
