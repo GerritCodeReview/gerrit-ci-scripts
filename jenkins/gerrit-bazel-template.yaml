@@ -61,6 +61,42 @@
             BAZEL_OPTS=--host_javabase=@bazel_tools//tools/jdk:remote_jdk11
             --javabase=@bazel_tools//tools/jdk:remote_jdk11
             --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
+<<<<<<< PATCH SET (af51c3 Add new verification jobs for JDK 17)
+            --java_toolchain=//tools:error_prone_warnings_toolchain_java11
+
+- job-template:
+    name: 'Gerrit-bazel-java17-{branch}'
+    description: '{name} {branch} branch build with Bazel'
+    defaults: gerrit-bazel-defaults
+    node: 'bazel-{browser}'
+    properties:
+      - inject:
+          properties-content: BAZEL_OPTS=--config java17
+
+- job-template:
+    name: 'Gerrit-bazel-{branch}'
+    description: '{name} {branch} branch build with Bazel'
+    defaults: gerrit-bazel-defaults
+    node: 'bazel-{browser}'
+
+- project:
+    name: Gerrit-bazel-chrome-69
+    branch:
+      - stable-3.4
+    browser: chrome-69
+    jobs:
+      - 'Gerrit-bazel-java11-{branch}'
+=======
+>>>>>>> BASE      (f73b0b Add build jobs for the new events-nats plugin)
+
+- project:
+    name: Gerrit-bazel-java17-chrome-latest
+    branch:
+      - master
+      - stable-3.6
+    browser: chrome-latest
+    jobs:
+      - 'Gerrit-bazel-java17-{branch}'
 
 - project:
     name: Gerrit-bazel-chrome-latest
