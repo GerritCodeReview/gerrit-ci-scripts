@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71333929_bf6f1a5e",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2022-02-08T09:04:31Z",
+      "side": 1,
+      "message": "Don\u0027t we want both jobs here?\n\n    jobs:\n      - \u0027Gerrit-bazel-java11-{branch}\u0027 \n      - \u0027Gerrit-bazel-{branch}\u0027",
+      "revId": "bd1603da976c41c5a5fb71cd7cc388aec92a01fb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
