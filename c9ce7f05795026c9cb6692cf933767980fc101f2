@@ -87,6 +87,24 @@
       "parentUuid": "14770b36_568ca320",
       "revId": "c9ce7f05795026c9cb6692cf933767980fc101f2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "996d5423_a47444b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2022-02-14T10:15:09Z",
+      "side": 1,
+      "message": "IIUC this configuration means that the \"main\" (apparently) branch in the plugin works with core Gerrit master, stable-3.5, stable-3.4 and stable-3.3.\nI think the main (no pun intended) issue is that master have been renamed main.",
+      "parentUuid": "09ec948b_f8e63b20",
+      "revId": "c9ce7f05795026c9cb6692cf933767980fc101f2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
