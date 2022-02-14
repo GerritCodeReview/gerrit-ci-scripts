@@ -52,6 +52,23 @@
       "parentUuid": "9d7d6bf6_bad73a8f",
       "revId": "c9ce7f05795026c9cb6692cf933767980fc101f2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14770b36_568ca320",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-02-14T09:49:13Z",
+      "side": 1,
+      "message": "Build for stable-3.5 fails [1].\nLooks like there are no branches yet [2]\n\n@Sven can you create stable-branches (and main) and/or adapt the ci-script?\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-ref-copy-bazel-master-stable-3.5/1/console\n[2] https://gerrit-review.googlesource.com/admin/repos/plugins/ref-copy,branches",
+      "revId": "c9ce7f05795026c9cb6692cf933767980fc101f2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
