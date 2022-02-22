@@ -1,6 +1,13 @@
 #!/bin/bash -xe
 
-. set-java.sh 8
+case "{branch}" in
+  stable-3.3|stable-3.4)
+    . set-java.sh 8
+    ;;
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
 then
@@ -9,11 +16,7 @@ fi
 
 cd gerrit
 bazelisk version
-if ([ "$TARGET_BRANCH" == "master" ] || \
-    [ "$TARGET_BRANCH" == "stable-3.4" ] || \
-    [ "$TARGET_BRANCH" == "stable-3.3" ] || \
-    [ "$TARGET_BRANCH" == "stable-3.2" ]) && \
-   ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit-ui) || \
+if ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit-ui) || \
     (git show --summary HEAD | grep -q ^Merge:) || \
     (git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion))
 then
@@ -21,4 +24,8 @@ then
   java -fullversion
   bazelisk test //polygerrit-ui/app:lint_test
   bazelisk test //polygerrit-ui/app:polylint_test
+  if [[ "$TARGET_BRANCH" == "master" ]]
+  then
+    bazelisk test //polygerrit-ui/app:lit_analysis
+  fi
 fi

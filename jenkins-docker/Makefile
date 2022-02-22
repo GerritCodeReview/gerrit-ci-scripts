@@ -1,5 +1,5 @@
-SLAVE_DIRS ?= slave-debian slave-chrome slave-node-wct slave-bazel-nocache slave-bazel slave-bazel-docker slave-sbt slave-mvn slave-release slave-python3 slave-jekyll slave-aws
-ALL_DIRS ?= master bazel-cache $(SLAVE_DIRS)
+AGENT_DIRS ?= agent-debian agent-chrome agent-node-wct agent-bazel-nocache agent-bazel agent-bazel-docker agent-sbt agent-mvn agent-release agent-python3 agent-jekyll agent-aws
+ALL_DIRS ?= server bazel-cache $(AGENT_DIRS)
 NO_CACHE ?= true
 
 USE_SECURITY ?= true
@@ -15,8 +15,8 @@ default: build
 build clean publish:
 	for dir in $(ALL_DIRS); do (make NO_CACHE=$(NO_CACHE) -C $$dir $@) || exit 1; done
 
-publish_slave:
-	for dir in $(SLAVE_DIRS); do (make NO_CACHE=$(NO_CACHE) -C $$dir build publish) || exit 1; done
+publish_agent:
+	for dir in $(AGENT_DIRS); do (make NO_CACHE=$(NO_CACHE) -C $$dir build publish) || exit 1; done
 
 ssl_certs:
 	if [ ! -f ${NGINX_CERTS}/cert.key ] || [ ! -f ${NGINX_CERTS}/cert.key ]; then \
@@ -31,5 +31,5 @@ ssl_certs:
 start: ssl_certs
 	$(OPTS) docker-compose up -d
 
-stop:
-	$(OPTS) docker-compose down
+start stop restart:
+	make -C server $@

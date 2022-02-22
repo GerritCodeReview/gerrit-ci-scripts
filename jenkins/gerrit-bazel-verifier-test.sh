@@ -1,6 +1,13 @@
 #!/bin/bash -ex
 
-. set-java.sh 8
+case "$TARGET_BRANCH" in
+  stable-3.3|stable-3.4)
+    . set-java.sh 8
+    ;;
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 cd gerrit
 
@@ -8,12 +15,12 @@ echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
 case $TARGET_BRANCH$MODE in
-  masterrbe|stable-3.4rbe|stable-3.4-2021-07.sticky-approvalsrbe)
-    TEST_TAG_FILTER="-flaky,-elastic,-git-protocol-v2"
+  masterrbe|stable-3.4rbe|stable-3.5rbe|stable-3.3-issue-15563rbe)
+    TEST_TAG_FILTER="-flaky,-elastic,-no_rbe"
     BAZEL_OPTS="--config=remote --remote_instance_name=projects/api-project-164060093628/instances/default_instance"
     ;;
-  masternotedb|stable-3.4notedb)
-    TEST_TAG_FILTER="-flaky,elastic,git-protocol-v2"
+  masternotedb|stable-3.4notedb|stable-3.5notedb)
+    TEST_TAG_FILTER="-flaky,elastic,no_rbe"
     ;;
   stable-2.*)
     TEST_TAG_FILTER="-flaky,-elastic"

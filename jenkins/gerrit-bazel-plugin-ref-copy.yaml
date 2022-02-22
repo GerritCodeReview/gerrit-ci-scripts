@@ -1,0 +1,11 @@
+- project:
+    name: ref-copy
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - main
+          gerrit-branch:
+            - master
+            - stable-3.5
+            - stable-3.4
+            - stable-3.3
