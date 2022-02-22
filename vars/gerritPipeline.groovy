@@ -23,7 +23,7 @@ import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 
 def call(Map parm = [:]) {
-    node ('master') {
+    node ('server') {
 
         if (hasChangeNumber()) {
             stage('Preparing'){
@@ -39,7 +39,7 @@ def call(Map parm = [:]) {
                 if (flakyBuildsModes.size() > 0){
                     parallel flakyBuildsModes.collectEntries {
                         ["Gerrit-verification(${it})" :
-                            prepareBuildsForMode("Gerrit-verifier-bazel", it, 3)]
+                            prepareBuildsForMode(buildVerificationJob(), it, 3)]
                     }
                 }
             }
@@ -131,18 +131,10 @@ def queryChangedFiles(url) {
 
 def collectBuildModes() {
     Builds.modes = []
-    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.4" ||
-        env.GERRIT_BRANCH == "stable-3.4-2021-07.sticky-approvals" ||
-        env.GERRIT_BRANCH == "stable-3.4-2021-07") {
+    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[4-5]/) {
         Builds.modes = ["notedb", "rbe"]
-    } else if (env.GERRIT_BRANCH ==~ /stable-3.[0-3]/ ||
-               env.GERRIT_BRANCH == "stable-3.1-2021-07.includedIn" ||
-               env.GERRIT_BRANCH ==~ /stable-3.[1-3]-2021-07/) {
+    } else if (env.GERRIT_BRANCH ==~ /stable-3.3.*/) {
         Builds.modes = ["notedb"]
-    } else if (env.GERRIT_BRANCH == "stable-2.16") {
-        Builds.modes = ["notedb", "reviewdb"]
-    } else if (env.GERRIT_BRANCH ==~ /stable-2.1[0-5]/) {
-        Builds.modes = ["reviewdb"]
     } else {
         throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")
     }
@@ -170,16 +162,20 @@ def collectBuildModes() {
     }
 }
 
+def buildVerificationJob() {
+    (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.5") ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-chrome-69"
+}
+
 def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
     return {
         stage("${buildName}/${mode}") {
-            def slaveBuild = null
+            def agentBuild = null
             for (int i = 1; i <= retryTimes; i++) {
                 postCheck(new GerritCheck(
                     (buildName == "Gerrit-codestyle") ? "codestyle" : mode,
                     new Build(currentBuild.getAbsoluteUrl(), null)))
                 try {
-                    slaveBuild = build job: "${buildName}", parameters: [
+                    agentBuild = build job: "${buildName}", parameters: [
                         string(name: 'REFSPEC', value: "refs/changes/${env.BRANCH_NAME}"),
                         string(name: 'BRANCH', value: env.GERRIT_PATCHSET_REVISION),
                         string(name: 'CHANGE_URL', value: "${Globals.gerritUrl}c/${env.GERRIT_PROJECT}/+/${env.GERRIT_CHANGE_NUMBER}"),
@@ -189,14 +185,14 @@ def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
                 } finally {
                     if (buildName == "Gerrit-codestyle"){
                         Builds.codeStyle = new Build(
-                            slaveBuild.getAbsoluteUrl(), slaveBuild.getResult())
+                            agentBuild.getAbsoluteUrl(), agentBuild.getResult())
                         postCheck(new GerritCheck("codestyle", Builds.codeStyle))
                     } else {
                         Builds.verification[mode] = new Build(
-                            slaveBuild.getAbsoluteUrl(), slaveBuild.getResult())
+                            agentBuild.getAbsoluteUrl(), agentBuild.getResult())
                         postCheck(new GerritCheck(mode, Builds.verification[mode]))
                     }
-                    if (slaveBuild.getResult() == "SUCCESS") {
+                    if (agentBuild.getResult() == "SUCCESS") {
                         break
                     }
                 }
@@ -210,14 +206,10 @@ def collectBuilds() {
     if (hasChangeNumber()) {
        builds["Gerrit-codestyle"] = prepareBuildsForMode("Gerrit-codestyle")
        Builds.modes.each {
-          builds["Gerrit-verification(${it})"] = prepareBuildsForMode("Gerrit-verifier-bazel", it)
+          builds["Gerrit-verification(${it})"] = prepareBuildsForMode((buildVerificationJob()), it)
        }
     } else {
-       builds["java8"] = { -> build "Gerrit-bazel-${env.BRANCH_NAME}" }
-
-       if (env.BRANCH_NAME == "master") {
-          builds["java11"] = { -> build "Gerrit-bazel-java11-${env.BRANCH_NAME}" }
-       }
+       builds["java"] = { -> build "Gerrit-bazel-${env.BRANCH_NAME}" }
     }
     return builds
 }

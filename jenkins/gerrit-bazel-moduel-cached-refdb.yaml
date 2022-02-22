@@ -1,0 +1,12 @@
+- project:
+    name: cached-refdb
+    jobs:
+      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - stable-3.3
+          gerrit-branch:
+            - stable-3.4
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - stable-3.3
+      - 'module-{name}-verifier'

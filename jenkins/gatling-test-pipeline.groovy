@@ -9,9 +9,9 @@ pipeline {
             string(name: 'AWS_PREFIX', defaultValue:"jenkins", description: 'A string to prefix stacks and resources with')
             string(name: 'AWS_REGION', defaultValue:"us-east-1", description: 'Which region to deploy to')
 
-            string(name: 'GERRIT_VERSION', defaultValue:"3.4", description: 'The gerrit version under test')
-            string(name: 'GERRIT_PATCH', defaultValue:"0-rc5", description: 'The gerrit version patch under test')
-            string(name: 'GERRIT_WAR_URL', defaultValue:"https://gerrit-ci.gerritforge.com/job/Gerrit-bazel-java11-stable-3.4/lastSuccessfulBuild/artifact/gerrit/bazel-bin/release.war", description: 'The gerrit.war URL to use as override of the gerrit version under test')
+            string(name: 'GERRIT_VERSION', defaultValue:"3.5", description: 'The gerrit version under test')
+            string(name: 'GERRIT_PATCH', defaultValue:"0-rc1", description: 'The gerrit version patch under test')
+            string(name: 'GERRIT_WAR_URL', defaultValue:"https://gerrit-ci.gerritforge.com/job/Gerrit-bazel-stable-3.5/lastSuccessfulBuild/artifact/gerrit/bazel-bin/release.war", description: 'The gerrit.war URL to use as override of the gerrit version under test')
 
             string(name: 'HOSTED_ZONE_NAME', defaultValue: "gerritforgeaws.com", description: 'Name of the hosted zone')
             string(name: 'CLUSTER_INSTANCE_TYPE', defaultValue: 'm4.xlarge', description:'The EC2 instance Type used to run the cluster')
@@ -32,6 +32,13 @@ pipeline {
             string(name: 'GIT_HTTP_USERNAME', defaultValue: '', description: 'Username for Git/HTTP testing, use vault by default')
             password(name: 'GIT_HTTP_PASSWORD', defaultValue: '', description: 'Password for Git/HTTP testing, use vault by default')
 
+            string(name: 'LDAP_SERVER', defaultValue: 'ldaps://ldap.gerritforge.com', description: 'URL of the LDAP server to query for user information and group membership')
+            string(name: 'LDAP_USERNAME', defaultValue: 'cn=admin,dc=gerritforge,dc=com', description: 'Username to bind to the LDAP server with')
+            string(name: 'LDAP_ACCOUNT_BASE', defaultValue: 'dc=gerritforge,dc=com', description: 'Root of the tree containing all user accounts')
+            string(name: 'LDAP_GROUP_BASE', defaultValue: 'dc=gerritforge,dc=com', description: 'Root of the tree containing all group objects')
+            string(name: 'LDAP_LOGIN_USERNAME', defaultValue: '', description: 'The login identity to acquire a valid cookie, use vault by default')
+            password(name: 'LDAP_LOGIN_PASSWORD', defaultValue: '', description: 'The login identity password, use vault by default')
+
             string(name: 'S3_EXPORT_LOGS_BUCKET_NAME', defaultValue: 'gerritforge-export-logs', description: 'S3 bucket to export logs to')
 
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
@@ -44,10 +51,10 @@ pipeline {
                 returnStdout: true,
                 script: '/sbin/ip route|awk \'/default/ {print "tcp://"\$3":2375"}\''
             )}"""
-            SUBDOMAIN = String.format("%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
-            BASE_URL = String.format("%s.%s", SUBDOMAIN, "${params.HOSTED_ZONE_NAME}")
-            GERRIT_HTTP_URL = String.format("%s://%s", "${params.GERRIT_HTTP_SCHEMA}", BASE_URL)
-            GERRIT_SSH_URL = String.format("ssh://%s@%s:%s", "${params.GERRIT_SSH_USERNAME}", BASE_URL, "${params.GERRIT_SSH_PORT}")
+            HTTP_SUBDOMAIN = String.format("http-%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
+            SSH_SUBDOMAIN = String.format("ssh-%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
+            GERRIT_HTTP_URL = String.format("%s://%s.%s", "${params.GERRIT_HTTP_SCHEMA}", HTTP_SUBDOMAIN, "${params.HOSTED_ZONE_NAME}")
+            GERRIT_SSH_URL = String.format("ssh://%s@%s.%s:%s", "${params.GERRIT_SSH_USERNAME}", SSH_SUBDOMAIN, "${params.HOSTED_ZONE_NAME}", "${params.GERRIT_SSH_PORT}")
          }
 
         stages{
@@ -63,7 +70,6 @@ pipeline {
                     dir ('aws-gerrit/gerrit/etc') {
                         script {
                             def gerritConfig = readFile(file:"gerrit.config.template")
-                            gerritConfig = gerritConfig.replace("type = ldap","type = DEVELOPMENT_BECOME_ANY_ACCOUNT")
                             gerritConfig = gerritConfig.replace("smtpUser = {{ SMTP_USER }}\n    enable = true","smtpUser = {{ SMTP_USER }}\n    enable = false")
 
                             writeFile(file:"gerrit.config.template", text: gerritConfig)
@@ -81,7 +87,13 @@ pipeline {
                                 setupData = resolveParameter(setupData, "SSL_CERTIFICATE_ARN", "${params.SSL_CERTIFICATE_ARN}")
 
                                 setupData = resolveParameter(setupData, "METRICS_CLOUDWATCH_NAMESPACE", "${params.METRICS_CLOUDWATCH_NAMESPACE}")
-                                setupData = resolveParameter(setupData, 'SUBDOMAIN', "${env.SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'HTTP_SUBDOMAIN', "${env.HTTP_SUBDOMAIN}")
+                                setupData = resolveParameter(setupData, 'SSH_SUBDOMAIN', "${env.SSH_SUBDOMAIN}")
+
+                                setupData = resolveParameter(setupData, "LDAP_SERVER", "${params.LDAP_SERVER}")
+                                setupData = resolveParameter(setupData, "LDAP_USERNAME", "${params.LDAP_USERNAME}")
+                                setupData = resolveParameter(setupData, "LDAP_ACCOUNT_BASE", "${params.LDAP_ACCOUNT_BASE}")
+                                setupData = resolveParameter(setupData, "LDAP_GROUP_BASE", "${params.LDAP_GROUP_BASE}")
 
                                 setupData = setupData + "\nGERRIT_KEY_PREFIX:= ${params.GERRIT_KEY_PREFIX}"
                                 setupData = setupData + "\nGERRIT_VOLUME_SNAPSHOT_ID:= ${params.GERRIT_VOLUME_SNAPSHOT_ID}"
@@ -101,10 +113,22 @@ pipeline {
             }
             stage('Extract Gatling test user credentials from Gerrit') {
                 steps {
+                    withCredentials([usernamePassword(usernameVariable: "DEFAULT_LDAP_USERNAME",
+                            passwordVariable: "DEFAULT_LDAP_PASSWORD",
+                            credentialsId: "AWS-Gerrit-LDAP")]) {
                     retry(50) {
                         sleep(10)
-                        sh "curl --fail -L -I '${env.GERRIT_HTTP_URL}/config/server/healthcheck~status' 2>/dev/null"
-                        sh "curl -L -c cookies -i -X POST '${env.GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip?account_id=1000000'"
+                        script {
+                            def ldapUsername = ("${params.LDAP_LOGIN_USERNAME}"?.trim()) ?: "${env.DEFAULT_LDAP_USERNAME}"
+                            def ldapPassword = ("${params.LDAP_LOGIN_PASSWORD}"?.trim()) ?: "${env.DEFAULT_LDAP_PASSWORD}"
+
+                            sh "curl --fail -L -I '${env.GERRIT_HTTP_URL}/config/server/healthcheck~status' 2>/dev/null"
+                            sh """
+                                set +x
+                                curl -L -c cookies -i '${env.GERRIT_HTTP_URL}/login/%2Fq%2Fstatus%3Aopen%2B-is%3Awip' --data-raw 'username=${ldapUsername}&password=${ldapPassword}'
+                                set -x
+                            """
+                        }
                     }
                     script {
                         def cookies = readFile(file:"cookies")
@@ -120,6 +144,7 @@ pipeline {
                         accountCookie = cookiesMap['GerritAccount']
                         xsrfToken = cookiesMap['XSRF_TOKEN']
                     }
+                  }
                 }
             }
             stage('Pull newest Gatling tests docker image') {
@@ -191,7 +216,7 @@ pipeline {
                     script {
                         def failed_tests = sh(
                                 returnStdout: true,
-                                script: "for i in `find ${WORKSPACE} -name \"global_stats.json\"`; do cat \$i | jq '.numberOfRequests.ko'| grep -v '0' || true;  done;"
+                                script: "for i in `find ${WORKSPACE} -name \"global_stats.json\"`; do cat \$i | jq '.numberOfRequests.ko'| grep -v '^0\$' || true;  done;"
                         )
                         if (failed_tests.trim()) {
                             error("Setting build as failed because some gatling tests were not OK")
