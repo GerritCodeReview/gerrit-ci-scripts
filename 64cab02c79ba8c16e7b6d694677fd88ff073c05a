@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e22793bb_46b6b4bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-03-11T08:00:54Z",
+      "side": 1,
+      "message": "Verified by calling manually the corresponding jobs:\n* https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/module-cached-refdb-bazel-stable-3.5/\n* https://gerrit-ci.gerritforge.com/view/Plugins-master/job/module-cached-refdb-bazel-master/",
+      "revId": "64cab02c79ba8c16e7b6d694677fd88ff073c05a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
