@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "483d67c8_2325715d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-03-24T18:14:46Z",
+      "side": 1,
+      "message": "Yep, that\u0027s the plan. Will upload a follow-up change.",
+      "parentUuid": "e45bba09_bb1bea6f",
+      "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "65a200ca_f415a79b",
         "filename": "jenkins-docker/agent-bazel/Dockerfile",
         "patchSetId": 2
@@ -90,6 +108,48 @@
       "side": 1,
       "message": "Do we need history?\n\nWhat about --depth 1?",
       "parentUuid": "02cc8519_28287a89",
+      "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b18344b7_3ed7f375",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-03-24T18:14:46Z",
+      "side": 1,
+      "message": "Yep, we should also look at moving to tagged images, so that we don\u0027t have to distribute them manually anymore.",
+      "parentUuid": "4bb825c3_acc9b4fc",
+      "range": {
+        "startLine": 7,
+        "startChar": 72,
+        "endLine": 7,
+        "endChar": 98
+      },
+      "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e247a85c_52026249",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-03-24T18:14:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9c09c382_3dc5d042",
       "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
