@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e45bba09_bb1bea6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-03-24T13:28:14Z",
+      "side": 1,
+      "message": "The build jobs should also be adapted to use the reference repository.",
+      "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "65a200ca_f415a79b",
         "filename": "jenkins-docker/agent-bazel/Dockerfile",
         "patchSetId": 2
@@ -14,6 +31,47 @@
       "writtenOn": "2022-03-24T12:21:33Z",
       "side": 1,
       "message": "This command fails locally if I follow these 2 steps.\n\nIt must be recursive-if-able because the reference doesn\u0027t have the submodules.\n\nI also haven\u0027t found that this actually increases performance locally. Both the old and the new clock around the same time both on my google cloud computer and my laptop.",
+      "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02cc8519_28287a89",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-03-24T13:28:14Z",
+      "side": 1,
+      "message": "I guess the time the clone requires depends a lot on the load on the client and server. This change should take away load from the Gerrit server, reduce required network bandwidth and would be faster in cases Gerrit is under some heavy load.",
+      "parentUuid": "65a200ca_f415a79b",
+      "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4bb825c3_acc9b4fc",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-03-24T13:28:14Z",
+      "side": 1,
+      "message": "We should have a way to regularly update the reference repository. I guess the easiest way would be to rebuild the build agent containers regularly. The job doing so is failing consistently at the moment and should be fixed (independently of this change). Are those container images then also automatically distributed to the VMs running the build agents?",
+      "range": {
+        "startLine": 7,
+        "startChar": 72,
+        "endLine": 7,
+        "endChar": 98
+      },
       "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
