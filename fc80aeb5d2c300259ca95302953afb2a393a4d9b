@@ -74,6 +74,24 @@
       },
       "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c09c382_3dc5d042",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-03-24T13:33:54Z",
+      "side": 1,
+      "message": "Do we need history?\n\nWhat about --depth 1?",
+      "parentUuid": "02cc8519_28287a89",
+      "revId": "fc80aeb5d2c300259ca95302953afb2a393a4d9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
