@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b145cfe2_329b0019",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-03-24T10:50:23Z",
+      "side": 1,
+      "message": "I\u0027m copying how it\u0027s done elsewhere for consistency.\n\nSee\n\nhttps://gerrit.googlesource.com/gerrit-ci-scripts/+/refs/heads/master/jenkins/gerrit-bazel-verifier-test.sh",
+      "parentUuid": "c8bf1408_0d209dee",
+      "range": {
+        "startLine": 30,
+        "startChar": 19,
+        "endLine": 30,
+        "endChar": 20
+      },
+      "revId": "9e2b97c94ee62427aa57a5704a82f0d21a5a1777",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9af7403f_8035973c",
