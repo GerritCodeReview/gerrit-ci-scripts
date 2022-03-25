@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "889601ca_d7c07a7b",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-03-25T11:13:16Z",
+      "side": 1,
+      "message": "You can make this include sub-modules with --recursive if you want to.",
+      "revId": "5eb28c28476bc7b59973be9499e0e1ecd94c7727",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e603a771_ead8a2e8",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-03-25T11:13:16Z",
+      "side": 1,
+      "message": "Why is this fetching -b stable-3.5?\n\nWhat about fetching --depth 1 for both this and the reference?",
+      "revId": "5eb28c28476bc7b59973be9499e0e1ecd94c7727",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
