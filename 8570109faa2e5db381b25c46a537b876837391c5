@@ -16,6 +16,46 @@
       "message": "Luca, is there a way you verify this change somehow?",
       "revId": "8570109faa2e5db381b25c46a537b876837391c5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d49e2b3_88d389d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-03-26T01:03:27Z",
+      "side": 1,
+      "message": "Needs to close Gerrit master on the Docker container. Also, the setup_gjf.sh needs to support 1.15, which is not at the moment.",
+      "revId": "8570109faa2e5db381b25c46a537b876837391c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0184eadc_6a4ed124",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-03-26T01:03:27Z",
+      "side": 1,
+      "message": "master, otherwise the 1.15 won\u0027t be supported",
+      "range": {
+        "startLine": 6,
+        "startChar": 37,
+        "endLine": 6,
+        "endChar": 47
+      },
+      "revId": "8570109faa2e5db381b25c46a537b876837391c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
