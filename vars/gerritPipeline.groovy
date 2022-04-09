@@ -130,7 +130,7 @@ def queryChangedFiles(url) {
 
 def collectBuildModes() {
     Builds.modes = []
-    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[4-5]/) {
+    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[4-6]/) {
         Builds.modes = ["notedb", "rbe"]
     } else if (env.GERRIT_BRANCH == "stable-3.3") {
         Builds.modes = ["notedb"]
@@ -162,7 +162,7 @@ def collectBuildModes() {
 }
 
 def buildVerificationJob() {
-    (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.5") ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-chrome-69"
+    (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[5-6]/) ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-chrome-69"
 }
 
 def prepareBuildsForMode(buildName, mode="reviewdb", retryTimes = 1) {
