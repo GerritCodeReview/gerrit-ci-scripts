@@ -16,6 +16,52 @@
       "message": "Can you please check this change for me?",
       "revId": "531faeb143b9d2bf9871ec928efd19e1b0ef177a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e321ea94_23e5ad29",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2022-04-12T10:14:13Z",
+      "side": 1,
+      "message": "OR branch",
+      "range": {
+        "startLine": 19,
+        "startChar": 124,
+        "endLine": 19,
+        "endChar": 130
+      },
+      "revId": "531faeb143b9d2bf9871ec928efd19e1b0ef177a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23ecb978_110acf44",
+        "filename": "jenkins/checker_definitions.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2022-04-12T10:14:13Z",
+      "side": 1,
+      "message": "OR branch",
+      "range": {
+        "startLine": 30,
+        "startChar": 138,
+        "endLine": 30,
+        "endChar": 146
+      },
+      "revId": "531faeb143b9d2bf9871ec928efd19e1b0ef177a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
