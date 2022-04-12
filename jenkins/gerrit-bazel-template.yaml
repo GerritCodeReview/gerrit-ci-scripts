@@ -75,6 +75,7 @@
     name: Gerrit-bazel-chrome-latest
     branch:
       - master
+      - stable-3.6
       - stable-3.5
     browser: chrome-latest
     jobs:
