@@ -11,4 +11,5 @@
             - master
           gerrit-branch:
             - stable-3.5
+            - stable-3.6
       - 'module-{name}-verifier'
