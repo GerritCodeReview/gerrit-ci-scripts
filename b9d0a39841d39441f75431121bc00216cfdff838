@@ -16,6 +16,23 @@
       "message": "Depends on [1]\n\n[1]https://gerrit-review.googlesource.com/c/modules/events-broker/+/334869",
       "revId": "b9d0a39841d39441f75431121bc00216cfdff838",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc77bfd1_49944d4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-04-13T15:19:13Z",
+      "side": 1,
+      "message": "Verified [1]\n\n[1]https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.6/job/module-events-broker-bazel-master-stable-3.6/1/",
+      "revId": "b9d0a39841d39441f75431121bc00216cfdff838",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
