@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "782e8e55_1a98bc2b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-04-14T13:07:52Z",
+      "side": 1,
+      "message": "Verified @ [1]\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.6/job/plugin-rename-project-bazel-master-stable-3.6/1/",
+      "revId": "4eb0e2866cd77c44a0649a70984c18ad15ef8215",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
