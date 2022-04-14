@@ -1,9 +1,14 @@
 - project:
     name: analytics
     jobs:
+    - 'plugin-{name}-sbt-{branch}-{gerrit-branch}':
+        branch:
+          - master
+        gerrit-branch:
+          - master
+          - stable-3.6
       - 'plugin-{name}-sbt-{branch}':
           branch:
-            - master
             - stable-3.5
             - stable-3.4
             - stable-3.3
