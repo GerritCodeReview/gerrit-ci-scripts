@@ -8,6 +8,7 @@
           branch:
             - master
           gerrit-branch:
+            - stable-3.6
             - stable-3.5
             - stable-3.4
             - stable-3.3
