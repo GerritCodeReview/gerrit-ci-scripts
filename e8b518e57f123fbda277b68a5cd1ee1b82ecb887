@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34740295_a652ad29",
+        "filename": "jenkins/gerrit-bazel-plugin-reviewers.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-04-15T20:52:13Z",
+      "side": 1,
+      "message": "Gerrit stable-3.6 builds successfully and tests pass against master. What\u0027s the procedure here?",
+      "revId": "e8b518e57f123fbda277b68a5cd1ee1b82ecb887",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
