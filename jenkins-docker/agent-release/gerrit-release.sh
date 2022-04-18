@@ -40,7 +40,9 @@ git submodule update --init
 
 git clean -fdx
 ./tools/version.py "$version"
-git commit -a -m "Set version to $version"
+git commit -a -m 'Set version to '$version'
+
+Release-Notes: skip'
 git push origin HEAD:refs/for/"$branch"
 
 git tag -f -s -m "v$version" "v$version"
@@ -99,7 +101,9 @@ echo "Setting next version tag to $nextversion ..."
 pushd gerrit
 git clean -fdx
 ./tools/version.py "$nextversion"
-git commit -a -m "Set version to $nextversion"
+git commit -a -m 'Set version to '$nextversion'
+
+Release-Notes: skip'
 git push origin HEAD:refs/for/"$branch"
 popd
 
