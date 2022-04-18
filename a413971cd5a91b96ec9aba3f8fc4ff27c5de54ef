@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "178d2cdc_3d412b2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-18T23:03:28Z",
+      "side": 1,
+      "message": "How did you guys verified this? I cannot see any stable-3.6 branch on cached-refdb",
+      "revId": "a413971cd5a91b96ec9aba3f8fc4ff27c5de54ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f7f02e3_90ab6ffc",
+        "filename": "jenkins/gerrit-bazel-moduel-cached-refdb.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-18T23:03:28Z",
+      "side": 1,
+      "message": "cached-refdb doesn\u0027t have a stable-3.6 branch: do we need one?",
+      "revId": "a413971cd5a91b96ec9aba3f8fc4ff27c5de54ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
