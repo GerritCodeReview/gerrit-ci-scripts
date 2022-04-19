@@ -16,6 +16,24 @@
       "message": "Gerrit stable-3.6 builds successfully and tests pass against master. What\u0027s the procedure here?",
       "revId": "e8b518e57f123fbda277b68a5cd1ee1b82ecb887",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f00c784_5de0c0b7",
+        "filename": "jenkins/gerrit-bazel-plugin-reviewers.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-04-19T09:43:16Z",
+      "side": 1,
+      "message": "Thanks @darius,\nI have modified the script to build reviewers master against gerrit stable-3.6",
+      "parentUuid": "34740295_a652ad29",
+      "revId": "e8b518e57f123fbda277b68a5cd1ee1b82ecb887",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
