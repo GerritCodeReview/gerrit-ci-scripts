@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19b9ed42_1a5ae89c",
+        "filename": "jenkins/gerrit-sbt-plugin-analytics.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-19T14:02:50Z",
+      "side": 1,
+      "message": "Should also this be mentioned in the commit message?",
+      "range": {
+        "startLine": 4,
+        "startChar": 21,
+        "endLine": 4,
+        "endChar": 24
+      },
+      "revId": "a924dd590ad4306bfa01c8d6895ce0395a67477f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
