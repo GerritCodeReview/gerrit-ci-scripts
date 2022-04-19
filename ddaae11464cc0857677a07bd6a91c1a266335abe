@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b64a8c23_7b79a081",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-04-19T14:54:39Z",
+      "side": 1,
+      "message": "Verified at [1]\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.6/job/module-git-refs-filter-bazel-master-stable-3.6/",
+      "revId": "ddaae11464cc0857677a07bd6a91c1a266335abe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
