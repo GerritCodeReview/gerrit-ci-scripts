@@ -1,7 +1,7 @@
 include ../chrome-vers.mk
 
 NO_CACHE ?= false
-NODE_VER ?= 10
+NODE_VER ?= 16.14.2
 WCT_VER ?= 6.8.0
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-node-wct:$(NODE_VER)-$(WCT_VER)
