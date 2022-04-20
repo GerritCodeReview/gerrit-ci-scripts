@@ -16,6 +16,23 @@
       "message": "@Luca it\u0027s not clear to me that this will update the version everywhere on the CI. How can I verify this?",
       "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "166063e3_aa7c2464",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-20T16:08:27Z",
+      "side": 1,
+      "message": "Have you tried removing the NodeJS from the container altogether? We don\u0027t use WCT either anymore and we could get rid of all this clutter int he container definition.",
+      "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
