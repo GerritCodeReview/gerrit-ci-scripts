@@ -16,6 +16,24 @@
       "message": "Build fails with:\n00:04:30.068 ERROR: /home/jenkins/workspace/plugin-events-kafka-bazel-master-stable-3.6/plugins/events-kafka/BUILD:9:14: Building plugins/events-kafka/libevents-kafka__plugin-class.jar (18 source files) and running annotation processors (AutoAnnotationProcessor, AutoValueProcessor, AutoOneOfProcessor, AutoValueGsonAdapterFactoryProcessor) failed: (Exit 1): java failed: error executing command external/remotejdk11_linux/bin/java -XX:-CompactStrings \u0027--add-exports\u003djdk.compiler/com.sun.tools.javac.api\u003dALL-UNNAMED\u0027 \u0027--add-exports\u003djdk.compiler/com.sun.tools.javac.main\u003dALL-UNNAMED\u0027 ... (remaining 17 arguments skipped)\n00:04:30.069 plugins/events-kafka/src/main/java/com/googlesource/gerrit/plugins/kafka/subscribe/KafkaEventSubscriber.java:153: error: [FloggerFormatString] missing argument for format specifier \u0027%s\u0027\n00:04:30.069                   logger.atSevere().withCause(e).log(\n00:04:30.069                                                     ^\n00:04:30.069     (see https://errorprone.info/bugpattern/FloggerFormatString)",
       "revId": "35574df7fbc7751e070b54b77fa2e8f1c4d2de04",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42bba6c1_23cf2003",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-04-20T12:36:44Z",
+      "side": 1,
+      "message": "Yes, we already have a monorail issue for it [1]\n\n[1]chromium.org/p/gerrit/issues/detail?id\u003d15841",
+      "parentUuid": "b7e68420_82d8128e",
+      "revId": "35574df7fbc7751e070b54b77fa2e8f1c4d2de04",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
