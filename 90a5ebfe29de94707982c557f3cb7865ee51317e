@@ -34,6 +34,24 @@
       "parentUuid": "594943a4_14ddb1bd",
       "revId": "90a5ebfe29de94707982c557f3cb7865ee51317e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2268c5d5_3567efff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-04-21T17:12:56Z",
+      "side": 1,
+      "message": "Done: https://bugs.chromium.org/p/gerrit/issues/detail?id\u003d15865",
+      "parentUuid": "0c6ace9b_0b94a316",
+      "revId": "90a5ebfe29de94707982c557f3cb7865ee51317e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
