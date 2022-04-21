@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a84a6cb3_abc19e1f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-04-21T20:55:41Z",
+      "side": 1,
+      "message": "plugin-reviewers-bazel-master-stable-3.6 fails [1].\n\n[1] https://pastebin.com/HAvG6WRR",
+      "revId": "026613873573dc8e215178b20f9dca45424e50a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
