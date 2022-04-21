@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dc4c600c_5ffb6b04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2022-04-21T09:47:32Z",
+      "side": 1,
+      "message": "run_test.sh is still having bazel call nodejs to run the karma tests for polygerrit",
+      "parentUuid": "166063e3_aa7c2464",
+      "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "280c61e2_700adf04",
         "filename": "jenkins-docker/agent-bazel-nocache/Makefile",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2022-04-20T16:59:13Z",
       "side": 1,
       "message": "Should we just set this to 16 or do we want to pin?",
+      "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55085c7d_07bc902c",
+        "filename": "jenkins-docker/agent-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2022-04-21T09:47:32Z",
+      "side": 1,
+      "message": "You ware saying \"16\" will auto-grab the highest version of 16?",
+      "parentUuid": "280c61e2_700adf04",
       "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
