@@ -16,6 +16,24 @@
       "message": "While this is working and building successfully I think we should take a closer look to see if there\u0027s any new cache that was introduced/changed in 3.6, which might need to be provided sensible defaults?\n\n@luca, thoughts?",
       "revId": "90a5ebfe29de94707982c557f3cb7865ee51317e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c6ace9b_0b94a316",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-21T08:57:30Z",
+      "side": 1,
+      "message": "Yep, can you raise an issue for that?",
+      "parentUuid": "594943a4_14ddb1bd",
+      "revId": "90a5ebfe29de94707982c557f3cb7865ee51317e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
