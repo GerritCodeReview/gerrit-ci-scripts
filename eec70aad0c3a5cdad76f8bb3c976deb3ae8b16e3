@@ -53,6 +53,59 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "79770a4d_f50c614a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-21T18:48:45Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "dc4c600c_5ffb6b04",
+      "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce13a847_7ae8e248",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-21T18:48:45Z",
+      "side": 1,
+      "message": "You can build the image locally and verify that it works. I\u0027ll then publish and re-trigger the pull on all agents.",
+      "parentUuid": "17d9f3f7_475faa52",
+      "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89e5813e_3ac10fae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-21T18:48:45Z",
+      "side": 1,
+      "message": "Leaving the +2 to front-end maintainers.",
+      "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "280c61e2_700adf04",
