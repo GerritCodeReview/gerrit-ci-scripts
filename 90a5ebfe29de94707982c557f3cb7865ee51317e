@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "594943a4_14ddb1bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-04-21T08:56:03Z",
+      "side": 1,
+      "message": "While this is working and building successfully I think we should take a closer look to see if there\u0027s any new cache that was introduced/changed in 3.6, which might need to be provided sensible defaults?\n\n@luca, thoughts?",
+      "revId": "90a5ebfe29de94707982c557f3cb7865ee51317e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
