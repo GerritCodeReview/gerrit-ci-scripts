@@ -36,6 +36,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "af70ff15_54e0c299",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-04-22T11:44:58Z",
+      "side": 1,
+      "message": "We have also seen this fail in 3.5 [1], so not caused by 3.6.\n\n[1] https://pastebin.com/jCZCA4ja",
+      "parentUuid": "df860009_6255d758",
+      "revId": "45ee1b506bd9201ebdac5b9b7514f070d5bdbd1c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c43f5612_98efb8d8",
