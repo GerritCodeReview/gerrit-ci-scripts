@@ -175,6 +175,24 @@
       "parentUuid": "280c61e2_700adf04",
       "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "604ac014_0c8548fc",
+        "filename": "jenkins-docker/agent-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-26T16:13:29Z",
+      "side": 1,
+      "message": "NODE_VER isn\u0027t used anymore since Change-Id: Ifda364809f0",
+      "parentUuid": "55085c7d_07bc902c",
+      "revId": "eec70aad0c3a5cdad76f8bb3c976deb3ae8b16e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
