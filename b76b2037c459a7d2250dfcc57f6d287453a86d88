@@ -34,6 +34,24 @@
       "parentUuid": "0d42697c_592f2e48",
       "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7c3faa2_3fa67a59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-04-26T14:03:23Z",
+      "side": 1,
+      "message": "True, the Java part is irrelevant. Can you suggest a Bazel target to add?",
+      "parentUuid": "b29dc19b_b080dba9",
+      "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
