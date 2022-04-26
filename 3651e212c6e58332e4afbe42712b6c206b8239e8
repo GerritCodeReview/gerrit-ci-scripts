@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c60dc2ee_59a80004",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-04-26T09:06:03Z",
+      "side": 1,
+      "message": "Verified as part of [1]\n\n[1] https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/335133",
+      "revId": "3651e212c6e58332e4afbe42712b6c206b8239e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
