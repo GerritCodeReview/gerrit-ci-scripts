@@ -16,6 +16,24 @@
       "message": "Alternatively, we could run the Bazel build in parallel, so that the extra minutes aren\u0027t in the critical path. @Ben @Chris WDYT?",
       "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b29dc19b_b080dba9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-04-26T14:02:33Z",
+      "side": 1,
+      "message": "I still don\u0027t think we should be building all of java and maven to expose this specific error.  We should only be bazel building the polygerrit bundles",
+      "parentUuid": "0d42697c_592f2e48",
+      "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
