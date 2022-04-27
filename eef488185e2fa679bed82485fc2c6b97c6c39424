@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83831a25_60f491e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-04-27T06:50:14Z",
+      "side": 1,
+      "message": "We are using this plugin within SAP and Sasa is also a maintainer of this plugin. While we are still on 3.4, it would be great to have continuous validation also for newer versions, since we plan to get to 3.6 eventually :-). Are there any issues with the build of this plugin, so that the job fails? If yes, I can ping Sasa to have a look.",
+      "revId": "eef488185e2fa679bed82485fc2c6b97c6c39424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
