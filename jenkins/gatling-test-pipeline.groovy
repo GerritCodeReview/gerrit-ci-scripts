@@ -17,7 +17,7 @@ pipeline {
             string(name: 'CLUSTER_INSTANCE_TYPE', defaultValue: 'm4.xlarge', description:'The EC2 instance Type used to run the cluster')
 
             string(name: 'DOCKER_REGISTRY_URI', defaultValue: '117385740707.dkr.ecr.$(AWS_REGION).amazonaws.com', description: 'URI of the Docker registry')
-            string(name: 'SSL_CERTIFICATE_ARN', defaultValue: "arn:aws:acm:us-east-1:117385740707:certificate/33e2c235-a4d1-42b7-b866-18d8d744975c", description: 'ARN of the wildcard SSL Certificate')
+            string(name: 'SSL_CERTIFICATE_ARN', defaultValue: "arn:aws:acm:us-east-1:117385740707:certificate/a43b5723-023f-4535-8705-3a4f811f1f4b", description: 'ARN of the wildcard SSL Certificate')
 
             string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-01c12c75ead9e9cd4", description: 'Id of the EBS volume snapshot')
 
