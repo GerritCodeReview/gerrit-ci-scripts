@@ -149,7 +149,7 @@ pipeline {
             }
             stage('Pull newest Gatling tests docker image') {
                 steps {
-                    sh 'docker pull gerritforge/gatling-sbt-gerrit-test'
+                    sh 'docker pull gerritforge/gatling-sbt-gerrit-test:v44cd2ce'
                 }
             }
 
