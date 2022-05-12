@@ -69,6 +69,23 @@
       "message": "@Chris can you propose a different change?",
       "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e487250_a83a9b74",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-05-12T12:57:33Z",
+      "side": 1,
+      "message": "Add this:\n```\nelif [[ \"$MODE\" \u003d\u003d *\"polygerrit\"* ]]\nthen\n  bazelisk build $BAZEL_OPTS plugins:core release api\nelse\n```",
+      "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
