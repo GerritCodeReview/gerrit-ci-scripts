@@ -1,0 +1,9 @@
+- project:
+    name: index-elasticsearch
+    jobs:
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-3.6
+            - stable-3.5
+      - 'module-{name}-verifier'
