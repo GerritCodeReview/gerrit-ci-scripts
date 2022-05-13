@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d76919c3_09094be5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-05-13T14:52:19Z",
+      "side": 1,
+      "message": "This isn\u0027t working: different versions of Gerrit would need different branches",
+      "revId": "29df2565f2cdbc8edd55bb1a2984154dccd36b15",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
