@@ -33,6 +33,24 @@
       "message": "This is still failing with:\n\n```\n22:43:10 ERROR: /home/jenkins/workspace/plugin-reviewers-bazel-master-stable-3.6/plugins/reviewers/BUILD:32:11: no such package \u0027@plugins_npm//@gerritcodereview/typescript-api\u0027: BUILD file not found in directory \u0027@gerritcodereview/typescript-api\u0027 of external repository @plugins_npm. Add a BUILD file to a directory to mark it as a package. and referenced by \u0027//plugins/reviewers:rv-reviewers-ts\u0027\n22:43:11 ERROR: Analysis of target \u0027//plugins/reviewers:reviewers\u0027 failed; build aborted: \n22:43:11 INFO: Elapsed time: 57.988s\n22:43:11 INFO: 0 processes.\n22:43:11 FAILED: Build did NOT complete successfully (283 packages loaded, 5752 targets configured)\n22:43:11 FAILED: Build did NOT complete successfully (283 packages loaded, 5752 targets configured)\n```",
       "revId": "852e76a6cfee66a7b92fe3a7d339000879c3d1b5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b5487af_3893f4d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-05-18T13:39:30Z",
+      "side": 1,
+      "message": "yes and it is very weird because all tests pass locally.",
+      "parentUuid": "347ef9ff_e7f8947f",
+      "revId": "852e76a6cfee66a7b92fe3a7d339000879c3d1b5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
