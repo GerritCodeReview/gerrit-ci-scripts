@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84f27e2f_345ce637",
+        "filename": "jenkins/gerrit-bazel-plugin-code-owners.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-05-19T09:37:20Z",
+      "side": 1,
+      "message": "Those branches do not exist. master should be used instead.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "e9b873d32ffa949834b3616162209276baedec17",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
