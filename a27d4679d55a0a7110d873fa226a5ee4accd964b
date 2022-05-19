@@ -16,6 +16,23 @@
       "message": "@Thomas what do you think?\n",
       "revId": "a27d4679d55a0a7110d873fa226a5ee4accd964b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8788dbf6_eabf9346",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-05-19T14:00:22Z",
+      "side": 1,
+      "message": "I agree that adding the external_ prefix makes sense. But how does this help with the underlying issue? The plugin/package.json is still overwritten by plugin/$PLUGIN/external_package.json and thus we might lose the dependencies within, if not also present in the external_package.json. And what happens if there are multiple such plugins (I know that this is not relevant for the CI builds and also the case for maven dependencies, however there we can at least load the plugin specific external_plugin_deps.bzl in the global one and thus serve all plugins.\n\nIf this unblocks the 3.6 release, I am fine with this change as a step in the right direction, but we should look into a way to have some kind of federate way of managing the package.json files.",
+      "revId": "a27d4679d55a0a7110d873fa226a5ee4accd964b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
