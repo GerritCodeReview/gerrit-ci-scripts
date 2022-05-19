@@ -63,6 +63,13 @@
 - project:
     name: owners
     jobs:
+      - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
+          targets: 'plugins/owners plugins/owners-a*'
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.6
+            - stable-3.5
       - 'plugin-owners-bazel-{branch}':
           targets: 'plugins/owners plugins/owners-a*'
           branch:
