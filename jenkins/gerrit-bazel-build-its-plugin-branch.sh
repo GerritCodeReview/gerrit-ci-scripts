@@ -16,7 +16,7 @@ git read-tree -u --prefix=plugins/its-base base/{gerrit-branch} || git read-tree
 
 rm -Rf bazel-bin
 
-for file in external_plugin_deps.bzl package.json
+for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/its-{name}/$file ]
   then

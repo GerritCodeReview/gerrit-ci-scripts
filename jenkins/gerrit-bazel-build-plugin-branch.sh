@@ -11,7 +11,7 @@ git submodule update --init
 git read-tree -u --prefix=plugins/{name} origin/{branch}
 git fetch --tags origin
 
-for file in external_plugin_deps.bzl package.json
+for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/{name}/$file ]
   then

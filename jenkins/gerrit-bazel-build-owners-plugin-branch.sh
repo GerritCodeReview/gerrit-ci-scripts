@@ -9,7 +9,7 @@ git fetch --tags origin
 ln -s plugins/{name}-plugin/owners-common .
 pushd plugins && ln -s owners-plugin/owners owners-plugin/owners-a* . && popd
 
-for file in external_plugin_deps.bzl package.json
+for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/{name}-plugin/$file ]
   then

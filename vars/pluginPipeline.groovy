@@ -89,7 +89,7 @@ def call(Map parm = [:]) {
                     dir ('gerrit') {
                         sh "cd plugins && ln -s ../../${pluginName} ."
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
-                        sh "if [ -f ../${pluginName}/package.json ]; then cd plugins && ln -sf ../../${pluginName}/package.json .; fi"
+                        sh "if [ -f ../${pluginName}/external_package.json ]; then cd plugins && ln -sf ../../${pluginName}/external_package.json package.json; fi"
                         sh "${bazeliskCmd} build plugins/${pluginName}"
                         sh "${bazeliskCmd} test --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }

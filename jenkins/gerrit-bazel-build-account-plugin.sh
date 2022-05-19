@@ -7,7 +7,7 @@ git submodule update --init
 rm -rf plugins/account
 git read-tree -u --prefix=plugins/account origin/{branch}
 
-for file in external_plugin_deps.bzl package.json
+for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/account/$file ]
   then

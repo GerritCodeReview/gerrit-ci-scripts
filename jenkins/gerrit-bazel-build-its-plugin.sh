@@ -12,7 +12,7 @@ git fetch --tags origin
 
 rm -Rf bazel-bin
 
-for file in external_plugin_deps.bzl package.json
+for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/its-{name}/$file ]
   then
