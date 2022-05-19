@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bc4bda6_b5a92236",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-05-19T09:47:33Z",
+      "side": 1,
+      "message": "Build fails on stable-3.6:\n\n00:03:31.254 ERROR: An error occurred during the fetch of repository \u0027plugins_npm\u0027:\n00:03:31.254    Traceback (most recent call last):\n00:03:31.254 \tFile \"/home/jenkins/.cache/bazel/_bazel_jenkins/c3e4d20697df404852010b214b660baa/external/build_bazel_rules_nodejs/internal/npm_install/npm_install.bzl\", line 965, column 13, in _yarn_install_impl\n00:03:31.254 \t\tfail(\"yarn_install failed: %s (%s)\" % (result.stdout, result.stderr))\n00:03:31.254 Error in fail: yarn_install failed: yarn install v1.22.17\n00:03:31.254 [1/4] Resolving packages...\n00:03:31.254 info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.\n00:03:31.254  (warning Waiting for the other yarn instance to finish (1668)\n00:03:31.254 error Package \"polymer-bridges\" refers to a non-existing file \u0027\"/home/jenkins/workspace/polymer-bridges\"\u0027.\n00:03:31.254 )\n00:03:31.254 ERROR: /home/jenkins/workspace/plugin-code-owners-bazel-stable-3.6/WORKSPACE:245:13: fetching yarn_install rule //external:plugins_npm: Traceback (most recent call last):\n00:03:31.255 \tFile \"/home/jenkins/.cache/bazel/_bazel_jenkins/c3e4d20697df404852010b214b660baa/external/build_bazel_rules_nodejs/internal/npm_install/npm_install.bzl\", line 965, column 13, in _yarn_install_impl\n00:03:31.255 \t\tfail(\"yarn_install failed: %s (%s)\" % (result.stdout, result.stderr))\n00:03:31.255 Error in fail: yarn_install failed: yarn install v1.22.17\n00:03:31.255 [1/4] Resolving packages...\n00:03:31.255 info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.\n00:03:31.255  (warning Waiting for the other yarn instance to finish (1668)\n00:03:31.255 error Package \"polymer-bridges\" refers to a non-existing file \u0027\"/home/jenkins/workspace/polymer-bridges\"\u0027.\n00:03:31.255 )\n00:03:31.272 ERROR: /home/jenkins/workspace/plugin-code-owners-bazel-stable-3.6/plugins/code-owners/ui/BUILD:10:17: //plugins/code-owners/ui:code-owners-bundle depends on @plugins_npm//:node_modules in repository @plugins_npm which failed to fetch. no such package \u0027@plugins_npm//\u0027: yarn_install failed: yarn install v1.22.17\n00:03:31.272 [1/4] Resolving packages...\n00:03:31.272 info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.\n00:03:31.272  (warning Waiting for the other yarn instance to finish (1668)\n00:03:31.272 error Package \"polymer-bridges\" refers to a non-existing file \u0027\"/home/jenkins/workspace/polymer-bridges\"\u0027.\n00:03:31.272 )\n\n",
+      "revId": "e9b873d32ffa949834b3616162209276baedec17",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "84f27e2f_345ce637",
