@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a02891b4_bbc64a3a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-05-20T20:05:10Z",
+      "side": 1,
+      "message": "This would build all the combination: would you like just build stable-3.{3,4} on their own branches instead?",
+      "revId": "1513eeefc610ad06a1d11c2331e1e5ee40527f03",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19255d6d_a5797fcf",
+        "filename": "jenkins/gerrit-bazel-plugin-rate-limiter.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-05-20T20:05:10Z",
+      "side": 1,
+      "message": "Add newline at EOF",
+      "revId": "1513eeefc610ad06a1d11c2331e1e5ee40527f03",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
