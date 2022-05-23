@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d72de103_47f46515",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083195
+      },
+      "writtenOn": "2022-05-23T13:55:08Z",
+      "side": 1,
+      "message": "Yes, the 3.4 and 3.3 need to be build on their own branches.",
+      "parentUuid": "a02891b4_bbc64a3a",
+      "revId": "1513eeefc610ad06a1d11c2331e1e5ee40527f03",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "19255d6d_a5797fcf",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-05-20T20:05:10Z",
       "side": 1,
       "message": "Add newline at EOF",
+      "revId": "1513eeefc610ad06a1d11c2331e1e5ee40527f03",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e685a13f_e4d61e3e",
+        "filename": "jenkins/gerrit-bazel-plugin-rate-limiter.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1083195
+      },
+      "writtenOn": "2022-05-23T13:55:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19255d6d_a5797fcf",
       "revId": "1513eeefc610ad06a1d11c2331e1e5ee40527f03",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
