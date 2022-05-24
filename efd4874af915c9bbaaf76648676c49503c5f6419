@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "212dc843_a37a0952",
+        "filename": "jenkins/gerrit-bazel-plugin-rate-limiter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1122032
+      },
+      "writtenOn": "2022-05-24T12:40:00Z",
+      "side": 0,
+      "message": "Why is this deletion? Should it be explained in the commit message as well?",
+      "revId": "efd4874af915c9bbaaf76648676c49503c5f6419",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
