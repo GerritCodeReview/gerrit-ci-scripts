@@ -27,7 +27,7 @@ do
     bazelisk test $target/... //tools/bzl:always_pass_test
 done
 
-for JAR in $(find bazel-bin/plugins/ -name {name}*.jar)
+for JAR in $(find bazel-bin/plugins/ -maxdepth 2 -name "owners-api.jar" -o -name "owners-autoassign.jar" -o -name "owners.jar")
 do
     PLUGIN_VERSION=$(git describe  --always origin/{branch})
     echo -e "Implementation-Version: $PLUGIN_VERSION" > MANIFEST.MF
