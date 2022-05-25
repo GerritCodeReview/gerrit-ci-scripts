@@ -140,6 +140,24 @@
       "parentUuid": "a339be8a_a13035a2",
       "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fce6034_6bf35bab",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-05-25T07:55:45Z",
+      "side": 1,
+      "message": "But would that suffice? Don\u0027t we do also some licence aggregation thingy during the release target? Would that potentially also impact the build?\n\nThe overall idea is that Bazel build *should be* a noop for anything that isn\u0027t needed, correct? If the change doesn\u0027t modify anything on the backend, then the bazel build plugins:core release api should do nothing.",
+      "parentUuid": "7344e48e_77ffdcff",
+      "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
