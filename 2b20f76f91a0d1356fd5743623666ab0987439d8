@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d9b4fdf_d319bf06",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-05-25T07:58:06Z",
+      "side": 1,
+      "message": "This can be simplified to\n\n```\nbazelisk $BAZEL_OPTS polygerrit-ui/app:polygerrit_ui\n```\n\nI don\u0027t see how build results are cached across invocations of this.",
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
