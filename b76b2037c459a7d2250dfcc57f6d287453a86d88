@@ -86,6 +86,24 @@
       "message": "Add this:\n```\nelif [[ \"$MODE\" \u003d\u003d *\"polygerrit\"* ]]\nthen\n  bazelisk build $BAZEL_OPTS plugins:core release api\nelse\n```",
       "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9eb8e89_c8c5b5f9",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-05-25T06:32:02Z",
+      "side": 1,
+      "message": "The will actually build Gerrit again, isn\u0027t it?",
+      "parentUuid": "1e487250_a83a9b74",
+      "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
