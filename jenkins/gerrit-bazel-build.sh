@@ -29,7 +29,7 @@ then
   bazelisk build --config=remote --remote_instance_name=projects/api-project-164060093628/instances/default_instance plugins:core release api-skip-javadoc
 elif [[ "$MODE" == *"polygerrit"* ]]
 then
-  echo "Skipping building eclipse and maven"
+  bazelisk build $BAZEL_OPTS plugins:core release api
 else
   bazelisk build $BAZEL_OPTS plugins:core release api
   tools/maven/api.sh install
