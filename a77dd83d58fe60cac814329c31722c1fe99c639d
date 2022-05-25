@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78b67bd3_a15333fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-05-25T06:23:55Z",
+      "side": 1,
+      "message": "We keep on breaking the Gerrit master branch: see Change-Id: I768a7e4aeda2c1 that just broke the build on master.\n\n@Chris are you planning to propose an alternative fix? Otherwise we can merge this in the meantime.",
+      "revId": "a77dd83d58fe60cac814329c31722c1fe99c639d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
