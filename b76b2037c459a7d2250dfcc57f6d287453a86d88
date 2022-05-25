@@ -122,6 +122,24 @@
       "parentUuid": "c9eb8e89_c8c5b5f9",
       "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7344e48e_77ffdcff",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-05-25T07:01:35Z",
+      "side": 1,
+      "message": "We could also simplify to something Ben pointed out.\n\n```\nbazelisk build //polygerrit-ui/app:polygerrit_ui\n```",
+      "parentUuid": "a339be8a_a13035a2",
+      "revId": "b76b2037c459a7d2250dfcc57f6d287453a86d88",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
