@@ -52,6 +52,24 @@
       "parentUuid": "df34b1ff_d9f925c5",
       "revId": "efd4874af915c9bbaaf76648676c49503c5f6419",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b773be0_2722c660",
+        "filename": "jenkins/gerrit-bazel-plugin-rate-limiter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-05-27T05:22:46Z",
+      "side": 0,
+      "message": "Shouldn\u0027t this be separate Jobs, like in the checks plugin change that you are referencing? Line 4 defines one job and line 10 a different one.",
+      "parentUuid": "1a06fc0f_af084521",
+      "revId": "efd4874af915c9bbaaf76648676c49503c5f6419",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
