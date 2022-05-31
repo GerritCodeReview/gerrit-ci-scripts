@@ -70,6 +70,24 @@
       "parentUuid": "1a06fc0f_af084521",
       "revId": "efd4874af915c9bbaaf76648676c49503c5f6419",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e39e084e_259057a4",
+        "filename": "jenkins/gerrit-bazel-plugin-rate-limiter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1083195
+      },
+      "writtenOn": "2022-05-31T19:28:07Z",
+      "side": 0,
+      "message": "True, I missed that. Thanks!",
+      "parentUuid": "6b773be0_2722c660",
+      "revId": "efd4874af915c9bbaaf76648676c49503c5f6419",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
