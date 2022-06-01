@@ -16,6 +16,47 @@
       "message": "This can be simplified to\n\n```\nbazelisk $BAZEL_OPTS polygerrit-ui/app:polygerrit_ui\n```\n\nI don\u0027t see how build results are cached across invocations of this.",
       "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34c0c81c_79306ef8",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-01T09:02:28Z",
+      "side": 1,
+      "message": "The CI uses a remote bazel cache. So if nothing has changed for a target, bazel should use the cached result. Thus, all backend targets should not be rebuilt, but fetched from the cache for a UI change. If that does Not work as expected, we should rather look at our build.\nNote, that there may still be some unnecessary steps, e.g. creating the war-file, which includes the UI and thus changed.",
+      "parentUuid": "6d9b4fdf_d319bf06",
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d63125d0_35dd8799",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-01T09:02:28Z",
+      "side": 1,
+      "message": "Would release not be enough here?",
+      "range": {
+        "startLine": 32,
+        "startChar": 29,
+        "endLine": 32,
+        "endChar": 53
+      },
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
