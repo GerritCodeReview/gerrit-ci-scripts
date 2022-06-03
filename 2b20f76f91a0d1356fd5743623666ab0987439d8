@@ -92,6 +92,30 @@
       "parentUuid": "34c0c81c_79306ef8",
       "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89d5bd36_5c08d468",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-06-03T06:12:54Z",
+      "side": 1,
+      "message": "Well, some changes in the PolyGerrit API may break some core plugins, isn\u0027t it?\nWe want to detect that sooner rather than later.",
+      "parentUuid": "d63125d0_35dd8799",
+      "range": {
+        "startLine": 32,
+        "startChar": 29,
+        "endLine": 32,
+        "endChar": 53
+      },
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
