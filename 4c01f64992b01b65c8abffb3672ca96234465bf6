@@ -22,6 +22,30 @@
       },
       "revId": "4c01f64992b01b65c8abffb3672ca96234465bf6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13e711b9_53678cec",
+        "filename": "jenkins/gerrit-bazel-plugin-git-repo-metrics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2022-06-03T07:51:30Z",
+      "side": 1,
+      "message": "Ops, left over from a copy and paste",
+      "parentUuid": "690c8b6b_39980be2",
+      "range": {
+        "startLine": 4,
+        "startChar": 9,
+        "endLine": 4,
+        "endChar": 26
+      },
+      "revId": "4c01f64992b01b65c8abffb3672ca96234465bf6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
