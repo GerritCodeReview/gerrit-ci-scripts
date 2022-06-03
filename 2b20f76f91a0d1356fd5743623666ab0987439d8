@@ -116,6 +116,30 @@
       },
       "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07ccce13_1ff26715",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-06-03T06:17:29Z",
+      "side": 1,
+      "message": "True, but core plugins are build as part of the release target or not? I mean, since bazel is intelligent in those things, it would not make a difference here, since it is all cached. But would the api target be required?",
+      "parentUuid": "89d5bd36_5c08d468",
+      "range": {
+        "startLine": 32,
+        "startChar": 29,
+        "endLine": 32,
+        "endChar": 53
+      },
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
