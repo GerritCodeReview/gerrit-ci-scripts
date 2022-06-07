@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3c251b0_5c88badf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1085182
+      },
+      "writtenOn": "2022-06-07T08:16:09Z",
+      "side": 1,
+      "message": "Hi Luca, when you will have time can you look into this change. It is not needed so it can save some resources and time.",
+      "revId": "a2b458531e019b014da9cee15e5b0b40630303f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
