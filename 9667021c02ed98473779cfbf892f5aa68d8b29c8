@@ -34,6 +34,23 @@
       "parentUuid": "2a18b878_5aa29a68",
       "revId": "9667021c02ed98473779cfbf892f5aa68d8b29c8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00be2a12_0f6edf2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-06-20T15:31:28Z",
+      "side": 1,
+      "message": "With the fix, it works as expected [1].\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-rate-limiter-bazel-stable-3.5/1/",
+      "revId": "9667021c02ed98473779cfbf892f5aa68d8b29c8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
