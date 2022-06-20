@@ -16,6 +16,24 @@
       "message": "Doesn\u0027t seem to work: [1]\n\n```\n10:57:23 ERROR: /home/jenkins/workspace/plugin-rate-limiter-bazel-stable-3.5/plugins/rate-limiter/BUILD:10:14: Building plugins/rate-limiter/librate-limiter__plugin-class.jar (22 source files) and running annotation processors (AutoAnnotationProcessor, AutoValueProcessor, AutoOneOfProcessor, AutoValueGsonAdapterFactoryProcessor) failed: (Exit 1): java failed: error executing command external/remotejdk11_linux/bin/java \u0027--add-exports\u003djdk.compiler/com.sun.tools.javac.api\u003dALL-UNNAMED\u0027 \u0027--add-exports\u003djdk.compiler/com.sun.tools.javac.code\u003dALL-UNNAMED\u0027 ... (remaining 14 argument(s) skipped)\n10:57:23 plugins/rate-limiter/src/main/java/com/googlesource/gerrit/plugins/ratelimiter/RateLimiterProcessing.java:70: error: cannot find symbol\n10:57:23     return gson.toJson(JsonParser.parseString(permitList.toString()));\n10:57:23                                  ^\n10:57:23   symbol:   method parseString(String)\n10:57:23   location: class JsonParser\n10:57:23 Target //plugins/rate-limiter:rate-limiter failed to build\n```\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-rate-limiter-bazel-stable-3.5/1/console",
       "revId": "9667021c02ed98473779cfbf892f5aa68d8b29c8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb62b886_dacbac20",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-06-20T11:47:26Z",
+      "side": 1,
+      "message": "Should be fixed with change 339535.",
+      "parentUuid": "2a18b878_5aa29a68",
+      "revId": "9667021c02ed98473779cfbf892f5aa68d8b29c8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
