@@ -11,26 +11,27 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y wget softwar
 COPY set-java.sh /usr/bin/
 
 RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
-    openssh-server \
-    curl \
-    python-dev \
-    python-pip \
-    python-yaml \
-    python-jenkinsapi \
-    python3-distutils \
     ant \
     autoconf \
     automake \
-    xsltproc \
-    zip \
-    vim \
+    build-essential \
+    curl \
+    gettext \
     gettext-base \
+    lcov \
     libcurl4-gnutls-dev \
     libexpat1-dev \
-    gettext \
-    libz-dev \
     libssl-dev \
-    build-essential \
+    libz-dev \
+    openssh-server \
+    python3-distutils \
+    python-dev \
+    python-jenkinsapi \
+    python-pip \
+    python-yaml \
+    vim \
+    xsltproc \
+    zip \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install python-jenkins
