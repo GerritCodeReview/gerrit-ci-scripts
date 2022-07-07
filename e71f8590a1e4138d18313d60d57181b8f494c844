@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b7a4f2c_247e916a",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-07T10:18:02Z",
+      "side": 0,
+      "message": "This is just a leftover from a previous cleanup: can be just removed as a trivial separate change.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 78
+      },
+      "revId": "e71f8590a1e4138d18313d60d57181b8f494c844",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d24e69ee_0537f881",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-07T10:18:02Z",
+      "side": 0,
+      "message": "Because we don\u0027t use the {java-toolchain} parameter anymore, this is also a leftover and can be go away.",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 53
+      },
+      "revId": "e71f8590a1e4138d18313d60d57181b8f494c844",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bee932a9_8e894238",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-07T10:18:02Z",
+      "side": 0,
+      "message": "This is also a leftover now because the default is Java11 on stable-3.5/3.6 and master",
+      "range": {
+        "startLine": 144,
+        "startChar": 4,
+        "endLine": 144,
+        "endChar": 57
+      },
+      "revId": "e71f8590a1e4138d18313d60d57181b8f494c844",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b435689_8fb263be",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-07T10:18:02Z",
+      "side": 0,
+      "message": "This is also a leftover because now the default is Java8 on stable-3.4 and we don\u0027t need to override the toolchain anymore.",
+      "range": {
+        "startLine": 152,
+        "startChar": 0,
+        "endLine": 152,
+        "endChar": 50
+      },
+      "revId": "e71f8590a1e4138d18313d60d57181b8f494c844",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

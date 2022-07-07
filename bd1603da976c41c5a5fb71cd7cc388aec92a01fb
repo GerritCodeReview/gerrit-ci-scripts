@@ -16,6 +16,24 @@
       "message": "Don\u0027t we want both jobs here?\n\n    jobs:\n      - \u0027Gerrit-bazel-java11-{branch}\u0027 \n      - \u0027Gerrit-bazel-{branch}\u0027",
       "revId": "bd1603da976c41c5a5fb71cd7cc388aec92a01fb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04d9ee8e_7369edf5",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-07T10:18:02Z",
+      "side": 1,
+      "message": "I don\u0027t think so, because we build and release for Java 11 on stable-3.4.\nThe check that the code is \"compatible\" with Java 8 is already done in the change validation, so we don\u0027t need to do it again here.",
+      "parentUuid": "71333929_bf6f1a5e",
+      "revId": "bd1603da976c41c5a5fb71cd7cc388aec92a01fb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
