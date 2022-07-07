@@ -20,6 +20,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "009b21c7_eced755a",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-07T10:24:02Z",
+      "side": 1,
+      "message": "No need to break into two lines\n\n```\n          properties-content: BAZEL_OPTS\u003d--config java17\n```",
+      "range": {
+        "startLine": 73,
+        "startChar": 30,
+        "endLine": 74,
+        "endChar": 12
+      },
+      "revId": "ce6e79df24cdc8bb796ae8d56c57167c27820d7c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4898fa6c_7da67a45",
         "filename": "jenkins/gerrit-bazel-template.yaml",
         "patchSetId": 1
@@ -31,6 +54,41 @@
       "writtenOn": "2022-02-09T08:42:38Z",
       "side": 1,
       "message": "Is the duplicated project name ok here?",
+      "revId": "ce6e79df24cdc8bb796ae8d56c57167c27820d7c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c862cc8_8ea112b6",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-07T10:24:02Z",
+      "side": 1,
+      "message": "Yeah, it should be called instead: `Gerrit-bazel-chrome-latest-java17`",
+      "parentUuid": "4898fa6c_7da67a45",
+      "revId": "ce6e79df24cdc8bb796ae8d56c57167c27820d7c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b18e9016_8461ec77",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-07T10:24:02Z",
+      "side": 1,
+      "message": "and also\n```\n    - stable-3.6\n```",
       "revId": "ce6e79df24cdc8bb796ae8d56c57167c27820d7c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
