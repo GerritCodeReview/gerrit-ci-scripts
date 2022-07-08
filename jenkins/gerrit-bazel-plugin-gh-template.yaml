@@ -21,9 +21,6 @@
             - job-discover
             - job-read
             - job-extended-read
-      - inject:
-          properties-content: >
-            BAZEL_OPTS=--java_toolchain=//tools:error_prone_warnings_toolchain
     scm:
       - git:
           remotes:
