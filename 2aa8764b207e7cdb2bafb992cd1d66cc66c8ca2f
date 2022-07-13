@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4660f559_4f867b41",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-13T07:58:30Z",
+      "side": 0,
+      "message": "Now that we\u0027re building only for stable-3.4 onwards, do we still need to use a `find` ?",
+      "range": {
+        "startLine": 31,
+        "startChar": 13,
+        "endLine": 31,
+        "endChar": 17
+      },
+      "revId": "2aa8764b207e7cdb2bafb992cd1d66cc66c8ca2f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
