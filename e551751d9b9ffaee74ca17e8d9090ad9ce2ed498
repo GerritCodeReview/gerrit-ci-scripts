@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93eacde1_ffaf838f",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2022-07-19T16:09:33Z",
+      "side": 1,
+      "message": "Are we missing a \u0027Gerrit-bazel-{branch}\u0027 job for stable-3.4?\n\nUnless I am missing something it seems to me we are building 3.4 only against java11 with this job.",
+      "range": {
+        "startLine": 78,
+        "startChar": 6,
+        "endLine": 78,
+        "endChar": 38
+      },
+      "revId": "e551751d9b9ffaee74ca17e8d9090ad9ce2ed498",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
