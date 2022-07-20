@@ -22,6 +22,30 @@
       },
       "revId": "e551751d9b9ffaee74ca17e8d9090ad9ce2ed498",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f296656_5a7d80f4",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-20T22:36:00Z",
+      "side": 1,
+      "message": "\u003e Are we missing a \u0027Gerrit-bazel-{branch}\u0027 job for stable-3.4?\n\u003e \n\u003e Unless I am missing something it seems to me we are building 3.4 only against java11 with this job.\n\nCorrect: Java 8 is only supported at source code level, but we release only on Java 11.",
+      "parentUuid": "93eacde1_ffaf838f",
+      "range": {
+        "startLine": 78,
+        "startChar": 6,
+        "endLine": 78,
+        "endChar": 38
+      },
+      "revId": "e551751d9b9ffaee74ca17e8d9090ad9ce2ed498",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
