@@ -81,7 +81,7 @@ RUN apt-get install -y \
      echo "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" >> etc/apt/sources.list && \
      apt-get update && \
      apt-cache policy docker-engine && \
-     apt-get install -y docker-ce=18.03.1~ce-0~debian
+     apt-get install -y docker-ce
 
 COPY id_rsa* $JENKINS_REF/.ssh/
 RUN chown jenkins:jenkins $JENKINS_REF/.ssh/id_rsa* && \
