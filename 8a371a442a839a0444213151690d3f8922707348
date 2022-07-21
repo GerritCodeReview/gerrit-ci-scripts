@@ -22,6 +22,30 @@
       },
       "revId": "8a371a442a839a0444213151690d3f8922707348",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8a0f555_45dfada3",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-07-21T04:24:24Z",
+      "side": 1,
+      "message": "+1.",
+      "parentUuid": "e2d603ef_cb0aba74",
+      "range": {
+        "startLine": 84,
+        "startChar": 34,
+        "endLine": 84,
+        "endChar": 42
+      },
+      "revId": "8a371a442a839a0444213151690d3f8922707348",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
