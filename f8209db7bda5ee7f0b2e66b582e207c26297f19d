@@ -1,6 +1,52 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3563abe_1dd43f41",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-25T23:09:51Z",
+      "side": 1,
+      "message": "We don\u0027t use this term anymore. We use instead \u0027Jenkins server\u0027",
+      "range": {
+        "startLine": 7,
+        "startChar": 21,
+        "endLine": 7,
+        "endChar": 27
+      },
+      "revId": "f8209db7bda5ee7f0b2e66b582e207c26297f19d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a111e7d_5f6e9cfb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-07-25T23:09:51Z",
+      "side": 1,
+      "message": "What is the benefit associated? I would prefer to pin a specific version so that we assure that every rebuild will keep the same expected version.",
+      "range": {
+        "startLine": 9,
+        "startChar": 30,
+        "endLine": 10,
+        "endChar": 27
+      },
+      "revId": "f8209db7bda5ee7f0b2e66b582e207c26297f19d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "5d7313aa_1e2a2e41",
