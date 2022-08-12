@@ -110,6 +110,24 @@
       "message": "How to V+1 this change ?",
       "revId": "f8209db7bda5ee7f0b2e66b582e207c26297f19d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24fdd857_1d1d7148",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2022-08-12T15:27:45Z",
+      "side": 1,
+      "message": "I think we determined this change won\u0027t fix the issue we were seeing with index-elasticsearch tests, but it\u0027s probably still good to update the docker version. Can someone share how to test this change?",
+      "parentUuid": "5d7313aa_1e2a2e41",
+      "revId": "f8209db7bda5ee7f0b2e66b582e207c26297f19d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
