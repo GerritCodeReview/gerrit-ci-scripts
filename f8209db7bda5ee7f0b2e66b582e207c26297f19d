@@ -128,6 +128,24 @@
       "parentUuid": "5d7313aa_1e2a2e41",
       "revId": "f8209db7bda5ee7f0b2e66b582e207c26297f19d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63058e17_ff25cb85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-08-12T21:59:08Z",
+      "side": 1,
+      "message": "The upgrade is on the Jenkins-server image, which doesn\u0027t actually run any test code but is only an orchestrator.\n\nYou should make sure that the version of Docker you are upgrading is compatible with the docker plugin installed in Jenkins (See https://gerrit.googlesource.com/gerrit-ci-scripts/+/refs/heads/master/jenkins-docker/server/plugins.txt#30)",
+      "parentUuid": "24fdd857_1d1d7148",
+      "revId": "f8209db7bda5ee7f0b2e66b582e207c26297f19d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
