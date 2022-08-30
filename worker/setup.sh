@@ -2,8 +2,8 @@
 cd /root
 
 # install reqs.
-
-yum install -y docker ppp telnet git
+dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo && dnf update
+yum install -y docker-ce ppp telnet git
 
 mkdir -p .ssh
 
