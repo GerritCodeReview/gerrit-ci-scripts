@@ -2,7 +2,7 @@
 cd /root
 
 # install reqs.
-dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo && dnf update
+dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo && dnf update -y
 yum install -y docker-ce ppp telnet git
 
 mkdir -p .ssh
