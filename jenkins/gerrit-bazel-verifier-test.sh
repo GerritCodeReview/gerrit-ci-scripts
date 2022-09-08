@@ -58,12 +58,4 @@ then
 
   echo "Running local tests in $(google-chrome --version)"
   bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
-
-  if [ -z "$SAUCE_USERNAME" ] || [ -z "$SAUCE_ACCESS_KEY" ]
-  then
-    echo 'Not running on Sauce Labs because env vars are not set.'
-  else
-    echo 'Running tests on Sauce Labs...'
-    WCT_ARGS='--plugin sauce' bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
-  fi
 fi
