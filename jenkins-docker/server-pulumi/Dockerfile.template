@@ -1,0 +1,5 @@
+FROM jenkins/jenkins:_JENKINS_WAR_VER_
+
+ENV DOCKER_GID=993
+
+USER root
