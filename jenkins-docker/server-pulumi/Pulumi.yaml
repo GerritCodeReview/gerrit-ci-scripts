@@ -1,0 +1,8 @@
+name: server
+description: Jenkins server deployment
+runtime:
+    name: python
+    options:
+        virtualenv: venv
+# backend:
+#   url: gs://gerrit-jenkins-server-pulumi-state
