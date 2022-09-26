@@ -16,6 +16,24 @@
       "message": "Do we actually need this container? I believe we don\u0027t use WCT anymore for Gerrit testing. We can get rid of all of it altogether.",
       "revId": "1dc9d66131fd226cc59b748e120c63ee74818b2d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6edf96a9_8502669b",
+        "filename": "jenkins-docker/agent-node-wct/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-09-26T12:35:21Z",
+      "side": 1,
+      "message": "I don\u0027t know how to verify which runs use which Dockerfiles.\n\nThis Dockerfile is also referred to by `jenkins-docker/agent-bazel-nocache/Dockerfile`",
+      "parentUuid": "2ace0b8d_0839b54e",
+      "revId": "1dc9d66131fd226cc59b748e120c63ee74818b2d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
