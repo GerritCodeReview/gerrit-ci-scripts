@@ -18,6 +18,23 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "04e2c2d0_34a96b97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-09-26T21:58:24Z",
+      "side": 1,
+      "message": "I\u0027ve rebuilt the Docker image and the PolyGerrit tests are passing.",
+      "revId": "1dc9d66131fd226cc59b748e120c63ee74818b2d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2ace0b8d_0839b54e",
