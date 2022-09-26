@@ -34,6 +34,24 @@
       "parentUuid": "2ace0b8d_0839b54e",
       "revId": "1dc9d66131fd226cc59b748e120c63ee74818b2d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b53c30f3_94c04b63",
+        "filename": "jenkins-docker/agent-node-wct/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-09-26T12:44:59Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t know how to verify which runs use which Dockerfiles.\n\nI know, verification is quite tough when changing Dockerfiles :-(\n\n\u003e This Dockerfile is also referred to by `jenkins-docker/agent-bazel-nocache/Dockerfile`\n\nThis Dockerfile would be left to just do:\n- nodejs\n- npm\n- gcc\n- g++\n- make\n- yarn\n\nIf bazel is able to setup all of them automatically, we don\u0027t need this image anymore, otherwise, we will still need it.",
+      "parentUuid": "6edf96a9_8502669b",
+      "revId": "1dc9d66131fd226cc59b748e120c63ee74818b2d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
