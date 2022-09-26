@@ -52,6 +52,24 @@
       "parentUuid": "6edf96a9_8502669b",
       "revId": "1dc9d66131fd226cc59b748e120c63ee74818b2d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91ace686_ece68e89",
+        "filename": "jenkins-docker/agent-node-wct/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2022-09-26T12:50:27Z",
+      "side": 1,
+      "message": "Let\u0027s figure out whether we need this as a separate step and get this in first? They feel like separable problems",
+      "parentUuid": "b53c30f3_94c04b63",
+      "revId": "1dc9d66131fd226cc59b748e120c63ee74818b2d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
