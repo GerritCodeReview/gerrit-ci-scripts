@@ -15,11 +15,11 @@ echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
 case $TARGET_BRANCH$MODE in
-  masterrbe|stable-3.4rbe|stable-3.5rbe|stable-3.6rbe)
+  masterrbe|stable-3.4rbe|stable-3.5rbe|stable-3.6rbe|stable-3.7rbe)
     TEST_TAG_FILTER="-flaky,-elastic,-no_rbe"
     BAZEL_OPTS="--config=remote --remote_instance_name=projects/gerritcodereview-ci/instances/default_instance"
     ;;
-  masternotedb|stable-3.4notedb|stable-3.5notedb|stable-3.6notedb)
+  masternotedb|stable-3.4notedb|stable-3.5notedb|stable-3.6notedb|stable-3.7notedb)
     TEST_TAG_FILTER="-flaky,elastic,no_rbe"
     ;;
   stable-2.*)
