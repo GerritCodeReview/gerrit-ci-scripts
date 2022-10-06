@@ -49,10 +49,6 @@ COPY config.xml $JENKINS_REF
 COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 COPY jenkins.model.JenkinsLocationConfiguration.xml $JENKINS_REF
 
-RUN mkdir -p $JENKINS_REF/.ssh && \
-    chown -R jenkins:jenkins $JENKINS_REF/.ssh && \
-    chmod -R 700 $JENKINS_REF/.ssh
-
 COPY plugins.txt $JENKINS_REF
 RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
 RUN chown -R jenkins:jenkins $JENKINS_REF
@@ -82,10 +78,6 @@ RUN apt-get install -y \
      apt-get update && \
      apt-cache policy docker-engine && \
      apt-get install -y docker-ce=18.03.1~ce-0~debian
-
-COPY id_rsa* $JENKINS_REF/.ssh/
-RUN chown jenkins:jenkins $JENKINS_REF/.ssh/id_rsa* && \
-    chmod 600 $JENKINS_REF/.ssh/id_rsa
 
 COPY config.sh /usr/local/bin/
 
