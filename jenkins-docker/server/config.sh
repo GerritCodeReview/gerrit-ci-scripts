@@ -32,6 +32,4 @@ config jenkins.url $JENKINS_URL
 mv /etc/jenkins_jobs/jenkins_jobs.ini /tmp/
 cat /tmp/jenkins_jobs.ini | tr '-' '_' | tr -d '\t' > /etc/jenkins_jobs/jenkins_jobs.ini
 
-cp -R $JENKINS_REF/.ssh ~jenkins/.
 chown -R jenkins:dockergroup ~jenkins
-chmod 600 ~jenkins/.ssh/id_rsa

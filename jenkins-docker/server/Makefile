@@ -48,11 +48,7 @@ start_osx:
           -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.secrets \
           -p 8080:8080 ${IMAGE}
 
-id_rsa:
-	ssh-keygen -f id_rsa -t rsa -b 2048 -N ''
-	chmod a+r id_rsa*
-
-build: id_rsa
+build:
 	 cat Dockerfile | JENKINS_WAR_VER=${JENKINS_WAR_VER} JENKINS_WAR_SHA=${JENKINS_WAR_SHA} envsubst \$$JENKINS_WAR_VER,\$$JENKINS_WAR_SHA > Dockerfile-subst
 	docker build --no-cache=$(NO_CACHE) \
         -t ${IMAGE} -f Dockerfile-subst .
@@ -62,7 +58,6 @@ publish:
 
 clean:
 	-docker rmi -f ${IMAGE}
-	-rm -f id_rsa*
 	-rm -r ${JENKINS_HOME}
 
 stop:
