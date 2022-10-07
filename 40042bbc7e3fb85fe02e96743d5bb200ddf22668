@@ -39,6 +39,23 @@
       "message": "LGTM, @thomas.draebing@sap.com can you double-check? I truly believe we don\u0027t need the SSH keys anymore.",
       "revId": "40042bbc7e3fb85fe02e96743d5bb200ddf22668",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ea28e29_2884a15f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-10-07T06:51:51Z",
+      "side": 1,
+      "message": "At SAP, we use the attach method for connecting to the agents already for a log time (before it was introduced to gerrit-ci). When I introduced that change to our fork, I also removed the SSH keys and it works for us. While our setup is different (everything running on a single node), I think this should work. The docker plugin documentation also does not list an SSH key as a requirement for the attach method [1].\nSince we also don\u0027t use SSH to access Gerrit, I also don\u0027t see any jobs failing due to missing SSH keys.\n\n[1] https://plugins.jenkins.io/docker-plugin/",
+      "revId": "40042bbc7e3fb85fe02e96743d5bb200ddf22668",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
