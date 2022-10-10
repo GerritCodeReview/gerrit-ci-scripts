@@ -17,15 +17,9 @@ done
 
 TARGETS=$(echo "plugins/account:account" | sed -e 's/account/account/g')
 
-export NODE_MODULES=$PWD/node_modules
-npm install bower
-
+# install packages from package.json and copy deps into src tree
 pushd plugins/account
-$NODE_MODULES/bower/bin/bower install
-cp -Rf bower_components/jquery/dist/*js src/main/resources/static/js/.
-cp -Rf bower_components/bootstrap/dist/js/*js src/main/resources/static/js/.
-cp -Rf bower_components/bootstrap/dist/css/*css src/main/resources/static/css/.
-cp -Rf bower_components/angular/*js src/main/resources/static/js/.
+./copy_deps.sh
 popd
 
 java -fullversion
