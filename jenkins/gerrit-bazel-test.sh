@@ -1,5 +1,10 @@
 #!/bin/bash -e
 
+if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
+then
+  export BAZEL_OPTS=""
+fi
+
 case "$TARGET_BRANCH" in
   stable-3.3|stable-3.4)
     . set-java.sh 8
@@ -10,11 +15,6 @@ case "$TARGET_BRANCH" in
 esac
 
 cd gerrit
-
-if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
-then
-  export BAZEL_OPTS=""
-fi
 
 export BAZEL_OPTS="$BAZEL_OPTS \
                    --flaky_test_attempts 3 \
