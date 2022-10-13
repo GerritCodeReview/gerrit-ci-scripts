@@ -1,5 +1,10 @@
 #!/bin/bash -xe
 
+if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
+then
+  export BAZEL_OPTS=""
+fi
+
 case "{branch}" in
   stable-3.3|stable-3.4)
     . set-java.sh 8
@@ -8,11 +13,6 @@ case "{branch}" in
     . set-java.sh 11
     ;;
 esac
-
-if git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion
-then
-  export BAZEL_OPTS=""
-fi
 
 cd gerrit
 bazelisk version
