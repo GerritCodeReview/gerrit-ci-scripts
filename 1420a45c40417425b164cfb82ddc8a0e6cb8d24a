@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "174ab89b_4c22d8e2",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-13T20:17:03Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "590ff981_996da25a",
+      "range": {
+        "startLine": 7,
+        "startChar": 3,
+        "endLine": 7,
+        "endChar": 4
+      },
+      "revId": "1420a45c40417425b164cfb82ddc8a0e6cb8d24a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f4874bf9_57759b4c",
@@ -61,6 +85,30 @@
       "writtenOn": "2020-12-07T20:06:02Z",
       "side": 1,
       "message": "I\u0027m seeing \n\n\n+ \u0027[git\u0027 show --diff-filter\u003dAM --name-only --pretty\u003d HEAD\n+ grep -q \u0027.bazelversion]\u0027\n/tmp/jenkins8827558880595175205.sh: line 5: [git: command not found\n\nin CI logs. Did you mean\n\nif [ git ... ?",
+      "range": {
+        "startLine": 3,
+        "startChar": 3,
+        "endLine": 3,
+        "endChar": 8
+      },
+      "revId": "1420a45c40417425b164cfb82ddc8a0e6cb8d24a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50c48e5c_08fa6b2b",
+        "filename": "jenkins/gerrit-bazel-cleancache.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-13T20:17:03Z",
+      "side": 1,
+      "message": "This is fixed already in master.",
+      "parentUuid": "f4874bf9_57759b4c",
       "range": {
         "startLine": 3,
         "startChar": 3,
