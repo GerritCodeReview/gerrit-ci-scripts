@@ -20,6 +20,10 @@ The stack state is held in a bucket called `gs://gerrit-<componentName>-pulumi-s
 
 # Development setup
 
+Create your virtual environment by running the following command:
+
+`python3 -m venv venv`
+
 Active the python virtual environment as follow:
 
 `source venv/bin/activate`
