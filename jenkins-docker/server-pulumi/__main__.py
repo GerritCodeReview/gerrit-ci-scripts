@@ -1,6 +1,8 @@
 """Docker image for Jenkins server"""
 
 import fileinput
+from pathlib import Path
+
 import pulumi
 import pulumi_docker as docker
 from pulumi_docker import DockerBuild
@@ -13,15 +15,16 @@ JENKINS_WAR_SHA = "924d2c9fabfdcacee1bae757337a07d7599eaa35"
 JENKINS_WAR_VER = "2.204.1"
 GF_JENKINS_SERVER_VERSION = "0.1"
 
+cwd = Path(__file__).parent
 
 def _prepare_dockerfile():
-    with open('Dockerfile.template', 'r') as file:
+    with open(cwd / 'Dockerfile.template', 'r') as file:
         filedata = file.read()
 
     filedata = filedata.replace('_JENKINS_WAR_VER_', JENKINS_WAR_VER)
     filedata = filedata.replace('_JENKINS_WAR_SHA_', JENKINS_WAR_SHA)
 
-    with open('Dockerfile', 'w') as file:
+    with open(cwd / 'Dockerfile', 'w') as file:
         file.write(filedata)
 
 
