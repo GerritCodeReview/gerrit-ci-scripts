@@ -16,6 +16,8 @@ JENKINS_WAR_VER = "2.204.1"
 GF_JENKINS_SERVER_VERSION = "0.1"
 
 cwd = Path(__file__).parent
+build_dir = cwd / 'build'
+
 
 def _prepare_dockerfile():
     with open(cwd / 'Dockerfile.template', 'r') as file:
@@ -24,7 +26,7 @@ def _prepare_dockerfile():
     filedata = filedata.replace('_JENKINS_WAR_VER_', JENKINS_WAR_VER)
     filedata = filedata.replace('_JENKINS_WAR_SHA_', JENKINS_WAR_SHA)
 
-    with open(cwd / 'Dockerfile', 'w') as file:
+    with open(build_dir / 'Dockerfile', 'w') as file:
         file.write(filedata)
 
 
@@ -32,7 +34,7 @@ _prepare_dockerfile()
 
 backend = docker.Image(
     name="jenkins_server",
-    build=DockerBuild(),
+    build=DockerBuild(context=str(build_dir)),
     local_image_name="gerritforge/jenkins-server:" + GF_JENKINS_SERVER_VERSION,
     image_name="gerritforge/jenkins-server:" + GF_JENKINS_SERVER_VERSION,
     skip_push=True)
