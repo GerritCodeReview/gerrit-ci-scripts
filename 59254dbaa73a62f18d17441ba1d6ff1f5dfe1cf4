@@ -69,6 +69,42 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0121b48_cd2b4f83",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-19T21:11:58Z",
+      "side": 1,
+      "message": "Doing it now, apologies for the delay.",
+      "parentUuid": "9c9e8adc_d8284be1",
+      "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "116f31c8_c6374050",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-19T21:11:58Z",
+      "side": 1,
+      "message": "Verifying this change is quite tricky because it implies:\n- changes to the pipeline script\n- changes to the plugin code\n\nI\u0027ll see if I can submit Ifaa1827476 independently from this one.",
+      "parentUuid": "617b309b_da51b3db",
+      "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "735cec9f_92b355bc",
@@ -82,6 +118,30 @@
       "writtenOn": "2022-10-19T21:00:55Z",
       "side": 1,
       "message": "This `./copy_deps.sh` cannot be found whilst building on the CI.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 14
+      },
+      "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "70df5531_ba08dc12",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-19T21:11:58Z",
+      "side": 1,
+      "message": "It is on Ifaa1827476",
+      "parentUuid": "735cec9f_92b355bc",
       "range": {
         "startLine": 22,
         "startChar": 0,
