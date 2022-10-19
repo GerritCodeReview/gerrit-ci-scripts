@@ -16,6 +16,23 @@
       "message": "@luca.milanesio@gmail.com I am not sure how to verify locally.",
       "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c9e8adc_d8284be1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2022-10-19T09:42:10Z",
+      "side": 1,
+      "message": "@luca.milanesio@gmail.com PTAL on these changes",
+      "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
