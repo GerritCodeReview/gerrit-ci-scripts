@@ -105,6 +105,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2343fb29_54321aa1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-19T21:24:51Z",
+      "side": 1,
+      "message": "It works on the CI, thanks for the fix!",
+      "parentUuid": "116f31c8_c6374050",
+      "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "735cec9f_92b355bc",
