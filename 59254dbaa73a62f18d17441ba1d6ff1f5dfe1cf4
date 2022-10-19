@@ -50,6 +50,46 @@
       "message": "Fails with: `line 22: ./copy_deps.sh: No such file or directory`",
       "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f797c8d_b6f34104",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-19T21:00:55Z",
+      "side": 1,
+      "message": "See the failures at:\nhttps://gerrit-ci.gerritforge.com/job/plugin-account-bazel-master/38/console\nhttps://gerrit-ci.gerritforge.com/job/plugin-account-bazel-stable-3.4/4/console\nhttps://gerrit-ci.gerritforge.com/job/plugin-account-bazel-stable-3.5/5/console",
+      "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "735cec9f_92b355bc",
+        "filename": "jenkins/gerrit-bazel-build-account-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-19T21:00:55Z",
+      "side": 1,
+      "message": "This `./copy_deps.sh` cannot be found whilst building on the CI.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 14
+      },
+      "revId": "59254dbaa73a62f18d17441ba1d6ff1f5dfe1cf4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
