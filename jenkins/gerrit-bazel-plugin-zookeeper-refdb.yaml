@@ -9,4 +9,10 @@
             - stable-3.5
             - stable-3.4
           extra-artifacts: 'bazel-bin/plugins/{name}/{name}-zk-3.5.jar'
+      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.7
+          extra-artifacts: 'bazel-bin/plugins/{name}/{name}-zk-3.5.jar'
       - 'plugin-{name}-verifier'
