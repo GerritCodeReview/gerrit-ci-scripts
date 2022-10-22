@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eda9e3b3_c01fd472",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-10-22T06:42:31Z",
+      "side": 1,
+      "message": "Hi guys! I do remember that one could verify such commits prior the merge but I can\u0027t seem to find that handy job that accepted commit to run against it anymore 😐. Or am I messing up sth? Regardless I would need some help in creating the corresponding job etc..",
+      "revId": "ffee5e728409ce1e5e5721243c74150b7ee20fa6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
