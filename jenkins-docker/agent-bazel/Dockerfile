@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-bazel:debian-buster-nocache-$CHROME_VER
+FROM gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-$CHROME_VER
 
 # Bazel cache warm-up with Gerrit master and latest stable branch.
 # Set-up google-java-format utility to ~/format/google-java-format.

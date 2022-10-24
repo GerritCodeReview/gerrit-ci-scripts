@@ -25,10 +25,10 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     libz-dev \
     openssh-server \
     python3-distutils \
-    python-dev \
-    python-jenkinsapi \
-    python-pip \
-    python-yaml \
+    python3-dev \
+    python3-jenkinsapi \
+    python3-pip \
+    python3-yaml \
     vim \
     xsltproc \
     zip \
