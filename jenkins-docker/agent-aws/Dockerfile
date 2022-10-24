@@ -1,6 +1,6 @@
-FROM gerritforge/gerrit-ci-agent-debian:buster
+FROM gerritforge/gerrit-ci-agent-debian:bullseye
 
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \ 
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
  && unzip awscliv2.zip && ./aws/install
 
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \

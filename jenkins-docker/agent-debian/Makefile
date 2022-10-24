@@ -1,9 +1,9 @@
 NO_CACHE ?= false
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-debian
-MAVEN_VER=3.6.3
+MAVEN_VER=3.9.4
 GIT_VER=2.26.2
-DEBIAN_VER=buster
+DEBIAN_VER=bullseye
 
 build:
 	@echo "Building Docker for Debian:$(DEBIAN_VER)"

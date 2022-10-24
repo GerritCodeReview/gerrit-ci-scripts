@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-chrome:buster-$CHROME_VER
+FROM gerritforge/gerrit-ci-agent-chrome:bullseye-$CHROME_VER
 
 # Node JS for PolyGerrit build
 
