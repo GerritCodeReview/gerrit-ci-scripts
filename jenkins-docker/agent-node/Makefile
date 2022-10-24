@@ -1,7 +1,7 @@
 include ../chrome-vers.mk
 
 NO_CACHE ?= false
-NODE_VER ?= 10
+NODE_VER ?= 12
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-node:$(NODE_VER)
 
