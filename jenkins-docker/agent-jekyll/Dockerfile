@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-python3:buster
+FROM gerritforge/gerrit-ci-agent-python3:bullseye
 
 RUN apt-get update --allow-releaseinfo-change && \
     apt-get install -y ruby-full && \
