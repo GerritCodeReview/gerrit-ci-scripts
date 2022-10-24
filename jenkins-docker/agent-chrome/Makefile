@@ -1,8 +1,8 @@
 NO_CACHE ?= false
-DEBIAN_VER ?= buster
+DEBIAN_VER ?= bullseye
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-chrome:$(DEBIAN_VER)
-CHROME_VERS = latest 69.0.3497.92
+CHROME_VERS = latest 104.0.5112.102
 
 build: Makefile Dockerfile
 	@for chrome_ver in $(CHROME_VERS); \
