@@ -2,12 +2,11 @@ include ../chrome-vers.mk
 
 NO_CACHE=false
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-buster-nocache
+IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-bullseye-nocache
 BAZEL_VER=5.0.0
 BUILDIFIER_VER=4.0.0
 BAZELISK_VER=1.12.0
-NODE_VER=10
-WCT_VER=6.8.0
+NODE_VER=12
 
 # Targets
 
@@ -19,7 +18,6 @@ build:
 		BUILDIFIER_VER=${BUILDIFIER_VER} \
 		BAZELISK_VER=${BAZELISK_VER} \
 		NODE_VER=${NODE_VER} \
-		WCT_VER=${WCT_VER} \
 		CHROME_VER=$$chrome_ver envsubst > Dockerfile-subst; \
 		docker build --no-cache=$(NO_CACHE) \
 		-f Dockerfile-subst \

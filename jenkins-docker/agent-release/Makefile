@@ -1,6 +1,6 @@
 NO_CACHE=true
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-release-bazel:debian-buster
+IMAGE=${PREFIX}/gerrit-release-bazel:debian-bullseye
 CONTAINER=release
 
 ######################################################
@@ -8,13 +8,13 @@ CONTAINER=release
 ######################################################
 
 # Branch from where the release will be cut
-BRANCH=stable-3.3
+BRANCH=stable-3.7
 
 # Release number
-RELEASE=3.3.0
+RELEASE=3.7.0
 
 # Next SNAPSHOT after the release
-SNAPSHOT=3.3.1-SNAPSHOT
+SNAPSHOT=3.7.1-SNAPSHOT
 
 # Release manager's GNUPG keyring
 GNUPG=${HOME}/.gnupg
@@ -39,7 +39,7 @@ run:
 		-v ${GIT_COOKIES}:/home/jenkins/.gitcookies
 
 pull:
-	docker pull gerritforge/gerrit-ci-agent-bazel:debian-buster-nocache-latest
+	docker pull gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-latest
 
 build: pull
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
