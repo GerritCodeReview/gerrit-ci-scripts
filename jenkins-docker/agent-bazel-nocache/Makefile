@@ -2,11 +2,16 @@ include ../chrome-vers.mk
 
 NO_CACHE=false
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-buster-nocache
+IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-bullseye-nocache
 BAZEL_VER=5.0.0
 BUILDIFIER_VER=4.0.0
 BAZELISK_VER=1.12.0
+<<<<<<< HEAD
 NODE_VER=10
+=======
+NODE_VER=12
+WCT_VER=6.8.0
+>>>>>>> bc7249f (ci: Update images to bullseye)
 
 # Targets
 

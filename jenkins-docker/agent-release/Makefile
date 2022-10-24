@@ -1,6 +1,6 @@
 NO_CACHE=true
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-release-bazel:debian-buster
+IMAGE=${PREFIX}/gerrit-release-bazel:debian-bullseye
 CONTAINER=release
 
 ######################################################
@@ -39,7 +39,7 @@ run:
 		-v ${GIT_COOKIES}:/home/jenkins/.gitcookies
 
 pull:
-	docker pull gerritforge/gerrit-ci-agent-bazel:debian-buster-nocache-latest
+	docker pull gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-latest
 
 build: pull
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
