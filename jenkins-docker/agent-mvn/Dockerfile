@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-bazel:debian-buster-latest
+FROM gerritforge/gerrit-ci-agent-bazel:debian-bullseye-latest
 
 USER jenkins
 
