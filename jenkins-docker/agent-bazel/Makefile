@@ -2,7 +2,7 @@ include ../chrome-vers.mk
 
 NO_CACHE=false
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-buster
+IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-bullseye
 
 # Targets
 
