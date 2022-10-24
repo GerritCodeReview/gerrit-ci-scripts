@@ -10,7 +10,7 @@ then
   echo "       version Gerrit semantic release number"
   echo "       next-version Next SNAPSHOT version after release"
   echo ""
-  echo "Example: $0 stable-2.16 2.16.7 2.16.8-SNAPSHOT"
+  echo "Example: $0 stable-3.7 3.7.7 3.7.8-SNAPSHOT"
   exit 1
 fi
 
