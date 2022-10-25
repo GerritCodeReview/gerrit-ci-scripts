@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b39d1d9_29e0e6eb",
+        "filename": "jenkins-docker/agent-chrome/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-25T23:08:27Z",
+      "side": 1,
+      "message": "@echo",
+      "range": {
+        "startLine": 8,
+        "startChar": 1,
+        "endLine": 8,
+        "endChar": 5
+      },
+      "revId": "8912bdfadbad1f30687150bc8d7cec87680ff825",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b493bef6_1f86a3b0",
+        "filename": "jenkins-docker/agent-chrome/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-25T23:08:27Z",
+      "side": 1,
+      "message": "Not needed as you\u0027re continuing the command started at L8",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 5
+      },
+      "revId": "8912bdfadbad1f30687150bc8d7cec87680ff825",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
