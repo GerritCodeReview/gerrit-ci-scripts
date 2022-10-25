@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d72ce39a_6ded4cae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-10-25T06:42:39Z",
+      "side": 1,
+      "message": "verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-healthcheck-bazel-master-stable-3.7/1/",
+      "revId": "abac6d36edaf6b938adbabcb384faca00320bebe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
