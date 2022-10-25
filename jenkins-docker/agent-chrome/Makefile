@@ -5,17 +5,23 @@ IMAGE=${PREFIX}/gerrit-ci-agent-chrome:$(DEBIAN_VER)
 CHROME_VERS = latest 69.0.3497.92
 
 build: Makefile Dockerfile
-	@for chrome_ver in $(CHROME_VERS); \
+	# Due to issues on Mac (see https://stackoverflow.com/questions/11675070/makefile-echo-n-not-working)
+	# we have to use the path directly to echo
+	# for it to work on the Mac.
+	@/bin/echo -n "CHROME_VERS ?= latest" > ../chrome-vers.mk; \
+	for chrome_ver in $(CHROME_VERS); \
 	do \
 		echo "Building Docker for $(DEBIAN_VER) / Chrome v$$chrome_ver"; \
 		echo "========================================================"; \
 		cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$$chrome_ver envsubst > Dockerfile-$(DEBIAN_VER)-$$chrome_ver; \
 		docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$$chrome_ver -t "$(IMAGE)-$$chrome_ver" .;  \
-	done
+		chrome_curr_ver=$$(docker run --entrypoint=/usr/bin/google-chrome -ti $(IMAGE)-$$chrome_ver --version | awk '{print $$3}'); \
+		/bin/echo -n " $$chrome_curr_ver" >> ../chrome-vers.mk; \
+	done; \
+	/bin/echo "" >> ../chrome-vers.mk
 
 publish:
-	echo -n "CHROME_VERS ?=" > ../chrome-vers.mk; \
-	for chrome_ver in $(CHROME_VERS); \
+	@for chrome_ver in $(CHROME_VERS); \
 	do \
 		echo "Pushing $(IMAGE)-$$chrome_ver"; \
 		docker push $(IMAGE)-$$chrome_ver; \
@@ -23,9 +29,7 @@ publish:
 		docker tag $(IMAGE)-$$chrome_ver $(IMAGE)-$$chrome_curr_ver; \
 		echo "Pushing $(IMAGE)-$$chrome_curr_ver"; \
 		docker push $(IMAGE)-$$chrome_curr_ver; \
-		echo -n " $$chrome_curr_ver" >> ../chrome-vers.mk; \
-	done; \
-	echo "" >> ../chrome-vers.mk
+	done
 
 clean:
 	for chrome_ver in $(CHROME_VERS); \
@@ -34,4 +38,3 @@ clean:
 	done
 
 .PHONY: build publish clean
-
