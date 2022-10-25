@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cea63b23_4a14fec6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-10-25T06:27:08Z",
+      "side": 1,
+      "message": "verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-websession-broker-bazel-master-stable-3.7/1/",
+      "revId": "e7dd60dd1050badf9be9765019fb8511e6ee1b3c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
