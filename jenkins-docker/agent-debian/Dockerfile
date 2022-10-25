@@ -53,9 +53,6 @@ RUN mkdir /home/jenkins/.ssh
 RUN chown -R jenkins:jenkins /home/jenkins/.ssh
 RUN chmod -R 700 /home/jenkins/.ssh
 
-COPY id_rsa.pub /home/jenkins/.ssh/authorized_keys
-RUN chown jenkins:jenkins /home/jenkins/.ssh/authorized_keys
-
 COPY gitconfig $JENKINS_REF/.gitconfig
 
 RUN mkdir /var/run/sshd
