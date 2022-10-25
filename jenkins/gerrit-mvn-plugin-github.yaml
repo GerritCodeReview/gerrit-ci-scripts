@@ -1,10 +1,15 @@
 - project:
     name: github-mvn
     repo: github
-    branch:
-      - master
-      - stable-3.6
-      - stable-3.5
-      - stable-3.4
     jobs:
-      - 'plugin-{repo}-mvn-{branch}'
+      - 'plugin-{repo}-mvn-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.7
+      - 'plugin-{repo}-mvn-{branch}':
+          branch:
+            - master
+            - stable-3.6
+            - stable-3.5
+            - stable-3.4
