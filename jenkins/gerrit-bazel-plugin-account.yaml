@@ -38,6 +38,11 @@
 - project:
     name: account
     jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.7
       - 'plugin-account-bazel-{branch}':
           branch:
             - master
