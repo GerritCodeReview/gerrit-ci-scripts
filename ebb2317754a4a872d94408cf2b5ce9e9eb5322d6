@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a1af2e3_18d918bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-10-27T07:42:24Z",
+      "side": 1,
+      "message": "Verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-zuul-results-summary-bazel-main-stable-3.7/1",
+      "revId": "ebb2317754a4a872d94408cf2b5ce9e9eb5322d6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
