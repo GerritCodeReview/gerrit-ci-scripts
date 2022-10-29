@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3642e63_b0f114a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-10-29T11:00:52Z",
+      "side": 1,
+      "message": "stable-3.6 verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.6/job/module-cached-refdb-bazel-master-stable-3.6/1\nstable-3.7 verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/module-cached-refdb-bazel-master-stable-3.7/1",
+      "revId": "752d6f9c43b1071b9225ce6232f618e6c4ca7a1c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
