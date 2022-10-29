@@ -10,4 +10,10 @@
             - stable-3.3
           gerrit-branch:
             - stable-3.4
+      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.7
+            - stable-3.6
       - 'module-{name}-verifier'
