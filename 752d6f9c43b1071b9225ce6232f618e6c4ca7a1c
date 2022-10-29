@@ -16,6 +16,29 @@
       "message": "stable-3.6 verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.6/job/module-cached-refdb-bazel-master-stable-3.6/1\nstable-3.7 verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/module-cached-refdb-bazel-master-stable-3.7/1",
       "revId": "752d6f9c43b1071b9225ce6232f618e6c4ca7a1c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b931287f_9642d147",
+        "filename": "jenkins/gerrit-bazel-module-cached-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-10-29T23:21:54Z",
+      "side": 1,
+      "message": "Unrelated: as a follow-up, we could just create also the branch stable-3.4. It looks strange that the stable-3.3 of the plugin is built against stable-3.4 of Gerrit.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "752d6f9c43b1071b9225ce6232f618e6c4ca7a1c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
