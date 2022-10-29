@@ -7,4 +7,9 @@
             - stable-3.6
             - stable-3.5
             - stable-3.4
+      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.7
       - 'module-{name}-verifier'
