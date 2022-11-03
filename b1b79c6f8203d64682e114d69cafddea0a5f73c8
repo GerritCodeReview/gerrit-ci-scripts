@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a9bd4770_7967caba",
+        "filename": "jenkins-docker/agent-bazel-nocache/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-11-03T07:17:22Z",
+      "side": 0,
+      "message": "nit: unrelated change.\n\nLet\u0027s get rid of this unnecessary variable in a separate change.",
+      "range": {
+        "startLine": 1,
+        "startChar": 52,
+        "endLine": 1,
+        "endChar": 60
+      },
+      "revId": "b1b79c6f8203d64682e114d69cafddea0a5f73c8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

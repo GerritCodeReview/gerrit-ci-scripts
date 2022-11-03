@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fa54a46_75616071",
+        "filename": "jenkins-docker/agent-bazel-nocache/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-11-03T07:17:22Z",
+      "side": 1,
+      "message": "Does Node 10 not exist for bullseye anymore?\n\nAnyway, I agree that we should update node, but we should likely do that in a separate change before this one to be able to test it separately.",
+      "range": {
+        "startLine": 9,
+        "startChar": 9,
+        "endLine": 9,
+        "endChar": 11
+      },
+      "revId": "17673a373dc4b30ee8b045f5d4be0ea33acc913f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17d51647_f3bfcffb",
+        "filename": "jenkins-docker/agent-chrome/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-11-03T07:17:22Z",
+      "side": 1,
+      "message": "Same as with node, I think this should be updated in a dedicated change. AFAIK there are issues with tests in Gerrit 3.4-3.6 with newer Chrome versions (might be fixed by now).",
+      "range": {
+        "startLine": 5,
+        "startChar": 21,
+        "endLine": 5,
+        "endChar": 35
+      },
+      "revId": "17673a373dc4b30ee8b045f5d4be0ea33acc913f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2b3c64b_f59f0ebf",
+        "filename": "jenkins-docker/agent-release/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-11-03T07:17:22Z",
+      "side": 1,
+      "message": "nit: unrelated change\n\nsame below",
+      "range": {
+        "startLine": 11,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "17673a373dc4b30ee8b045f5d4be0ea33acc913f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7ad03d0_fd4415b5",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-11-03T07:17:22Z",
+      "side": 1,
+      "message": "nit: unrelated change",
+      "range": {
+        "startLine": 13,
+        "startChar": 27,
+        "endLine": 13,
+        "endChar": 40
+      },
+      "revId": "17673a373dc4b30ee8b045f5d4be0ea33acc913f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
