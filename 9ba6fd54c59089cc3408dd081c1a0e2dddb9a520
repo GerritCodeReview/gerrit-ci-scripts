@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ace0fa90_4273d88d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-07T18:13:59Z",
+      "side": 1,
+      "message": "Verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-events-rabbitmq-bazel-master-stable-3.7/2/console",
+      "revId": "9ba6fd54c59089cc3408dd081c1a0e2dddb9a520",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
