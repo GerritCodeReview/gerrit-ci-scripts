@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8953ea5_d17ee723",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-07T14:50:16Z",
+      "side": 1,
+      "message": "Verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-aws-dynamodb-refdb-bazel-master-stable-3.7/1/console",
+      "revId": "9e1df19ebdb2c13d5ac61454fffb71da42f25b71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
