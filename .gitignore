@@ -2,3 +2,4 @@ id_rsa*
 Dockerfile-*
 chrome-vers.mk
 .idea/
+.vscode/
