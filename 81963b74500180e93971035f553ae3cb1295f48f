@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86075887_c0111b09",
+        "filename": "jenkins/gerrit-bazel-plugin-go-import.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-07T16:25:43Z",
+      "side": 1,
+      "message": "nit: the more common practice is to put `newer` or `closer to master` branches first in the list",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 24
+      },
+      "revId": "81963b74500180e93971035f553ae3cb1295f48f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
