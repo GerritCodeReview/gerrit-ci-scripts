@@ -1,8 +1,10 @@
-FROM jenkins/jenkins:_JENKINS_WAR_VER_
+ARG JENKINS_WAR_VER
+FROM jenkins/jenkins:${JENKINS_WAR_VER}
 
 USER root
 
-RUN echo "_JENKINS_WAR_SHA_  /usr/share/jenkins/jenkins.war" | sha1sum -c -
+ARG JENKINS_WAR_SHA
+RUN echo "$JENKINS_WAR_SHA /usr/share/jenkins/jenkins.war" | sha256sum -c -
 
 # Override Jenkins start-up script
 RUN mv /usr/local/bin/jenkins.sh /usr/local/bin/run-jenkins.sh
