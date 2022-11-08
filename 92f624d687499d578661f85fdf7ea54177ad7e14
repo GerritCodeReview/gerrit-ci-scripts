@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2975b8b_f213c112",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014257
+      },
+      "writtenOn": "2022-11-08T10:51:28Z",
+      "side": 1,
+      "message": "See: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-websession-flatfile-bazel-master-stable-3.7/1/",
+      "revId": "92f624d687499d578661f85fdf7ea54177ad7e14",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
