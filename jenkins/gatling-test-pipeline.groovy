@@ -10,7 +10,7 @@ pipeline {
             string(name: 'AWS_REGION', defaultValue:"us-east-1", description: 'Which region to deploy to')
 
             string(name: 'GERRIT_VERSION', defaultValue:"3.7", description: 'The gerrit version under test')
-            string(name: 'GERRIT_PATCH', defaultValue:"0-rc3", description: 'The gerrit version patch under test')
+            string(name: 'GERRIT_PATCH', defaultValue:"0", description: 'The gerrit version patch under test')
             string(name: 'GERRIT_WAR_URL', defaultValue:"https://gerrit-ci.gerritforge.com/job/Gerrit-bazel-stable-3.7/lastSuccessfulBuild/artifact/gerrit/bazel-bin/release.war", description: 'The gerrit.war URL to use as override of the gerrit version under test')
 
             string(name: 'HOSTED_ZONE_NAME', defaultValue: "gerritforgeaws.com", description: 'Name of the hosted zone')
@@ -19,7 +19,7 @@ pipeline {
             string(name: 'DOCKER_REGISTRY_URI', defaultValue: '117385740707.dkr.ecr.$(AWS_REGION).amazonaws.com', description: 'URI of the Docker registry')
             string(name: 'SSL_CERTIFICATE_ARN', defaultValue: "arn:aws:acm:us-east-1:117385740707:certificate/a43b5723-023f-4535-8705-3a4f811f1f4b", description: 'ARN of the wildcard SSL Certificate')
 
-            string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-01c12c75ead9e9cd4", description: 'Id of the EBS volume snapshot')
+            string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-03651689e48cde6b6", description: 'Id of the EBS volume snapshot')
 
             string(name: 'METRICS_CLOUDWATCH_NAMESPACE', defaultValue: 'jenkins', description: 'The CloudWatch namespace for Gerrit metrics')
             string(name: 'BASE_SUBDOMAIN', defaultValue: 'gerrit-demo', description: 'Name of the master sub domain')
