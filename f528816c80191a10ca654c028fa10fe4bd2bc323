@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e21e407_ef2cea98",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-08T16:51:51Z",
+      "side": 1,
+      "message": "fails with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-replication-status-bazel-stable-3.4/1/console",
+      "revId": "f528816c80191a10ca654c028fa10fe4bd2bc323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
