@@ -39,6 +39,30 @@
       },
       "revId": "81963b74500180e93971035f553ae3cb1295f48f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d39f12a_c76e9985",
+        "filename": "jenkins/gerrit-bazel-plugin-go-import.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2022-11-08T09:21:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "86075887_c0111b09",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 24
+      },
+      "revId": "81963b74500180e93971035f553ae3cb1295f48f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
