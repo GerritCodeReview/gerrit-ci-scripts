@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ee3ce9a_4e5519b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-09T12:29:16Z",
+      "side": 1,
+      "message": "It fails with the following issues in CI:\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-simple-submit-rules-bazel-master-stable-3.4/1/console",
+      "revId": "816150f3a6c1a258531aa1c0ddfdc8d8da985117",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
