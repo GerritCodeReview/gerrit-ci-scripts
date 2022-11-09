@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec68362f_9bd63c26",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-09T23:17:29Z",
+      "side": 1,
+      "message": "It fails with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.6/job/plugin-checks-bazel-stable-3.6/1/console",
+      "revId": "f56887b23bc1c0e5f28b82799e1593e8e0bcecb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
