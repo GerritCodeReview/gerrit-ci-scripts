@@ -34,6 +34,23 @@
       "parentUuid": "1ee3ce9a_4e5519b0",
       "revId": "816150f3a6c1a258531aa1c0ddfdc8d8da985117",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05289476_09b3c3ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-09T14:24:38Z",
+      "side": 1,
+      "message": "Job works but plugin verification fails: https://gerrit-ci.gerritforge.com/view/Plugins-master/job/plugin-simple-submit-rules-bazel-master/1/console",
+      "revId": "816150f3a6c1a258531aa1c0ddfdc8d8da985117",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
