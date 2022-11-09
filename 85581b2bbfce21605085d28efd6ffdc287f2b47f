@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f783e59_3f1527bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-09T12:30:24Z",
+      "side": 1,
+      "message": "It fails in CI https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-simple-submit-rules-bazel-master-stable-3.4/1/console with:\n```\n12:28:23 plugins/simple-submit-rules/src/main/java/com/googlesource/gerrit/plugins/simplesubmitrules/rules/NoUnresolvedCommentsRule.java:83: error: cannot find symbol\n12:28:23     sr.ruleName \u003d RULE_NAME;\n12:28:23       ^\n12:28:23   symbol:   variable ruleName\n12:28:23   location: variable sr of type SubmitRecord\n12:28:23 plugins/simple-submit-rules/src/main/java/com/googlesource/gerrit/plugins/simplesubmitrules/rules/NoUnresolvedCommentsRule.java:97: error: cannot find symbol\n12:28:23     sr.ruleName \u003d RULE_NAME;\n12:28:23       ^\n12:28:23   symbol:   variable ruleName\n12:28:23   location: variable sr of type SubmitRecord\n```",
+      "revId": "85581b2bbfce21605085d28efd6ffdc287f2b47f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
