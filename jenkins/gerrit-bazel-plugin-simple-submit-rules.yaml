@@ -8,4 +8,6 @@
             - master
             - stable-3.6
             - stable-3.5
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
             - stable-3.4
