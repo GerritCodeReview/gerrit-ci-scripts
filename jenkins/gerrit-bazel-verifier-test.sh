@@ -1,13 +1,11 @@
 #!/bin/bash -ex
 
-case "$TARGET_BRANCH" in
-  stable-3.3|stable-3.4)
-    . set-java.sh 8
-    ;;
-  *)
-    . set-java.sh 11
-    ;;
-esac
+if [[ "$TARGET_BRANCH" == "stable-3.4" ]]
+then
+  . set-java.sh 8
+else
+  . set-java.sh 11
+fi
 
 cd gerrit
 

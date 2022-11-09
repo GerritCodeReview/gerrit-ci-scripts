@@ -8,13 +8,13 @@ CONTAINER=release
 ######################################################
 
 # Branch from where the release will be cut
-BRANCH=stable-3.3
+BRANCH=stable-3.4
 
 # Release number
-RELEASE=3.3.0
+RELEASE=3.4.0
 
 # Next SNAPSHOT after the release
-SNAPSHOT=3.3.1-SNAPSHOT
+SNAPSHOT=3.4.1-SNAPSHOT
 
 # Release manager's GNUPG keyring
 GNUPG=${HOME}/.gnupg
