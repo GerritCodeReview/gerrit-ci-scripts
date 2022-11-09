@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd43324d_4f9cb9d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-09T23:06:10Z",
+      "side": 1,
+      "message": "Verified with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-automerger-bazel-stable-3.4/1/console",
+      "revId": "a5b51384e36df3530f8841b647040ca6781a06ac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
