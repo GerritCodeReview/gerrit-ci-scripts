@@ -12,4 +12,3 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-            - stable-3.4
