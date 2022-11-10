@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ee095f1_d4b2ad67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-10T14:03:27Z",
+      "side": 1,
+      "message": "Verified with: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-find-owners-bazel-master-stable-3.7/1/console",
+      "revId": "52ca481acbeafd18cea0a27830ce9b9359a77c5d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
