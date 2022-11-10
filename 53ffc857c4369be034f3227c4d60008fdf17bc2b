@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b58c81d_9d318b12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-10T13:51:55Z",
+      "side": 1,
+      "message": "Verified with: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-branch-network-bazel-master-stable-3.7/2/console",
+      "revId": "53ffc857c4369be034f3227c4d60008fdf17bc2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
