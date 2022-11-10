@@ -4,7 +4,6 @@
       - 'module-{name}-bazel-{branch}':
           branch:
             - master
-            - stable-3.4
       - 'module-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
