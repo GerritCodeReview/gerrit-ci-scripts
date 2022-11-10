@@ -16,6 +16,24 @@
       "message": "It fails with https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.6/job/plugin-checks-bazel-stable-3.6/1/console",
       "revId": "f56887b23bc1c0e5f28b82799e1593e8e0bcecb7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f0ea23d_68554cc7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-11-10T15:23:58Z",
+      "side": 1,
+      "message": "stable-3.6 branch was deleted and re-created from a different base, using temporarily enabled ACL, see change 351394.",
+      "parentUuid": "ec68362f_9bd63c26",
+      "revId": "f56887b23bc1c0e5f28b82799e1593e8e0bcecb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
