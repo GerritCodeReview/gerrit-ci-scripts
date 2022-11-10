@@ -12,5 +12,4 @@
           branch:
             - master
             - stable-3.5
-            - stable-3.4
           targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'
