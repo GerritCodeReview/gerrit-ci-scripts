@@ -5,14 +5,7 @@ then
   export BAZEL_OPTS=""
 fi
 
-case "{branch}" in
-  stable-3.3|stable-3.4)
-    . set-java.sh 8
-    ;;
-  *)
-    . set-java.sh 11
-    ;;
-esac
+. set-java.sh 11
 
 cd gerrit
 bazelisk version

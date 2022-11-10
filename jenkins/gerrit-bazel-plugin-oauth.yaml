@@ -1,9 +1,6 @@
 - project:
     name: oauth
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - stable-3.4
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
