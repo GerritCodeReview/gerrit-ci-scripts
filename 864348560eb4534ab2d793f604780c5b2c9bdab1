@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1be69d03_d62a9789",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-10T13:49:06Z",
+      "side": 1,
+      "message": "It actually builds plugin’s `stable-3.7` against Gerrit’s `stable-3.7` and there is no `stable-3.7` branch for the plugin and it fails with the following error:\n```\n13:45:52 ERROR: Couldn\u0027t find any revision to build. Verify the repository and branch configuration for this job.\n```",
+      "revId": "864348560eb4534ab2d793f604780c5b2c9bdab1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
