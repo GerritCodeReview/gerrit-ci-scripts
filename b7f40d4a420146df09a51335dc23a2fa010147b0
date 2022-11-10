@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1992c4a_497d55d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-10T14:24:49Z",
+      "side": 1,
+      "message": "Verified with: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-menuextender-bazel-master-stable-3.7/1/console",
+      "revId": "b7f40d4a420146df09a51335dc23a2fa010147b0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
