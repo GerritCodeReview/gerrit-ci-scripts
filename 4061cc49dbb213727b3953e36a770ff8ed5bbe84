@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ab4c733_1bc99a96",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-10T14:07:34Z",
+      "side": 1,
+      "message": "Verified with: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-gc-conductor-bazel-master-stable-3.7/1/console",
+      "revId": "4061cc49dbb213727b3953e36a770ff8ed5bbe84",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
