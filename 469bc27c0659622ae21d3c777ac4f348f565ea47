@@ -16,6 +16,24 @@
       "message": "@David, @Eryk have you tried building `master` against the Gerrit’s `stable-3.7`? Maybe there is no need to create a dedicated plugin’s branch?",
       "revId": "469bc27c0659622ae21d3c777ac4f348f565ea47",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e8b56b9_f00b0296",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-11-11T14:50:40Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "3437fa4e_3a4172ea",
+      "revId": "469bc27c0659622ae21d3c777ac4f348f565ea47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
