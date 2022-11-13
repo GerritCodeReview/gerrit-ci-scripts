@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "982e9aaa_d4b7983c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-11-13T03:34:44Z",
+      "side": 1,
+      "message": "Please bear with me until I confirm that they\u0027ve been archived :-)",
+      "revId": "abd95a9508d111a29cb1e3952f68a396ac6dfe70",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
