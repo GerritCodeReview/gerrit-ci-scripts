@@ -33,6 +33,24 @@
       "message": "This has now been fixed in https://gerrit-review.googlesource.com/c/plugins/replication-status/+/350788",
       "revId": "f528816c80191a10ca654c028fa10fe4bd2bc323",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c440f9b7_f73879db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2022-11-14T17:45:43Z",
+      "side": 1,
+      "message": "https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.4/job/plugin-replication-status-bazel-stable-3.4/1/",
+      "parentUuid": "f9b5b51e_e60edf7a",
+      "revId": "f528816c80191a10ca654c028fa10fe4bd2bc323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
