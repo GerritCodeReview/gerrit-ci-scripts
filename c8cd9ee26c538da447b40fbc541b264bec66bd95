@@ -16,6 +16,24 @@
       "message": "Build on stable-3.5 still fails though, we need to finalise the merge-up of stable-3.4 to stable-3.5 first.",
       "revId": "c8cd9ee26c538da447b40fbc541b264bec66bd95",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38447967_e13e0e8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-11-15T14:04:00Z",
+      "side": 1,
+      "message": "Addressed in https://gerrit-review.googlesource.com/c/plugins/serviceuser/+/351014",
+      "parentUuid": "8ed75ef1_1a58b2ac",
+      "revId": "c8cd9ee26c538da447b40fbc541b264bec66bd95",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
