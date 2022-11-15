@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9e9992b_f1f90a62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-15T08:09:32Z",
+      "side": 1,
+      "message": "Build fails (against all branches) but definition is correct ;) https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.7/job/plugin-task-bazel-master-stable-3.7/1/console",
+      "revId": "314f9e0ee4468105ac71a874f74e1338baf79401",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
