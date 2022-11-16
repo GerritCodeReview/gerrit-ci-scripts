@@ -22,6 +22,30 @@
       },
       "revId": "4b29b7381edd4e1d9a1ca146cd93e847d0daeff1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "995dad8d_f990d628",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-11-16T13:46:13Z",
+      "side": 0,
+      "message": "You are right: this now has to do in the build shell scripts.",
+      "parentUuid": "b03e3bef_1c3d34ab",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 2
+      },
+      "revId": "4b29b7381edd4e1d9a1ca146cd93e847d0daeff1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
