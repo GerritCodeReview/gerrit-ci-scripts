@@ -16,6 +16,23 @@
       "message": "The stable-3.4 builds have been archived: ready for review and merge",
       "revId": "28fe8d49e2c3557b86ee320b100130ea92b8626b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07c03a4d_9abe43cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-11-16T12:58:17Z",
+      "side": 1,
+      "message": "I still see mention of 3.4 (and also 3.3, which we should also remove either in this or another commit):\n```\ndarius@carbon:~/gerrit-ci-scripts ((28fe8d4...))$ git grep \u00273\\.[34]\u0027\njenkins-docker/agent-debian/Dockerfile:# TODO: to be removed when Gerrit v3.4 will be EOL\njenkins-docker/agent-release/Makefile:BRANCH\u003dstable-3.3\njenkins-docker/agent-release/Makefile:RELEASE\u003d3.3.0\njenkins-docker/agent-release/Makefile:SNAPSHOT\u003d3.3.1-SNAPSHOT\njenkins-docker/server/plugins.txt:workflow-support:3.4\nvars/gerritPipeline.groovy:    } else if (env.GERRIT_BRANCH \u003d\u003d \"stable-3.3\") {\ndarius@carbon:~/dev/gerrit-ci-scripts ((28fe8d4...))$ \n```",
+      "revId": "28fe8d49e2c3557b86ee320b100130ea92b8626b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
