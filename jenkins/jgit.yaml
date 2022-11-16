@@ -30,7 +30,6 @@
     builders:
       - shell: |
           set +x
-          . set-java.sh 8
           echo 'Building jgit on master'
           echo '======================='
           bazelisk version

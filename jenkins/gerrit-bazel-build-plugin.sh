@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-. set-java.sh 11
-
 git checkout -fb {branch} gerrit/{branch}
 git submodule update --init
 rm -rf plugins/{name}
