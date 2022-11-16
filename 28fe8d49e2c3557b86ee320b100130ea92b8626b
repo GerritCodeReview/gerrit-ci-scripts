@@ -51,6 +51,24 @@
       "parentUuid": "07c03a4d_9abe43cf",
       "revId": "28fe8d49e2c3557b86ee320b100130ea92b8626b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96cde7cc_8ffb583d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-11-16T13:22:02Z",
+      "side": 1,
+      "message": "The `jenkins-docker` files are not part of the build: true, we need to remove them as well. Let me address that as a follow-up.\n\nLet me address the `gerritPipeline.groovy` references to stable-3.3 and 3.4.",
+      "parentUuid": "651cf431_b6cb429e",
+      "revId": "28fe8d49e2c3557b86ee320b100130ea92b8626b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
