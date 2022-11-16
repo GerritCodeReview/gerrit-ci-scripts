@@ -5,8 +5,6 @@ then
   export BAZEL_OPTS=""
 fi
 
-. set-java.sh 11
-
 cd gerrit
 bazelisk version
 if ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit-ui) || \

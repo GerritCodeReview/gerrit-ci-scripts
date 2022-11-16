@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-. set-java.sh 11
-
 java -fullversion
 bazelisk version
 

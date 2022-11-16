@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-. set-java.sh 11
-
 git checkout origin/{branch}
 git submodule update --init
 rm -rf plugins/its-{name}

@@ -7,8 +7,6 @@ then
   export BAZEL_OPTS=""
 fi
 
-. set-java.sh 11
-
 export BAZEL_OPTS="$BAZEL_OPTS \
                    --flaky_test_attempts 3 \
                    --test_timeout 3600 \
