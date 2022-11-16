@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "710545b8_1d03c69b",
+        "filename": "jenkins/gerrit-bazel-plugin-replication-status.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-16T13:15:40Z",
+      "side": 0,
+      "message": "plugin-{name}-verifier was also removed, is that intentional?",
+      "range": {
+        "startLine": 14,
+        "startChar": 6,
+        "endLine": 14,
+        "endChar": 32
+      },
+      "revId": "c8cd9ee26c538da447b40fbc541b264bec66bd95",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
