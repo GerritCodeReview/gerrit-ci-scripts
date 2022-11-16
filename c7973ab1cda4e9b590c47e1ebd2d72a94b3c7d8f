@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "65874647_39de5ac7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-11-16T13:46:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69a539a2_0bae44b5",
+      "range": {
+        "startLine": 10,
+        "startChar": 48,
+        "endLine": 10,
+        "endChar": 51
+      },
+      "revId": "c7973ab1cda4e9b590c47e1ebd2d72a94b3c7d8f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "5a0743d5_f60f6ca3",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -54,6 +78,30 @@
       "writtenOn": "2022-11-16T13:39:50Z",
       "side": 1,
       "message": "it seems to be not used anymore",
+      "range": {
+        "startLine": 39,
+        "startChar": 4,
+        "endLine": 39,
+        "endChar": 24
+      },
+      "revId": "c7973ab1cda4e9b590c47e1ebd2d72a94b3c7d8f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69e00487_9e30ac85",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-11-16T13:46:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c40ad4da_7db0cffc",
       "range": {
         "startLine": 39,
         "startChar": 4,
