@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3eb44016_1910ed83",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-11-16T09:53:16Z",
+      "side": 1,
+      "message": "The stable-3.4 builds have been archived: ready for review and merge",
+      "revId": "28fe8d49e2c3557b86ee320b100130ea92b8626b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
