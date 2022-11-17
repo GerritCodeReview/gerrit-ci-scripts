@@ -70,6 +70,30 @@
       },
       "revId": "4b29b7381edd4e1d9a1ca146cd93e847d0daeff1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd875e17_9a56ee0f",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2022-11-17T06:13:20Z",
+      "side": 0,
+      "message": "\u003e You are right: this now has to do in the build shell scripts.\n\nYes this would work, but then for adding new Bazel option we would need to touch multiple build files... \n\nIn upcoming Bazel release 6.x there is another option to solve this problem: [1].\nWe could add this option in gerrit core, in .bazelrc file instead of adding it to the CI.\n\nWe are also setting BAZEL_OPTS in yaml file:\n\n  jenkins/gerrit-verifier.yaml:            BAZEL_OPTS\u003d--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache\n\nWe could extend it there, or more cleanly, add new shell file: set_bazel_options.sh and invoke it instead of set-java.sh (remove set-java.sh is a good thing).\n\n[1] https://github.com/bazelbuild/bazel/pull/16336",
+      "parentUuid": "1477d15f_5a8a512d",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 2
+      },
+      "revId": "4b29b7381edd4e1d9a1ca146cd93e847d0daeff1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
