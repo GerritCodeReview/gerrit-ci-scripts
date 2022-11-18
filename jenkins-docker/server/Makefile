@@ -49,9 +49,10 @@ start_osx:
           -p 8080:8080 ${IMAGE}
 
 build:
-	 cat Dockerfile | JENKINS_WAR_VER=${JENKINS_WAR_VER} JENKINS_WAR_SHA=${JENKINS_WAR_SHA} envsubst \$$JENKINS_WAR_VER,\$$JENKINS_WAR_SHA > Dockerfile-subst
 	docker build --no-cache=$(NO_CACHE) \
-        -t ${IMAGE} -f Dockerfile-subst .
+          --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
+          --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
+          -t ${IMAGE} .
 
 publish:
 	docker push ${IMAGE}
