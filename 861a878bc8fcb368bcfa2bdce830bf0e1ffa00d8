@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "02ab0579_8a1b1a41",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-11-18T13:35:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dee4cb92_989dc7a0",
+      "range": {
+        "startLine": 9,
+        "startChar": 55,
+        "endLine": 9,
+        "endChar": 62
+      },
+      "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "774dedbe_2772b9e6",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -71,6 +95,24 @@
       "writtenOn": "2022-11-18T12:50:10Z",
       "side": 1,
       "message": "nit: Also here, a pointer to where to get this information from would be useful",
+      "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8381fbf_7ab0875b",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-11-18T13:35:16Z",
+      "side": 1,
+      "message": "Good idea - I\u0027ll wait for the outcome of the `ADD` comment - if we decide to proceed with that this line will disappear, otherwise I\u0027ll add the link here as you suggest.",
+      "parentUuid": "1c14f11c_fef275db",
       "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
