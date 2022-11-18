@@ -84,6 +84,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4494f40d_e01e401b",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-11-18T23:03:20Z",
+      "side": 1,
+      "message": "The point here is to have the expected SHA256 in the Dockerfile for preventing anyone redirecting the request to provide a different war file.\n\nIf we get the war and the SHA256 from the network, the check isn\u0027t useful anymore.",
+      "parentUuid": "f719aaf5_f5cb7abf",
+      "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c14f11c_fef275db",
         "filename": "jenkins-docker/server/Makefile",
         "patchSetId": 1
