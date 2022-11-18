@@ -34,6 +34,24 @@
       "parentUuid": "c083aade_debe0f9a",
       "revId": "86650e265b776914fc4c143ea34784ce02ec3499",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d0a3f02_9032db66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2022-11-18T14:03:53Z",
+      "side": 1,
+      "message": "I think we can use the same pattern but with separate changes. I think it is better to focus on the server migration to Pulumi first. This change would definitively be beneficial for the migration since we won\u0027t need any templating logic in the Pulumi scripts.",
+      "parentUuid": "b498810d_cb9123ad",
+      "revId": "86650e265b776914fc4c143ea34784ce02ec3499",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
