@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "dee4cb92_989dc7a0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-11-18T12:50:10Z",
+      "side": 1,
+      "message": "nit: it\u0027d be useful to add a link here, as an example\n\nhttps://get.jenkins.io/war-stable/2.222.4/",
+      "range": {
+        "startLine": 9,
+        "startChar": 55,
+        "endLine": 9,
+        "endChar": 62
+      },
+      "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "774dedbe_2772b9e6",
@@ -14,6 +37,40 @@
       "writtenOn": "2022-11-18T11:41:38Z",
       "side": 1,
       "message": "Verified by checking it builds.",
+      "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f719aaf5_f5cb7abf",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-11-18T12:50:10Z",
+      "side": 1,
+      "message": "How about automatically running an\n\n`ADD https://get.jenkins.io/war-stable/${JENKINS_WAR_VER}/jenkins.war.sha256`\n\nand use that to check the war is correct?\n\nThis would allow us to remove one ARG from the build right?\n\n@luca.milanesio@gmail.com, what do you think?",
+      "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c14f11c_fef275db",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2022-11-18T12:50:10Z",
+      "side": 1,
+      "message": "nit: Also here, a pointer to where to get this information from would be useful",
       "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
