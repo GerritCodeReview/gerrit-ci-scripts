@@ -100,6 +100,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "38ee7bc2_604a11f2",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-11-19T10:00:27Z",
+      "side": 1,
+      "message": "Will leave this as is.",
+      "parentUuid": "4494f40d_e01e401b",
+      "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1c14f11c_fef275db",
@@ -131,6 +149,24 @@
       "side": 1,
       "message": "Good idea - I\u0027ll wait for the outcome of the `ADD` comment - if we decide to proceed with that this line will disappear, otherwise I\u0027ll add the link here as you suggest.",
       "parentUuid": "1c14f11c_fef275db",
+      "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d11abdae_35a3fa44",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2022-11-19T10:00:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c8381fbf_7ab0875b",
       "revId": "861a878bc8fcb368bcfa2bdce830bf0e1ffa00d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
