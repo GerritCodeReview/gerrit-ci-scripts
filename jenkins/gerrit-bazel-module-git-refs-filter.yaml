@@ -5,5 +5,14 @@
           branch:
             - master
           gerrit-branch:
-            - master
+            - stable-3.9
+            - stable-3.8
+            - stable-3.7
             - stable-3.6
+<<<<<<< PATCH SET (f3a61e Build git-refs-filter master against Gerrit stable-3.{7,8,9})
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-3.5
+=======
+>>>>>>> BASE      (419610 Switch between Java 11 and 17 based on the target branch)
