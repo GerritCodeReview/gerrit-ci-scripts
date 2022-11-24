@@ -13,13 +13,15 @@ COPY jenkins.sh /usr/local/bin/
 RUN apt-get update && apt-get install -y \
     ca-certificates \
     python-dev \
-    python-pip \
-    python-yaml \
-    python-jenkinsapi \
+    python3-pip \
+    python3-yaml \
+    python3-jenkinsapi \
     default-jdk \
     autoconf \
     automake \
     xsltproc \
+    wget \
+    lsb-release \
     apt-transport-https && \
     rm -rf /var/lib/apt/lists/* && \
     pip install pbr==2.0.0 && \
@@ -37,7 +39,7 @@ RUN git clone https://review.opendev.org/jjb/jenkins-job-builder && \
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.ParametersAction.keepUndefinedParameters=true
-ENV JENKINS_REF /usr/share/jenkins/ref/
+ENV JENKINS_REF /usr/share/jenkins/ref
 ENV USE_SECURITY false
 ENV OAUTH_ID clientid
 ENV OAUTH_SECRET secret
@@ -52,7 +54,7 @@ COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 COPY jenkins.model.JenkinsLocationConfiguration.xml $JENKINS_REF
 
 COPY plugins.txt $JENKINS_REF
-RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
+RUN jenkins-plugin-cli -f $JENKINS_REF/plugins.txt
 RUN chown -R jenkins:jenkins $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
@@ -76,15 +78,15 @@ RUN apt-get install -y \
      curl \
      dirmngr gnupg gpgv && \
      curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
-     echo "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" >> etc/apt/sources.list && \
+     echo "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" >> /etc/apt/sources.list && \
      apt-get update && \
-     apt-cache policy docker-engine && \
-     apt-get install -y docker-ce=18.03.1~ce-0~debian
+     apt-cache policy docker && \
+     apt-get install -y docker=1.5-2
 
 COPY config.sh /usr/local/bin/
 
 # Install gosu
-ENV GOSU_VERSION 1.9
+ENV GOSU_VERSION 1.14
 RUN set -x \
     && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
     && wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch" \
@@ -92,10 +94,6 @@ RUN set -x \
     && export GNUPGHOME="$(mktemp -d)" \
     && chmod +x /usr/local/bin/gosu \
     && gosu nobody true
-
-# Set default JDK to 8
-RUN apt-get install -y openjdk-8-jdk && \
-    update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 ENV DOCKER_GID=993
 
