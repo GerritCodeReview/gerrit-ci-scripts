@@ -6,12 +6,18 @@ OAUTH_ID=clientid
 OAUTH_SECRET=secret
 JENKINS_API_USER=user
 JENKINS_API_PASSWORD=pass
-JENKINS_WAR_VER=2.222.4
-# https://get.jenkins.io/war-stable/2.222.4/
-JENKINS_WAR_SHA=6c95721b90272949ed8802cab8a84d7429306f72b180c5babc33f5b073e1c47c
+# https://get.jenkins.io/war-stable/2.375.2
+JENKINS_WAR_VER=2.375.2-lts
+JENKINS_WAR_SHA=e572525f7fa43b082e22896f72570297d88daec4f36ab4f25fdadca885f95492
 JENKINS_HOME?=~/jenkins_home
 DOCKER_GID?=993
 IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}
+# To bump plugin versions:
+# * Make required changes in required_plugins.txt and set PLUGIN_FILE=required_plugins.txt
+# * Run `make start`, check the plugins work using the console
+# * Replace plugins.txt: `curl -s http://localhost:8080/pluginManager/api/json?depth=1 | jq -r '.plugins[] | "\(.shortName):\(.version)"' | sort > plugins.txt`
+# * Change PLUGIN_FILE back to plugins.txt
+PLUGIN_FILE=plugins.txt
 
 # Targets
 
@@ -53,6 +59,7 @@ build:
 	docker build --no-cache=$(NO_CACHE) \
           --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
           --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
+          --build-arg PLUGIN_FILE=$(PLUGIN_FILE) \
           -t ${IMAGE} .
 
 publish:
