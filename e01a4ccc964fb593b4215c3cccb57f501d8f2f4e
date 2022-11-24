@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66b835eb_6bfa5671",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2022-11-24T21:49:48Z",
+      "side": 1,
+      "message": "Still a WIP, but it looks like Jenkins is at least starting up.\n\nSome plugins are missing in the new version. I am gonna produce a list of the missing ones.",
+      "revId": "e01a4ccc964fb593b4215c3cccb57f501d8f2f4e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
