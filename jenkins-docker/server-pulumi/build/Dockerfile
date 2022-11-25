@@ -13,9 +13,9 @@ COPY jenkins.sh /usr/local/bin/
 RUN apt-get update && apt-get install -y \
     ca-certificates \
     python-dev \
-    python-pip \
-    python-yaml \
-    python-jenkinsapi \
+    python3-pip \
+    python3-yaml \
+    python3-jenkinsapi \
     default-jdk \
     autoconf \
     automake \
@@ -52,7 +52,7 @@ COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 COPY jenkins.model.JenkinsLocationConfiguration.xml $JENKINS_REF
 
 COPY plugins.txt $JENKINS_REF
-RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
+RUN jenkins-plugin-cli -f $JENKINS_REF/plugins.txt --verbose
 RUN chown -R jenkins:jenkins $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
