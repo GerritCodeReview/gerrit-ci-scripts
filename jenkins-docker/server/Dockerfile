@@ -54,7 +54,7 @@ COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 COPY jenkins.model.JenkinsLocationConfiguration.xml $JENKINS_REF
 
 COPY plugins.txt $JENKINS_REF
-RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
+RUN jenkins-plugin-cli -f $JENKINS_REF/plugins.txt
 RUN chown -R jenkins:jenkins $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
