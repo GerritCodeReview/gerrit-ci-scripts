@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
     autoconf \
     automake \
     xsltproc \
+    wget \
     apt-transport-https && \
     rm -rf /var/lib/apt/lists/* && \
     pip install pbr==2.0.0 && \
@@ -92,10 +93,6 @@ RUN set -x \
     && export GNUPGHOME="$(mktemp -d)" \
     && chmod +x /usr/local/bin/gosu \
     && gosu nobody true
-
-# Set default JDK to 8
-RUN apt-get install -y openjdk-8-jdk && \
-    update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 ENV DOCKER_GID=993
 
