@@ -10,9 +10,9 @@ stack = pulumi.get_stack()
 
 JENKINS_SERVER_IMAGE_NAME = "jenkins-server"
 JENKINS_VERSION = "2.222.4"
-JENKINS_WAR_VER = "2.222.4"
-# https://get.jenkins.io/war-stable/2.222.4/
-JENKINS_WAR_SHA = "6c95721b90272949ed8802cab8a84d7429306f72b180c5babc33f5b073e1c47c"
+# https://get.jenkins.io/war-stable/2.346.3/
+JENKINS_WAR_VER="2.346.3-2-lts"
+JENKINS_WAR_SHA="141e8c5890a31a5cf37a970ce3e15273c1c74d8759e4a5873bb5511c50b47d89"
 GF_JENKINS_SERVER_VERSION = "0.1"
 
 cwd = Path(__file__).parent
