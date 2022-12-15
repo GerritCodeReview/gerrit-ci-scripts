@@ -1,0 +1,31 @@
+- job:
+    name: k8s-gerrit-publish
+    description: Pipeline used to publish container images used in k8s-gerrit
+    project-type: pipeline
+    node: server
+    triggers:
+      - pollscm:
+          cron: 'H/10 * * * *'
+    wrappers:
+      - timeout:
+          timeout: 120
+          type: absolute
+          fail: false
+      - timestamps
+    properties:
+      - build-discarder:
+          days-to-keep: 20
+          artifact-days-to-keep: 20
+      - authorization:
+          anonymous:
+            - job-discover
+            - job-read
+            - job-extended-read
+    pipeline-scm:
+      scm:
+        - gerrit:
+            url: https://gerrit-review.googlesource.com/a/k8s-gerrit
+            credentials-id: gerrit.googlesource.com
+            branches:
+              - origin/{branch}
+      script-path: Jenkinsfile
