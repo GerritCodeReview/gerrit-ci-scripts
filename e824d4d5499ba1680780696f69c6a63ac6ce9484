@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5e21538_dcb45039",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-12-15T09:45:03Z",
+      "side": 1,
+      "message": "We would need a serviceuser in dockerhub that has read and write access to the k8sgerrit organization on Dockerhub. @luca.milanesio@gmail.com Do you already have a serviceuser that I could add to the organization?",
+      "revId": "e824d4d5499ba1680780696f69c6a63ac6ce9484",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
