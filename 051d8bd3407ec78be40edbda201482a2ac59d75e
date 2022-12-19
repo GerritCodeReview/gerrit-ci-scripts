@@ -69,6 +69,24 @@
       "message": "nit: the master branch could be built directly as:\n\n```\n      - \u0027plugin-{name}-bazel-{branch}\u0027:\n          branch:\n            - master\n```",
       "revId": "051d8bd3407ec78be40edbda201482a2ac59d75e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2df895cb_a9af6927",
+        "filename": "jenkins/gerrit-bazel-plugin-checks-jenkins.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2022-12-19T10:50:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5bead28c_12317bdf",
+      "revId": "051d8bd3407ec78be40edbda201482a2ac59d75e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
