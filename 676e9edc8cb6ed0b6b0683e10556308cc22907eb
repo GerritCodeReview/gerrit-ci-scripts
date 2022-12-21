@@ -22,6 +22,30 @@
       },
       "revId": "676e9edc8cb6ed0b6b0683e10556308cc22907eb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63647ec5_a395ca1f",
+        "filename": "jenkins/gerrit-bazel-plugin-events-nats.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2022-12-21T20:09:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b2ceb80_a9441e1d",
+      "range": {
+        "startLine": 4,
+        "startChar": 37,
+        "endLine": 4,
+        "endChar": 53
+      },
+      "revId": "676e9edc8cb6ed0b6b0683e10556308cc22907eb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
