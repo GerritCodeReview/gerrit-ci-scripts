@@ -1,0 +1,7 @@
+- project:
+    name: events-nats
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+      - 'plugin-{name}-verifier'
