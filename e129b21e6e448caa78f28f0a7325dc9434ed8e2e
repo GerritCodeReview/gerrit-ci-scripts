@@ -16,6 +16,24 @@
       "message": "I tried to fix build with change 337895.",
       "revId": "e129b21e6e448caa78f28f0a7325dc9434ed8e2e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f7bb40b_308ca29e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-12-26T11:25:41Z",
+      "side": 1,
+      "message": "Cool, I\u0027ve posted my comments/suggestions on it",
+      "parentUuid": "1daa9663_ab872339",
+      "revId": "e129b21e6e448caa78f28f0a7325dc9434ed8e2e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
