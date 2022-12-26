@@ -46,6 +46,30 @@
       },
       "revId": "2aa8764b207e7cdb2bafb992cd1d66cc66c8ca2f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b52b94a_a9518c36",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-12-26T11:25:13Z",
+      "side": 0,
+      "message": "I believe this could be written as:\n`for JAR in bazel-bin/plugins/owners{,-api,-autoassign}.jar`",
+      "parentUuid": "9512a4f8_cee7f262",
+      "range": {
+        "startLine": 31,
+        "startChar": 13,
+        "endLine": 31,
+        "endChar": 17
+      },
+      "revId": "2aa8764b207e7cdb2bafb992cd1d66cc66c8ca2f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
