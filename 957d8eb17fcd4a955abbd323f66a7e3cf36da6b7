@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5599dc4_8968524e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-01-02T09:29:01Z",
+      "side": 1,
+      "message": "Doesn\u0027t produce the expected artifact :-(",
+      "revId": "957d8eb17fcd4a955abbd323f66a7e3cf36da6b7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
