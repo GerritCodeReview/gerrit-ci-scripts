@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df2164a2_19779a93",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-01-09T08:37:31Z",
+      "side": 1,
+      "message": "Already installed in line 14",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 21
+      },
+      "revId": "589e6f0333b8f03242126f9db4f4febc6ac34ab8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ea0ca29_5eb2a580",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-01-09T08:37:31Z",
+      "side": 1,
+      "message": "Already installed in line 24",
+      "revId": "589e6f0333b8f03242126f9db4f4febc6ac34ab8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "293dd665_0e3bab1b",
+        "filename": "jenkins-docker/server/plugins.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-01-09T08:37:31Z",
+      "side": 0,
+      "message": "We should pin all plugins that we use, including dependencies. Plugins for which versions are not pinned, will be installed with the latest version. If we don\u0027t always use the latest Jenkins version, this will lead to incompatible versions. This already happened a lot in the past.",
+      "revId": "22496bc3566ab924ca08fc166e198e16f815eb94",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
