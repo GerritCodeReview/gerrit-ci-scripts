@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "55b5097e_5156d747",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-01-09T11:36:30Z",
+      "side": 1,
+      "message": "This is true, however I opted to keep these here as these are these are packages that docker requires [1] and I thought it made sense to keep these together rather than include them in another apt call. Granted it means this is a no-op.\n\nIf we were to optimise this Dockerfile we\u0027d probably want to run fewer apt calls anyway - until then I can put a link [1] above this section.\n\nThere are two packages here (`dirmngr` and `gpgv`) that aren\u0027t in the docs, I don\u0027t know where they come from, but I thought it was out of scope to remove\n\nWhat do you think?\n\n[1] https://docs.docker.com/engine/install/debian/#install-using-the-repository",
+      "parentUuid": "df2164a2_19779a93",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 21
+      },
+      "revId": "589e6f0333b8f03242126f9db4f4febc6ac34ab8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0ea0ca29_5eb2a580",
         "filename": "jenkins-docker/server/Dockerfile",
         "patchSetId": 8
@@ -37,6 +61,24 @@
       "writtenOn": "2023-01-09T08:37:31Z",
       "side": 1,
       "message": "Already installed in line 24",
+      "revId": "589e6f0333b8f03242126f9db4f4febc6ac34ab8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "160591a3_a6111f77",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-01-09T11:36:30Z",
+      "side": 1,
+      "message": "Same as for `ca-certificates`.",
+      "parentUuid": "0ea0ca29_5eb2a580",
       "revId": "589e6f0333b8f03242126f9db4f4febc6ac34ab8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }

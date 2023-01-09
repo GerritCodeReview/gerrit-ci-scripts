@@ -16,6 +16,24 @@
       "message": "We should pin all plugins that we use, including dependencies. Plugins for which versions are not pinned, will be installed with the latest version. If we don\u0027t always use the latest Jenkins version, this will lead to incompatible versions. This already happened a lot in the past.",
       "revId": "22496bc3566ab924ca08fc166e198e16f815eb94",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f46cc61_4882a8f1",
+        "filename": "jenkins-docker/server/plugins.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-01-09T11:36:30Z",
+      "side": 0,
+      "message": "You are right - I trusted the new plugins dependency manager would take care of this, but I agree the fact that the builds aren\u0027t deterministic isn\u0027t great.\n\nThis was done as our current plugin approach seems to have its own problems (many are broken in gerrit-ci), and updating plugins was difficult.\n\nIn order to make this build deterministic, we can change the plugin list to have two sections - one to include the required plugins (currently only 6) and another for their dependencies. This should make the build both deterministic and make it easier to bump our plugins.\n\nI\u0027ll also leave a comment in the plugins file suggesting the following approach to bump plugins:\n* Bump required plugin(s)\n* Remove transitively installed plugins\n* Build image\n* Populate transitive plugin section with updated plugins",
+      "parentUuid": "293dd665_0e3bab1b",
+      "revId": "22496bc3566ab924ca08fc166e198e16f815eb94",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
