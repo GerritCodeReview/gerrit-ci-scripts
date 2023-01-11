@@ -34,6 +34,24 @@
       "parentUuid": "293dd665_0e3bab1b",
       "revId": "22496bc3566ab924ca08fc166e198e16f815eb94",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43318566_14ef1a4b",
+        "filename": "jenkins-docker/server/plugins.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-01-11T15:22:16Z",
+      "side": 0,
+      "message": "The approach I usually take is to create a file with only the required plugins as you did, then start Jenkins, solve any potential dependency issues by manually pinning those plugins and then use the Jenkins API to get the complete list of plugins with versions [1]. That is the fastest way to get a complete set of working plugins.\nSplitting those files would also be a good idea IMO.\n\n[1] https://stackoverflow.com/a/52836951",
+      "parentUuid": "1f46cc61_4882a8f1",
+      "revId": "22496bc3566ab924ca08fc166e198e16f815eb94",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

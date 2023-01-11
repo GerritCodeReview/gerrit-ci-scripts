@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c820055_79da8bb4",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-01-11T15:22:16Z",
+      "side": 1,
+      "message": "Yeah, we can clean up later.",
+      "parentUuid": "55b5097e_5156d747",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 21
+      },
+      "revId": "589e6f0333b8f03242126f9db4f4febc6ac34ab8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0ea0ca29_5eb2a580",
@@ -79,6 +103,24 @@
       "side": 1,
       "message": "Same as for `ca-certificates`.",
       "parentUuid": "0ea0ca29_5eb2a580",
+      "revId": "589e6f0333b8f03242126f9db4f4febc6ac34ab8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6441b360_89c24d8f",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-01-11T15:22:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "160591a3_a6111f77",
       "revId": "589e6f0333b8f03242126f9db4f4febc6ac34ab8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
