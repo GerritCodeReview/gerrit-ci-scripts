@@ -16,6 +16,23 @@
       "message": "We would need a serviceuser in dockerhub that has read and write access to the k8sgerrit organization on Dockerhub. @luca.milanesio@gmail.com Do you already have a serviceuser that I could add to the organization?",
       "revId": "e824d4d5499ba1680780696f69c6a63ac6ce9484",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6104414_540fa9dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-01-12T21:26:41Z",
+      "side": 1,
+      "message": "We do need to add the credentials on the Gerrit-CI for publishing to k8s-gerrit",
+      "revId": "e824d4d5499ba1680780696f69c6a63ac6ce9484",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
