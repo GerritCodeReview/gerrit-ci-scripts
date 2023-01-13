@@ -52,6 +52,24 @@
       "parentUuid": "1f46cc61_4882a8f1",
       "revId": "22496bc3566ab924ca08fc166e198e16f815eb94",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e8405dd_103d6603",
+        "filename": "jenkins-docker/server/plugins.txt",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-01-13T15:54:31Z",
+      "side": 0,
+      "message": "Thanks for that link, it was helpful.\n\nWe\u0027ve made a change that will allow pinning the transitive plugins\u0027 versions too. I tried a couple of different approaches to make changes to plugin versions simple - the current pattern is not too painful, but in a future change we could look at automating it further, maybe by adding an additional make target so we don\u0027t need to manually edit it.",
+      "parentUuid": "43318566_14ef1a4b",
+      "revId": "22496bc3566ab924ca08fc166e198e16f815eb94",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
