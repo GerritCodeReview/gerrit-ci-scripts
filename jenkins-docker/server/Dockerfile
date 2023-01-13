@@ -51,10 +51,6 @@ COPY config.xml $JENKINS_REF
 COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 COPY jenkins.model.JenkinsLocationConfiguration.xml $JENKINS_REF
 
-COPY plugins.txt $JENKINS_REF
-RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
-RUN chown -R jenkins:jenkins $JENKINS_REF
-
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
     mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts-manual/
 
@@ -96,6 +92,10 @@ RUN set -x \
 # Set default JDK to 8
 RUN apt-get install -y openjdk-8-jdk && \
     update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+COPY plugins.txt $JENKINS_REF
+RUN cat $JENKINS_REF/plugins.txt | xargs install-plugins.sh
+RUN chown -R jenkins:jenkins $JENKINS_REF
 
 ENV DOCKER_GID=993
 
