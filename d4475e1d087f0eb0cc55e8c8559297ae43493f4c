@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "051814cd_878aa535",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 9
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-01-16T07:55:06Z",
+      "side": 1,
+      "message": "We shouldn\u0027t need this anymore",
+      "range": {
+        "startLine": 104,
+        "startChar": 0,
+        "endLine": 107,
+        "endChar": 41
+      },
+      "revId": "d4475e1d087f0eb0cc55e8c8559297ae43493f4c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
