@@ -16,6 +16,23 @@
       "message": "Removing `+1` as we still want to test this on a real instance before merging to master.",
       "revId": "2bfa38e935f7004398bd8bf583c6dc27b74231bc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a69f33c8_954b8763",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-01-17T10:20:11Z",
+      "side": 1,
+      "message": "We will merge this and run side-by-side with the current installation to confirm this works with Gerrit\u0027s CI.",
+      "revId": "2bfa38e935f7004398bd8bf583c6dc27b74231bc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
