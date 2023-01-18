@@ -9,10 +9,10 @@ from pulumi_docker import DockerBuild
 stack = pulumi.get_stack()
 
 JENKINS_SERVER_IMAGE_NAME = "jenkins-server"
-JENKINS_VERSION = "2.222.4"
-# # https://get.jenkins.io/war-stable/2.361.4/
-JENKINS_WAR_VER="2.361.4-lts"
-JENKINS_WAR_SHA="b38fe218afb5447b0c9a6fa308d7ab762ac5a58dd89aa68b735067ad6c37c17b"
+# https://get.jenkins.io/war-stable/2.375.2
+JENKINS_WAR_VER = "2.375.2-lts"
+JENKINS_WAR_SHA = "e572525f7fa43b082e22896f72570297d88daec4f36ab4f25fdadca885f95492"
+PLUGIN_FILE = "plugins.txt"
 GF_JENKINS_SERVER_VERSION = "0.1"
 
 cwd = Path(__file__).parent
@@ -23,8 +23,33 @@ backend = docker.Image(
     build=DockerBuild(context=str(build_dir),
                       args={
                           "JENKINS_WAR_VER": JENKINS_WAR_VER,
-                          "JENKINS_WAR_SHA": JENKINS_WAR_SHA
+                          "JENKINS_WAR_SHA": JENKINS_WAR_SHA,
+                          "PLUGIN_FILE": PLUGIN_FILE
                       }),
     local_image_name="gerritforge/jenkins-server:" + GF_JENKINS_SERVER_VERSION,
     image_name="gerritforge/jenkins-server:" + GF_JENKINS_SERVER_VERSION,
     skip_push=True)
+
+USE_SECURITY="false"
+JENKINS_HOME="/tmp/jenkins_home"
+OAUTH_ID="clientid"
+OAUTH_SECRET="secret"
+JENKINS_API_USER="user"
+JENKINS_API_PASSWORD="pass"
+IMAGE=f"gerritforge/{JENKINS_SERVER_IMAGE_NAME}:{GF_JENKINS_SERVER_VERSION}"
+NAME="gerrit-ci"
+DOCKER_GID=993
+
+print(f"""
+	docker run --name {NAME} -d -e USE_SECURITY={USE_SECURITY} \
+          -e OAUTH_ID={OAUTH_ID} \
+          -e OAUTH_SECRET={OAUTH_SECRET} \
+          -e JENKINS_API_USER={JENKINS_API_USER} \
+          -e JENKINS_API_PASSWORD={JENKINS_API_PASSWORD} \
+          -e DOCKER_GID={DOCKER_GID} \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          -v {JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
+          -v {JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc \
+          -v {JENKINS_HOME}/.secrets:/var/jenkins_home/.secrets \
+          --net=host {IMAGE}
+""")
