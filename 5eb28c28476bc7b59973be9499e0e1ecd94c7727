@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "332fb884_08bad736",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-01-20T07:22:02Z",
+      "side": 1,
+      "message": "In general, yes. At SAP we strongly encourage our stakeholders to use reference repos also to reduce the load on Gerrit.\nSince soon Luci will be used for Gerrit core builds/verification, I would however say that this likely does not have a high prio anymore.",
+      "parentUuid": "a9660ae3_fc1feacf",
+      "revId": "5eb28c28476bc7b59973be9499e0e1ecd94c7727",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "889601ca_d7c07a7b",
