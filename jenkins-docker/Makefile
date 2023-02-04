@@ -1,4 +1,4 @@
-AGENT_DIRS ?= agent-debian agent-chrome agent-node-wct agent-bazel-nocache agent-bazel agent-bazel-docker agent-sbt agent-mvn agent-release agent-python3 agent-jekyll agent-aws
+AGENT_DIRS ?= agent-debian agent-chrome agent-node agent-bazel-nocache agent-bazel agent-bazel-docker agent-sbt agent-mvn agent-release agent-python3 agent-jekyll agent-aws
 ALL_DIRS ?= server bazel-cache $(AGENT_DIRS)
 NO_CACHE ?= true
 

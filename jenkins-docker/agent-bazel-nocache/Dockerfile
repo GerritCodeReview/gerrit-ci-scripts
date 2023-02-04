@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-node-wct:$NODE_VER-$WCT_VER-$CHROME_VER
+FROM gerritforge/gerrit-ci-agent-node:$NODE_VER-$CHROME_VER
 
 ARG BAZEL_VER
 ARG BUILDIFIER_VER
