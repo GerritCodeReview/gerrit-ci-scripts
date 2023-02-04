@@ -10,7 +10,7 @@ build:
 	@for chrome_ver in $(CHROME_VERS); \
         do \
 		cat Dockerfile | CHROME_VER=$$chrome_ver envsubst > Dockerfile-subst ; \
-		docker build --no-cache=$(NO_CACHE) -f Dockerfile-subst -t ${IMAGE}-$$chrome_ver . ; \
+		docker build --platform=linux/amd64 --no-cache=$(NO_CACHE) -f Dockerfile-subst -t ${IMAGE}-$$chrome_ver . ; \
 	done
 
 publish:

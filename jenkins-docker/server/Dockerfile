@@ -88,8 +88,8 @@ RUN set -x \
     && wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch" \
     && wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc" \
     && export GNUPGHOME="$(mktemp -d)" \
-    && chmod +x /usr/local/bin/gosu \
-    && gosu nobody true
+    && chmod +x /usr/local/bin/gosu 
+#   && gosu nobody true
 
 # Set default JDK to 8
 RUN apt-get install -y openjdk-8-jdk && \

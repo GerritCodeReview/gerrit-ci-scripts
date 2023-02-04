@@ -5,7 +5,7 @@ IMAGE=${PREFIX}/gerrit-ci-agent-python3:$(DEBIAN_VER)
 
 build:  Dockerfile Makefile
 	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) envsubst > Dockerfile-$(DEBIAN_VER)
-	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t $(IMAGE) .
+	docker build --platform=linux/amd64 --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t $(IMAGE) .
 
 publish: build
 	docker push $(IMAGE)

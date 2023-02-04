@@ -2,14 +2,14 @@ NO_CACHE ?= false
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-debian
 MAVEN_VER=3.6.3
-GIT_VER=2.26.2
+GIT_VER=2.30.2
 DEBIAN_VER=bullseye
 
 build:  id_rsa.pub
 	@echo "Building Docker for Debian:$(DEBIAN_VER)"
 	@echo "========================================"
 	cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) MAVEN_VER=$(MAVEN_VER) GIT_VER=$(GIT_VER) envsubst > Dockerfile-$(DEBIAN_VER)
-	docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t ${IMAGE}:$(DEBIAN_VER) .
+	docker build --platform=linux/amd64 --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER) -t ${IMAGE}:$(DEBIAN_VER) .
 
 publish:
 	docker push ${IMAGE}:$(DEBIAN_VER)
