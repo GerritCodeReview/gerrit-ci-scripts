@@ -9,7 +9,7 @@ build:  Dockerfile Makefile
 	@for chrome_ver in $(CHROME_VERS); \
 	do \
 		cat Dockerfile | NODE_VER=$(NODE_VER) CHROME_VER=$$chrome_ver envsubst > Dockerfile-$(NODE_VER)-$$chrome_ver ; \
-		docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(NODE_VER)-$$chrome_ver -t $(IMAGE)-$$chrome_ver . ; \
+		docker build --platform=linux/amd64 --no-cache=$(NO_CACHE) -f Dockerfile-$(NODE_VER)-$$chrome_ver -t $(IMAGE)-$$chrome_ver . ; \
 	done
 
 publish: build

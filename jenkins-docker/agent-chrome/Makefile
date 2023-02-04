@@ -10,7 +10,7 @@ build: Makefile Dockerfile
 		echo "Building Docker for $(DEBIAN_VER) / Chrome v$$chrome_ver"; \
 		echo "========================================================"; \
 		cat Dockerfile | DEBIAN_VER=$(DEBIAN_VER) CHROME_VER=$$chrome_ver envsubst > Dockerfile-$(DEBIAN_VER)-$$chrome_ver; \
-		docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$$chrome_ver -t "$(IMAGE)-$$chrome_ver" .;  \
+		docker build --platform=linux/amd64 --no-cache=$(NO_CACHE) -f Dockerfile-$(DEBIAN_VER)-$$chrome_ver -t "$(IMAGE)-$$chrome_ver" .;  \
 	done
 
 publish:
@@ -34,4 +34,3 @@ clean:
 	done
 
 .PHONY: build publish clean
-

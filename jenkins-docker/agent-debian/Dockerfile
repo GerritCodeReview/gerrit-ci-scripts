@@ -32,15 +32,10 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     vim \
     xsltproc \
     zip \
+    git-core \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install python-jenkins
-
-ADD https://www.kernel.org/pub/software/scm/git/git-$GIT_VER.tar.gz /tmp/
-RUN tar xvfz /tmp/git-$GIT_VER.tar.gz && \
-    cd git-$GIT_VER && \
-    make prefix=/usr all install && \
-    cd .. && rm -Rf git-$GIT_VER
 
 ADD http://www-eu.apache.org/dist/maven/maven-3/$MAVEN_VER/binaries/apache-maven-$MAVEN_VER-bin.tar.gz /usr/local
 
@@ -53,8 +48,7 @@ RUN mkdir /home/jenkins/.ssh
 RUN chown -R jenkins:jenkins /home/jenkins/.ssh
 RUN chmod -R 700 /home/jenkins/.ssh
 
-COPY id_rsa.pub /home/jenkins/.ssh/authorized_keys
-RUN chown jenkins:jenkins /home/jenkins/.ssh/authorized_keys
+#RUN chown jenkins:jenkins /home/jenkins/.ssh/authorized_keys
 
 COPY gitconfig $JENKINS_REF/.gitconfig
 

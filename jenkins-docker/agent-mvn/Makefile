@@ -5,7 +5,7 @@ IMAGE=${PREFIX}/gerrit-ci-agent-mvn
 # Targets
 
 build:
-	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
+	docker build --platform=linux/amd64 --no-cache=$(NO_CACHE) -t ${IMAGE} .
 
 publish:
 	docker push ${IMAGE}

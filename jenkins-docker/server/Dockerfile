@@ -93,8 +93,8 @@ RUN set -x \
     && wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch" \
     && wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc" \
     && export GNUPGHOME="$(mktemp -d)" \
-    && chmod +x /usr/local/bin/gosu \
-    && gosu nobody true
+    && chmod +x /usr/local/bin/gosu 
+#   && gosu nobody true
 
 ARG PLUGIN_FILE
 COPY $PLUGIN_FILE $JENKINS_REF/plugins.txt

@@ -3,7 +3,7 @@ PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-jekyll
 
 build:  Dockerfile Makefile
-	docker build --no-cache=$(NO_CACHE) -f Dockerfile -t $(IMAGE) .
+	docker build --platform=linux/amd64 --no-cache=$(NO_CACHE) -f Dockerfile -t $(IMAGE) .
 
 publish: build
 	docker push $(IMAGE)

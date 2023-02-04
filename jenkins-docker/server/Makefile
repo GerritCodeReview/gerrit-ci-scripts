@@ -24,7 +24,7 @@ PLUGIN_FILE=plugins.txt
 start: build
 	-docker rm ${NAME}
 	mkdir -p ${JENKINS_HOME}/jobs
-	docker run --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
+	docker run --platform linux/amd64 --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
           -e OAUTH_ID=${OAUTH_ID} \
           -e OAUTH_SECRET=${OAUTH_SECRET} \
           -e JENKINS_API_USER=${JENKINS_API_USER} \
@@ -39,11 +39,11 @@ start: build
 start_osx:
 	-docker rm ${NAME} ${NAME}-socat
 	mkdir -p ${JENKINS_HOME}/jobs
-	docker run -d --name ${NAME}-socat \
+	docker run --platform linux/amd64 -d --name ${NAME}-socat \
           -v /var/run/docker.sock:/var/run/docker.sock \
           -p 127.0.0.1:1234:1234 \
           bobrik/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
-	docker run --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
+	docker run --platform linux/amd64 --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
           -e OAUTH_ID=${OAUTH_ID} \
           -e OAUTH_SECRET=${OAUTH_SECRET} \
           -e JENKINS_API_USER=${JENKINS_API_USER} \
@@ -56,7 +56,7 @@ start_osx:
           -p 8080:8080 ${IMAGE}
 
 build:
-	docker build --no-cache=$(NO_CACHE) \
+	docker build --platform linux/amd64 --no-cache=$(NO_CACHE) \
           --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
           --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
           --build-arg PLUGIN_FILE=$(PLUGIN_FILE) \
