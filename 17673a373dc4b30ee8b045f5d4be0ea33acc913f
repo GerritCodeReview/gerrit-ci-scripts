@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd3e30c5_98c6f84d",
+        "filename": "jenkins-docker/agent-bazel-nocache/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-04T22:15:58Z",
+      "side": 1,
+      "message": "It does not.\n\nI think we should go back to using the node debian apt repo rather than debians but that should be done in a separate change.",
+      "parentUuid": "1fa54a46_75616071",
+      "range": {
+        "startLine": 9,
+        "startChar": 9,
+        "endLine": 9,
+        "endChar": 11
+      },
+      "revId": "17673a373dc4b30ee8b045f5d4be0ea33acc913f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "17d51647_f3bfcffb",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-11-03T07:17:22Z",
       "side": 1,
       "message": "Same as with node, I think this should be updated in a dedicated change. AFAIK there are issues with tests in Gerrit 3.4-3.6 with newer Chrome versions (might be fixed by now).",
+      "range": {
+        "startLine": 5,
+        "startChar": 21,
+        "endLine": 5,
+        "endChar": 35
+      },
+      "revId": "17673a373dc4b30ee8b045f5d4be0ea33acc913f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa84a559_00136f9f",
+        "filename": "jenkins-docker/agent-chrome/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-04T22:15:58Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "17d51647_f3bfcffb",
       "range": {
         "startLine": 5,
         "startChar": 21,
@@ -70,6 +118,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cf4e4e0_1ebeb5ee",
+        "filename": "jenkins-docker/agent-release/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-04T22:15:58Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "b2b3c64b_f59f0ebf",
+      "range": {
+        "startLine": 11,
+        "startChar": 16,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "17673a373dc4b30ee8b045f5d4be0ea33acc913f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d7ad03d0_fd4415b5",
@@ -83,6 +155,30 @@
       "writtenOn": "2022-11-03T07:17:22Z",
       "side": 1,
       "message": "nit: unrelated change",
+      "range": {
+        "startLine": 13,
+        "startChar": 27,
+        "endLine": 13,
+        "endChar": 40
+      },
+      "revId": "17673a373dc4b30ee8b045f5d4be0ea33acc913f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcd5ef00_e91cc6da",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2023-02-04T22:15:58Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "d7ad03d0_fd4415b5",
       "range": {
         "startLine": 13,
         "startChar": 27,
