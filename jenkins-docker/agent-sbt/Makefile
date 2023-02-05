@@ -1,3 +1,5 @@
+include ../chrome-vers.mk
+
 NO_CACHE=false
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-bazel-sbt
