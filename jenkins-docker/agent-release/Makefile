@@ -38,10 +38,7 @@ run:
 		-v ${GIT_CONFIG}:/home/jenkins/.gitconfig.template \
 		-v ${GIT_COOKIES}:/home/jenkins/.gitcookies
 
-pull:
-	docker pull gerritforge/gerrit-ci-agent-bazel:debian-buster-nocache-latest
-
-build: pull
+build:
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
 
 publish: build
@@ -50,4 +47,4 @@ publish: build
 clean:
 	docker rmi -f ${IMAGE}
 
-.PHONY: run pull build publish clean
+.PHONY: run build publish clean
