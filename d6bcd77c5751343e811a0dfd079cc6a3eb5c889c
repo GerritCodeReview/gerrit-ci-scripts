@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6aa9e162_35f02be2",
+        "filename": "jenkins-docker/agent-mvn/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-02-06T12:19:29Z",
+      "side": 1,
+      "message": "We will need to adapt the config.xml file of the Jenkins server with the updated image names/tags",
+      "range": {
+        "startLine": 13,
+        "startChar": 69,
+        "endLine": 13,
+        "endChar": 82
+      },
+      "revId": "d6bcd77c5751343e811a0dfd079cc6a3eb5c889c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
