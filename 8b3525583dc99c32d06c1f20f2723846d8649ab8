@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1bb86f7b_13411724",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-02-07T07:52:49Z",
+      "side": 1,
+      "message": "I think this was done on purpose to ensure that no local build of the docker image is used for releasing Gerrit. Since we don\u0027t have versioned tags, it is hard to ensure that.\nAlternative solutions:\n- Add a step to delete the local image, which will enforce a pull in the FROM step\n- Add a SHA-sum to the FROM step in the Dockerfile to have a unique identifier. This would have to be updated with every release, but would also make releases more reproducible.",
+      "revId": "8b3525583dc99c32d06c1f20f2723846d8649ab8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
