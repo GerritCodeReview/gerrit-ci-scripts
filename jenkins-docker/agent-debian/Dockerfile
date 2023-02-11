@@ -34,7 +34,7 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     zip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install python-jenkins
+RUN pip install --require-hashes python-jenkins
 
 ADD https://www.kernel.org/pub/software/scm/git/git-$GIT_VER.tar.gz /tmp/
 RUN tar xvfz /tmp/git-$GIT_VER.tar.gz && \

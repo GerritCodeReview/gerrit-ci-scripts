@@ -13,7 +13,7 @@ To ensure well readable yaml-files, use yamllint [2] to lint the yaml-files.
 Yamllint can be downloaded using Python Pip:
 
 ```sh
-pip3 install yamllint
+pip3 install --require-hashes yamllint
 ```
 
 To run the linter, execute this command from the project's root directory:

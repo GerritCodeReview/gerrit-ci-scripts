@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     apt-transport-https && \
     rm -rf /var/lib/apt/lists/* && \
-    pip install pbr==2.0.0 && \
+    pip install --require-hashes pbr==2.0.0 && \
     mkdir -p /etc/jenkins_jobs && chown jenkins: /etc/jenkins_jobs
 
 RUN sed -i 's#mozilla/DST_Root_CA_X3.crt#!mozilla/DST_Root_CA_X3.crt#' /etc/ca-certificates.conf && \
@@ -34,7 +34,7 @@ RUN sed -i 's#mozilla/DST_Root_CA_X3.crt#!mozilla/DST_Root_CA_X3.crt#' /etc/ca-c
 RUN git clone https://review.opendev.org/jjb/jenkins-job-builder && \
     cd jenkins-job-builder && \
     git checkout 979770380151f99ec7b48d7d6fbd8d8d254c752c && \
-    pip install .
+    pip install --require-hashes .
 
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
