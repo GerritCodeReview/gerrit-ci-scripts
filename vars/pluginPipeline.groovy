@@ -34,6 +34,7 @@ def call(Map parm = [:]) {
     def pluginName = parm.name ?: "${env.GERRIT_PROJECT}".split('/').last()
     def formatCheck = parm.formatCheckId
     def buildCheck = parm.buildCheckId
+    def extraPlugins = parm.hasProperty("extraPlugins") ? parm.extraPlugins : []
     def pluginScmUrl = "https://gerrit.googlesource.com/a/${env.GERRIT_PROJECT}"
     def gjfVersion = '1.7'
     def javaVersion = 11
@@ -54,6 +55,7 @@ def call(Map parm = [:]) {
                         sh 'chmod 600 ~/.netrc'
                         sh "git clone -b ${env.GERRIT_BRANCH} ${pluginScmUrl}"
                         sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+			extraPlugins.each { plugin -> sh "[ -d gerrit/plugins/${plugin} ] || (git clone -b ${BRANCH_NAME} ${pluginScmBaseUrl}/${plugin} && cd gerrit/plugins && ln -sf ../../${plugin} .)" }
                     }
                 }
             }
