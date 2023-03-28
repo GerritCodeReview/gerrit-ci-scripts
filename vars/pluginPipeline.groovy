@@ -34,7 +34,9 @@ def call(Map parm = [:]) {
     def pluginName = parm.name ?: "${env.GERRIT_PROJECT}".split('/').last()
     def formatCheck = parm.formatCheckId
     def buildCheck = parm.buildCheckId
-    def pluginScmUrl = "https://gerrit.googlesource.com/a/${env.GERRIT_PROJECT}"
+    def extraPlugins = parm.hasProperty("extraPlugins") ? parm.extraPlugins : []
+    def pluginScmBaseUrl = "https://gerrit.googlesource.com/a"
+    def pluginScmUrl = "${pluginScmBaseUrl}/${env.GERRIT_PROJECT}"
     def gjfVersion = '1.7'
     def javaVersion = 11
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh ${javaVersion} && bazelisk"
@@ -54,6 +56,9 @@ def call(Map parm = [:]) {
                         sh 'chmod 600 ~/.netrc'
                         sh "git clone -b ${env.GERRIT_BRANCH} ${pluginScmUrl}"
                         sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+                        script {
+                            extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${pluginScmBaseUrl}/plugins/${plugin}" }
+                        }
                     }
                 }
             }
@@ -90,6 +95,9 @@ def call(Map parm = [:]) {
                         sh "cd plugins && ln -s ../../${pluginName} ."
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
                         sh "if [ -f ../${pluginName}/external_package.json ]; then cd plugins && ln -sf ../../${pluginName}/external_package.json package.json; fi"
+                        script {
+                            extraPlugins.each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
+                        }
                         sh "${bazeliskCmd} build plugins/${pluginName}"
                         sh "${bazeliskCmd} test --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }
