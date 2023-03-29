@@ -22,6 +22,30 @@
       },
       "revId": "bb7397b36480615f4e5bd4e55a2b5b7227de829e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55468113_e1402f61",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-03-29T21:04:04Z",
+      "side": 1,
+      "message": "When performing validation, we always target the same branch. It would be quite challenging to validate against all branches, isn\u0027t it?",
+      "parentUuid": "fdda3aa5_4604db59",
+      "range": {
+        "startLine": 58,
+        "startChar": 88,
+        "endLine": 58,
+        "endChar": 99
+      },
+      "revId": "bb7397b36480615f4e5bd4e55a2b5b7227de829e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
