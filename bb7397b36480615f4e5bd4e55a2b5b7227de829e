@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdda3aa5_4604db59",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-03-29T14:21:27Z",
+      "side": 1,
+      "message": "This branch name is the extra plugin branch name, which is not necessarily the same of the main plugin one? Or I am missing something?",
+      "range": {
+        "startLine": 58,
+        "startChar": 88,
+        "endLine": 58,
+        "endChar": 99
+      },
+      "revId": "bb7397b36480615f4e5bd4e55a2b5b7227de829e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
