@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1a87f92_430c9e13",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-03-30T14:56:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1015517c_2da86455",
+      "range": {
+        "startLine": 38,
+        "startChar": 62,
+        "endLine": 38,
+        "endChar": 69
+      },
+      "revId": "c176c3932e6bb871e1e0b4e5d94515fd0c474d61",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a8e1e652_06b34f69",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-03-30T14:54:02Z",
       "side": 1,
       "message": "+ `/plugins/`",
+      "range": {
+        "startLine": 59,
+        "startChar": 120,
+        "endLine": 59,
+        "endChar": 121
+      },
+      "revId": "c176c3932e6bb871e1e0b4e5d94515fd0c474d61",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f637893_b7302b71",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-03-30T14:56:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a8e1e652_06b34f69",
       "range": {
         "startLine": 59,
         "startChar": 120,
