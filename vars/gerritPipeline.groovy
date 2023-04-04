@@ -130,7 +130,7 @@ def queryChangedFiles(url) {
 
 def collectBuildModes() {
     Builds.modes = []
-    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[5-7]/) {
+    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[5-8]/) {
         Builds.modes = ["notedb", "rbe"]
     } else {
         throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")
@@ -160,7 +160,7 @@ def collectBuildModes() {
 }
 
 def buildVerificationJob() {
-    (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[5-7]/) ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-chrome-69"
+    (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[5-8]/) ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-chrome-69"
 }
 
 def prepareBuildsForMode(buildName, mode="notedb", retryTimes = 1) {
