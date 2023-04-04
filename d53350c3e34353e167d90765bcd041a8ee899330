@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bea4c36_0e9f7f63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-04-04T13:58:18Z",
+      "side": 1,
+      "message": "I made a mistake in approving this. Since no requirements.txt file is provided, pip can\u0027t verify the hashes and the container builds will fail :-(",
+      "revId": "d53350c3e34353e167d90765bcd041a8ee899330",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
