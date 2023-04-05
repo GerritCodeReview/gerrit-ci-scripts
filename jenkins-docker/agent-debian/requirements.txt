@@ -1,0 +1,5 @@
+python-jenkins==1.8.0 --hash=sha256:0180a5463f68e2e0110f382b4248d2284bc68481db4a16fcbf61f4f55801c31f
+
+#implicit dependencies
+multi_key_dict==2.0.3 --hash=sha256:deebdec17aa30a1c432cb3f437e81f8621e1c0542a0c0617a74f71e232e9939e
+pbr==5.11.1 --hash=sha256:567f09558bae2b3ab53cb3c1e2e33e726ff3338e7bae3db5dc954b3a44eef12b
