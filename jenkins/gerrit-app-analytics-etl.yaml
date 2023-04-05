@@ -43,6 +43,7 @@
     publishers:
       - archive:
           artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json'
+          follow-symlinks: true
 
 - project:
     name: analytics-etl

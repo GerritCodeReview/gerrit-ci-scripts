@@ -25,6 +25,7 @@
       - archive:
           artifacts: >
             bazel-bin/plugins/javamelody/javamelody.jar*,bazel-bin/plugins/javamelody/javamelody-deps_deploy.jar
+          follow-symlinks: true
 
 - project:
     name: javamelody

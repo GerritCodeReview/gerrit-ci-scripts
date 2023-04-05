@@ -34,6 +34,7 @@
       - archive:
           artifacts: >
             bazel-bin/plugins/account/account.jar*,bazel-bin/plugins/account/account.json
+          follow-symlinks: true
 
 - project:
     name: account

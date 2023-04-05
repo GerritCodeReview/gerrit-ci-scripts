@@ -25,6 +25,7 @@
       - archive:
           artifacts: >
             bazel-bin/all.zip
+          follow-symlinks: true
 
 - project:
     name: examples

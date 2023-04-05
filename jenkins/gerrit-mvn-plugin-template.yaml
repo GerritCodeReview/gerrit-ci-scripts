@@ -46,3 +46,4 @@
     publishers:
       - archive:
           artifacts: '**/target/{repo}*.jar*,**/target/{repo}*.json'
+          follow-symlinks: true

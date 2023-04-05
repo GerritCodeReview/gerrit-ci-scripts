@@ -57,6 +57,7 @@
           artifacts: >
             bazel-bin/plugins/its-{name}/its-{name}.jar*,
             bazel-bin/plugins/its-{name}/its-{name}.json
+          follow-symlinks: true
 
 - job-template:
     name: 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}'
@@ -85,3 +86,4 @@
           artifacts: >
             bazel-bin/plugins/its-{name}/its-{name}.jar*,
             bazel-bin/plugins/its-{name}/its-{name}.json
+          follow-symlinks: true

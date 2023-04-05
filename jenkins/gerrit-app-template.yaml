@@ -35,3 +35,4 @@
     publishers:
       - archive:
           artifacts: '{artifacts}'
+          follow-symlinks: true
