@@ -49,6 +49,7 @@
             gerrit/bazel-bin/*api/*api.jar,
             gerrit/bazel-bin/gerrit-acceptance-framework/*.jar
           excludes: 'gerrit/bazel-bin/plugins/core*/**/*.jar'
+          follow-symlinks: true
 
 - job-template:
     name: 'Gerrit-bazel-{branch}'

@@ -27,6 +27,7 @@
             bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*
           excludes: >
             **/*non_stamped*
+          follow-symlinks: true
 
 - job-template:
     name: 'plugin-owners-bazel-{branch}-{gerrit-branch}'
@@ -59,6 +60,7 @@
             bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*
           excludes: >
             **/*non_stamped*
+          follow-symlinks: true
 
 - project:
     name: owners

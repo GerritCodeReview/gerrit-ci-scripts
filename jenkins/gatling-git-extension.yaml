@@ -46,6 +46,7 @@
     publishers:
       - archive:
           artifacts: '**/target/**/gatling-git-extension.jar*'
+          follow-symlinks: true
 
 - project:
     name: gatling-git-sbt-{branch}

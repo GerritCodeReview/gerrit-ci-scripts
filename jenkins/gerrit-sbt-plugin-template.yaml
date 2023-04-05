@@ -46,6 +46,7 @@
     publishers:
       - archive:
           artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json'
+          follow-symlinks: true
 
 - job-template:
     name: 'plugin-{name}-sbt-{branch}-{gerrit-branch}'

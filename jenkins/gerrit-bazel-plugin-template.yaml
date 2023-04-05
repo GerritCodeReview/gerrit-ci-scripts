@@ -106,6 +106,7 @@
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
             {extra-artifacts}
+          follow-symlinks: true
 
 - job-template:
     name: 'ui-plugin-{name}-bazel-{branch}'
@@ -142,6 +143,7 @@
             bazel-bin/plugins/{name}/{name}.html,
             bazel-bin/plugins/{name}/{name}.json,
             {extra-artifacts}
+          follow-symlinks: true
 
 - job-template:
     name: 'ui-plugin-{name}-bazel-{branch}-{gerrit-branch}'
@@ -175,6 +177,7 @@
             bazel-bin/plugins/{name}/{name}.html,
             bazel-bin/plugins/{name}/{name}.json,
             {extra-artifacts}
+          follow-symlinks: true
 
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
@@ -203,6 +206,7 @@
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
             {extra-artifacts}
+          follow-symlinks: true
 
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
@@ -231,6 +235,7 @@
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
             {extra-artifacts}
+          follow-symlinks: true
 
 - job-template:
     name: 'module-{name}-bazel-{branch}'
@@ -263,6 +268,7 @@
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
             {extra-artifacts}
+          follow-symlinks: true
 
 - view-template:
     name: 'Plugins-{branch}'
