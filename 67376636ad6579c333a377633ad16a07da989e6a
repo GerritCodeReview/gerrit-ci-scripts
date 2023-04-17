@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a214f8fa_4086469f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-04-17T13:21:52Z",
+      "side": 1,
+      "message": "@luca it looks like it is building fine against master. Why we needed this?",
+      "revId": "67376636ad6579c333a377633ad16a07da989e6a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
