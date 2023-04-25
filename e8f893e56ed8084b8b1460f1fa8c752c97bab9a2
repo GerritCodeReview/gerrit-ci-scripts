@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff3815f8_2e3713ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-25T10:17:56Z",
+      "side": 1,
+      "message": "Why don\u0027t we do something more generic instead? The need to have other repos to be checked out is quite common",
+      "revId": "e8f893e56ed8084b8b1460f1fa8c752c97bab9a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
