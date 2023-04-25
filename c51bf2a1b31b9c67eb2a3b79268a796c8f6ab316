@@ -34,6 +34,23 @@
       "parentUuid": "2edc1809_33a2c62e",
       "revId": "c51bf2a1b31b9c67eb2a3b79268a796c8f6ab316",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93574224_ce2fbfe4",
+        "filename": "jenkins/gerrit-bazel-build-multi-site.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-04-25T09:30:41Z",
+      "side": 1,
+      "message": "i am bit out of context but is not bazelisk/bazel the one providing the jdk? so i wonder if that print add value.\nAs i said, i miss some context.",
+      "revId": "c51bf2a1b31b9c67eb2a3b79268a796c8f6ab316",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
