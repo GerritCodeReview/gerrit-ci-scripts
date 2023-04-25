@@ -16,6 +16,24 @@
       "message": "why do you do that?",
       "revId": "c51bf2a1b31b9c67eb2a3b79268a796c8f6ab316",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64c0115a_e0d26b57",
+        "filename": "jenkins/gerrit-bazel-build-multi-site.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-04-25T09:29:07Z",
+      "side": 1,
+      "message": "why dont you do `bazelisk clean`?",
+      "parentUuid": "2edc1809_33a2c62e",
+      "revId": "c51bf2a1b31b9c67eb2a3b79268a796c8f6ab316",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
