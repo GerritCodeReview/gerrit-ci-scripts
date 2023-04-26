@@ -22,6 +22,30 @@
       },
       "revId": "bca1b1be269ab1b208601b0f8584cc62624ad235",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b475f3d_5af5987e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-26T14:30:16Z",
+      "side": 1,
+      "message": "\u003e I thought we needed to specify the branch of the extra plugin dependency, hence this extra variable. However I don\u0027t think it will work this way.\n\u003e \n\u003e Maybe I can reuse the `{branch}` variable and add there the information about the extra plugin branch, i.e.:\n\u003e \n\u003e ```\n\u003e - project:\n\u003e     name: multi-site\n\u003e     jobs:\n\u003e       - \u0027plugin-{name}-bazel-{branch}\u0027:\n\u003e           extra-plugins-names: \"pull-replication\"\n\u003e           branch:\n\u003e             - \"master*master\"\n\u003e             - \"stable-3.5*master\"\n\u003e             - \"stable-3.6*stable-3.6\"\n\u003e             - \"stable-3.7*stable-3.6\"\n\u003e ```\n\u003e \n\u003e In this case multi site will get `pull-replication` as a dependency as follow:\n\u003e * multi-site `master` will be built against pull-replication `master`\n\u003e * multi-site `stable-3.5` will be built against pull-replication `master` \n\u003e * multi-site `stable-3.6` will be built against pull-replication `stable-3.6`\n\nI don\u0027t follow: what would be the point of a plugin for Gerrit v3.5 to depend on another plugin for Gerrit master?",
+      "parentUuid": "922a340a_57e92bb7",
+      "range": {
+        "startLine": 13,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 24
+      },
+      "revId": "bca1b1be269ab1b208601b0f8584cc62624ad235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
