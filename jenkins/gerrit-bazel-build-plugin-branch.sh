@@ -19,6 +19,17 @@ do
   fi
 done
 
+PLUGIN_SCM_BASE_URL="https://gerrit.googlesource.com/a"
+PLUGIN_BRANCHES={extra-plugins-branches}
+for extraPlugin in {extra-plugins-names}
+do
+    pushd ..
+    pluginBranch=("${PLUGIN_BRANCHES[@]:1}")
+    git clone -b ${pluginBranch} $PLUGIN_SCM_BASE_URL/plugins/$extraPlugin
+    cd plugins && ln -s ../../$extraPlugin .
+    popd
+done
+
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 java -fullversion
 bazelisk version
