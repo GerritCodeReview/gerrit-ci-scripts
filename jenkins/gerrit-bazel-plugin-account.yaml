@@ -5,6 +5,7 @@
     node: bazel-debian
     class: plugins
     project-name: plugins%2Faccount
+    extra-plugins: ''
     scm:
       - git:
           remotes:
