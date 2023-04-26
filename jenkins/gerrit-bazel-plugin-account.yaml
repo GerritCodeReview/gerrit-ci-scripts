@@ -39,6 +39,7 @@
     name: account
     jobs:
       - 'plugin-account-bazel-{branch}':
+          extra-plugins: ''
           branch:
             - master
             - stable-3.7

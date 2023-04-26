@@ -19,6 +19,16 @@ do
   fi
 done
 
+PLUGIN_SCM_BASE_URL="https://gerrit.googlesource.com/a"
+for extraPlugin in {extra-plugins}
+do
+    cd ..
+    git clone -b {branch} $PLUGIN_SCM_BASE_URL/plugins/$extraPlugin
+    cd gerrit/plugins
+    ln -s ../../$extraPlugin .
+    cd ..
+done
+
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 java -fullversion
 bazelisk version
