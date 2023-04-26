@@ -79,6 +79,7 @@
     class: plugins
     project-name: plugins%2F{name}
     extra-artifacts: ''
+    extra-plugins: ''
     scm:
       - git:
           remotes:
@@ -183,6 +184,7 @@
     description: 'Plugin {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
     extra-artifacts: ''
+    extra-plugins: ''
     scm:
       - git:
           remotes:
