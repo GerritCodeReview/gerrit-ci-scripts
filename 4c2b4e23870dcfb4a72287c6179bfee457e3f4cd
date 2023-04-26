@@ -16,6 +16,23 @@
       "message": "duplicate",
       "revId": "4c2b4e23870dcfb4a72287c6179bfee457e3f4cd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87c17ca6_d5ca0206",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-26T19:01:18Z",
+      "side": 1,
+      "message": "Duplicated at L21",
+      "revId": "4c2b4e23870dcfb4a72287c6179bfee457e3f4cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
