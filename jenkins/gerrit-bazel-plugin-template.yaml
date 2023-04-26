@@ -90,6 +90,7 @@
                 credentials-id: gerrit.googlesource.com
           branches:
             - origin/{branch}
+          extra-plugins: ''
           submodule:
             recursive: true
             parent-credentials: true
@@ -192,6 +193,7 @@
           branches:
             - '*/{branch}'
           skip-tag: true
+          extra-plugins: ''
     builders:
       - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build-plugin-branch.sh
