@@ -80,6 +80,7 @@
     name: gitblit
     jobs:
       - 'plugin-gitblit-bazel-{branch}':
+          extra-plugins: ''
           targets: plugins/gitblit
           branch:
             - master

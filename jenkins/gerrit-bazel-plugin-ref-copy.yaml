@@ -2,6 +2,7 @@
     name: ref-copy
     jobs:
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: ''
           branch:
             - main
           gerrit-branch:
