@@ -2,6 +2,7 @@
     name: zookeeper-refdb
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: ''
           targets: "plugins/{name}:{name} plugins/{name}:{name}-zk-3.5"
           branch:
             - master
@@ -9,6 +10,7 @@
             - stable-3.5
           extra-artifacts: 'bazel-bin/plugins/{name}/{name}-zk-3.5.jar'
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: ''
           targets: "plugins/{name}:{name} plugins/{name}:{name}-zk-3.5"
           branch:
             - master

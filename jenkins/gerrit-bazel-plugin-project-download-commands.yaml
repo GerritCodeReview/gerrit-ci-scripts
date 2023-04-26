@@ -2,5 +2,6 @@
     name: project-download-commands
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: ''
           branch:
             - master
