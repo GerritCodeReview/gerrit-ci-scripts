@@ -70,6 +70,30 @@
       },
       "revId": "bca1b1be269ab1b208601b0f8584cc62624ad235",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c21e54d7_43ee1a30",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-26T14:52:42Z",
+      "side": 1,
+      "message": "\u003e \u003e I don\u0027t follow: what would be the point of a plugin for Gerrit v3.5 to depend on another plugin for Gerrit master?\n\u003e \n\u003e Sorry, probably my example was misleading. Imagine the plugin you depend on only has `stable-3.7` branch, however, the main plugin, say multi-site, has `stable-3.{5,6,7}`. We will need a way to specify that we want to build multi-site `stable-3.{5,6,7}` against `stable-3.7` and `master` against `master`, isn\u0027t it?\n\nYes, and that\u0027s implicit in the branch name: I don\u0027t believe it will ever make sense to do it differently.\n\nAlso bear in mind that we also validate the incoming changes in the same way, so it will be consistent with the validation.",
+      "parentUuid": "422397b6_639623a3",
+      "range": {
+        "startLine": 13,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 24
+      },
+      "revId": "bca1b1be269ab1b208601b0f8584cc62624ad235",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
