@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a888d60c_7ba7b0c2",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-04-26T16:23:19Z",
+      "side": 1,
+      "message": "duplicate",
+      "revId": "4c2b4e23870dcfb4a72287c6179bfee457e3f4cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
