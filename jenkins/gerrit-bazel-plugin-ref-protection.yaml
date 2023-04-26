@@ -2,6 +2,7 @@
     name: ref-protection
     jobs:
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: ''
           branch:
             - master
           gerrit-branch:
