@@ -2,5 +2,6 @@
     name: rabbitmq
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: ''
           branch:
             - master

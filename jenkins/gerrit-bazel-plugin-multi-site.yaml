@@ -2,6 +2,7 @@
     name: multi-site
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: 'pull-replication'
           branch:
             - master
             - stable-3.5
