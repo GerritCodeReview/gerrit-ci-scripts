@@ -2,9 +2,11 @@
     name: audit-sl4j
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: ''
           branch:
             - master
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: ''
           branch:
             - master
           gerrit-branch:

@@ -2,11 +2,13 @@
     name: serviceuser
     jobs:
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: ''
           branch:
             - master
           gerrit-branch:
             - stable-3.7
       - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: ''
           branch:
             - master
             - stable-3.6

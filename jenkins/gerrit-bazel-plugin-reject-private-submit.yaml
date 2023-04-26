@@ -2,6 +2,7 @@
     name: reject-private-submit
     jobs:
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: ''
           branch:
             - master
           gerrit-branch:
