@@ -2,6 +2,5 @@
     name: review-strategy
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master

@@ -2,6 +2,5 @@
     name: cloud-notifications
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master

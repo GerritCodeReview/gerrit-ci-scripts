@@ -2,7 +2,6 @@
     name: high-availability
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master
             - stable-3.7
