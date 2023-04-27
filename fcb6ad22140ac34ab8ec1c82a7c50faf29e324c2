@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "949b3351_488c233c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-04-27T08:06:20Z",
+      "side": 1,
+      "message": "I thought about that, but then I see other cases, like `targets` we split it on spaces. I thought of keeping it consistent. Maybe I can move them all in a followup change? WDYT?",
+      "parentUuid": "0db6f7c3_216b4742",
+      "range": {
+        "startLine": 11,
+        "startChar": 23,
+        "endLine": 11,
+        "endChar": 58
+      },
+      "revId": "fcb6ad22140ac34ab8ec1c82a7c50faf29e324c2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1a362cb0_da707ec3",
         "filename": "jenkins/gerrit-bazel-template.yaml",
         "patchSetId": 15
