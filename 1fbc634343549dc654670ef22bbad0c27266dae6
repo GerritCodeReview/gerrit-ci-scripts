@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1093a2cc_b0920725",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 13
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-27T07:32:29Z",
+      "side": 1,
+      "message": "This doesn\u0027t look right:\n- we were in the \u0027gerrit\u0027 directory, then we did a `cd ..`\n- we cloned into `$extraPlugijn`\n\nat this point, we are not in the `gerrit` directory anymore, so the `plugins` subdirectory isn\u0027t there, unless I am missing something.",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 14
+      },
+      "revId": "1fbc634343549dc654670ef22bbad0c27266dae6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

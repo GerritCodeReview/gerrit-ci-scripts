@@ -33,6 +33,42 @@
       "message": "Duplicated at L21",
       "revId": "4c2b4e23870dcfb4a72287c6179bfee457e3f4cd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b60cafff_fb07eaba",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-27T07:32:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87c17ca6_d5ca0206",
+      "revId": "4c2b4e23870dcfb4a72287c6179bfee457e3f4cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb54fd9e_dd51bb6f",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-27T07:32:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a888d60c_7ba7b0c2",
+      "revId": "4c2b4e23870dcfb4a72287c6179bfee457e3f4cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
