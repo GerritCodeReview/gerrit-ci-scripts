@@ -16,6 +16,23 @@
       "message": "Cool, let me test the new containers.",
       "revId": "e0c046cc6adb95960c2531cebe7d1ce188b7f6cb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "378e5918_854df7e7",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-04-28T06:09:56Z",
+      "side": 1,
+      "message": "This option is not set for plugin tests? For example for code-owner verification: [1] I see the same error as referenced on the commit message, and don\u0027t see this option in bazel invocation:\n\n```\n13:55:07 INFO: Reading rc options for \u0027test\u0027 from /home/jenkins/workspace/plugin-code-owners-bazel-master/.bazelrc:\n13:55:07   Inherited \u0027build\u0027 options: --workspace_status_command\u003dpython3 ./tools/workspace_status.py --repository_cache\u003d~/.gerritcodereview/bazel-cache/repository --action_env\u003dPATH --disk_cache\u003d~/.gerritcodereview/bazel-cache/cas --java_language_version\u003d11 --java_runtime_version\u003dremotejdk_11 --tool_java_language_version\u003d11 --tool_java_runtime_version\u003dremotejdk_11 --incompatible_strict_action_env --announce_rc\n```\n\n[1] \nhttps://gerrit-ci.gerritforge.com/view/Plugins-master/job/plugin-code-owners-bazel-master/296/console",
+      "revId": "e0c046cc6adb95960c2531cebe7d1ce188b7f6cb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
