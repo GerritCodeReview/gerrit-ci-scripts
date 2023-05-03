@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef6cbcf1_88ee26da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1091982
+      },
+      "writtenOn": "2023-05-03T13:51:46Z",
+      "side": 1,
+      "message": "[Optional] mention in commit msg if the added files are auto generated? or how we came up with the content otherwise.",
+      "revId": "ac48993a3244e5a7f22e9df09b25c85967202e49",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
