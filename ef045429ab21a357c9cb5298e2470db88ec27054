@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "245f6c5a_97dc78be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1118500
+      },
+      "writtenOn": "2023-05-03T15:03:27Z",
+      "side": 1,
+      "message": "Could you, please, re-approve?\n\nI think I got it wrong first time.",
+      "revId": "ef045429ab21a357c9cb5298e2470db88ec27054",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
