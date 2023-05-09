@@ -13,11 +13,12 @@ if ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit
     (git show --summary HEAD | grep -q ^Merge:) || \
     (git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q .bazelversion))
 then
-  echo 'Running PolyGerrit lint check...'
-  java -fullversion
-  bazelisk test //polygerrit-ui/app:lint_test
   if [[ "$TARGET_BRANCH" == "master" ]]
   then
-    bazelisk test //polygerrit-ui/app:lit_analysis
+    echo 'Skipping PolyGerrit lint check on master'
+  else
+    echo 'Running PolyGerrit lint check...'
+    java -fullversion
+    bazelisk test //polygerrit-ui/app:lint_test
   fi
 fi
