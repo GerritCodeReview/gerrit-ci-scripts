@@ -142,18 +142,23 @@ def collectBuildModes() {
         it.startsWith("lib/js") }
     def bazelFiles = changedFiles.findAll { it == "WORKSPACE" || it.endsWith("BUILD") ||
         it.endsWith(".bzl") || it == ".bazelversion" }
-    if(isMerge) {
+    def onlyPolygerritChanges = !polygerritFiles.isEmpty() && changedFiles.size() == polygerritFiles.size() && bazelFiles.isEmpty()
+    
+    if (env.GERRIT_BRANCH == "master") {
+        if (onlyPolygerritChanges) {
+            println "Only PolyGerrit UI changes detected on master, skipping all test modes..."
+            Builds.modes = []
+        }
+    } else if (isMerge) {
         println "Merge commit detected, adding 'polygerrit' validation..."
         Builds.modes += "polygerrit"
-    } else if(polygerritFiles.size() > 0) {
-        if(changedFiles.size() == polygerritFiles.size() && bazelFiles.isEmpty()) {
-            println "Only PolyGerrit UI changes detected, skipping other test modes..."
-            Builds.modes = ["polygerrit"]
-        } else {
-            println "PolyGerrit UI changes detected, adding 'polygerrit' validation..."
-            Builds.modes += "polygerrit"
-        }
-    } else if(!bazelFiles.isEmpty()) {
+    } else if (onlyPolygerritChanges)  {
+        println "Only PolyGerrit UI changes detected, skipping other test modes..."
+        Builds.modes = ["polygerrit"]
+    } else if (!polygerritFiles.isEmpty()) {
+        println "PolyGerrit UI changes detected, adding 'polygerrit' validation..."
+        Builds.modes += "polygerrit"
+    } else if (!bazelFiles.isEmpty()) {
         println "Bazel files changes detected, adding 'polygerrit' validation..."
         Builds.modes += "polygerrit"
     }
