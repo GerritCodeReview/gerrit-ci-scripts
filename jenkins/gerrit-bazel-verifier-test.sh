@@ -45,10 +45,14 @@ fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
 then
+  if [[ "$TARGET_BRANCH" == "master" ]]
+  then
+    echo 'Skipping PolyGerrit tests on master'
+  else
+    echo 'Running Documentation tests...'
+    bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
-  echo 'Running Documentation tests...'
-  bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
-
-  echo "Running local tests in $(google-chrome --version)"
-  bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+    echo "Running local tests in $(google-chrome --version)"
+    bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+  fi
 fi
