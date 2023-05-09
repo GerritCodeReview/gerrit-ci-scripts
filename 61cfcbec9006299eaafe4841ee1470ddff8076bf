@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93b19e47_32176e8c",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-05-09T09:41:28Z",
+      "side": 1,
+      "message": "I believe it would be best to fail the build in this case, rather than making it succeed with just an echo command. PolyGerrit builds on master should not be verified with Jenkins from now on.\n\nWe should also change the checks configuration to NOT trigger a build on a polygerrit-only change on master.",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 46
+      },
+      "revId": "61cfcbec9006299eaafe4841ee1470ddff8076bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca05415b_0c22ec54",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-05-09T09:41:28Z",
+      "side": 1,
+      "message": "Best to fail the build in this case, as this should not happen.",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 51
+      },
+      "revId": "61cfcbec9006299eaafe4841ee1470ddff8076bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
