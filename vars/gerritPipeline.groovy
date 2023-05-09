@@ -135,7 +135,6 @@ def collectBuildModes() {
     } else {
         throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")
     }
-
     def changedFiles = queryChangedFiles(Globals.gerritUrl)
     def isMerge = changedFiles.contains("/MERGE_LIST")
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") ||
