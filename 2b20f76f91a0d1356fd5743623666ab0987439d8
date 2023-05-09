@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "06832fbc_e94834d0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-05-09T10:54:36Z",
+      "side": 1,
+      "message": "Nit: point.",
+      "range": {
+        "startLine": 13,
+        "startChar": 18,
+        "endLine": 13,
+        "endChar": 19
+      },
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "ad0f7af1_926b769f",
@@ -162,6 +185,24 @@
         "endLine": 32,
         "endChar": 53
       },
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c5611b7_4161f6d4",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-05-09T10:54:36Z",
+      "side": 1,
+      "message": "`polygerrit` mode is only activated, if only frontend files were changed. I agree with Chris, that in that case, we only need to build `polygerrit-ui/app:polygerrit_ui`.\n\nEven better, we could use RBE and use:\n\n```\n  $ bazelisk build --config\u003dremote --remote_instance_name\u003dprojects/api-project-164060093628/instances/default_instance\n```\n\nIt should only take a couple of seconds.",
+      "parentUuid": "47ab0842_1142502f",
       "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
