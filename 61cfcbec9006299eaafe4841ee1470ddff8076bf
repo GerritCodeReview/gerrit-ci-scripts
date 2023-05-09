@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fee9d6c_365ccd4b",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2023-05-09T10:39:52Z",
+      "side": 1,
+      "message": "It appears successful. I am reverting these specifics and stopping the build at top level in `gerritPipeline.groovy`.",
+      "parentUuid": "3903fdaf_ed190d39",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 46
+      },
+      "revId": "61cfcbec9006299eaafe4841ee1470ddff8076bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ca05415b_0c22ec54",
@@ -61,6 +85,30 @@
       "writtenOn": "2023-05-09T09:41:28Z",
       "side": 1,
       "message": "Best to fail the build in this case, as this should not happen.",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 51
+      },
+      "revId": "61cfcbec9006299eaafe4841ee1470ddff8076bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d3f04cd_5cdb87ac",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2023-05-09T10:39:52Z",
+      "side": 1,
+      "message": "I am reverting these specifics and stopping the build at top level in `gerritPipeline.groovy`.",
+      "parentUuid": "ca05415b_0c22ec54",
       "range": {
         "startLine": 18,
         "startChar": 4,
