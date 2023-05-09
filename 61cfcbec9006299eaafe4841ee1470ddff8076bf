@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3903fdaf_ed190d39",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2023-05-09T10:12:56Z",
+      "side": 1,
+      "message": "Thanks, I got some regex advice to try again with the SR so the V+1 and CS+1 votes are not needed on polygerrit-only changes, Change 373219.\n\nIf that is successful then I can change the gerritPipeline.groovy to not add polygerrit build mode on master branch. Is that what you mean by checks configuration or is it elsewhere?",
+      "parentUuid": "93b19e47_32176e8c",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 46
+      },
+      "revId": "61cfcbec9006299eaafe4841ee1470ddff8076bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ca05415b_0c22ec54",
         "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
         "patchSetId": 5
