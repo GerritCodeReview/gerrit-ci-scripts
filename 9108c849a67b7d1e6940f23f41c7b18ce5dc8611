@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff888cc6_b1280293",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-05-10T09:17:50Z",
+      "side": 1,
+      "message": "We still refer to Java 8 in `jenkins-docker/server/Dockerfile`.",
+      "revId": "9108c849a67b7d1e6940f23f41c7b18ce5dc8611",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
