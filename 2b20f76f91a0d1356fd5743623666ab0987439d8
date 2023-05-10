@@ -205,6 +205,24 @@
       "parentUuid": "47ab0842_1142502f",
       "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9e8a9ad_f5b66236",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-05-10T07:08:32Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "4c5611b7_4161f6d4",
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
