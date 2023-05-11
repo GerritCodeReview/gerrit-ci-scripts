@@ -5,13 +5,13 @@
 java -fullversion
 bazelisk version
 
+git checkout -f origin/{branch}
+sbt -no-colors compile test assembly
+
 git checkout -f -b gerrit-master gerrit/{branch}
 git submodule update --init
 bazelisk build api
 ./tools/maven/api.sh install
-
-git checkout -f origin/{branch}
-sbt -no-colors compile test assembly
 
 # Extract version information
 PLUGIN_JARS=$(find . -name '{name}*jar')
