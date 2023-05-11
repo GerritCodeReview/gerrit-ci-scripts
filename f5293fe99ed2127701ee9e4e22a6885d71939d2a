@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb692251_668f3857",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2023-05-11T08:45:45Z",
+      "side": 1,
+      "message": "Verified by:\nhttps://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/2240/",
+      "revId": "f5293fe99ed2127701ee9e4e22a6885d71939d2a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
