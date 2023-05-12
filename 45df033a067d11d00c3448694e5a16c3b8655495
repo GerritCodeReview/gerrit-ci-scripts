@@ -16,6 +16,41 @@
       "message": "@sven is this one ready for review?",
       "revId": "45df033a067d11d00c3448694e5a16c3b8655495",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c80c272e_5db10ea0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2023-05-12T10:36:02Z",
+      "side": 1,
+      "message": "Verified by: https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/2249/",
+      "revId": "45df033a067d11d00c3448694e5a16c3b8655495",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a25cd31d_23b83269",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2023-05-12T10:36:02Z",
+      "side": 1,
+      "message": "Yes, I was waiting to get an executor on gerrit-ci for the verification.",
+      "parentUuid": "263298aa_42c99996",
+      "revId": "45df033a067d11d00c3448694e5a16c3b8655495",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
