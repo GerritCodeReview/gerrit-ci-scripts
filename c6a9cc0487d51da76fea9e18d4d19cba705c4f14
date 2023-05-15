@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed4f76ec_066146ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-05-15T12:20:49Z",
+      "side": 1,
+      "message": "Verified builds locally. It also runs for a while on our internal CI.",
+      "revId": "c6a9cc0487d51da76fea9e18d4d19cba705c4f14",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

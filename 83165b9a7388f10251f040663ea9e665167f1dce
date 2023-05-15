@@ -50,6 +50,24 @@
       "message": "Missed --require-hashes here",
       "revId": "83165b9a7388f10251f040663ea9e665167f1dce",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "770fdbaf_61d886a0",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-05-15T12:20:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "040740f7_ebd377d2",
+      "revId": "83165b9a7388f10251f040663ea9e665167f1dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
