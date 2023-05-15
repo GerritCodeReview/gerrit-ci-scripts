@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35cdce64_89a9afea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-05-15T07:49:43Z",
+      "side": 1,
+      "message": "Ping. Without this change, the builds for the docker images are broken.",
+      "revId": "83165b9a7388f10251f040663ea9e665167f1dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
