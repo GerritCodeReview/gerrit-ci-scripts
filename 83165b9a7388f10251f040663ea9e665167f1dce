@@ -16,6 +16,23 @@
       "message": "Ping. Without this change, the builds for the docker images are broken.",
       "revId": "83165b9a7388f10251f040663ea9e665167f1dce",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64bac41f_c8d759f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-05-15T07:54:19Z",
+      "side": 1,
+      "message": "Apologies for the delay, @thomas.draebing@sap.com thanks for the fix. Can you please verify?",
+      "revId": "83165b9a7388f10251f040663ea9e665167f1dce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
