@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af39e8a2_b2fd86d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-05-16T08:26:16Z",
+      "side": 1,
+      "message": "We spotted that we still need to build the plugin api if we want to build against the unreleased tip of a branch. If we need to maintain this feature we\u0027ll need to work around it - if not we should make a conscious choice to drop it.",
+      "revId": "50ef49d3e4446617c7f6b1d6339ee6a380f861ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
