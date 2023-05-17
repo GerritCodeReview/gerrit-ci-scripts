@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6a412a0_a00ae5ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-05-17T05:08:48Z",
+      "side": 1,
+      "message": "Thanks. I\u0027ve amended the query for `Polygerrit` checker definition. So there shouldn\u0027t be any triggering for frontend only changes on Gerrit@HEAD.",
+      "revId": "e9d46bb25f146a7009c64ec20bd0b02e2545993b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
