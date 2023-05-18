@@ -1,0 +1,10 @@
+- project:
+    name: global-refdb
+    jobs:
+      - 'module-{name}-bazel-{branch}':
+          extra-plugins: ''
+          branch:
+            - master
+            - stable-3.7
+            - stable-3.6
+      - 'module-{name}-verifier'
