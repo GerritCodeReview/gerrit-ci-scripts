@@ -1,0 +1,8 @@
+- project:
+    name: global-refdb
+    jobs:
+      - 'module-{name}-bazel-{branch}':
+          extra-plugins: ''
+          branch:
+            - stable-3.4
+      - 'module-{name}-verifier'
