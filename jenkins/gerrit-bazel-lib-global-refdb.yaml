@@ -1,9 +1,0 @@
-- project:
-    name: global-refdb
-    repo: global-refdb
-    organization: GerritForge
-    branch:
-      - master
-    jobs:
-      - 'plugin-{name}-gh-bazel-{branch}':
-          extra-plugins: ''
