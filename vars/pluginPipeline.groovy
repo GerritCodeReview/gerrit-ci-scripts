@@ -35,6 +35,7 @@ def call(Map parm = [:]) {
     def formatCheck = parm.formatCheckId
     def buildCheck = parm.buildCheckId
     def extraPlugins = parm.extraPlugins ?: []
+    def extraModules = parm.extraModules ?: []
     def pluginScmBaseUrl = "https://gerrit.googlesource.com/a"
     def pluginScmUrl = "${pluginScmBaseUrl}/${env.GERRIT_PROJECT}"
     def gjfVersion = '1.7'
@@ -58,6 +59,7 @@ def call(Map parm = [:]) {
                         sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
                         script {
                             extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${pluginScmBaseUrl}/plugins/${plugin}" }
+                            extraModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${pluginScmBaseUrl}/modules/${module}" }
                         }
                     }
                 }
@@ -96,7 +98,7 @@ def call(Map parm = [:]) {
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
                         sh "if [ -f ../${pluginName}/external_package.json ]; then cd plugins && ln -sf ../../${pluginName}/external_package.json package.json; fi"
                         script {
-                            extraPlugins.each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
+                            (extraPlugins + extraModules).each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
                         }
                         sh "${bazeliskCmd} build plugins/${pluginName}"
                         sh "${bazeliskCmd} test --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
