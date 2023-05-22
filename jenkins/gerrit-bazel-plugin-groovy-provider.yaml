@@ -5,7 +5,6 @@
           extra-plugins: ''
           branch:
             - master
-            - stable-3.5
       - 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}':
           extra-plugins: ''
           branch:
