@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2abed9db_3a5f0500",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-05-22T06:01:55Z",
+      "side": 1,
+      "message": "We should archive the stable-3.5 build results and make the announcement on the mailing list.",
+      "revId": "c21b078791f0b23cd5a4237e0038639e6fc21ae5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
