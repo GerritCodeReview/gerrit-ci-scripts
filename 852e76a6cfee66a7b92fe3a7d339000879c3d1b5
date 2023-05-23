@@ -105,6 +105,23 @@
       "parentUuid": "4bca2109_c9ce6fac",
       "revId": "852e76a6cfee66a7b92fe3a7d339000879c3d1b5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ff0f974_8cbdecff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-05-23T10:28:30Z",
+      "side": 1,
+      "message": "Is this still needed? The root cause was fixed in the context of the issue 15931.",
+      "revId": "852e76a6cfee66a7b92fe3a7d339000879c3d1b5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
