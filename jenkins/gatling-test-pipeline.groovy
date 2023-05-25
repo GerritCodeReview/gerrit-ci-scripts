@@ -185,7 +185,7 @@ pipeline {
                             for (simulation in ["GerritGitSimulation", "GerritRestSimulation"]) {
                                 sh """\
                                     docker run --rm --env-file simulation.env -v gatling-results:/opt/gatling/results \
-                                    gerritforge/gatling-sbt-gerrit-test -s gerritforge.${simulation}
+                                    gerritforge/gatling-sbt-gerrit-test -s gerritforge.${simulation} --run-mode local
                                    """
                             }
                         }
