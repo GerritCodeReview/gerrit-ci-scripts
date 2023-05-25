@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1463c90_aa913d7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-05-25T15:54:12Z",
+      "side": 1,
+      "message": "Currently the CI is waiting for some input:\n\n```\nDigest: sha256:1a7c88b07c95110ea31316c02cc198715d8cdecda58590602f3d587e0651e7fd\nStatus: Downloaded newer image for gerritforge/gatling-sbt-gerrit-test:latest\nGATLING_HOME is set to /opt/gatling\nDo you want to run the simulation locally, on Gatling Enterprise, or just package it?\nType the number corresponding to your choice and press enter\n[0] \u003cQuit\u003e\n[1] Run the Simulation locally\n[2] Package and upload the Simulation to Gatling Enterprise Cloud, and run it there\n[3] Package the Simulation for Gatling Enterprise\n[4] Show help and exit\nException in thread \"main\" java.util.NoSuchElementException: next on empty iterator\n\tat scala.collection.Iterator$$anon$19.next(Iterator.scala:973)\n\tat scala.collection.Iterator$$anon$19.next(Iterator.scala:971)\n\tat scala.io.BufferedSource$BufferedLineIterator.next(BufferedSource.scala:82)\n\tat scala.io.BufferedSource$BufferedLineIterator.next(BufferedSource.scala:67)\n\tat io.gatling.bundle.BundleIO$$anon$2.readInt(BundleIO.scala:33)\n\tat io.gatling.plugin.io.input.InputChoice.inputInt(InputChoice.java:59)\n\tat io.gatling.plugin.io.input.InputChoice.inputFromList(InputChoice.java:113)\n\tat io.gatling.plugin.io.input.InputChoice.inputFromStringList(InputChoice.java:144)\n\tat io.gatling.bundle.commands.RunCommand.run(RunCommand.scala:59)\n\tat io.gatling.bundle.GatlingCLI$.main(GatlingCLI.scala:96)\n\tat io.gatling.bundle.GatlingCLI.main(GatlingCLI.scala)\n\n```",
+      "revId": "928ae8624f4c9d7871a4e766f16fd4a3ff12b408",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
