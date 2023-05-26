@@ -44,6 +44,7 @@ pipeline {
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
             string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
+            string(name: 'GATLING_DOCKER_TAG', defaultValue: 'v5b30c98', description: 'Tag for the Gatling docker image')
         }
 
        environment {
@@ -149,7 +150,7 @@ pipeline {
             }
             stage('Pull newest Gatling tests docker image') {
                 steps {
-                    sh 'docker pull gerritforge/gatling-sbt-gerrit-test:v44cd2ce'
+                    sh "docker pull gerritforge/gatling-sbt-gerrit-test:${params.GATLING_DOCKER_TAG}"
                 }
             }
 
@@ -185,7 +186,7 @@ pipeline {
                             for (simulation in ["GerritGitSimulation", "GerritRestSimulation"]) {
                                 sh """\
                                     docker run --rm --env-file simulation.env -v gatling-results:/opt/gatling/results \
-                                    gerritforge/gatling-sbt-gerrit-test -s gerritforge.${simulation} --run-mode local
+                                    gerritforge/gatling-sbt-gerrit-test:${params.GATLING_DOCKER_TAG} -s gerritforge.${simulation} --run-mode local
                                    """
                             }
                         }
