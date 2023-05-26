@@ -16,6 +16,41 @@
       "message": "Testing it here: https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/1211/console",
       "revId": "2c3dc82011552343febdc82094d88fea494465f0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43101358_6d70bcd5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2023-05-26T14:42:00Z",
+      "side": 1,
+      "message": "Tests are failing, but the",
+      "revId": "2c3dc82011552343febdc82094d88fea494465f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c209117_da778ba4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2023-05-26T14:42:00Z",
+      "side": 1,
+      "message": "Tests are failing but the docker image has been pulled correctly\n\nhttps://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/1211/consoleFull",
+      "parentUuid": "da29d01b_117dcd8e",
+      "revId": "2c3dc82011552343febdc82094d88fea494465f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
