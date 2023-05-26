@@ -33,6 +33,24 @@
       "message": "Retriggered here in local mode: https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/1208/",
       "revId": "928ae8624f4c9d7871a4e766f16fd4a3ff12b408",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b942f64c_2ea1e1cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-05-26T10:21:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e1463c90_aa913d7d",
+      "revId": "928ae8624f4c9d7871a4e766f16fd4a3ff12b408",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
