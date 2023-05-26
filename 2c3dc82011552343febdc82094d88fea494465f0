@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da29d01b_117dcd8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-05-26T12:38:51Z",
+      "side": 1,
+      "message": "Testing it here: https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/1211/console",
+      "revId": "2c3dc82011552343febdc82094d88fea494465f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
