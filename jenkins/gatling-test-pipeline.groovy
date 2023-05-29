@@ -19,7 +19,7 @@ pipeline {
             string(name: 'DOCKER_REGISTRY_URI', defaultValue: '117385740707.dkr.ecr.$(AWS_REGION).amazonaws.com', description: 'URI of the Docker registry')
             string(name: 'SSL_CERTIFICATE_ARN', defaultValue: "arn:aws:acm:us-east-1:117385740707:certificate/a43b5723-023f-4535-8705-3a4f811f1f4b", description: 'ARN of the wildcard SSL Certificate')
 
-            string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-03651689e48cde6b6", description: 'Id of the EBS volume snapshot')
+            string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-00049444e8b1c0e74", description: 'Id of the EBS volume snapshot')
 
             string(name: 'METRICS_CLOUDWATCH_NAMESPACE', defaultValue: 'jenkins', description: 'The CloudWatch namespace for Gerrit metrics')
             string(name: 'BASE_SUBDOMAIN', defaultValue: 'gerrit-demo', description: 'Name of the master sub domain')
@@ -175,6 +175,44 @@ pipeline {
                                     NUM_USERS=${params.NUM_USERS}
                                     DURATION=${params.DURATION}
                                     GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+                                    REST_RUN_ANONYMOUS_USER=true
+                                    REVIEWER_ACCOUNT=1000001
+
+                                    AbandonThenRestoreChange_PAUSE=0
+                                    AbandonThenRestoreChange_STDDEV_PAUSE=0
+
+                                    AddThenRemoveHashtags_PAUSE=0
+                                    AddThenRemoveHashtags_STDDEV_PAUSE=0
+
+                                    AddThenRemoveReviewer_PAUSE=0
+                                    AddThenRemoveReviewer_STDDEV_PAUSE=0
+
+                                    AddThenRemoveTopics_PAUSE=0
+                                    AddThenRemoveTopics_STDDEV_PAUSE=0
+
+                                    ChangePrivateState_PAUSE=0
+                                    ChangePrivateState_STDDEV_PAUSE=0
+
+                                    DeleteVote_PAUSE=0
+                                    DeleteVote_STDDEV_PAUSE=0
+
+                                    MarkChangeWIP_PAUSE=0
+                                    MarkChangeWIP_STDDEV_PAUSE=0
+
+                                    PostComment_PAUSE=0
+                                    PostComment_STDDEV_PAUSE=0
+
+                                    SubmitChange_PAUSE=0
+                                    SubmitChange_STDDEV_PAUSE=0
+
+                                    CreateTag_PAUSE=0
+                                    CreateTag_STDDEV_PAUSE=0
+
+                                    DeleteTag_PAUSE=0
+                                    DeleteTag_STDDEV_PAUSE=0
+
+                                    AddPatchset_PAUSE=0
+                                    AddPatchset_STDDEV_PAUSE=0
                                """)
                         }
                         sh "mkdir -p ${WORKSPACE}/results"
