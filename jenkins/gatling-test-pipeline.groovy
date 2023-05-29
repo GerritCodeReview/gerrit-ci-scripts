@@ -175,6 +175,44 @@ pipeline {
                                     NUM_USERS=${params.NUM_USERS}
                                     DURATION=${params.DURATION}
                                     GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+                                    REST_RUN_ANONYMOUS_USER=true
+                                    REVIEWER_ACCOUNT=1000000
+
+                                    AbandonThenRestoreChange_PAUSE=0
+                                    AbandonThenRestoreChange_STDDEV_PAUSE=0
+
+                                    AddThenRemoveHashtags_PAUSE=0
+                                    AddThenRemoveHashtags_STDDEV_PAUSE=0
+
+                                    AddThenRemoveReviewer_PAUSE=0
+                                    AddThenRemoveReviewer_STDDEV_PAUSE=0
+
+                                    AddThenRemoveTopics_PAUSE=0
+                                    AddThenRemoveTopics_STDDEV_PAUSE=0
+
+                                    ChangePrivateState_PAUSE=0
+                                    ChangePrivateState_STDDEV_PAUSE=0
+
+                                    DeleteVote_PAUSE=0
+                                    DeleteVote_STDDEV_PAUSE=0
+
+                                    MarkChangeWIP_PAUSE=0
+                                    MarkChangeWIP_STDDEV_PAUSE=0
+
+                                    PostComment_PAUSE=0
+                                    PostComment_STDDEV_PAUSE=0
+
+                                    SubmitChange_PAUSE=0
+                                    SubmitChange_STDDEV_PAUSE=0
+
+                                    CreateTag_PAUSE=0
+                                    CreateTag_STDDEV_PAUSE=0
+
+                                    DeleteTag_PAUSE=0
+                                    DeleteTag_STDDEV_PAUSE=0
+
+                                    AddPatchset_PAUSE=0
+                                    AddPatchset_STDDEV_PAUSE=0
                                """)
                         }
                         sh "mkdir -p ${WORKSPACE}/results"
