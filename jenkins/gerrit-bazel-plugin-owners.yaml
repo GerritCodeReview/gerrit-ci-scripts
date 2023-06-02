@@ -69,14 +69,14 @@
           extra-plugins: ''
           targets: 'plugins/owners plugins/owners-a*'
           branch:
-            - master
+            - stable-3.6
           gerrit-branch:
             - stable-3.8
             - stable-3.7
-            - stable-3.6
       - 'plugin-owners-bazel-{branch}':
           extra-plugins: ''
           targets: 'plugins/owners plugins/owners-a*'
           branch:
             - master
+            - stable-3.6
             - stable-3.5
