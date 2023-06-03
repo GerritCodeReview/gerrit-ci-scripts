@@ -16,6 +16,23 @@
       "message": "Verified with:\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.5/job/plugin-autosubmitter-bazel-stable-3.3-stable-3.5/1/console",
       "revId": "1d89e59bb58d069d0c3ff65233925aa1ae84cfe8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0cb8efb_16933fcd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-06-03T18:35:51Z",
+      "side": 1,
+      "message": "Approved - only question should we create a `stable-3.5` branch that points to the same commit as `stable-3.3`, so we don\u0027t have cross-version builds?",
+      "revId": "1d89e59bb58d069d0c3ff65233925aa1ae84cfe8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
