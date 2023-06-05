@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c5231b0_bd7a99bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1119195
+      },
+      "writtenOn": "2023-06-05T08:50:33Z",
+      "side": 1,
+      "message": "@luca.milanesio@gmail.com ping on this cleanup",
+      "revId": "39d70f85a1c37e1c93d8146778aa20d3816b6470",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
