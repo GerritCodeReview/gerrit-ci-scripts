@@ -16,6 +16,24 @@
       "message": "This depends on change 376035.",
       "revId": "8aea20d0502f13d239c0dd8831aa4f4569eab4d3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aabc0607_8fbab3b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-06-05T11:22:51Z",
+      "side": 1,
+      "message": "Might be worth adding a topic to link them together?",
+      "parentUuid": "54597487_beb7316d",
+      "revId": "8aea20d0502f13d239c0dd8831aa4f4569eab4d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
