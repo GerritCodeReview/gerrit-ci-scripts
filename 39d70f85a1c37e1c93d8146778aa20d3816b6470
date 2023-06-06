@@ -16,6 +16,52 @@
       "message": "@luca.milanesio@gmail.com ping on this cleanup",
       "revId": "39d70f85a1c37e1c93d8146778aa20d3816b6470",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4086f9a_2e2cc9b2",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-06-06T23:11:29Z",
+      "side": 1,
+      "message": "We should also add `\u0026\u0026 !isMerge`",
+      "range": {
+        "startLine": 145,
+        "startChar": 0,
+        "endLine": 145,
+        "endChar": 131
+      },
+      "revId": "39d70f85a1c37e1c93d8146778aa20d3816b6470",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae92160a_de5118bc",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-06-06T23:11:29Z",
+      "side": 1,
+      "message": "Why not joining into:\n\n`if (env.GERRIT_BRANCH \u003d\u003d \"master\" \u0026\u0026 onlyPolygerritChanges)`",
+      "range": {
+        "startLine": 147,
+        "startChar": 0,
+        "endLine": 148,
+        "endChar": 34
+      },
+      "revId": "39d70f85a1c37e1c93d8146778aa20d3816b6470",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
