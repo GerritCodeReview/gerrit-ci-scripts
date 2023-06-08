@@ -33,6 +33,24 @@
       "message": "@davido ;)\n```\n$ git --no-pager grep -n \u0027stable-3.5\u0027\njenkins/gerrit-bazel-plugin-autosubmitter.yaml:15:            - stable-3.5\njenkins/gerrit-bazel-plugin-healthcheck.yaml:10:            - stable-3.5\njenkins/gerrit-bazel-plugin-owners.yaml:82:            - stable-3.5\njenkins/gerrit-bazel-plugin-ref-protection.yaml:14:            - stable-3.5\njenkins/gerrit-bazel-plugin-ref-protection.yaml:21:            - stable-3.5\njenkins/gerrit-bazel-plugin-reviewers-by-blame.yaml:16:            - stable-3.5\n```",
       "revId": "22007425d03242040323520f7c30e8694a0c3c5a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9919e88_51c0702b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-06-08T05:19:31Z",
+      "side": 1,
+      "message": "Done. In `jenkins/gerrit-bazel-plugin-ref-protection.yaml` stable-3.5 is still used, to build the plugin against gerrit stable-3.6 branch. Alternatively, we could create stable-3.6 branch for this plugin.",
+      "parentUuid": "4b27eeed_6435efd8",
+      "revId": "22007425d03242040323520f7c30e8694a0c3c5a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
