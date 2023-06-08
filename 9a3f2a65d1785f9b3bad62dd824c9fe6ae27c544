@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "065265fc_36fed4fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-06-08T12:32:56Z",
+      "side": 1,
+      "message": "The build is failing with:\n\n```\nJenkinsJobsException: extra-plugins parameter missing to format[...]\n```",
+      "revId": "9a3f2a65d1785f9b3bad62dd824c9fe6ae27c544",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
