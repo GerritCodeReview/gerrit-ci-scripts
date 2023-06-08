@@ -39,6 +39,30 @@
       },
       "revId": "9a3f2a65d1785f9b3bad62dd824c9fe6ae27c544",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2dc40a1d_4a791712",
+        "filename": "jenkins/gerrit-bazel-plugin-eclipse-eca.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-06-08T13:16:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4da96e0b_85d4d33d",
+      "range": {
+        "startLine": 2,
+        "startChar": 10,
+        "endLine": 2,
+        "endChar": 28
+      },
+      "revId": "9a3f2a65d1785f9b3bad62dd824c9fe6ae27c544",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
