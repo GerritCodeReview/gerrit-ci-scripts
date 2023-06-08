@@ -1,0 +1,11 @@
+- project:
+    name: gerrit-eca-plugin
+    repo: gerrit-eca-plugin
+    organization: GerritForge
+    extra-plugins: ''
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.8
