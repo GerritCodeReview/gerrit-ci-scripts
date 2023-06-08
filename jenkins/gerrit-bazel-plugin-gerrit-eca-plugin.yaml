@@ -1,0 +1,9 @@
+- project:
+    name: gerrit-eca-plugin
+    repo: gerrit-eca-plugin
+    organization: GerritForge
+    extra-plugins: ''
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}'
