@@ -39,6 +39,30 @@
       },
       "revId": "b45f055b23a8979b55ed57a60baf08786659dcd3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd4c0a64_48bce54f",
+        "filename": "jenkins/gerrit-bazel-plugin-gerrit-eca-plugin.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-06-08T13:41:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0cb643b1_a69265aa",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 14
+      },
+      "revId": "b45f055b23a8979b55ed57a60baf08786659dcd3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
