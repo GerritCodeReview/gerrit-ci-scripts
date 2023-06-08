@@ -34,6 +34,24 @@
       "parentUuid": "f84ab24c_e2b3d9f9",
       "revId": "ac310e0a379728486af2b5ff2f0b2ad9d52487ca",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b979be0_cbfbaf8b",
+        "filename": "jenkins/gerrit-bazel-plugin-gerrit-eca-plugin.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-06-08T17:51:11Z",
+      "side": 1,
+      "message": "opppss...true. That was a silly comment 😐",
+      "parentUuid": "72a32b32_de06edd4",
+      "revId": "ac310e0a379728486af2b5ff2f0b2ad9d52487ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
