@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0cb643b1_a69265aa",
+        "filename": "jenkins/gerrit-bazel-plugin-gerrit-eca-plugin.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-06-08T13:20:29Z",
+      "side": 1,
+      "message": "Either we create a stable-3.8 branch on the plugin or we compile the master of the plugin against Gerrit stable-3.8",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 14
+      },
+      "revId": "b45f055b23a8979b55ed57a60baf08786659dcd3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
