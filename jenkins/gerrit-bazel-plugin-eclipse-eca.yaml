@@ -1,0 +1,8 @@
+- project:
+    name: gerrit-eclipse-eca
+    repo: gerrit-eclipse-eca
+    organization: GerritForge
+    branch:
+      - master
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}'
