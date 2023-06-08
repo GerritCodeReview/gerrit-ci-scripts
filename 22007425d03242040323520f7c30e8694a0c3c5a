@@ -51,6 +51,24 @@
       "parentUuid": "4b27eeed_6435efd8",
       "revId": "22007425d03242040323520f7c30e8694a0c3c5a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b57b9d94_784c429f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-06-08T06:56:18Z",
+      "side": 1,
+      "message": "I would say that is fine. 👍",
+      "parentUuid": "e9919e88_51c0702b",
+      "revId": "22007425d03242040323520f7c30e8694a0c3c5a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
