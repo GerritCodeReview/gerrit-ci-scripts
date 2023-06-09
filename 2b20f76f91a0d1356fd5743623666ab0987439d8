@@ -60,6 +60,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "49e96c6a_1af18ec2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-06-09T04:50:53Z",
+      "side": 1,
+      "message": "My understanding is, that currently frontend verification taks places on LUCI.\n\nAnd that something similar to: `$ bazel build polygerrit-ui/app:polygerrit_ui`\n\nin which case we wouldn\u0027t need this change.\n\n@Chris, @Ben, can you please confirm?",
+      "parentUuid": "41f4abfe_d9c2f412",
+      "revId": "2b20f76f91a0d1356fd5743623666ab0987439d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6d9b4fdf_d319bf06",
         "filename": "jenkins/gerrit-bazel-build.sh",
         "patchSetId": 1
