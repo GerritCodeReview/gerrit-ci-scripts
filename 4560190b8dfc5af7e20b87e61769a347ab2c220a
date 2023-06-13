@@ -39,6 +39,30 @@
       },
       "revId": "4560190b8dfc5af7e20b87e61769a347ab2c220a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e73f71cb_73e07cc7",
+        "filename": "jenkins/gerrit-bazel-plugin-lfs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-06-13T18:32:42Z",
+      "side": 1,
+      "message": "Totally agree to define jobs similar across different plugins. Thanks for suggesting. Done.",
+      "parentUuid": "0db54104_0ae2afac",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "4560190b8dfc5af7e20b87e61769a347ab2c220a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
