@@ -16,6 +16,29 @@
       "message": "Verified that the jobs are generated as expected.",
       "revId": "4560190b8dfc5af7e20b87e61769a347ab2c220a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0db54104_0ae2afac",
+        "filename": "jenkins/gerrit-bazel-plugin-lfs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-06-13T08:13:20Z",
+      "side": 1,
+      "message": "nit: how about building on stable branches the same way we do for the other plugins? IOW it would look like that\n```\njobs:\n  - \u0027plugin-{name}-bazel-{branch}\u0027:\n    branch:\n      - master\n      - stable-3.6\n  - \u0027plugin-{name}-bazel-{branch}-{gerrit-branch}\u0027:\n    branch:\n      - master\n    gerrit-branch:\n      - stable-3.8\n  - \u0027plugin-{name}-bazel-{branch}-{gerrit-branch}\u0027:\n    branch:\n      - stable-3.6\n    gerrit-branch:\n      - stable-3.7\n```\nWDYT?",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "4560190b8dfc5af7e20b87e61769a347ab2c220a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
