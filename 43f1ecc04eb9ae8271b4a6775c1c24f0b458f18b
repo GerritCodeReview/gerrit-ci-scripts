@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "298b9b62_3a578766",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-06-13T18:38:02Z",
+      "side": 1,
+      "message": "Verified, that 4 jobs are generated ax expected.",
+      "revId": "43f1ecc04eb9ae8271b4a6775c1c24f0b458f18b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
