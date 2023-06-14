@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac9fa2bb_c0070798",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-06-14T21:11:06Z",
+      "side": 1,
+      "message": "Builds are red: we do need two more fixes, see below.\n\n- Change 376994, Fix plugin name\n- Change 376995, Fix test dependencies",
+      "revId": "8b874790a8d24e8fe3d815af16f461773ad431b7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
