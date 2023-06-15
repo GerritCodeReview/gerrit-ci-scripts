@@ -34,6 +34,23 @@
       "parentUuid": "ac9fa2bb_c0070798",
       "revId": "8b874790a8d24e8fe3d815af16f461773ad431b7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95b756df_3352eb4d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-06-15T05:37:13Z",
+      "side": 1,
+      "message": "With those fixes the builds are now green.",
+      "revId": "8b874790a8d24e8fe3d815af16f461773ad431b7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
