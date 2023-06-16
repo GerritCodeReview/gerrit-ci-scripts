@@ -22,6 +22,30 @@
       },
       "revId": "6560150309804161e7b5032997ecfb9b4099efd0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a5bf444_4a2dcb62",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 6
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2023-06-16T10:44:05Z",
+      "side": 1,
+      "message": "Yes, I think this was true by default anyway.",
+      "parentUuid": "d1ac5be6_36e4f965",
+      "range": {
+        "startLine": 178,
+        "startChar": 36,
+        "endLine": 178,
+        "endChar": 64
+      },
+      "revId": "6560150309804161e7b5032997ecfb9b4099efd0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
