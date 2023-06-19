@@ -34,6 +34,23 @@
       "parentUuid": "568431dc_3ec959b7",
       "revId": "9360fdf585c465f0fed7568bbe41cdd91e64b30f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b05110d9_7ec10c78",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-06-19T11:01:07Z",
+      "side": 1,
+      "message": "Are we doing this for any particular plugins? Maybe we should explain that in the description?",
+      "revId": "9360fdf585c465f0fed7568bbe41cdd91e64b30f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
