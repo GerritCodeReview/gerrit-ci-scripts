@@ -16,6 +16,24 @@
       "message": "We still need to add the empty extraModules on all other jobs",
       "revId": "9360fdf585c465f0fed7568bbe41cdd91e64b30f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef599ba2_7f7d7a6e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-06-19T08:59:15Z",
+      "side": 1,
+      "message": "Do you mean in all the `jenkins/gerrit-*.sh` jobs?",
+      "parentUuid": "568431dc_3ec959b7",
+      "revId": "9360fdf585c465f0fed7568bbe41cdd91e64b30f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
