@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a5c7f8b_cd8d766e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-06-20T19:24:03Z",
+      "side": 1,
+      "message": "@Matthias this plugin allows to keep 100% compatibility with all incoming change-number-only URLs pointing to eclipse.gerrithub.io.",
+      "revId": "f969ba81657dd92ee49842a8d2237f7324eda729",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
