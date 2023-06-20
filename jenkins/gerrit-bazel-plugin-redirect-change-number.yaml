@@ -1,0 +1,12 @@
+- project:
+    name: redirect-change-number
+    repo: redirect-change-number
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: ''
+          branch:
+            - main
+          gerrit-branch:
+            - master
+            - stable-3.8
