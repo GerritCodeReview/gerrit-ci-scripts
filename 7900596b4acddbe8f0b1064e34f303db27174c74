@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0782e30c_f72d0a7a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2023-06-26T09:25:23Z",
+      "side": 1,
+      "message": "Looks like the hash I used only works for arm64 (I verified it on my M1). We should modify the Makefile(s) to always build for linux/amd64.",
+      "revId": "7900596b4acddbe8f0b1064e34f303db27174c74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
