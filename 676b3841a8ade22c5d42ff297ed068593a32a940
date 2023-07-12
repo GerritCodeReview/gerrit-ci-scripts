@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00621790_47dbc64a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-07-12T08:31:36Z",
+      "side": 1,
+      "message": "I believe we need 3.8 branch for ES to build this. @Luca can you create it?",
+      "revId": "676b3841a8ade22c5d42ff297ed068593a32a940",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
