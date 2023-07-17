@@ -16,6 +16,24 @@
       "message": "Is 3.8 missing on purpose ?",
       "revId": "6fdad7f151e945ae1958aaf13e3041fc84f9fe50",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "363a5ce1_964d99a5",
+        "filename": "jenkins/gerrit-bazel-module-global-refdb.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-07-17T18:04:42Z",
+      "side": 1,
+      "message": "There is no stable-3.8 branch",
+      "parentUuid": "73f107e6_c6ae68fe",
+      "revId": "6fdad7f151e945ae1958aaf13e3041fc84f9fe50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
