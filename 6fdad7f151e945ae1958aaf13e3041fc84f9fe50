@@ -34,6 +34,24 @@
       "parentUuid": "73f107e6_c6ae68fe",
       "revId": "6fdad7f151e945ae1958aaf13e3041fc84f9fe50",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90e444c6_600b9bc8",
+        "filename": "jenkins/gerrit-bazel-module-global-refdb.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-07-17T18:04:54Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "363a5ce1_964d99a5",
+      "revId": "6fdad7f151e945ae1958aaf13e3041fc84f9fe50",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
