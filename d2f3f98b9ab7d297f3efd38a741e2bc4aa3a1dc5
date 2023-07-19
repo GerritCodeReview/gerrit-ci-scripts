@@ -16,6 +16,23 @@
       "message": "Can we enable the Gerrit-CI again on PolyGerrit until the LUCI validation is complete? See [1] broke the build but it was validated by LUCI in [2].\n\n[1] https://gerrit-review.googlesource.com/c/gerrit/+/380094\n[2] https://ci.chromium.org/ui/p/gerrit/builders/try/Verify%20gerrit%20CL/b8775136621048500449/overview",
       "revId": "d2f3f98b9ab7d297f3efd38a741e2bc4aa3a1dc5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c468392_be0b50e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-07-19T19:25:22Z",
+      "side": 1,
+      "message": "Let\u0027s wait until tomorrow before merging this, so that we get Frank\u0027s and Chris\u0027s view on the approach. Maybe the LUCI fix is as quick as this revert.",
+      "revId": "d2f3f98b9ab7d297f3efd38a741e2bc4aa3a1dc5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
