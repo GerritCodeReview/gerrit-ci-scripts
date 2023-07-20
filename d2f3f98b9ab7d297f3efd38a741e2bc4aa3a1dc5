@@ -33,6 +33,24 @@
       "message": "Let\u0027s wait until tomorrow before merging this, so that we get Frank\u0027s and Chris\u0027s view on the approach. Maybe the LUCI fix is as quick as this revert.",
       "revId": "d2f3f98b9ab7d297f3efd38a741e2bc4aa3a1dc5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a651bfd_a350cef8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1139611
+      },
+      "writtenOn": "2023-07-20T09:15:22Z",
+      "side": 1,
+      "message": "@frankborden@google.com How much work is it to turn on a bazel build for luci?",
+      "parentUuid": "4c468392_be0b50e8",
+      "revId": "d2f3f98b9ab7d297f3efd38a741e2bc4aa3a1dc5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
