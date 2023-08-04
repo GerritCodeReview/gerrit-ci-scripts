@@ -22,6 +22,30 @@
       },
       "revId": "dd84ddfbcb3ed91edd6d20ceae0db02b915f39c2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20a271c0_64c6044a",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1157810
+      },
+      "writtenOn": "2023-08-04T05:55:35Z",
+      "side": 1,
+      "message": "Are you sure? Because I based my change on this template: https://gerrit.googlesource.com/gerrit-ci-scripts/+/refs/heads/master/jenkins/gerrit-bazel-plugin-lfs.yaml",
+      "parentUuid": "25feaf22_0def280e",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 39
+      },
+      "revId": "dd84ddfbcb3ed91edd6d20ceae0db02b915f39c2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
