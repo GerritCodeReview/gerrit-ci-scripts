@@ -6,18 +6,12 @@
           targets: "plugins/{name}:{name} plugins/{name}:{name}-zk-3.5"
           branch:
             - stable-3.6
+            - stable-3.7
+            - stable-3.8
           extra-artifacts: 'bazel-bin/plugins/{name}/{name}-zk-3.5.jar'
       - 'plugin-{name}-bazel-{branch}':
           extra-plugins: ''
           targets: "plugins/{name}:{name}"
           branch:
             - master
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          extra-plugins: ''
-          targets: "plugins/{name}:{name}"
-          branch:
-            - master
-          gerrit-branch:
-            - stable-3.7
-            - stable-3.8
       - 'plugin-{name}-verifier'
