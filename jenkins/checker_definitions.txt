@@ -27,7 +27,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "name": "PolyGerrit UI Tests",
     "description": "Executes unit/integration tests for PolyGerrit UI",
     "repository": "gerrit",
-    "query": "(dir:polygerrit-ui OR file:WORKSPACE) AND (branch:stable-3.6 OR branch:stable-3.7 OR branch:stable-3.8)",
+    "query": "(dir:polygerrit-ui OR file:WORKSPACE) AND (branch:stable-3.6 OR branch:stable-3.7 OR branch:stable-3.8 OR branch:master)",
     "blocking": []
   }
 
