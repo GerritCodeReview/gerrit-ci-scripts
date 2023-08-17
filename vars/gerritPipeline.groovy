@@ -162,11 +162,6 @@ def collectBuildModes() {
         println "Bazel files changes detected, adding 'polygerrit' validation..."
         Builds.modes += "polygerrit"
     }
-
-    // PolyGerrit changes are now verified with LUCI, no need for a "polygerrit" mode
-    if (env.GERRIT_BRANCH == "master") {
-        Builds.modes -= "polygerrit"
-    }
 }
 
 def buildVerificationJob() {
