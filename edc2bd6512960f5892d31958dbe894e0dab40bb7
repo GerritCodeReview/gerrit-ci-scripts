@@ -90,6 +90,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "91e22d69_3f076bc5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2023-09-05T22:30:09Z",
+      "side": 1,
+      "message": "done here: https://gerrit-review.googlesource.com/c/plugins/spanner-refdb/+/385299",
+      "parentUuid": "6e65a878_1648a68c",
+      "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "036766dc_64307795",
