@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6e65a878_1648a68c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-05T21:45:46Z",
+      "side": 1,
+      "message": "The only important bit is that the prefix is `gerritforge:` because that\u0027s the one filtered by gerrit-ci.gerritforge.com.\n\nThe common pipeline performs:\n- code-style check with GJF\n- build validation\n\nFor the two above, you need two checks defined.",
+      "parentUuid": "15a8ed62_64b71462",
+      "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "036766dc_64307795",
         "filename": "jenkins/gerrit-bazel-plugin-spanner-refdb.yaml",
         "patchSetId": 2
