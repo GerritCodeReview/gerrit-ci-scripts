@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "743fafa5_8a8fd1ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-05T15:43:34Z",
+      "side": 1,
+      "message": "The jobs are created, but the build fails with:\n```\n00:04:41.269 plugins/spanner-refdb/src/test/java/com/googlesource/gerrit/plugins/spannerrefdb/SpannerEmulatorContainer.java:165: error: unreported exception IOException; must be caught or declared to be thrown\n00:04:41.269     Configuration spannerConfig \u003d new Configuration(cfgFactory, pluginName);\n00:04:41.269                                   ^\n00:04:41.372 INFO: Elapsed time: 23.433s, Critical Path: 16.56s\n00:04:41.372 INFO: 161 processes: 15 internal, 69 linux-sandbox, 77 worker.\n00:04:41.372 FAILED: Build did NOT complete successfully\n00:04:41.403 //plugins/spanner-refdb:spanner-refdb_tests                     FAILED TO BUILD\n```",
+      "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
