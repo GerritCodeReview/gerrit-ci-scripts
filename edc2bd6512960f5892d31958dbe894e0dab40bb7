@@ -34,6 +34,41 @@
       "parentUuid": "743fafa5_8a8fd1ef",
       "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4d33e51_5bdcd78b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-05T20:25:14Z",
+      "side": 1,
+      "message": "\u003e Fix for this compile error:\n\u003e https://gerrit-review.googlesource.com/c/plugins/spanner-refdb/+/385335\n\u003e \n\u003e Could we submit this change so that other changes for this plugin get validated by the CI ?\n\n+1, I\u0027ve suggested to add the verifier as well. You should then add a `Jenkinsfile` on the root of the project, similar to [1]. The checks should then be defined on gerrit-review manually, but I can do that for you.\n\n[1] https://gerrit.googlesource.com/plugins/aws-dynamodb-refdb/+/refs/heads/master/Jenkinsfile",
+      "parentUuid": "8d6f2a34_99b0ea56",
+      "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "036766dc_64307795",
+        "filename": "jenkins/gerrit-bazel-plugin-spanner-refdb.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-05T20:25:14Z",
+      "side": 1,
+      "message": "add the `- \u0027plugin-{name}-verifier\u0027` job as well, so that incoming changes can be validated on the CI",
+      "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
