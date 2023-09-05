@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "15a8ed62_64b71462",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2023-09-05T21:30:53Z",
+      "side": 1,
+      "message": "what\u0027s the syntax/naming convention for ids in the Jenkinsfile ?",
+      "parentUuid": "e4d33e51_5bdcd78b",
+      "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "036766dc_64307795",
         "filename": "jenkins/gerrit-bazel-plugin-spanner-refdb.yaml",
         "patchSetId": 2
@@ -67,6 +85,24 @@
       "writtenOn": "2023-09-05T20:25:14Z",
       "side": 1,
       "message": "add the `- \u0027plugin-{name}-verifier\u0027` job as well, so that incoming changes can be validated on the CI",
+      "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0741b192_e19cf647",
+        "filename": "jenkins/gerrit-bazel-plugin-spanner-refdb.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2023-09-05T21:30:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "036766dc_64307795",
       "revId": "edc2bd6512960f5892d31958dbe894e0dab40bb7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
