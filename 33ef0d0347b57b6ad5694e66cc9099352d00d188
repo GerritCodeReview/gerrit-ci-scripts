@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c618a84_2196060e",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-08T09:36:22Z",
+      "side": 1,
+      "message": "It looks like this option isn\u0027t supported by Bazel?\n\nSee the failure at:\nhttps://gerrit-ci.gerritforge.com/job/plugin-spanner-refdb-verifier/job/80%252F385580%252F1/3/console",
+      "range": {
+        "startLine": 42,
+        "startChar": 81,
+        "endLine": 42,
+        "endChar": 107
+      },
+      "revId": "33ef0d0347b57b6ad5694e66cc9099352d00d188",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
