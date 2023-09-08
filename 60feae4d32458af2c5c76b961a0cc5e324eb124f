@@ -51,6 +51,24 @@
       "message": "You should link to https://github.com/bazelbuild/bazel/issues/3236 which has more  details of the investigations the bazel team did for this issue.\n\nThere they say that the problem was fixed in OpenJDK in https://github.com/openjdk/jdk/commit/84f23149e22561173feb0e34bca31a7345b43c89\nInterestingly this fix was done by a colleague in the sapmachine team whose office is close to mine :-)\n\nI can ask him if the fix already reached a release and in which Java versions it is available.",
       "revId": "60feae4d32458af2c5c76b961a0cc5e324eb124f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4674b076_7ca11531",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-08T11:56:39Z",
+      "side": 1,
+      "message": "Wow, amazing ! That would be 😎",
+      "parentUuid": "b0a12865_ec79ab9b",
+      "revId": "60feae4d32458af2c5c76b961a0cc5e324eb124f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
