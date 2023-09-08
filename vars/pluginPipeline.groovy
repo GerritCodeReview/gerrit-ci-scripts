@@ -40,6 +40,7 @@ def call(Map parm = [:]) {
     def gjfVersion = '1.7'
     def javaVersion = 11
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh ${javaVersion} && bazelisk"
+    def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')
     echo "Change : ${env.GERRIT_CHANGE_NUMBER}/${GERRIT_PATCHSET_NUMBER} '${env.GERRIT_CHANGE_SUBJECT}'"
@@ -98,8 +99,8 @@ def call(Map parm = [:]) {
                         script {
                             extraPlugins.each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
                         }
-                        sh "${bazeliskCmd} build plugins/${pluginName}"
-                        sh "${bazeliskCmd} test --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
+                        sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}"
+                        sh "${bazeliskCmd} test -${bazeliskOptions} -test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }
                 }
         }
