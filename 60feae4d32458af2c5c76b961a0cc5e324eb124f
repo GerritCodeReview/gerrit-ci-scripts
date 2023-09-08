@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "57678fe1_f5dce357",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2023-09-08T10:55:38Z",
+      "side": 1,
+      "message": "according to [this page](https://bazel.build/reference/command-line-reference), this is a build option as it is listed under the \"Build Options\"",
+      "parentUuid": "53a68077_f9c19e48",
+      "revId": "60feae4d32458af2c5c76b961a0cc5e324eb124f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b0a12865_ec79ab9b",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
