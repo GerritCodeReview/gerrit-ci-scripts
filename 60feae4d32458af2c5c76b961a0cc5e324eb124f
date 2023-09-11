@@ -123,6 +123,24 @@
       "parentUuid": "b2b6215f_b0434933",
       "revId": "60feae4d32458af2c5c76b961a0cc5e324eb124f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d346197_41b94267",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2023-09-11T12:44:36Z",
+      "side": 1,
+      "message": "it seems debian buster is still using 11.0.18 https://packages.debian.org/buster/openjdk-11-jre",
+      "parentUuid": "84c10c04_cedb5a66",
+      "revId": "60feae4d32458af2c5c76b961a0cc5e324eb124f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
