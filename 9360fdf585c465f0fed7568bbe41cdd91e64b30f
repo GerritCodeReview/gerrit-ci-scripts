@@ -51,6 +51,42 @@
       "message": "Are we doing this for any particular plugins? Maybe we should explain that in the description?",
       "revId": "9360fdf585c465f0fed7568bbe41cdd91e64b30f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33ad28a2_1ed0c91a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-14T20:09:23Z",
+      "side": 1,
+      "message": "Well, it can be for many of them now and more in the future.",
+      "parentUuid": "b05110d9_7ec10c78",
+      "revId": "9360fdf585c465f0fed7568bbe41cdd91e64b30f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "843cb2d1_703944e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-14T20:09:23Z",
+      "side": 1,
+      "message": "Nope, I was wrong: in this case there is a default to empty modules list, so we are good.",
+      "parentUuid": "ef599ba2_7f7d7a6e",
+      "revId": "9360fdf585c465f0fed7568bbe41cdd91e64b30f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
