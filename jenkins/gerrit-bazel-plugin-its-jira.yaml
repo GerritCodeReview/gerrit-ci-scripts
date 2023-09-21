@@ -2,7 +2,6 @@
     name: jira
     jobs:
       - 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}':
-          extra-plugins: ''
           branch:
             - master
           gerrit-branch:
@@ -11,7 +10,6 @@
             - stable-3.6
           targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'
       - 'plugin-its-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master
           targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'

@@ -2,6 +2,5 @@
     name: metrics-reporter-jmx
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master

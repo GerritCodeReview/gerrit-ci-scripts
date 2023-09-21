@@ -1,6 +1,5 @@
 - project:
     name: lfs
-    extra-plugins: ''
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           branch:

@@ -66,7 +66,6 @@
     name: owners
     jobs:
       - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
-          extra-plugins: ''
           targets: 'plugins/owners plugins/owners-a*'
           branch:
             - stable-3.6
@@ -74,7 +73,6 @@
             - stable-3.8
             - stable-3.7
       - 'plugin-owners-bazel-{branch}':
-          extra-plugins: ''
           targets: 'plugins/owners plugins/owners-a*'
           branch:
             - master

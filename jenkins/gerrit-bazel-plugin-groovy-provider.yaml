@@ -2,11 +2,9 @@
     name: groovy-provider
     jobs:
       - 'plugin-scripting-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master
       - 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}':
-          extra-plugins: ''
           branch:
             - master
           gerrit-branch:
