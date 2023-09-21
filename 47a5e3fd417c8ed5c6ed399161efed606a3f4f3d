@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5fd19b1a_a798c852",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-21T20:06:45Z",
+      "side": 1,
+      "message": "Good point, let me do it.",
+      "parentUuid": "8c9b3a9e_72afd744",
+      "revId": "47a5e3fd417c8ed5c6ed399161efed606a3f4f3d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "972105a6_0fdf5e3a",
         "filename": "jenkins-docker/server/jenkins_jobs.ini",
         "patchSetId": 1
@@ -31,6 +49,24 @@
       "writtenOn": "2023-09-21T09:41:09Z",
       "side": 1,
       "message": "Nice one!",
+      "revId": "47a5e3fd417c8ed5c6ed399161efed606a3f4f3d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa85a154_bc286f0b",
+        "filename": "jenkins-docker/server/jenkins_jobs.ini",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-21T20:06:45Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "972105a6_0fdf5e3a",
       "revId": "47a5e3fd417c8ed5c6ed399161efed606a3f4f3d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
