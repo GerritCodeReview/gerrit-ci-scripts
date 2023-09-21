@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c9b3a9e_72afd744",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-09-21T09:41:09Z",
+      "side": 1,
+      "message": "I think we could also remove `extra-artifacts`:\n\n```\n\u003e git grep \"\u0027\u0027\" | grep -v extra-plugin\njenkins/gatling-test-pipeline.groovy:def accountCookie \u003d \u0027\u0027\njenkins/gatling-test-pipeline.groovy:def xsrfToken \u003d \u0027\u0027\njenkins/gatling-test-pipeline.groovy:            string(name: \u0027GIT_HTTP_USERNAME\u0027, defaultValue: \u0027\u0027, description: \u0027Username for Git/HTTP testing, use vault by default\u0027)\njenkins/gatling-test-pipeline.groovy:            password(name: \u0027GIT_HTTP_PASSWORD\u0027, defaultValue: \u0027\u0027, description: \u0027Password for Git/HTTP testing, use vault by default\u0027)\njenkins/gatling-test-pipeline.groovy:            string(name: \u0027LDAP_LOGIN_USERNAME\u0027, defaultValue: \u0027\u0027, description: \u0027The login identity to acquire a valid cookie, use vault by default\u0027)\njenkins/gatling-test-pipeline.groovy:            password(name: \u0027LDAP_LOGIN_PASSWORD\u0027, defaultValue: \u0027\u0027, description: \u0027The login identity password, use vault by default\u0027)\njenkins/gatling-test-pipeline.groovy:                script: \u0027/sbin/ip route|awk \\\u0027/default/ {print \"tcp://\"\\$3\":2375\"}\\\u0027\u0027\njenkins/gerrit-bazel-plugin-examples.yaml:    targets: \u0027\u0027\njenkins/gerrit-bazel-plugin-template.yaml:    extra-artifacts: \u0027\u0027\njenkins/gerrit-bazel-plugin-template.yaml:    extra-artifacts: \u0027\u0027\njenkins/gerrit-bazel-plugin-template.yaml:    extra-artifacts: \u0027\u0027\njenkins/gerrit-bazel-plugin-template.yaml:    extra-artifacts: \u0027\u0027\njenkins/gerrit-bazel-plugin-template.yaml:    extra-artifacts: \u0027\u0027\njenkins/gerrit-bazel-plugin-template.yaml:    extra-artifacts: \u0027\u0027\nvars/pluginPipeline.groovy:    echo \"St\n\n```",
+      "revId": "47a5e3fd417c8ed5c6ed399161efed606a3f4f3d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "972105a6_0fdf5e3a",
+        "filename": "jenkins-docker/server/jenkins_jobs.ini",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-09-21T09:41:09Z",
+      "side": 1,
+      "message": "Nice one!",
+      "revId": "47a5e3fd417c8ed5c6ed399161efed606a3f4f3d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
