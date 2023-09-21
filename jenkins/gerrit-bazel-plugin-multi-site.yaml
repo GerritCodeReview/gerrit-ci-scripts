@@ -3,6 +3,7 @@
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           extra-plugins: 'pull-replication'
+          extra-modules: 'events-broker'
           branch:
             - master
             - stable-3.6

@@ -29,6 +29,15 @@ do
     ln -s ../../$extraPlugin .
     popd
 done
+for extraModule in {extra-modules}
+do
+    pushd ..
+    git clone -b {branch} $PLUGIN_SCM_BASE_URL/modules/$extraModule
+    popd
+    pushd modules
+    ln -s ../../$extraModule .
+    popd
+done
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 java -fullversion
