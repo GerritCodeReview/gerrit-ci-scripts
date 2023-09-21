@@ -2,12 +2,10 @@
     name: simple-submit-rules
     jobs:
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          extra-plugins: ''
           branch:
             - master
           gerrit-branch:
             - stable-3.6
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master

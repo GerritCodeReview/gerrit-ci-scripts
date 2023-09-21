@@ -2,11 +2,9 @@
     name: cached-refdb
     jobs:
       - 'module-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master
       - 'module-{name}-bazel-{branch}-{gerrit-branch}':
-          extra-plugins: ''
           branch:
             - master
           gerrit-branch:

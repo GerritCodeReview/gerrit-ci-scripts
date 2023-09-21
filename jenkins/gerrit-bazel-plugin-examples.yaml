@@ -31,6 +31,5 @@
     name: examples
     jobs:
       - 'plugin-examples-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master

@@ -2,13 +2,11 @@
     name: events-broker
     jobs:
       - 'module-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master
             - stable-3.7
             - stable-3.6
       - 'module-{name}-bazel-{branch}-{gerrit-branch}':
-          extra-plugins: ''
           branch:
             - master
           gerrit-branch:

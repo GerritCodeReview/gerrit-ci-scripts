@@ -2,7 +2,6 @@
     name: rate-limiter
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: ''
           branch:
             - master
             - stable-3.8
