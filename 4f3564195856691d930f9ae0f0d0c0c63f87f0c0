@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abcf70a0_03475823",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-26T13:46:27Z",
+      "side": 1,
+      "message": "Build failed with:\n```\nE: Sub-process /usr/bin/dpkg returned an error code (1)\nThe command \u0027/bin/sh -c apt-get update --allow-releaseinfo-change \u0026\u0026 apt-get install -y wget software-properties-common default-jdk\u0027 returned a non-zero code: 100\nmake[1]: *** [build] Error 100\nmake[1]: Leaving directory `/home/jenkins/gerrit-ci-scripts/jenkins-docker/agent-debian\u0027\nmake: *** [build] Error 1\n```",
+      "revId": "4f3564195856691d930f9ae0f0d0c0c63f87f0c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
