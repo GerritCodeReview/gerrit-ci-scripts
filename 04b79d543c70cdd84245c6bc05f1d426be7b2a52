@@ -52,6 +52,24 @@
       "parentUuid": "6b13834a_65ef703a",
       "revId": "04b79d543c70cdd84245c6bc05f1d426be7b2a52",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53d5154e_5faf0cdf",
+        "filename": "jenkins/ghs.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-09-27T19:11:31Z",
+      "side": 1,
+      "message": "scalafmt is a sbt plugin that is defined in the the plugins.sbt ( I think that is the name ) defined the GHS project. I is not related with the fact of installing it in the machine.\n\nlong story short: it is sbt plugin and you invoke it as sbt task as you do compile or assembly ( coming from a plugin)\n\ncan you paste the stack trace?",
+      "parentUuid": "69fd8464_5c80ef13",
+      "revId": "04b79d543c70cdd84245c6bc05f1d426be7b2a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
