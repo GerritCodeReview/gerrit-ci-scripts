@@ -16,6 +16,24 @@
       "message": "do we need to do add:\n- scalafmtCheckAll: check fmt format in test and prod scala code\n- scalafmtSbtCheck: check fmt format in sbt files\n\nregardless that we will have a verification step?",
       "revId": "04b79d543c70cdd84245c6bc05f1d426be7b2a52",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b13834a_65ef703a",
+        "filename": "jenkins/ghs.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-09-27T10:01:36Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "4ae42355_7ac975ed",
+      "revId": "04b79d543c70cdd84245c6bc05f1d426be7b2a52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
