@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "127b17c9_d9313fb8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-09-27T21:25:55Z",
+      "side": 1,
+      "message": "Verified here: https://gerrit-ci.gerritforge.com/job/ghs-master/6/",
+      "revId": "edc51b90bed9d71c6eba47d39a80cf1cfe50bbb9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
