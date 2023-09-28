@@ -36,8 +36,6 @@
           for jar in $JARS
           do
               VERSION=$(git describe  --always origin/master)
-              echo -e "Implementation-Version: $VERSION" > MANIFEST.MF
-              jar ufm $jar MANIFEST.MF && rm MANIFEST.MF
               echo "$VERSION" > $jar-version
           done
     publishers:
