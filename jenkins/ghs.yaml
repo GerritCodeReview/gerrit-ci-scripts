@@ -29,6 +29,7 @@
 
     builders:
       - shell: |
+          export LC_ALL=C.UTF-8
           sbt -no-colors compile test assembly
           # Extract version information
           JARS=$(find . -name 'GHS*jar')
