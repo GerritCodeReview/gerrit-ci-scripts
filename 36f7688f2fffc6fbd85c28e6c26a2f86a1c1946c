@@ -22,6 +22,30 @@
       },
       "revId": "36f7688f2fffc6fbd85c28e6c26a2f86a1c1946c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d11c5783_c286a4ef",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-09-28T21:26:34Z",
+      "side": 1,
+      "message": "It is a tool we started working on recently. You can find more info here [1].\n\n[1]: https://github.com/GerritForge/GHS",
+      "parentUuid": "a146ef1e_a9e4f4bb",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 7
+      },
+      "revId": "36f7688f2fffc6fbd85c28e6c26a2f86a1c1946c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
