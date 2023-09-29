@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "097e7c9c_e8047e2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-09-29T20:28:05Z",
+      "side": 1,
+      "message": "Are you just trying to remove the warning?\nThe override was done because the version detected wasn\u0027t the one of the plugin but the Gerrit version, which isn\u0027t what we want from the build.",
+      "revId": "9187e19183e1c6229fa5c1a7ab9bfc374924d2d0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "409a3376_75b6407e",
