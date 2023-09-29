@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "409a3376_75b6407e",
+        "filename": "jenkins/ghs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-09-29T16:19:09Z",
+      "side": 1,
+      "message": "Does this version need to match `Implementation-Version` in the manifest?",
+      "revId": "9187e19183e1c6229fa5c1a7ab9bfc374924d2d0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
