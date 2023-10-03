@@ -99,7 +99,8 @@ def call(Map parm = [:]) {
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
                         sh "if [ -f ../${pluginName}/external_package.json ]; then cd plugins && ln -sf ../../${pluginName}/external_package.json package.json; fi"
                         script {
-                            (extraPlugins + extraModules).each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
+                            extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${pluginScmBaseUrl}/plugins/${plugin}" }
+                            extraModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${pluginScmBaseUrl}/modules/${module}" }
                         }
                         sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}"
                         sh "${bazeliskCmd} test ${bazeliskOptions} --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
