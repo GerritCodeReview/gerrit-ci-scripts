@@ -78,7 +78,6 @@
     node: bazel-debian
     class: plugins
     project-name: plugins%2F{name}
-    extra-artifacts: ''
     scm:
       - git:
           remotes:
@@ -115,7 +114,6 @@
     node: bazel-debian
     class: plugins
     project-name: plugins%2F{name}
-    extra-artifacts: ''
     scm:
       - git:
           remotes:
@@ -152,7 +150,6 @@
     node: bazel-debian
     class: plugins
     project-name: plugins%2F{name}
-    extra-artifacts: ''
     scm:
       - git:
           remotes:
@@ -185,7 +182,6 @@
     node: bazel-debian
     description: 'Plugin {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
-    extra-artifacts: ''
     scm:
       - git:
           remotes:
@@ -214,7 +210,6 @@
     node: bazel-debian
     description: 'Lib module {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
-    extra-artifacts: ''
     scm:
       - git:
           remotes:
@@ -243,7 +238,6 @@
     node: bazel-debian
     description: 'Lib module {name} {branch} branch Bazel build'
     defaults: plugin-template-bazel
-    extra-artifacts: ''
     scm:
       - git:
           remotes:
