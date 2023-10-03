@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "841fac8e_17e4ee4a",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-10-03T17:07:35Z",
+      "side": 1,
+      "message": "Any reason why we need to checkout the modules/plugins here and also at line 102/103?\n\nIsn\u0027t this checkout enough?",
+      "revId": "8624af4ff6218f9bdea4ee53f4953ae5093739e1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
