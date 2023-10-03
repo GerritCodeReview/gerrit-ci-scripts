@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "385eb2ca_7530e164",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-03T18:40:01Z",
+      "side": 1,
+      "message": "No, this change is incorrect. The download of the modules in `/plugins` is intentional.",
+      "revId": "cef350b8adfd2039e1b09cd02a157f7577041af6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74b81fd9_356ffe62",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-03T18:40:01Z",
+      "side": 1,
+      "message": "The modules are always built in the plugin directory.",
+      "range": {
+        "startLine": 103,
+        "startChar": 28,
+        "endLine": 103,
+        "endChar": 102
+      },
+      "revId": "cef350b8adfd2039e1b09cd02a157f7577041af6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
