@@ -2,7 +2,7 @@
     name: events-nats
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: ''
+          extra-plugins: 'events-broker'
           branch:
             - master
       - 'plugin-{name}-verifier'
