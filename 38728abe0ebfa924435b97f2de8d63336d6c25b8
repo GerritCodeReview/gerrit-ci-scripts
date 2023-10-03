@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83abd541_465b7a26",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-10-03T17:16:35Z",
+      "side": 1,
+      "message": "AFAIU if either `extraPlugin` or `extraModule` would require its own deps it would fail to build, right?",
+      "range": {
+        "startLine": 101,
+        "startChar": 24,
+        "endLine": 103,
+        "endChar": 25
+      },
+      "revId": "38728abe0ebfa924435b97f2de8d63336d6c25b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
