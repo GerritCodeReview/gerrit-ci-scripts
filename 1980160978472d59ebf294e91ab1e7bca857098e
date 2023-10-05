@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9924c9a0_8aed31a6",
+        "filename": "jenkins/gerrit-bazel-plugin-events-nats.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-10-05T08:41:34Z",
+      "side": 1,
+      "message": "Port merge -1: this has to be extra-modules :/",
+      "revId": "1980160978472d59ebf294e91ab1e7bca857098e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
