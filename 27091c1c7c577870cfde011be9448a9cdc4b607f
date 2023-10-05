@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7a2fea5_622bfc23",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-10-05T09:05:44Z",
+      "side": 1,
+      "message": "I would explain what the fix is about, something like: \"events-broker is a module, not a plugin.\"",
+      "revId": "27091c1c7c577870cfde011be9448a9cdc4b607f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
