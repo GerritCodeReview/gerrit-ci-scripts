@@ -16,6 +16,24 @@
       "message": "I would explain what the fix is about, something like: \"events-broker is a module, not a plugin.\"",
       "revId": "27091c1c7c577870cfde011be9448a9cdc4b607f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1199a85_dece2a6e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-10-05T09:09:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f7a2fea5_622bfc23",
+      "revId": "27091c1c7c577870cfde011be9448a9cdc4b607f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
