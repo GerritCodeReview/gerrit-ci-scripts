@@ -3,3 +3,4 @@ Dockerfile-*
 chrome-vers.mk
 .idea/
 .vscode/
+*.iml
