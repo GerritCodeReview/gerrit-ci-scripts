@@ -2,6 +2,7 @@
     name: events-gcloud-pubsub
     jobs:
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-modules: 'events-broker'
           branch:
             - master
           gerrit-branch:
