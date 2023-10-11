@@ -36,6 +36,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c36b442f_acc5a41e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-10-11T15:56:33Z",
+      "side": 1,
+      "message": "Ah, sorry - I think I misunderstood your point - the run is [here](https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/1384/parameters/).\n\nIt failed, but not for healthcheck reasons (we have a separate issue to address the 409 failure).",
+      "parentUuid": "93b81db3_dcdab92d",
+      "revId": "e1c10ae1585f294c8e56db44a4a9f782206b830b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb981f02_1dc29964",
