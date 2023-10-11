@@ -1,6 +1,8 @@
 def accountCookie = ''
 def xsrfToken = ''
 def epochTime = new Date().getTime()
+def DEFAULT_GERRIT_VERSION = '3.8'
+def DEFAULT_GERRIT_PATCH = '2'
 
 pipeline {
         agent { label 'aws' }
@@ -9,9 +11,9 @@ pipeline {
             string(name: 'AWS_PREFIX', defaultValue:"jenkins", description: 'A string to prefix stacks and resources with')
             string(name: 'AWS_REGION', defaultValue:"us-east-1", description: 'Which region to deploy to')
 
-            string(name: 'GERRIT_VERSION', defaultValue:"3.7", description: 'The gerrit version under test')
-            string(name: 'GERRIT_PATCH', defaultValue:"3", description: 'The gerrit version patch under test')
-            string(name: 'GERRIT_WAR_URL', defaultValue:"https://gerrit-ci.gerritforge.com/job/Gerrit-bazel-stable-3.7/lastSuccessfulBuild/artifact/gerrit/bazel-bin/release.war", description: 'The gerrit.war URL to use as override of the gerrit version under test')
+            string(name: 'GERRIT_VERSION', defaultValue: "${DEFAULT_GERRIT_VERSION}", description: 'The gerrit version under test')
+            string(name: 'GERRIT_PATCH', defaultValue: "${DEFAULT_GERRIT_PATCH}", description: 'The gerrit version patch under test')
+            string(name: 'GERRIT_WAR_URL', defaultValue:"https://gerrit-ci.gerritforge.com/job/Gerrit-bazel-stable-${DEFAULT_GERRIT_VERSION}/lastSuccessfulBuild/artifact/gerrit/bazel-bin/release.war", description: 'The gerrit.war URL to use as override of the gerrit version under test')
 
             string(name: 'HOSTED_ZONE_NAME', defaultValue: "gerritforgeaws.com", description: 'Name of the hosted zone')
             string(name: 'CLUSTER_INSTANCE_TYPE', defaultValue: 'm4.xlarge', description:'The EC2 instance Type used to run the cluster')
