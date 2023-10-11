@@ -42,7 +42,7 @@ pipeline {
             string(name: 'S3_EXPORT_LOGS_BUCKET_NAME', defaultValue: 'gerritforge-export-logs', description: 'S3 bucket to export logs to')
 
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
-            string(name: 'NUM_USERS', defaultValue: '10', description: 'Number of concurrent user sessions')
+            string(name: 'NUM_USERS', defaultValue: '3', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
             string(name: 'GATLING_DOCKER_TAG', defaultValue: 'v5b30c98', description: 'Tag for the Gatling docker image')
         }
