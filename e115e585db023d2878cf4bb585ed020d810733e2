@@ -46,6 +46,30 @@
       },
       "revId": "e115e585db023d2878cf4bb585ed020d810733e2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59f8b735_f72e2fa5",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-10-12T11:58:19Z",
+      "side": 1,
+      "message": "Tested now - it works.",
+      "parentUuid": "7a0ad195_13cde65a",
+      "range": {
+        "startLine": 16,
+        "startChar": 115,
+        "endLine": 16,
+        "endChar": 140
+      },
+      "revId": "e115e585db023d2878cf4bb585ed020d810733e2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
