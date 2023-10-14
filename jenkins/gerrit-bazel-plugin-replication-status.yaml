@@ -1,6 +1,9 @@
 - project:
     name: replication-status
     jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
