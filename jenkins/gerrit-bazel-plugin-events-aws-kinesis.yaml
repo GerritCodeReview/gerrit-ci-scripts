@@ -2,6 +2,13 @@
     name: events-aws-kinesis
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+<<<<<<< PATCH SET (1302de Build events-aws-kinesis plugin on Gerrit master)
+          extra-modules: 'events-broker'
+          branch:
+            - master
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+=======
+>>>>>>> BASE      (139b26 Build redirect-change-number master against Gerrit stable-3.)
           extra-modules: 'events-broker'
           branch:
             - master
