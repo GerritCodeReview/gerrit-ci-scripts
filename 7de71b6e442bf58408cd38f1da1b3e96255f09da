@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab674624_747d4ac1",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-10-17T13:35:35Z",
+      "side": 1,
+      "message": "Note to the reviewers. We could add this section to `.bazelrc` on all supported stable branches atm (3.8, 3.7, 3.6) and merge this fix up to Gerrit@HEAD:\n\n.bazelrc\n```\n# Builds using remotejdk_11, executes using remotejdk_11 or local_jdk\nbuild:java11 --java_language_version\u003d11\nbuild:java11 --java_runtime_version\u003dremotejdk_11\nbuild:java11 --tool_java_language_version\u003d11\nbuild:java11 --tool_java_runtime_version\u003dremotejdk_11\n```\n\nThen this section would just be: `BAZEL_OPTS\u003d--config\u003djava11`.",
+      "range": {
+        "startLine": 68,
+        "startChar": 12,
+        "endLine": 72,
+        "endChar": 0
+      },
+      "revId": "7de71b6e442bf58408cd38f1da1b3e96255f09da",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
