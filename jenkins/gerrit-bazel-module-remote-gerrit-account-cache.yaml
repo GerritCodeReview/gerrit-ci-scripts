@@ -1,0 +1,7 @@
+- project:
+    name: remote-gerrit-account-cache
+    jobs:
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - master
+      - 'module-{name}-verifier'
