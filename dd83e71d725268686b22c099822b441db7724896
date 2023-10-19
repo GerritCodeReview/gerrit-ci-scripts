@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71af5115_66202794",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2023-10-19T13:33:56Z",
+      "side": 1,
+      "message": "Verified [here](https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/1413/console), we can see the Docker logs don\u0027t state the cache is used to build the layers.",
+      "revId": "dd83e71d725268686b22c099822b441db7724896",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
