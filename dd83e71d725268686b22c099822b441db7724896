@@ -63,6 +63,29 @@
       "message": "Verified [here](https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/1413/console), we can see the Docker logs don\u0027t state the cache is used to build the layers.",
       "revId": "dd83e71d725268686b22c099822b441db7724896",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eda75d13_39535c21",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2023-10-19T13:42:20Z",
+      "side": 1,
+      "message": "Can we not inline this at L115, by just setting `GERRIT_BUILD_NO_CACHE\u003dtrue`?",
+      "range": {
+        "startLine": 65,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 17
+      },
+      "revId": "dd83e71d725268686b22c099822b441db7724896",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
