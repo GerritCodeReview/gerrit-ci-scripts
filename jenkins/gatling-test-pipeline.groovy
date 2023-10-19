@@ -62,6 +62,9 @@ pipeline {
 
         stages{
             stage("Setup single-primary aws stack") {
+                environment {
+                    GERRIT_BUILD_NO_CACHE = true
+                }
                 steps {
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: "gerrit.googlesource.com")]) {
                         sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
@@ -109,7 +112,7 @@ pipeline {
                             sh 'echo "* Gerrit HTTP URL: $GERRIT_HTTP_URL"'
                             sh 'echo "* Gerrit SSH URL: $GERRIT_SSH_URL"'
                             sh 'echo "Docker host: $DOCKER_HOST"'
-                            sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} GERRIT_VERSION=${params.GERRIT_VERSION} GERRIT_WAR_URL=${params.GERRIT_WAR_URL} GERRIT_PATCH=${params.GERRIT_PATCH} create-all"
+                            sh "make AWS_REGION=${params.AWS_REGION} AWS_PREFIX=${params.AWS_PREFIX} GERRIT_VERSION=${params.GERRIT_VERSION} GERRIT_WAR_URL=${params.GERRIT_WAR_URL} GERRIT_PATCH=${params.GERRIT_PATCH} GERRIT_BUILD_NO_CACHE=${params.GERRIT_BUILD_NO_CACHE} create-all"
                          }
                      }
                 }
