@@ -11,12 +11,4 @@ RUN apt-get update --allow-releaseinfo-change && \
     rm -rf /etc/apt/sources.list.d/* && \
     rm -rf /var/lib/apt/lists/*
 
-# SBT warm-up
-RUN cd /tmp && sbt new sbt/scala-seed.g8 --name=hello
-RUN echo 'addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")' >> /tmp/hello/project/plugins.sbt
-RUN chown -R jenkins: /tmp/hello
-
-USER jenkins
-RUN cd /tmp/hello && sbt compile test assembly
-
 USER root
