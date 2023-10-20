@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9304a7f3_37480f90",
+        "filename": "jenkins-docker/agent-debian/Dockerfile",
+        "patchSetId": 13
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-20T17:22:31Z",
+      "side": 0,
+      "message": "This is unrelated. Also, it may still happen to make some Gerrit v2.16 build `ad-hoc` for fixing NoteDb-related issues. I would keep Java 8 as well for now.",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 0
+      },
+      "revId": "764443904426b01dc316a70b21948e2a39c4a80e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
