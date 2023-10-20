@@ -34,7 +34,8 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     vim \
     xsltproc \
     zip \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && ln -sf /usr/bin/python3 /usr/bin/python
 
 COPY requirements.txt /tmp/
 RUN pip install --require-hashes -r /tmp/requirements.txt
