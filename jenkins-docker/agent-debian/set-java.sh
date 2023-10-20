@@ -4,7 +4,9 @@ if [ "$1" == "" ]
 then
   echo "Set current Java version level"
   echo ""
-  echo "Use: $0 <7|8>"
+  echo "Use    : $0 <version number>"
+  echo "Example: $0 17"
+  echo "         Java set to: /usr/lib/jvm/java-17-openjdk-amd64/bin/java"
   exit 1
 fi
 
