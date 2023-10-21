@@ -12,4 +12,5 @@
           targets: "plugins/{name}:{name}"
           branch:
             - master
+            - stable-3.9
       - 'plugin-{name}-verifier'
