@@ -1,12 +1,12 @@
 - project:
     name: events-aws-kinesis
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           extra-modules: 'events-broker'
           branch:
             - master
-          gerrit-branch:
-            - stable-3.6
-            - stable-3.7
+            - stable-3.9
             - stable-3.8
+            - stable-3.7
+            - stable-3.6
       - 'plugin-{name}-verifier'
