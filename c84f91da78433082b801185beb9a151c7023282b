@@ -22,6 +22,30 @@
       },
       "revId": "c84f91da78433082b801185beb9a151c7023282b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8f81ae8_ba707fdb",
+        "filename": "jenkins/gerrit-bazel-plugin-healthcheck.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-23T15:08:40Z",
+      "side": 1,
+      "message": "sure, that’s mainly because stable-3.9 would have the new x-plug-in deps",
+      "parentUuid": "220c5ef5_2246ad1c",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "c84f91da78433082b801185beb9a151c7023282b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
