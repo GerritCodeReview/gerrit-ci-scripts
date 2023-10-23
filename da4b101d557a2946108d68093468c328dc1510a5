@@ -16,6 +16,24 @@
       "message": "stable-3.{7,8,9} are all pointing to master. Why do we need to create branches for the plugin?",
       "revId": "da4b101d557a2946108d68093468c328dc1510a5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dec610fa_2e504597",
+        "filename": "jenkins/gerrit-bazel-plugin-events-aws-kinesis.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-23T14:04:34Z",
+      "side": 1,
+      "message": "yes, because they all need to build against the associated with the corresponding branch",
+      "parentUuid": "1a836064_eab8469c",
+      "revId": "da4b101d557a2946108d68093468c328dc1510a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
