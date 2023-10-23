@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bda0186e_bd09ca14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-10-23T14:17:54Z",
+      "side": 1,
+      "message": "We don\u0027t get events-broker from Maven anymore, but from the corresponding stable branch in events-broker.",
+      "revId": "da4b101d557a2946108d68093468c328dc1510a5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1a836064_eab8469c",
