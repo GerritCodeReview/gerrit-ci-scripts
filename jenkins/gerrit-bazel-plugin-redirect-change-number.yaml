@@ -8,4 +8,5 @@
             - main
           gerrit-branch:
             - master
+            - stable-3.9
             - stable-3.8
