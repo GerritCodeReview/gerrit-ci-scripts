@@ -16,6 +16,24 @@
       "message": "are we still supposed to build 3.6?",
       "revId": "799f2925151538a0c413ed012d4ec395df14ad38",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a82edc6_571c13a9",
+        "filename": "jenkins/gerrit-bazel-plugin-multi-site.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-10-24T16:11:31Z",
+      "side": 1,
+      "message": "Yes, until 3.9 is not out we keep 3.6. Once the first version of 3.9 will be released we will get rid of 3.6 in all the plugins.",
+      "parentUuid": "7459fee6_d7109ae0",
+      "revId": "799f2925151538a0c413ed012d4ec395df14ad38",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
