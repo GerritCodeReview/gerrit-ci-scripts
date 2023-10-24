@@ -1,6 +1,14 @@
 #!/bin/bash -e
 
-. set-java.sh 11
+case {branch} in
+  master|stable-3.9)
+    . set-java.sh 17
+    ;;
+
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 git checkout -f -b gerrit-{branch}  gerrit/{branch}
 git submodule update --init
