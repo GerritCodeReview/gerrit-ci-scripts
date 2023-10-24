@@ -1,6 +1,14 @@
 #!/bin/bash -e
 
-. set-java.sh 11
+case {branch} in
+  master|stable-3.9)
+    . set-java.sh 17
+    ;;
+
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 git remote add origin https://gerrit.googlesource.com/a/gerrit
 git fetch origin

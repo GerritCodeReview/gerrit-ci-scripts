@@ -15,9 +15,9 @@ export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
 
 echo "Java set to: $(which java)"
 
-if [[ "$1" == "11" ]]
+if [[ "$1" == "11" || "$1" == "17" ]]
 then
-   # See Bazel Issue 3236 with Java 11 [https://github.com/bazelbuild/bazel/issues/3236]
+   # See Bazel Issue 3236 with Java 11/17 [https://github.com/bazelbuild/bazel/issues/3236]
    export BAZEL_OPTS="$BAZEL_OPTS --sandbox_tmpfs_path=/tmp"
 fi
 

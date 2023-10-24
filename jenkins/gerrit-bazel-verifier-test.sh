@@ -1,6 +1,14 @@
 #!/bin/bash -ex
 
-. set-java.sh 11
+case {branch} in
+  master|stable-3.9)
+    . set-java.sh 17
+    ;;
+
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 cd gerrit
 

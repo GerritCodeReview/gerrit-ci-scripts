@@ -7,7 +7,15 @@ then
   export BAZEL_OPTS=""
 fi
 
-. set-java.sh 11
+case {branch} in
+  master|stable-3.9)
+    . set-java.sh 17
+    ;;
+
+  *)
+    . set-java.sh 11
+    ;;
+esac
 
 echo "Build with mode=$MODE"
 echo '----------------------------------------------'
