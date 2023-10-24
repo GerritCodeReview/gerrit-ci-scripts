@@ -207,11 +207,8 @@ pipeline {
                                     SubmitChange_PAUSE=0
                                     SubmitChange_STDDEV_PAUSE=0
 
-                                    CreateTag_PAUSE=0
-                                    CreateTag_STDDEV_PAUSE=0
-
-                                    DeleteTag_PAUSE=0
-                                    DeleteTag_STDDEV_PAUSE=0
+                                    CreateAndDeleteTag_PAUSE=0
+                                    CreateAndDeleteTag_STDDEV_PAUSE=0
 
                                     AddPatchset_PAUSE=0
                                     AddPatchset_STDDEV_PAUSE=0
