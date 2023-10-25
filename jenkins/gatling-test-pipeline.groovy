@@ -212,6 +212,9 @@ pipeline {
 
                                     AddPatchset_PAUSE=0
                                     AddPatchset_STDDEV_PAUSE=0
+
+                                    ListThenGetDetails_PAUSE=0
+                                    ListThenGetDetails_STDDEV_PAUSE=0
                                """)
                         }
                         sh "mkdir -p ${WORKSPACE}/results"
