@@ -33,7 +33,7 @@ popd
 java -fullversion
 bazelisk version
 bazelisk build $BAZEL_OPTS $TARGETS
-bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/account/...
+bazelisk test --test_output=streamed $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/account/...
 
 for JAR in $(find bazel-bin/plugins/account -name account*.jar)
 do
