@@ -29,7 +29,7 @@ bazelisk version
 
 echo 'Test in NoteDb mode'
 echo '----------------------------------------------'
-bazelisk test --test_output=streamed --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
+bazelisk test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
 
 echo "Test PolyGerrit locally in $(google-chrome --version)"
 echo '----------------------------------------------'
