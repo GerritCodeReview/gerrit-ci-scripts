@@ -33,7 +33,7 @@ bazelisk build $TARGETS
 
 for target in $TARGETS
 do
-    bazelisk test --test_output=streamed $target/... //tools/bzl:always_pass_test
+    bazelisk test $target/... //tools/bzl:always_pass_test
 done
 
 for JAR in $(find bazel-bin/plugins/ -name {name}*.jar | egrep -e '(stamped|tests|header)' -v)

@@ -43,19 +43,19 @@ bazelisk version
 if [[ "$MODE" == *"notedb"* ]]
 then
   GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=ON"
-  bazelisk test --test_output=streamed $GERRIT_NOTEDB $BAZEL_OPTS //...
+  bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"rbe"* ]]
 then
-  bazelisk test --test_output=streamed $BAZEL_OPTS //...
+  bazelisk test $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
 then
 
   echo 'Running Documentation tests...'
-  bazelisk test --test_output=streamed $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
+  bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
   echo "Running local tests in $(google-chrome --version)"
   bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
