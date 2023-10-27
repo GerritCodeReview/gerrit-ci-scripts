@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b4296c7_c056c32b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-27T16:32:35Z",
+      "side": 1,
+      "message": "Post-merge review: -1",
+      "revId": "a9da38a3883a48686b261adb79f4660a81c77c5b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81015847_dfcb6180",
+        "filename": "jenkins/gerrit-bazel-module-cache-chroniclemap.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-27T16:32:35Z",
+      "side": 1,
+      "message": "This is quite messy: why should we build the stable-3.7 against stable-3.8?",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 24
+      },
+      "revId": "a9da38a3883a48686b261adb79f4660a81c77c5b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
