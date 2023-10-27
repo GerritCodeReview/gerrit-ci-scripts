@@ -3,7 +3,9 @@
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           extra-plugins: 'pull-replication'
-          extra-modules: 'events-broker'
+          extra-modules:
+            - events-broker
+            - global-refdb
           branch:
             - master
             - stable-3.9
