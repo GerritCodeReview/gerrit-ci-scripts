@@ -16,6 +16,24 @@
       "message": "The pipeline fails: \n```\n11:27:07 Cloning into \u0027[events-broker,\u0027...\n11:27:07 fatal: repository \u0027https://gerrit.googlesource.com/a/modules/[events-broker,/\u0027 not found\n11:27:08 Build step \u0027Execute shell\u0027 marked build as failure\n```\n\nIt looks like the previous format is not correct.\n\nBased on the script `gerrit-bazel-build-plugin.sh`:\n\n```\nfor extraModule in {extra-modules}\ndo\n    pushd ..\n    git clone -b {branch} $PLUGIN_SCM_BASE_URL/modules/$extraModule\n    popd\n    pushd plugins\n    ln -s ../../$extraModule .\n    popd\ndone\n```\n\nIf the variable `extra-modules` is injected, then the value: `events-broker global-refdb` should be correct.",
       "revId": "85ea02f8818b778285a55216da5d9fb2315ea808",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e47a27f3_5784f0ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-10-27T12:45:22Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "9c9ccec1_2bbf274f",
+      "revId": "85ea02f8818b778285a55216da5d9fb2315ea808",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
