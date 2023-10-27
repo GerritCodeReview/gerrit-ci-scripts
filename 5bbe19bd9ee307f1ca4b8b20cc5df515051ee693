@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a91ad0b_4b076b04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-10-27T12:42:36Z",
+      "side": 1,
+      "message": "I have deployed this change manually with the patchet 2 [1] in CI/CD Jenkins and run the pipeline [2], and it is green.\n\n\n[1]https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/2360/\n[2] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.6/job/plugin-multi-site-bazel-stable-3.6/25/",
+      "revId": "5bbe19bd9ee307f1ca4b8b20cc5df515051ee693",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
