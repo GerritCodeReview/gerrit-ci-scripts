@@ -20,6 +20,7 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     curl \
     gettext \
     gettext-base \
+    iroute2 \
     lcov \
     libcurl4-gnutls-dev \
     libexpat1-dev \
