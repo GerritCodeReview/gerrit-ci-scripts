@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b5fb828_1a785be5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1157810
+      },
+      "writtenOn": "2023-10-30T15:40:54Z",
+      "side": 1,
+      "message": "Marking it as WIP until the changes in gatling-sbt-gerrit-test are merged.",
+      "revId": "f8e882e867be15a15b2a00a1468824a72f0c2276",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
