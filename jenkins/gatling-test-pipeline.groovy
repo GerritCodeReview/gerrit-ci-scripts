@@ -47,6 +47,7 @@ pipeline {
             string(name: 'NUM_USERS', defaultValue: '3', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
             string(name: 'GATLING_DOCKER_TAG', defaultValue: 'v24b10a0', description: 'Tag for the Gatling docker image')
+            string(name: 'NUMBER_OF_TAGS_TO_DELETE_AT_ONCE', defaultValue: '3', description: 'How many tags to bulk delete with a single request')
         }
 
        environment {
@@ -179,6 +180,7 @@ pipeline {
                                     GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
                                     REST_RUN_ANONYMOUS_USER=true
                                     REVIEWER_ACCOUNT=1000001
+                                    NUMBER_OF_TAGS_TO_DELETE_AT_ONCE=${params.NUMBER_OF_TAGS_TO_DELETE_AT_ONCE}
 
                                     AbandonThenRestoreChange_PAUSE=0
                                     AbandonThenRestoreChange_STDDEV_PAUSE=0
@@ -206,6 +208,9 @@ pipeline {
 
                                     SubmitChange_PAUSE=0
                                     SubmitChange_STDDEV_PAUSE=0
+
+                                    CreateAndDeleteMultipleTags_PAUSE=0
+                                    CreateAndDeleteMultipleTags_STDDEV_PAUSE=0
 
                                     CreateAndDeleteTag_PAUSE=0
                                     CreateAndDeleteTag_STDDEV_PAUSE=0
