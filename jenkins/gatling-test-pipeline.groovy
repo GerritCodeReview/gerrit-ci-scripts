@@ -179,6 +179,7 @@ pipeline {
                                     GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
                                     REST_RUN_ANONYMOUS_USER=true
                                     REVIEWER_ACCOUNT=1000001
+                                    NUMBER_OF_TAGS_TO_DELETE_AT_ONCE=3
 
                                     AbandonThenRestoreChange_PAUSE=0
                                     AbandonThenRestoreChange_STDDEV_PAUSE=0
@@ -206,6 +207,9 @@ pipeline {
 
                                     SubmitChange_PAUSE=0
                                     SubmitChange_STDDEV_PAUSE=0
+
+                                    CreateAndDeleteMultipleTags_PAUSE=0
+                                    CreateAndDeleteMultipleTags_STDDEV_PAUSE=0
 
                                     CreateAndDeleteTag_PAUSE=0
                                     CreateAndDeleteTag_STDDEV_PAUSE=0
