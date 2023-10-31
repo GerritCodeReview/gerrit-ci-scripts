@@ -33,6 +33,24 @@
       "message": "IRL @christoforos.miliotis.dev@gmail.com noted the pause parameters aren\u0027t configurable for this job, we weren\u0027t sure if this one should be. @luca.milanesio@gmail.com one you can comment on, perhaps.",
       "revId": "f8e882e867be15a15b2a00a1468824a72f0c2276",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba17bd59_72c71fa7",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2023-10-31T16:35:04Z",
+      "side": 1,
+      "message": "I probably just missed it at the time.",
+      "parentUuid": "949d1d5b_f2a6b59a",
+      "revId": "f8e882e867be15a15b2a00a1468824a72f0c2276",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
