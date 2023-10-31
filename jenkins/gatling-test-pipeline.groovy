@@ -46,7 +46,7 @@ pipeline {
             string(name: 'GERRIT_PROJECT', defaultValue: 'load-test', description: 'Gerrit project for load test')
             string(name: 'NUM_USERS', defaultValue: '3', description: 'Number of concurrent user sessions')
             string(name: 'DURATION', defaultValue: '2 minutes', description: 'Total duration of the test')
-            string(name: 'GATLING_DOCKER_TAG', defaultValue: 'v24b10a0', description: 'Tag for the Gatling docker image')
+            string(name: 'GATLING_DOCKER_TAG', defaultValue: 'vd092d3d', description: 'Tag for the Gatling docker image')
             string(name: 'NUMBER_OF_TAGS_TO_DELETE_AT_ONCE', defaultValue: '3', description: 'How many tags to bulk delete with a single request')
         }
 
