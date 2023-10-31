@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82a8ff3c_de2475b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1157810
+      },
+      "writtenOn": "2023-10-31T16:27:22Z",
+      "side": 1,
+      "message": "Successful pipeline run using image vd092d3d https://gerrit-ci.gerritforge.com/job/gatling-gerrit-test/1432/console",
+      "revId": "a9127de1f25153a2dac9910e45369d1e57da6722",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
