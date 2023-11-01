@@ -74,6 +74,24 @@
       "parentUuid": "949d1d5b_f2a6b59a",
       "revId": "f8e882e867be15a15b2a00a1468824a72f0c2276",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "426045d6_796d9af4",
+        "filename": "jenkins/gatling-test-pipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1157810
+      },
+      "writtenOn": "2023-11-01T11:41:49Z",
+      "side": 1,
+      "message": "Ok I think lets make it a pipeline variable so its fully configurable, and we are do the pause vars in a separate change.",
+      "parentUuid": "ba17bd59_72c71fa7",
+      "revId": "f8e882e867be15a15b2a00a1468824a72f0c2276",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
