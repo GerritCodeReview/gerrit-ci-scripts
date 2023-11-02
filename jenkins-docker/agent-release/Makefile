@@ -39,7 +39,7 @@ run:
 		-v ${GIT_COOKIES}:/home/jenkins/.gitcookies
 
 pull:
-	-docker pull gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-latest
+	docker pull gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-latest
 
 build: pull
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
