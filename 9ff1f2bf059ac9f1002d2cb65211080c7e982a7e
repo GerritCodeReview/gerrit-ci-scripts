@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d33bbeef_fbcb2529",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-01T16:27:57Z",
+      "side": 0,
+      "message": "why do you remove this section? is it not valid to run `events-kafka master ` against `Gerrit `stable-3.9`",
+      "revId": "9ff1f2bf059ac9f1002d2cb65211080c7e982a7e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
