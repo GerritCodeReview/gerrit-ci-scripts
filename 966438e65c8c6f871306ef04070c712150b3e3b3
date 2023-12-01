@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff200f1e_c0b25e1e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-12-01T16:38:35Z",
+      "side": 1,
+      "message": "I\u0027d say something like \"add 3.9 stable branch build for for events-gcloud-pubsub plugin\"",
+      "revId": "966438e65c8c6f871306ef04070c712150b3e3b3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
