@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe31550f_b151fac0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-01T18:10:22Z",
+      "side": 1,
+      "message": "@syntonyze@gmail.com @matthias.sohn@gmail.com Thanks for the reviews, PTAL 🙏",
+      "revId": "f6d9fe98722cc723fb5c6402082bafbe44f189bf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
