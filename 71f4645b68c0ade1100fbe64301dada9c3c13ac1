@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a6ce0ac_9c980a4d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-01T19:47:01Z",
+      "side": 1,
+      "message": "I\u0027ve verified that the new script is able to produce a release that check a valid upgrade. Also it stops the release script if I try to upgrade from an incompatible version.\n\nE.g. 3.7.3 \u003d\u003e 3.9.1 passes; 3.6.5 \u003d\u003e 3.9.0 fails and aborts the release.",
+      "revId": "71f4645b68c0ade1100fbe64301dada9c3c13ac1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
