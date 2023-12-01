@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e716df9b_75d75f80",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-12-01T16:39:49Z",
+      "side": 1,
+      "message": "I would mention the addition of stable-3.9",
+      "revId": "2d37ed90223e640c418a8157ccefaebb84e77dac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
