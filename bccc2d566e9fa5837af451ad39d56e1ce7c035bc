@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76df9672_e25460d8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-12-01T17:03:15Z",
+      "side": 1,
+      "message": "nit: long line\n\nLast nit and then I will shut up 😊",
+      "revId": "bccc2d566e9fa5837af451ad39d56e1ce7c035bc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
