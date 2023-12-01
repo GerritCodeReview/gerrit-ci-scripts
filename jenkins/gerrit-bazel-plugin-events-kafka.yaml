@@ -1,16 +1,12 @@
 - project:
     name: events-kafka
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          extra-modules: 'events-broker'
-          branch:
-            - master
-          gerrit-branch:
-            - stable-3.8
       - 'plugin-{name}-bazel-{branch}':
           extra-modules: 'events-broker'
           branch:
             - master
+            - stable-3.9
+            - stable-3.8
             - stable-3.7
             - stable-3.6
       - 'plugin-{name}-verifier'
