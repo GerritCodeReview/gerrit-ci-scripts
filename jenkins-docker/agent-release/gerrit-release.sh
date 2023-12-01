@@ -4,11 +4,12 @@ if [ "$1" == "--help" ] || [ "$1" == "" ] || [ "$2" == "" ] || [ "$3" == "" ]
 then
   echo "Gerrit Code Review - release automation script"
   echo "----------------------------------------------"
-  echo "Use: $0 <branch> <version> <next-version>"
+  echo "Use: $0 <branch> <version> <next-version> [<test-migration-version>]"
   echo ""
   echo "Where: branch  Gerrit branch name where the release must be cut"
   echo "       version Gerrit semantic release number"
   echo "       next-version Next SNAPSHOT version after release"
+  echo "       test-migration-version Test migration from an earlier Gerrit version"
   echo ""
   echo "Example: $0 stable-2.16 2.16.7 2.16.8-SNAPSHOT"
   exit 1
@@ -17,6 +18,7 @@ fi
 export branch=$1
 export version=$2
 export nextversion=$3
+export migrationversion=$4
 
 if [ -d gerrit ]
 then
@@ -65,6 +67,12 @@ echo "OK"
 
 echo "Checking Gerrit plugins version ... "
 java -jar bazel-bin/release.war init --list-plugins
+
+if test "$migrationversion" '!=' ""
+then
+  cp bazel-bin/release.war gerrit-$version.war
+  $(dirname $0)/gerrit-upgrade-test.sh $migrationversion $version
+fi
 
 echo "Publishing Gerrit WAR and APIs to Maven Central ..."
 export VERBOSE=1
