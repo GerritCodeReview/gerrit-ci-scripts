@@ -34,6 +34,24 @@
       "parentUuid": "d33bbeef_fbcb2529",
       "revId": "9ff1f2bf059ac9f1002d2cb65211080c7e982a7e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc44b99e_3448af9e",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-01T16:37:29Z",
+      "side": 0,
+      "message": "Acknowledged",
+      "parentUuid": "3fcbd976_86274d57",
+      "revId": "9ff1f2bf059ac9f1002d2cb65211080c7e982a7e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
