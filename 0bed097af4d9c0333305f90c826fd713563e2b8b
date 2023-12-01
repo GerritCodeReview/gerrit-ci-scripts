@@ -35,6 +35,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fe6066f_fe544260",
+        "filename": "jenkins-docker/agent-release/gerrit-upgrade-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-01T17:58:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c6e093e6_30839d94",
+      "revId": "0bed097af4d9c0333305f90c826fd713563e2b8b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "af3193f2_66f3caf7",
@@ -60,6 +78,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3f847822_9125cbb1",
+        "filename": "jenkins-docker/agent-release/gerrit-upgrade-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-01T17:58:16Z",
+      "side": 1,
+      "message": "True, let me add `jq` and make an assertion on the number of elements instead.",
+      "parentUuid": "af3193f2_66f3caf7",
+      "range": {
+        "startLine": 104,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 25
+      },
+      "revId": "0bed097af4d9c0333305f90c826fd713563e2b8b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c44324c9_8eb60bbe",
         "filename": "jenkins-docker/agent-release/gerrit-upgrade-test.sh",
         "patchSetId": 1
@@ -71,6 +113,24 @@
       "writtenOn": "2023-12-01T15:53:42Z",
       "side": 1,
       "message": "Should we test (even as follow ups) other indexes too?\nPerhaps just looking at `ready\u003d true` of the `gerrit_index.config`?",
+      "revId": "0bed097af4d9c0333305f90c826fd713563e2b8b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8964e04_8abf3028",
+        "filename": "jenkins-docker/agent-release/gerrit-upgrade-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-01T17:58:16Z",
+      "side": 1,
+      "message": "I would like to keep the test more E2E, making sure that one smoke-test use-case (e.g. creating a change and getting it returned by the UI) works *before* and *after* the upgrade.\n\nGenerally speaking, we care about Gerrit working and not just that indexes are upgraded.",
+      "parentUuid": "c44324c9_8eb60bbe",
       "revId": "0bed097af4d9c0333305f90c826fd713563e2b8b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
