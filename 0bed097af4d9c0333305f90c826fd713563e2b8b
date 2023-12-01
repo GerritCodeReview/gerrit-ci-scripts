@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "037fb8bb_cb2107ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2023-12-01T15:56:02Z",
+      "side": 1,
+      "message": "LGTM tried with a couple of releases\n\nstarting with 3.9 the `version -v` command may also be handy to check index versions:\n\n```\n$ java -jar gerrit-3.9.0-rc6.war version -v\ngerrit version 3.9.0-rc6\nNoteDb version 185\nIndex versions\n  changes   84\n  accounts  13\n  projects   8\n  groups    10\n```",
+      "revId": "0bed097af4d9c0333305f90c826fd713563e2b8b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c6e093e6_30839d94",
