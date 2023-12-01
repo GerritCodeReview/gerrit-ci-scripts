@@ -16,6 +16,24 @@
       "message": "why do you remove this section? is it not valid to run `events-kafka master ` against `Gerrit `stable-3.9`",
       "revId": "9ff1f2bf059ac9f1002d2cb65211080c7e982a7e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fcbd976_86274d57",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1157810
+      },
+      "writtenOn": "2023-12-01T16:34:14Z",
+      "side": 0,
+      "message": "Surely stable-3.9 of the plugin needs to be run against Gerrit stable-3.9, and master version of the plugin against master version of Gerrit?\n\nPlugin master against Gerrit 3.9 does not make sense, following this change:\nhttps://gerrit-review.googlesource.com/c/plugins/events-kafka/+/392677",
+      "parentUuid": "d33bbeef_fbcb2529",
+      "revId": "9ff1f2bf059ac9f1002d2cb65211080c7e982a7e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
