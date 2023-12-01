@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6e093e6_30839d94",
+        "filename": "jenkins-docker/agent-release/gerrit-upgrade-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2023-12-01T15:53:42Z",
+      "side": 1,
+      "message": "shall we add here, as above:\n\n```\n echo \"Gerrit $nextVersionWar installed and running as pid\u003d$(cat $gerritSite/bin/gerrit.pid)\"\n ```",
+      "revId": "0bed097af4d9c0333305f90c826fd713563e2b8b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af3193f2_66f3caf7",
+        "filename": "jenkins-docker/agent-release/gerrit-upgrade-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2023-12-01T15:53:42Z",
+      "side": 1,
+      "message": "What if the curl call in the subshell command at L102 returned no results?\n`$CHANGES` wouldn\u0027t be the empty array in that case",
+      "range": {
+        "startLine": 104,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 25
+      },
+      "revId": "0bed097af4d9c0333305f90c826fd713563e2b8b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c44324c9_8eb60bbe",
+        "filename": "jenkins-docker/agent-release/gerrit-upgrade-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2023-12-01T15:53:42Z",
+      "side": 1,
+      "message": "Should we test (even as follow ups) other indexes too?\nPerhaps just looking at `ready\u003d true` of the `gerrit_index.config`?",
+      "revId": "0bed097af4d9c0333305f90c826fd713563e2b8b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
