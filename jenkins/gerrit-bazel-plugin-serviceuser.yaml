@@ -5,9 +5,18 @@
           branch:
             - master
           gerrit-branch:
+<<<<<<< PATCH SET (d56dcf Build serviceuser plugin stable-3.7 branch)
+            - stable-3.8
+=======
             - stable-3.10
+>>>>>>> BASE      (4b1795 Revert "Build oauth plugin against gerrit stable-3.{9,10} br)
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
+<<<<<<< PATCH SET (d56dcf Build serviceuser plugin stable-3.7 branch)
+            - stable-3.7
+            - stable-3.6
+=======
             - stable-3.9
             - stable-3.7
+>>>>>>> BASE      (4b1795 Revert "Build oauth plugin against gerrit stable-3.{9,10} br)
