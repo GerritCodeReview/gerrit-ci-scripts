@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe7fda30_768044e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-12-11T06:51:12Z",
+      "side": 1,
+      "message": "Verified under `sh` with the following steps:\n```\n$ sh\nsh-3.2$ ls -al | grep to_delete\ndrwxr-xr-x  2 jcentkowski  wheel    64 Dec 11 07:47 to_delete\nsh-3.2$ [ -d \"to_delete\" ] \u0026\u0026 rm -rf to_delete || echo \"to_delete already removed\"\nsh-3.2$ [ -d \"to_delete\" ] \u0026\u0026 rm -rf to_delete || echo \"to_delete already removed\"\nto_delete already removed\n```",
+      "revId": "1bf13d2d466cd35e7d802b2b6aebc0efec1a5d2e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
