@@ -222,6 +222,11 @@ pipeline {
                                     ListThenGetDetails_STDDEV_PAUSE=0
                                """)
                         }
+                        // when previous job gets aborted then it is not wipeing out results and is taken into
+                        // consideration during current results check (as described in:
+                        // https://issues.gerritcodereview.com/issues/306564457)
+                        // wipe the results dir out (if it exists) in order to avoid it
+                        sh "[ -d \"${WORKSPACE}/results\" ] && rm -rf ${WORKSPACE}/results || echo \"${WORKSPACE}/results already removed\""
                         sh "mkdir -p ${WORKSPACE}/results"
                         // If Jenkins agent uses Docker remote server mounting local directory will mount directory
                         // from Docker server host not agent host. Gatling reports will not be visible in build workspace.
