@@ -14,7 +14,23 @@ git checkout -f -b gerrit-master gerrit/{branch}
 git submodule update --init
 java -fullversion
 bazelisk version
-bazelisk build $BAZEL_OPTS api
+
+# This is a workaround to Issue 316936462: after the initial build with $BAZEL_OPTS
+# that include a remote cache, the subsequent implicit build commands executed would
+# expect the cache to be remote and fail to download the artifact if the $BAZEL_OPTS
+# are not passed. Because the 'bazel build' commands are dynamically generated, the
+# only way to pass the extra parameters is via .bazelrc
+if [[ "$BAZEL_OPTS" != "" ]]
+then
+  echo "build $BAZEL_OPTS" >> .bazelrc
+fi
+
+# Whilst all the rest of Gerrit is able to automatically sync the Bazel repositories
+# the PolyGerrit part fails to do so when the working directory is replaced with a
+# fresh clone from the remote Git repository
+bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
+
+bazelisk build api
 ./tools/maven/api.sh install
 
 git checkout -f origin/{branch}
