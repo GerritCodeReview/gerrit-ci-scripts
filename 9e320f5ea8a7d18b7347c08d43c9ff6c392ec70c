@@ -16,6 +16,29 @@
       "message": "@david.ostrovsky@gmail.com any idea on why is this happening? And why now?",
       "revId": "9e320f5ea8a7d18b7347c08d43c9ff6c392ec70c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8cbbf538_fd1dd374",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-18T22:59:04Z",
+      "side": 1,
+      "message": "This should be removed, because it is added to `.bazelrc` at L25",
+      "range": {
+        "startLine": 28,
+        "startChar": 15,
+        "endLine": 28,
+        "endChar": 26
+      },
+      "revId": "9e320f5ea8a7d18b7347c08d43c9ff6c392ec70c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
