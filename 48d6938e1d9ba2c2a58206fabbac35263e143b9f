@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c3cc875_536874a5",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-19T10:13:16Z",
+      "side": 1,
+      "message": "Add `source set-java.sh 17`",
+      "revId": "48d6938e1d9ba2c2a58206fabbac35263e143b9f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91da2c39_9dbd645c",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-19T10:13:16Z",
+      "side": 1,
+      "message": "According to [1], we should also add `--remote_download_all`\n\n[1] https://github.com/bazelbuild/bazel/issues/20161",
+      "revId": "48d6938e1d9ba2c2a58206fabbac35263e143b9f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
