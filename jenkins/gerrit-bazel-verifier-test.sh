@@ -1,6 +1,7 @@
 #!/bin/bash -ex
 
-case {branch} in
+TARGET_BRANCH=${TARGET_BRANCH:-{branch}}
+case $TARGET_BRANCH in
   master|stable-3.9)
     . set-java.sh 17
     ;;
