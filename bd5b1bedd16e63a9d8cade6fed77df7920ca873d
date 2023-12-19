@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2ac3aac_f15945b5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-19T00:38:30Z",
+      "side": 1,
+      "message": "I like this change to consistently use remote cache. But just to be sure, should we try to disable the remote cache entirely and compare the build time with and without remote cache usage?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 52
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "522a1847_eebce2cb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-19T00:38:30Z",
+      "side": 1,
+      "message": "Add this upstream issue as a reference: [1]?\n\n[1]: https://github.com/bazelbuild/bazel/issues/20161",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 61
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20bd5c41_fec683f7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-19T00:38:30Z",
+      "side": 1,
+      "message": "While I agree with you, that this is a behavioral and disruptive change in Bazel 7.x release, the fact, that we are issuing those three major commands in Gerrit verification build:\n\n```\n#0\nexport BAZEL_OPTS\u003d--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache\n#1\nbazelisk build $BAZEL_OPTS plugins:core release api\n#2\ntools/maven/api.sh install\n#3\ntools/eclipse/project.py --bazel bazelisk\n```\n\nBut only command #1 is using remote cache, while the second and third don\u0027t use remote cache. What\u0027s the point? Either we always use the remote cache, or don\u0027t use it at all.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 54
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f760a35b_e2dc6d18",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-19T00:38:30Z",
+      "side": 1,
+      "message": "This would mark the tree \"dirty\", and affect version stamping, right? Because the `.bazelrc` file that is mutated here is under the git control.\n\nSee default configuration files, that Bazel considering during the build: [1]. So you could probably do this (untested):\n\n```\n  $ echo \"build $BAZEL_OPTS\" \u003e\u003e $HOME/.bazelrc\n```\n\nAlternatively, with this change in place: [2], you could stay `gerrit` workspace specific, and not mess around with user\u0027s environment:\n\n```\n  $ echo \"build $BAZEL_OPTS\" \u003e user.bazelrc\n```\n\n[1]: https://bazel.build/run/bazelrc#bazelrc-file-locations\n[2]: https://gerrit-review.googlesource.com/c/gerrit/+/398500",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 43,
+        "endChar": 4
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
