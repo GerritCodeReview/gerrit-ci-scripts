@@ -7,7 +7,11 @@ then
   export BAZEL_OPTS=""
 fi
 
-case {branch} in
+if [[ "$TARGET_BRANCH" == "" ]]
+then
+  TARGET_BRANCH={branch}
+fi
+case $TARGET_BRANCH in
   master|stable-3.9)
     . set-java.sh 17
     ;;
