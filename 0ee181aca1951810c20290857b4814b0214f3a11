@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e03fcb7_da88a0b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-19T20:32:31Z",
+      "side": 1,
+      "message": "I have verified that the warmed up cache can speedup the stable-3.9 and master validations.",
+      "revId": "0ee181aca1951810c20290857b4814b0214f3a11",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
