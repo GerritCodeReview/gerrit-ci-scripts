@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3f74fb00_7d0d96fe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-19T12:10:17Z",
+      "side": 1,
+      "message": "Sure, good idea.",
+      "parentUuid": "f2ac3aac_f15945b5",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 52
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "522a1847_eebce2cb",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
