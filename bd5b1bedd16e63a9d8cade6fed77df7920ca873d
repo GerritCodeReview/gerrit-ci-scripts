@@ -235,6 +235,30 @@
       },
       "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e5641511_729804d2",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-20T05:45:20Z",
+      "side": 1,
+      "message": "\u003e We could also extend our own scripts: tools/maven/api.sh and tools/eclipse/project.py and support --build-options options, and pass it like this: --build-opions\u003d$BAZEL_OPTS. Or, alternatively, we could evaluate/read the environment variable $BAZEL_OPTS in those scripts and if defined, pass it to bazel command.\n\nI have added support for `BAZEL_OPTS` to gerrit build utilities in this change: [1].\n\nGiven that Bazel release 7.x changed the default behavior to support BuildWithoutBytes per default: [2], it is crucial to support additional options, like remote cache in gerrit build utilities, in non invasive way:\n\nWith my change in place, gerrit utilities would just respect BAZEL_OPTS environment variable, so that this sequence of commands would just work:\n\n```bash\n  $ export BAZEL_OPTS\u003d\"--remote_cache\u003dhttp://idaia.de:9090 --sandbox_tmpfs_path\u003d/tmp\"\n  $ bazel build $BAZEL_OPTS release\n  $ tools/maven/api.sh install\n  $ tools/eclipse/project.py\n```\n\nIn case we would go with my change: [1], this change should not be needed.\n\n[1]: https://gerrit-review.googlesource.com/c/gerrit/+/398778\n[2]: https://blog.bazel.build/2023/10/06/bwob-in-bazel-7.html",
+      "parentUuid": "20dd8bd0_70e367ea",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 43,
+        "endChar": 4
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
