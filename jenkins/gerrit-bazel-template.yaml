@@ -35,6 +35,10 @@
               credential-id: gerrit.googlesource.com
               username: GS_GIT_USER
               password: GS_GIT_PASS
+      - credentials-binding:
+          - text:
+              credential-id: remote_bb_key
+              variable: BB_API_KEY
     builders:
       - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build.sh
