@@ -283,6 +283,30 @@
       },
       "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9f131c9_d34ce63b",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-20T07:35:20Z",
+      "side": 1,
+      "message": "The tomorrow scripting utilities (which one do you have in mind?) could also respect `BAZEL_OPTS` as documented in the `Documentation/dev-bazel.txt`, couldn\u0027t they?",
+      "parentUuid": "1e2bb909_29744357",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 43,
+        "endChar": 4
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
