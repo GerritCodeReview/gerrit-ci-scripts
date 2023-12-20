@@ -76,6 +76,7 @@
       - inject:
           properties-content: >
             BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+# do we need to spicify another value to --remote_cache ?
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
@@ -135,7 +136,7 @@
       - inject:
           properties-content: >
             BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
-
+# do we need to spicify another value to --remote_cache ?
 - project:
     name: Gerrit-verifier-bazel-chrome-latest
     config:
