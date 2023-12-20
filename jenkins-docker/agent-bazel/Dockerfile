@@ -12,5 +12,5 @@ RUN bash -c 'cd /tmp && git clone -b stable-3.8 --recursive https://gerrit.googl
     ( bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api || true ) && \
     cd /tmp/gerrit && mv tools/format ~ && \
     rm -Rf /tmp/gerrit'
-
+# do we need to spicify another value to --remote_cache ?
 USER root
