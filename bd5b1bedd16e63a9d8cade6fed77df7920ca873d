@@ -307,6 +307,30 @@
       },
       "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "572270c2_1bc1d30d",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-20T08:04:58Z",
+      "side": 1,
+      "message": "\u003e The tomorrow scripting utilities (which one do you have in mind?) could also respect `BAZEL_OPTS` as documented in the `Documentation/dev-bazel.txt`, couldn\u0027t they?\n\nSure, for the ones developed by us :-) What about any other utility? What if the bazel command is executed implicitly?\n\nI would prefer to rely on settings that imply less work and is more automatic.",
+      "parentUuid": "e9f131c9_d34ce63b",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 43,
+        "endChar": 4
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
