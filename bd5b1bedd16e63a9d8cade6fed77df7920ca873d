@@ -259,6 +259,30 @@
       },
       "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e2bb909_29744357",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-20T06:48:45Z",
+      "side": 1,
+      "message": "I would prefer to rely on the `.bazelrc` (and your addition of `user.bazelrc`) because it would be guaranteed to be used in any current or future scripting. Amending the current scripts would work for now, but what about tomorrow for new scripting?",
+      "parentUuid": "e5641511_729804d2",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 43,
+        "endChar": 4
+      },
+      "revId": "bd5b1bedd16e63a9d8cade6fed77df7920ca873d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
