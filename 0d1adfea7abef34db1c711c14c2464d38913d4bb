@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ad83afe_7214da74",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-20T14:22:16Z",
+      "side": 1,
+      "message": "do we need to change `--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache` ?",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fc10088_2929bb28",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-20T14:22:16Z",
+      "side": 1,
+      "message": "do we need to change `--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache` ?",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48cc171a_66675ea9",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-20T14:22:16Z",
+      "side": 1,
+      "message": "do we need to change `--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache` ?",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "583e819b_c69e527a",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-20T14:22:16Z",
+      "side": 1,
+      "message": "do we need to change `--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache` ?",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
