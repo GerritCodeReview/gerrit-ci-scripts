@@ -16,6 +16,47 @@
       "message": "No, the images do not change.",
       "revId": "0382d7f45d197f4124645af5656ca01e14b841a2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fae81f4_928bce64",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-27T11:53:50Z",
+      "side": 1,
+      "message": "This is unrelated to RBE. What is happening here is to populate the disk cache in image. But the disk cache must be explicitly disabled to not confuse remote build, see `tools/remote-bazelrc`: `build:remote_shared --disk_cache\u003d`.",
+      "parentUuid": "a069f011_6d32e0c3",
+      "revId": "0382d7f45d197f4124645af5656ca01e14b841a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8510fbc_9f62cb6e",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-27T11:53:50Z",
+      "side": 1,
+      "message": "Do we need to skip the Javadocs for BuildBuddy actually? Or could it probably work (and fetch some needed artifacts remotely?), Just try to change to: `api`, instead of `api-skip-javadoc`? Does it work? I still do not have access to BuildBuddy test setup.",
+      "range": {
+        "startLine": 30,
+        "startChar": 186,
+        "endLine": 30,
+        "endChar": 202
+      },
+      "revId": "0382d7f45d197f4124645af5656ca01e14b841a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

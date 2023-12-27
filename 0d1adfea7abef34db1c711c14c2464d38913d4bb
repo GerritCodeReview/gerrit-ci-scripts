@@ -106,6 +106,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e8dcd6f_e13492b9",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-27T11:53:50Z",
+      "side": 1,
+      "message": "`--remote_cache` is overridden for RBE (see: `tools/remote-bazelrc`):\n\n* GCP: `--remote_cache\u003dremotebuildexecution.googleapis.com`\n* BB:  `--remote_cache\u003dgrpcs://remote.buildbuddy.io`\n\nNote, that there is another checker: \"Build/Tests\" that is not using RBE, and this build mode is using remote cache you are referencing in this comment.",
+      "parentUuid": "1da1f187_d7020c38",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "583e819b_c69e527a",
@@ -137,6 +155,24 @@
       "side": 1,
       "message": "Nope, the remote cache for now still exists. We can then remove it once we\u0027ve completed the migration.",
       "parentUuid": "583e819b_c69e527a",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca2f8b05_982cb0bc",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-27T11:53:50Z",
+      "side": 1,
+      "message": "See my previous comment.",
+      "parentUuid": "c7a7b2ed_3c377ca9",
       "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
