@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87cff73c_7b200b42",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-27T21:49:55Z",
+      "side": 0,
+      "message": "This should also be mentioned in the commit message, that we also produce javadoc now, differently to what we were doing with GCloud-based RBE",
+      "range": {
+        "startLine": 30,
+        "startChar": 133,
+        "endLine": 30,
+        "endChar": 149
+      },
+      "revId": "ef6e13801cc7997ff03a796aadfa7d067a8b5cf5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

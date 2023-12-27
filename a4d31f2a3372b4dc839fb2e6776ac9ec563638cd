@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82c2ad32_7ffb76e7",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-27T21:49:55Z",
+      "side": 1,
+      "message": "I don\u0027t believe we need this one anymore",
+      "range": {
+        "startLine": 21,
+        "startChar": 96,
+        "endLine": 21,
+        "endChar": 174
+      },
+      "revId": "a4d31f2a3372b4dc839fb2e6776ac9ec563638cd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
