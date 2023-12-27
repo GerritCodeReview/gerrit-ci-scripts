@@ -81,6 +81,30 @@
       },
       "revId": "0382d7f45d197f4124645af5656ca01e14b841a2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "490b82a0_2ec18880",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-27T12:37:59Z",
+      "side": 1,
+      "message": "\u003e Just try to change to: api, instead of api-skip-javadoc? Does it work? I still do not have access to BuildBuddy test setup.\n\n- JDK17 green:\n\n```\nbazelisk build --config\u003dremote_bb \\\n--remote_header\u003dx-buildbuddy-api-key\u003dXXXX \\\n--remote_instance_name\u003dprojects/gerritcodereview-ci/instances/default_instance \\\nplugins:core release api\n```\n\n- JDK11 green\n\n```\nbazelisk build --config\u003dremote11_bb \\\n--remote_header\u003dx-buildbuddy-api-key\u003dXXXX \\\n--remote_instance_name\u003dprojects/gerritcodereview-ci/instances/default_instance \\\nplugins:core release api\n```\n\n- JDK21 green\n\n```\nbazelisk build --config\u003dremote21_bb \\\n--remote_header\u003dx-buildbuddy-api-key\u003dXXXX \\\n--remote_instance_name\u003dprojects/gerritcodereview-ci/instances/default_instance \\\nplugins:core release api\n```",
+      "parentUuid": "182756ed_a8cc48e7",
+      "range": {
+        "startLine": 30,
+        "startChar": 186,
+        "endLine": 30,
+        "endChar": 202
+      },
+      "revId": "0382d7f45d197f4124645af5656ca01e14b841a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
