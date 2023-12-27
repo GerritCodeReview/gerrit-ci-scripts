@@ -105,6 +105,30 @@
       },
       "revId": "0382d7f45d197f4124645af5656ca01e14b841a2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af53d692_27c7dc0c",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2023-12-27T12:40:04Z",
+      "side": 1,
+      "message": "Replace with api then?",
+      "parentUuid": "490b82a0_2ec18880",
+      "range": {
+        "startLine": 30,
+        "startChar": 186,
+        "endLine": 30,
+        "endChar": 202
+      },
+      "revId": "0382d7f45d197f4124645af5656ca01e14b841a2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
