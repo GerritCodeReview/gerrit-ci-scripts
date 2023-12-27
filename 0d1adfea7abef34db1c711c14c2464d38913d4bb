@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2aed633d_3bf1dc18",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-27T11:17:17Z",
+      "side": 1,
+      "message": "No, the images do not change.",
+      "parentUuid": "7ad83afe_7214da74",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4fc10088_2929bb28",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-12-20T14:22:16Z",
       "side": 1,
       "message": "do we need to change `--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache` ?",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c873d9ad_988455ac",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-27T11:17:17Z",
+      "side": 1,
+      "message": "No, the images do not change.",
+      "parentUuid": "4fc10088_2929bb28",
       "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -54,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1da1f187_d7020c38",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-27T11:17:17Z",
+      "side": 1,
+      "message": "Nope, the remote cache for now still exists. We can then remove it once we\u0027ve completed the migration.",
+      "parentUuid": "48cc171a_66675ea9",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "583e819b_c69e527a",
         "filename": "jenkins/gerrit-verifier.yaml",
         "patchSetId": 1
@@ -65,6 +119,24 @@
       "writtenOn": "2023-12-20T14:22:16Z",
       "side": 1,
       "message": "do we need to change `--remote_cache\u003dhttps://gerrit-ci.gerritforge.com/cache` ?",
+      "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7a7b2ed_3c377ca9",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-27T11:17:17Z",
+      "side": 1,
+      "message": "Nope, the remote cache for now still exists. We can then remove it once we\u0027ve completed the migration.",
+      "parentUuid": "583e819b_c69e527a",
       "revId": "0d1adfea7abef34db1c711c14c2464d38913d4bb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
