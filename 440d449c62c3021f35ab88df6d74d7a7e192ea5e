@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "343cdbf7_bc0f2882",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2023-12-28T08:47:48Z",
+      "side": 1,
+      "message": "We should probably apply the same logic to these as well:\n\n```\ngit grep {branch} | grep \".sh\" | cut -d \":\" -f 1 | sort | uniq\njenkins/gerrit-bazel-build-account-plugin.sh\njenkins/gerrit-bazel-build-examples-plugin.sh\njenkins/gerrit-bazel-build-its-plugin-branch.sh\njenkins/gerrit-bazel-build-its-plugin.sh\njenkins/gerrit-bazel-build-owners-plugin-branch.sh\njenkins/gerrit-bazel-build-owners-plugin.sh\njenkins/gerrit-bazel-build-plugin-branch.sh\njenkins/gerrit-bazel-build-plugin.sh\njenkins/gerrit-bazel-build.sh\njenkins/gerrit-bazel-test.sh\njenkins/gerrit-bazel-verifier-test.sh\njenkins/gerrit-codestyle-polygerrit-lint.sh\njenkins/gerrit-mvn-build-plugin.sh\njenkins/gerrit-sbt-build-app.sh\njenkins/gerrit-sbt-build-branch-plugin.sh\njenkins/gerrit-sbt-build-plugin.sh\njenkins/gitblit-ant-build.sh\n```",
+      "revId": "440d449c62c3021f35ab88df6d74d7a7e192ea5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
