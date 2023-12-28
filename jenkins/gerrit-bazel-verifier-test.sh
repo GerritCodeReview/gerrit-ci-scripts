@@ -18,7 +18,7 @@ echo '----------------------------------------------'
 case $TARGET_BRANCH$MODE in
   masterrbe|stable-3.6rbe|stable-3.7rbe|stable-3.8rbe|stable-3.9rbe)
     TEST_TAG_FILTER="-flaky,-elastic,-no_rbe"
-    BAZEL_OPTS="$BAZEL_OPTS --config=remote_bb --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
+    BAZEL_OPTS="$BAZEL_OPTS --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
     ;;
   masternotedb|stable-3.6notedb|stable-3.7notedb|stable-3.8notedb|stable-3.9notedb)
     TEST_TAG_FILTER="-flaky,elastic,no_rbe"
