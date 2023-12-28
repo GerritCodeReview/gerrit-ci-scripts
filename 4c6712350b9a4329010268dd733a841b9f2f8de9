@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17fb5b7e_c1ae1f15",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-28T14:41:25Z",
+      "side": 1,
+      "message": "This can be removed",
+      "revId": "4c6712350b9a4329010268dd733a841b9f2f8de9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6d24791_832fabfe",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-28T14:41:25Z",
+      "side": 1,
+      "message": "This can be removed",
+      "revId": "4c6712350b9a4329010268dd733a841b9f2f8de9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
