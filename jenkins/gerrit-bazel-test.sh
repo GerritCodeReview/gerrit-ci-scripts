@@ -8,7 +8,14 @@ then
 fi
 
 case {branch} in
-  master|stable-3.9)
+  master)
+    . set-java.sh 17
+    export BAZEL_OPTS="$(echo $BAZEL_OPTS | xargs) --config=remote_bb \
+                       --jobs=50 \
+                       --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
+    ;;
+
+  stable-3.9)
     . set-java.sh 17
     ;;
 
@@ -20,8 +27,8 @@ esac
 export BAZEL_OPTS="$BAZEL_OPTS \
                    --flaky_test_attempts 3 \
                    --test_timeout 3600 \
-                   --test_tag_filters=-flaky \
-                   --test_env DOCKER_HOST=$DOCKER_HOST"
+                   --test_tag_filters=-flaky"
+                   
 export WCT_HEADLESS_MODE=1
 
 java -fullversion
