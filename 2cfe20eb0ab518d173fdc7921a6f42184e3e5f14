@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26013b09_110ea25c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-28T16:47:16Z",
+      "side": 1,
+      "message": "Post-merge -1, we need the http_request plugin.",
+      "revId": "2cfe20eb0ab518d173fdc7921a6f42184e3e5f14",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

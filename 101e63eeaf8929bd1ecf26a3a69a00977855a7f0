@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b7fbd32_3632e81b",
+        "filename": "jenkins-docker/server/plugins.txt",
+        "patchSetId": 11
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-28T16:47:16Z",
+      "side": 0,
+      "message": "This plugin is actually needed by all our pipelines, otherwise the `httpRequest` pipeline step would fail.",
+      "revId": "101e63eeaf8929bd1ecf26a3a69a00977855a7f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
