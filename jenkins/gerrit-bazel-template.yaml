@@ -13,6 +13,7 @@
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
+          reference-repo: /home/jenkins/gerrit-reference.git
           credentials-id: gerrit.googlesource.com
           branches:
             - origin/{branch}
