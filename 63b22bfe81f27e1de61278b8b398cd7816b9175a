@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b34eea1e_3823ec00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-28T10:40:48Z",
+      "side": 1,
+      "message": "I added it, let me know if it is right. I am not fluent in Jenkins Job Builder syntax.",
+      "parentUuid": "761dbf4b_15de8f09",
+      "revId": "63b22bfe81f27e1de61278b8b398cd7816b9175a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5c34a473_ec1101cf",
         "filename": "jenkins/gerrit-bazel-build.sh",
         "patchSetId": 5
