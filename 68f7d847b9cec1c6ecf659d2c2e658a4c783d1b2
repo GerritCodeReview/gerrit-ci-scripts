@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0de8120_054588bb",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-28T09:51:26Z",
+      "side": 1,
+      "message": "This is overkill, it is only used without `{branch}` expansion, so it is safe to just use `$TARGET_BRANCH`",
+      "revId": "68f7d847b9cec1c6ecf659d2c2e658a4c783d1b2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
