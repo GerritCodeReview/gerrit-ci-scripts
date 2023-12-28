@@ -93,6 +93,30 @@
       },
       "revId": "7248ff77d70694735ac9ca0fd795ee2d9869f7de",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18777953_50c79097",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-12-28T19:46:54Z",
+      "side": 1,
+      "message": "👍",
+      "parentUuid": "1a8e1ee3_655ba929",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 47,
+        "endChar": 44
+      },
+      "revId": "7248ff77d70694735ac9ca0fd795ee2d9869f7de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
