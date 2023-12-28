@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "34fb8d07_d6291a89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-28T09:53:44Z",
+      "side": 1,
+      "message": "Fixed for the ones that do not rely on JJB expansion.",
+      "parentUuid": "343cdbf7_bc0f2882",
+      "revId": "440d449c62c3021f35ab88df6d74d7a7e192ea5e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "76c5eb0e_7d3c015b",
