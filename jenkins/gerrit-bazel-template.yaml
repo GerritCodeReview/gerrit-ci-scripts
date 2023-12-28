@@ -58,7 +58,7 @@
     name: 'Gerrit-bazel-{branch}'
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
-    node: 'bazel-{browser}'
+    node: 'bazel-debian-{browser}'
     properties:
       - inject:
           properties-content: >
