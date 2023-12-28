@@ -16,6 +16,24 @@
       "message": "```suggestion\n  bazelisk build --config\u003dremote_bb --remote_header\u003dx-buildbuddy-api-key\u003d$BB_API_KEY\" plugins:core release api-skip-javadoc\n```",
       "revId": "425c85491b99836d1e1cd8e38b21482e19dddb74",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22063bf1_21ad1bd0",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-28T10:14:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bca5e5fb_130d168e",
+      "revId": "425c85491b99836d1e1cd8e38b21482e19dddb74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
