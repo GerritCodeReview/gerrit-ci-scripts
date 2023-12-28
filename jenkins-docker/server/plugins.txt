@@ -32,6 +32,7 @@ github:1.36.1
 github-api:1.303-400.v35c2d8258028
 github-branch-source:1696.v3a_7603564d04
 github-oauth:0.39
+http_request:1.16
 instance-identity:142.v04572ca_5b_265
 ionicons-api:31.v4757b_6987003
 jackson2-api:2.14.1-313.v504cdd45c18b
