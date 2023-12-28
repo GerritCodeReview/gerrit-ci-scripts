@@ -9,8 +9,7 @@ IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-bullseye
 build:
 	@for chrome_ver in $(CHROME_VERS); \
         do \
-		cat Dockerfile | CHROME_VER=$$chrome_ver envsubst > Dockerfile-subst ; \
-		docker build --no-cache=$(NO_CACHE) -f Dockerfile-subst -t ${IMAGE}-$$chrome_ver . ; \
+		docker build --build-arg CHROME_VER=$$chrome_ver --no-cache=$(NO_CACHE) -f Dockerfile -t ${IMAGE}-$$chrome_ver . ; \
 	done
 
 publish:

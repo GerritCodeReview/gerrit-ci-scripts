@@ -79,12 +79,14 @@
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
+          reference-repo: /home/jenkins/gerrit-reference.git
           credentials-id: gerrit.googlesource.com
           refspec: $REFSPEC
           branches:
             - $BRANCH
           submodule:
             disable: true
+            reference-repo: /home/jenkins/gerrit-reference.git
           skip-tag: true
           basedir: gerrit
     wrappers:
@@ -177,6 +179,7 @@
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit
+          reference-repo: /home/jenkins/gerrit-reference.git
           credentials-id: gerrit.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
