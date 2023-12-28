@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a189478d_a28a845d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-12-28T09:31:02Z",
+      "side": 1,
+      "message": "nit: looks like unfinished sentence `when the local disk cache` what?  perhaps `is used`?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 43
+      },
+      "revId": "7248ff77d70694735ac9ca0fd795ee2d9869f7de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a07eb91e_63744295",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-12-28T09:31:02Z",
+      "side": 1,
+      "message": "question: is there any possibility that it will keep accumulating `build ...` lines or file is removed after every build run?",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 47,
+        "endChar": 44
+      },
+      "revId": "7248ff77d70694735ac9ca0fd795ee2d9869f7de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
