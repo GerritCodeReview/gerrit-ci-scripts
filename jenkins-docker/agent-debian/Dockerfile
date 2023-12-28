@@ -47,7 +47,7 @@ RUN tar xvfz /tmp/git-$GIT_VER.tar.gz && \
     make prefix=/usr all install && \
     cd .. && rm -Rf git-$GIT_VER
 
-ADD http://www-eu.apache.org/dist/maven/maven-3/$MAVEN_VER/binaries/apache-maven-$MAVEN_VER-bin.tar.gz /usr/local
+ADD https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/$MAVEN_VER/apache-maven-$MAVEN_VER-bin.tar.gz /usr/local
 
 RUN cd /usr/local && \
     tar xfz apache-maven-$MAVEN_VER-bin.tar.gz && \
