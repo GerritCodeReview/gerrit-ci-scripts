@@ -46,7 +46,7 @@
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
             query-operator: 'SCHEME'
-            query-string: 'gerritforge'
+            query-string: 'gerritforge-bb'
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false
@@ -65,7 +65,7 @@
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
             query-operator: 'SCHEME'
-            query-string: 'gerritforge'
+            query-string: 'gerritforge-bb'
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false
