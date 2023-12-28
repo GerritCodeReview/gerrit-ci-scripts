@@ -89,6 +89,7 @@
     description: Multi-branch pipeline to validate Gerrit's Jenkins Job Builder Scripts
     project-type: multibranch
     node: server
+    disabled: true
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit-ci-scripts

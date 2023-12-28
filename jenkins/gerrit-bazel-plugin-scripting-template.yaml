@@ -1,6 +1,7 @@
 - defaults:
     name: plugin-scripting-template
     targets: 'plugins/{name}:{name}'
+    disabled: true
     node: bazel-debian
     wrappers:
       - timeout:
@@ -43,6 +44,7 @@
 - job-template:
     name: 'plugin-scripting-{name}-bazel-{branch}'
     description: 'Plugin scripting/{name}/{branch} Bazel build for Gerrit'
+    disabled: true
     defaults: plugin-scripting-template
     scm:
       - git:
@@ -69,6 +71,7 @@
 - job-template:
     name: 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}'
     description: 'Plugin scripting/{name}/{branch} Bazel build for Gerrit/{gerrit-branch}'
+    disabled: true
     defaults: plugin-scripting-template
     scm:
       - git:

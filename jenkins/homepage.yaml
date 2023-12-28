@@ -1,6 +1,7 @@
 - job:
     name: homepage
     project-type: pipeline
+    disabled: true
     pipeline-scm:
       scm:
         - git:

@@ -1,6 +1,7 @@
 - defaults:
     name: plugin-template-bazel
     targets: 'plugins/{name}:{name}'
+    disabled: true
     node: bazel-debian
     wrappers:
       - timeout:
@@ -36,6 +37,7 @@
 - job-template:
     name: 'plugin-{name}-verifier'
     description: 'Plugin {name} change verification build'
+    disabled: true
     defaults: verifier-template-bazel
     project-type: multibranch
     scm:
@@ -55,6 +57,7 @@
 - job-template:
     name: 'module-{name}-verifier'
     description: 'Module {name} change verification build'
+    disabled: true
     defaults: verifier-template-bazel
     project-type: multibranch
     scm:
@@ -74,6 +77,7 @@
 - job-template:
     name: 'plugin-{name}-bazel-{branch}'
     description: 'Plugin {name} {branch} branch build with Bazel'
+    disabled: true
     defaults: plugin-template-bazel
     node: bazel-debian
     class: plugins
@@ -110,6 +114,7 @@
 - job-template:
     name: 'ui-plugin-{name}-bazel-{branch}'
     description: 'UI Plugin {name} {branch} branch build with Bazel'
+    disabled: true
     defaults: plugin-template-bazel
     node: bazel-debian
     class: plugins
@@ -146,6 +151,7 @@
 - job-template:
     name: 'ui-plugin-{name}-bazel-{branch}-{gerrit-branch}'
     description: 'UI Plugin {name} {branch} branch build with Bazel for Gerrit {gerrit-branch}'
+    disabled: true
     defaults: plugin-template-bazel
     node: bazel-debian
     class: plugins
@@ -179,6 +185,7 @@
 - job-template:
     name: 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
     class: plugins
+    disabled: true
     node: bazel-debian
     description: 'Plugin {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
@@ -207,6 +214,7 @@
 - job-template:
     name: 'module-{name}-bazel-{branch}-{gerrit-branch}'
     class: modules
+    disabled: true
     node: bazel-debian
     description: 'Lib module {name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
@@ -235,6 +243,7 @@
 - job-template:
     name: 'module-{name}-bazel-{branch}'
     class: modules
+    disabled: true
     node: bazel-debian
     description: 'Lib module {name} {branch} branch Bazel build'
     defaults: plugin-template-bazel

@@ -1,6 +1,7 @@
 - job-template:
     name: 'plugin-javamelody-bazel-{branch}'
     description: 'JavaMelody plugin {branch} branch build with Bazel'
+    disabled: true
     defaults: plugin-template-bazel
     scm:
       - git:

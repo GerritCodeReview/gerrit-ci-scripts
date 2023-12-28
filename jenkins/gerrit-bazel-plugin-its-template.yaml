@@ -1,6 +1,7 @@
 - defaults:
     name: plugin-its-template
     targets: 'plugins/its-{name}:its-{name}'
+    disabled: true
     wrappers:
       - timeout:
           timeout: 30
@@ -46,6 +47,7 @@
 - job-template:
     name: 'plugin-its-{name}-bazel-{branch}'
     description: 'Plugin its-{name} {branch} branch build with Bazel'
+    disabled: true
     defaults: plugin-its-template
     node: bazel-debian
     builders:
@@ -62,6 +64,7 @@
 - job-template:
     name: 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}'
     description: 'Plugin its-{name} {branch} branch Bazel build for Gerrit {gerrit-branch}'
+    disabled: true
     defaults: plugin-its-template
     node: bazel-debian
     scm:

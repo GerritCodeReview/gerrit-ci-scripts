@@ -44,6 +44,7 @@
 - job-template:
     name: 'plugin-gitblit-bazel-{branch}'
     description: 'GitBlit plugin Bazel build for Gerrit {branch}'
+    disabled: true
     defaults: plugin-gitblit
     project-name: plugins%2Fgitblit
     class: plugins

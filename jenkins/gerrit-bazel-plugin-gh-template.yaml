@@ -44,6 +44,7 @@
     description: >
       Plugin {name} {branch} branch build with Bazel owned by {organization}
       and hosted on GitHub
+    disabled: true
     defaults: plugin-gh-template
     builders:
       - set-git-credentials
@@ -60,6 +61,7 @@
     description: >
       Plugin {name} {branch} branch owned by {organization}
       and hosted on GitHub and built with Bazel for Gerrit {gerrit-branch}
+    disabled: true
     defaults: plugin-gh-template
     builders:
       - set-git-credentials

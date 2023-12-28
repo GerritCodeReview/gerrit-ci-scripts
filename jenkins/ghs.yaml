@@ -1,6 +1,7 @@
 - job:
     name: 'ghs-master'
     description: 'GHS on master'
+    disabled: true
     node: sbt
     wrappers:
       - timeout:

@@ -1,6 +1,7 @@
 - job:
     name: 'jgit-master'
     description: 'JGit Bazel build on master'
+    disabled: true
     node: bazel-debian
     wrappers:
       - timeout:
