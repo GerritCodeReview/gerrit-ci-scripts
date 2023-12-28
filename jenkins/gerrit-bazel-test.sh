@@ -21,7 +21,8 @@ export BAZEL_OPTS="$BAZEL_OPTS \
                    --flaky_test_attempts 3 \
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky \
-                   --test_env DOCKER_HOST=$DOCKER_HOST"
+                   --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
+echo "$BAZEL_OPTS" >> user.bazelrc
 export WCT_HEADLESS_MODE=1
 
 java -fullversion
