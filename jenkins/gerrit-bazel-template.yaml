@@ -42,11 +42,9 @@
               variable: BB_API_KEY
     builders:
       - set-git-credentials
-      - shell: !include-raw: gerrit-bazel-build.sh
-      - shell: !include-raw-escape: set-docker-host.sh
       - shell: !include-raw: gerrit-bazel-test.sh
       - shell: !include-raw-escape: gerrit-bazel-cat-test-log.sh
-      - shell: !include-raw: gerrit-deploy-api.sh
+      - shell: !include-raw: gerrit-bazel-build.sh
     publishers:
       - archive:
           artifacts: >
