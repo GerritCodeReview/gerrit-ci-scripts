@@ -25,9 +25,13 @@ bazelisk version
 
 if [[ "$MODE" == *"rbe"* ]]
 then
+<<<<<<< PATCH SET (be6bb5 Produce API javadoc)
+  bazelisk build --config=remote_bb plugins:core release api
+=======
     # TODO(davido): Figure out why javadoc part of api-rule doesn't work on RBE.
     # See: https://github.com/bazelbuild/bazel/issues/12765 for more background.
   bazelisk build --config=remote_bb --remote_header=x-buildbuddy-api-key=$BB_API_KEY plugins:core release api-skip-javadoc
+>>>>>>> BASE      (e482e5 Use BuildBuddy RBE provider)
 elif [[ "$MODE" == *"polygerrit"* ]]
 then
   echo "Skipping building eclipse and maven"
