@@ -39,7 +39,7 @@
       <templates>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
-          <labelString>bazel-chrome-latest</labelString>
+          <labelString>bazel-debian-chrome-latest</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
           </connector>
