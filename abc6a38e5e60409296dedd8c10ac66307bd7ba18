@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31e49560_81c4c44a",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-28T09:53:13Z",
+      "side": 1,
+      "message": "This isn\u0027t useful because `$TARGET_BRANCH` would never be set, this isn\u0027t used in any change validation.",
+      "revId": "abc6a38e5e60409296dedd8c10ac66307bd7ba18",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
