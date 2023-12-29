@@ -64,8 +64,8 @@
     properties:
       - inject:
           properties-content: >
-            BAZEL_OPTS=--sandbox_tmpfs_path=/tmp
-
+            BAZEL_OPTS="--sandbox_tmpfs_path=/tmp
+            --remote_cache=https://gerrit-ci.gerritforge.com/cache"
 - project:
     name: Gerrit-bazel-chrome-latest
     branch:
