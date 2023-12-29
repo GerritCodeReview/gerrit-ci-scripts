@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1229d987_4ac1bbae",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2023-12-29T22:38:29Z",
+      "side": 1,
+      "message": "prominent",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "0596599dae5b3f373570eb330294919a43f075d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38170d12_ccd43f71",
+        "filename": "jenkins/gerrit-codestyle-gjf.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2023-12-29T22:38:29Z",
+      "side": 1,
+      "message": "I would rephrase this to\n\n\"The following files are not properly formatted:\"",
+      "revId": "0596599dae5b3f373570eb330294919a43f075d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
