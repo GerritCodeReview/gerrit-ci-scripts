@@ -16,6 +16,24 @@
       "message": "This is wrong and unneeded: `BAZEL_OPTS` is already passed in L35 as a paraemeter.",
       "revId": "7ace9a25ea400593da22fee142643ea9f13bb6f0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1c37d26_c964206d",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T17:29:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "defa16c7_34cc0255",
+      "revId": "7ace9a25ea400593da22fee142643ea9f13bb6f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
