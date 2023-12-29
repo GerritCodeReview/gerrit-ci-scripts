@@ -140,6 +140,8 @@
       - inject:
           properties-content: >
             BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
+    wrappers:
+      - timestamps
 
 - project:
     name: Gerrit-verifier-bazel-chrome-latest
