@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "066f5cdc_5c6b412f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T23:14:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1229d987_4ac1bbae",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "0596599dae5b3f373570eb330294919a43f075d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "38170d12_ccd43f71",
@@ -37,6 +61,24 @@
       "writtenOn": "2023-12-29T22:38:29Z",
       "side": 1,
       "message": "I would rephrase this to\n\n\"The following files are not properly formatted:\"",
+      "revId": "0596599dae5b3f373570eb330294919a43f075d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd8f4b0b_f8e9849e",
+        "filename": "jenkins/gerrit-codestyle-gjf.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T23:14:43Z",
+      "side": 1,
+      "message": "Well, if there are no files mentioned below, then there are no issues :-)\n\nI should put a if/then/else and display the message ONLY if the exit status is non-zero.",
+      "parentUuid": "38170d12_ccd43f71",
       "revId": "0596599dae5b3f373570eb330294919a43f075d3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
