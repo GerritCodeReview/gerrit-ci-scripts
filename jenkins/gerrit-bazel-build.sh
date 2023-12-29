@@ -46,7 +46,10 @@ else
   # only way to pass the extra parameters is via user.bazelrc
   if [[ "$BAZEL_OPTS" != "" ]]
   then
-    echo "build $BAZEL_OPTS" >> user.bazelrc
+    for bazelopt in `echo $BAZEL_OPTS | xargs`
+    do
+      echo "build $bazelopt" >> user.bazelrc
+    done
   fi
 
   bazelisk build plugins:core release api

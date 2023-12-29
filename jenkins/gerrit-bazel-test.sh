@@ -24,7 +24,7 @@ case {branch} in
     ;;
 esac
 
-export BAZEL_OPTS="$BAZEL_OPTS \
+export BAZEL_OPTS="$(echo $BAZEL_OPTS | xargs) \
                    --flaky_test_attempts 3 \
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky"
