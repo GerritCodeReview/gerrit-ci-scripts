@@ -16,6 +16,24 @@
       "message": "why is this necessary?",
       "revId": "d945a6dc1975b2515acc6aa2225cb52b4847833a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "975c8f32_1815af1b",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T10:55:59Z",
+      "side": 1,
+      "message": "Otherwise the local branch builds would have to do a complete build, without any caching at all. That could take hours !!!",
+      "parentUuid": "b66b3aa6_fb74a8ef",
+      "revId": "d945a6dc1975b2515acc6aa2225cb52b4847833a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
