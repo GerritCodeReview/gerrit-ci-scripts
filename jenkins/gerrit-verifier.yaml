@@ -90,6 +90,7 @@
           skip-tag: true
           basedir: gerrit
     wrappers:
+      - timestamps
       - credentials-binding:
           - username-password-separated:
               credential-id: gerrit.googlesource.com
