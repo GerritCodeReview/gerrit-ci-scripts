@@ -36,6 +36,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a24c311_ee460fa9",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-29T09:58:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f7b7bfc_bbc83e8c",
+      "revId": "eea82f387b2ffb18c4cf66b751f93384cb56bb8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "57deb048_bb5743ac",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "I want to simulate what the CI build does, cloning with a reference repo.\nI should actually remove the `-if-able` part because I am expecting to have reference repos for everything, including submodules.",
       "parentUuid": "57deb048_bb5743ac",
+      "revId": "eea82f387b2ffb18c4cf66b751f93384cb56bb8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c732e94e_ce113e99",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2023-12-29T09:58:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9c9f5942_e39d5eab",
       "revId": "eea82f387b2ffb18c4cf66b751f93384cb56bb8e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
