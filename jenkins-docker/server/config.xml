@@ -42,6 +42,9 @@
           <labelString>bazel-debian-chrome-latest</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
+            <jvmArgs>
+              <string>-Dfile.encoding=UTF-8</string>
+            </jvmArgs>
           </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
@@ -79,6 +82,9 @@
           <labelString>bazel-chrome-69</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
+            <jvmArgs>
+              <string>-Dfile.encoding=UTF-8</string>
+            </jvmArgs>
           </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
@@ -116,6 +122,9 @@
           <labelString>mvn</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
+            <jvmArgs>
+              <string>-Dfile.encoding=UTF-8</string>
+            </jvmArgs>
           </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
@@ -154,6 +163,9 @@
           <labelString>sbt</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
+            <jvmArgs>
+              <string>-Dfile.encoding=UTF-8</string>
+            </jvmArgs>
           </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
@@ -192,6 +204,9 @@
           <labelString>python3</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
+            <jvmArgs>
+              <string>-Dfile.encoding=UTF-8</string>
+            </jvmArgs>
           </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
@@ -229,6 +244,9 @@
           <labelString>jekyll</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
+            <jvmArgs>
+              <string>-Dfile.encoding=UTF-8</string>
+            </jvmArgs>
           </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
@@ -266,6 +284,9 @@
           <labelString>aws</labelString>
           <connector class="io.jenkins.docker.connector.DockerComputerAttachConnector">
             <user>jenkins</user>
+            <jvmArgs>
+              <string>-Dfile.encoding=UTF-8</string>
+            </jvmArgs>
           </connector>
           <remoteFsMapping></remoteFsMapping>
           <remoteFs>/home/jenkins</remoteFs>
