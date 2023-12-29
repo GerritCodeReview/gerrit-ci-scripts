@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5f7b7bfc_bbc83e8c",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T09:52:14Z",
+      "side": 1,
+      "message": "True, but I need remove the initial `modules` path because it is not part of the repository name.",
+      "parentUuid": "49d3cb2d_48e6d0b9",
+      "revId": "eea82f387b2ffb18c4cf66b751f93384cb56bb8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "57deb048_bb5743ac",
         "filename": "jenkins-docker/agent-bazel/Dockerfile",
         "patchSetId": 2
@@ -31,6 +49,24 @@
       "writtenOn": "2023-12-29T08:53:51Z",
       "side": 1,
       "message": "why do you need to clone if in L11 you already fetched Gerrit repo?",
+      "revId": "eea82f387b2ffb18c4cf66b751f93384cb56bb8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c9f5942_e39d5eab",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T09:52:14Z",
+      "side": 1,
+      "message": "I want to simulate what the CI build does, cloning with a reference repo.\nI should actually remove the `-if-able` part because I am expecting to have reference repos for everything, including submodules.",
+      "parentUuid": "57deb048_bb5743ac",
       "revId": "eea82f387b2ffb18c4cf66b751f93384cb56bb8e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
