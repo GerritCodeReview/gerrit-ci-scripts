@@ -33,8 +33,7 @@ esac
 export BAZEL_OPTS="$BAZEL_OPTS \
                  --flaky_test_attempts 3 \
                  --test_timeout 3600 \
-                 --test_tag_filters=$TEST_TAG_FILTER \
-                 --test_env DOCKER_HOST=$DOCKER_HOST"
+                 --test_tag_filters=$TEST_TAG_FILTER
 export WCT_HEADLESS_MODE=1
 
 java -fullversion
@@ -42,8 +41,7 @@ bazelisk version
 
 if [[ "$MODE" == *"notedb"* ]]
 then
-  GERRIT_NOTEDB="--test_env=GERRIT_NOTEDB=ON"
-  bazelisk test $GERRIT_NOTEDB $BAZEL_OPTS //...
+  bazelisk test $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"rbe"* ]]
