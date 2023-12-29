@@ -10,6 +10,9 @@
             - job-discover
             - job-read
             - job-extended-read
+      - inject:
+          properties-content: >
+            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
