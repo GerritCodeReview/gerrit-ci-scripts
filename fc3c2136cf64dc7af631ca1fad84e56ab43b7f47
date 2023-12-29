@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f34f4988_8c1a7469",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T12:52:04Z",
+      "side": 1,
+      "message": "Missing the ending `\"`",
+      "revId": "fc3c2136cf64dc7af631ca1fad84e56ab43b7f47",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
