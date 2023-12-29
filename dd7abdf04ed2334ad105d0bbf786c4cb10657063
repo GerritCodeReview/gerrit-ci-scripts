@@ -16,6 +16,24 @@
       "message": "up to you:\n\n```\nexport BAZEL_OPTS\u003d\"$BAZEL_OPTS \\\n                   --flaky_test_attempts 3 \\\n                   --test_timeout 3600 \\\n                   --test_tag_filters\u003d-flaky \\\n                   --config\u003dremote_bb \\\n                   --jobs\u003d50 \\\n                   --remote_header\u003dx-buildbuddy-api-key\u003d$BB_API_KEY\"\n```",
       "revId": "dd7abdf04ed2334ad105d0bbf786c4cb10657063",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "858c0cad_0870414a",
+        "filename": "jenkins/gerrit-bazel-test.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T10:52:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c6570d86_3c567127",
+      "revId": "dd7abdf04ed2334ad105d0bbf786c4cb10657063",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
