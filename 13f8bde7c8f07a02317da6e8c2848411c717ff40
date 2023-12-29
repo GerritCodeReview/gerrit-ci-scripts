@@ -22,6 +22,30 @@
       },
       "revId": "13f8bde7c8f07a02317da6e8c2848411c717ff40",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0dd59816_50e7f300",
+        "filename": "jenkins-docker/agent-bazel-docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T10:54:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e860e1f7_5cb5906b",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 43
+      },
+      "revId": "13f8bde7c8f07a02317da6e8c2848411c717ff40",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
