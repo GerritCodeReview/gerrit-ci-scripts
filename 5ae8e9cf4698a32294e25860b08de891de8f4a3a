@@ -16,6 +16,24 @@
       "message": "When using the remote cache, a noop build may not move the artifacts form the cached directory.\n\nCreate the `bazel-bin` link from `bazelisk info bazel-bin` output, so that the build will be able to archive its results.",
       "revId": "5ae8e9cf4698a32294e25860b08de891de8f4a3a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1fd635f_0eaaafbf",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-12-29T22:00:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62a86ec5_e09ee053",
+      "revId": "5ae8e9cf4698a32294e25860b08de891de8f4a3a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
