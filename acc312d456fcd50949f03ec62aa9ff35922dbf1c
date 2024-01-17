@@ -182,6 +182,30 @@
       },
       "revId": "acc312d456fcd50949f03ec62aa9ff35922dbf1c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0465dcf2_589d3b19",
+        "filename": "jenkins/gerrit-bazel-plugin-pull-replication.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-01-17T16:29:18Z",
+      "side": 1,
+      "message": "Thanks @christoforos.miliotis.dev@gmail.com, I didn\u0027t know 😊",
+      "parentUuid": "a3e56475_32bb596d",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 39
+      },
+      "revId": "acc312d456fcd50949f03ec62aa9ff35922dbf1c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
