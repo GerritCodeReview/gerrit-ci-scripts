@@ -2,9 +2,13 @@
     name: pull-replication
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: 'healthcheck'
           extra-modules: 'events-broker'
           branch:
             - master
+      - 'plugin-{name}-bazel-{branch}':
+          extra-modules: 'events-broker'
+          branch:
             - stable-3.9
             - stable-3.8
             - stable-3.7
