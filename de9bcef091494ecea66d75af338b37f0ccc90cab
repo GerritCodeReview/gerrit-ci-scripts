@@ -34,6 +34,24 @@
       "parentUuid": "c1a0cc11_625b1740",
       "revId": "de9bcef091494ecea66d75af338b37f0ccc90cab",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9da52566_3dbbd265",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-01-17T16:37:55Z",
+      "side": 1,
+      "message": "Build is successful and it downloads the healthcheck plugin correctly\n\n```\n17:29:42 ~/workspace ~/workspace/plugin-pull-replication-bazel-master\n17:29:42 Cloning into \u0027healthcheck\u0027...\n```",
+      "parentUuid": "948d0518_98cd6cff",
+      "revId": "de9bcef091494ecea66d75af338b37f0ccc90cab",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
