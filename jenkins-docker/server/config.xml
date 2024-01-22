@@ -11,11 +11,11 @@
     <permission>hudson.model.Hudson.Administer:EdwinKempin</permission>
     <permission>hudson.model.Hudson.Administer:dpursehouse</permission>
     <permission>hudson.model.Hudson.Administer:lucamilanesio</permission>
+    <permission>hudson.model.Hudson.Administer:msohn</permission>
     <permission>hudson.model.Hudson.Administer:poucet</permission>
     <permission>hudson.model.Hudson.Administer:zivkov</permission>
-    <permission>hudson.model.Hudson.Read:anonymous</permission>
-    <permission>hudson.model.Item.Read:anonymous</permission>
-    <permission>hudson.model.View.Read:anonymous</permission>
+    <permission>hudson.model.Hudson.Administer:phiesel</permission>
+    <permission>hudson.model.Hudson.Administer:bro314</permission>
   </authorizationStrategy>
   <securityRealm class="org.jenkinsci.plugins.GithubSecurityRealm">
     <githubWebUri>https://github.com</githubWebUri>
