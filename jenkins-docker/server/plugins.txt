@@ -68,7 +68,7 @@ plain-credentials:143.v1b_df8b_d3b_e48
 plugin-util-api:2.20.0
 popper2-api:2.11.6-2
 scm-api:631.v9143df5b_e4a_a
-script-security:1228.vd93135a_2fb_25
+script-security:1269.v639888f5e366
 snakeyaml-api:1.33-90.v80dcb_3814d35
 ssh-credentials:305.v8f4381501156
 sshd:3.236.ved5e1b_cb_50b_2
