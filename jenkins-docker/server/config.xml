@@ -8,14 +8,17 @@
   <mode>EXCLUSIVE</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
-    <permission>hudson.model.Hudson.Administer:EdwinKempin</permission>
+    <permission>hudson.model.Hudson.Administer:bro314</permission>
     <permission>hudson.model.Hudson.Administer:dpursehouse</permission>
+    <permission>hudson.model.Hudson.Administer:EdwinKempin</permission>
     <permission>hudson.model.Hudson.Administer:lucamilanesio</permission>
+    <permission>hudson.model.Hudson.Administer:msohn</permission>
+    <permission>hudson.model.Hudson.Administer:phiesel</permission>
     <permission>hudson.model.Hudson.Administer:poucet</permission>
     <permission>hudson.model.Hudson.Administer:zivkov</permission>
-    <permission>hudson.model.Hudson.Read:anonymous</permission>
-    <permission>hudson.model.Item.Read:anonymous</permission>
-    <permission>hudson.model.View.Read:anonymous</permission>
+    <permission>USER:hudson.model.Hudson.Read:anonymous</permission>
+    <permission>USER:hudson.model.Item.Read:anonymous</permission>
+    <permission>USER:hudson.model.Item.ViewStatus:anonymous</permission>
   </authorizationStrategy>
   <securityRealm class="org.jenkinsci.plugins.GithubSecurityRealm">
     <githubWebUri>https://github.com</githubWebUri>
@@ -342,6 +345,9 @@
   <primaryView>All</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
   <label>server</label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
   <nodeProperties>
     <hudson.slaves.EnvironmentVariablesNodeProperty>
       <envVars serialization="custom">
