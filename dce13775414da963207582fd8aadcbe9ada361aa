@@ -16,6 +16,24 @@
       "message": "Should we rather remove builds for stable-3.6 branch?",
       "revId": "dce13775414da963207582fd8aadcbe9ada361aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01fb7ae7_f7d1e112",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2024-01-23T11:58:29Z",
+      "side": 1,
+      "message": "In https://gerrit-ci.gerritforge.com/ we still build stable-3.6. I guess the plan is eventually to remove it but in a short run I think we can keep it.",
+      "parentUuid": "ca3ad364_76af57f5",
+      "revId": "dce13775414da963207582fd8aadcbe9ada361aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
