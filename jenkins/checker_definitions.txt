@@ -16,7 +16,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "name": "RBE BB Build/Tests",
     "description": "Builds the code base and executes unit/integration tests on BuildBuddy RBE",
     "repository": "gerrit",
-    "query": "(not dir:polygerrit-ui) AND (branch:master AND -age:1w)",
+    "query": "(not dir:polygerrit-ui)  AND -age:1w AND (branch:stable-3.7 OR branch:stable-3.8 OR branch:stable-3.9 OR branch:master)",
     "blocking": []
   }
 
