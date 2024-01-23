@@ -129,7 +129,7 @@ def queryChangedFiles(url) {
 
 def collectBuildModes() {
     Builds.modes = []
-    if (env.GERRIT_BRANCH == "master") {
+    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[7-9]/) {
         Builds.modes = ["rbe"]
     } else {
         throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")
