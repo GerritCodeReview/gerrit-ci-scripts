@@ -22,6 +22,30 @@
       },
       "revId": "35163959dc1c49bf6f3871a42ea1eaa48696e872",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bfbde63e_026dffab",
+        "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-01-24T17:36:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "85c734ac_865c2c65",
+      "range": {
+        "startLine": 68,
+        "startChar": 16,
+        "endLine": 68,
+        "endChar": 22
+      },
+      "revId": "35163959dc1c49bf6f3871a42ea1eaa48696e872",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
