@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85c734ac_865c2c65",
+        "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-01-24T15:40:34Z",
+      "side": 1,
+      "message": "You should keep `owners` here, otherwise it would match the generic rule which isn\u0027t the one specific to the owners plugin at L2.\n\n\n```suggestion\n      - \u0027plugin-owners-bazel-{branch}\u0027:\n```",
+      "range": {
+        "startLine": 68,
+        "startChar": 16,
+        "endLine": 68,
+        "endChar": 22
+      },
+      "revId": "35163959dc1c49bf6f3871a42ea1eaa48696e872",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
