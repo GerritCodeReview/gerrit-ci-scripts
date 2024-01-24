@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b89182e_4c2ccd8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-01-24T18:04:07Z",
+      "side": 1,
+      "message": "Corresponding builds `stable-3.[6|7|8|9]` and `master` were successful in the CI e.g. [stable-3.9](https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.9/job/plugin-owners-bazel-stable-3.9/).",
+      "revId": "c3b5d2d9ab38e85268980133e9c44046fa993e0b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
