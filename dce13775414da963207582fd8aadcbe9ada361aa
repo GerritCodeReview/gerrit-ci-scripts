@@ -51,6 +51,24 @@
       "message": "@luca.milanesio@gmail.com any feedback?",
       "revId": "dce13775414da963207582fd8aadcbe9ada361aa",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4382b4fd_4ea49972",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2024-01-26T12:03:04Z",
+      "side": 1,
+      "message": "After speaking with @luca.milanesio@gmail.com I have removed stable-3.6.",
+      "parentUuid": "01fb7ae7_f7d1e112",
+      "revId": "dce13775414da963207582fd8aadcbe9ada361aa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
