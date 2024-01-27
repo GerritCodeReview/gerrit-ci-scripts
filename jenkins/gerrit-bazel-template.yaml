@@ -68,7 +68,6 @@
       - stable-3.9
       - stable-3.8
       - stable-3.7
-      - stable-3.6
     browser: chrome-latest
     jobs:
       - 'Gerrit-bazel-{branch}':
