@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d77a540b_0325ee3e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-01-27T16:53:50Z",
+      "side": 1,
+      "message": "You can also remove from:\n* `gerrit-bazel-plugin-automerger.yaml` as `master` plugin\u0027s version is used for `stable-3.7`\n* `gerrit-bazel-template.yaml` (line #71)",
+      "revId": "a5413269c3ff0df32db0f758e0af6740f8b2a962",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
