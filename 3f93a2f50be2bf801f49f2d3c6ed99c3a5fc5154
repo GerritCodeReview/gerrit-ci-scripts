@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62ffb276_47bb0a4f",
+        "filename": "jenkins-docker/server/CVE-2024-23897-disable-cli.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-01-29T21:41:34Z",
+      "side": 1,
+      "message": "On older versions of Jenkins, this fails with:\n```\ngerrit-ci_1_d53217f3a02b | java.lang.IllegalArgumentException: Comparison method violates its general contract!\ngerrit-ci_1_d53217f3a02b | \tat java.util.ComparableTimSort.mergeLo(ComparableTimSort.java:744)\ngerrit-ci_1_d53217f3a02b | \tat java.util.ComparableTimSort.mergeAt(ComparableTimSort.java:481)\ngerrit-ci_1_d53217f3a02b | \tat java.util.ComparableTimSort.mergeCollapse(ComparableTimSort.java:406)\ngerrit-ci_1_d53217f3a02b | \tat java.util.ComparableTimSort.sort(ComparableTimSort.java:213)\ngerrit-ci_1_d53217f3a02b | \tat java.util.Arrays.sort(Arrays.java:1312)\ngerrit-ci_1_d53217f3a02b | \tat java.util.Arrays.sort(Arrays.java:1506)\ngerrit-ci_1_d53217f3a02b | \tat java.util.ArrayList.sort(ArrayList.java:1462)\ngerrit-ci_1_d53217f3a02b | \tat java.util.Collections.sort(Collections.java:143)\ngerrit-ci_1_d53217f3a02b | \tat hudson.ExtensionList.sort(ExtensionList.java:401)\ngerrit-ci_1_d53217f3a02b | \tat hudson.ExtensionList.ensureLoaded(ExtensionList.java:319)\ngerrit-ci_1_d53217f3a02b | \tat hudson.ExtensionList.iterator(ExtensionList.java:172)\n```\n\nWe should wrap in a `try{} catch{}` and continue removing all the other exceptions.",
+      "range": {
+        "startLine": 27,
+        "startChar": 2,
+        "endLine": 27,
+        "endChar": 10
+      },
+      "revId": "3f93a2f50be2bf801f49f2d3c6ed99c3a5fc5154",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
