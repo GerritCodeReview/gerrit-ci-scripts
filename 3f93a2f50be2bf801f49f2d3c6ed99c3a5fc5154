@@ -22,6 +22,30 @@
       },
       "revId": "3f93a2f50be2bf801f49f2d3c6ed99c3a5fc5154",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb2e8416_61f1eff2",
+        "filename": "jenkins-docker/server/CVE-2024-23897-disable-cli.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-01-29T22:19:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62ffb276_47bb0a4f",
+      "range": {
+        "startLine": 27,
+        "startChar": 2,
+        "endLine": 27,
+        "endChar": 10
+      },
+      "revId": "3f93a2f50be2bf801f49f2d3c6ed99c3a5fc5154",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
