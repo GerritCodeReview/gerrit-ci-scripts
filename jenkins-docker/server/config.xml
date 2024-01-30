@@ -75,7 +75,7 @@
             </extraHosts>
           </dockerTemplateBase>
           <removeVolumes>false</removeVolumes>
-          <pullStrategy>PULL_NEVER</pullStrategy>
+          <pullStrategy>PULL_LATEST</pullStrategy>
         </com.nirima.jenkins.plugins.docker.DockerTemplate>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
@@ -115,7 +115,7 @@
             </extraHosts>
           </dockerTemplateBase>
           <removeVolumes>false</removeVolumes>
-          <pullStrategy>PULL_NEVER</pullStrategy>
+          <pullStrategy>PULL_LATEST</pullStrategy>
         </com.nirima.jenkins.plugins.docker.DockerTemplate>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
@@ -237,7 +237,7 @@
             </extraHosts>
           </dockerTemplateBase>
           <removeVolumes>false</removeVolumes>
-          <pullStrategy>PULL_NEVER</pullStrategy>
+          <pullStrategy>PULL_LATEST</pullStrategy>
         </com.nirima.jenkins.plugins.docker.DockerTemplate>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>
@@ -277,7 +277,7 @@
             </extraHosts>
           </dockerTemplateBase>
           <removeVolumes>false</removeVolumes>
-          <pullStrategy>PULL_NEVER</pullStrategy>
+          <pullStrategy>PULL_LATEST</pullStrategy>
         </com.nirima.jenkins.plugins.docker.DockerTemplate>
         <com.nirima.jenkins.plugins.docker.DockerTemplate>
           <configVersion>2</configVersion>

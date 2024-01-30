@@ -144,7 +144,7 @@ def collectBuildModes() {
 }
 
 def buildVerificationJob() {
-    (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[5-9]/) ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-chrome-69"
+    (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[7-9]/) ? "Gerrit-verifier-chrome-latest" : "Gerrit-verifier-chrome-69"
 }
 
 def prepareBuildsForMode(buildName, mode="notedb", retryTimes = 1) {
