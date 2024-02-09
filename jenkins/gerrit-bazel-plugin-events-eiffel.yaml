@@ -1,0 +1,12 @@
+- project:
+    name: events-eiffel
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: ''
+          branch:
+            - master
+          gerrit-branch:
+            - master
+            - stable-3.8
+            - stable-3.9
+      - 'plugin-{name}-verifier'
