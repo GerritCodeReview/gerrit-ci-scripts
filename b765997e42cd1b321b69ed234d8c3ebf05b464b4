@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ecf81ef_40e0acd5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-02-12T15:33:11Z",
+      "side": 1,
+      "message": "@syntonyze@gmail.com the [manual verifier job](https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/2389/console) doesn\u0027t seem to work.\n[Tried with the last integrated change to gerrit-ci-scripts but that also fails](https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/2390/console)",
+      "revId": "b765997e42cd1b321b69ed234d8c3ebf05b464b4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
