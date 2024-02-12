@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90dee86f_e4b041a3",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-02-12T14:23:49Z",
+      "side": 1,
+      "message": "We should also enable now:\n- stable-3.7\n- stable-3.8\n- stable-3.9\n\n\n```suggestion\n    if (env.GERRIT_BRANCH \u003d\u003d \"master\" || env.GERRIT_BRANCH \u003d\u003d~ /stable-3.[7-9]/) {\n```",
+      "range": {
+        "startLine": 132,
+        "startChar": 8,
+        "endLine": 132,
+        "endChar": 37
+      },
+      "revId": "0561f957b7808fd1ecfe0937822983c5e403faaf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
