@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b282f045_1d545e5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-02-13T15:24:22Z",
+      "side": 1,
+      "message": "You also need to add the `Jenkinsfile` on the root of the plugin, see I956a2b2c51.",
+      "revId": "8b6e8f4200ed6b6759bee418ced81b8be6ddd37d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
