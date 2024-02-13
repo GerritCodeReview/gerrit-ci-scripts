@@ -44,7 +44,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>jenkins-jobs update jenkins</command>
+      <command>jenkins-jobs update --allow-empty-variables jenkins</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
