@@ -13,7 +13,7 @@
       - pollscm:
           cron: 'H/15 * * * *'
     builders:
-      - shell: jenkins-jobs update --delete-old jenkins/.
+      - shell: jenkins-jobs --allow-empty-variables update --delete-old jenkins/.
 
 - job:
     name: gerrit-ci-scripts-docker
@@ -79,9 +79,9 @@
     builders:
       - shell: |
           if test -n "${JOBS}"; then
-            jenkins-jobs update jenkins ${JOBS}
+            jenkins-jobs --allow-empty-variables update jenkins ${JOBS}
           else
-            jenkins-jobs update --delete-old jenkins
+            jenkins-jobs --allow-empty-variables update --delete-old jenkins
           fi
 
 - job:
