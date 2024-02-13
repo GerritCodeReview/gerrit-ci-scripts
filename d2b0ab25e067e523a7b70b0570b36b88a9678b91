@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "866bd74d_ab011551",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-02-13T15:50:01Z",
+      "side": 1,
+      "message": "I believe you should first create a stable-3.8 branch and build this plugin (stable-3.8) against gerrit (stable-3.8).\n\nThen you must adapt the master branch of events-eiffel for stable-3.9 and master, if that is possible. Otherwise, you should also create the stable-3.9.",
+      "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ea7c3a4_08ae163e",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-02-13T15:50:01Z",
+      "side": 1,
+      "message": "Fails on master, see https://gerrit-ci.gerritforge.com/job/plugin-events-eiffel-bazel-master-master/1/console",
+      "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2d7eb8a_9f9ffbbe",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-02-13T15:50:01Z",
+      "side": 1,
+      "message": "Fails on stable-3.9, see https://gerrit-ci.gerritforge.com/job/plugin-events-eiffel-bazel-master-stable-3.9/1/console",
+      "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
