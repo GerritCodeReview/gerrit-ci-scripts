@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "baa9ca43_54791f89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-02-13T06:45:22Z",
+      "side": 1,
+      "message": "If I rerun [the latest successful job](https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/2387/console), it now [fails](https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/2392/console).\nSo it looks like something is broken with the job.",
+      "parentUuid": "4ecf81ef_40e0acd5",
+      "revId": "b765997e42cd1b321b69ed234d8c3ebf05b464b4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "52ce7540_3f3c84e1",
         "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
         "patchSetId": 4
@@ -31,6 +49,30 @@
       "writtenOn": "2024-02-12T16:07:06Z",
       "side": 1,
       "message": "I can see a bunch of `allow_empty:False` in the logs, can you try remove this line?\nPerhaps this is the reason of the failures?",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 27
+      },
+      "revId": "b765997e42cd1b321b69ed234d8c3ebf05b464b4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd6425e9_43d2a51b",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-02-13T06:45:22Z",
+      "side": 1,
+      "message": "[No luck](https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/2391/console)",
+      "parentUuid": "52ce7540_3f3c84e1",
       "range": {
         "startLine": 5,
         "startChar": 0,
