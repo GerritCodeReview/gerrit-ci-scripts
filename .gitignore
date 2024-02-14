@@ -4,3 +4,4 @@ chrome-vers.mk
 .idea/
 .vscode/
 *.iml
+**/jenkins-container.env
