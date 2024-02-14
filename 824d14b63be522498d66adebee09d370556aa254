@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72303db6_348831e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-14T20:04:11Z",
+      "side": 1,
+      "message": "Very WIP @luca.milanesio, I thought about sharing the direction I am taking.\nAny thoughts on the approach please let me know.",
+      "revId": "824d14b63be522498d66adebee09d370556aa254",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c0ec125_dc7ed71b",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-14T20:04:11Z",
+      "side": 1,
+      "message": "unrelated",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 96
+      },
+      "revId": "824d14b63be522498d66adebee09d370556aa254",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
