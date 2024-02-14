@@ -21,39 +21,38 @@ PLUGIN_FILE=plugins.txt
 
 # Targets
 
-start: build
+start: build create_env
 	-docker rm ${NAME}
 	mkdir -p ${JENKINS_HOME}/jobs
-	docker run --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
-          -e OAUTH_ID=${OAUTH_ID} \
-          -e OAUTH_SECRET=${OAUTH_SECRET} \
-          -e JENKINS_API_USER=${JENKINS_API_USER} \
-          -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
-          -e DOCKER_GID=${DOCKER_GID} \
-          -v /var/run/docker.sock:/var/run/docker.sock \
-          -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
-          -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc \
-          -v ${JENKINS_HOME}/.secrets:/var/jenkins_home/.secrets \
-          --net=host ${IMAGE}
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
+	docker compose -f docker-compose.yaml up -d
 
-start_osx:
+log: create_env
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
+	docker compose -f docker-compose.yaml logs --follow
+
+start_osx: create_env
 	-docker rm ${NAME} ${NAME}-socat
 	mkdir -p ${JENKINS_HOME}/jobs
 	docker run -d --name ${NAME}-socat \
           -v /var/run/docker.sock:/var/run/docker.sock \
           -p 127.0.0.1:1234:1234 \
           bobrik/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
-	docker run --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
-          -e OAUTH_ID=${OAUTH_ID} \
-          -e OAUTH_SECRET=${OAUTH_SECRET} \
-          -e JENKINS_API_USER=${JENKINS_API_USER} \
-          -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
-          -e DOCKER_GID=${DOCKER_GID} \
-          -e DOCKER_HOST="tcp://host.docker.internal:1234" \
-          -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
-          -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc \
-          -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.secrets \
-          -p 8080:8080 ${IMAGE}
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
+	docker-compose -f docker-compose.osx.yaml up -d
+
+log_osx: create_env
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
+	docker compose -f docker-compose.osx.yaml logs --follow
+
+create_env:
+	echo \
+        "USE_SECURITY=${USE_SECURITY}\n" \
+        "OAUTH_ID=${OAUTH_ID}\n" \
+        "OAUTH_SECRET=${OAUTH_SECRET}\n" \
+        "JENKINS_API_USER=${JENKINS_API_USER}\n" \
+        "JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD}\n" \
+        "DOCKER_GID=${DOCKER_GID}\n" > jenkins-container.env
 
 build:
 	docker build --no-cache=$(NO_CACHE) \
