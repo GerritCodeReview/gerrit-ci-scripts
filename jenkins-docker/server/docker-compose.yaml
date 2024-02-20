@@ -18,3 +18,4 @@ services:
    volumes:
      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
      - ./haproxy/lua:/usr/local/etc/haproxy/lua:ro
+     - ./haproxy/403.http:/usr/local/etc/haproxy/errors/403.http:ro

@@ -2,8 +2,8 @@ NO_CACHE=false
 ORGANISATION=gerritforge
 NAME=gerrit-ci
 USE_SECURITY=false
-OAUTH_ID=clientid
-OAUTH_SECRET=secret
+OAUTH_ID=056e8b04f8af846ed309
+OAUTH_SECRET=aaa29ebfdc2d3e7bb4c6e29bb894927bd82d4657
 JENKINS_API_USER=user
 JENKINS_API_PASSWORD=pass
 # https://get.jenkins.io/war-stable/2.375.4
