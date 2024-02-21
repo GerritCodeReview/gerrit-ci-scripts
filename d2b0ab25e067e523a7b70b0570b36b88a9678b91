@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b089dd9f_585d1d18",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-02-21T13:59:40Z",
+      "side": 1,
+      "message": "Fixed with: https://gerrit-review.googlesource.com/c/plugins/events-eiffel/+/409478",
+      "parentUuid": "7ea7c3a4_08ae163e",
+      "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e2d7eb8a_9f9ffbbe",
         "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
         "patchSetId": 7
@@ -48,6 +66,24 @@
       "writtenOn": "2024-02-13T15:50:01Z",
       "side": 1,
       "message": "Fails on stable-3.9, see https://gerrit-ci.gerritforge.com/job/plugin-events-eiffel-bazel-master-stable-3.9/1/console",
+      "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e08fd76b_a4209466",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-02-21T13:59:40Z",
+      "side": 1,
+      "message": "Fixed with: https://gerrit-review.googlesource.com/c/plugins/events-eiffel/+/409478",
+      "parentUuid": "e2d7eb8a_9f9ffbbe",
       "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
