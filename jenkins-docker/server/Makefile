@@ -1,6 +1,7 @@
 NO_CACHE=false
 ORGANISATION=gerritforge
 NAME=gerrit-ci
+NAME_INTERNAL=${NAME}-internal
 USE_SECURITY=false
 OAUTH_ID=clientid
 OAUTH_SECRET=secret
@@ -10,8 +11,10 @@ JENKINS_API_PASSWORD=pass
 JENKINS_WAR_VER=2.375.4
 JENKINS_WAR_SHA=9a82a8cf68eb143e2f3e14cb8eb591de1a4b6596259fce9e4c15b4b24a0d4125
 JENKINS_HOME?=~/jenkins_home
+JENKINS_HOME_INTERNAL?=${JENKINS_HOME}-internal
 DOCKER_GID?=993
 IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}
+IMAGE_INTERNAL=${ORGANISATION}/${NAME_INTERNAL}:${JENKINS_WAR_VER}
 # To bump plugin versions:
 # * Make required changes in required_plugins.txt and set PLUGIN_FILE=required_plugins.txt
 # * Run `make start`, check the plugins work using the console
@@ -55,28 +58,73 @@ start_osx:
           -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.secrets \
           -p 8080:8080 ${IMAGE}
 
+start_internal: build_internal
+	-docker rm ${NAME_INTERNAL}
+	mkdir -p ${JENKINS_HOME_INTERNAL}/jobs
+	docker run --name ${NAME_INTERNAL} -d -e USE_SECURITY=${USE_SECURITY} \
+          -e OAUTH_ID=${OAUTH_ID} \
+          -e OAUTH_SECRET=${OAUTH_SECRET} \
+          -e JENKINS_API_USER=${JENKINS_API_USER} \
+          -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
+          -e DOCKER_GID=${DOCKER_GID} \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          -v ${JENKINS_HOME_INTERNAL}/jobs:/var/jenkins_home/jobs \
+          -v ${JENKINS_HOME_INTERNAL}/.netrc:/var/jenkins_home/.netrc \
+          -v ${JENKINS_HOME_INTERNAL}/.secrets:/var/jenkins_home/.secrets \
+          --net=host ${IMAGE_INTERNAL}
+
 build:
 	docker build --no-cache=$(NO_CACHE) \
           --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
           --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
           --build-arg PLUGIN_FILE=$(PLUGIN_FILE) \
+          --build-arg SERVER_TYPE=external \
           -t ${IMAGE} .
+
+build_internal:
+	docker build --no-cache=$(NO_CACHE) \
+          --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
+          --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
+          --build-arg PLUGIN_FILE=$(PLUGIN_FILE) \
+          --build-arg SERVER_TYPE=internal \
+          -t ${IMAGE_INTERNAL} .
+
 
 publish:
 	docker push ${IMAGE}
+
+publish_internal:
+	docker push ${IMAGE_INTERNAL}
+
 
 clean:
 	-docker rmi -f ${IMAGE}
 	-rm -r ${JENKINS_HOME}
 
+clean_internal:
+	-docker rmi -f ${IMAGE_INTERNAL}
+	-rm -r ${JENKINS_HOME_INTERNAL}
+
 stop:
 	for img in $$(docker ps -q -f name=${NAME}); do docker kill $$img; done
 
+stop_internal:
+	for img in $$(docker ps -q -f name=${NAME_INTERNAL}); do docker kill $$img; done
+
+
 restart: stop start
+
+restart_internal: stop_internal start_internal
 
 status:
 	([ "$$(docker ps -q -f name=${NAME})" == "" ] && \
           echo -e "\n${NAME} is *STOPPED*\n") || \
           echo -e "\n${NAME} is *RUNNING*\n"
+
+status_internal:
+	([ "$$(docker ps -q -f name=${NAME_INTERNAL})" == "" ] && \
+          echo -e "\n${NAME_INTERNAL} is *STOPPED*\n") || \
+          echo -e "\n${NAME_INTERNAL} is *RUNNING*\n"
+
 
 .PHONY: clean image publish
