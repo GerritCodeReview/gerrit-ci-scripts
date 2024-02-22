@@ -1,0 +1,4 @@
+- project:
+    name: events-nats
+    jobs:
+      - 'plugin-{name}-verifier'

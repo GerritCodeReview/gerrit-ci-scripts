@@ -1,0 +1,4 @@
+- project:
+    name: multi-site
+    jobs:
+      - 'plugin-{name}-verifier'

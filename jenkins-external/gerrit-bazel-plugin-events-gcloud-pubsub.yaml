@@ -1,0 +1,4 @@
+- project:
+    name: events-gcloud-pubsub
+    jobs:
+      - 'plugin-{name}-verifier'

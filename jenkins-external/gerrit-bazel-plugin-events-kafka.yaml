@@ -1,0 +1,4 @@
+- project:
+    name: events-kafka
+    jobs:
+      - 'plugin-{name}-verifier'

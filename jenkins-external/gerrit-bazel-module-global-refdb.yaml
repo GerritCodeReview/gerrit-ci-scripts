@@ -1,0 +1,4 @@
+- project:
+    name: global-refdb
+    jobs:
+      - 'module-{name}-verifier'

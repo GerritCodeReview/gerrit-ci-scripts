@@ -1,0 +1,4 @@
+- project:
+    name: replication-status
+    jobs:
+      - 'plugin-{name}-verifier'

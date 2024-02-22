@@ -1,0 +1,4 @@
+- project:
+    name: events-aws-kinesis
+    jobs:
+      - 'plugin-{name}-verifier'

@@ -36,6 +36,21 @@ start: build
           -v ${JENKINS_HOME}/.secrets:/var/jenkins_home/.secrets \
           --net=host ${IMAGE}
 
+start_external: build_external
+	-docker rm ${NAME}
+	mkdir -p ${JENKINS_HOME}/jobs
+	docker run --name ${NAME} -d -e USE_SECURITY=${USE_SECURITY} \
+          -e OAUTH_ID=${OAUTH_ID} \
+          -e OAUTH_SECRET=${OAUTH_SECRET} \
+          -e JENKINS_API_USER=${JENKINS_API_USER} \
+          -e JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD} \
+          -e DOCKER_GID=${DOCKER_GID} \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          -v ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs \
+          -v ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc \
+          -v ${JENKINS_HOME}/.secrets:/var/jenkins_home/.secrets \
+          --net=host ${IMAGE}
+
 start_osx:
 	-docker rm ${NAME} ${NAME}-socat
 	mkdir -p ${JENKINS_HOME}/jobs
@@ -60,6 +75,15 @@ build:
           --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
           --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
           --build-arg PLUGIN_FILE=$(PLUGIN_FILE) \
+          --build-arg SERVER_TYPE=internal \
+          -t ${IMAGE} .
+
+build_external:
+	docker build --no-cache=$(NO_CACHE) \
+          --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
+          --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
+          --build-arg PLUGIN_FILE=$(PLUGIN_FILE) \
+          --build-arg SERVER_TYPE=external \
           -t ${IMAGE} .
 
 publish:

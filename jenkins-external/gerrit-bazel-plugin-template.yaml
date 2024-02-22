@@ -1,0 +1,46 @@
+- defaults:
+    name: verifier-template-bazel
+    node: server
+    days-to-keep: 90
+    number-to-keep: 500
+    prune-dead-branches: true
+    periodic-folder-trigger: 10m
+
+- job-template:
+    name: 'plugin-{name}-verifier'
+    description: 'Plugin {name} change verification build'
+    defaults: verifier-template-bazel
+    project-type: multibranch
+    scm:
+      - gerrit:
+          url: https://gerrit-review.googlesource.com/a/plugins/{name}
+          credentials-id: external-gerrit.googlesource.com
+          refspecs:
+            - '+refs/heads/*:refs/remotes/origin/*'
+          filter-checks:
+            query-operator: 'SCHEME'
+            query-string: 'gerritforge'
+          property-strategies:
+            all-branches:
+              - suppress-scm-triggering: false
+              - pipeline-branch-durability-override: max-survivability
+
+- job-template:
+    name: 'module-{name}-verifier'
+    description: 'Module {name} change verification build'
+    defaults: verifier-template-bazel
+    project-type: multibranch
+    scm:
+      - gerrit:
+          url: https://gerrit-review.googlesource.com/a/modules/{name}
+          credentials-id: external-gerrit.googlesource.com
+          refspecs:
+            - '+refs/heads/*:refs/remotes/origin/*'
+          filter-checks:
+            query-operator: 'SCHEME'
+            query-string: 'gerritforge'
+          property-strategies:
+            all-branches:
+              - suppress-scm-triggering: false
+              - pipeline-branch-durability-override: max-survivability
+
