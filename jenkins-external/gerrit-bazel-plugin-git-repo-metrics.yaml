@@ -1,5 +1,5 @@
 - project:
-    name: replication-status
+    name: git-repo-metrics
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           branch:
@@ -11,3 +11,4 @@
             - stable-3.9
             - stable-3.8
             - stable-3.7
+      - 'plugin-{name}-verifier'

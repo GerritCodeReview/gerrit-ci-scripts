@@ -14,4 +14,3 @@
             - master
             - stable-3.9
           extra-modules: 'global-refdb'
-      - 'plugin-{name}-verifier'

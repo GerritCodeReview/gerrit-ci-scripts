@@ -44,6 +44,7 @@ ENV JENKINS_API_PASSWORD pass
 ENV DOCKER_HOST unix:///var/run/docker.sock
 ENV BINTRAY_URL https://dl.bintray.com/lucamilanesio
 
+
 COPY edit-config.xslt $JENKINS_REF
 COPY config.xml $JENKINS_REF
 COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
@@ -58,8 +59,9 @@ COPY setCredentials.groovy $JENKINS_REF/init.groovy.d/
 # TODO: CVE-2024-23897 Groovy workaround can be removed only after upgrading to 2.442, LTS 2.426.3
 COPY CVE-2024-23897-disable-cli.groovy $JENKINS_REF/init.groovy.d/
 
-COPY gerrit-ci-scripts.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
-COPY gerrit-ci-scripts-manual.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
+ARG SERVER_TYPE
+COPY gerrit-ci-scripts-$SERVER_TYPE.xml $JENKINS_REF/jobs/gerrit-ci-scripts/config.xml
+COPY gerrit-ci-scripts-manual-$SERVER_TYPE.xml $JENKINS_REF/jobs/gerrit-ci-scripts-manual/config.xml
 COPY org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml $JENKINS_REF/
 
 RUN echo "2.0" > $JENKINS_REF/jenkins.install.UpgradeWizard.state && \

@@ -1,0 +1,4 @@
+- project:
+    name: high-availability
+    jobs:
+      - plugin-{name}-verifier

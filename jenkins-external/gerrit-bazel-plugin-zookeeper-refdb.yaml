@@ -1,0 +1,4 @@
+- project:
+    name: zookeeper-refdb
+    jobs:
+      - 'plugin-{name}-verifier'
