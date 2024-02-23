@@ -119,6 +119,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "86d9c685_d8459148",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T15:19:54Z",
+      "side": 1,
+      "message": "For production, yes, but they are likely to be run on the same machine during development.\n\nIf anyone spins the internal/external locally for development/testing reasons, the two environments will pollute each other,\n\nI understand if we are not planning to spend time on this, but I think we should take a decision rather than just assuming it\u0027s OK, so I thought about mentioning.\n\n\n@luca.milanesio@gmail.com, @maczech@gmail.com, thoughts?",
+      "parentUuid": "2af659b5_22da35d1",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 30
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "21592df2_98d7ec43",
         "filename": "jenkins-docker/server/Makefile",
         "patchSetId": 2
@@ -200,6 +224,30 @@
       "side": 1,
       "message": "We discussed that with @luca.milanesio@gmail.com during the kick off it\u0027s not a problem to be able to deploy jobs and even see the content of the jobs. What we want to achieve is to be able to remove AWS and Firebase credentials from external Jenkins so even if you are able to deploy git-gatling-test job you are not able to run it and setup AWS cluster.",
       "parentUuid": "db200a23_21f0806f",
+      "range": {
+        "startLine": 4,
+        "startChar": 15,
+        "endLine": 4,
+        "endChar": 88
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f017d82_bb4bd084",
+        "filename": "jenkins-docker/server/gerrit-ci-scripts-manual-internal.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T15:19:54Z",
+      "side": 1,
+      "message": "My understanding by looking at the kick-off was that we were going to attempt that separation of internal/external jobs, rather than leaving all jobs in the same directory.\n\nThen, *if* there is any \"left over\" (as in, any job that we forgot to move away from the external jobs directory), it doesn\u0027t really matter because credentials will be missing anyway.\n\nBut now I understand that we will not even try to separate jobs at all.\nPerhaps I have misunderstood @luca.milanesio@gmail.com, @maczech@gmail.com?",
+      "parentUuid": "5a0b3558_b0bbce02",
       "range": {
         "startLine": 4,
         "startChar": 15,
