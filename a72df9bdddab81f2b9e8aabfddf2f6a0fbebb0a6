@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7af870af_50422e24",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T12:45:21Z",
+      "side": 1,
+      "message": "internally",
+      "range": {
+        "startLine": 7,
+        "startChar": 22,
+        "endLine": 7,
+        "endChar": 31
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "454cc09e_81437e2f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T12:45:21Z",
+      "side": 1,
+      "message": "externally",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "317e0ad3_a9d86fbf",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T12:45:21Z",
+      "side": 1,
+      "message": "What about OSX? We should provide a make target to start the internal jenkins for OSX too.\nIf you don\u0027t have a mac we can pair on this",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 10
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9884c17a_b39a2cbc",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T12:45:21Z",
+      "side": 1,
+      "message": "With the current setup it would not be possible to run both jenkins on the same instance, but I think it would be useful.\n\nBecause they are all sharing the same jenkins home, even running them one after the other might create unwanted sharing of workspaces and settings.\n\nI personally think would be useful to have a complete separation of the two environments, this will allow us to have isolation when running them locally\n\nWDYT @luca.milanesio@gmail.com @maczech@gmail.com?",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 30
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21592df2_98d7ec43",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T12:45:21Z",
+      "side": 1,
+      "message": "How about updating the name to reflect _which_ jenkins is running?",
+      "range": {
+        "startLine": 61,
+        "startChar": 12,
+        "endLine": 61,
+        "endChar": 27
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3c2d688_3317a0b1",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T12:45:21Z",
+      "side": 1,
+      "message": "We should probably build an internal image to be differenciated from the public one.\nThis allows to build the two different images locally (and run them) without them clobbering each other",
+      "range": {
+        "startLine": 71,
+        "startChar": 21,
+        "endLine": 71,
+        "endChar": 29
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db200a23_21f0806f",
+        "filename": "jenkins-docker/server/gerrit-ci-scripts-manual-internal.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-23T12:45:21Z",
+      "side": 1,
+      "message": "@maczech@gmail.com, I am not sure about the separation of internal jobs vs external jobs. I managed to trigger a build of external jobs (i.e. plugin-account-bazel-stable-3.7) from the internal jenkins and also managed to trigger the build of an internal job (i.e. gatling-gerrit-test) from the external jenkins.\n\nShouldn\u0027t we prevent those jobs from being built from the wrong jenkins instance by either not making them available at all or checking if the current instance can build it?",
+      "range": {
+        "startLine": 4,
+        "startChar": 15,
+        "endLine": 4,
+        "endChar": 88
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
