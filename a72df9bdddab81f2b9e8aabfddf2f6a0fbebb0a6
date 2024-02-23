@@ -95,6 +95,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2af659b5_22da35d1",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-02-23T14:27:05Z",
+      "side": 1,
+      "message": "I think idea is to start them on separate machines. I agree if we would like to start both on the same instance we need a follow up change",
+      "parentUuid": "9884c17a_b39a2cbc",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 30
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "21592df2_98d7ec43",
         "filename": "jenkins-docker/server/Makefile",
         "patchSetId": 2
@@ -152,6 +176,30 @@
       "writtenOn": "2024-02-23T12:45:21Z",
       "side": 1,
       "message": "@maczech@gmail.com, I am not sure about the separation of internal jobs vs external jobs. I managed to trigger a build of external jobs (i.e. plugin-account-bazel-stable-3.7) from the internal jenkins and also managed to trigger the build of an internal job (i.e. gatling-gerrit-test) from the external jenkins.\n\nShouldn\u0027t we prevent those jobs from being built from the wrong jenkins instance by either not making them available at all or checking if the current instance can build it?",
+      "range": {
+        "startLine": 4,
+        "startChar": 15,
+        "endLine": 4,
+        "endChar": 88
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a0b3558_b0bbce02",
+        "filename": "jenkins-docker/server/gerrit-ci-scripts-manual-internal.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-02-23T14:27:05Z",
+      "side": 1,
+      "message": "We discussed that with @luca.milanesio@gmail.com during the kick off it\u0027s not a problem to be able to deploy jobs and even see the content of the jobs. What we want to achieve is to be able to remove AWS and Firebase credentials from external Jenkins so even if you are able to deploy git-gatling-test job you are not able to run it and setup AWS cluster.",
+      "parentUuid": "db200a23_21f0806f",
       "range": {
         "startLine": 4,
         "startChar": 15,
