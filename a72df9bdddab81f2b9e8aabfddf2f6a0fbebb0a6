@@ -143,6 +143,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "50743ab2_0819c5f6",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-02-23T15:28:43Z",
+      "side": 1,
+      "message": "It\u0027s easy to implement and I\u0027m happy to add it, it will not take much time. @luca.milanesio@gmail.com thoughts?",
+      "parentUuid": "86d9c685_d8459148",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 30
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "21592df2_98d7ec43",
         "filename": "jenkins-docker/server/Makefile",
         "patchSetId": 2
@@ -248,6 +272,30 @@
       "side": 1,
       "message": "My understanding by looking at the kick-off was that we were going to attempt that separation of internal/external jobs, rather than leaving all jobs in the same directory.\n\nThen, *if* there is any \"left over\" (as in, any job that we forgot to move away from the external jobs directory), it doesn\u0027t really matter because credentials will be missing anyway.\n\nBut now I understand that we will not even try to separate jobs at all.\nPerhaps I have misunderstood @luca.milanesio@gmail.com, @maczech@gmail.com?",
       "parentUuid": "5a0b3558_b0bbce02",
+      "range": {
+        "startLine": 4,
+        "startChar": 15,
+        "endLine": 4,
+        "endChar": 88
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47007a51_f4e19ee8",
+        "filename": "jenkins-docker/server/gerrit-ci-scripts-manual-internal.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-02-23T15:28:43Z",
+      "side": 1,
+      "message": "\u003e My understanding by looking at the kick-off was that we were going to attempt that separation of internal/external jobs, rather than leaving all jobs in the same directory.\n\nNot sure if I understand. We move jobs which required extra credentials to `jenkins-internal` and we removed them from `jenkins` folder. So we have the separation.\n\n\u003eThen, if there is any \"left over\" (as in, any job that we forgot to move away from the external jobs directory), it doesn\u0027t really matter because credentials will be missing anyway.\n\nThat\u0027s correct, for the external Jenkins we deploy only jobs from `jenkins` and if we have any job which still needs extra credentials it will fail",
+      "parentUuid": "0f017d82_bb4bd084",
       "range": {
         "startLine": 4,
         "startChar": 15,
