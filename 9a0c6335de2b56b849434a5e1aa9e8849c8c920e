@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cfe2281_e100f76a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-02-26T13:55:40Z",
+      "side": 1,
+      "message": "In overall change looks good to me. The only problem I can see is that currently users are browsing the UI to download the jars. With the new approach they have sing in or figure out the links",
+      "revId": "9a0c6335de2b56b849434a5e1aa9e8849c8c920e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
