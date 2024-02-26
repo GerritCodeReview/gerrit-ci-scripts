@@ -304,6 +304,30 @@
       },
       "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3384ecc2_b1f09b0e",
+        "filename": "jenkins-docker/server/gerrit-ci-scripts-manual-internal.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-26T11:10:56Z",
+      "side": 1,
+      "message": "Acknowledged.",
+      "parentUuid": "47007a51_f4e19ee8",
+      "range": {
+        "startLine": 4,
+        "startChar": 15,
+        "endLine": 4,
+        "endChar": 88
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
