@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "003c84ba_42513cb4",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-02-27T08:52:31Z",
+      "side": 1,
+      "message": "It would be best to use a different environment variable, so that we don\u0027t risk to run on the wrong set of jobs",
+      "range": {
+        "startLine": 60,
+        "startChar": 12,
+        "endLine": 60,
+        "endChar": 24
+      },
+      "revId": "9ad22ba568c51432341465aaad015ebf933232f4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

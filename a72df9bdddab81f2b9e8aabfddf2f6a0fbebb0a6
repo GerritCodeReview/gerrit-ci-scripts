@@ -238,6 +238,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fd49bad4_d2ad3221",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-02-27T08:52:31Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "21592df2_98d7ec43",
+      "range": {
+        "startLine": 61,
+        "startChar": 12,
+        "endLine": 61,
+        "endChar": 27
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f3c2d688_3317a0b1",
         "filename": "jenkins-docker/server/Makefile",
         "patchSetId": 2
@@ -249,6 +273,30 @@
       "writtenOn": "2024-02-23T12:45:21Z",
       "side": 1,
       "message": "We should probably build an internal image to be differenciated from the public one.\nThis allows to build the two different images locally (and run them) without them clobbering each other",
+      "range": {
+        "startLine": 71,
+        "startChar": 21,
+        "endLine": 71,
+        "endChar": 29
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7e0c240_7b8b187b",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-02-27T08:52:31Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "f3c2d688_3317a0b1",
       "range": {
         "startLine": 71,
         "startChar": 21,
