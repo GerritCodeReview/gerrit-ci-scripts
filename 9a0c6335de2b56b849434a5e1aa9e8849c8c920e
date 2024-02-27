@@ -51,6 +51,24 @@
       "message": "SGTM, but let\u0027s wait to publish this until we disclose the vulnerability and security incident. In the meantime we\u0027ll deploy this to the new BuildBuddy pipeline, which is ready to go.",
       "revId": "9a0c6335de2b56b849434a5e1aa9e8849c8c920e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09b49e59_13a188db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-27T10:08:12Z",
+      "side": 1,
+      "message": "Cool, thanks @luca.milanesio@gmail.com, please let me know when you plan to deploy this, we could pair on that if you don\u0027t mind.",
+      "parentUuid": "1500b5ad_2b58fa18",
+      "revId": "9a0c6335de2b56b849434a5e1aa9e8849c8c920e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
