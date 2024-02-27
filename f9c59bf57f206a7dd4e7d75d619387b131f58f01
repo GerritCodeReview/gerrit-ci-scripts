@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7646e1bd_ed96c4ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-27T16:36:53Z",
+      "side": 1,
+      "message": "This looks good to me, but is going to conflict to this chain of changes [1].\nSince those are already approved and just waiting for deployment, I would suggest moving this change on top of that chain, should be easy I believe.\n\nAlternatively we could do the opposite, but that would require to re-review that chain.\n\nWDYT @luca.milanesio@gmail.com, @maczech@gmail.com\n\n[1] https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/410159",
+      "revId": "f9c59bf57f206a7dd4e7d75d619387b131f58f01",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d9d7fd5_a414bfda",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-27T16:36:53Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 124,
+        "endChar": 15
+      },
+      "revId": "f9c59bf57f206a7dd4e7d75d619387b131f58f01",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
