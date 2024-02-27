@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ade8eb30_72a4c8ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-02-27T10:19:10Z",
+      "side": 1,
+      "message": "Hey @sven.selberg@axis.com, is this still WIP?",
+      "revId": "c92a78e135c600b7593b7e75550e20a354640014",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
