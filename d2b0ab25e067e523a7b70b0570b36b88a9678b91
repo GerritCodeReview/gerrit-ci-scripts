@@ -53,6 +53,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4c2b73b_58644752",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-02-27T10:57:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b089dd9f_585d1d18",
+      "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e2d7eb8a_9f9ffbbe",
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "Fixed with: https://gerrit-review.googlesource.com/c/plugins/events-eiffel/+/409478",
       "parentUuid": "e2d7eb8a_9f9ffbbe",
+      "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97328662_7af67cee",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2024-02-27T10:57:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e08fd76b_a4209466",
       "revId": "d2b0ab25e067e523a7b70b0570b36b88a9678b91",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
