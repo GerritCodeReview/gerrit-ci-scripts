@@ -12,10 +12,9 @@ COPY jenkins.sh /usr/local/bin/
 
 RUN apt-get update && apt-get install -y \
     ca-certificates \
-    python-dev \
+    python-dev-is-python3 \
     python3-pip \
     python3-yaml \
-    python3-jenkinsapi \
     default-jdk \
     autoconf \
     automake \
@@ -30,7 +29,7 @@ RUN sed -i 's#mozilla/DST_Root_CA_X3.crt#!mozilla/DST_Root_CA_X3.crt#' /etc/ca-c
     update-ca-certificates
 
 COPY requirements.txt /tmp/requirements.txt
-RUN pip install --require-hashes -r /tmp/requirements.txt
+RUN pip install --break-system-packages --require-hashes -r /tmp/requirements.txt
 
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
@@ -82,7 +81,7 @@ RUN apt-get update && apt-get install -y \
         $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null && \
     apt-get update && \
     apt-cache policy docker-engine && \
-    apt-get install -y docker-ce=5:20.10.22~3-0~debian-bullseye
+    apt-get install -y docker-ce-cli=5:25.0.3-1~debian.12~bookworm
 
 COPY config.sh /usr/local/bin/
 
