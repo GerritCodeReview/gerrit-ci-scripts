@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6a99ff0_4a5a997c",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2024-02-29T09:44:49Z",
+      "side": 1,
+      "message": "Nit: I think this is a link to help find the sha for the war. Maybe we can put this on line 10 (i.e. just above the sha), remove the version number (so we don\u0027t need to remember to bump it to keep it in sync) and add a comment to that effect (e.g. the sha for the war can be found at https://.../war-stable)?",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf6cc563_abd0b8b4",
+        "filename": "jenkins-docker/server/required_plugins.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2024-02-29T09:44:49Z",
+      "side": 1,
+      "message": "Out of curiosity - did you manually assign the versions, or did you get the Jenkins plugin manager do it for you (i.e. only give the plugin names) before pinning them?",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55bc255e_7a263a91",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2024-02-29T09:44:49Z",
+      "side": 1,
+      "message": "Is this file (in particular the versions) managed manually? Do we need to upgrade these as part of this version bump too?",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b22bc018_582fc0d7",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2024-02-29T09:44:49Z",
+      "side": 1,
+      "message": "Are these transitive dependencies (as opposed to implicit)?",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d88eb0f2_20633dd8",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2024-02-29T09:44:49Z",
+      "side": 1,
+      "message": "What is this section? Why does it live on its own?",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
