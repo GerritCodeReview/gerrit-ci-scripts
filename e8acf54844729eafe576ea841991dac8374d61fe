@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f5c6978_0be93343",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-01T09:58:06Z",
+      "side": 1,
+      "message": "We also need to allow the following content:\n- JavaScript\n- CSS\n- SVG\n- ICO",
+      "revId": "e8acf54844729eafe576ea841991dac8374d61fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
