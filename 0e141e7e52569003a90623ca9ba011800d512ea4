@@ -3,6 +3,52 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0238bc89_0a548b7b",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-01T01:05:46Z",
+      "side": 1,
+      "message": "Why is this needed? What are the breakages?",
+      "range": {
+        "startLine": 32,
+        "startChar": 16,
+        "endLine": 32,
+        "endChar": 39
+      },
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e17e6304_29ef13b9",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-01T01:05:46Z",
+      "side": 1,
+      "message": "Is this a consequence of the Docker plugin upgrade? Can you explain why on the commit message?",
+      "range": {
+        "startLine": 84,
+        "startChar": 32,
+        "endLine": 84,
+        "endChar": 47
+      },
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c6a99ff0_4a5a997c",
         "filename": "jenkins-docker/server/Makefile",
         "patchSetId": 2
@@ -14,6 +60,24 @@
       "writtenOn": "2024-02-29T09:44:49Z",
       "side": 1,
       "message": "Nit: I think this is a link to help find the sha for the war. Maybe we can put this on line 10 (i.e. just above the sha), remove the version number (so we don\u0027t need to remember to bump it to keep it in sync) and add a comment to that effect (e.g. the sha for the war can be found at https://.../war-stable)?",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "faa25bf3_f58ad6db",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-01T01:05:46Z",
+      "side": 1,
+      "message": "We actually want to assert the SHA1 here, otherwise if we fetch it dynamically we may risk to be subject to malicious poisoning.\nWe may argue if we really need SHA1 validation though ;-) in that case we can remove it altogether if we thing we do not need it.",
+      "parentUuid": "c6a99ff0_4a5a997c",
       "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
