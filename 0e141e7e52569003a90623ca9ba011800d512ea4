@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6d3e7e1c_7fb40172",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2024-03-01T09:27:18Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "0238bc89_0a548b7b",
+      "range": {
+        "startLine": 32,
+        "startChar": 16,
+        "endLine": 32,
+        "endChar": 39
+      },
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e17e6304_29ef13b9",
         "filename": "jenkins-docker/server/Dockerfile",
         "patchSetId": 2
@@ -78,6 +102,24 @@
       "side": 1,
       "message": "We actually want to assert the SHA1 here, otherwise if we fetch it dynamically we may risk to be subject to malicious poisoning.\nWe may argue if we really need SHA1 validation though ;-) in that case we can remove it altogether if we thing we do not need it.",
       "parentUuid": "c6a99ff0_4a5a997c",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ee45dd7_aa7a9bb3",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1063024
+      },
+      "writtenOn": "2024-03-01T09:27:18Z",
+      "side": 1,
+      "message": "Yes, I agree - we should keep the SHA1 to confirm the validity of the war, I wasn\u0027t suggesting removing the check.\n\nI was referring to the comment:\n* it could clarify that the link is where the SHA1 is to be taken from\n* remove the version number so we don\u0027t forget to update it\n* maybe move it to the line below so it sits above the JENKINS_WAR_SHA line? The JENKINS_WAR_VER value is the docker image name and doesn\u0027t match the folder in the link",
+      "parentUuid": "faa25bf3_f58ad6db",
       "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
