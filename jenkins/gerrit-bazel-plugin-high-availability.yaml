@@ -2,6 +2,7 @@
     name: high-availability
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+          extra-modules: 'global-refdb'
           branch:
             - master
             - stable-3.8
