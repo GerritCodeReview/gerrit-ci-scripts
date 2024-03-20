@@ -16,6 +16,24 @@
       "message": "Jenkins doesn\u0027t start anymore after this change:\n\n```\n[Fatal Error] :1:1: Premature end of file.\n2024-03-19 23:22:25.476+0000 [id\u003d30]\tSEVERE\tjenkins.install.InstallUtil#getLastExecVersion: Unexpected error reading global config.xml\norg.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.\n\tat java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)\n\tat java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)\n\tat jenkins.util.xml.XMLUtils.parse(XMLUtils.java:149)\n\tat jenkins.util.xml.XMLUtils.parse(XMLUtils.java:184)\n\tat jenkins.util.xml.XMLUtils.getValue(XMLUtils.java:221)\n\tat jenkins.util.xml.XMLUtils.getValue(XMLUtils.java:205)\n\tat jenkins.install.InstallUtil.getLastExecVersion(InstallUtil.java:237)\n\tat hudson.PluginManager.loadDetachedPlugins(PluginManager.java:759)\n\tat hudson.LocalPluginManager.loadBundledPlugins(LocalPluginManager.java:78)\n\tat hudson.PluginManager$1$1.run(PluginManager.java:422)\n\tat org.jvnet.hudson.reactor.TaskGraphBuilder$TaskImpl.run(TaskGraphBuilder.java:177)\n\tat org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:305)\n\tat jenkins.model.Jenkins$5.runTask(Jenkins.java:1161)\n\tat org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)\n\tat org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)\n\tat jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:70)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\n```",
       "revId": "4941bca45ed2d0c42363058218d779410d77b7e3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d2ac715_132c8133",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-20T10:36:39Z",
+      "side": 1,
+      "message": "I cannot reproduce that issue locally, maybe it\u0027s related to the other comment where I removed `-e`\n@luca.milanesio@gmail.com could we try to reproduce it on your side?",
+      "parentUuid": "535c7129_d0c98a9c",
+      "revId": "4941bca45ed2d0c42363058218d779410d77b7e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

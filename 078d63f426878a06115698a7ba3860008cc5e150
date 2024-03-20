@@ -22,6 +22,30 @@
       },
       "revId": "078d63f426878a06115698a7ba3860008cc5e150",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4174a135_1b4fb9c8",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-20T10:36:39Z",
+      "side": 0,
+      "message": "with -e content of the jenkins-container.env is:\n```\n-e USE_SECURITY\u003dfalse\n OAUTH_ID\u003dclientid\n OAUTH_SECRET\u003dsecret\n JENKINS_API_USER\u003duser\n JENKINS_API_PASSWORD\u003dpass\n DOCKER_GID\u003d993\n```\n\nI\u0027m using Ubuntu so maybe it works as expected on Mac or other Linux distributions.\nI will revert that change",
+      "parentUuid": "4c0435f3_5b384bd5",
+      "range": {
+        "startLine": 49,
+        "startChar": 6,
+        "endLine": 49,
+        "endChar": 9
+      },
+      "revId": "078d63f426878a06115698a7ba3860008cc5e150",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
