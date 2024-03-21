@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9ddb7cea_7b23af17",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-21T09:11:59Z",
+      "side": 1,
+      "message": "Newer version of pip promotes virtual environments. If we run command without `--break-system-packages` we will get following error:\n```\n \u003e [ 8/28] RUN pip install --require-hashes -r /tmp/requirements.txt:\n0.578 error: externally-managed-environment\n0.578\n0.578 × This environment is externally managed\n0.578 ╰─\u003e To install Python packages system-wide, try apt install\n0.578     python3-xyz, where xyz is the package you are trying to\n0.578     install.\n0.578\n0.578     If you wish to install a non-Debian-packaged Python package,\n0.578     create a virtual environment using python3 -m venv path/to/venv.\n0.578     Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make\n0.578     sure you have python3-full installed.\n0.578\n0.578     If you wish to install a non-Debian packaged Python application,\n0.578     it may be easiest to use pipx install xyz, which will manage a\n0.578     virtual environment for you. Make sure you have pipx installed.\n0.578\n0.578     See /usr/share/doc/python3.11/README.venv for more information.\n0.578\n0.578 note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.\n0.578 hint: See PEP 668 for the detailed specification.\n```",
+      "parentUuid": "6d3e7e1c_7fb40172",
+      "range": {
+        "startLine": 32,
+        "startChar": 16,
+        "endLine": 32,
+        "endChar": 39
+      },
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e17e6304_29ef13b9",
         "filename": "jenkins-docker/server/Dockerfile",
         "patchSetId": 2
@@ -61,6 +85,30 @@
       "writtenOn": "2024-03-01T01:05:46Z",
       "side": 1,
       "message": "Is this a consequence of the Docker plugin upgrade? Can you explain why on the commit message?",
+      "range": {
+        "startLine": 84,
+        "startChar": 32,
+        "endLine": 84,
+        "endChar": 47
+      },
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ffbdda3_a2899906",
+        "filename": "jenkins-docker/server/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-21T09:11:59Z",
+      "side": 1,
+      "message": "Yes, with the new version of docker which is coming with the new version of jenkins image 2.440.1-lts docker-ce package is renamed to the docker-ce-cli",
+      "parentUuid": "e17e6304_29ef13b9",
       "range": {
         "startLine": 84,
         "startChar": 32,
@@ -124,6 +172,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a631b8e0_9860d29a",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-21T09:11:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ee45dd7_aa7a9bb3",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bf6cc563_abd0b8b4",
@@ -137,6 +203,24 @@
       "writtenOn": "2024-02-29T09:44:49Z",
       "side": 1,
       "message": "Out of curiosity - did you manually assign the versions, or did you get the Jenkins plugin manager do it for you (i.e. only give the plugin names) before pinning them?",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "853d8668_10a53107",
+        "filename": "jenkins-docker/server/required_plugins.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-21T09:11:59Z",
+      "side": 1,
+      "message": "I only gave the plugin names",
+      "parentUuid": "bf6cc563_abd0b8b4",
       "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -158,6 +242,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ef8a415_60335817",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-21T09:11:59Z",
+      "side": 1,
+      "message": "Yes, we need to manage that manually when we do the upgrade",
+      "parentUuid": "55bc255e_7a263a91",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b22bc018_582fc0d7",
@@ -175,6 +277,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9cb3377_8b605f7b",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-21T09:11:59Z",
+      "side": 1,
+      "message": "Those are implicit dependencies but with the new image those are missing so we have to install them manually",
+      "parentUuid": "b22bc018_582fc0d7",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d88eb0f2_20633dd8",
@@ -188,6 +308,24 @@
       "writtenOn": "2024-02-29T09:44:49Z",
       "side": 1,
       "message": "What is this section? Why does it live on its own?",
+      "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35fb734e_6869c8d0",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-03-21T09:11:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d88eb0f2_20633dd8",
       "revId": "0e141e7e52569003a90623ca9ba011800d512ea4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
