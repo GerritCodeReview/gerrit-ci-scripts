@@ -49,13 +49,14 @@ log_osx: create_env
 	docker compose -f docker-compose.osx.yaml logs --follow
 
 create_env:
-	echo -e \
-        "USE_SECURITY=${USE_SECURITY}\n" \
-        "OAUTH_ID=${OAUTH_ID}\n" \
-        "OAUTH_SECRET=${OAUTH_SECRET}\n" \
-        "JENKINS_API_USER=${JENKINS_API_USER}\n" \
-        "JENKINS_API_PASSWORD=${JENKINS_API_PASSWORD}\n" \
-        "DOCKER_GID=${DOCKER_GID}\n" > jenkins-container.env
+	printf \
+        "USE_SECURITY=%s\nOAUTH_ID=%s\nOAUTH_SECRET=%s\nJENKINS_API_USER=%s\nJENKINS_API_PASSWORD=%s\nDOCKER_GID=%s\n" \
+        "${USE_SECURITY}" \
+        "${OAUTH_ID}" \
+        "${OAUTH_SECRET}" \
+        "${JENKINS_API_USER}" \
+        "${JENKINS_API_PASSWORD}" \
+        "${DOCKER_GID}" > jenkins-container.env
 
 start_internal: build_internal create_env
 	-docker rm ${NAME_INTERNAL}
