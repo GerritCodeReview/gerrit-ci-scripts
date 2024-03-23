@@ -1,11 +1,10 @@
 - project:
-    name: high-availability
+    name: events-eiffel
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-modules: 'global-refdb'
+          extra-modules: 'events-broker'
           branch:
             - master
             - stable-3.9
             - stable-3.8
-            - stable-3.7
-      - plugin-{name}-verifier
+      - 'plugin-{name}-verifier'
