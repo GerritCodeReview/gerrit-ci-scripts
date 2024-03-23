@@ -1,7 +1,6 @@
 - job-template:
     name: 'plugin-{repo}-mvn-{branch}'
     description: 'Plugin {repo} {branch} branch build with Maven'
-    disabled: true
     node: mvn
     wrappers:
       - timeout:

@@ -1,7 +1,6 @@
 - job-template:
     name: 'plugin-owners-bazel-{branch}'
     description: 'Plugin owners {branch} branch build with Bazel'
-    disabled: true
     defaults: plugin-template-bazel
     scm:
       - git:
@@ -33,7 +32,6 @@
 - job-template:
     name: 'plugin-owners-bazel-{branch}-{gerrit-branch}'
     class: plugins
-    disabled: true
     description: 'Plugin owners {branch} branch Bazel build for Gerrit {gerrit-branch}'
     defaults: plugin-template-bazel
     scm:
