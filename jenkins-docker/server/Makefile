@@ -49,7 +49,7 @@ log_osx: create_env
 	docker compose -f docker-compose.osx.yaml logs --follow
 
 create_env:
-	echo -e \
+	echo $$(test `uname` = "Darwin" || echo "-e") \
         "USE_SECURITY=${USE_SECURITY}\n" \
         "OAUTH_ID=${OAUTH_ID}\n" \
         "OAUTH_SECRET=${OAUTH_SECRET}\n" \
