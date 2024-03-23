@@ -2,7 +2,7 @@
     name: multi-site
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: 'pull-replication'
+          extra-plugins: 'pull-replication healthcheck'
           extra-modules: 'events-broker global-refdb'
           branch:
             - master

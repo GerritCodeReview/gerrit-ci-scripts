@@ -1,7 +1,6 @@
 - job-template:
     name: 'plugin-account-bazel-{branch}'
     description: 'Plugin account {branch} branch build with Bazel'
-    disabled: true
     defaults: plugin-template-bazel
     node: bazel-debian
     class: plugins

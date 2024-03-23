@@ -1,7 +1,6 @@
 - job-template:
     name: 'plugin-examples-bazel-{branch}'
     description: 'Plugin examples {branch} branch build with Bazel'
-    disabled: true
     defaults: plugin-template-bazel
     targets: ''
     scm:
