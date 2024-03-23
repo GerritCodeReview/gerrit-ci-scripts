@@ -15,6 +15,7 @@ JENKINS_HOME_INTERNAL?=${JENKINS_HOME}-internal
 DOCKER_GID?=993
 IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}
 IMAGE_INTERNAL=${ORGANISATION}/${NAME_INTERNAL}:${JENKINS_WAR_VER}
+GERRIT_CI_PEM=./tls/gerrit-ci.pem
 # To bump plugin versions:
 # * Make required changes in required_plugins.txt and set PLUGIN_FILE=required_plugins.txt
 # * Run `make start`, check the plugins work using the console
@@ -27,7 +28,7 @@ PLUGIN_FILE=plugins.txt
 start: build create_env
 	-docker rm ${NAME}
 	mkdir -p ${JENKINS_HOME}/jobs
-	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} \
 	docker compose -f docker-compose.yaml up -d
 
 log: create_env
@@ -41,14 +42,14 @@ start_osx: create_env
           -v /var/run/docker.sock:/var/run/docker.sock \
           -p 127.0.0.1:1234:1234 \
           bobrik/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
-	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} \
 	docker-compose -f docker-compose.osx.yaml up -d
 
 log_osx: create_env
 	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
 	docker compose -f docker-compose.osx.yaml logs --follow
 
-create_env:
+create_env: ${GERRIT_CI_PEM}
 	echo $$(test `uname` = "Darwin" || echo "-e") \
         "USE_SECURITY=${USE_SECURITY}\n" \
         "OAUTH_ID=${OAUTH_ID}\n" \
@@ -62,6 +63,12 @@ start_internal: build_internal create_env
 	mkdir -p ${JENKINS_HOME_INTERNAL}/jobs
 	JENKINS_HOME=${JENKINS_HOME_INTERNAL} IMAGE=${IMAGE_INTERNAL} NAME=${NAME_INTERNAL} \
 	docker compose -f docker-compose.yaml up -d
+
+${GERRIT_CI_PEM}:
+	mkdir -p $(dir ${GERRIT_CI_PEM}) && \
+	openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=US/ST=California/L=Sunnyvale/O=GerritForge/OU=CI/CN=gerrit-ci.gerritforge.com" && \
+	cat key.pem cert.pem | tee ${GERRIT_CI_PEM} && \
+	rm -f key.pem cert.pem
 
 build:
 	docker build --no-cache=$(NO_CACHE) \
