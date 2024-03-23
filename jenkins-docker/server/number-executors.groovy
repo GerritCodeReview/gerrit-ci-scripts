@@ -19,6 +19,6 @@ import jenkins.model.*;
 Thread.start {
       sleep 10000
       println "--> setting maximum number of executors on server"
-      Jenkins.instance.setNumExecutors(10)
+      Jenkins.instance.setNumExecutors(0)
       Jenkins.instance.reload()
 }
