@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a462ab6d_b1180694",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-23T11:51:14Z",
+      "side": 1,
+      "message": "This should be added to start_osx, start and start_internal",
+      "range": {
+        "startLine": 52,
+        "startChar": 11,
+        "endLine": 52,
+        "endChar": 28
+      },
+      "revId": "e9b1dda7b2586d2e86a7a90c797c56665792b589",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
