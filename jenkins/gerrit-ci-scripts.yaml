@@ -2,6 +2,13 @@
     name: gerrit-ci-scripts
     description: Gerrit Jenkins Job Builder Scripts
     node: server
+    parameters:
+      - string:
+          name: JJB_USER
+          description: 'Jenkins user authorised to configure jobs'
+      - password:
+          name: JJB_PASSWORD
+          description: 'Jenkins API user token'
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
@@ -41,6 +48,12 @@
     description: Manually rebuild gerrit-ci-scripts from a specific Change ID and revision
     node: server
     parameters:
+      - string:
+          name: JJB_USER
+          description: 'Jenkins user authorised to configure jobs'
+      - password:
+          name: JJB_PASSWORD
+          description: 'Jenkins API user token'
       - string:
           name: CHANGE_NUMBER
           description: 'Legacy Change ID of patch to build'
