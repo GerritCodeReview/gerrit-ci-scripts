@@ -1,7 +1,6 @@
 - job-template:
     name: 'app-{name}-{branch}'
     description: 'App {name} {branch} branch build'
-    disabled: true
     wrappers:
       - timeout:
           timeout: 30
