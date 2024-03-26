@@ -23,27 +23,6 @@
       - shell: jenkins-jobs update --delete-old jenkins/.
 
 - job:
-    name: gerrit-ci-scripts-docker
-    description: Gerrit Jenkins Job Builder Docker images
-    node: server
-    scm:
-      - git:
-          url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
-          credentials-id: gerrit.googlesource.com
-          branches:
-            - '*/master'
-          skip-tag: true
-    triggers:
-      - timed: '@midnight'
-    builders:
-      - shell: docker system prune -af
-      - shell: |
-          export JENKINS_WAR_VER=2.204.1
-          export JENKINS_WAR_SHA=924d2c9fabfdcacee1bae757337a07d7599eaa35
-          cd jenkins-docker
-          make NO_CACHE=true build
-
-- job:
     name: gerrit-ci-scripts-manual
     description: Manually rebuild gerrit-ci-scripts from a specific Change ID and revision
     node: server
