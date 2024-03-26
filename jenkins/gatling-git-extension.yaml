@@ -1,7 +1,6 @@
 - job-template:
     name: 'gatling-git-sbt-{branch}'
     description: 'Gatling Git extension {branch} branch build with Sbt'
-    disabled: true
     node: sbt
     targets: compile test assembly
     wrappers:
