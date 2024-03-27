@@ -403,6 +403,54 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6742d9ee_1a12f5a3",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1161625
+      },
+      "writtenOn": "2024-03-27T11:04:21Z",
+      "side": 1,
+      "message": "https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/410378/comment/f3c2d688_3317a0b1/",
+      "parentUuid": "af7a3fa1_ece5a1fa",
+      "range": {
+        "startLine": 71,
+        "startChar": 21,
+        "endLine": 71,
+        "endChar": 29
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d7bbc40_e5d78f32",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1161625
+      },
+      "writtenOn": "2024-03-27T11:04:21Z",
+      "side": 1,
+      "message": "https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/410378/comment/f3c2d688_3317a0b1/",
+      "parentUuid": "af7a3fa1_ece5a1fa",
+      "range": {
+        "startLine": 71,
+        "startChar": 21,
+        "endLine": 71,
+        "endChar": 29
+      },
+      "revId": "a72df9bdddab81f2b9e8aabfddf2f6a0fbebb0a6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "db200a23_21f0806f",
