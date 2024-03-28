@@ -22,6 +22,30 @@
       },
       "revId": "fa5b06280ffabd4ce67e73b3b1851184b32702f7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de3e325f_970122ef",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-28T17:22:44Z",
+      "side": 1,
+      "message": "See the modules job definition from `gerrit-bazel-plugin-template.yaml:243`\n```\n- job-template:\n    name: \u0027module-{name}-bazel-{branch}\u0027\n    class: modules\n    disabled: true\n    node: bazel-debian\n    description: \u0027Lib module {name} {branch} branch Bazel build\u0027\n    defaults: plugin-template-bazel\n    scm:\n      - git:\n          remotes:\n            - origin:\n                url: https://gerrit.googlesource.com/a/modules/{name}\n                credentials-id: gerrit.googlesource.com\n            - gerrit:\n                url: https://gerrit.googlesource.com/a/gerrit\n                credentials-id: gerrit.googlesource.com\n```\n\n`origin` is the module source code and that\u0027s the one we want to poll for changes.",
+      "parentUuid": "0d0dbb36_01ae094d",
+      "range": {
+        "startLine": 9,
+        "startChar": 36,
+        "endLine": 9,
+        "endChar": 47
+      },
+      "revId": "fa5b06280ffabd4ce67e73b3b1851184b32702f7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
