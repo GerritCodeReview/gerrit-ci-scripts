@@ -201,6 +201,7 @@ def prepareBuildsForMode(buildName, mode="notedb", retryTimes = 1) {
 def collectBuilds() {
     def builds = [:]
     if (hasChangeNumber()) {
+       builds["Gerrit-codestyle"] = prepareBuildsForMode("Gerrit-codestyle")
        Builds.modes.each {
           builds["Gerrit-verification(${it})"] = prepareBuildsForMode((buildVerificationJob()), it)
        }
