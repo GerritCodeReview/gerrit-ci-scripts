@@ -12,5 +12,6 @@ mask-passwords:3.3
 matrix-auth:3.1.6
 pipeline-build-step:2.18
 pipeline-stage-view:2.28
+simple-theme-plugin:160.vb_76454b_67900
 timestamper:1.21
 workflow-aggregator:590.v6a_d052e5a_a_b_5

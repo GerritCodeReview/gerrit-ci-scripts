@@ -67,6 +67,7 @@ pipeline-stage-view:2.28
 plain-credentials:143.v1b_df8b_d3b_e48
 plugin-util-api:2.20.0
 popper2-api:2.11.6-2
+simple-theme-plugin:160.vb_76454b_67900
 scm-api:631.v9143df5b_e4a_a
 script-security:1269.v639888f5e366
 snakeyaml-api:1.33-90.v80dcb_3814d35

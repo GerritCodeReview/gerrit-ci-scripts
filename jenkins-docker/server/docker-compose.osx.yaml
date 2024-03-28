@@ -20,3 +20,10 @@ services:
      - ./haproxy/lua:/usr/local/etc/haproxy/lua:ro
      - ./haproxy/403.http:/usr/local/etc/haproxy/errors/403.http:ro
      - ${GERRIT_CI_PEM}:/usr/local/etc/haproxy/ssl/certs/gerrit-ci.pem
+  nginx:
+   image: nginx:stable-alpine3.17-slim
+   container_name: ${NAME}-nginx
+   ports:
+     - "8081:80"
+   volumes:
+     - ${JENKINS_CSS_PATH}:/usr/share/nginx/html/:ro
