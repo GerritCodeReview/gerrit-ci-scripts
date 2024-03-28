@@ -41,7 +41,7 @@ ENV OAUTH_ID clientid
 ENV OAUTH_SECRET secret
 ENV JENKINS_API_USER user
 ENV JENKINS_API_PASSWORD pass
-ENV DOCKER_HOST unix:///var/run/docker.sock
+ENV REMOTE_DOCKER_HOST unix:///var/run/docker.sock
 ENV BINTRAY_URL https://dl.bintray.com/lucamilanesio
 
 COPY edit-config.xslt $JENKINS_REF
