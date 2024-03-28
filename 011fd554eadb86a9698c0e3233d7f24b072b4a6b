@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dedbbb7b_98f6acaf",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-28T17:18:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f9ea5b9b_4b4375ff",
+      "revId": "011fd554eadb86a9698c0e3233d7f24b072b4a6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "545097f9_f0b15c9e",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-03-25T11:53:07Z",
       "side": 1,
       "message": "Just a thought - I don\u0027t exactly know when this is run, but should we consider not recreating this file automatically if it doesn\u0027t exist? In other words, might we be hiding a problem if we regenerate this file rather than pass an existing one in?",
+      "revId": "011fd554eadb86a9698c0e3233d7f24b072b4a6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "611062c8_0cd97b79",
+        "filename": "jenkins-docker/server/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-28T17:18:06Z",
+      "side": 1,
+      "message": "\u003e Just a thought - I don\u0027t exactly know when this is run,\n\nIf there isn\u0027t a Gerrit-CI PEM file, this rule creates it.\n\n\u003e but should we consider not recreating this file automatically if it doesn\u0027t exist?\n\nWhy? That\u0027s exactly against the purpose of this rule: if you don\u0027t have it, create it.\n\n\u003e In other words, might we be hiding a problem if we regenerate this file rather than pass an existing one in?\n\nNo, if you don\u0027t have it you need to generate a self-signed certificate. Why would you like to break the startup instead? Makefiles should automatically create the resources if they are missing.",
+      "parentUuid": "545097f9_f0b15c9e",
       "revId": "011fd554eadb86a9698c0e3233d7f24b072b4a6b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
