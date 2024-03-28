@@ -22,6 +22,30 @@
       },
       "revId": "9791e490901547e80ca9210751fe285721e188d4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a01cd74c_9ff2dbac",
+        "filename": "jenkins-docker/server/haproxy/haproxy.cfg",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-28T17:23:30Z",
+      "side": 1,
+      "message": "No, sensible information should never ever exposed, even to authenticated users.",
+      "parentUuid": "d46d2570_5f467ba1",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 29,
+        "endChar": 49
+      },
+      "revId": "9791e490901547e80ca9210751fe285721e188d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
