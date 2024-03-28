@@ -90,8 +90,7 @@ class GerritCheck {
     String consoleUrl
 
     GerritCheck(name, build) {
-        this.uuid = "gerritforge:" + name.replaceAll("(bazel/)", "") +
-            Globals.gerritRepositoryNameSha1Suffix
+        this.uuid = "gerritforge-bb:bb" + Globals.gerritRepositoryNameSha1Suffix
         this.build = build
         this.consoleUrl = "${build.url}console"
     }
@@ -131,7 +130,7 @@ def queryChangedFiles(url) {
 def collectBuildModes() {
     Builds.modes = []
     if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.[7-9]/) {
-        Builds.modes = ["notedb", "rbe"]
+        Builds.modes = ["rbe"]
     } else {
         throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")
     }
@@ -142,21 +141,6 @@ def collectBuildModes() {
         it.startsWith("lib/js") }
     def bazelFiles = changedFiles.findAll { it == "WORKSPACE" || it.endsWith("BUILD") ||
         it.endsWith(".bzl") || it == ".bazelversion" }
-    if(isMerge) {
-        println "Merge commit detected, adding 'polygerrit' validation..."
-        Builds.modes += "polygerrit"
-    } else if(polygerritFiles.size() > 0) {
-        if(changedFiles.size() == polygerritFiles.size() && bazelFiles.isEmpty()) {
-            println "Only PolyGerrit UI changes detected, skipping other test modes..."
-            Builds.modes = ["polygerrit"]
-        } else {
-            println "PolyGerrit UI changes detected, adding 'polygerrit' validation..."
-            Builds.modes += "polygerrit"
-        }
-    } else if(!bazelFiles.isEmpty()) {
-        println "Bazel files changes detected, adding 'polygerrit' validation..."
-        Builds.modes += "polygerrit"
-    }
 }
 
 def buildVerificationJob() {
@@ -201,7 +185,6 @@ def prepareBuildsForMode(buildName, mode="notedb", retryTimes = 1) {
 def collectBuilds() {
     def builds = [:]
     if (hasChangeNumber()) {
-       builds["Gerrit-codestyle"] = prepareBuildsForMode("Gerrit-codestyle")
        Builds.modes.each {
           builds["Gerrit-verification(${it})"] = prepareBuildsForMode((buildVerificationJob()), it)
        }

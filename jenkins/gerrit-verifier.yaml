@@ -79,20 +79,26 @@
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
+          reference-repo: /home/jenkins/gerrit-reference.git
           credentials-id: gerrit.googlesource.com
           refspec: $REFSPEC
           branches:
             - $BRANCH
           submodule:
             disable: true
+            reference-repo: /home/jenkins/gerrit-reference.git
           skip-tag: true
           basedir: gerrit
     wrappers:
+      - timestamps
       - credentials-binding:
           - username-password-separated:
               credential-id: gerrit.googlesource.com
               username: GS_GIT_USER
               password: GS_GIT_PASS
+          - text:
+              credential-id: remote_bb_key
+              variable: BB_API_KEY
       - raw:
           xml: |
             <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.16">
@@ -174,12 +180,13 @@
     scm:
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit
+          reference-repo: /home/jenkins/gerrit-reference.git
           credentials-id: gerrit.googlesource.com
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
           filter-checks:
             query-operator: 'SCHEME'
-            query-string: 'gerritforge'
+            query-string: 'gerritforge-bb'
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false

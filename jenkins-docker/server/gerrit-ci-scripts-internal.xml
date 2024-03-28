@@ -20,7 +20,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/master</name>
+        <name>*/remote-bb</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -44,7 +44,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>jenkins-jobs --allow-empty-variables update jenkins</command>
+      <command>jenkins-jobs update jenkins-internal</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

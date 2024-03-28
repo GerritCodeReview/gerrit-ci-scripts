@@ -189,7 +189,7 @@
                 url: https://gerrit.googlesource.com/a/plugins/{name}
                 credentials-id: gerrit.googlesource.com
           branches:
-            - '*/{branch}'
+            - origin/{branch}
           skip-tag: true
     builders:
       - set-git-credentials
@@ -217,7 +217,7 @@
                 url: https://gerrit.googlesource.com/a/modules/{name}
                 credentials-id: gerrit.googlesource.com
           branches:
-            - '*/{branch}'
+            - origin/{branch}
           skip-tag: true
     builders:
       - set-git-credentials
@@ -248,7 +248,7 @@
                 url: https://gerrit.googlesource.com/a/gerrit
                 credentials-id: gerrit.googlesource.com
           branches:
-            - '*/{branch}'
+            - origin/{branch}
           skip-tag: true
           do-not-fetch-tags: true
     builders:

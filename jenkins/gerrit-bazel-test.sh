@@ -17,11 +17,14 @@ case {branch} in
     ;;
 esac
 
-export BAZEL_OPTS="$BAZEL_OPTS \
+export BAZEL_OPTS="$(echo $BAZEL_OPTS | xargs) \
+                   --config=remote_bb \
+                   --jobs=50 \
+                   --remote_header=x-buildbuddy-api-key=$BB_API_KEY \
                    --flaky_test_attempts 3 \
                    --test_timeout 3600 \
-                   --test_tag_filters=-flaky \
-                   --test_env DOCKER_HOST=$DOCKER_HOST"
+                   --test_tag_filters=-flaky"
+
 export WCT_HEADLESS_MODE=1
 
 java -fullversion
@@ -29,7 +32,7 @@ bazelisk version
 
 echo 'Test in NoteDb mode'
 echo '----------------------------------------------'
-bazelisk test --test_env=GERRIT_NOTEDB=ON $BAZEL_OPTS //...
+bazelisk test $BAZEL_OPTS //...
 
 echo "Test PolyGerrit locally in $(google-chrome --version)"
 echo '----------------------------------------------'

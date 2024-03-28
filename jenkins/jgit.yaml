@@ -18,7 +18,7 @@
             - job-extended-read
     scm:
       - git:
-          url: git://git.eclipse.org/gitroot/jgit/jgit
+          url: https://eclipse.gerrithub.io/eclipse-jgit/jgit
           branches:
             - 'master'
           skip-tag: true

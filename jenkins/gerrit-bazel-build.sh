@@ -34,9 +34,7 @@ bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
 
 if [[ "$MODE" == *"rbe"* ]]
 then
-    # TODO(davido): Figure out why javadoc part of api-rule doesn't work on RBE.
-    # See: https://github.com/bazelbuild/bazel/issues/12765 for more background.
-  bazelisk build --config=remote --remote_instance_name=projects/gerritcodereview-ci/instances/default_instance plugins:core release api-skip-javadoc
+  bazelisk build --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY plugins:core release api
 elif [[ "$MODE" == *"polygerrit"* ]]
 then
   echo "Skipping building eclipse and maven"
@@ -48,7 +46,10 @@ else
   # only way to pass the extra parameters is via user.bazelrc
   if [[ "$BAZEL_OPTS" != "" ]]
   then
-    echo "build $BAZEL_OPTS" >> user.bazelrc
+    for bazelopt in `echo $BAZEL_OPTS | xargs`
+    do
+      echo "build $bazelopt" >> user.bazelrc
+    done
   fi
 
   bazelisk build plugins:core release api

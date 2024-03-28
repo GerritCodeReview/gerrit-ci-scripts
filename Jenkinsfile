@@ -16,15 +16,13 @@
 
 lintOutTrimmed = ""
 
-node ('server') {
+node ('python3') {
   gerritReview labels: ['Code-Style': 0]
 
   stage('YAML lint') {
-    node ('python3') {
-      checkout scm
-      def lintOut = sh(script: 'yamllint -c yamllint-config.yaml jenkins/*.yaml || true', returnStdout: true)
-      lintOutTrimmed = lintOut.trim()
-    }
+    checkout scm
+    def lintOut = sh(script: 'yamllint -c yamllint-config.yaml jenkins/*.yaml || true', returnStdout: true)
+    lintOutTrimmed = lintOut.trim()
   }
 
   stage('Code Style') {

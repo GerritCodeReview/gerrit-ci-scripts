@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  jenkins:
+    image: ${IMAGE}
+    container_name: ${NAME}
+    env_file: jenkins-container.env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs
+      - ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc
+      - ${JENKINS_HOME}/.secrets:/var/jenkins_home/.secrets
+  haproxy:
+   image: haproxy:2.9.4
+   env_file: jenkins-container.env
+   container_name: ${NAME}-haproxy
+   user: "${UID}:${GID}"
+   ports:
+     - "8080:8080"
+     - "443:8443"
+   volumes:
+     - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+     - ./haproxy/lua:/usr/local/etc/haproxy/lua:ro
+     - ./haproxy/403.http:/usr/local/etc/haproxy/errors/403.http:ro
+     - ${GERRIT_CI_PEM}:/usr/local/etc/haproxy/ssl/certs/gerrit-ci.pem
