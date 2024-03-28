@@ -18,6 +18,7 @@ IMAGE_INTERNAL=${ORGANISATION}/${NAME_INTERNAL}:${JENKINS_WAR_VER}
 GERRIT_CI_PEM=./tls/gerrit-ci.pem
 UID=1000
 GID=1000
+REMOTE_DOCKER_HOST=unix:///var/run/docker.sock
 # To bump plugin versions:
 # * Make required changes in required_plugins.txt and set PLUGIN_FILE=required_plugins.txt
 # * Run `make start`, check the plugins work using the console
@@ -53,13 +54,14 @@ log_osx: create_env
 
 create_env:
 	printf \
-        "USE_SECURITY=%s\nOAUTH_ID=%s\nOAUTH_SECRET=%s\nJENKINS_API_USER=%s\nJENKINS_API_PASSWORD=%s\nDOCKER_GID=%s\n" \
+        "USE_SECURITY=%s\nOAUTH_ID=%s\nOAUTH_SECRET=%s\nJENKINS_API_USER=%s\nJENKINS_API_PASSWORD=%s\nDOCKER_GID=%s\nREMOTE_DOCKER_HOST=%s\n" \
         "${USE_SECURITY}" \
         "${OAUTH_ID}" \
         "${OAUTH_SECRET}" \
         "${JENKINS_API_USER}" \
         "${JENKINS_API_PASSWORD}" \
-        "${DOCKER_GID}" > jenkins-container.env
+        "${DOCKER_GID}" \
+        "${REMOTE_DOCKER_HOST}" > jenkins-container.env
 
 start_internal: build_internal create_env ${GERRIT_CI_PEM}
 	-docker rm ${NAME_INTERNAL}
