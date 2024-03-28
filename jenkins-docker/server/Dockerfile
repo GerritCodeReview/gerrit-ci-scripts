@@ -48,6 +48,7 @@ COPY edit-config.xslt $JENKINS_REF
 COPY config.xml $JENKINS_REF
 COPY jenkins.plugins.logstash.LogstashInstallation.xml $JENKINS_REF
 COPY jenkins.model.JenkinsLocationConfiguration.xml $JENKINS_REF
+COPY org.codefirst.SimpleThemeDecorator.xml $JENKINS_REF
 
 RUN mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts/ && \
     mkdir -p $JENKINS_REF/jobs/gerrit-ci-scripts-manual/
