@@ -2,8 +2,13 @@ POST /plugins/checks/checkers/ HTTP/1.0
   Content-Type: application/json; charset=UTF-8
   {
     "uuid": "gerritforge:rbe-a6a0e4682515f3521897c5f950d1394f4619d928",
+<<<<<<< PATCH SET (287249 Revert "Add new checker for RBE BuildBuddy")
+    "name": "RBE Build/Tests",
+    "description": "Builds the code base and executes unit/integration tests on RBE",
+=======
     "name": "RBE GCP Build/Tests",
     "description": "Builds the code base and executes unit/integration tests on GCP RBE",
+>>>>>>> BASE      (7b8d1f Custom CSS theme for Gerrit-CI)
     "repository": "gerrit",
     "query": "(not dir:polygerrit-ui) AND (branch:branch:stable-3.7 OR branch:stable-3.8 OR branch:stable-3.9 OR branch:master)",
     "blocking": []
@@ -12,6 +17,8 @@ POST /plugins/checks/checkers/ HTTP/1.0
 POST /plugins/checks/checkers/ HTTP/1.0
   Content-Type: application/json; charset=UTF-8
   {
+<<<<<<< PATCH SET (287249 Revert "Add new checker for RBE BuildBuddy")
+=======
     "uuid": "gerritforge-bb:bb-a6a0e4682515f3521897c5f950d1394f4619d928",
     "name": "RBE BB Build/Tests",
     "description": "Builds the code base and executes unit/integration tests on BuildBuddy RBE",
@@ -23,6 +30,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
 POST /plugins/checks/checkers/ HTTP/1.0
   Content-Type: application/json; charset=UTF-8
   {
+>>>>>>> BASE      (7b8d1f Custom CSS theme for Gerrit-CI)
     "uuid": "gerritforge:notedb-a6a0e4682515f3521897c5f950d1394f4619d928",
     "name": "Build/Tests",
     "description": "Builds the code base and executes unit/integration tests",
