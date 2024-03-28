@@ -1,7 +1,7 @@
 POST /plugins/checks/checkers/ HTTP/1.0
   Content-Type: application/json; charset=UTF-8
   {
-    "uuid": "gerritforge:rbe-a6a0e4682515f3521897c5f950d1394f4619d928",
+    "uuid": "gerritforge-gcp:rbe-a6a0e4682515f3521897c5f950d1394f4619d928",
     "name": "RBE GCP Build/Tests",
     "description": "Builds the code base and executes unit/integration tests on GCP RBE",
     "repository": "gerrit",
@@ -12,7 +12,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
 POST /plugins/checks/checkers/ HTTP/1.0
   Content-Type: application/json; charset=UTF-8
   {
-    "uuid": "gerritforge-bb:bb-a6a0e4682515f3521897c5f950d1394f4619d928",
+    "uuid": "gerritforge:rbe-a6a0e4682515f3521897c5f950d1394f4619d928",
     "name": "RBE BB Build/Tests",
     "description": "Builds the code base and executes unit/integration tests on BuildBuddy RBE",
     "repository": "gerrit",
