@@ -16,6 +16,24 @@
       "message": "plugins",
       "revId": "fee347f8a27e90082a6f29835435f7117e5d7d29",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdb3a488_213f64f0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-03-28T22:15:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bcc6eadb_725a34b6",
+      "revId": "fee347f8a27e90082a6f29835435f7117e5d7d29",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
