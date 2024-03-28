@@ -14,7 +14,7 @@
           url: https://gerrit.googlesource.com/a/gerrit-ci-scripts
           credentials-id: gerrit.googlesource.com
           branches:
-            - '*/remote-bb'
+            - '*/master'
           skip-tag: true
     triggers:
       - pollscm:
