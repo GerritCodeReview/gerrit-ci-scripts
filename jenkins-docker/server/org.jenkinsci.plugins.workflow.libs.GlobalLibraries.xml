@@ -30,7 +30,7 @@
           </traits>
         </scm>
       </retriever>
-      <defaultVersion>remote-bb</defaultVersion>
+      <defaultVersion>master</defaultVersion>
       <implicit>true</implicit>
       <allowVersionOverride>true</allowVersionOverride>
       <includeInChangesets>true</includeInChangesets>
