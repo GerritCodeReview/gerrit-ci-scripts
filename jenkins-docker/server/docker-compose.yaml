@@ -15,7 +15,7 @@ services:
    container_name: ${NAME}-haproxy
    user: "${UID}:${GID}"
    ports:
-     - "8080:8080"
+     - "80:8080"
      - "443:8443"
    volumes:
      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
