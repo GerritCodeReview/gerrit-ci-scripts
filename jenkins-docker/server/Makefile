@@ -17,6 +17,7 @@ IMAGE=${ORGANISATION}/${NAME}:${JENKINS_WAR_VER}
 IMAGE_INTERNAL=${ORGANISATION}/${NAME_INTERNAL}:${JENKINS_WAR_VER}
 GERRIT_CI_PEM=./tls/gerrit-ci.pem
 JENKINS_CSS_PATH=./css
+PLUGIN_MANAGER_PATH=./plugin-manager
 UID=1000
 GID=1000
 REMOTE_DOCKER_HOST=unix:///var/run/docker.sock
@@ -32,7 +33,7 @@ PLUGIN_FILE=plugins.txt
 start: build create_env ${GERRIT_CI_PEM}
 	-docker rm ${NAME}
 	mkdir -p ${JENKINS_HOME}/jobs
-	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} \
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} PLUGIN_MANAGER_PATH=${PLUGIN_MANAGER_PATH} \
 	docker compose -f docker-compose.yaml up -d
 
 log: create_env
@@ -46,7 +47,7 @@ start_osx: create_env ${GERRIT_CI_PEM}
           -v /var/run/docker.sock:/var/run/docker.sock \
           -p 127.0.0.1:1234:1234 \
           bobrik/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
-	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} \
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} PLUGIN_MANAGER_PATH=${PLUGIN_MANAGER_PATH}\
 	docker-compose -f docker-compose.osx.yaml up -d
 
 log_osx: create_env
