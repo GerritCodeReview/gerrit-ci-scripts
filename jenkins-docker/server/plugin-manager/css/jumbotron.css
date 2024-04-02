@@ -1,0 +1,12 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.gerritlogo {
+  background-image: url(../images/diffy-gerrit-code-review.png);
+  background-size: 400px;
+  background-repeat: no-repeat;
+  padding-left: 450px;
+}

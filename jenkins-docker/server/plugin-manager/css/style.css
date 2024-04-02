@@ -1,0 +1,70 @@
+.inprogress {
+  background-image: url("../images/spinner-24px.gif");
+  background-repeat: no-repeat;
+  background-position-y: 7px;
+}
+
+.navbar-inverse {
+  background-color: rgb(59, 120, 231);
+  border: 0;
+}
+
+a.navbar-brand {
+    margin-left: -15px;
+    background-image: url(/plugin-manager/diffy.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-y: 10px;
+    padding-left: 40px;
+    font-weight: 500;
+}
+
+.navbar-header {
+  a.navbar-brand {
+    color: white;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+h5 {
+  margin: 0px;
+}
+
+td {
+  height: 40px;
+}
+
+.main {
+  margin-top: 51px;
+}
+
+button.btn-xs {
+  width: 65px;
+}
+
+button.btn-sm {
+  width: 83px;
+}
+
+button.btn-100 {
+  width: 100%;
+  background-color: rgb(59, 120, 231);
+  border: 0;
+  font-size: 14px;
+}
+
+.label-success {
+  background-color: #888888;
+}
+
+div.top-header {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.navbar-form input.searchbox {
+  width: 400px;
+}
