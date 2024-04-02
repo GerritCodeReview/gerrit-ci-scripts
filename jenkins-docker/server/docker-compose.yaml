@@ -28,4 +28,5 @@ services:
    ports:
      - "8081:80"
    volumes:
-     - ${JENKINS_CSS_PATH}:/usr/share/nginx/html/:ro
+     - ${JENKINS_CSS_PATH}:/usr/share/nginx/html/css/:ro
+     - ${PLUGIN_MANAGER_PATH}:/usr/share/nginx/html/plugin-manager/:ro

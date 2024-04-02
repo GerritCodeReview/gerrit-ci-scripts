@@ -2,7 +2,7 @@
 <org.codefirst.SimpleThemeDecorator plugin="simple-theme-plugin@160.vb_76454b_67900">
   <elements>
     <org.jenkinsci.plugins.simpletheme.CssUrlThemeElement>
-      <url>/theme/jenkins.css</url>
+      <url>/css/jenkins.css</url>
     </org.jenkinsci.plugins.simpletheme.CssUrlThemeElement>
   </elements>
 </org.codefirst.SimpleThemeDecorator>
