@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="PluginManager">
+<head>
+<meta charset="UTF-8">
+<title>Gerrit-CI Plugins Download</title>
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="js/plugin-manager.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<link
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+  crossorigin="anonymous">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body role="document" ng-controller="LoadInstalledPlugins as plugins">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container top-header">
+      <div class="navbar-header">
+        <a class="navbar-brand">Gerrit-CI Plugins</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <select class="select form-control" ng-model="branch" ng-change="refreshAvailable()">
+                  <option value="stable-3.7">v3.7.x</option>
+                  <option value="stable-3.8">v3.8.x</option>
+                  <option value="stable-3.9">v3.9.x</option>
+                  <option value="master">master</option>
+                </select>
+                <input type="text" class="form-control searchbox" placeholder="Search" ng-model="searchPlugin">
+              </div>
+            </form>
+          </li>
+          <li>
+            <div class="navbar-form navbar-right">
+              <button type="button"
+                  class="btn btn-sm btn-primary btn-100"
+                  ng-click="plugins.login()">Login as Gerrit Maintainer</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container main" role="main">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Plugin Name</th>
+            <th>Version</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="prop in plugins.list | filter:searchPlugin">
+            <td><h4>{{prop.id}}<br/><small>{{prop.description.split('.')[0]}}</small></h4></td>
+            <td>
+              <p>{{prop.version}}</p>
+              <div ng-if="prop.update_version">
+              <span class="glyphicon glyphicon-save"></span><b>&nbsp;{{prop.update_version}}</b>
+              </div>
+            </td>
+            <td>
+              <h4>
+                <span id="installing-{{prop.id}}"
+                  class="label label-default hidden">Installing</span>
+                <span
+                  id="installed-{{prop.id}}"
+                  class="label label-success {{ (prop.version != '' && prop.update_version == '') ? '':'hidden' }}">Up to date</span>
+                <span
+                  id="failed-{{prop.id}}" class="label label-warning hidden">Failed</span>
+                <button id="{{prop.id}}" type="button"
+                  class="btn btn-sm btn-primary {{ (prop.version == '' && prop.update_version != undefined) ? '':'hidden' }}"
+                  ng-click="install(prop.id,prop.url)">Install</button>
+                <a id="{{prop.id}}" type="button"
+                  class="btn btn-sm btn-primary {{ (prop.version != '' && prop.update_version != '') ? '':'hidden' }}"
+                  href="{{prop.url}}">Download</a>
+              </h4>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
