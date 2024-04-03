@@ -330,6 +330,7 @@
       <readTimeout>30</readTimeout>
       <credentialsId></credentialsId>
       <containerCap>100</containerCap>
+      <exposeDockerHost>true</exposeDockerHost>
     </com.nirima.jenkins.plugins.docker.DockerCloud>
   </clouds>
   <quietPeriod>5</quietPeriod>
