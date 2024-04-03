@@ -85,12 +85,6 @@ def call(Map parm = [:]) {
                 }
             }
             stage('build') {
-                environment {
-                    DOCKER_HOST = """${sh(
-                         returnStdout: true,
-                         script: "/sbin/ip route|awk '/default/ {print  \"tcp://\"\$3\":2375\"}'"
-                     )}"""
-            }
                 steps {
                     script { if (buildCheck) { gerritCheck (checks: ["${buildCheck}": 'RUNNING'], url: "${env.BUILD_URL}console") } }
                     sh 'git clone --recursive -b $GERRIT_BRANCH https://gerrit.googlesource.com/gerrit'
