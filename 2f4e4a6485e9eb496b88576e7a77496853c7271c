@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7358292_b910dc33",
+        "filename": "jenkins-docker/server/plugin-manager/js/ie-emulation-modes-warning.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-04-03T14:40:46Z",
+      "side": 1,
+      "message": "I believe this is largely obsolete, I can get rid of it.",
+      "parentUuid": "27c8f4f1_8a42f3c0",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 45
+      },
+      "revId": "2f4e4a6485e9eb496b88576e7a77496853c7271c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d4bafecc_eb361688",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-04-03T13:20:07Z",
       "side": 1,
       "message": "2024",
+      "range": {
+        "startLine": 1,
+        "startChar": 17,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "2f4e4a6485e9eb496b88576e7a77496853c7271c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1c5bd18_d44fe947",
+        "filename": "jenkins-docker/server/plugin-manager/js/plugin-manager.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-04-03T14:40:46Z",
+      "side": 1,
+      "message": "This was copied from the source code of the plugin-manager from 2015, but I changed most of it, so it makes sense to update the copyright.",
+      "parentUuid": "d4bafecc_eb361688",
       "range": {
         "startLine": 1,
         "startChar": 17,
