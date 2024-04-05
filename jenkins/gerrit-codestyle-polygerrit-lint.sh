@@ -6,7 +6,7 @@ then
 fi
 
 case $TARGET_BRANCH in
-  master|stable-3.9)
+  master|stable-3.9|stable-3.10)
     . set-java.sh 17
     ;;
 

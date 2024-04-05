@@ -42,7 +42,7 @@ RUN export GIT_DIR=$REF_REPO/modules/polymer-bridges && mkdir -p $GIT_DIR && git
 
 RUN bash -c "mkdir -p /home/jenkins/workspace/Gerrit-verifier-chrome-latest && \
     cd /home/jenkins/workspace/Gerrit-verifier-chrome-latest && \
-    git clone -b stable-3.9 --recursive --reference $REF_REPO https://gerrit.googlesource.com/gerrit && \
+    git clone -b stable-3.10 --recursive --reference $REF_REPO https://gerrit.googlesource.com/gerrit && \
     cd gerrit && \
     ./tools/setup_gjf.sh 1.7 && \
     . set-java.sh 17 && \

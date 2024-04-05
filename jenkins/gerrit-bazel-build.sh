@@ -12,7 +12,7 @@ then
   TARGET_BRANCH={branch}
 fi
 case $TARGET_BRANCH in
-  master|stable-3.9)
+  master|stable-3.10|stable-3.9)
     . set-java.sh 17
     ;;
 
