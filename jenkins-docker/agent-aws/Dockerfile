@@ -10,3 +10,10 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
       stable" && \
     apt-get update --allow-releaseinfo-change && \
     apt-get install -y docker-ce-cli jq
+
+USER jenkins
+
+RUN bash -c ". set-java.sh 17"
+
+USER root
+
