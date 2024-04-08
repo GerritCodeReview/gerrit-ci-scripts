@@ -1,8 +1,8 @@
 def accountCookie = ''
 def xsrfToken = ''
 def epochTime = new Date().getTime()
-def DEFAULT_GERRIT_VERSION = '3.8'
-def DEFAULT_GERRIT_PATCH = '2'
+def DEFAULT_GERRIT_VERSION = '3.10'
+def DEFAULT_GERRIT_PATCH = '0-rc0'
 
 pipeline {
         agent { label 'aws' }
@@ -21,7 +21,7 @@ pipeline {
             string(name: 'DOCKER_REGISTRY_URI', defaultValue: '117385740707.dkr.ecr.$(AWS_REGION).amazonaws.com', description: 'URI of the Docker registry')
             string(name: 'SSL_CERTIFICATE_ARN', defaultValue: "arn:aws:acm:us-east-1:117385740707:certificate/a43b5723-023f-4535-8705-3a4f811f1f4b", description: 'ARN of the wildcard SSL Certificate')
 
-            string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-00049444e8b1c0e74", description: 'Id of the EBS volume snapshot')
+            string(name: 'GERRIT_VOLUME_SNAPSHOT_ID', defaultValue: "snap-045028ef1ab4ed4de", description: 'Id of the EBS volume snapshot')
 
             string(name: 'METRICS_CLOUDWATCH_NAMESPACE', defaultValue: 'jenkins', description: 'The CloudWatch namespace for Gerrit metrics')
             string(name: 'BASE_SUBDOMAIN', defaultValue: 'gerrit-demo', description: 'Name of the master sub domain')
