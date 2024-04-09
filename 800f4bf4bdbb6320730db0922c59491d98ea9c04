@@ -22,6 +22,30 @@
       },
       "revId": "800f4bf4bdbb6320730db0922c59491d98ea9c04",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c444afcb_a277351e",
+        "filename": "jenkins-docker/agent-aws/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-04-09T07:54:52Z",
+      "side": 1,
+      "message": "I copied it from the agent-bazel and it solved the issue with java version so I think is correct:\nhttps://gerrit.googlesource.com/gerrit-ci-scripts/+/refs/heads/master/jenkins-docker/agent-bazel/Dockerfile#48",
+      "parentUuid": "e2c53d5c_3e31e145",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 30
+      },
+      "revId": "800f4bf4bdbb6320730db0922c59491d98ea9c04",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
