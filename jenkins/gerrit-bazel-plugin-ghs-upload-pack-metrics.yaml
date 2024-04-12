@@ -1,0 +1,29 @@
+- job-template:
+    name: 'plugin-{name}-gh-bazel-{branch}'
+    class: plugins
+    defaults: plugin-gh-template
+    description: >
+      Plugin {name} {branch} branch build with Bazel owned by {organization}
+      and hosted on GitHub
+    builders:
+      - set-git-credentials
+      - shell: !include-raw: gerrit-bazel-build-ghs-upload-pack-metrics-plugin-branch.sh
+      - shell: !include-raw: gerrit-bazel-gh-get-plugin-info.sh
+    publishers:
+      - archive:
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
+          excludes: >
+            **/*non_stamped*
+          follow-symlinks: true
+
+- project:
+    name: ghs-upload-pack-metrics
+    repo: ghs-upload-pack-metrics
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.9
