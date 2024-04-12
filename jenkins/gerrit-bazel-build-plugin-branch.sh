@@ -10,14 +10,25 @@ case {branch} in
     ;;
 esac
 
-echo "Building plugin {name}/{branch} with Gerrit/{gerrit-branch}"
+if [ -n "{repo}" ]; then
+  SRC_DIR={repo}
+else
+  SRC_DIR={name}
+fi
+
+echo "Building plugin {name}/{branch} with Gerrit/{gerrit-branch} from plugins/$SRC_DIR"
 
 git remote show gerrit > /dev/null 2>&1 || git remote add gerrit https://gerrit.googlesource.com/a/gerrit
 git fetch gerrit {gerrit-branch}
 git checkout -fb {gerrit-branch} gerrit/{gerrit-branch}
 git submodule update --init
-git read-tree -u --prefix=plugins/{name} origin/{branch}
+git read-tree -u --prefix=plugins/$SRC_DIR origin/{branch}
 git fetch --tags origin
+
+if [ -n "{repo}" ] && [ -n "{sourcePath}" ]; then
+  echo "Linking '{repo}/{sourcePath}' to 'plugins/{name}'"
+  pushd plugins && ln -s {repo}/{sourcePath} . && popd
+fi
 
 for file in external_plugin_deps.bzl external_package.json
 do
