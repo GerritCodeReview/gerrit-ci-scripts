@@ -1,0 +1,39 @@
+- job-template:
+    name: 'plugin-ghs-upload-pack-metrics-bazel-{branch}-{gerrit-branch}'
+    class: plugins
+    description: 'Plugin ghs-upload-pack-metrics {branch} branch Bazel build for Gerrit {gerrit-branch}'
+    defaults: plugin-template-bazel
+    scm:
+      - git:
+          remotes:
+            - origin:
+                url: https://review.gerrithub.io/GerritForge/gerritforge-health-service
+            - gerrit:
+                url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
+          branches:
+            - origin/{branch}
+          submodule:
+            recursive: true
+          skip-tag: true
+          do-not-fetch-tags: true
+    project-name: GerritForge%2Fgerritforge-health-service
+    builders:
+      - set-git-credentials
+      - shell: !include-raw: gerrit-bazel-build-ghs-upload-pack-metrics-plugin-branch.sh
+    publishers:
+      - archive:
+          artifacts: >
+            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*
+          excludes: >
+            **/*non_stamped*
+          follow-symlinks: true
+
+- project:
+    name: ghs-upload-pack-metrics
+    jobs:
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.9
