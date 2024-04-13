@@ -28,6 +28,3 @@ do
     [ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
     echo "$PLUGIN_VERSION" > bazel-bin/plugins/{name}/$(basename $JAR-version)
 done
-
-curl -L https://api.github.com/repos/{organization}/{repo} \
-    > bazel-bin/plugins/{name}/{name}.json
