@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b5d557d_a2b1b4fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-13T06:46:14Z",
+      "side": 1,
+      "message": "Verified that [job](https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.9/job/plugin-ghs-upload-pack-metrics-gh-bazel-master-stable-3.9/) works fine\n```\n...\n08:44:16 Archiving artifacts\n08:44:19 Finished: SUCCESS\n```",
+      "revId": "0c84c4fada6ab93b3abc571a011b51c77627f9d9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
