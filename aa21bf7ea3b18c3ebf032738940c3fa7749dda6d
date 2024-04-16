@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f9adb10_23fd4c49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-04-16T22:57:53Z",
+      "side": 1,
+      "message": "JJB isn\u0027t working anymore after the upgrade: \n\n```\n+ jenkins-jobs --allow-empty-variables update --delete-old jenkins/.\nINFO:jenkins_jobs.cli.subcommand.base:Updating jobs in [PosixPath(\u0027jenkins\u0027)] ([])\nINFO:root:Caching type properties of properties \u003d jenkins_jobs.modules.properties:Properties\nINFO:root:Caching type parameters of parameters \u003d jenkins_jobs.modules.parameters:Parameters\nINFO:root:Caching type scm of scm \u003d jenkins_jobs.modules.scm:SCM\nINFO:root:Caching type builders of builders \u003d jenkins_jobs.modules.builders:Builders\n\n/var/jenkins_home/jobs/gerrit-ci-scripts/workspace/jenkins/gerrit-verifier.yaml:159:3: In job \u0027Gerrit-codestyle\u0027\n    - job:\n      ^\n/var/jenkins_home/jobs/gerrit-ci-scripts/workspace/jenkins/gerrit-verifier.yaml:167:9: While expanding builder macro call \u0027fetch-all-submodules\u0027\n          - fetch-all-submodules\n            ^\n/var/jenkins_home/jobs/gerrit-ci-scripts/workspace/jenkins/gerrit-verifier.yaml:20:3: While expanding macro \u0027fetch-all-submodules\u0027\n    - builder:\n      ^\n/var/jenkins_home/jobs/gerrit-ci-scripts/workspace/jenkins/gerrit-verifier.yaml:24:11: While formatting string \u0027#!/bin/bash -e\\nset +x\\ncd gerrit\\nfunction fetch_submodules {\\n  # We do need to ca...\u0027: Invalid format specifier \u0027 the submodules git needs\n  # to be initialised and made it pointing to the correct remote submodule URL\n  git submodule update \u003e /dev/null 2\u003e /dev/null || true\n  export SUBMODULES\u003d$(git submodule status | awk \u0027\u0027)\n  for module in $SUBMODULES\n  do\n    echo \"Fetching all changes refs for $module ...\"\n    pushd $module \u003e /dev/null\n    git fetch -q origin +refs/changes/*:refs/changes/*\n    popd \u003e /dev/null\n  done\n\u0027 for object of type \u0027str\u0027\n              #!/bin/bash -e\n              ^\nBuild step \u0027Execute shell\u0027 marked build as failure\nFinished: FAILURE\n```",
+      "revId": "aa21bf7ea3b18c3ebf032738940c3fa7749dda6d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
