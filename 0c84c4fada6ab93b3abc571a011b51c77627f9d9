@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6c3975fe_8e59ddcc",
+        "filename": "jenkins/gerrit-bazel-build-ghs-upload-pack-metrics-plugin-branch.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-04-16T21:50:28Z",
+      "side": 1,
+      "message": "+1, this is a simple regular plugin, just with a symlink to be created on a subdirectory.\n\nWe should IMHO reuse the current template and just add an additional `SRC_PATH` variable.",
+      "parentUuid": "17a74184_b8cc3f42",
+      "revId": "0c84c4fada6ab93b3abc571a011b51c77627f9d9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "01a59282_52692a4e",
         "filename": "jenkins/gerrit-bazel-build-ghs-upload-pack-metrics-plugin-branch.sh",
         "patchSetId": 7
