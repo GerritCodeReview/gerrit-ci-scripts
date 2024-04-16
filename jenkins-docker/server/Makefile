@@ -69,7 +69,7 @@ start_internal: build_internal create_env ${GERRIT_CI_PEM}
 	-docker rm ${NAME_INTERNAL}
 	mkdir -p ${JENKINS_HOME_INTERNAL}/jobs
 	JENKINS_HOME=${JENKINS_HOME_INTERNAL} IMAGE=${IMAGE_INTERNAL} NAME=${NAME_INTERNAL} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} \
-	docker compose -f docker-compose.yaml up -d
+	docker compose -f docker-compose-internal.yaml up -d
 
 ${GERRIT_CI_PEM}:
 	mkdir -p $(dir ${GERRIT_CI_PEM}) && \

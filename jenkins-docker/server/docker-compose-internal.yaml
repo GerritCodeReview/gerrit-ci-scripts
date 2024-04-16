@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  jenkins:
+    image: ${IMAGE}
+    container_name: ${NAME}
+    env_file: jenkins-container.env
+    ports:
+      - "8080:8080"
+      - "5000:5000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${JENKINS_HOME}/jobs:/var/jenkins_home/jobs
+      - ${JENKINS_HOME}/.netrc:/var/jenkins_home/.netrc
+      - ${JENKINS_HOME}/.secrets:/var/jenkins_home/.secrets
