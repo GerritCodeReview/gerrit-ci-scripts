@@ -16,6 +16,29 @@
       "message": "Verified that [job](https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.9/job/plugin-ghs-upload-pack-metrics-gh-bazel-master-stable-3.9/) works fine\n```\n...\n08:44:16 Archiving artifacts\n08:44:19 Finished: SUCCESS\n```",
       "revId": "0c84c4fada6ab93b3abc571a011b51c77627f9d9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01a59282_52692a4e",
+        "filename": "jenkins/gerrit-bazel-build-ghs-upload-pack-metrics-plugin-branch.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2024-04-16T09:04:18Z",
+      "side": 1,
+      "message": "nit: this could probably done only once out of the `for` loop, as we stay in the same git repository for the whole time therefore the version will not change",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 60
+      },
+      "revId": "0c84c4fada6ab93b3abc571a011b51c77627f9d9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
