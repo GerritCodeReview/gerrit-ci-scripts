@@ -51,10 +51,6 @@ pipeline {
         }
 
        environment {
-            DOCKER_HOST = """${sh(
-                returnStdout: true,
-                script: '/sbin/ip route|awk \'/default/ {print "tcp://"\$3":2375"}\''
-            )}"""
             HTTP_SUBDOMAIN = String.format("http-%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
             SSH_SUBDOMAIN = String.format("ssh-%s-%s.%s", "jenkins", epochTime, "${params.BASE_SUBDOMAIN}")
             GERRIT_HTTP_URL = String.format("%s://%s.%s", "${params.GERRIT_HTTP_SCHEMA}", HTTP_SUBDOMAIN, "${params.HOSTED_ZONE_NAME}")
