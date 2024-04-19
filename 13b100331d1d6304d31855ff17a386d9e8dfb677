@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75d645c0_9cdcd1b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-19T17:55:59Z",
+      "side": 1,
+      "message": "Verified that it also works against `stable-3.10` (`ghs-upload-pack-metrics` and regular plugin jobs definitions were updated successfully with [gerrit-ci-scripts-manual#54](https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/54/parameters/) build).",
+      "revId": "13b100331d1d6304d31855ff17a386d9e8dfb677",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
