@@ -53,6 +53,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fa44d4a_c8427ec4",
+        "filename": "jenkins/gerrit-bazel-build-ghs-upload-pack-metrics-plugin-branch.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-19T06:14:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6c3975fe_8e59ddcc",
+      "revId": "0c84c4fada6ab93b3abc571a011b51c77627f9d9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01a59282_52692a4e",
@@ -66,6 +84,30 @@
       "writtenOn": "2024-04-16T09:04:18Z",
       "side": 1,
       "message": "nit: this could probably done only once out of the `for` loop, as we stay in the same git repository for the whole time therefore the version will not change",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 60
+      },
+      "revId": "0c84c4fada6ab93b3abc571a011b51c77627f9d9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df8f246f_775996c0",
+        "filename": "jenkins/gerrit-bazel-build-ghs-upload-pack-metrics-plugin-branch.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-19T06:14:12Z",
+      "side": 1,
+      "message": "No longer relevant as the original script is used",
+      "parentUuid": "01a59282_52692a4e",
       "range": {
         "startLine": 24,
         "startChar": 4,
