@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6bffffd_f77851e7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-19T17:47:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bef36461_fa3caa44",
+      "range": {
+        "startLine": 11,
+        "startChar": 4,
+        "endLine": 11,
+        "endChar": 9
+      },
+      "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "00204178_a1c831dc",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-04-19T09:11:58Z",
       "side": 1,
       "message": "I believe issue number #40 is a bit out-of-context here.\n`gerrit-review.googlesource.com` is configured to point to the `Gerrit Issue Tracker` and it is not obvious which GitHub dashboard this issue points to.\n\nAlso the `Closes #40` keyword would not work here.\n\nCould you point explicitly to [1] or create a dedicated Gerrit issue number?\n\n\n[1] https://github.com/GerritForge/gerritforge-health-service/issues/40",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 10
+      },
+      "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47cfbf30_e80e1aa1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-19T17:47:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "00204178_a1c831dc",
       "range": {
         "startLine": 22,
         "startChar": 0,
@@ -89,6 +137,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "524482e7_3bf99253",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-19T17:47:35Z",
+      "side": 1,
+      "message": "nope, for GH plugin `$SRC_DIR` will be the `{repo}` which is equal to `{name}` is some GH plugins but not for this one. The `echo` message states explicitly what is going to happen during the linking implicitly IOW the last part of `{sourcePath}` path will be used and it has to be the `{name}` as otherwise it will fail to build anyway 😄",
+      "parentUuid": "535ccec4_abdc4c43",
+      "range": {
+        "startLine": 29,
+        "startChar": 41,
+        "endLine": 29,
+        "endChar": 47
+      },
+      "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a4534d8b_3f865483",
         "filename": "jenkins/gerrit-bazel-plugin-ghs-upload-pack-metrics.yaml",
         "patchSetId": 10
@@ -100,6 +172,30 @@
       "writtenOn": "2024-04-19T09:11:58Z",
       "side": 1,
       "message": "I believe all `sourcePath`s are always going to start with `{repo}`, correct?\n\nIf so, perhaps we could always assume that `sourcePath` is the relative path starting from `{repo}` and omit that from the configuration?",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 5,
+        "endChar": 60
+      },
+      "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cc92b45_be69dff3",
+        "filename": "jenkins/gerrit-bazel-plugin-ghs-upload-pack-metrics.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-19T17:47:35Z",
+      "side": 1,
+      "message": "It seems to be a safe assumption, note that it requires also a `{repo}` to be defined but that should be also a safe assumption 😊. Done",
+      "parentUuid": "a4534d8b_3f865483",
       "range": {
         "startLine": 5,
         "startChar": 4,
@@ -123,6 +219,30 @@
       "writtenOn": "2024-04-19T09:11:58Z",
       "side": 1,
       "message": "nit: should this build against `3.10` and `master` too?",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 24
+      },
+      "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61ffcaf8_aa92f18c",
+        "filename": "jenkins/gerrit-bazel-plugin-ghs-upload-pack-metrics.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-19T17:47:35Z",
+      "side": 1,
+      "message": "I don\u0027t see a reason why not. Having said that let me add `3.10` as that will use the same `gerrit-bazel-build-plugin-branch.sh` script and address `master` in the follow up as I would like to adjust \u0026 use `gerrit-bazel-build-plugin.sh` script for that, WDYT?",
+      "parentUuid": "4e9efc22_de3dd971",
       "range": {
         "startLine": 10,
         "startChar": 0,
