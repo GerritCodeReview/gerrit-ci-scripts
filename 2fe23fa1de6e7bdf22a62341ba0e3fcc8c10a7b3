@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a898918e_6735f897",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-22T06:30:29Z",
+      "side": 1,
+      "message": "change to `{branch}` as `{gerrit-branch}` is not defined",
+      "range": {
+        "startLine": 19,
+        "startChar": 44,
+        "endLine": 19,
+        "endChar": 59
+      },
+      "revId": "2fe23fa1de6e7bdf22a62341ba0e3fcc8c10a7b3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
