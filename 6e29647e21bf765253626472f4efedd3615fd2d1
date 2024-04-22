@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6ea7098_2168190e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-22T06:36:36Z",
+      "side": 1,
+      "message": "Verified with [gerrit-ci-scripts-manual #56](https://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/56/parameters/) where two jobs `plugin-ghs-upload-pack-metrics-gh-bazel-master` and `plugin-metrics-reporter-prometheus-bazel-master` were generated/updated.\nRunning first confirms that new functionality works as expected.\nWhereas running the second ensures that nothing got broken for the existing builds.",
+      "revId": "6e29647e21bf765253626472f4efedd3615fd2d1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
