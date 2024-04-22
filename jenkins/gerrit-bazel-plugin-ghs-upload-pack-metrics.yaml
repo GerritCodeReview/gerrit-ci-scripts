@@ -4,6 +4,9 @@
     organization: GerritForge
     sourcePath: 'components/collectors/gerrit/{name}'
     jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
       - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
