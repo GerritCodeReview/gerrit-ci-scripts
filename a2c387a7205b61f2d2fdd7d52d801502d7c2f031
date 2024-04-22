@@ -159,6 +159,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "591b22f6_a78b7c3a",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-04-22T06:45:08Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "524482e7_3bf99253",
+      "range": {
+        "startLine": 29,
+        "startChar": 41,
+        "endLine": 29,
+        "endChar": 47
+      },
+      "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4534d8b_3f865483",
@@ -267,6 +291,30 @@
       "side": 1,
       "message": "Build against `master` introduced in I00682769",
       "parentUuid": "61ffcaf8_aa92f18c",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 24
+      },
+      "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27da601d_6cfb013b",
+        "filename": "jenkins/gerrit-bazel-plugin-ghs-upload-pack-metrics.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-04-22T06:45:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2798a90_9b0c060d",
       "range": {
         "startLine": 10,
         "startChar": 0,
