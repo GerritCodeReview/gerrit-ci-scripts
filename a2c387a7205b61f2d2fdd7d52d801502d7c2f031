@@ -251,6 +251,30 @@
       },
       "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2798a90_9b0c060d",
+        "filename": "jenkins/gerrit-bazel-plugin-ghs-upload-pack-metrics.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-04-22T06:37:46Z",
+      "side": 1,
+      "message": "Build against `master` introduced in I00682769",
+      "parentUuid": "61ffcaf8_aa92f18c",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 24
+      },
+      "revId": "a2c387a7205b61f2d2fdd7d52d801502d7c2f031",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
