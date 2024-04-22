@@ -10,11 +10,24 @@ case {branch} in
     ;;
 esac
 
+if [ -n "{repo}" ]; then
+  SRC_DIR={repo}
+else
+  SRC_DIR={name}
+fi
+
+echo "Building plugin {name} with Gerrit on {branch} from plugins/$SRC_DIR"
+
 git checkout -fb {branch} gerrit/{branch}
 git submodule update --init
 rm -rf plugins/{name}
-git read-tree -u --prefix=plugins/{name} origin/{branch}
+git read-tree -u --prefix=plugins/$SRC_DIR origin/{branch}
 git fetch --tags origin
+
+if [ -n "{repo}" ] && [ -n "{sourcePath}" ]; then
+  echo "Linking '{repo}/{sourcePath}' to 'plugins/{name}'"
+  pushd plugins && ln -s {repo}/{sourcePath} . && popd
+fi
 
 for file in external_plugin_deps.bzl external_package.json
 do
