@@ -4,6 +4,7 @@
       - 'module-{name}-bazel-{branch}':
           branch:
             - master
+            - stable-3.9
             - stable-3.8
             - stable-3.7
       - 'module-{name}-verifier'
