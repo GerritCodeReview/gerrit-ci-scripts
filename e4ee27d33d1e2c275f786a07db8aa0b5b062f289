@@ -22,6 +22,30 @@
       },
       "revId": "e4ee27d33d1e2c275f786a07db8aa0b5b062f289",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd2a75e4_3ea54105",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1083454
+      },
+      "writtenOn": "2024-04-24T15:23:57Z",
+      "side": 1,
+      "message": "without it when I run `make build` I will get following exception:\n```\n5.342 ERROR: In --require-hashes mode, all requirements must have their versions pinned with \u003d\u003d. These do not:\n5.342     setuptools\u003c\u003d65.7.0 from https://files.pythonhosted.org/packages/ff/97/9dc902414912192d68364cc01cf17e826d259ef9753504b7ae1a256f2e35/setuptools-65.7.0-py3-none-any.whl (from jenkins-job-builder\u003d\u003d4.3.0-\u003e-r /tmp/requirements.txt (line 1))\n\n```",
+      "parentUuid": "7d0f2105_67c4c639",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 18
+      },
+      "revId": "e4ee27d33d1e2c275f786a07db8aa0b5b062f289",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
