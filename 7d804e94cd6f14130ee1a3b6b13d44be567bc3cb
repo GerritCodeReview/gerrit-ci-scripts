@@ -22,6 +22,30 @@
       },
       "revId": "7d804e94cd6f14130ee1a3b6b13d44be567bc3cb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb21ce94_71422285",
+        "filename": "jenkins/gerrit-codestyle-gjf.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-04-24T12:29:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "8f790bbd_e49daa45",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 108
+      },
+      "revId": "7d804e94cd6f14130ee1a3b6b13d44be567bc3cb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
