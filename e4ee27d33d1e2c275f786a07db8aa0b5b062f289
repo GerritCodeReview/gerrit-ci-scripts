@@ -46,6 +46,30 @@
       },
       "revId": "e4ee27d33d1e2c275f786a07db8aa0b5b062f289",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9927d7fc_b8e60a47",
+        "filename": "jenkins-docker/server/requirements.txt",
+        "patchSetId": 12
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-04-29T07:55:42Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "dd2a75e4_3ea54105",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 18
+      },
+      "revId": "e4ee27d33d1e2c275f786a07db8aa0b5b062f289",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
