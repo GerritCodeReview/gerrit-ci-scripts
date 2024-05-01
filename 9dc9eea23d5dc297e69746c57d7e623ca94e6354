@@ -22,6 +22,30 @@
       },
       "revId": "9dc9eea23d5dc297e69746c57d7e623ca94e6354",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e87aa23f_6482f47b",
+        "filename": "jenkins-docker/slave-bazel-nocache/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2024-05-01T12:43:16Z",
+      "side": 1,
+      "message": "This change is about Buildifier, this should work:\n\n```\n# Buildifier\nRUN LATEST_BUILDIFIER\u003d$(curl -sSI https://github.com/bazelbuild/buildtools/releases/latest | grep -i \u0027^location: \u0027 | sed \u0027s|.*/||\u0027 | sed $\u0027s/\\r//\u0027) \u0026\u0026 \\\n    curl -Lo /usr/local/bin/buildifier https://github.com/bazelbuild/buildtools/releases/download/${LATEST_BUILDIFIER}/buildifier-linux-${BUILDARCH} \u0026\u0026 \\\n    chown root:root /usr/local/bin/buildifier \u0026\u0026 \\\n    chmod 0755 /usr/local/bin/buildifier\n```",
+      "parentUuid": "d87c2e2a_3129b490",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 20
+      },
+      "revId": "9dc9eea23d5dc297e69746c57d7e623ca94e6354",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
