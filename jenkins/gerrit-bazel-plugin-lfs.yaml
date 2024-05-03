@@ -9,6 +9,7 @@
             - master
           gerrit-branch:
             - stable-3.8
+            - stable-3.9
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - stable-3.6
