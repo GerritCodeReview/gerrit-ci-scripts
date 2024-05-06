@@ -22,6 +22,30 @@
       },
       "revId": "f4d284934fa7ef4d51d4805103e9dab37cdf032f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4bad1746_979e3b2b",
+        "filename": "jenkins/gerrit-bazel-plugin-its-base.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-05-06T06:50:52Z",
+      "side": 1,
+      "message": "Not sure if that is the case as locally I did\n```\n$ pushd plugins/its-base; git --no-pager branch; popd\n...\n* master\n...\ngit --no-pager branch\n...\n* stable-3.10\n...\n$ bazel test --cache_test_results\u003dNO plugins/its-base/...\nStarting local Bazel server and connecting to it...\n...\n//plugins/its-base:its_base_tests                                        PASSED in 3.3s\n\nExecuted 1 out of 1 test: 1 test passes.\nThere were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.\n```\n\nwhich is also confirmed by [CI](https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.10/job/plugin-its-base-bazel-master-stable-3.10/2/console):\n```\n...\n08:45:00 Building plugin its-base/master with Gerrit/stable-3.10 from plugins/its-base\n...\n08:46:31 //plugins/its-base:its_base_tests                                        PASSED in 4.6s\n08:46:31 //tools/bzl:always_pass_test                                             PASSED in 0.0s\n08:46:31 \n08:46:31 Executed 2 out of 2 tests: 2 tests pass.\n08:46:31 There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.\n08:46:32 May 06, 2024 6:46:32 AM java.util.jar.Attributes read\n08:46:32 WARNING: Duplicate name in Manifest: Implementation-Version.\n08:46:32 Ensure that the manifest does not have duplicate entries, and\n08:46:32 that blank lines separate individual sections in both your\n08:46:32 manifest and in the META-INF/MANIFEST.MF entry in the jar file.\n08:46:32 [plugin-its-base-bazel-master-stable-3.10] $ /bin/bash -e /tmp/jenkins14988476402476892638.sh\n08:46:32   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n08:46:32                                  Dload  Upload   Total   Spent    Left  Speed\n08:46:32 \n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  2315    0  2315    0     0  14468      0 --:--:-- --:--:-- --:--:-- 14468\n08:46:39 Archiving artifacts\n08:46:42 Finished: SUCCESS\n```\n\nunless we would like to leverage functionality from the change in question IMHO we don\u0027t need a dedicated version yet",
+      "parentUuid": "eb27610a_80e5ef18",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "f4d284934fa7ef4d51d4805103e9dab37cdf032f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
