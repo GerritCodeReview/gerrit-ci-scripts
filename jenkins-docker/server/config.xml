@@ -8,6 +8,7 @@
   <mode>EXCLUSIVE</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Hudson.Administer:barbasa</permission>
     <permission>hudson.model.Hudson.Administer:bro314</permission>
     <permission>hudson.model.Hudson.Administer:dpursehouse</permission>
     <permission>hudson.model.Hudson.Administer:EdwinKempin</permission>
