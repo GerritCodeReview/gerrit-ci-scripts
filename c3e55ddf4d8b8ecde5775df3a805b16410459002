@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "acdb3998_60eb981f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1090261
+      },
+      "writtenOn": "2024-05-06T10:54:47Z",
+      "side": 1,
+      "message": "Local tests done and all seems ok",
+      "revId": "c3e55ddf4d8b8ecde5775df3a805b16410459002",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1c8e4c18_5f6d10f3",
