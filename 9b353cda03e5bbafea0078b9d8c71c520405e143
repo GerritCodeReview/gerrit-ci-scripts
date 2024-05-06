@@ -16,6 +16,24 @@
       "message": "I would keep the changes separate:\n- compile against 3.9\n- fix 3.8 and 3.7\n\nRegarding \"fixing 3.8 and 3.7\" I don\u0027t think your approach is correct.\n\nI believe there were some missing merge up (from 3.5?) in the its-jira plugin. We need to assess them before touching the ci-scripts configuration.",
       "revId": "9b353cda03e5bbafea0078b9d8c71c520405e143",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "821077aa_3924a1cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-05-06T10:12:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9eb39469_b4584286",
+      "revId": "9b353cda03e5bbafea0078b9d8c71c520405e143",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

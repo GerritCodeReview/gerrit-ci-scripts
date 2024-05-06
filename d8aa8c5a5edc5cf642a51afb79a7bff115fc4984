@@ -16,6 +16,24 @@
       "message": "You could just add stable-3.9 in this list to achieve what you are trying to do in L11 - to L21.\n\n```\n- \u0027plugin-its-{name}-bazel-{branch}\u0027:\n          branch:\n            - master\n            - stable-3.9\n\n```",
       "revId": "d8aa8c5a5edc5cf642a51afb79a7bff115fc4984",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e434e23f_89d3ba76",
+        "filename": "jenkins/gerrit-bazel-plugin-its-jira.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-05-06T10:12:48Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "fe759b56_e23787ed",
+      "revId": "d8aa8c5a5edc5cf642a51afb79a7bff115fc4984",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
