@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dee461a6_c52e40fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-05-06T10:22:53Z",
+      "side": 1,
+      "message": "Verified with [plugin-its-base-bazel-stable-3.9](https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.9/job/plugin-its-base-bazel-stable-3.9/).",
+      "revId": "196d73c395bd88ac4cc6ac0e3d42f96481b9345b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
