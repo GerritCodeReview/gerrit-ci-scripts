@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6320a287_cddff7ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2024-05-06T15:45:42Z",
+      "side": 1,
+      "message": "@luca.milanesio@gmail.com I\u0027m not sure what the logic is to be Admin here. I have added myself, but feel free to abandon the change if I shouldn\u0027t be allowed.",
+      "revId": "c70788c4884912fadfc5e522ee666589432f4bec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
