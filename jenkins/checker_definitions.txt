@@ -27,7 +27,7 @@ POST /plugins/checks/checkers/ HTTP/1.0
     "name": "Build/Tests",
     "description": "Builds the code base and executes unit/integration tests",
     "repository": "gerrit",
-    "query": "(not dir:polygerrit-ui) AND (branch:stable-3.7 OR branch:stable-3.8 OR branch:stable-3.9 OR branch:stable-3.10 OR bbranch:master)",
+    "query": "(not dir:polygerrit-ui) AND (branch:stable-3.7 OR branch:stable-3.8 OR branch:stable-3.9 OR branch:stable-3.10 OR branch:master)",
     "blocking": []
   }
 
