@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a35b930d_2a5fc6ba",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2024-06-02T06:52:40Z",
+      "side": 1,
+      "message": "This should be probably adapted too.",
+      "revId": "b8e0ab6b71db870457f68453986ef732b3055fb0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d3cc0a88_77b0878f",
         "filename": "jenkins/gerrit-bazel-plugin-readonly.yaml",
         "patchSetId": 1
