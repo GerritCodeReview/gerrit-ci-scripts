@@ -35,6 +35,23 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2722d3d_ad638e85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2024-06-02T19:50:06Z",
+      "side": 1,
+      "message": "Thanks for starting to work in this. I uploaded a new version of this change: [1].\n\n[1]: https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/428140",
+      "revId": "8570109faa2e5db381b25c46a537b876837391c5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0184eadc_6a4ed124",
