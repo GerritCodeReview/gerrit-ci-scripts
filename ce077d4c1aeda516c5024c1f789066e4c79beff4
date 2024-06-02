@@ -16,6 +16,24 @@
       "message": "The newline at the end of the file should have been preserved.",
       "revId": "ce077d4c1aeda516c5024c1f789066e4c79beff4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1bf5491_14c3bd24",
+        "filename": "jenkins/gerrit-bazel-plugin-readonly.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2024-06-02T09:42:39Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "bc9b7151_52b891ee",
+      "revId": "ce077d4c1aeda516c5024c1f789066e4c79beff4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
