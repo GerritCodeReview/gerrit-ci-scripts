@@ -38,7 +38,6 @@ def call(Map parm = [:]) {
     def extraModules = parm.extraModules ?: []
     def pluginScmBaseUrl = "https://gerrit.googlesource.com/a"
     def pluginScmUrl = "${pluginScmBaseUrl}/${env.GERRIT_PROJECT}"
-    def gjfVersion = '1.7'
     def javaVersion = (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.9" || env.GERRIT_BRANCH == "stable-3.10") ? 17 : 11
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh ${javaVersion} && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
@@ -71,7 +70,7 @@ def call(Map parm = [:]) {
                 }
                 steps {
                     gerritCheck (checks: ["${formatCheck}": 'RUNNING'], url: "${env.BUILD_URL}console")
-                    sh "find ${pluginName} -name '*.java' | xargs /home/jenkins/format/google-java-format-${gjfVersion} -i"
+                    sh "find ${pluginName} -name '*.java' | xargs bazelisk run --run_under=\"cd $PWD &&\" tools:gjf -- -i"
                     script {
                         def formatOut = sh (script: "cd ${pluginName} && git status --porcelain", returnStdout: true)
                         if (formatOut.trim()) {

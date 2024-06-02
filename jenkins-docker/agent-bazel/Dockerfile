@@ -3,7 +3,6 @@ ARG CHROME_VER
 FROM gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-$CHROME_VER
 
 # Bazel cache warm-up with Gerrit master and latest stable branch.
-# Set-up google-java-format utility to ~/format/google-java-format.
 USER jenkins
 
 ENV REF_REPO=/home/jenkins/gerrit-reference.git
@@ -44,7 +43,6 @@ RUN bash -c "mkdir -p /home/jenkins/workspace/Gerrit-verifier-chrome-latest && \
     cd /home/jenkins/workspace/Gerrit-verifier-chrome-latest && \
     git clone -b stable-3.10 --recursive --reference $REF_REPO https://gerrit.googlesource.com/gerrit && \
     cd gerrit && \
-    ./tools/setup_gjf.sh 1.7 && \
     . set-java.sh 17 && \
     bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api && \
     git checkout -f master && \
