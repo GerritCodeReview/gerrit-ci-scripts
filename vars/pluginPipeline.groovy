@@ -38,7 +38,7 @@ def call(Map parm = [:]) {
     def extraModules = parm.extraModules ?: []
     def pluginScmBaseUrl = "https://gerrit.googlesource.com/a"
     def pluginScmUrl = "${pluginScmBaseUrl}/${env.GERRIT_PROJECT}"
-    def gjfVersion = '1.7'
+    def gjfVersion = (env.GERRIT_BRANCH == "master") ? '1.22.0' : '1.7'
     def javaVersion = (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.9" || env.GERRIT_BRANCH == "stable-3.10") ? 17 : 11
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh ${javaVersion} && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
