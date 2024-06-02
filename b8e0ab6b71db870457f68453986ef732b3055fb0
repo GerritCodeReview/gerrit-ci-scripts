@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0fbb4dc_fb15c092",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2024-06-02T08:01:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a35b930d_2a5fc6ba",
+      "revId": "b8e0ab6b71db870457f68453986ef732b3055fb0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3cc0a88_77b0878f",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-06-02T06:50:50Z",
       "side": 1,
       "message": "It\u0027s more complicated, as it needs to be.\n\nLooking into the branches for `readonly` plugin:\n\n```\nstable-3.2\tfd0d01b1f8875829cee618a4769698b2962a2fe2\t\nstable-3.3\tfd0d01b1f8875829cee618a4769698b2962a2fe2\t\nstable-3.4\tfd0d01b1f8875829cee618a4769698b2962a2fe2\t\nstable-3.5\tfd0d01b1f8875829cee618a4769698b2962a2fe2\t\nstable-3.6\tfd0d01b1f8875829cee618a4769698b2962a2fe2\nstable-3.9\tfd0d01b1f8875829cee618a4769698b2962a2fe2\n```\n\nIt seems that `stable-3.8` branches is missing.\nI\u0027ve created the missing branch: `stable-3.8`.\n\nNow the build configuration can be simplified:\n\n```\njobs:\n      - \u0027plugin-{name}-bazel-{branch}-{gerrit-branch}\u0027:\n          branch:\n            - master\n          gerrit-branch:\n            - stable-3.10\n      - \u0027plugin-{name}-bazel-{branch}\u0027:\n          branch:\n            - master\n            - stable-3.9\n            - stable-3.8\n```",
+      "revId": "b8e0ab6b71db870457f68453986ef732b3055fb0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "945f291c_ef913ba0",
+        "filename": "jenkins/gerrit-bazel-plugin-readonly.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2024-06-02T08:01:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d3cc0a88_77b0878f",
       "revId": "b8e0ab6b71db870457f68453986ef732b3055fb0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
