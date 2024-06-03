@@ -22,6 +22,30 @@
       },
       "revId": "6f953980a6f0ef31e33d4e408f08b7b2df75a606",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46672622_54cfde07",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2024-06-03T06:34:53Z",
+      "side": 1,
+      "message": "We could preserve the toolchain, of course. Another option for non Bazel plugin would be to use their native build toolchain for `google-java-format` integration.\n\nThe main point here is not to maintain the used `google-java-format` version in many different places: hard coded in CI pipeline, docker Image, `setup_gjf.sh` and Bazel build.",
+      "parentUuid": "678c3b58_568ec3c2",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 6
+      },
+      "revId": "6f953980a6f0ef31e33d4e408f08b7b2df75a606",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
