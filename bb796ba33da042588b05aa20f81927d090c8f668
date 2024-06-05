@@ -16,6 +16,24 @@
       "message": "I tried to verify the `readonly` plugin job, but apparently I don\u0027t have the ACL on the CI side to do it.",
       "revId": "bb796ba33da042588b05aa20f81927d090c8f668",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d84f864_00a93b2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-06-05T18:57:50Z",
+      "side": 1,
+      "message": "@david.ostrovsky@gmail.com you have admin rights \u003d\u003e https://gerrit.googlesource.com/gerrit-ci-scripts/+/refs/heads/master/jenkins-docker/server/config-external.xml#13",
+      "parentUuid": "9c67e602_9cafb614",
+      "revId": "bb796ba33da042588b05aa20f81927d090c8f668",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
