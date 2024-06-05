@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c67e602_9cafb614",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2024-06-05T05:58:06Z",
+      "side": 1,
+      "message": "I tried to verify the `readonly` plugin job, but apparently I don\u0027t have the ACL on the CI side to do it.",
+      "revId": "bb796ba33da042588b05aa20f81927d090c8f668",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
