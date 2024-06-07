@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f21b41cd_f02985eb",
+        "filename": "jenkins/gerrit-bazel-plugin-serviceuser.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-06-07T14:55:42Z",
+      "side": 0,
+      "message": "What about stable-3.8?",
+      "range": {
+        "startLine": 8,
+        "startChar": 12,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "bb796ba33da042588b05aa20f81927d090c8f668",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
