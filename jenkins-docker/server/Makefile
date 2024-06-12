@@ -21,6 +21,8 @@ PLUGIN_MANAGER_PATH=./plugin-manager
 UID=1000
 GID=1000
 REMOTE_DOCKER_HOST=unix:///var/run/docker.sock
+BAZEL_CACHE_PATH?=~/bazel_cache
+BAZEL_CACHE_SIZE_GB?=20
 # To bump plugin versions:
 # * Make required changes in required_plugins.txt and set PLUGIN_FILE=required_plugins.txt
 # * Run `make start`, check the plugins work using the console

@@ -27,3 +27,12 @@ services:
      - "8081:80"
    volumes:
      - ${JENKINS_CSS_PATH}:/usr/share/nginx/html/:ro
+  cache:
+   image: buchgr/bazel-remote-cache:v2.4.4
+   container_name: ${NAME}-cache
+   command: --max_size ${BAZEL_CACHE_SIZE_GB}
+   ports:
+     - "8082:8080"
+     - "9092:9092"
+   volumes:
+     - ${BAZEL_CACHE_PATH}:/data
