@@ -1,0 +1,8 @@
+- project:
+    name: github-oauth
+    repo: plugins/github
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+      - 'plugin-{name}-verifier'
