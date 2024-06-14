@@ -4,5 +4,6 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
+          targets: 'plugins/github/github-oauth_deploy.jar plugins/github/github-plugin.jar'
           extra-artifacts: 'bazel-bin/plugins/github/github-oauth/github-oauth_deploy.jar,bazel-bin/plugins/github/github-plugin/github-plugin.jar'
       - 'plugin-{name}-verifier'
