@@ -105,7 +105,7 @@ def call(Map parm = [:]) {
                         script {
                             (extraPlugins + extraModules).each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
                         }
-                        sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}"
+                        sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}/..."
                         sh "${bazeliskCmd} test ${bazeliskOptions} --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }
                 }
