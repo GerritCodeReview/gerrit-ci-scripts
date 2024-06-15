@@ -4,14 +4,11 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
+            - stable-3.7
             - stable-3.8
             - stable-3.9
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
-            - stable-3.6
+            - master
           gerrit-branch:
-            - stable-3.7
+            - stable-3.10
