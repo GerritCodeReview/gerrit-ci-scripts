@@ -1,13 +1,11 @@
 - project:
     name: git-refs-filter
     jobs:
-      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
-            - stable-3.9
-            - stable-3.8
-            - stable-3.7
       - 'module-{name}-bazel-{branch}':
           branch:
             - master
+          gerrit-branch:
+            - stable-3.10
+            - stable-3.9
+            - stable-3.8
+            - stable-3.7
