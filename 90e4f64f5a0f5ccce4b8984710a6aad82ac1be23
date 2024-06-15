@@ -22,6 +22,30 @@
       },
       "revId": "90e4f64f5a0f5ccce4b8984710a6aad82ac1be23",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7e9343b_2a273b86",
+        "filename": "jenkins/gerrit-bazel-plugin-lfs.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-06-15T21:52:24Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "e005c055_bfc2c520",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "90e4f64f5a0f5ccce4b8984710a6aad82ac1be23",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
