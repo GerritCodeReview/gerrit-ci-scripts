@@ -16,6 +16,24 @@
       "message": "it\u0027s missing -{gerrit-branch}\n\nAlso probably want to keep a build just for master?",
       "revId": "bae01c61f029ae408915234a696131ca2a7a103a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa93a736_ea6bff94",
+        "filename": "jenkins/gerrit-bazel-module-git-refs-filter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-06-15T22:07:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fe06873_3c44b287",
+      "revId": "bae01c61f029ae408915234a696131ca2a7a103a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
