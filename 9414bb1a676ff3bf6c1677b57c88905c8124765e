@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "032c770d_e2fea812",
+        "filename": "jenkins/gerrit-bazel-plugin-ghs-metrics-collector.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-06-18T20:57:45Z",
+      "side": 1,
+      "message": "This needs to stay as `ghs-upload-pack-metrics` otherwise the build would fail to find the target",
+      "range": {
+        "startLine": 2,
+        "startChar": 10,
+        "endLine": 2,
+        "endChar": 31
+      },
+      "revId": "9414bb1a676ff3bf6c1677b57c88905c8124765e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
