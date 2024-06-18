@@ -1,8 +1,8 @@
 - project:
     name: ghs-upload-pack-metrics
-    repo: gerritforge-health-service
+    repo: ghs-metrics-collector
     organization: GerritForge
-    sourcePath: 'components/collectors/gerrit/{name}'
+    sourcePath: '/gerrit/{name}'
     jobs:
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
