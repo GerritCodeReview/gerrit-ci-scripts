@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45ced56a_05fbfbce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-06-19T08:29:49Z",
+      "side": 1,
+      "message": "Before merging this card, I need to:\n- make sure that all current stable-3.7 plugins build work\n- archive all artifacts onto archive-ci.gerritforge.com\n\nOnce the two above are done, we can test and merge this removal.\n\nThanks @hashar@free.fr for working on this, every little helps :-)",
+      "revId": "5ca1271626f940d4215db83af829fec729137868",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ee3a54f8_b574e032",
