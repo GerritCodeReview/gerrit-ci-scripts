@@ -69,5 +69,6 @@
           targets: 'plugins/owners plugins/owners-a*'
           branch:
             - master
+            - stable-3.10
             - stable-3.9
             - stable-3.8
