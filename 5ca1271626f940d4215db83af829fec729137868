@@ -39,6 +39,30 @@
       },
       "revId": "5ca1271626f940d4215db83af829fec729137868",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be55a434_10a17455",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-06-19T21:04:26Z",
+      "side": 1,
+      "message": "I can address this as a separate change though.",
+      "parentUuid": "ee3a54f8_b574e032",
+      "range": {
+        "startLine": 133,
+        "startChar": 64,
+        "endLine": 133,
+        "endChar": 78
+      },
+      "revId": "5ca1271626f940d4215db83af829fec729137868",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
