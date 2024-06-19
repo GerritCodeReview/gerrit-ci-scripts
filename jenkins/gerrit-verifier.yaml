@@ -148,13 +148,6 @@
     jobs:
       - 'Gerrit-verifier-{config}'
 
-- project:
-    name: Gerrit-verifier-bazel-chrome-69
-    config:
-      - chrome-69
-    jobs:
-      - 'Gerrit-verifier-{config}'
-
 - job:
     name: Gerrit-codestyle
     description: 'Gerrit code-style checker for an open change'
