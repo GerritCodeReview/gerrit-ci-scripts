@@ -36,10 +36,58 @@
             bazel-bin/plugins/account/account.jar*,bazel-bin/plugins/account/account.json
           follow-symlinks: true
 
+- job-template:
+    name: 'plugin-account-bazel-{branch}-{gerrit-branch}'
+    description: 'Plugin account {branch} branch Bazel build for Gerrit {gerrit-branch}'
+    defaults: plugin-template-bazel
+    node: bazel-debian
+    class: plugins
+    project-name: plugins%2Faccount
+    scm:
+      - git:
+          remotes:
+            - origin:
+                url: https://gerrit.googlesource.com/a/plugins/{name}
+                credentials-id: gerrit.googlesource.com
+            - gerrit:
+                url: https://gerrit.googlesource.com/a/gerrit
+                credentials-id: gerrit.googlesource.com
+          branches:
+            - origin/{branch}
+          submodule:
+            recursive: true
+            parent-credentials: true
+          skip-tag: true
+    wrappers:
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: gerrit.googlesource.com
+              username: GS_GIT_USER
+              password: GS_GIT_PASS
+    builders:
+      - set-git-credentials
+      - shell: !include-raw: gerrit-bazel-build-account-plugin-branch.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
+    publishers:
+      - archive:
+          artifacts: >
+            bazel-bin/plugins/account/account.jar*,bazel-bin/plugins/account/account.json
+          follow-symlinks: true
+
 - project:
     name: account
     jobs:
       - 'plugin-account-bazel-{branch}':
           branch:
             - master
+            - stable-3.9
             - stable-3.8
+<<<<<<< PATCH SET (41cc87 Build stable branches for account plugin)
+            - stable-3.7
+      - 'plugin-account-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.10
+=======
+>>>>>>> BASE      (a83f05 Remove Gerrit verification on Chrome v69)
