@@ -16,11 +16,11 @@ echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
 case $TARGET_BRANCH$MODE in
-  masterrbe|stable-3.7rbe|stable-3.8rbe|stable-3.9rbe|stable-3.10rbe)
+  masterrbe|stable-3.8rbe|stable-3.9rbe|stable-3.10rbe)
     TEST_TAG_FILTER="-flaky,-elastic,-no_rbe"
     BAZEL_OPTS="$BAZEL_OPTS --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
     ;;
-  masternotedb|stable-3.7notedb|stable-3.8notedb|stable-3.9notedb|stable-3.10notedb)
+  masternotedb|stable-3.8notedb|stable-3.9notedb|stable-3.10notedb)
     TEST_TAG_FILTER="-flaky,elastic,no_rbe"
     ;;
   stable-2.*)

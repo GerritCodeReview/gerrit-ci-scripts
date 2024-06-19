@@ -7,5 +7,4 @@
             - master
             - stable-3.9
             - stable-3.8
-            - stable-3.7
       - plugin-{name}-verifier

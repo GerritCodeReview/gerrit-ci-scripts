@@ -12,5 +12,4 @@
             - master
             - stable-3.9
             - stable-3.8
-            - stable-3.7
           targets: 'plugins/its-base:its-base plugins/its-base:its_base_tests'
