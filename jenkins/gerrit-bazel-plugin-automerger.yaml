@@ -5,6 +5,13 @@
           branch:
             - master
           gerrit-branch:
+<<<<<<< PATCH SET (cbbc61 Update branches to build for automerger)
+            - stable-3.10
+            - stable-3.9
+            - stable-3.8
+=======
+>>>>>>> BASE      (a83f05 Remove Gerrit verification on Chrome v69)
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
+            - stable-3.7
