@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01a20ed0_3195235a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-06-19T21:18:06Z",
+      "side": 1,
+      "message": "I\u0027m wondering if you want to add this to zuul as well @geminica.programs@gmail.com? Would mean live verification rather then when a changed is submitted.",
+      "revId": "1c60760032cc7855628cef48740df30cd1e821c3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
