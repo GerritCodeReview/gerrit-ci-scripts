@@ -60,6 +60,13 @@ done
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 java -fullversion
+
+if test "{setup}" != ""
+then
+  echo "Running setup script ..."
+  bash -c "{setup}"
+fi
+
 bazelisk version
 bazelisk build $BAZEL_OPTS $TARGETS
 
