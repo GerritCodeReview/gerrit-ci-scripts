@@ -1,0 +1,11 @@
+- project:
+    name: ghs-actions-executor
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
+          builders:
+            - set-git-credentials
+            - shell: make -f plugins/{name}/Makefile
+            - shell: bazelisk test pugins/{name}/...
