@@ -47,6 +47,7 @@
     defaults: plugin-gh-template
     builders:
       - set-git-credentials
+      - shell: {setup}
       - shell: !include-raw: gerrit-bazel-build-plugin.sh
       - shell: !include-raw: gerrit-bazel-gh-get-plugin-info.sh
     publishers:
@@ -63,6 +64,7 @@
     defaults: plugin-gh-template
     builders:
       - set-git-credentials
+      - shell: {setup}
       - shell: !include-raw: gerrit-bazel-build-plugin-branch.sh
       - shell: !include-raw: gerrit-bazel-gh-get-plugin-info.sh
     publishers:
