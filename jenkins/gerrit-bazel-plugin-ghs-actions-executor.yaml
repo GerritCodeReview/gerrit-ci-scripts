@@ -1,0 +1,9 @@
+- project:
+    name: ghs-actions-executor
+    repo: ghs-actions-executor
+    organization: GerritForge
+    setup: make -f plugins/{name}/Makefile
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
