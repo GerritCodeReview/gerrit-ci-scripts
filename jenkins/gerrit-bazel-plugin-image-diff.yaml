@@ -1,6 +1,12 @@
 - project:
     name: image-diff
+    setup: cp -f plugins/{name}/package.json plugins/package.json
     jobs:
       - 'ui-plugin-{name}-bazel-{branch}':
           branch:
             - master
+      - 'ui-plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.10
