@@ -55,7 +55,7 @@ var app = angular.module('PluginManager', []).controller(
 
                   angular.forEach(response.data.jobs, function(plugin) {
 
-                    const pluginNameRegex = /(module-|plugin-)(.*)-bazel.*/;
+                    const pluginNameRegex = /(module-|plugin-|ui-plugin-)(.*)-bazel.*/;
                     var pluginNameMatches = plugin.name.match(pluginNameRegex);
                     if (!pluginNameMatches) {
                        return;
@@ -75,7 +75,9 @@ var app = angular.module('PluginManager', []).controller(
                         }
                       }
                       currPlugin.sha1 = plugin.sha1;
-                      currPlugin.url = $scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + '.jar';
+                      var uiPluginRegex = /(ui-plugin-)(.*)-bazel.*/;
+                      var fileEnding = plugin.name.match(uiPluginRegex) ? '.js' : '.jar';
+                      currPlugin.url = $scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + fileEnding;
                       currPlugin.description = pluginResponse.data.description;
 
                       if (currRow < 0) {
@@ -83,7 +85,7 @@ var app = angular.module('PluginManager', []).controller(
                       } else {
                         plugins.list[currRow] = currPlugin;
                       }
-                      $http.get($scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + '.jar-version', plugins.httpConfig)
+                      $http.get($scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + fileEnding + '-version', plugins.httpConfig)
                            .then(function successCallback(pluginVersionResponse) {
                         currPlugin.version = pluginVersionResponse.data;
                       });
