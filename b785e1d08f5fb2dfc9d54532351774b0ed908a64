@@ -86,6 +86,24 @@
       "parentUuid": "925231c9_af27f6a1",
       "revId": "b785e1d08f5fb2dfc9d54532351774b0ed908a64",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2fc82f3a_90259c86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-07-01T17:14:12Z",
+      "side": 1,
+      "message": "Can you deploy it please. Seems to have only done the master-stable-3.10 one.",
+      "parentUuid": "035b9edb_66a2c2df",
+      "revId": "b785e1d08f5fb2dfc9d54532351774b0ed908a64",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
