@@ -22,6 +22,30 @@
       },
       "revId": "fcc04f8e0b52a3af70b790da2c3765043987fba1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c2dd958_99719b2b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-07-01T12:52:54Z",
+      "side": 1,
+      "message": "It doesn\u0027t include the dep that is required in package.json. That being resemblejs.\nSo when you install the plugin, it throws js errors.",
+      "parentUuid": "4672ee07_003f2ec6",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 23
+      },
+      "revId": "fcc04f8e0b52a3af70b790da2c3765043987fba1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
