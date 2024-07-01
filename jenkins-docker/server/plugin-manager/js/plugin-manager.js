@@ -55,7 +55,7 @@ var app = angular.module('PluginManager', []).controller(
 
                   angular.forEach(response.data.jobs, function(plugin) {
 
-                    const pluginNameRegex = /(module-|plugin-)(.*)-bazel.*/;
+                    const pluginNameRegex = /(module-|plugin-|ui-plugin-)(.*)-bazel.*/;
                     var pluginNameMatches = plugin.name.match(pluginNameRegex);
                     if (!pluginNameMatches) {
                        return;
