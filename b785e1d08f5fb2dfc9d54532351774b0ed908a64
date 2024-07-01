@@ -16,6 +16,24 @@
       "message": "Can you v+1/submit it Luca please? 😊\n\n(As it\u0027ll need deploying).",
       "revId": "b785e1d08f5fb2dfc9d54532351774b0ed908a64",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21707476_4585186e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-07-01T15:03:01Z",
+      "side": 1,
+      "message": "I kicked it off, it\u0027s running at [1]\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.10/job/ui-plugin-image-diff-bazel-master-stable-3.10/1/console",
+      "parentUuid": "7404cdc0_b5f2b118",
+      "revId": "b785e1d08f5fb2dfc9d54532351774b0ed908a64",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
