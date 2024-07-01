@@ -55,7 +55,7 @@ var app = angular.module('PluginManager', []).controller(
 
                   angular.forEach(response.data.jobs, function(plugin) {
 
-                    const pluginNameRegex = /(module-|plugin-)(.*)-bazel.*/;
+                    const pluginNameRegex = /(module-|plugin-|ui-plugin-)(.*)-bazel.*/;
                     var pluginNameMatches = plugin.name.match(pluginNameRegex);
                     if (!pluginNameMatches) {
                        return;
@@ -75,7 +75,13 @@ var app = angular.module('PluginManager', []).controller(
                         }
                       }
                       currPlugin.sha1 = plugin.sha1;
-                      currPlugin.url = $scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + '.jar';
+                      const uiPluginRegex = /(ui-plugin-)(.*)-bazel.*/;
+                      var uiPluginNameMatches = plugin.name.match(uiPluginRegex);
+                      if (uiPluginNameMatches) {
+                        currPlugin.url = $scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + '.js';
+                      } else {
+                        currPlugin.url = $scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + '.jar';
+                      }
                       currPlugin.description = pluginResponse.data.description;
 
                       if (currRow < 0) {
