@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6707aeba_fec223bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-07-02T16:41:32Z",
+      "side": 1,
+      "message": "I think it\u0027s possibly this fixes https://groups.google.com/g/repo-discuss/c/htLN7TztfHo.",
+      "revId": "0a7e067c66bfe6aefc9ff27db553c3c6e1c0f7d4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
