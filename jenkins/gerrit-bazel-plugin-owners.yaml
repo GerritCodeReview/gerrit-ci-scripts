@@ -21,10 +21,11 @@
     builders:
       - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build-owners-plugin.sh
+      - shell: !include-raw: gerrit-bazel-get-project-info.sh
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*
+            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*,bazel-bin/plugins/owners/owners.json
           excludes: >
             **/*non_stamped*
           follow-symlinks: true
@@ -57,7 +58,7 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*
+            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*,bazel-bin/plugins/owners/owners.json
           excludes: >
             **/*non_stamped*
           follow-symlinks: true
