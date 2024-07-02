@@ -2,6 +2,7 @@
     name: 'plugin-owners-bazel-{branch}'
     description: 'Plugin owners {branch} branch build with Bazel'
     defaults: plugin-template-bazel
+    class: plugins
     scm:
       - git:
           remotes:
