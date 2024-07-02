@@ -4,5 +4,5 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-          extra-artifacts: 'bazel-bin/plugins/github/github-*.jar'
+          extra-artifacts: 'bazel-bin/plugins/github/github-*.jar,bazel-bin/plugins/github/github-*.jar-version'
       - 'plugin-{name}-verifier'
