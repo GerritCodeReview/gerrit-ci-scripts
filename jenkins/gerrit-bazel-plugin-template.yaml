@@ -138,6 +138,7 @@
       - archive:
           artifacts: >
             bazel-bin/plugins/{name}/{name}.js,
+            bazel-bin/plugins/{name}/{name}.js-version,
             bazel-bin/plugins/{name}/{name}.html,
             bazel-bin/plugins/{name}/{name}.json,
             {extra-artifacts}
@@ -171,6 +172,7 @@
       - archive:
           artifacts: >
             bazel-bin/plugins/{name}/{name}.js,
+            bazel-bin/plugins/{name}/{name}.js-version,
             bazel-bin/plugins/{name}/{name}.html,
             bazel-bin/plugins/{name}/{name}.json,
             {extra-artifacts}

@@ -80,3 +80,9 @@ do
     [ "$JAR" -ef "$DEST_JAR" ] || mv $JAR $DEST_JAR
     echo "$PLUGIN_VERSION" > bazel-bin/plugins/{name}/$(basename $JAR-version)
 done
+
+for JS in $(find bazel-bin/plugins/{name} -maxdepth 1 -name {name}*.js)
+do
+    PLUGIN_VERSION=$(git describe  --always origin/{branch})
+    echo "$PLUGIN_VERSION" > bazel-bin/plugins/{name}/$(basename $JS-version)
+done
