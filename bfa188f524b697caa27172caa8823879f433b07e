@@ -16,6 +16,24 @@
       "message": "😎 would you like to also apply the fix to the plugin-manager in Gerrit? (see https://gerrit.googlesource.com/plugins/plugin-manager/+/refs/heads/master/src/main/resources/static/js/plugin-manager.js)",
       "revId": "bfa188f524b697caa27172caa8823879f433b07e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "70593ca2_0aa813e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-07-02T11:30:45Z",
+      "side": 1,
+      "message": "I\u0027m not sure how. The version there looks very different to the code here.\n\nIt uses different endpoints and returns different data.",
+      "parentUuid": "22cd804a_e7179ea6",
+      "revId": "bfa188f524b697caa27172caa8823879f433b07e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
