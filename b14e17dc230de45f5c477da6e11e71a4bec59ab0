@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdcd5b41_396e46a2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-07-03T14:38:57Z",
+      "side": 1,
+      "message": "But https://gerrit-review.googlesource.com/c/plugins/gc-conductor/+/431578 is needed so the build successfully builds.",
+      "revId": "b14e17dc230de45f5c477da6e11e71a4bec59ab0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
