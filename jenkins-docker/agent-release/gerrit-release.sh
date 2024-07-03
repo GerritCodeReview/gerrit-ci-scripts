@@ -30,6 +30,12 @@ then
   cp $HOME/.gitconfig.template $HOME/.gitconfig
 fi
 
+if [ -f $HOME/.gitcookies ]
+then
+  echo "Configuring cookiefile..."
+  git config --global http.cookiefile $HOME/.gitcookies
+fi
+
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
 git config --global credential.helper cache
 git clone https://gerrit.googlesource.com/gerrit && (cd gerrit && f=$(git rev-parse --git-dir)/hooks/commit-msg ; curl -Lo "$f" https://gerrit-review.googlesource.com/tools/hooks/commit-msg ; chmod +x "$f")
