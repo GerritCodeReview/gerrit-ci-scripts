@@ -30,13 +30,14 @@ GIT_COOKIES=${HOME}/.gitcookies
 ######################################################
 
 run:
-	docker run --rm -it --name ${CONTAINER} ${IMAGE} ${BRANCH} ${RELEASE} ${SNAPSHOT} \
+	docker run --rm -it --name ${CONTAINER} \
 		-u jenkins \
 		-v `pwd`/.gerritcodereview:/home/jenkins/.gerritcodereview \
 		-v ${HOME}/.m2:/home/jenkins/.m2 \
 		-v ${GNUPG}:/home/jenkins/.gnupg \
 		-v ${GIT_CONFIG}:/home/jenkins/.gitconfig.template \
-		-v ${GIT_COOKIES}:/home/jenkins/.gitcookies
+		-v ${GIT_COOKIES}:/home/jenkins/.gitcookies \
+		${IMAGE} ${BRANCH} ${RELEASE} ${SNAPSHOT}
 
 pull:
 	-docker pull gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-latest
