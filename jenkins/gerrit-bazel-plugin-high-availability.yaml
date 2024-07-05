@@ -5,6 +5,7 @@
           extra-modules: 'global-refdb'
           branch:
             - master
+            - stable-3.10
             - stable-3.9
             - stable-3.8
       - plugin-{name}-verifier
