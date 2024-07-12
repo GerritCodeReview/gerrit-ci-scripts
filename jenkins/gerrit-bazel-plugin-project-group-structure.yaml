@@ -5,3 +5,4 @@
           branch:
             - master
           gerrit-branch:
+            - stable-3.10
