@@ -16,6 +16,24 @@
       "message": "Verified with these 2 builds:\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.8/job/plugin-autosubmitter-bazel-master-stable-3.8/\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.9/job/plugin-autosubmitter-bazel-master-stable-3.9/",
       "revId": "a0047c9617690e168176af9d451381ceadf826ca",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "287cf859_a325f3f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2024-07-29T19:59:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "737b7007_755b4373",
+      "revId": "a0047c9617690e168176af9d451381ceadf826ca",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
