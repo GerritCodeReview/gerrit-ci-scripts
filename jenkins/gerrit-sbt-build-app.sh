@@ -2,6 +2,8 @@
 
 sbt -no-colors {targets}
 
+. set-java.sh 8
+
 # Extract version information
 JARS=$(find . -name '{name}*jar')
 for jar in $JARS
