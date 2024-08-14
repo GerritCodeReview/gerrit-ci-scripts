@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. set-java.sh {java-version}
+
 sbt -no-colors {targets}
 
 # Extract version information
