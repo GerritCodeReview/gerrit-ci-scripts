@@ -3,6 +3,7 @@
     description: 'App {name} {branch} branch build with Sbt'
     node: sbt
     targets: compile test assembly
+    java-version: 8
     wrappers:
       - timeout:
           timeout: 30
