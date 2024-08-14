@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "664b21e4_14a11e8f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-08-14T05:34:36Z",
+      "side": 1,
+      "message": "there is not version `2.452.4-lts` available @dockerhub - however `2.462.1` is therefore this one is used",
+      "range": {
+        "startLine": 7,
+        "startChar": 27,
+        "endLine": 7,
+        "endChar": 34
+      },
+      "revId": "39c584cb15e0d3cbfa3fca68c2784c597046854d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
