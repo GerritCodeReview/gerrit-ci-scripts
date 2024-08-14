@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "479c2899_7bd255b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2024-08-14T10:39:47Z",
+      "side": 1,
+      "message": "verified with `make build` that image creation works fine\n```\ngerritforge/gerrit-ci                                          2.462.1-lts                            22cbf3edfa76   20 minutes ago   1.94GB\n```",
+      "revId": "846f04335f3c345820778ad3784bc3df0a20f41e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
