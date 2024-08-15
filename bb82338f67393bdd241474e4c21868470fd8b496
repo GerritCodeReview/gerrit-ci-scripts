@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f963c6bb_d96ded84",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-08-15T14:30:14Z",
+      "side": 1,
+      "message": "What about _\"configurable java version\"_",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 10
+      },
+      "revId": "bb82338f67393bdd241474e4c21868470fd8b496",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2c2b04c3_459df509",
         "filename": "jenkins/gerrit-sbt-build-app.sh",
         "patchSetId": 1
