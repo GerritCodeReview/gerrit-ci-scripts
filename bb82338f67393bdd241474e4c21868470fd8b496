@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c2b04c3_459df509",
+        "filename": "jenkins/gerrit-sbt-build-app.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-08-15T14:29:38Z",
+      "side": 1,
+      "message": "Should this be part of the job definition?\n\n```suggestion\n. set-java.sh {java-version}\n```",
+      "range": {
+        "startLine": 5,
+        "startChar": 14,
+        "endLine": 5,
+        "endChar": 15
+      },
+      "revId": "bb82338f67393bdd241474e4c21868470fd8b496",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
