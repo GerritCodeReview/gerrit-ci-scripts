@@ -86,6 +86,23 @@
       },
       "revId": "bb82338f67393bdd241474e4c21868470fd8b496",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c0f3550_abd7adbf",
+        "filename": "jenkins/gerrit-sbt-build-app.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2024-08-16T09:30:42Z",
+      "side": 1,
+      "message": "This should be moved before line #3",
+      "revId": "bb82338f67393bdd241474e4c21868470fd8b496",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
