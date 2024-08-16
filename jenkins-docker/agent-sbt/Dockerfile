@@ -9,6 +9,9 @@ RUN apt-get update --allow-releaseinfo-change && \
     apt-get update --allow-releaseinfo-change && \
     apt-get -y install --no-install-recommends sbt && \
     rm -rf /etc/apt/sources.list.d/* && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    cd /tmp && wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz && \
+    tar -xzf OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz && \
+    mv jdk8u382-b05 /usr/lib/jvm/java-8-openjdk-amd64
 
 USER root
