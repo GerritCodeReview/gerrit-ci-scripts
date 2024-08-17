@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1128b905_461b07b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3575013
+      },
+      "writtenOn": "2024-08-17T17:58:25Z",
+      "side": 1,
+      "message": "ان ما ودرتي سوالفج بتزعلين",
+      "revId": "c5dc73d3950b7b8bc40de535a282fa690b6a35b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
