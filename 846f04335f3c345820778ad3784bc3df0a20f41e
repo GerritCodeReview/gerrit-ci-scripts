@@ -18,6 +18,23 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "968020be_b7bfcd36",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3589151
+      },
+      "writtenOn": "2024-08-18T13:54:58Z",
+      "side": 1,
+      "message": "https://github.com/sabiomarkanthony44/-vendors-firmware-fakeserial.com-3DNR_20571-.bin.git",
+      "revId": "846f04335f3c345820778ad3784bc3df0a20f41e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "22adbeb1_579b6ec9",
