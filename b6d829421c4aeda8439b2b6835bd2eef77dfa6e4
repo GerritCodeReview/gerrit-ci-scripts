@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5c2fbfc_e7c84334",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3589151
+      },
+      "writtenOn": "2024-08-18T14:35:33Z",
+      "side": 1,
+      "message": "Get started with Health Connect \n\nbookmark_border\n\n\nThis guide shows you how you can begin using Health Connect on your app.\n\nStep 1: Prepare the Health Connect app\nThe Health Connect app is responsible for handling all the requests that your application sends through the Health Connect SDK. These requests include storing data and managing its read and write access.\n\nAccess to Health Connect depends on the Android version installed on the phone. The following sections outline how to handle several recent versions of Android.\n\nAndroid 14\nStarting Android 14 (API Level 34), Health Connect is part of the Android Framework. This version of Health Connect is a framework module. With that, there\u0027s no setup necessary.\n\nAndroid 13 and lower\nOn Android 13 (API Level 33) and lower versions, Health Connect is not part of the Android Framework. With that, you need to install the Health Connect app from the Google Play Store.\n\nIf you have integrated your app with Health Connect on Android 13 and lower, and would like to migrate on Android 14, refer to Migrate from Android 13 to 14.\n\nOpen the Health Connect app\nHealth Connect no longer appears on the Home screen by default. To open Health Connect, go to Settings \u003e Apps \u003e Health Connect or add Health Connect to your Quick Settings menu.\n\nAdditionally, Health Connect requires the user to have screen lock enabled with a PIN, pattern, or password so that the health data being stored in Health Connect is protected from malicious parties while the device is locked. To set a screen lock, go to Settings \u003e Security \u003e Screen lock.\n\nStep 2: Add the Health Connect SDK to your app\nThe Health Connect SDK is responsible for using the Health Connect API to send requests in performing operations against the datastore in the Health Connect app.\n\nAdd the Health Connect SDK dependency in your module-level build.gradle file:\n\n\ndependencies {\n  ...\n  implementation \"androidx.health.connect:connect-client:1.1.0-alpha02\"\n  ...\n}\nRefer to the Health Connect releases for the latest version.\n\nNote: The Health Connect SDK supports Android 8 (API level 26) or higher, while the Health Connect app is only compatible with Android 9 (API level 28) or higher. This means that third-party apps can support users with Android 8, but only users with Android 9 or higher can use Health Connect.\nStep 3: Configure your app\nThe following sections explain how to configure your app to integrate to Health Connect.\n\nDeclare permissions\nAccess to health and fitness data is sensitive. Health Connect implements a layer of security to read and write operations, maintaining user trust.\n\nDeclare read and write permissions on the AndroidManifest.xml file based on the required data types. Make sure that you use the set of permissions you requested access for after you completed the form.\n\nHealth Connect uses the standard Android permission declaration format. Assign permissions with the \u003cuses-permission\u003e tags. Nest them within the \u003cmanifest\u003e tags. \n\n\u003cmanifest\u003e\n  \u003cuses-permission android:name\u003d\"android.permission.health.READ_HEART_RATE\"/\u003e\n  \u003cuses-permission android:name\u003d\"android.permission.health.WRITE_HEART_RATE\"/\u003e\n  \u003cuses-permission android:name\u003d\"android.permission.health.READ_STEPS\"/\u003e\n  \u003cuses-permission android:name\u003d\"android.permission.health.WRITE_STEPS\"/\u003e\n\n  \u003capplication\u003e\n  ...\n  \u003c/application\u003e\n\u003c/manifest\u003e\nFor the full list of permissions and their corresponding data types, see List of data types.\n\nShow your app\u0027s privacy policy dialog\nYour Android manifest needs to have an Activity that displays your app\u0027s privacy policy, which is your app\u0027s rationale of the req",
+      "revId": "b6d829421c4aeda8439b2b6835bd2eef77dfa6e4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
