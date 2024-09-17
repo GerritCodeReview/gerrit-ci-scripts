@@ -46,6 +46,30 @@
       },
       "revId": "b86b22109e48338caea05edaa6e315a7ed72bf78",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf446477_b45fcaca",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1010404
+      },
+      "writtenOn": "2024-09-17T16:02:03Z",
+      "side": 1,
+      "message": "I don\u0027t have any preference, I actually just want to download a JAR from the build server to use with Gerrit 3.10 😅 (so ideally built against Gerrit 3.10 and not master; we\u0027ve just had the case with the reviewers plugin whose master is incompatible with Gerrit 3.10)\n\nCreating a stable-3.10 branch would mean that this YAML file won\u0027t have to change once stable-3.10 diverges from master, but also implies a slight burden to keep the branches (both master and stable-3.10) up-to-date.",
+      "parentUuid": "c0a35fe1_59e744bf",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "b86b22109e48338caea05edaa6e315a7ed72bf78",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
