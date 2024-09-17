@@ -22,6 +22,30 @@
       },
       "revId": "b86b22109e48338caea05edaa6e315a7ed72bf78",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0a35fe1_59e744bf",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1083195
+      },
+      "writtenOn": "2024-09-17T15:30:05Z",
+      "side": 1,
+      "message": "But then it would not have code diff from master",
+      "parentUuid": "5561a6b9_831ebc80",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "b86b22109e48338caea05edaa6e315a7ed72bf78",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
