@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5561a6b9_831ebc80",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1010404
+      },
+      "writtenOn": "2024-09-17T15:23:02Z",
+      "side": 1,
+      "message": "An alternative would be to create a stable-3.10 branch in the plugins/rename-project project",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "b86b22109e48338caea05edaa6e315a7ed72bf78",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
