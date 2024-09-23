@@ -7,3 +7,4 @@
           gerrit-branch:
             - master
             - stable-3.8
+            - stable-3.9
