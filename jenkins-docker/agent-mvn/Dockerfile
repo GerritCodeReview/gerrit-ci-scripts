@@ -9,7 +9,8 @@ ENV PROJECTS \
 	egit \
 	github \
 	imagare \
-	manifest-subscription
+	manifest-subscription \
+	ai-code-review
 
 # Maven cache warm-up for Gerrit plugins
 RUN export HOME=/home/jenkins && for prj in $PROJECTS; do cd /tmp && git clone $GERRIT_URL/$prj && cd $prj && ( mvn clean install || true ); rm -Rf /tmp/$prj; done
