@@ -1,0 +1,8 @@
+- project:
+  name: ai-code-review-mvn
+  repo: ai-code-review
+  jobs:
+    - 'plugin-{repo}-mvn-{branch}':
+      branch:
+        - master
+    - 'plugin-{name}-verifier':
