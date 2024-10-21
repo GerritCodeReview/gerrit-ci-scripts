@@ -285,6 +285,7 @@
       - 'Plugins-{branch}'
     branch:
       - master
+      - stable-3.11
       - stable-3.10
       - stable-3.9
       - stable-3.8
