@@ -29,7 +29,6 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     openssh-client \
     python3-distutils \
     python3-dev \
-    python3-jenkinsapi \
     python3-pip \
     python3-yaml \
     vim \

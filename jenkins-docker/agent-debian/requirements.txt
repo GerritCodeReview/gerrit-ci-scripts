@@ -1,5 +1,11 @@
-python-jenkins==1.8.0 --hash=sha256:0180a5463f68e2e0110f382b4248d2284bc68481db4a16fcbf61f4f55801c31f
+python-jenkins==1.8.0 --hash=sha256:f40f54505da1be96160ef571363903c8d2d1eae8fa706dbe701211833f440b80
 
 #implicit dependencies
+six==1.16.0 --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
+requests==2.32.3 --hash=sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6
+urllib3==2.2.3 --hash=sha256:ca899ca043dcb1bafa3e262d73aa25c465bfb49e0bd9dd5d59f1d0acba2f8fac
+idna==3.10 --hash=sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9
+certifi==2024.8.30 --hash=sha256:bec941d2aa8195e248a60b31ff9f0558284cf01a52591ceda73ea9afffd69fd9
+charset-normalizer==3.4.0 --hash=sha256:223217c3d4f82c3ac5e29032b3f1c2eb0fb591b72161f86d93f5719079dae93e
 multi_key_dict==2.0.3 --hash=sha256:deebdec17aa30a1c432cb3f437e81f8621e1c0542a0c0617a74f71e232e9939e
 pbr==5.11.1 --hash=sha256:567f09558bae2b3ab53cb3c1e2e33e726ff3338e7bae3db5dc954b3a44eef12b
