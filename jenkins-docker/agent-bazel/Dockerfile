@@ -45,7 +45,7 @@ RUN bash -c "mkdir -p /home/jenkins/workspace/Gerrit-verifier-chrome-latest && \
     git clone -b stable-3.11 --recursive --reference $REF_REPO https://gerrit.googlesource.com/gerrit && \
     cd gerrit && \
     ./tools/setup_gjf.sh 1.7 && \
-    . set-java.sh 17 && \
+    . set-java.sh 21 && \
     bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api && \
     git checkout -f master && \
     git submodule update --reference $REF_REPO --init && \
