@@ -61,8 +61,3 @@ RUN echo 'root:screencast' | chpasswd
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
-# Allow Android SDK tools to run on a 64-bit system, see
-# http://stackoverflow.com/a/23201209/1127485
-RUN apt-get update --allow-releaseinfo-change && apt-get install -y lib32stdc++6 lib32z1
-
-
