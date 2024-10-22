@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2457acc8_e5eed101",
+        "filename": "jenkins/gerrit-bazel-build-examples-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2024-10-22T21:00:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8fbe4769_a7ccb8fb",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 4
+      },
+      "revId": "238fe248f131102bd6e668ca2e3d85d9a3c80f03",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e0b6c609_e071b21a",
@@ -37,6 +61,24 @@
       "writtenOn": "2024-10-22T19:21:17Z",
       "side": 1,
       "message": "You could add a little helper method so that this can be written in a more readable manner.",
+      "revId": "238fe248f131102bd6e668ca2e3d85d9a3c80f03",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee92d27c_1e5a5f98",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2024-10-22T21:00:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0b6c609_e071b21a",
       "revId": "238fe248f131102bd6e668ca2e3d85d9a3c80f03",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
