@@ -1,5 +1,5 @@
 NO_CACHE ?= false
-DEBIAN_VER ?= bullseye
+DEBIAN_VER ?= bookworm
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-chrome:$(DEBIAN_VER)
 CHROME_VERS = latest 69.0.3497.92
