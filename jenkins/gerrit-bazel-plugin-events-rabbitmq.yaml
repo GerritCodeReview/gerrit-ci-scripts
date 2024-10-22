@@ -2,9 +2,11 @@
     name: events-rabbitmq
     jobs:
       - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: 'events-broker'
           branch:
             - master
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          extra-plugins: 'events-broker'
           branch:
             - master
           gerrit-branch:
