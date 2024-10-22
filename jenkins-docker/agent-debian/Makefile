@@ -3,7 +3,7 @@ PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-debian
 MAVEN_VER=3.9.4
 GIT_VER=2.47.0
-DEBIAN_VER=bullseye
+DEBIAN_VER=bookworm
 
 build:
 	@echo "Building Docker for Debian:$(DEBIAN_VER)"
