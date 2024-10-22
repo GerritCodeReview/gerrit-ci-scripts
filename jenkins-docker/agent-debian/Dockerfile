@@ -26,7 +26,7 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     libexpat1-dev \
     libssl-dev \
     libz-dev \
-    openssh-server \
+    openssh-client \
     python3-distutils \
     python3-dev \
     python3-jenkinsapi \
@@ -54,18 +54,8 @@ RUN cd /usr/local && \
     cd bin && ln -s ../apache-maven-$MAVEN_VER/bin/* .
 
 RUN useradd jenkins -d /home/jenkins -m -s /bin/bash
-RUN mkdir /home/jenkins/.ssh
-RUN chown -R jenkins:jenkins /home/jenkins/.ssh
-RUN chmod -R 700 /home/jenkins/.ssh
 
 COPY gitconfig $JENKINS_REF/.gitconfig
-
-RUN mkdir /var/run/sshd
-RUN echo 'root:screencast' | chpasswd
-RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-
-# SSH login fix. Otherwise user is kicked off after login
-RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
@@ -74,7 +64,4 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 # http://stackoverflow.com/a/23201209/1127485
 RUN apt-get update --allow-releaseinfo-change && apt-get install -y lib32stdc++6 lib32z1
 
-RUN /etc/init.d/ssh start
 
-EXPOSE 22
-CMD ["/usr/sbin/sshd", "-e", "-D"]
