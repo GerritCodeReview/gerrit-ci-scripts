@@ -7,15 +7,7 @@ then
   export BAZEL_OPTS=""
 fi
 
-case {branch} in
-  master|stable-3.10|stable-3.9)
-    . set-java.sh 17
-    ;;
-
-  *)
-    . set-java.sh 11
-    ;;
-esac
+. set-java.sh --branch "{branch}"
 
 export BAZEL_OPTS="$(echo $BAZEL_OPTS | xargs) \
                    --config=remote_bb \

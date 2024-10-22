@@ -39,8 +39,7 @@ def call(Map parm = [:]) {
     def pluginScmBaseUrl = "https://gerrit.googlesource.com/a"
     def pluginScmUrl = "${pluginScmBaseUrl}/${env.GERRIT_PROJECT}"
     def gjfVersion = parm.gjfVersion ?: '1.7'
-    def javaVersion = (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH == "stable-3.9" || env.GERRIT_BRANCH == "stable-3.10") ? 17 : 11
-    def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh ${javaVersion} && bazelisk"
+    def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')

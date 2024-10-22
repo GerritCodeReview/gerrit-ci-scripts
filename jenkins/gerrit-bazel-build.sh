@@ -11,15 +11,7 @@ if [[ "$TARGET_BRANCH" == "" ]]
 then
   TARGET_BRANCH={branch}
 fi
-case $TARGET_BRANCH in
-  master|stable-3.10|stable-3.9)
-    . set-java.sh 17
-    ;;
-
-  *)
-    . set-java.sh 11
-    ;;
-esac
+. set-java.sh --branch "$TARGET_BRANCH"
 
 echo "Build with mode=$MODE"
 echo '----------------------------------------------'

@@ -1,14 +1,6 @@
 #!/bin/bash -ex
 
-case $TARGET_BRANCH in
-  master|stable-3.10|stable-3.9)
-    . set-java.sh 17
-    ;;
-
-  *)
-    . set-java.sh 11
-    ;;
-esac
+. set-java.sh --branch "$TARGET_BRANCH"
 
 cd gerrit
 
