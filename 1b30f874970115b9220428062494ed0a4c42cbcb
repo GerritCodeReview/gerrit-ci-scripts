@@ -70,6 +70,46 @@
       "parentUuid": "e26a15fb_7ad8478f",
       "revId": "1b30f874970115b9220428062494ed0a4c42cbcb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66502aea_eb94bb27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2024-10-22T19:18:21Z",
+      "side": 1,
+      "message": "I\u0027m in favor of doing the Java 21 bump in another change. And maybe trying to de-dup all those identical code blocks in the shell scripts?",
+      "revId": "1b30f874970115b9220428062494ed0a4c42cbcb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "49994b28_cb868b61",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2024-10-22T19:18:21Z",
+      "side": 1,
+      "message": "nit: combine these like 3.8/3.9 are?\n```suggestion\n    if (env.GERRIT_BRANCH \u003d\u003d \"master\" || env.GERRIT_BRANCH \u003d\u003d~ /stable-3.[8-9]/ || env.GERRIT_BRANCH \u003d\u003d~ /stable-3.1[0-1]/) {\n```",
+      "range": {
+        "startLine": 133,
+        "startChar": 83,
+        "endLine": 133,
+        "endChar": 155
+      },
+      "revId": "1b30f874970115b9220428062494ed0a4c42cbcb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
