@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-bazel:debian-bullseye-latest
+FROM gerritforge/gerrit-ci-agent-bazel:debian-bookworm-latest
 
 # SBT Setup
 RUN apt-get update --allow-releaseinfo-change && \
