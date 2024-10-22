@@ -110,6 +110,30 @@
       },
       "revId": "1b30f874970115b9220428062494ed0a4c42cbcb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79be0190_a9fa3080",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-10-22T20:14:35Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "49994b28_cb868b61",
+      "range": {
+        "startLine": 133,
+        "startChar": 83,
+        "endLine": 133,
+        "endChar": 155
+      },
+      "revId": "1b30f874970115b9220428062494ed0a4c42cbcb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
