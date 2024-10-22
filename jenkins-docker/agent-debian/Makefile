@@ -2,7 +2,7 @@ NO_CACHE ?= false
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-debian
 MAVEN_VER=3.9.4
-GIT_VER=2.42.0
+GIT_VER=2.47.0
 DEBIAN_VER=bullseye
 
 build:
