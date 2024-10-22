@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-bazel:debian-bullseye-$CHROME_VER
+FROM gerritforge/gerrit-ci-agent-bazel:debian-bookworm-$CHROME_VER
 
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     add-apt-repository \
