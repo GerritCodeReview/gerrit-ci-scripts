@@ -1,5 +1,5 @@
 NO_CACHE ?= false
-DEBIAN_VER ?= bullseye
+DEBIAN_VER ?= bookworm
 PREFIX=gerritforge
 IMAGE=${PREFIX}/gerrit-ci-agent-python3:$(DEBIAN_VER)
 

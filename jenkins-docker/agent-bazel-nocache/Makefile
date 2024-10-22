@@ -2,7 +2,7 @@ include ../chrome-vers.mk
 
 NO_CACHE=false
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-bullseye-nocache
+IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-bookworm-nocache
 BAZEL_VER=5.0.0
 BUILDIFIER_VER=4.0.0
 BAZELISK_VER=1.12.0

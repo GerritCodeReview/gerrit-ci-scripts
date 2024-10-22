@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-latest
+FROM gerritforge/gerrit-ci-agent-bazel:debian-bookworm-nocache-latest
 
 RUN apt-get update --allow-releaseinfo-change && \
     apt-get install -y gnupg2 jq && \
