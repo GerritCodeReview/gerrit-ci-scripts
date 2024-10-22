@@ -22,6 +22,30 @@
       },
       "revId": "6a937215f96e90cef908d76db11f3ff4281ad719",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b40e2ace_1b363bdd",
+        "filename": "jenkins/gerrit-bazel-plugin-automerger.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-10-22T12:25:17Z",
+      "side": 0,
+      "message": "Thanks, done.",
+      "parentUuid": "12cb4af6_10b4a158",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 24
+      },
+      "revId": "6a937215f96e90cef908d76db11f3ff4281ad719",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
