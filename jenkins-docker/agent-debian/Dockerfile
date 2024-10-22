@@ -37,7 +37,7 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     && ln -sf /usr/bin/python3 /usr/bin/python
 
 COPY requirements.txt /tmp/
-RUN pip install --require-hashes -r /tmp/requirements.txt
+RUN pip install --break-system-packages --require-hashes -r /tmp/requirements.txt
 
 ADD https://www.kernel.org/pub/software/scm/git/git-$GIT_VER.tar.gz /tmp/
 RUN tar xvfz /tmp/git-$GIT_VER.tar.gz && \
