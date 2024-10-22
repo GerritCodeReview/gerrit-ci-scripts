@@ -1,6 +1,6 @@
 NO_CACHE=true
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-release-bazel:debian-bullseye
+IMAGE=${PREFIX}/gerrit-release-bazel:debian-bookworm
 CONTAINER=release
 
 ######################################################
@@ -40,7 +40,7 @@ run:
 		${IMAGE} ${BRANCH} ${RELEASE} ${SNAPSHOT}
 
 pull:
-	-docker pull gerritforge/gerrit-ci-agent-bazel:debian-bullseye-nocache-latest
+	-docker pull gerritforge/gerrit-ci-agent-bazel:debian-bookworm-nocache-latest
 
 build: pull
 	docker build --no-cache=$(NO_CACHE) -t ${IMAGE} .
