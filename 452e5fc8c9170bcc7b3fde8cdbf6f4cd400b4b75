@@ -39,6 +39,30 @@
       },
       "revId": "452e5fc8c9170bcc7b3fde8cdbf6f4cd400b4b75",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96a074ab_75cc36aa",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-10-23T09:48:45Z",
+      "side": 1,
+      "message": "Please ignore: we will just add Java 11 to Debian bookworm, much easier.",
+      "parentUuid": "bc6c0716_2301343b",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 18
+      },
+      "revId": "452e5fc8c9170bcc7b3fde8cdbf6f4cd400b4b75",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
