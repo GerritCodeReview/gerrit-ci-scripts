@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c94e3fa_068afd7b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2024-10-23T15:39:55Z",
+      "side": 1,
+      "message": "With them split, we can get CI enabled for 3.11 without waiting on the other java 21 changes. I don\u0027t see any downside to that incremental progress.",
+      "parentUuid": "11ab424d_7f3e0460",
+      "revId": "fe3934b2384122c9f11a4ae884fe2ce7ae146cac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1cf4f641_dc389e96",
