@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f00b77d0_e4fbef54",
+        "filename": "jenkins-docker/agent-debian/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-10-23T11:21:21Z",
+      "side": 1,
+      "message": "where is `preferences` coming from?\n\n```\n~/dev/source/gerrit-ci-scripts/jenkins-docker [:0e56524] make build\n...\nERROR: failed to solve: failed to compute cache key: failed to calculate checksum of ref 5822e1f1-0911-4a85-b8c4-f83266b80f9d::ltlrllgzxacx8a9vgjegh7l2e: \"/preferences\": not found\nmake[1]: *** [Makefile:12: build] Error 1\nmake[1]: Leaving directory \u0027/home/syntonyze/dev/source/gerrit-ci-scripts/jenkins-docker/agent-debian\u0027\nmake: *** [Makefile:8: build] Error 1\n```",
+      "revId": "0e56524a77463752cdf90fabca1836ee276164f1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
