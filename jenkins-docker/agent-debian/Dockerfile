@@ -36,7 +36,7 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/bin/python3 /usr/bin/python
 
-# Debian 12 does not include yet the Java 21 packages
+# Debian 12 does not include the Java 11/21 packages
 # therefore get them from the sid distribution and then
 # reset the original package sources
 RUN echo "deb http://deb.debian.org/debian sid main" >> /etc/apt/sources.list
@@ -44,6 +44,11 @@ RUN cp /etc/apt/sources.list /tmp/sources.list.save && \
     apt-get clean && \
     apt-get update && \
     apt-get install -y openjdk-21-jdk-headless
+
+COPY preferences /etc/apt/preferences
+RUN echo "deb http://deb.debian.org/debian unstable main non-free contrib" >> /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get install -y openjdk-11-jdk-headless
 
 RUN mv /tmp/sources.list.save /etc/apt/sources.list && \
     apt-get update
