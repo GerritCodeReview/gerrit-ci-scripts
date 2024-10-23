@@ -16,6 +16,29 @@
       "message": "Nice refactoring @nasser.grainawi@linaro.org",
       "revId": "452e5fc8c9170bcc7b3fde8cdbf6f4cd400b4b75",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc6c0716_2301343b",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-10-23T09:44:37Z",
+      "side": 1,
+      "message": "This would need a special project, where weep on using buster, the old gerrit-bazel-test.sh and gerrit-bazel-build.sh scripts and the old buster executor.\n\nThe new script will be included with Java 17/Java 21 which have system dependencies.",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 18
+      },
+      "revId": "452e5fc8c9170bcc7b3fde8cdbf6f4cd400b4b75",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
