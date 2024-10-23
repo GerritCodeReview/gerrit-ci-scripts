@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11ab424d_7f3e0460",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-10-23T09:31:02Z",
+      "side": 1,
+      "message": "I believe it makes sense to merge this one with his predecessor",
+      "revId": "fe3934b2384122c9f11a4ae884fe2ce7ae146cac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
