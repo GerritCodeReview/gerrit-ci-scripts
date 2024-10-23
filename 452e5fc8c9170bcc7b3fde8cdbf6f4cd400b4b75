@@ -18,6 +18,23 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ab19415_c090fb26",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-10-23T10:00:44Z",
+      "side": 1,
+      "message": "I have Tested this for 3.9, 3.10 and master.\n\n3.9\n```\njenkins@e24f8a5d31cb:~/gerrit-ci-scripts$ . jenkins-docker/agent-debian/set-java.sh --branch stable-3.9\nJava set to: /usr/lib/jvm/java-17-openjdk-amd64/bin/java\n```\n\n3.10\n\n```\njenkins@e24f8a5d31cb:~/gerrit-ci-scripts$ . jenkins-docker/agent-debian/set-java.sh --branch stable-3.10\nJava set to: /usr/lib/jvm/java-17-openjdk-amd64/bin/java\n```\n\nmaster\n\n```\njenkins@e24f8a5d31cb:~/gerrit-ci-scripts$ . jenkins-docker/agent-debian/set-java.sh --branch master\nJava set to: /usr/lib/jvm/java-17-openjdk-amd64/bin/java\n```\n\nAlso, Java 17 and 21 can be chosen in the legacy way:\n\nJava 17\n```\njenkins@e24f8a5d31cb:~/gerrit-ci-scripts$ . jenkins-docker/agent-debian/set-java.sh 17\nJava set to: /usr/lib/jvm/java-17-openjdk-amd64/bin/java\n```\n\nJava 21\n```\njenkins@e24f8a5d31cb:~/gerrit-ci-scripts$ . jenkins-docker/agent-debian/set-java.sh 21\nJava set to: /usr/lib/jvm/java-21-openjdk-amd64/bin/java\n```\n\nJava 11 and 3.8 will be available once Java 11 is re-established in a new bookworm image (@luca.milanesio will publish that).",
+      "revId": "452e5fc8c9170bcc7b3fde8cdbf6f4cd400b4b75",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bc6c0716_2301343b",
