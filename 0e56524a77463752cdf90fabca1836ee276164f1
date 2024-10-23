@@ -34,6 +34,24 @@
       "parentUuid": "f00b77d0_e4fbef54",
       "revId": "0e56524a77463752cdf90fabca1836ee276164f1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "689d81d6_e28b903c",
+        "filename": "jenkins-docker/agent-debian/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-10-23T18:08:35Z",
+      "side": 1,
+      "message": "This is done now, resolving.",
+      "parentUuid": "b7009509_33fcca63",
+      "revId": "0e56524a77463752cdf90fabca1836ee276164f1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
