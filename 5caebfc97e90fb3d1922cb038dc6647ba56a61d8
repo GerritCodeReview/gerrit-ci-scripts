@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f426b7a_f209b7ba",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-10-23T11:43:21Z",
+      "side": 1,
+      "message": "Resolved.",
+      "parentUuid": "59cbebcc_363ac79d",
+      "range": {
+        "startLine": 20,
+        "startChar": 34,
+        "endLine": 20,
+        "endChar": 45
+      },
+      "revId": "5caebfc97e90fb3d1922cb038dc6647ba56a61d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb65d1c7_01f71bd2",
@@ -61,6 +85,30 @@
       "writtenOn": "2024-10-23T09:30:16Z",
       "side": 1,
       "message": "For stable-3.11, we need two validations:\n- Java 17\n- Java 21",
+      "range": {
+        "startLine": 133,
+        "startChar": 104,
+        "endLine": 133,
+        "endChar": 122
+      },
+      "revId": "5caebfc97e90fb3d1922cb038dc6647ba56a61d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22cd3987_3ad74589",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-10-23T11:43:21Z",
+      "side": 1,
+      "message": "Not sure how we\u0027d do this, could you do that pls?",
+      "parentUuid": "bb65d1c7_01f71bd2",
       "range": {
         "startLine": 133,
         "startChar": 104,
