@@ -25,10 +25,6 @@ then
       JAVA_VERSION=17
       ;;
 
-    stable-3.11)
-      JAVA_VERSION=21
-      ;;
-
     *)
       JAVA_VERSION=11
       ;;
