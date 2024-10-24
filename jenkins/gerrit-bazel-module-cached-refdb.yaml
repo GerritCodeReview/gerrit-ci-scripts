@@ -2,11 +2,16 @@
     name: cached-refdb
     jobs:
       - 'module-{name}-bazel-{branch}':
+          bazel-config: java21
           branch:
             - master
       - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+          bazel-config: java21
           branch:
             - master
+          gerrit-branch:
+            - stable-3.11
+      - 'module-{name}-bazel-{branch}':
           gerrit-branch:
             - stable-3.10
             - stable-3.9
