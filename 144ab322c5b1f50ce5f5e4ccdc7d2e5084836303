@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a65e206e_b09fccbb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-10-24T00:46:32Z",
+      "side": 1,
+      "message": "It looks Gerrit needs SSH, otherwise it would fail to init with:\n```\nCannot run program \"ssh-keygen\"\n```",
+      "revId": "144ab322c5b1f50ce5f5e4ccdc7d2e5084836303",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
