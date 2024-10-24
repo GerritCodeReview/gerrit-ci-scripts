@@ -60,8 +60,22 @@ then
   bash -c "{setup}"
 fi
 
-bazelisk build $BAZEL_OPTS $TARGETS
-bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
+if test "{bazel-config}" != ""
+then
+  BAZEL_CONFIG=--config={bazel-config}
+fi
+
+if test "{bazel-build-config}" != ""
+then
+  BAZEL_BUILD_CONFIG=--config={bazel-build-config}
+fi
+bazelisk build $BAZEL_BUILD_CONFIG $BAZEL_CONFIG $BAZEL_OPTS $TARGETS
+
+if test "{bazel-test-config}" != ""
+then
+  BAZEL_TEST_CONFIG=--config={bazel-test-config}
+fi
+bazelisk test $BAZEL_BUILD_CONFIG $BAZEL_CONFIG $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
 
 for JAR in $(find bazel-bin/plugins/{name} -maxdepth 1 -name {name}*.jar)
 do
