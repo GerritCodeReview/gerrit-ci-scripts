@@ -1,6 +1,0 @@
-- project:
-    name: rabbitmq
-    jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - master
