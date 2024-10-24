@@ -73,9 +73,6 @@
             - job-extended-read
       - build-discarder:
           days-to-keep: 30
-      - inject:
-          properties-content: >
-            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
     scm:
       - git:
           url: https://gerrit.googlesource.com/a/gerrit
@@ -137,9 +134,6 @@
             - job-extended-read
       - build-discarder:
           days-to-keep: 30
-      - inject:
-          properties-content: >
-            BAZEL_OPTS=--remote_cache=https://gerrit-ci.gerritforge.com/cache
 
 - project:
     name: Gerrit-verifier-bazel-chrome-latest
