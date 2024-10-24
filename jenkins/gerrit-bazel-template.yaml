@@ -61,10 +61,6 @@
     description: '{name} {branch} branch build with Bazel'
     defaults: gerrit-bazel-defaults
     node: 'bazel-debian-{browser}'
-    properties:
-      - inject:
-          properties-content: >
-            BAZEL_OPTS="--sandbox_tmpfs_path=/tmp"
 
 - project:
     name: Gerrit-bazel-chrome-latest
