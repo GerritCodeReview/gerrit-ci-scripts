@@ -65,7 +65,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-agent-bazel-docker:debian-bullseye-latest</image>
+            <image>gerritforge/gerrit-ci-agent-bazel-docker:debian-bookworm-latest</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
@@ -105,7 +105,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-agent-bazel-docker:debian-bullseye-69.0.3497.92</image>
+            <image>gerritforge/gerrit-ci-agent-bazel-docker:debian-bookworm-69.0.3497.92</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
@@ -227,7 +227,7 @@
           </retentionStrategy>
           <numExecutors>1</numExecutors>
           <dockerTemplateBase>
-            <image>gerritforge/gerrit-ci-agent-python3:bullseye</image>
+            <image>gerritforge/gerrit-ci-agent-python3:bookworm</image>
             <dockerCommand></dockerCommand>
             <lxcConfString></lxcConfString>
             <hostname></hostname>
