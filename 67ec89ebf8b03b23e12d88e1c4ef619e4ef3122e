@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79b67450_4c888166",
+        "filename": "jenkins/gerrit-bazel-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-10-24T19:56:42Z",
+      "side": 1,
+      "message": "Isn\u0027t this just duplicating the below since we set it to java 21 in the set java script?",
+      "revId": "67ec89ebf8b03b23e12d88e1c4ef619e4ef3122e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
