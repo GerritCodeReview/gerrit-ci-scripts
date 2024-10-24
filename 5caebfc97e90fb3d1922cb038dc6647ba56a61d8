@@ -152,6 +152,30 @@
       },
       "revId": "5caebfc97e90fb3d1922cb038dc6647ba56a61d8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d558c44_535d42f5",
+        "filename": "vars/gerritPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2024-10-24T14:24:06Z",
+      "side": 1,
+      "message": "\u003e For stable-3.11, we need two validations:\n\nI think we should do that in the follow-up that adds Java 21.",
+      "parentUuid": "22cd3987_3ad74589",
+      "range": {
+        "startLine": 133,
+        "startChar": 104,
+        "endLine": 133,
+        "endChar": 122
+      },
+      "revId": "5caebfc97e90fb3d1922cb038dc6647ba56a61d8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
