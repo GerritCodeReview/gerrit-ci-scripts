@@ -16,6 +16,24 @@
       "message": "It looks Gerrit needs SSH, otherwise it would fail to init with:\n```\nCannot run program \"ssh-keygen\"\n```",
       "revId": "144ab322c5b1f50ce5f5e4ccdc7d2e5084836303",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10a1d06e_a96d28a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-10-24T07:24:43Z",
+      "side": 1,
+      "message": "Meks sense.",
+      "parentUuid": "a65e206e_b09fccbb",
+      "revId": "144ab322c5b1f50ce5f5e4ccdc7d2e5084836303",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
