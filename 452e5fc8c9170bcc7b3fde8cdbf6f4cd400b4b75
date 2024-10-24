@@ -35,6 +35,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dbd2263c_bb1b6aeb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-10-24T00:43:31Z",
+      "side": 1,
+      "message": "Agents images published with bookworm 👍",
+      "parentUuid": "4ab19415_c090fb26",
+      "revId": "452e5fc8c9170bcc7b3fde8cdbf6f4cd400b4b75",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bc6c0716_2301343b",
