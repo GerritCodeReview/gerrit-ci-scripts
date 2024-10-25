@@ -2,12 +2,9 @@
     name: events-broker
     jobs:
       - 'module-{name}-bazel-{branch}':
-          bazel-config: java21
           branch:
             - master
             - stable-3.11
-      - 'module-{name}-bazel-{branch}':
-          branch:
             - stable-3.10
             - stable-3.9
             - stable-3.8
