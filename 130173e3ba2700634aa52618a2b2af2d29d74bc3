@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "305020b2_fd187442",
+        "filename": "jenkins/gerrit-bazel-module-cached-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-10-25T21:28:24Z",
+      "side": 0,
+      "message": "Add `master` back here.",
+      "revId": "130173e3ba2700634aa52618a2b2af2d29d74bc3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
