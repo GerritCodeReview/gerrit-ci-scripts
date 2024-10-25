@@ -24,9 +24,6 @@
     triggers:
       - pollscm:
           cron: 'H/50 * * * *'
-    bazel-config: ''
-    bazel-build-config: ''
-    bazel-test-config: ''
 
 - defaults:
     name: verifier-template-bazel
