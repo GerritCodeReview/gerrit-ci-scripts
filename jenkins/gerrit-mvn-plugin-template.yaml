@@ -47,3 +47,31 @@
       - archive:
           artifacts: '**/target/{repo}*.jar*,**/target/{repo}*.json'
           follow-symlinks: true
+
+
+- defaults:
+    name: verifier-template-mvn
+    node: server
+    days-to-keep: 90
+    number-to-keep: 500
+    prune-dead-branches: true
+    periodic-folder-trigger: 10m
+
+- job-template:
+    name: 'plugin-{name}-verifier'
+    description: 'Plugin {name} change verification build'
+    defaults: verifier-template-mvn
+    project-type: multibranch
+    scm:
+      - gerrit:
+          url: https://gerrit-review.googlesource.com/a/plugins/{name}
+          credentials-id: gerrit.googlesource.com
+          refspecs:
+            - '+refs/heads/*:refs/remotes/origin/*'
+          filter-checks:
+            query-operator: 'SCHEME'
+            query-string: 'gerritforge'
+          property-strategies:
+            all-branches:
+              - suppress-scm-triggering: false
+              - pipeline-branch-durability-override: max-survivability
