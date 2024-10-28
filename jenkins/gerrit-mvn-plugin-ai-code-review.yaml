@@ -1,10 +1,13 @@
 - project:
     name: ai-code-review-mvn
     repo: ai-code-review
-    branch:
-      - master
-      - stable-3.9
-      - stable-3.10
-      - stable-3.11
     jobs:
-      - 'plugin-{repo}-mvn-{branch}'
+      - 'plugin-{repo}-mvn-{branch}':
+          branch:
+            - master
+            - stable-3.9
+            - stable-3.10
+            - stable-3.11
+      - 'plugin-{name}-verifier'
+          branch:
+            - master
