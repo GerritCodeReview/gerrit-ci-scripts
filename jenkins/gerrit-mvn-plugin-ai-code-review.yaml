@@ -1,10 +1,22 @@
 - project:
     name: ai-code-review-mvn
     repo: ai-code-review
+<<<<<<< PATCH SET (930db2 Maven Plugin Verifier Job.)
+||||||| BASE
+    branch:
+      - master
+      - stable-3.8
+=======
     branch:
       - master
       - stable-3.9
       - stable-3.10
       - stable-3.11
+>>>>>>> BASE      (31d23f websession-flatfile: add change verification)
     jobs:
-      - 'plugin-{repo}-mvn-{branch}'
+      - 'plugin-{repo}-mvn-{branch}':
+          branch:
+            - master
+            - stable-3.8
+            - stable-3.9
+      - 'plugin-{name}-verifier'
