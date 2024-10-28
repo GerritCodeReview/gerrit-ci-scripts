@@ -1,8 +1,17 @@
 - project:
     name: ai-code-review-mvn
     repo: ai-code-review
+<<<<<<< PATCH SET (0b70e3 Maven Plugin Verifier Job.)
+||||||| BASE
+    branch:
+      - master
+=======
     branch:
       - master
       - stable-3.8
+>>>>>>> BASE      (a1ad8a Update gerrit-release.sh usage example)
     jobs:
-      - 'plugin-{repo}-mvn-{branch}'
+      - 'plugin-{repo}-mvn-{branch}':
+          branch:
+            - master
+      - 'plugin-{name}-verifier'
