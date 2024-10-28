@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "54d38ae1_b2a2b126",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-28T16:52:19Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "6be2df8c_88d6726c",
+      "revId": "80371806b0cf8a204a259c53bc3a5037f05c8d80",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "14a048f1_2d00969b",
@@ -41,6 +59,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "34193a93_63bdcbbc",
+        "filename": "jenkins-docker/agent-mvn/Dockerfile",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-28T16:52:19Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "14a048f1_2d00969b",
+      "range": {
+        "startLine": 13,
+        "startChar": 1,
+        "endLine": 13,
+        "endChar": 15
+      },
+      "revId": "80371806b0cf8a204a259c53bc3a5037f05c8d80",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6af4a1e6_4ca91efc",
@@ -54,6 +96,30 @@
       "writtenOn": "2024-10-09T22:46:00Z",
       "side": 1,
       "message": "Any reason why it is only building against master ?\nWorth building it for all the non EOL branches",
+      "range": {
+        "startLine": 5,
+        "startChar": 5,
+        "endLine": 5,
+        "endChar": 14
+      },
+      "revId": "80371806b0cf8a204a259c53bc3a5037f05c8d80",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f38c620_39dc8199",
+        "filename": "jenkins/gerrit-mvn-plugin-ai-code-review.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-28T16:52:19Z",
+      "side": 1,
+      "message": "It only has a single branch on this project currently - master. \nI assume the branch \"master\" is only used to create the job(s) called \u0027plugin-ai-code-review-mvn-\u003cbranch\u003e\u0027 that you have manually created for me. \n\nThis comment has spawned a seperate discussion around IT building / testing for this component against AI service and different gerrit versions. thanks.",
+      "parentUuid": "6af4a1e6_4ca91efc",
       "range": {
         "startLine": 5,
         "startChar": 5,
