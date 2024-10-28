@@ -128,6 +128,30 @@
       },
       "revId": "80371806b0cf8a204a259c53bc3a5037f05c8d80",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4f4225e_7202fc57",
+        "filename": "jenkins/gerrit-mvn-plugin-ai-code-review.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2024-10-28T17:19:13Z",
+      "side": 1,
+      "message": "\u003e It only has a single branch on this project currently - master.\n\u003e I assume the branch \"master\" is only used to create the job(s) called \u0027plugin-ai-\u003e code-review-mvn-\u003cbranch\u003e\u0027 that you have manually created for me.\n\nTypically, plugins—even with only a `master` branch—can be built for various Gerrit versions, as the APIs in use often remain stable across releases.\n\nThe `master` branch of the plugin generally works with multiple Gerrit stable branches unless there’s a compatibility issue.\n\nIn such cases, a dedicated branch matching the Gerrit stable branch name is created to fix compatibility issues, while the `master` branch continues supporting older Gerrit versions.",
+      "parentUuid": "9f38c620_39dc8199",
+      "range": {
+        "startLine": 5,
+        "startChar": 5,
+        "endLine": 5,
+        "endChar": 14
+      },
+      "revId": "80371806b0cf8a204a259c53bc3a5037f05c8d80",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
