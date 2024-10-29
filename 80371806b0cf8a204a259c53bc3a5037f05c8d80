@@ -152,6 +152,30 @@
       },
       "revId": "80371806b0cf8a204a259c53bc3a5037f05c8d80",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6cb3547_816d53b9",
+        "filename": "jenkins/gerrit-mvn-plugin-ai-code-review.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-29T16:44:05Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "d4f4225e_7202fc57",
+      "range": {
+        "startLine": 5,
+        "startChar": 5,
+        "endLine": 5,
+        "endChar": 14
+      },
+      "revId": "80371806b0cf8a204a259c53bc3a5037f05c8d80",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
