@@ -3,5 +3,6 @@
     repo: ai-code-review
     branch:
       - master
+      - stable-3.7
     jobs:
       - 'plugin-{repo}-mvn-{branch}'
