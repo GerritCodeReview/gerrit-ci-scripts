@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fe39cb5_97cdefd4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-30T18:27:41Z",
+      "side": 1,
+      "message": "A quick an dirty addition of stable-3.7 as its the earlier JDK17 api being targetted.  This is only for one build and will then have stable-3.8, 3.9, 3.10 variants created with the appropriate plugin API refernced to test JDK17 builds, and I will roll stable-3.11 / master onto JDK21 by default.",
+      "revId": "a3f4dbf5f855bb5a8dda6faa26703a1626f63a32",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
