@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e6f7e37_6219b6fb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-31T17:26:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "35fd8cb0_33522362",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 133
+      },
+      "revId": "df198b836a9be587d4d281cc78cdfb186aa439fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a2ae9520_2ed42251",
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "This is how every build works, I don\u0027t think there\u0027s any need to describe anything, you\u0027re not trying to do anything different from the norm from what I gather.\n\nTake I7eff9edf4, I don\u0027t think you need to specify anything else in the commit message.",
       "parentUuid": "bf7bb80a_f9479e59",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 149
+      },
+      "revId": "df198b836a9be587d4d281cc78cdfb186aa439fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7d5738d_ce2617e9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-31T17:26:14Z",
+      "side": 1,
+      "message": "Greatly simplified - thanks for the input.",
+      "parentUuid": "abd5163d_a8358c49",
       "range": {
         "startLine": 11,
         "startChar": 0,
