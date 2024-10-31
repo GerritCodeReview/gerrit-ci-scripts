@@ -45,6 +45,30 @@
       },
       "revId": "df198b836a9be587d4d281cc78cdfb186aa439fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf7bb80a_f9479e59",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-31T16:54:32Z",
+      "side": 1,
+      "message": "No that is not what I am suggesting, it would be that plugin version 1 is built and tested alongside gerrit 3.8, 3.9, 3.10. same as for most of the plugins, almost all of the bazel plugins use this format, which isn\u0027t available currently for the maven based builds. https://gerrit.googlesource.com/gerrit-ci-scripts/+/refs/heads/master/jenkins/gerrit-bazel-plugin-autosubmitter.yaml  how would you describe this build type.",
+      "parentUuid": "a2ae9520_2ed42251",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 149
+      },
+      "revId": "df198b836a9be587d4d281cc78cdfb186aa439fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
