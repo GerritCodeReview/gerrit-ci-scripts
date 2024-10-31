@@ -70,6 +70,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eba79090_62231b58",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-31T16:35:35Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "b01bc3ca_47b79006",
+      "range": {
+        "startLine": 10,
+        "startChar": 98,
+        "endLine": 10,
+        "endChar": 128
+      },
+      "revId": "8dea7f2ac4edde6ad196d0726bff902554ae6607",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "34db5626_964a9719",
@@ -106,6 +130,30 @@
       "writtenOn": "2024-10-31T16:31:39Z",
       "side": 1,
       "message": "BTW, might be me, but I have no clue what you mean with this sentence.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 162
+      },
+      "revId": "8dea7f2ac4edde6ad196d0726bff902554ae6607",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c781a239_4524d928",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-10-31T16:35:35Z",
+      "side": 1,
+      "message": "Matthias is working on getting bazel builds working, which will allow a matrix / inline tree build of repo branch X against gerrit branches Y, Z.  I will update this sentence.",
+      "parentUuid": "d07c1764_e487fb65",
       "range": {
         "startLine": 12,
         "startChar": 0,
