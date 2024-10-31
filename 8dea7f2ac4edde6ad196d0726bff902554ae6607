@@ -49,6 +49,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b01bc3ca_47b79006",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2024-10-31T16:31:39Z",
+      "side": 1,
+      "message": "`So only currently supported builds`, seems more direct, avoid the negation.",
+      "range": {
+        "startLine": 10,
+        "startChar": 98,
+        "endLine": 10,
+        "endChar": 128
+      },
+      "revId": "8dea7f2ac4edde6ad196d0726bff902554ae6607",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "34db5626_964a9719",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -62,6 +85,29 @@
       "message": "nit: wrap long line",
       "range": {
         "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 162
+      },
+      "revId": "8dea7f2ac4edde6ad196d0726bff902554ae6607",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d07c1764_e487fb65",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2024-10-31T16:31:39Z",
+      "side": 1,
+      "message": "BTW, might be me, but I have no clue what you mean with this sentence.",
+      "range": {
+        "startLine": 12,
         "startChar": 0,
         "endLine": 12,
         "endChar": 162
