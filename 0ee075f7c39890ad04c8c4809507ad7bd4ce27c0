@@ -16,6 +16,24 @@
       "message": "should u create a change for globalref-db?",
       "revId": "0ee075f7c39890ad04c8c4809507ad7bd4ce27c0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5243acab_3ac5e17d",
+        "filename": "jenkins/gerrit-bazel-module-global-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-11-04T14:08:00Z",
+      "side": 1,
+      "message": "Is in the chain already and building on the CI.",
+      "parentUuid": "0c93539f_854b1adb",
+      "revId": "0ee075f7c39890ad04c8c4809507ad7bd4ce27c0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
