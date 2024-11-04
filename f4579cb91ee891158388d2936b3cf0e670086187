@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91724427_0aad8a5c",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-11-04T22:49:39Z",
+      "side": 1,
+      "message": "This is fine for now; however, we must also contribute a fix in Gerrit upstream to allow to pass a configuration.",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 98
+      },
+      "revId": "f4579cb91ee891158388d2936b3cf0e670086187",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
