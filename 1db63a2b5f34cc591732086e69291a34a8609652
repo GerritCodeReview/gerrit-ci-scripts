@@ -16,6 +16,23 @@
       "message": "Verified: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.11/job/plugin-javamelody-bazel-master-stable-3.11/",
       "revId": "1db63a2b5f34cc591732086e69291a34a8609652",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa031cc2_34dc0356",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1161425
+      },
+      "writtenOn": "2024-11-04T17:04:40Z",
+      "side": 1,
+      "message": "verified https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.11/job/plugin-javamelody-bazel-master-stable-3.11/1/",
+      "revId": "1db63a2b5f34cc591732086e69291a34a8609652",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
