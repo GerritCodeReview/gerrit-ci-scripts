@@ -11,6 +11,7 @@
           targets: "plugins/{name}:{name}"
           branch:
             - master
+            - stable-3.11
             - stable-3.10
             - stable-3.9
           extra-modules: 'global-refdb'
