@@ -11,7 +11,7 @@ then
   echo "       next-version Next SNAPSHOT version after release"
   echo "       test-migration-version Test migration from an earlier Gerrit version"
   echo ""
-  echo "Example: $0 stable-2.16 2.16.7 2.16.8-SNAPSHOT"
+  echo "Example: $0 stable-3.10 3.10.2 3.10.3-SNAPSHOT 3.9.6"
   exit 1
 fi
 
