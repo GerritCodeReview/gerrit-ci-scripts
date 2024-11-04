@@ -20,6 +20,18 @@ export version=$2
 export nextversion=$3
 export migrationversion=$4
 
+bazel_config=""
+if [ "$branch" == "stable-3.11" ]; then
+  bazel_config="--config=java21"
+fi
+
+generate_and_run_api() {
+  target=$1
+  bazelisk build $bazel_config //tools/maven:gen_"$target"
+  sed -i "s/bazel_cmd build /bazel_cmd build $bazel_config /" ./bazel-bin/tools/maven/"$target".sh
+  ./bazel-bin/tools/maven/"$target".sh
+}
+
 if [ -d gerrit ]
 then
   rm -Rf gerrit
@@ -56,8 +68,8 @@ git push origin HEAD:refs/for/"$branch"
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
 
-bazelisk build release Documentation:searchfree
-./tools/maven/api.sh install
+bazelisk build $bazel_config release Documentation:searchfree
+generate_and_run_api "api_install"
 
 echo -n "Checking Gerrit version ... "
 
@@ -82,8 +94,8 @@ fi
 
 echo "Publishing Gerrit WAR and APIs to Maven Central ..."
 export VERBOSE=1
-./tools/maven/api.sh war_deploy
-./tools/maven/api.sh deploy
+generate_and_run_api "war_deploy"
+generate_and_run_api "api_deploy"
 
 echo "Download the artifacts from SonaType staging repository at https://oss.sonatype.org"
 echo "logging in using your credentials"
