@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8c247c1_cfb53898",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1161425
+      },
+      "writtenOn": "2024-11-04T17:18:07Z",
+      "side": 1,
+      "message": "Verified: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.11/job/plugin-javamelody-bazel-master-stable-3.11/1/",
+      "revId": "eced4c1fd714425f73b1de18d73723ea9a42b525",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
