@@ -1,6 +1,15 @@
 #!/bin/bash -e
 
-. set-java.sh --branch "{branch}"
+# This is an optional workaround to allow the override of the java version used.
+# This will impact maven based builds which rely upon the JAVA_HOME specified to be
+# matching the compilr version information.
+# Note:  This does not impact the bazel toolchain in any way.
+if [[ "{JAVA_VERSION}" != "" ]]
+then
+  . set-java.sh "{JAVA_VERSION}" --branch "{branch}"
+else
+  . set-java.sh --branch "{branch}"
+fi
 
 git checkout -f -b gerrit-master gerrit/{branch}
 git submodule update --init
