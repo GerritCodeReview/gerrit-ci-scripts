@@ -96,6 +96,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb746d17_0db2d2f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2024-11-06T16:42:08Z",
+      "side": 1,
+      "message": "Because, we may still wish to fix the stable-3.8 to JDK11, depending on whether there is a need for JDK11 support still, as such I dont want to revert that current branch ( just yet anyway ).   So it shouldn\u0027t block this change.",
+      "parentUuid": "fd2cc9a4_43457ed8",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "bbd41646049440a5a4aeb1739856264246142954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "9502ab5f_6e36d6cf",
