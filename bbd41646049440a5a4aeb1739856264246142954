@@ -72,6 +72,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd2cc9a4_43457ed8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2024-11-06T16:39:48Z",
+      "side": 1,
+      "message": "Why not raise a change to revert the previous commit, where you state that 3.8, as a matter of fact, doesn\u0027t build with java 17, and then add a new commit for 3.9?",
+      "parentUuid": "223e7895_fa9258a5",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "bbd41646049440a5a4aeb1739856264246142954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "9502ab5f_6e36d6cf",
