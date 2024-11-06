@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1e151b8_694c0036",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2024-11-06T16:47:41Z",
+      "side": 1,
+      "message": "We really shouldn\u0027t do this, stuff could start breaking in really random ways. If a plugin is needed for a specific Gerrit version it should be built on the same JDK version.",
+      "revId": "d89bb46a2611560068a2d78b9271bca9edbb8e8f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
