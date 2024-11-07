@@ -24,9 +24,16 @@ bazelisk version
 # fresh clone from the remote Git repository
 bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
 
+COMMON_RBE_BAZEL_OPTS="--jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
 if [[ "$MODE" == *"rbe"* ]]
 then
-  bazelisk build --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY plugins:core release api
+  if [[ "$TARGET_BRANCH" == "stable-3.11" ]]
+  then
+    bazelisk build --config=remote21_bb "$COMMON_RBE_BAZEL_OPTS" plugins:core release api
+  else
+    # Default config for other branches
+    bazelisk build --config=remote_bb "$COMMON_RBE_BAZEL_OPTS" plugins:core release api
+  fi
 elif [[ "$MODE" == *"polygerrit"* ]]
 then
   echo "Skipping building eclipse and maven"

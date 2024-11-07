@@ -7,10 +7,16 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
+RBE_BAZEL_OPTS="$BAZEL_OPTS --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
+RBE_TAG_FILTER="-flaky,elastic,no_rbe"
 case $TARGET_BRANCH$MODE in
-  masterrbe|stable-3.8rbe|stable-3.9rbe|stable-3.10rbe|stable-3.11rbe)
-    TEST_TAG_FILTER="-flaky,-elastic,-no_rbe"
-    BAZEL_OPTS="$BAZEL_OPTS --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
+  masterrbe|stable-3.8rbe|stable-3.9rbe|stable-3.10rbe)
+    TEST_TAG_FILTER="$RBE_TAG_FILTER"
+    BAZEL_OPTS="$RBE_BAZEL_OPTS --config=remote_bb"
+    ;;
+  stable-3.11rbe)
+    TEST_TAG_FILTER="$RBE_TAG_FILTER"
+    BAZEL_OPTS="$RBE_BAZEL_OPTS --config=remote21_bb"
     ;;
   masternotedb|stable-3.8notedb|stable-3.9notedb|stable-3.10notedb|stable-3.11notedb)
     TEST_TAG_FILTER="-flaky,elastic,no_rbe"
