@@ -70,6 +70,30 @@
       },
       "revId": "f4579cb91ee891158388d2936b3cf0e670086187",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54d66e3a_e459331a",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-11-07T10:25:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4f61c36d_de83836d",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 98
+      },
+      "revId": "f4579cb91ee891158388d2936b3cf0e670086187",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
