@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e897b35_2f37eee2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-11-07T22:16:26Z",
+      "side": 1,
+      "message": "We do not want to validate incoming changes on BB with Java 21 yet: we must use Java 17 still as the code must be compatible with a full Java 17 build.",
+      "revId": "3e78076c4f5c917e4045cfa9f1db825cab9eab58",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
