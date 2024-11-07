@@ -51,7 +51,13 @@ else
     done
   fi
 
-  bazelisk build plugins:core release api
-  tools/maven/api.sh install
+  bazel_config=""
+  if [ "$TARGET_BRANCH" == "stable-3.11" ]; then
+    echo -e "Set bazel_config to java21"
+    bazel_config="--config=java21"
+  fi
+
+  bazelisk build "$bazel_config" plugins:core release api
+  tools/maven/api.sh install "$bazel_config"
   tools/eclipse/project.py --bazel bazelisk
 fi

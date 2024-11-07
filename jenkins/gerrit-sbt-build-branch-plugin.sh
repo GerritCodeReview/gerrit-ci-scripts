@@ -8,8 +8,15 @@ bazelisk version
 git checkout -f -b gerrit-master gerrit/{gerrit-branch}
 git submodule update --init
 git fetch --tags origin
-bazelisk build api
-./tools/maven/api.sh install
+
+bazel_config=""
+if [ {branch} == "stable-3.11" ]; then
+  echo -e "Set bazel_config to java21"
+  bazel_config="--config=java21"
+fi
+
+bazelisk build "$bazel_config" api
+./tools/maven/api.sh install "$bazel_config"
 
 git checkout -f origin/{branch}
 sbt -no-colors compile test assembly
