@@ -16,6 +16,24 @@
       "message": "We do not want to validate incoming changes on BB with Java 21 yet: we must use Java 17 still as the code must be compatible with a full Java 17 build.",
       "revId": "3e78076c4f5c917e4045cfa9f1db825cab9eab58",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9dcf8ab_0711dbbd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-11-08T09:02:25Z",
+      "side": 1,
+      "message": "I am confused because this change does not affect remote_BB, just local builds.\n\nIsn\u0027t `jenkins/gerrit-bazel-build.sh`, used to build artifacts, which should be on java21 for stable-3.11?\n\nI probably misunderstood something quite big here, perhaps a f2f catch up would help me get in the right direction",
+      "parentUuid": "3e897b35_2f37eee2",
+      "revId": "3e78076c4f5c917e4045cfa9f1db825cab9eab58",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
