@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e57e09c6_4ddd7f47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-11-08T15:58:57Z",
+      "side": 1,
+      "message": "Verified with [1].\nGenerated classes are for java 21 (major version 65):\n\nSome examples:\n```\n./com/googlesource/gerrit/plugins/replication/pull/SourceConfigParser.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/OnStartStop.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/SourcesFetchPeriodically.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/ReplicationStateListener.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/ReplicationType.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/FetchReplicationMetrics.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/AutoValue_ApplyObjectsCacheKey.class   major version: 65\n```\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.11/job/plugin-pull-replication-bazel-stable-3.11/3/",
+      "revId": "bb4978c6ecf9ff94248cb412da0793bea5405e5b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
