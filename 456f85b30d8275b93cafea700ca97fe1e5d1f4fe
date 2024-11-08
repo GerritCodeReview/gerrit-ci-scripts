@@ -16,6 +16,24 @@
       "message": "We do not want to validate incoming changes on BB with Java 21 yet: we must use Java 17 still as the code must be compatible with a full Java 17 build.",
       "revId": "456f85b30d8275b93cafea700ca97fe1e5d1f4fe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f5a359b_067b5172",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-11-08T08:58:41Z",
+      "side": 1,
+      "message": "Are you referring just to the validation bit, or also the building?\nSince 3.11 is shipped on java21 [1], doesn\u0027t this entail modifying the `gerrit-bazel-build.sh`?\n\n[1] https://www.gerritcodereview.com/3.11.html#java-21",
+      "parentUuid": "0fef0c2d_f6b84b0c",
+      "revId": "456f85b30d8275b93cafea700ca97fe1e5d1f4fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
