@@ -60,6 +60,12 @@ then
   bash -c "{setup}"
 fi
 
+if [ {branch} == "stable-3.11" ]; then
+  BAZEL_OPTS=" $BAZEL_OPTS--config=java21"
+  echo -e "Build stable-3.11 on java21. BAZEL_OPTS = $BAZEL_OPTS"
+fi
+
+echo -e "Building targets $TARGETS with BAZEL_OPTS = $BAZEL_OPTS"
 bazelisk build $BAZEL_OPTS $TARGETS
 bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
 
