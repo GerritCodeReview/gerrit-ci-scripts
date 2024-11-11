@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1e8a9aa_41ef7b69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-11-11T08:38:52Z",
+      "side": 1,
+      "message": "Verified with [1].\n\nThe `artifacts` was build for java21 (major version 65), some classes here below:\n\n```\n./com/googlesource/gerrit/plugins/replication/pull/event/EventsBrokerMessageConsumer.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/client/FetchApiClient.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/client/SourceHttpClient$Factory.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/client/SourceHttpClient.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/client/HttpResult.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/client/FetchRestApiClient.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/client/HttpClient.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/client/FetchApiClient$Factory.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/client/HttpResultUtils.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/FetchOne$2.class   major version: 65\n./com/googlesource/gerrit/plugins/replication/pull/FetchReplicationScheduledEvent.class   major version: 65\n```\n\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-master/job/plugin-pull-replication-bazel-master/18/",
+      "revId": "28c88d4bce1be30ece03f1c12b7a2f67e8651a2b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
