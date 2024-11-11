@@ -33,6 +33,23 @@
       "message": "Ow",
       "revId": "c5dc73d3950b7b8bc40de535a282fa690b6a35b8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d6499d4_d751ba61",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2024-11-11T14:17:08Z",
+      "side": 1,
+      "message": "Tested locally:\n```\n\u003e cat Dockerfile\nFROM gerritforge/gerrit-ci-agent-bazel:debian-bullseye-latest\n\n# SBT Setup\nRUN apt-get update --allow-releaseinfo-change \u0026\u0026 \\\n    apt-get -y install apt-transport-https \u0026\u0026 \\\n    echo \"deb https://repo.scala-sbt.org/scalasbt/debian all main\" | tee /etc/apt/sources.list.d/sbt.list \u0026\u0026 \\\n    echo \"deb https://repo.scala-sbt.org/scalasbt/debian /\" | tee /etc/apt/sources.list.d/sbt_old.list \u0026\u0026 \\\n    curl -sL \"https://keyserver.ubuntu.com/pks/lookup?op\u003dget\u0026search\u003d0x2EE0EA64E40A89B84B2DF73499E82A75642AC823\" | apt-key add \u0026\u0026 \\\n    apt-get update --allow-releaseinfo-change \u0026\u0026 \\\n    apt-get -y install --no-install-recommends sbt \u0026\u0026 \\\n    rm -rf /etc/apt/sources.list.d/* \u0026\u0026 \\\n    rm -rf /var/lib/apt/lists/* \u0026\u0026 \\\n    cd /tmp \u0026\u0026 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz \u0026\u0026 \\\n    tar -xzf OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz \u0026\u0026 \\\n    mv jdk8u382-b05 /usr/lib/jvm/java-8-openjdk-amd64\n\nUSER root\n\n\u003e docker build -t test .\n\n[+] Building 29.1s (7/7) FINISHED                                                                               docker:desktop-linux\n \u003d\u003e [internal] load build definition from Dockerfile                                                                            0.3s\n \u003d\u003e \u003d\u003e transferring dockerfile: 1.07kB                                                                                          0.0s\n \u003d\u003e [internal] load metadata for docker.io/gerritforge/gerrit-ci-agent-bazel:debian-bullseye-latest                             0.9s\n \u003d\u003e [auth] gerritforge/gerrit-ci-agent-bazel:pull token for registry-1.docker.io                                                0.0s\n \u003d\u003e [internal] load .dockerignore                                                                                               0.0s\n \u003d\u003e \u003d\u003e transferring context: 2B                                                                                                 0.0s\n \u003d\u003e [1/2] FROM docker.io/gerritforge/gerrit-ci-agent-bazel:debian-bullseye-latest@sha256:887bf70f29ec1a2dbd98621893a60c80f81a7  0.2s\n \u003d\u003e \u003d\u003e resolve docker.io/gerritforge/gerrit-ci-agent-bazel:debian-bullseye-latest@sha256:887bf70f29ec1a2dbd98621893a60c80f81a7  0.0s\n \u003d\u003e [2/2] RUN apt-get update --allow-releaseinfo-change \u0026\u0026     apt-get -y install apt-transport-https \u0026\u0026     echo \"deb https:  27.3s\n \u003d\u003e exporting to image                                                                                                          0.4s\n \u003d\u003e \u003d\u003e exporting layers                                                                                                         0.4s\n \u003d\u003e \u003d\u003e writing image sha256:ec5d3f9b581173ca1ac3bd1cb334e1d0b7572a61ca72748d25c584c76f584222                                    0.0s\n \u003d\u003e \u003d\u003e naming to docker.io/library/test                                                                                         0.0s\n\nWhat\u0027s Next?\n  View a summary of image vulnerabilities and recommendations → docker scout quickview\n  \n\u003e docker run --entrypoint\u003dbash -it test\nWARNING: The requested image\u0027s platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested\nroot@b44cda69a24d:/# . set-java.sh 8\nJava set to: /usr/lib/jvm/java-8-openjdk-amd64/bin/java\nroot@b44cda69a24d:/# java -version\nopenjdk version \"1.8.0_382\"\nOpenJDK Runtime Environment (Temurin)(build 1.8.0_382-b05)\nOpenJDK 64-Bit Server VM (Temurin)(build 25.382-b05, mixed mode)\nroot@b44cda69a24d:/#\n\n```",
+      "revId": "c5dc73d3950b7b8bc40de535a282fa690b6a35b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
