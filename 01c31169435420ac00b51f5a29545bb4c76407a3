@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eec3ba58_f175150d",
+        "filename": "jenkins/gerrit-codestyle-gjf.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2024-11-18T14:48:22Z",
+      "side": 1,
+      "message": "I guess you probably want to check if gjf.sh exists, if not use setup_gfj. Just for some backwords compat until the other change is merged.\n\nSame for below.",
+      "revId": "01c31169435420ac00b51f5a29545bb4c76407a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
