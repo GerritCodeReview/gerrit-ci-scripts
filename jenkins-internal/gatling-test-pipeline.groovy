@@ -1,8 +1,8 @@
 def accountCookie = ''
 def xsrfToken = ''
 def epochTime = new Date().getTime()
-def DEFAULT_GERRIT_VERSION = '3.10'
-def DEFAULT_GERRIT_PATCH = '0-rc0'
+def DEFAULT_GERRIT_VERSION = '3.11'
+def DEFAULT_GERRIT_PATCH = '0-rc3'
 
 pipeline {
         agent { label 'aws' }
