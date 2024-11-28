@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64cad961_d6674058",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-11-28T16:44:32Z",
+      "side": 1,
+      "message": "Unfortunately tests fail, they need to be adjusted [1]\n\n[1] \nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.11/job/plugin-ghs-actions-executor-gh-bazel-master-stable-3.11/1/console",
+      "revId": "8de8e429a25f4028bf78ce7c940999645c1aeac8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
