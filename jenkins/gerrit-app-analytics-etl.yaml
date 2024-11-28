@@ -2,7 +2,7 @@
     name: 'app-{name}-sbt-{branch}'
     description: 'App {name} {branch} branch build with Sbt'
     node: sbt
-    targets: compile test assembly
+    targets: compile test assembly -Delasticsearch-spark-20-version=8.15.0
     wrappers:
       - timeout:
           timeout: 30
