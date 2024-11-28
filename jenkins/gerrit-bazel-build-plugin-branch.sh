@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-. set-java.sh --branch "{branch}"
+. set-java.sh --branch "{gerrit-branch}"
 
 if [ -n "{repo}" ]; then
   SRC_DIR={repo}
@@ -60,6 +60,12 @@ then
 fi
 
 bazelisk version
+
+if [ "{gerrit-branch}" == "stable-3.11" ]; then
+  BAZEL_OPTS="$BAZEL_OPTS --config=java21"
+  echo -e "Build against Gerrit stable-3.11 on java21. BAZEL_OPTS = $BAZEL_OPTS"
+fi
+
 bazelisk build $BAZEL_OPTS $TARGETS
 
 BAZEL_OPTS="$BAZEL_OPTS --flaky_test_attempts 3 \
