@@ -16,6 +16,29 @@
       "message": "Bump :)",
       "revId": "d14e1e11930f6f47f97b6f1e7613087361f39e78",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69e9116a_72ced41a",
+        "filename": "jenkins/gerrit-bazel-plugin-project-group-structure.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2024-12-04T17:36:44Z",
+      "side": 1,
+      "message": "nit: this isn\u0027t a list, can it be put directly at L5?",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "d14e1e11930f6f47f97b6f1e7613087361f39e78",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
