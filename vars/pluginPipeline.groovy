@@ -72,7 +72,7 @@ def call(Map parm = [:]) {
                     gerritCheck (checks: ["${formatCheck}": 'RUNNING'], url: "${env.BUILD_URL}console")
                     script {
                       if (gjfVersion != '1.7') {
-                        sh 'git clone https://gerrit.googlesource.com/gerrit gerrit-tools'
+                        sh "git clone -b ${env.GERRIT_BRANCH} https://gerrit.googlesource.com/gerrit gerrit-tools"
                         dir ('gerrit-tools') {
                           sh "./tools/setup_gjf.sh ${gjfVersion}"
                           sh "mv ./tools/format/google-java-format-${gjfVersion} ~/format/."
