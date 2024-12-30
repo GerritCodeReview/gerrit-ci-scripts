@@ -38,7 +38,7 @@ def call(Map parm = [:]) {
     def extraModules = parm.extraModules ?: []
     def pluginScmBaseUrl = "https://gerrit.googlesource.com/a"
     def pluginScmUrl = "${pluginScmBaseUrl}/${env.GERRIT_PROJECT}"
-    def gjfVersion = parm.gjfVersion ?: '1.7'
+    def gjfVersion = parm.gjfVersion ?: '1.24.0'
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
 
@@ -72,7 +72,7 @@ def call(Map parm = [:]) {
                     gerritCheck (checks: ["${formatCheck}": 'RUNNING'], url: "${env.BUILD_URL}console")
                     script {
                       if (gjfVersion != '1.7') {
-                        sh 'git clone https://gerrit.googlesource.com/gerrit gerrit-tools'
+                        sh "git clone -b ${env.GERRIT_BRANCH} https://gerrit.googlesource.com/gerrit gerrit-tools"
                         dir ('gerrit-tools') {
                           sh "./tools/setup_gjf.sh ${gjfVersion}"
                           sh "mv ./tools/format/google-java-format-${gjfVersion} ~/format/."
