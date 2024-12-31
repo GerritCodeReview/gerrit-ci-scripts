@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96c0798e_1b5ec628",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2024-12-31T16:46:04Z",
+      "side": 1,
+      "message": "Verified:\n- https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.8/job/module-virtualhost-bazel-stable-3.8/2/\n- https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.9/job/module-virtualhost-bazel-stable-3.9/1/\n- https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.10/job/module-virtualhost-bazel-stable-3.10/1/\n- https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.11/job/module-virtualhost-bazel-master-stable-3.11/1/\n- https://gerrit-ci.gerritforge.com/view/Plugins-master/job/module-virtualhost-bazel-master/1/",
+      "revId": "03d9c4e7a026da45d7d6159a7ac8623ad5c4f20c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
