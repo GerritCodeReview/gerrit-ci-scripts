@@ -5,6 +5,9 @@
           branch:
             - master
           gerrit-branch:
+            - stable-3.11
+      - 'module-{name}-bazel-{branch}':
+          branch:
             - master
             - stable-3.10
             - stable-3.9
