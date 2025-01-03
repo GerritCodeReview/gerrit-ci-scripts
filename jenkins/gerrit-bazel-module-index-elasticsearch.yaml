@@ -5,5 +5,4 @@
           branch:
             - master
             - stable-3.9
-            - stable-3.8
       - 'module-{name}-verifier'

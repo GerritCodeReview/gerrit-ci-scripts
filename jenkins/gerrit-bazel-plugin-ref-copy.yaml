@@ -6,4 +6,3 @@
             - main
           gerrit-branch:
             - master
-            - stable-3.8

@@ -8,5 +8,4 @@
             - stable-3.11
             - stable-3.10
             - stable-3.9
-            - stable-3.8
       - plugin-{name}-verifier

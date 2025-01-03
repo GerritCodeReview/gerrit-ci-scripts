@@ -2,12 +2,6 @@
     name: zookeeper-refdb
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          targets: "plugins/{name}:{name} plugins/{name}:{name}-zk-3.5"
-          branch:
-            - stable-3.8
-          extra-modules: 'global-refdb'
-          extra-artifacts: 'bazel-bin/plugins/{name}/{name}-zk-3.5.jar'
-      - 'plugin-{name}-bazel-{branch}':
           targets: "plugins/{name}:{name}"
           branch:
             - master

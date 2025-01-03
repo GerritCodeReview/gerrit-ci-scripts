@@ -5,10 +5,4 @@
           extra-modules: 'events-broker'
           branch:
             - master
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
-          extra-modules: 'events-broker'
-          branch:
-            - master
-          gerrit-branch:
-            - stable-3.8
       - 'plugin-{name}-verifier'
