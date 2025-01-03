@@ -1,8 +1,6 @@
 - project:
     name: go-import
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
-            - master
-          gerrit-branch:
             - master
