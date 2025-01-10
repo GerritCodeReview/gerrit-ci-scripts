@@ -6,6 +6,6 @@
             - master
           gerrit-branch:
             - master
-            - gerrit-3.9
-            - gerrit-3.10
-            - gerrit-3.11
+            - stable-3.9
+            - stable-3.10
+            - stable-3.11
