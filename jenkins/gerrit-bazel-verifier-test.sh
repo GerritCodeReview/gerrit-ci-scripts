@@ -9,7 +9,7 @@ echo '----------------------------------------------'
 
 case $TARGET_BRANCH$MODE in
   masterrbe|stable-3.9rbe|stable-3.10rbe|stable-3.11rbe)
-    TEST_TAG_FILTER="-flaky,-elastic,-no_rbe"
+    TEST_TAG_FILTER="-flaky,-elastic,-no_rbe,-lucene"
     BAZEL_OPTS="$BAZEL_OPTS --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
     ;;
   masternotedb|stable-3.9notedb|stable-3.10notedb|stable-3.11notedb)
@@ -39,6 +39,12 @@ fi
 if [[ "$MODE" == *"rbe"* ]]
 then
   bazelisk test $BAZEL_OPTS //...
+  export BAZEL_OPTS_WITH_LUCENE="$BAZEL_OPTS \
+                 --flaky_test_attempts 3 \
+                 --test_timeout 3600 \
+                 --test_env GERRIT_INDEX_TYPE=lucene \
+                 --test_tag_filters=lucene"
+  bazelisk test $BAZEL_OPTS_WITH_LUCENE //...
 fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
