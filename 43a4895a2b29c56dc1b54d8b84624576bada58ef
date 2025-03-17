@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3661ebf_61247e73",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1149185
+      },
+      "writtenOn": "2025-03-17T20:33:20Z",
+      "side": 1,
+      "message": "I need to address when is 1.7",
+      "revId": "43a4895a2b29c56dc1b54d8b84624576bada58ef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
