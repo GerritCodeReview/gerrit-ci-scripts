@@ -33,6 +33,24 @@
       "message": "It does not build: \n\n```\n6.517 The following packages have unmet dependencies:\n6.576  libgmp-dev : Depends: libgmp10 (\u003d 2:6.2.1+dfsg1-1.1) but 2:6.3.0+dfsg-2+b1 is to be installed\n6.579 E: Unable to correct problems, you have held broken packages.\n------\nDockerfile:3\n--------------------\n   2 |\n   3 | \u003e\u003e\u003e RUN apt-get update --allow-releaseinfo-change \u0026\u0026 \\\n   4 | \u003e\u003e\u003e     apt-get install -y ruby-full \u0026\u0026 \\\n   5 | \u003e\u003e\u003e     apt-get clean \u0026\u0026 \\\n   6 | \u003e\u003e\u003e     rm -Rf /var/lib/apt/lists\n   7 |\n--------------------\nERROR: failed to solve: process \"/bin/sh -c apt-get update --allow-releaseinfo-change \u0026\u0026     apt-get install -y ruby-full \u0026\u0026     apt-get clean \u0026\u0026     rm -Rf /var/lib/apt/lists\" did not complete successfully: exit code: 100\n```",
       "revId": "ed6b3839ca9634e7c264b6d6047ca19d3db2cb0a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d9f5323_97fdf26f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-03-20T12:59:00Z",
+      "side": 1,
+      "message": "Hmm, i\u0027m not sure how you fix that or why that\u0027s happening. 2:6.2.1+dfsg1-1.1 is in bookworm. 2:6.3.0+dfsg-2+b1 is newer but trixie has 2:6.3.0+dfsg-3.\n\nAny ideas?",
+      "parentUuid": "02ed9db4_2ae1e057",
+      "revId": "ed6b3839ca9634e7c264b6d6047ca19d3db2cb0a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
