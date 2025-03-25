@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "437c0e52_d43e0ab1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2025-03-25T15:24:42Z",
+      "side": 1,
+      "message": "requested in this mail thread https://groups.google.com/g/repo-discuss/c/S5rcdiuXSVQ",
+      "revId": "0cd96d00aa183b92dbf0a02750d81ead3d115ba6",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
