@@ -57,6 +57,30 @@
       },
       "revId": "3a5c3db8701e20e3fb40a39d10c2cace14c2236f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da94b286_c1668841",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-03-27T11:55:09Z",
+      "side": 1,
+      "message": "@thomasmulhall410@yahoo.com this is the breakage you\u0027ve found in recent build validation on stable branches for RBE.",
+      "parentUuid": "4cfa5382_90e73016",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 45
+      },
+      "revId": "3a5c3db8701e20e3fb40a39d10c2cace14c2236f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
