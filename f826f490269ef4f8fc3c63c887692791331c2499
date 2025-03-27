@@ -33,6 +33,24 @@
       "message": "Ah does this fix https://issues.gerritcodereview.com/issues/406271684\n\nSince stable-3.11 now passes again",
       "revId": "f826f490269ef4f8fc3c63c887692791331c2499",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc8691ac_be07ef69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-03-27T13:33:53Z",
+      "side": 1,
+      "message": "(posting that i just saw lucas comment on another change, sorry for the spam. Closing the issue as resolved, thanks luca!)",
+      "parentUuid": "8e127e1a_775490cc",
+      "revId": "f826f490269ef4f8fc3c63c887692791331c2499",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
