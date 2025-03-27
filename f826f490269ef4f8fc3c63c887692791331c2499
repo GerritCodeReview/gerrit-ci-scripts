@@ -16,6 +16,23 @@
       "message": "stable-3.10 changes are now validating as expected with this change.",
       "revId": "f826f490269ef4f8fc3c63c887692791331c2499",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e127e1a_775490cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-03-27T13:29:47Z",
+      "side": 1,
+      "message": "Ah does this fix https://issues.gerritcodereview.com/issues/406271684\n\nSince stable-3.11 now passes again",
+      "revId": "f826f490269ef4f8fc3c63c887692791331c2499",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
