@@ -44,7 +44,10 @@ then
                  --test_timeout 3600 \
                  --test_env GERRIT_INDEX_TYPE=lucene \
                  --test_tag_filters=lucene"
-  bazelisk test $BAZEL_OPTS_WITH_LUCENE //...
+  if git grep lucene | grep BUILD | grep labels
+  then
+    bazelisk test $BAZEL_OPTS_WITH_LUCENE //...
+  fi
 fi
 
 if [[ "$MODE" == *"polygerrit"* ]]
