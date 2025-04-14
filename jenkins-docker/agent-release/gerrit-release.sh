@@ -62,7 +62,7 @@ git tag -f -s -m "v$version" "v$version"
 git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
 
 bazelisk build $bazel_config release Documentation:searchfree
-./tools/maven/api.sh install "$bazel_config"
+./tools/maven/api.sh install $bazel_config
 
 echo -n "Checking Gerrit version ... "
 
@@ -87,8 +87,8 @@ fi
 
 echo "Publishing Gerrit WAR and APIs to Maven Central ..."
 export VERBOSE=1
-./tools/maven/api.sh war_deploy "$bazel_config"
-./tools/maven/api.sh deploy "$bazel_config"
+./tools/maven/api.sh war_deploy $bazel_config
+./tools/maven/api.sh deploy $bazel_config
 
 echo "Download the artifacts from SonaType staging repository at https://oss.sonatype.org"
 echo "logging in using your credentials"
