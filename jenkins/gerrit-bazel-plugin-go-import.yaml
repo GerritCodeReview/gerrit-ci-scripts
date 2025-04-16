@@ -5,4 +5,7 @@
           branch:
             - master
           gerrit-branch:
+            - stabel-3.9
+            - stabel-3.10
+            - stabel-3.11
             - master
