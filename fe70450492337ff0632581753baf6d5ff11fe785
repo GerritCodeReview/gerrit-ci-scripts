@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b05230b_18926951",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010788
+      },
+      "writtenOn": "2025-04-17T11:16:00Z",
+      "side": 1,
+      "message": "@luca.milanesio@gmail.com I guess you were waiting for CI result. I don\u0027t know how that is then deployed?",
+      "revId": "fe70450492337ff0632581753baf6d5ff11fe785",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
