@@ -51,6 +51,23 @@
       "message": "All the builds on stable-3.9, stable-3.10 and stable-3.11 are failing: I\u0027m not sure this change would be helping anyhow in having something working.",
       "revId": "fe70450492337ff0632581753baf6d5ff11fe785",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b85af9bf_59c2da59",
+        "filename": "jenkins/gerrit-bazel-plugin-go-import.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-04-17T12:04:35Z",
+      "side": 1,
+      "message": "Typo and below. It should be `stable-`.",
+      "revId": "fe70450492337ff0632581753baf6d5ff11fe785",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
