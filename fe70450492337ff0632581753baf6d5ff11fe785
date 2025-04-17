@@ -34,6 +34,23 @@
       "parentUuid": "4b05230b_18926951",
       "revId": "fe70450492337ff0632581753baf6d5ff11fe785",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "befbfe07_8fd382ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-04-17T11:31:13Z",
+      "side": 1,
+      "message": "All the builds on stable-3.9, stable-3.10 and stable-3.11 are failing: I\u0027m not sure this change would be helping anyhow in having something working.",
+      "revId": "fe70450492337ff0632581753baf6d5ff11fe785",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
