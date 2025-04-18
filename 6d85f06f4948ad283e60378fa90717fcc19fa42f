@@ -16,6 +16,23 @@
       "message": "git pull https://gerrit.googlesource.com/gerrit-ci-scripts refs/changes/01/464001/1",
       "revId": "6d85f06f4948ad283e60378fa90717fcc19fa42f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2af68558_6f99c9d8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3539947
+      },
+      "writtenOn": "2025-04-18T03:06:20Z",
+      "side": 1,
+      "message": "I461cd20de34b80bf46827399113f50a0f79ed4bf",
+      "revId": "6d85f06f4948ad283e60378fa90717fcc19fa42f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
