@@ -16,6 +16,23 @@
       "message": "When we are thinking of dropping stable-3.9 builds from CI plugins page, just so I can drop it from this plugin list at same time.. Thanks.",
       "revId": "82eddd7b2a06ee8c396769457fe66dde37801948",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bd65d4a_511a1c97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2025-04-29T11:54:24Z",
+      "side": 1,
+      "message": "@trevor.getty@cirata.com have you verified that the builds work?",
+      "revId": "82eddd7b2a06ee8c396769457fe66dde37801948",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
