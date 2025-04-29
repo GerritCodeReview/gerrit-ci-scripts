@@ -4,5 +4,7 @@
     branch:
       - master
       - stable-3.9
+      - stable-3.10
+      - stable-3.11
     jobs:
       - 'plugin-{repo}-mvn-{branch}'
