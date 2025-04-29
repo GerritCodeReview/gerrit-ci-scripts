@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f82df7ea_8c33e085",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-04-29T11:30:46Z",
+      "side": 1,
+      "message": "When we are thinking of dropping stable-3.9 builds from CI plugins page, just so I can drop it from this plugin list at same time.. Thanks.",
+      "revId": "82eddd7b2a06ee8c396769457fe66dde37801948",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
