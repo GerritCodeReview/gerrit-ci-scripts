@@ -33,6 +33,24 @@
       "message": "@trevor.getty@cirata.com have you verified that the builds work?",
       "revId": "82eddd7b2a06ee8c396769457fe66dde37801948",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a88241fa_f04ea4d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1063455
+      },
+      "writtenOn": "2025-05-01T13:07:46Z",
+      "side": 1,
+      "message": "Yes, the I have built them locally.   \nI haven\u0027t verified on CI build yet obviously which is where most of my issues have been. \n\nstable-3.11 was actually directly created from master, and the plugin api moved off the rc version.\n\nstable-3.10, as long as it builds with jdk17 on CI it should be fine, its very similar to the stable-3.9 branch.",
+      "parentUuid": "8bd65d4a_511a1c97",
+      "revId": "82eddd7b2a06ee8c396769457fe66dde37801948",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
