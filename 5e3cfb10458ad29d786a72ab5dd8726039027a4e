@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ffc33c6_0f258cd5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3809502
+      },
+      "writtenOn": "2025-05-20T14:22:14Z",
+      "side": 1,
+      "message": "Replaces change 446912",
+      "revId": "5e3cfb10458ad29d786a72ab5dd8726039027a4e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
