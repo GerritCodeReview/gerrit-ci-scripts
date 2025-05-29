@@ -16,6 +16,23 @@
       "message": "I think https://github.com/GerritCodeReview/gerrit/commit/0cebfb0e9cdac3772989dfd89db2c900fec516af changed it? But idk. We haven\u0027t used karma in years apart for plugins.",
       "revId": "ffc647b93e34556c926131194f9d7ae1c21f8c49",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b77f784_b656d691",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-05-29T21:55:18Z",
+      "side": 1,
+      "message": "Bump :)",
+      "revId": "ffc647b93e34556c926131194f9d7ae1c21f8c49",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
