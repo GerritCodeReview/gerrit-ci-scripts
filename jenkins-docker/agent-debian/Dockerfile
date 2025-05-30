@@ -6,9 +6,20 @@ RUN echo "deb http://http.debian.net/debian/ $DEBIAN_VER contrib" >> /etc/apt/so
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update --allow-releaseinfo-change && apt-get install -y wget software-properties-common
+RUN apt-get update --allow-releaseinfo-change && apt-get install -y wget \
+    software-properties-common apt-transport-https
 
-RUN apt-get install -y default-jdk openjdk-17-jdk
+# Download the Eclipse Adoptium GPG key
+RUN wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | \
+    gpg --dearmor | tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
+
+# Configure the Eclipse Adoptium apt repository
+RUN echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | \
+    tee /etc/apt/sources.list.d/adoptium.list
+
+# Debian 12 does not include the Java 11/21 packages
+# therefore use the Eclipse Adoptium (Temurin) packages
+RUN apt-get update && apt-get install -y temurin-11-jdk temurin-17-jdk temurin-21-jdk
 
 COPY set-java.sh /usr/bin/
 
@@ -36,23 +47,6 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     zip \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/bin/python3 /usr/bin/python
-
-# Debian 12 does not include the Java 11/21 packages
-# therefore get them from the sid distribution and then
-# reset the original package sources
-RUN echo "deb http://deb.debian.org/debian sid main" >> /etc/apt/sources.list
-RUN cp /etc/apt/sources.list /tmp/sources.list.save && \
-    apt-get clean && \
-    apt-get update && \
-    apt-get install -y openjdk-21-jdk-headless
-
-COPY preferences /etc/apt/preferences
-RUN echo "deb http://deb.debian.org/debian unstable main non-free contrib" >> /etc/apt/sources.list && \
-    apt-get update && \
-    apt-get install -y openjdk-11-jdk-headless
-
-RUN mv /tmp/sources.list.save /etc/apt/sources.list && \
-    apt-get update
 
 COPY requirements.txt /tmp/
 RUN pip install --break-system-packages --require-hashes -r /tmp/requirements.txt
