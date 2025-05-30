@@ -1,4 +1,4 @@
-FROM gerritforge/gerrit-ci-agent-python3:bullseye
+FROM gerritforge/gerrit-ci-agent-python3:bookworm
 
 RUN apt-get update --allow-releaseinfo-change && \
     apt-get install -y ruby-full && \
@@ -6,9 +6,9 @@ RUN apt-get update --allow-releaseinfo-change && \
     rm -Rf /var/lib/apt/lists
 
 # The Gemfile.lock in this directory requires bundler version 2.2.5,
-# while 'homepage' (below) requires 1.17.1. Install both - otherwise
+# while 'homepage' (below) requires 2.6.3. Install both - otherwise
 # 'bundle install' fails.
-RUN gem install bundler:2.2.5 bundler:1.17.1
+RUN gem install bundler:2.2.5 bundler:2.6.3
 
 RUN mkdir /app-gem-tmp
 COPY Gemfile /app-gem-tmp/Gemfile
