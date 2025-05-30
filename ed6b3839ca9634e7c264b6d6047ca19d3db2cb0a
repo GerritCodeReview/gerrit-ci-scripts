@@ -69,6 +69,24 @@
       "parentUuid": "7d9f5323_97fdf26f",
       "revId": "ed6b3839ca9634e7c264b6d6047ca19d3db2cb0a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8b48875_8090f930",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2025-05-30T23:57:08Z",
+      "side": 1,
+      "message": "\u003e Oh i guess https://github.com/GerritCodeReview/gerrit-ci-scripts/blob/master/jenkins-docker/agent-debian/Dockerfile#L43 is why?\n\nYes, that was why. Should be fixed with https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/480187 and I confirmed this builds now.",
+      "parentUuid": "3531b5f5_766f3bd7",
+      "revId": "ed6b3839ca9634e7c264b6d6047ca19d3db2cb0a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
