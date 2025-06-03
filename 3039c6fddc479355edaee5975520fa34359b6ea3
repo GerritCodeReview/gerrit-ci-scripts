@@ -50,6 +50,24 @@
       "message": "All the images build successfully for me",
       "revId": "3039c6fddc479355edaee5975520fa34359b6ea3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64d2d760_efb9f459",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-06-03T23:13:13Z",
+      "side": 1,
+      "message": "Have you also checked that the homepage build that is using this image works? (that\u0027s what I\u0027m verifying now, but it takes over 1h to build the homepage).",
+      "parentUuid": "364b7084_4336db0a",
+      "revId": "3039c6fddc479355edaee5975520fa34359b6ea3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
