@@ -68,6 +68,24 @@
       "parentUuid": "364b7084_4336db0a",
       "revId": "3039c6fddc479355edaee5975520fa34359b6ea3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "baff5c69_5422097d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2025-06-03T23:31:07Z",
+      "side": 1,
+      "message": "I didn\u0027t test the firebase steps and I cheated the tools/plugin.py step to iterate over only 2 plugins [1], but otherwise, yes.\n\n[1] `plugin_list \u003d self.api.get(\"/projects/?p\u003dplugins%2f\u0026d\u0026limit\u003d2\")`",
+      "parentUuid": "64d2d760_efb9f459",
+      "revId": "3039c6fddc479355edaee5975520fa34359b6ea3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
