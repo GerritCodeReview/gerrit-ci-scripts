@@ -33,6 +33,24 @@
       "message": "Does not build: \n\n```\n11.14 The following packages have unmet dependencies:\n11.35  libgmp-dev : Depends: libgmp10 (\u003d 2:6.2.1+dfsg1-1.1) but 2:6.3.0+dfsg-2+b1 is to be installed\n```",
       "revId": "33e250d62d6d6fa319647aa95096cd6dd9a78857",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1fb88e5_6c2d450e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2025-06-03T21:58:47Z",
+      "side": 1,
+      "message": "Build PS4 instead :)",
+      "parentUuid": "686382f9_f219b06d",
+      "revId": "33e250d62d6d6fa319647aa95096cd6dd9a78857",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
