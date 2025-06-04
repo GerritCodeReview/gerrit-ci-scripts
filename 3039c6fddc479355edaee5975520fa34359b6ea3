@@ -86,6 +86,23 @@
       "parentUuid": "64d2d760_efb9f459",
       "revId": "3039c6fddc479355edaee5975520fa34359b6ea3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78ac0a12_79e840a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-06-04T19:57:46Z",
+      "side": 1,
+      "message": "Works, we can publish the homepage again !",
+      "revId": "3039c6fddc479355edaee5975520fa34359b6ea3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
