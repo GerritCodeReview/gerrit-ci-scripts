@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a1d0b73_b0eb60ca",
+        "filename": "jenkins/gerrit-bazel-plugin-reviewers.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2025-06-05T07:45:55Z",
+      "side": 1,
+      "message": "Since there are no stable-3.11 or stable-3.12 branches in the reviewers plugin ATM I don\u0027t think this will work.\nIf reveiwers:master is compatible with gerrit:stable-3.11 \u0026 gerrit:stable-3.12 I think you\u0027ll need to do something like:\n\n\n```suggestion\n      - \u0027plugin-{name}-bazel-{branch}-{gerrit-branch}\u0027:\n          branch:\n            - master\n          gerrit-branch:\n            - stable-3.12\n            - stable-3.11\n```",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "7dc747b0b1aca3c963cc434ebd4169c71ebe2719",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
