@@ -52,6 +52,24 @@
       "parentUuid": "39d31f4f_9788a308",
       "revId": "8153248bbeae06daf0b67da2034149b77b65691c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5de58387_f49b5dbf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-06-05T15:39:24Z",
+      "side": 1,
+      "message": "It\u0027s because there\u0027s no branches for stable-3.11/3.12",
+      "parentUuid": "800eb836_2e128be7",
+      "revId": "8153248bbeae06daf0b67da2034149b77b65691c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
