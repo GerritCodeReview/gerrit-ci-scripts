@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f694fb2_8d3eb2f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-06-05T15:02:27Z",
+      "side": 1,
+      "message": "Seems to fail to build https://gerrit-ci.gerritforge.com/job/plugin-rename-project-bazel-stable-3.12/1/ and https://gerrit-ci.gerritforge.com/job/plugin-rename-project-bazel-stable-3.11/1/",
+      "revId": "8153248bbeae06daf0b67da2034149b77b65691c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
