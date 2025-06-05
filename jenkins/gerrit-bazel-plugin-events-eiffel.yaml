@@ -1,8 +1,19 @@
 - project:
     name: events-eiffel
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - "plugin-{name}-bazel-{branch}-{gerrit-branch}":
           extra-modules: 'events-broker'
           branch:
             - master
+<<<<<<< PATCH SET (e214e8b32649c727ab7d37533becb84837f5b0f9 Update plugin-builds for events-eiffel)
+            - stable-3.12
+            - stable-3.11
+            - stable-3.10
+          gerrit-branch:
+            - master
+||||||| BASE      (3039c6fddc479355edaee5975520fa34359b6ea3 Upgrade agent-jekyll to bookworm)
+            - stable-3.9
       - 'plugin-{name}-verifier'
+=======
+      - 'plugin-{name}-verifier'
+>>>>>>> BASE      (1a383f41977d68ae18f981caf7a64c4d5efc697c Allow progressive console output to work without reloads)
