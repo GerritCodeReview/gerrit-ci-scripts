@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "738b1085_7858f438",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4163725
+      },
+      "writtenOn": "2025-06-18T18:53:57Z",
+      "side": 1,
+      "message": "Hello everyone it\u0027s very nice to meet you",
+      "revId": "7afc20f6695580fa07332c4d2fddba0ada11a50d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
