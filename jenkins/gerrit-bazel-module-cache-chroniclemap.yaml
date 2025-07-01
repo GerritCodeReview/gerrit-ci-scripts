@@ -1,6 +1,11 @@
 - project:
     name: cache-chroniclemap
     jobs:
+      - 'module-{name}-bazel-{gerrit-branch}-{branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.12
       - 'module-{name}-bazel-{branch}':
           branch:
             - master
