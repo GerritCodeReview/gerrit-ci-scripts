@@ -5,5 +5,4 @@
           extra-modules: 'events-broker'
           branch:
             - master
-            - stable-3.9
       - 'plugin-{name}-verifier'

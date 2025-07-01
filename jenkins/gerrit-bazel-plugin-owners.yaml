@@ -72,4 +72,3 @@
           branch:
             - master
             - stable-3.10
-            - stable-3.9

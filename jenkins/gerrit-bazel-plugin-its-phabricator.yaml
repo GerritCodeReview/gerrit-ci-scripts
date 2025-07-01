@@ -4,7 +4,6 @@
       - 'plugin-its-{name}-bazel-{branch}':
           branch:
             - master
-            - stable-3.9
       - 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
