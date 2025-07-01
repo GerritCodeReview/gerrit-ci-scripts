@@ -5,6 +5,13 @@
     jobs:
       - 'module-{name}-bazel-{branch}':
           branch:
+<<<<<<< PATCH SET (1c2efbe08e9416c1cf879f942ef991b72861e7fe Build cache-chroniclemap on stable-3.12)
+            - master
+            - stable-3.12
+||||||| BASE      (a3d26d092886d31a33879165bf3afa9987e448cd Remove support for validating changes on Gerrit stable-3.9)
+            - master
+=======
+>>>>>>> BASE      (8a4d129ce4fb954720c0ea1b3f4a33c134fdc612 Build and verify cache-chroniclemap master on GerritHub)
             - stable-3.11
             - stable-3.10
       - 'module-{name}-gh-bazel-{branch}':
