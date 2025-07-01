@@ -5,6 +5,7 @@
     jobs:
       - 'module-{name}-bazel-{branch}':
           branch:
+            - stable-3.12
             - stable-3.11
             - stable-3.10
       - 'module-{name}-gh-bazel-{branch}':
