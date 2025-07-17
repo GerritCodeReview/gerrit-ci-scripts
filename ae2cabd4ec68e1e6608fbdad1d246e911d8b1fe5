@@ -22,6 +22,30 @@
       },
       "revId": "ae2cabd4ec68e1e6608fbdad1d246e911d8b1fe5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fe1d9ed_df4c31c3",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-07-17T20:11:18Z",
+      "side": 1,
+      "message": "I thought about it, but `xmllint` is not installed by default (requires libxml2-utils) and I didn\u0027t want to create an extra dependency to add to the dockerfile.",
+      "parentUuid": "83d815f5_2c21d999",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 139
+      },
+      "revId": "ae2cabd4ec68e1e6608fbdad1d246e911d8b1fe5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
