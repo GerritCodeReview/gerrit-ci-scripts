@@ -20,6 +20,9 @@ export version=$2
 export nextversion=$3
 export migrationversion=$4
 
+MAVEN_REPOSITORY="OSSRH-staging"
+MAVEN_SETTINGS_FILE="$HOME/.m2/settings.xml"
+
 bazel_config=""
 if [ "$branch" == "stable-3.11" ]; then
   bazel_config="--config=java21"
@@ -89,6 +92,28 @@ echo "Publishing Gerrit WAR and APIs to Maven Central ..."
 export VERBOSE=1
 ./tools/maven/api.sh war_deploy $bazel_config
 ./tools/maven/api.sh deploy $bazel_config
+
+echo "Extracting OSSRH credentials..."
+ossrh_user=$(grep -A2 "<id>$MAVEN_REPOSITORY</id>" $MAVEN_SETTINGS_FILE | grep '<username>' | sed -E 's|.*<username>(.*)</username>.*|\1|')
+ossrh_pass=$(grep -A2 "<id>$MAVEN_REPOSITORY</id>" $MAVEN_SETTINGS_FILE | grep '<password>' | sed -E 's|.*<password>(.*)</password>.*|\1|')
+
+if [ -z "$ossrh_user" ] || [ -z "$ossrh_pass" ]; then
+  echo "Failed to extract credentials from $MAVEN_SETTINGS_FILE"
+  exit 3
+fi
+
+bearer_token=$(echo -n "$ossrh_user:$ossrh_pass" | base64)
+
+# Manually upload to Maven Central
+# https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/#post-to-manualuploaddefaultrepositorynamespace
+curl -X POST \
+  'https://ossrh-staging-api.central.sonatype.com/manual/upload/defaultRepository/com.google.gerrit' \
+  -H 'accept: */*' \
+  -H "Authorization: Bearer $bearer_token" \
+  -d "''" || {
+    echo "manual upload endpoint failed. Aborting release."
+    exit 4
+  }
 
 echo "Download the artifacts from SonaType staging repository at https://oss.sonatype.org"
 echo "logging in using your credentials"
