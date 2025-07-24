@@ -1,0 +1,15 @@
+- job:
+    name: "validate-jgit-changes"
+    project-type: pipeline
+    display-name: "Gerrit-bazel-jgit-servlet-4"
+    description: "Builds and tests JGit Gerrit changes targeting servlet-4"
+    disabled: false
+    scm:
+      - git:
+          url: "https://gerrit.googlesource.com/gerrit-ci-scripts"
+          branches:
+            - master
+          credentials-id: gerrit.googlesource.com
+    dsl: !include-raw: gerrit-bazel-jgit-servlet-4-validation.groovy
+    triggers:
+      - timed: "@midnight"
