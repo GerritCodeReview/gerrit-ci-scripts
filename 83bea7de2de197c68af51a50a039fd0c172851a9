@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "adad6aac_9ccec387",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-07-25T14:14:25Z",
+      "side": 1,
+      "message": "I tested the job builds correctly and it is available on gerrit-ci [1].\n\nIt requires poper credentials to run:\nhttps://gerrit-ci.gerritforge.com/job/Gerrit-bazel-jgit-servlet-4/indexing/console\n\n@matthias.sohn@gmail.com do you know if there\u0027s any particular set of credentials we can use for this?\n\n\n[1] https://gerrit-ci.gerritforge.com/job/Gerrit-bazel-jgit-servlet-4",
+      "revId": "83bea7de2de197c68af51a50a039fd0c172851a9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
