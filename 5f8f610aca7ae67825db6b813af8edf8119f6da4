@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4203c4c_2c062168",
+        "filename": "jenkins/gerrit-bazel-jgit-servlet-4-verifier.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-07-31T14:43:41Z",
+      "side": 1,
+      "message": "I am not sure if this can be achieved without having a Jenkinsfile in Jgit:\n\nTo make usage of the `Gerrit Code Review` plugin and validate JGit changes as they are created/updated we need to use a `multi-branch` job. However, `multi-branch` jobs cannot execute arbitrary code. They must have a `Jenkinsfile` in the target repo (i.e. JGit), which we don\u0027t want to do.\n\nTo have control on where the Groovy script comes from, one must configure a `pipeline` job (we can use the `dsl` property), however this has no native understanding of the SCM change being tested (i.e. \nJGit changes) and it does not work with Gerrit Code Review plugin.\n\nAs things stand, I don’t see a clean way to automatically discover and validate JGit changes without placing a Jenkinsfile in the JGit repo.\n\nThoughts @luca.milanesio@gmail.com ?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 26
+      },
+      "revId": "5f8f610aca7ae67825db6b813af8edf8119f6da4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
