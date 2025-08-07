@@ -33,6 +33,24 @@
       "message": "Oh... i think this was done in the wrong order?\n\nShouldn\u0027t these be added to gerrit-branch and instead the plugin built using it\u0027s master bracnh against these gerrit branches?",
       "revId": "1b83fa1032e8eb7df29eda70b3f1c81ca0899186",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69816a24_da502b44",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-08-07T15:30:00Z",
+      "side": 1,
+      "message": "Noticed when seeing https://gerrit-ci.gerritforge.com/job/plugin-events-eiffel-bazel-stable-3.12-master/1/console failed.",
+      "parentUuid": "04dabe86_14001e51",
+      "revId": "1b83fa1032e8eb7df29eda70b3f1c81ca0899186",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
