@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf3cc8ad_63aa78ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3931248
+      },
+      "writtenOn": "2025-08-07T15:17:18Z",
+      "side": 1,
+      "message": "https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md",
+      "revId": "1b83fa1032e8eb7df29eda70b3f1c81ca0899186",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
