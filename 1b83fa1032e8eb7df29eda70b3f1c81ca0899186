@@ -69,6 +69,24 @@
       "parentUuid": "69816a24_da502b44",
       "revId": "1b83fa1032e8eb7df29eda70b3f1c81ca0899186",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6024d4c4_a980f74c",
+        "filename": "jenkins/gerrit-bazel-plugin-events-eiffel.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2025-08-08T07:56:31Z",
+      "side": 1,
+      "message": "Done\nhttps://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/497041",
+      "parentUuid": "91560e89_ba63b767",
+      "revId": "1b83fa1032e8eb7df29eda70b3f1c81ca0899186",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
