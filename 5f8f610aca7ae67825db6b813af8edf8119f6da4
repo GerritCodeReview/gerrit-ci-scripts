@@ -22,6 +22,30 @@
       },
       "revId": "5f8f610aca7ae67825db6b813af8edf8119f6da4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b157439b_a7eb2da4",
+        "filename": "jenkins/gerrit-bazel-jgit-servlet-4-verifier.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-08T15:09:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f4203c4c_2c062168",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 26
+      },
+      "revId": "5f8f610aca7ae67825db6b813af8edf8119f6da4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
