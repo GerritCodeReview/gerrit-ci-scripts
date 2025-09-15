@@ -1,0 +1,19 @@
+- job:
+    name: "Gerrit-bazel-jgit-servlet-4"
+    node: server
+    display-name: "Gerrit-bazel-jgit-servlet-4"
+    description: "Build and test Gerrit against JGit changes targeting servlet-4"
+    project-type: multibranch
+    disabled: false
+    periodic-folder-trigger: "5m"
+    prune-dead-branches: true
+    days-to-keep: 30
+    number-to-keep: 20
+    abort-builds: false
+    script-path: "Jenkinsfile"
+    scm:
+      - gerrit:
+          url: "https://eclipse.gerrithub.io/a/eclipse-jgit/jgit"
+          credentials-id: gerrit.googlesource.com
+          change-discovery:
+            query-string: "branch:servlet-4 AND -path:Jenkinsfile"
