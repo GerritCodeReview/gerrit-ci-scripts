@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b95d1d8_1f58faa4",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 19
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-15T13:48:20Z",
+      "side": 1,
+      "message": "```suggestion\n                    . set-java.sh 21\n                    bazelisk test \\\n```",
+      "revId": "b8b905e62b1ccab5ea3f11bd6248602489a2f964",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fcc472a_becd01c6",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 19
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-15T13:48:20Z",
+      "side": 1,
+      "message": "```suggestion\n              . set-java.sh 21\n              sh \"bazelisk build release\"\n```",
+      "revId": "b8b905e62b1ccab5ea3f11bd6248602489a2f964",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ac06d20_066a1c46",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 19
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-15T13:48:20Z",
+      "side": 1,
+      "message": "```suggestion\n                    . set-java.sh 21\n                    bazelisk test \\\n```",
+      "revId": "b8b905e62b1ccab5ea3f11bd6248602489a2f964",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
