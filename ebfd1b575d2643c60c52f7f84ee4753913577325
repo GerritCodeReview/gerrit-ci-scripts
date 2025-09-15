@@ -16,6 +16,24 @@
       "message": "```suggestion\n              . set-java.sh 21\n              bazelisk test //...\n```",
       "revId": "ebfd1b575d2643c60c52f7f84ee4753913577325",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ed02f96_057ef301",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 27
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T19:22:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4860a2e2_9bf9d1f6",
+      "revId": "ebfd1b575d2643c60c52f7f84ee4753913577325",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
