@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ddcfcc6f_689d1c77",
+        "filename": "jenkins/gerrit-bazel-jgit-servlet-4-verifier.yaml",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-15T10:10:11Z",
+      "side": 1,
+      "message": "It would be best to have this in a separate change.",
+      "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
