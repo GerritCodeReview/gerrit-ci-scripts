@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5d1c426_9a593360",
+        "filename": "jenkins/gerrit-bazel-jgit-servlet-4-verifier.yaml",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T13:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ddcfcc6f_689d1c77",
+      "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "46604e75_ffeacabd",
@@ -31,6 +49,30 @@
       "writtenOn": "2025-09-15T10:13:11Z",
       "side": 1,
       "message": "```suggestion\n  echo \"Starting pipeline for JGit servlet-4\"\n```",
+      "range": {
+        "startLine": 26,
+        "startChar": 30,
+        "endLine": 26,
+        "endChar": 34
+      },
+      "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5f2c7cf_5d1f6523",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 15
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T13:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "46604e75_ffeacabd",
       "range": {
         "startLine": 26,
         "startChar": 30,
@@ -58,6 +100,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb61a172_ecf4c7ad",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 15
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T13:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "29691aeb_4a6cc59a",
+      "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "baabb75e_cb187ec3",
@@ -71,6 +131,24 @@
       "writtenOn": "2025-09-15T10:13:11Z",
       "side": 1,
       "message": "Add Gerrit tests as well?",
+      "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7ee34b1_673de32f",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 15
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T13:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "baabb75e_cb187ec3",
       "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -92,6 +170,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "69c1f3f5_638c1d0f",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 15
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T13:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d857cbfd_bc9a835a",
+      "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c6973138_38ec951e",
@@ -105,6 +201,24 @@
       "writtenOn": "2025-09-15T10:13:11Z",
       "side": 1,
       "message": "Add Gerrit tests as well?",
+      "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d63d231_80128ba1",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 15
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T13:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c6973138_38ec951e",
       "revId": "66b876cb2ff24757d8fb402619b4c769de060e62",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
