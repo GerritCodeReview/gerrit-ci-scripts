@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2f085f0_372e4a38",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T15:28:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0778b607_7323a52d",
+      "revId": "4647c3f8173fb16478770505d4317ef2b5ae9670",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3afdf979_ee764a2f",
@@ -41,6 +59,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "18aeeb40_36e2da87",
+        "filename": "jenkins/gerrit-bazel-jgit-servlet-4-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T15:28:46Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "3afdf979_ee764a2f",
+      "range": {
+        "startLine": 5,
+        "startChar": 48,
+        "endLine": 5,
+        "endChar": 55
+      },
+      "revId": "4647c3f8173fb16478770505d4317ef2b5ae9670",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "828403de_85ea7e36",
@@ -54,6 +96,30 @@
       "writtenOn": "2025-09-15T10:14:54Z",
       "side": 1,
       "message": "We should exclude changes to the `Jenkinsfile`",
+      "range": {
+        "startLine": 19,
+        "startChar": 26,
+        "endLine": 19,
+        "endChar": 44
+      },
+      "revId": "4647c3f8173fb16478770505d4317ef2b5ae9670",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90d074df_2ac7bc6d",
+        "filename": "jenkins/gerrit-bazel-jgit-servlet-4-verifier.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-15T15:28:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "828403de_85ea7e36",
       "range": {
         "startLine": 19,
         "startChar": 26,
