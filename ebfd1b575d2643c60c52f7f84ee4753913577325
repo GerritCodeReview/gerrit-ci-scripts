@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4860a2e2_9bf9d1f6",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 27
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-15T18:58:35Z",
+      "side": 1,
+      "message": "```suggestion\n              . set-java.sh 21\n              bazelisk test //...\n```",
+      "revId": "ebfd1b575d2643c60c52f7f84ee4753913577325",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
