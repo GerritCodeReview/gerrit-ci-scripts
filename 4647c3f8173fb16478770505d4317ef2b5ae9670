@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0778b607_7323a52d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-15T10:15:54Z",
+      "side": 1,
+      "message": "This is the JGit pipeline on Gerrit-CI for validating JGit changes on servlet-4 against Gerrit stable-3.12 and master.",
+      "revId": "4647c3f8173fb16478770505d4317ef2b5ae9670",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3afdf979_ee764a2f",
         "filename": "jenkins/gerrit-bazel-jgit-servlet-4-verifier.yaml",
         "patchSetId": 1
