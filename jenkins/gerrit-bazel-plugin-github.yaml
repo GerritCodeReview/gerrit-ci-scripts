@@ -7,4 +7,13 @@
           extra-artifacts: >
             bazel-bin/plugins/github/github-*.jar,
             bazel-bin/plugins/github/github-*.jar-version
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}'
+          branch:
+            - stable-3.11
+            - stable-3.12
+          gerrit-branch:
+            - master
+          extra-artifacts: >
+            bazel-bin/plugins/github/github-*.jar,
+            bazel-bin/plugins/github/github-*.jar-version
       - 'plugin-{name}-verifier'
