@@ -16,6 +16,23 @@
       "message": "Job is created correctly and it will not build any change that modifies the Jenkinsfile: https://ibb.co/RpwNf92Z",
       "revId": "0ddd465dafe438f35386c92992bb3d80a991719f",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e58bca79_e574caef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-23T09:50:13Z",
+      "side": 1,
+      "message": "Currently getting 401:\n\n```\nLooking for open changes with query \u0027p:eclipse-jgit/jgit status:open -age:24w branch:servlet-4 AND -path:Jenkinsfile\u0027 ...\nERROR: [Tue Sep 23 09:43:56 UTC 2025] Could not update folder level actions from source gr-https://eclipse.gerrithub.io/a/eclipse-jgit/jgit\n[Tue Sep 23 09:43:56 UTC 2025] Finished branch indexing. Indexing took 0.43 sec\nFATAL: Failed to recompute children of Gerrit-bazel-jgit-servlet-4\ncom.urswolfer.gerrit.client.rest.http.HttpStatusException: Request not successful. Message: Unauthorized. Status-Code: 401. Content: Unauthorized.\n```\n\nWe need to add the credentials for a dedicated jgit user to scan and vote to the jgit project.\n\n@luca.milanesio@gmail.com I am not sure how to add credentials to Jenkins, can we pair on that?",
+      "revId": "0ddd465dafe438f35386c92992bb3d80a991719f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
