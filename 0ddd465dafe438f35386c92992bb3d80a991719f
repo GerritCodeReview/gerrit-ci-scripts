@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "415a8174_97593bc3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-23T09:36:42Z",
+      "side": 1,
+      "message": "Job is created correctly and it will not build any change that modifies the Jenkinsfile: https://ibb.co/RpwNf92Z",
+      "revId": "0ddd465dafe438f35386c92992bb3d80a991719f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
