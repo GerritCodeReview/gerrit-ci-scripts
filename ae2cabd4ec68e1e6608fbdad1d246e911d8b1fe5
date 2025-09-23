@@ -70,6 +70,30 @@
       },
       "revId": "ae2cabd4ec68e1e6608fbdad1d246e911d8b1fe5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a8e1629_c8b083ff",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-23T09:26:58Z",
+      "side": 1,
+      "message": "I checked this and come up with a python3 code to use the `xml.etree.elementtree capabilities`, however that is way longer and complex that I envisaged and I fear is going to make it flakier than it is right now to be honest.\n\nI suggest to leave it as is and make it more robust as a follow up, should we ever encounter a case where it breaks.",
+      "parentUuid": "02c5b0c8_d2bbf0c6",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 139
+      },
+      "revId": "ae2cabd4ec68e1e6608fbdad1d246e911d8b1fe5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
