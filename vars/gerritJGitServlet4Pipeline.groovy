@@ -100,13 +100,11 @@ def call(Map cfg = [:]) {
             sh '''
               . set-java.sh 21
               echo "running gerrit stable-3.12 tests..."
-              export BAZEL_OPTS="--config=remote_bb \
-                   --jobs=50 \
-                   --remote_header=x-buildbuddy-api-key=$BB_API_KEY \
-                   --flaky_test_attempts 3 \
-                   --test_timeout 3600 \
-                   --test_tag_filters=-flaky"
-              bazelisk test $BAZEL_OPTS //...
+              bazelisk test \
+                --test_tag_filters=-flaky \
+                --flaky_test_attempts 3 \
+                --test_timeout 3600 \
+                //...
             '''
           }
         }
@@ -150,13 +148,11 @@ def call(Map cfg = [:]) {
             sh '''
               . set-java.sh 21
               echo "running gerrit master tests..."
-              export BAZEL_OPTS="--config=remote_bb \
-                   --jobs=50 \
-                   --remote_header=x-buildbuddy-api-key=$BB_API_KEY \
-                   --flaky_test_attempts 3 \
-                   --test_timeout 3600 \
-                   --test_tag_filters=-flaky"
-              bazelisk test $BAZEL_OPTS //...
+              bazelisk test \
+                --test_tag_filters=-flaky \
+                --flaky_test_attempts 3 \
+                --test_timeout 3600 \
+                //...
             '''
           }
         }
