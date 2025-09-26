@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+exec gpg --batch --yes --pinentry-mode loopback \
+    --passphrase-file "$GPG_PASSPHRASE_FILE" "$@"
