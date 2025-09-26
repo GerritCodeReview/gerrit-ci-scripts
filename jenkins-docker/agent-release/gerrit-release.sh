@@ -20,8 +20,7 @@ export version=$2
 export nextversion=$3
 export migrationversion=$4
 
-MAVEN_REPOSITORY="OSSRH-staging"
-MAVEN_SETTINGS_FILE="$HOME/.m2/settings.xml"
+export CLOUDSDK_AUTH_ACCESS_TOKEN="$GCLOUD_AUTH_TOKEN"
 
 bazel_config=""
 if [ "$branch" == "stable-3.11" ]; then
@@ -36,16 +35,37 @@ then
   rm -Rf gerrit
 fi
 
-if [ -f $HOME/.gitconfig.template ]
+if [ -f "$GITCONFIG_TMPL" ]
 then
-  cp $HOME/.gitconfig.template $HOME/.gitconfig
+  echo "Installing $GITCONFIG_TMPL"
+  install -m 600 "$GITCONFIG_TMPL" "$HOME/.gitconfig"
 fi
 
-if [ -f $HOME/.gitcookies ]
+if [ -f "$GITCOOKIES" ]
 then
   echo "Configuring cookiefile..."
+  install -m 600 "$GITCOOKIES" "$HOME/.gitcookies"
   git config --global http.cookiefile $HOME/.gitcookies
+
 fi
+
+if [ -f "$GPG_KEY" ]
+then
+  echo "Configuring GPG keys..."
+  mkdir -p "$HOME/.gnupg"
+  chmod 700 "$HOME/.gnupg"
+  echo "allow-loopback-pinentry" >> "$HOME/.gnupg/gpg-agent.conf"
+  echo "use-agent" >> "$HOME/.gnupg/gpg.conf"
+  echo "pinentry-mode loopback" >> "$HOME/.gnupg/gpg.conf"
+
+  gpgconf --kill gpg-agent || true
+
+  # Import private key
+  gpg --batch --yes --import "$GPG_KEY"
+fi
+
+echo "Configuring git to read GPG passphrase from file..."
+git config --global gpg.program /usr/local/bin/gpg-loopback
 
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
 git config --global credential.helper cache
@@ -96,16 +116,7 @@ export VERBOSE=1
 ./tools/maven/api.sh war_deploy $bazel_config
 ./tools/maven/api.sh deploy $bazel_config
 
-echo "Extracting OSSRH credentials..."
-ossrh_user=$(grep -A2 "<id>$MAVEN_REPOSITORY</id>" $MAVEN_SETTINGS_FILE | grep '<username>' | sed -E 's|.*<username>(.*)</username>.*|\1|')
-ossrh_pass=$(grep -A2 "<id>$MAVEN_REPOSITORY</id>" $MAVEN_SETTINGS_FILE | grep '<password>' | sed -E 's|.*<password>(.*)</password>.*|\1|')
-
-if [ -z "$ossrh_user" ] || [ -z "$ossrh_pass" ]; then
-  echo "Failed to extract credentials from $MAVEN_SETTINGS_FILE"
-  exit 3
-fi
-
-bearer_token=$(echo -n "$ossrh_user:$ossrh_pass" | base64)
+bearer_token=$(echo -n "$OSSHR_USER:$OSSHR_PASSWORD" | base64)
 
 # Manually upload to Maven Central
 # https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/#post-to-manualuploaddefaultrepositorynamespace
@@ -117,9 +128,6 @@ curl -X POST \
     echo "manual upload endpoint failed. Aborting release."
     exit 4
   }
-
-echo "Download the artifacts from SonaType staging repository at https://oss.sonatype.org"
-echo "logging in using your credentials"
 
 popd
 
@@ -135,13 +143,13 @@ echo "Pushing to Google Cloud Buckets"
 gcloud auth login
 
 echo "Pushing gerrit.war to gerrit-releases ..."
-gsutil cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
+gcloud storage cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
 
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
 pushd Documentation
 version_no_rc=$(echo "$version" | cut -d '-' -f 1)
-gsutil cp -r . gs://gerrit-documentation/Documentation/"$version_no_rc"
+gcloud storage cp --recursive . gs://gerrit-documentation/Documentation/"$version_no_rc"
 popd
 
 echo "Setting next version tag to $nextversion ..."
