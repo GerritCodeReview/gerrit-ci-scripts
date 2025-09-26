@@ -1,12 +1,18 @@
 - project:
     name: multi-site
+    repo: multi-site
+    organization: GerritForge
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           extra-plugins: 'pull-replication healthcheck'
           extra-modules: 'events-broker global-refdb'
           branch:
-            - master
             - stable-3.12
             - stable-3.11
             - stable-3.10
+      - 'plugin-{name}-gh-bazel-{branch}':
+          extra-plugins: 'pull-replication healthcheck'
+          extra-modules: 'events-broker global-refdb'
+          branch:
+            - master
       - 'plugin-{name}-verifier'
