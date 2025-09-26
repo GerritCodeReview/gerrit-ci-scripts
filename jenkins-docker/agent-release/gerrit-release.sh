@@ -4,14 +4,15 @@ if [ "$1" == "--help" ] || [ "$1" == "" ] || [ "$2" == "" ] || [ "$3" == "" ]
 then
   echo "Gerrit Code Review - release automation script"
   echo "----------------------------------------------"
-  echo "Use: $0 <branch> <version> <next-version> [<test-migration-version>]"
+  echo "Use: $0 <branch> <version> <next-version> [<test-migration-version>] [gcp-access-token]"
   echo ""
   echo "Where: branch  Gerrit branch name where the release must be cut"
   echo "       version Gerrit semantic release number"
   echo "       next-version Next SNAPSHOT version after release"
   echo "       test-migration-version Test migration from an earlier Gerrit version"
+  echo "       gcp-access-token Gcloud Auth token obtained via gcloud auth login and then gcloud auth print-access-token"
   echo ""
-  echo "Example: $0 stable-3.10 3.10.2 3.10.3-SNAPSHOT 3.9.6"
+  echo "Example: $0 stable-3.10 3.10.2 3.10.3-SNAPSHOT 3.9.6 ya29.a0AfB_byCD..."
   exit 1
 fi
 
@@ -19,6 +20,7 @@ export branch=$1
 export version=$2
 export nextversion=$3
 export migrationversion=$4
+export gcp_access_token=$5
 
 MAVEN_REPOSITORY="OSSRH-staging"
 MAVEN_SETTINGS_FILE="$HOME/.m2/settings.xml"
@@ -135,13 +137,15 @@ echo "Pushing to Google Cloud Buckets"
 gcloud auth login
 
 echo "Pushing gerrit.war to gerrit-releases ..."
-gsutil cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
+gsutil -o "Credentials:gs_oauth2_bearer_token=${gcp_access_token}" cp \
+  gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
 
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
 pushd Documentation
 version_no_rc=$(echo "$version" | cut -d '-' -f 1)
-gsutil cp -r . gs://gerrit-documentation/Documentation/"$version_no_rc"
+gsutil -o "Credentials:gs_oauth2_bearer_token=${gcp_access_token}" cp \
+  -r . gs://gerrit-documentation/Documentation/"$version_no_rc"
 popd
 
 echo "Setting next version tag to $nextversion ..."
