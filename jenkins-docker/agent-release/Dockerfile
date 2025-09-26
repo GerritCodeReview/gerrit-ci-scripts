@@ -11,10 +11,6 @@ RUN apt-get update --allow-releaseinfo-change && \
 COPY gerrit-release.sh /usr/local/bin
 COPY gerrit-upgrade-test.sh /usr/local/bin
 
-ENTRYPOINT [ "/usr/local/bin/gerrit-release.sh" ]
-
-CMD [ "--help" ]
-
 USER jenkins
 
 WORKDIR /home/jenkins
