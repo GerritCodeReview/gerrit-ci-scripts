@@ -46,7 +46,7 @@ start_osx: create_env ${GERRIT_CI_PEM}
 	docker run -d --name ${NAME}-socat \
           -v /var/run/docker.sock:/var/run/docker.sock \
           -p 127.0.0.1:1234:1234 \
-          bobrik/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
+          alpine/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
 	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} PLUGIN_MANAGER_PATH=${PLUGIN_MANAGER_PATH} \
           docker compose -f docker-compose.osx.yaml up -d
 
@@ -64,6 +64,16 @@ create_env:
         "${JENKINS_API_PASSWORD}" \
         "${DOCKER_GID}" \
         "${REMOTE_DOCKER_HOST}" > jenkins-container.env
+
+start_internal_osx: create_env ${GERRIT_CI_PEM}
+	-docker rm ${NAME_INTERNAL} ${NAME_INTERNAL}-socat
+	mkdir -p ${JENKINS_HOME_INTERNAL}/jobs
+	docker run -d --name ${NAME_INTERNAL}-socat \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          -p 127.0.0.1:1234:1234 \
+          alpine/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
+	JENKINS_HOME=${JENKINS_HOME_INTERNAL} IMAGE=${IMAGE_INTERNAL} NAME=${NAME_INTERNAL} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} \
+	docker compose -f docker-compose-internal.yaml up
 
 start_internal: build_internal create_env ${GERRIT_CI_PEM}
 	-docker rm ${NAME_INTERNAL}
