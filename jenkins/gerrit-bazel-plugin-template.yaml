@@ -53,6 +53,20 @@
               - pipeline-branch-durability-override: max-survivability
 
 - job-template:
+    name: 'plugin-{name}-verifier-gh'
+    description: 'Plugin {name} on change {organisation} verification build'
+    defaults: verifier-template-bazel
+    project-type: multibranch
+    scm:
+      - gerrit:
+          url: https://review.gerrithub.io/a/{organisation}/{name}
+          credentials-id: eclipse.gerrithub.io
+          property-strategies:
+            all-branches:
+              - suppress-scm-triggering: false
+              - pipeline-branch-durability-override: max-survivability
+
+- job-template:
     name: 'module-{name}-verifier'
     description: 'Module {name} change verification build'
     defaults: verifier-template-bazel
