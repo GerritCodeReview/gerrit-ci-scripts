@@ -28,6 +28,9 @@ if [ "$branch" == "stable-3.11" ]; then
   bazel_config="--config=java21"
 fi
 
+echo "Setting java version for $branch"
+. set-java.sh --branch "$branch"
+
 if [ -d gerrit ]
 then
   rm -Rf gerrit
