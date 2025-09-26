@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40cab472_b0ddc7a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-26T13:22:54Z",
+      "side": 1,
+      "message": "Works E2E on Gerrit-CI",
+      "revId": "d5de63617e9c730fd7b114199b7513253a86c411",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
