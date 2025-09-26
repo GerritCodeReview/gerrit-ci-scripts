@@ -52,7 +52,7 @@ def call(Map parm = [:]) {
         stages {
             stage('Checkout') {
                 steps {
-                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
+                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_REVIEW_CREDENTIALS_ID)]) {
                         sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
                         sh 'chmod 600 ~/.netrc'
                         sh "git clone -b ${env.GERRIT_BRANCH} ${pluginScmUrl}"
