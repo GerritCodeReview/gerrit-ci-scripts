@@ -14,3 +14,4 @@
           branch:
             - master
       - 'plugin-{name}-verifier'
+      - 'plugin-{name}-verifier-gh'
