@@ -125,15 +125,15 @@ def call(Map parm = [:]) {
         post {
             success {
                 script { if (buildCheck) { gerritCheck (checks: ["${buildCheck}": 'SUCCESSFUL'], url: "${env.BUILD_URL}console") } }
-                gerritReview labels: [Verified: 1]
+                gerritReview (labels: [Verified: 1], message: "Build console: ${env.BUILD_URL}console")
             }
             unstable {
                 script { if (buildCheck) { gerritCheck (checks: ["${buildCheck}": 'FAILED'], url: "${env.BUILD_URL}console") } }
-                gerritReview labels: [Verified: -1]
+                gerritReview (labels: [Verified: -1], message: "Build console: ${env.BUILD_URL}console")
             }
             failure {
                 script { if (buildCheck) { gerritCheck (checks: ["${buildCheck}": 'FAILED'], url: "${env.BUILD_URL}console") } }
-                gerritReview labels: [Verified: -1]
+                gerritReview (labels: [Verified: -1], message: "Build console: ${env.BUILD_URL}console")
             }
         }
     }
