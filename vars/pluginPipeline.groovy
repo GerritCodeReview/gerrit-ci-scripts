@@ -41,6 +41,7 @@ def call(Map parm = [:]) {
     def gjfVersion = parm.gjfVersion ?: '1.24.0'
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
+    def gerritReviewCredentialsId = env.GERRIT_REVIEW_CREDENTIALS_ID ? env.GERRIT_REVIEW_CREDENTIALS_ID : env.GERRIT_CREDENTIALS_ID
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')
     echo "Change : ${env.GERRIT_CHANGE_NUMBER}/${GERRIT_PATCHSET_NUMBER} '${env.GERRIT_CHANGE_SUBJECT}'"
@@ -52,7 +53,7 @@ def call(Map parm = [:]) {
         stages {
             stage('Checkout') {
                 steps {
-                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
+                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: gerritReviewCredentialsId)]) {
                         sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
                         sh 'chmod 600 ~/.netrc'
                         sh "git clone -b ${env.GERRIT_BRANCH} ${pluginScmUrl}"
