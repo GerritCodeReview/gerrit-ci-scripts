@@ -38,8 +38,6 @@ def call(Map parm = [:]) {
     def extraModules = parm.extraModules ?: []
     def gerritReviewBaseUrl = "https://gerrit.googlesource.com/a"
     def gerritReviewHostname = "gerrit.googlesource.com"
-    def pluginScmUrl = "${pluginScmBaseUrl}/${env.GERRIT_PROJECT}"
-    def pluginScmHostname = new java.net.URI(pluginScmUrl).getHost()
     def gjfVersion = parm.gjfVersion ?: '1.24.0'
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
@@ -55,11 +53,18 @@ def call(Map parm = [:]) {
         stages {
             stage('Checkout') {
                 steps {
+                    checkout scm
+
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
-                        sh 'echo "machine ' + pluginScmHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
-                        sh 'chmod 600 ~/.netrc'
-                        sh "git clone -b ${env.GERRIT_BRANCH} ${pluginScmUrl}"
-                        sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+                        script {
+                            def scmUrl = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
+                            def pluginScmHostname = new java.net.URI(scmUrl).getHost()
+
+                            sh 'echo "machine ' + pluginScmHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
+                            sh 'chmod 600 ~/.netrc'
+                            sh "git clone -b ${env.GERRIT_BRANCH} ${scmUrl}"
+                            sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+                        }
                     }
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: gerritReviewCredentialsId)]) {
                         sh 'echo "machine ' + gerritReviewHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
