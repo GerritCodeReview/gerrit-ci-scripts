@@ -36,11 +36,12 @@ def call(Map parm = [:]) {
     def buildCheck = parm.buildCheckId
     def extraPlugins = parm.extraPlugins ?: []
     def extraModules = parm.extraModules ?: []
-    def pluginScmBaseUrl = "https://gerrit.googlesource.com/a"
-    def pluginScmUrl = "${pluginScmBaseUrl}/${env.GERRIT_PROJECT}"
+    def gerritReviewBaseUrl = "https://gerrit.googlesource.com/a"
+    def gerritReviewHostname = "gerrit.googlesource.com"
     def gjfVersion = parm.gjfVersion ?: '1.24.0'
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
+    def gerritReviewCredentialsId = "gerrit.googlesource.com"
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')
     echo "Change : ${env.GERRIT_CHANGE_NUMBER}/${GERRIT_PATCHSET_NUMBER} '${env.GERRIT_CHANGE_SUBJECT}'"
@@ -52,14 +53,25 @@ def call(Map parm = [:]) {
         stages {
             stage('Checkout') {
                 steps {
+                    checkout scm
+
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
-                        sh 'echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
-                        sh 'chmod 600 ~/.netrc'
-                        sh "git clone -b ${env.GERRIT_BRANCH} ${pluginScmUrl}"
-                        sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
                         script {
-                            extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${pluginScmBaseUrl}/plugins/${plugin}" }
-                            extraModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${pluginScmBaseUrl}/modules/${module}" }
+                            def scmUrl = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
+                            def pluginScmHostname = new java.net.URI(scmUrl).getHost()
+
+                            sh 'echo "machine ' + pluginScmHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
+                            sh 'chmod 600 ~/.netrc'
+                            sh "git clone -b ${env.GERRIT_BRANCH} ${scmUrl}"
+                            sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+                        }
+                    }
+                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: gerritReviewCredentialsId)]) {
+                        sh 'echo "machine ' + gerritReviewHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
+                        sh 'chmod 600 ~/.netrc'
+                        script {
+                            extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/plugins/${plugin}" }
+                            extraModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/modules/${module}" }
                         }
                     }
                 }
