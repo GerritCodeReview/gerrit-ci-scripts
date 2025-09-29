@@ -73,5 +73,24 @@ EOF
                 }
             }
         }
+
+        stage('Confirm and push tag') {
+            steps {
+                dir('gerrit') {
+                    script {
+                        timeout(time: 15, unit: 'MINUTES') {
+                            input message: "Push tag v${params.VERSION} to origin (including submodules)?", ok: 'Yes, push'
+                        }
+                        sh '''
+                            TAG="v${VERSION}"
+                            echo "Pushing ${TAG} to origin..."
+                            git push origin "${TAG}"
+                            echo "Pushing ${TAG} to submodules (ignore failures)..."
+                            git submodule foreach bash -c 'git push origin '"${TAG}"' || true'
+                        '''
+                    }
+                }
+            }
+        }
     }
 }
