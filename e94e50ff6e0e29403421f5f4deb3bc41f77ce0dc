@@ -1,5 +1,29 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93c0c60e_d5f6c775",
+        "filename": "jenkins/gerrit-bazel-module-virtualhost.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-29T12:16:17Z",
+      "side": 1,
+      "message": "This is wrong, it should be `module-{name}-gh-bazel-{branch}`",
+      "range": {
+        "startLine": 11,
+        "startChar": 22,
+        "endLine": 11,
+        "endChar": 40
+      },
+      "revId": "e94e50ff6e0e29403421f5f4deb3bc41f77ce0dc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
