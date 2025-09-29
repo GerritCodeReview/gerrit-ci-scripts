@@ -1,9 +1,13 @@
 - project:
     name: virtualhost
+    repo: virtualhost
+    organization: GerritForge
     jobs:
       - 'module-{name}-bazel-{branch}':
           branch:
-            - master
             - stable-3.12
             - stable-3.11
             - stable-3.10
+      - 'module-{name}-bazel-{branch}-gh':
+          branch:
+            - master
