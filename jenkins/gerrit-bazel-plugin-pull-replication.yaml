@@ -1,12 +1,17 @@
 - project:
     name: pull-replication
+    repo: pull-replication
+    organization: GerritForge
+    extra-plugins: 'healthcheck'
+    extra-modules: 'events-broker'
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: 'healthcheck'
-          extra-modules: 'events-broker'
           branch:
-            - master
             - stable-3.12
             - stable-3.11
             - stable-3.10
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
       - 'plugin-{name}-verifier'
+      - 'plugin-{name}-verifier-gh'
