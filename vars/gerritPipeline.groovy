@@ -130,7 +130,7 @@ def queryChangedFiles(url) {
 
 def collectBuildModes() {
     Builds.modes = []
-    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.1[0-2]/) {
+    if (env.GERRIT_BRANCH == "master" || env.GERRIT_BRANCH ==~ /stable-3.1[0-3]/) {
         Builds.modes = ["notedb", "rbe"]
     } else {
         throw new Exception("Unsupported branch ${env.GERRIT_BRANCH}")
