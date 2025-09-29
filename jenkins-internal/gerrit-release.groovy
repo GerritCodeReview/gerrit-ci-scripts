@@ -14,13 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// TODO: This is missing other required credentials
-
 pipeline {
     agent { label 'bazel-bookworm-release' }
 
     parameters {
-        password(name: 'GCLOUD_AUTH_TOKEN', defaultValue: '', description: "Gcloud Auth token obtained via 'gcloud auth login'")
+        password(name: 'GCLOUD_AUTH_TOKEN', defaultValue: '', description: "Gcloud Auth token obtained via gcloud auth login and then gcloud autifconh print-access-token")
         string(name: 'VERSION', defaultValue: '', description: 'Gerrit semantic release number')
         string(name: 'BRANCH', defaultValue: '', description: 'Gerrit branch name where the release must be cut')
         string(name: 'NEXT_VERSION', defaultValue: '', description: 'Next SNAPSHOT version after release')
@@ -30,6 +28,14 @@ pipeline {
     stages {
         stage("Gerrit Release") {
             steps {
+                withCredentials([
+                        usernamePassword(usernameVariable: "OSSHR_USER", passwordVariable: "OSSHR_PASSWORD", credentialsId: "ossrh-staging-api.central.sonatype.com"),
+                        file(credentialsId: 'gitcookies',   variable: 'GITCOOKIES'),
+                        file(credentialsId: 'gitconfig',    variable: 'GITCONFIG_TMPL'),
+                        file(credentialsId: 'gpg_private',  variable: 'GPG_KEY'),
+                        string(credentialsId: 'gpg_passphrase', variable: 'GPG_PASSPHRASE'),
+                        string(credentialsId: 'gcloud_token', variable: 'GCLOUD_AUTH_TOKEN')
+                ]) {
                 sh "gerrit-release.sh ${params.BRANCH} ${params.VERSION} ${params.NEXT_VERSION} ${params.MIGRATION_VERSION} ${params.GCLOUD_AUTH_TOKEN}"
             }
         }
