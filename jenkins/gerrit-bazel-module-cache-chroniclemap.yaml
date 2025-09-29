@@ -1,9 +1,14 @@
 - project:
     name: cache-chroniclemap
+    repo: cache-chroniclemap
+    organization: GerritForge
     jobs:
       - 'module-{name}-bazel-{branch}':
           branch:
-            - master
             - stable-3.11
             - stable-3.10
+      - 'module-{name}-gh-bazel-{branch}':
+          branch:
+            - master
       - 'module-{name}-verifier'
+      - 'module-{name}-verifier-gh'
