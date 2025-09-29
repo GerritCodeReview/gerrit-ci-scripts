@@ -1,10 +1,12 @@
 - project:
     name: github
+    repo: github
+    organization: GerritForge
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
           extra-artifacts: >
             bazel-bin/plugins/github/github-*.jar,
             bazel-bin/plugins/github/github-*.jar-version
-      - 'plugin-{name}-verifier'
+      - 'plugin-{name}-verifier-gh'
