@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6693f685_9996e7df",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-29T07:19:46Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "2c667080_c78e9340",
+      "range": {
+        "startLine": 9,
+        "startChar": 5,
+        "endLine": 9,
+        "endChar": 15
+      },
+      "revId": "343c7524727e836b55fce721e29802a4f680932a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "57a10284_f52091ca",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-09-29T06:40:58Z",
       "side": 1,
       "message": "```suggestion\nThis is a pre-requisite for validating incoming changes on GerritHub.io.\n```",
+      "range": {
+        "startLine": 17,
+        "startChar": 39,
+        "endLine": 17,
+        "endChar": 47
+      },
+      "revId": "343c7524727e836b55fce721e29802a4f680932a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08d8fed3_557ad418",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-09-29T07:19:46Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "57a10284_f52091ca",
       "range": {
         "startLine": 17,
         "startChar": 39,
