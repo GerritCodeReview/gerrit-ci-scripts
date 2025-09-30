@@ -47,6 +47,24 @@ then
   git config --global http.cookiefile $HOME/.gitcookies
 fi
 
+if [ -f "$GPG_KEY" ]
+then
+  echo "Configuring GPG keys..."
+  mkdir -p "$HOME/.gnupg"
+  chmod 700 "$HOME/.gnupg"
+  echo "allow-loopback-pinentry" >> "$HOME/.gnupg/gpg-agent.conf"
+  echo "use-agent" >> "$HOME/.gnupg/gpg.conf"
+  echo "pinentry-mode loopback" >> "$HOME/.gnupg/gpg.conf"
+
+  gpgconf --kill gpg-agent || true
+
+  echo "Import private key..."
+  gpg --batch --yes --import "$GPG_KEY"
+
+  echo "Configuring git to read GPG passphrase from file..."
+  git config --global gpg.program /usr/local/bin/gpg-loopback
+fi
+
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
 git config --global credential.helper cache
 git clone https://gerrit.googlesource.com/gerrit && (cd gerrit && f=$(git rev-parse --git-dir)/hooks/commit-msg ; curl -Lo "$f" https://gerrit-review.googlesource.com/tools/hooks/commit-msg ; chmod +x "$f")
