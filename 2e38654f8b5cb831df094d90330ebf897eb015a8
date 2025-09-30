@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9965b241_b41a6675",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-30T11:59:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "77c68e4a_8b04a6e5",
+      "range": {
+        "startLine": 11,
+        "startChar": 7,
+        "endLine": 11,
+        "endChar": 17
+      },
+      "revId": "2e38654f8b5cb831df094d90330ebf897eb015a8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "de74ae07_850be8df",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-09-30T11:13:44Z",
       "side": 1,
       "message": "This should now be documented at L5-L15",
+      "range": {
+        "startLine": 39,
+        "startChar": 8,
+        "endLine": 39,
+        "endChar": 25
+      },
+      "revId": "2e38654f8b5cb831df094d90330ebf897eb015a8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c26da40_cf8ac113",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-30T11:59:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "de74ae07_850be8df",
       "range": {
         "startLine": 39,
         "startChar": 8,
