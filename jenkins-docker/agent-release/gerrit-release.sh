@@ -22,6 +22,10 @@ then
   echo "     Path to private GPG key to be imported for signing"
   echo "* GPG_PASSPHRASE_FILE:"
   echo "     Path to file containing the GPG passphrase"
+  echo "* OSSHR_USER:"
+  echo "     Username used to upload artifacts to Maven Central"
+  echo "* OSSHR_TOKEN:"
+  echo "     API Token used to upload artifacts to Maven Central"
   echo ""
   exit 1
 fi
@@ -30,9 +34,6 @@ export branch=$1
 export version=$2
 export nextversion=$3
 export migrationversion=$4
-
-MAVEN_REPOSITORY="OSSRH-staging"
-MAVEN_SETTINGS_FILE="$HOME/.m2/settings.xml"
 
 bazel_config=""
 if [ "$branch" == "stable-3.11" ]; then
@@ -127,16 +128,7 @@ export VERBOSE=1
 ./tools/maven/api.sh war_deploy $bazel_config
 ./tools/maven/api.sh deploy $bazel_config
 
-echo "Extracting OSSRH credentials..."
-ossrh_user=$(grep -A2 "<id>$MAVEN_REPOSITORY</id>" $MAVEN_SETTINGS_FILE | grep '<username>' | sed -E 's|.*<username>(.*)</username>.*|\1|')
-ossrh_pass=$(grep -A2 "<id>$MAVEN_REPOSITORY</id>" $MAVEN_SETTINGS_FILE | grep '<password>' | sed -E 's|.*<password>(.*)</password>.*|\1|')
-
-if [ -z "$ossrh_user" ] || [ -z "$ossrh_pass" ]; then
-  echo "Failed to extract credentials from $MAVEN_SETTINGS_FILE"
-  exit 3
-fi
-
-bearer_token=$(echo -n "$ossrh_user:$ossrh_pass" | base64)
+bearer_token=$(echo -n "$OSSHR_USER:$OSSHR_TOKEN" | base64)
 
 # Manually upload to Maven Central
 # https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/#post-to-manualuploaddefaultrepositorynamespace
