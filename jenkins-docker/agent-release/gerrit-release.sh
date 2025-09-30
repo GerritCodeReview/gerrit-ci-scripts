@@ -14,6 +14,8 @@ then
   echo "Example: $0 stable-3.10 3.10.2 3.10.3-SNAPSHOT 3.9.6"
   echo ""
   echo "Environment variables:"
+  echo " * GITCONFIG_TMPL:"
+  echo "     Path to a gitconfig template to be installed to \$HOME/.gitconfig for git client configuration"
   echo " * GITCOOKIES:"
   echo "     Path to a .gitcookies file that will be installed to \$HOME/.gitcookies enabling git authentication"
   echo "* GPG_KEY:"
@@ -45,9 +47,10 @@ then
   rm -Rf gerrit
 fi
 
-if [ -f $HOME/.gitconfig.template ]
+if [ -f "$GITCONFIG_TMPL" ]
 then
-  cp $HOME/.gitconfig.template $HOME/.gitconfig
+  echo "Installing $GITCONFIG_TMPL..."
+  install -m 600 "$GITCONFIG_TMPL" "$HOME/.gitconfig"
 fi
 
 if [ -f "$GITCOOKIES" ]
