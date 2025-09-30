@@ -36,9 +36,10 @@ then
   rm -Rf gerrit
 fi
 
-if [ -f $HOME/.gitconfig.template ]
+if [ -f "$GITCONFIG_TMPL" ]
 then
-  cp $HOME/.gitconfig.template $HOME/.gitconfig
+  echo "Installing $GITCONFIG_TMPL..."
+  install -m 600 "$GITCONFIG_TMPL" "$HOME/.gitconfig"
 fi
 
 if [ -f "$GITCOOKIES" ]
