@@ -41,9 +41,10 @@ then
   cp $HOME/.gitconfig.template $HOME/.gitconfig
 fi
 
-if [ -f $HOME/.gitcookies ]
+if [ -f "$GITCOOKIES" ]
 then
   echo "Configuring cookiefile..."
+  install -m 600 "$GITCOOKIES" "$HOME/.gitcookies"
   git config --global http.cookiefile $HOME/.gitcookies
 fi
 
