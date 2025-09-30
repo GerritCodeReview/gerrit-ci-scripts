@@ -14,6 +14,8 @@ then
   echo "Example: $0 stable-3.10 3.10.2 3.10.3-SNAPSHOT 3.9.6"
   echo ""
   echo "Environment variables:"
+  echo " * GITCOOKIES:"
+  echo " Path to a .gitcookies file that will be installed to \$HOME/.gitcookies enabling git authentication"
   echo "* GPG_KEY:"
   echo "     Path to private GPG key to be imported for signing"
   echo "* GPG_PASSPHRASE_FILE:"
@@ -48,9 +50,10 @@ then
   cp $HOME/.gitconfig.template $HOME/.gitconfig
 fi
 
-if [ -f $HOME/.gitcookies ]
+if [ -f "$GITCOOKIES" ]
 then
   echo "Configuring cookiefile..."
+  install -m 600 "$GITCOOKIES" "$HOME/.gitcookies"
   git config --global http.cookiefile $HOME/.gitcookies
 fi
 
