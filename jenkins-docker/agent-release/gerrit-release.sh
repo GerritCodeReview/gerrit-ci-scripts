@@ -12,6 +12,13 @@ then
   echo "       test-migration-version Test migration from an earlier Gerrit version"
   echo ""
   echo "Example: $0 stable-3.10 3.10.2 3.10.3-SNAPSHOT 3.9.6"
+  echo ""
+  echo "Environment variables:"
+  echo "* GPG_KEY:"
+  echo "     Path to private GPG key to be imported for signing"
+  echo "* GPG_PASSPHRASE_FILE:"
+  echo "     Path to file containing the GPG passphrase"
+  echo ""
   exit 1
 fi
 
@@ -45,6 +52,24 @@ if [ -f $HOME/.gitcookies ]
 then
   echo "Configuring cookiefile..."
   git config --global http.cookiefile $HOME/.gitcookies
+fi
+
+if [ -f "$GPG_KEY" ]
+then
+  echo "Configuring GPG keys..."
+  mkdir -p "$HOME/.gnupg"
+  chmod 700 "$HOME/.gnupg"
+  echo "allow-loopback-pinentry" >> "$HOME/.gnupg/gpg-agent.conf"
+  echo "use-agent" >> "$HOME/.gnupg/gpg.conf"
+  echo "pinentry-mode loopback" >> "$HOME/.gnupg/gpg.conf"
+
+  gpgconf --kill gpg-agent || true
+
+  echo "Import private key..."
+  gpg --batch --yes --import "$GPG_KEY"
+
+  echo "Configuring git to read GPG passphrase from file..."
+  git config --global gpg.program /usr/local/bin/gpg-loopback
 fi
 
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
