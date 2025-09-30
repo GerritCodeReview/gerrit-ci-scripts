@@ -144,10 +144,6 @@ curl -X POST \
     echo "manual upload endpoint failed. Aborting release."
     exit 4
   }
-
-echo "Download the artifacts from SonaType staging repository at https://oss.sonatype.org"
-echo "logging in using your credentials"
-
 popd
 
 cp -f gerrit/bazel-bin/Documentation/searchfree.zip .
