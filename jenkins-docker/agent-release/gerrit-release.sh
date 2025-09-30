@@ -20,6 +20,8 @@ export version=$2
 export nextversion=$3
 export migrationversion=$4
 
+export CLOUDSDK_AUTH_ACCESS_TOKEN="$GCLOUD_AUTH_TOKEN"
+
 bazel_config=""
 if [ "$branch" == "stable-3.11" ]; then
   bazel_config="--config=java21"
@@ -139,17 +141,14 @@ shasum gerrit-"$version".war
 shasum -a 256 gerrit-"$version".war
 md5sum gerrit-"$version".war
 
-echo "Pushing to Google Cloud Buckets"
-gcloud auth login
-
 echo "Pushing gerrit.war to gerrit-releases ..."
-gsutil cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
+gcloud storage cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
 
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
 pushd Documentation
 version_no_rc=$(echo "$version" | cut -d '-' -f 1)
-gsutil cp -r . gs://gerrit-documentation/Documentation/"$version_no_rc"
+gcloud storage cp --recursive . gs://gerrit-documentation/Documentation/"$version_no_rc"
 popd
 
 echo "Setting next version tag to $nextversion ..."
