@@ -1,0 +1,8 @@
+- project:
+    name: healthcheck-enterprise
+    repo: healthcheck-enterprise
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
