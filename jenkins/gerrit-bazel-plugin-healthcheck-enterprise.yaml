@@ -1,0 +1,6 @@
+- project:
+    name: healthcheck-enterprise
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
