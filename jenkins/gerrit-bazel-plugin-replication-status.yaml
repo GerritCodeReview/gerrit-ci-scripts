@@ -1,7 +1,9 @@
 - project:
     name: replication-status
+    repo: replication-status
+    organization: GerritForge
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
@@ -10,3 +12,4 @@
           gerrit-branch:
             - stable-3.10
       - 'plugin-{name}-verifier'
+      - 'plugin-{name}-verifier-gh'
