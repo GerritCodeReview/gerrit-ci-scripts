@@ -1,6 +1,7 @@
 - job-template:
-    name: 'app-{name}-sbt-{branch}'
-    description: 'App {name} {branch} branch build with Sbt'
+    name: 'app-{name}-gh-sbt-{branch}'
+    description: >
+      App {name} {branch} branch build with Sbt owned by {organization} and hosted on GitHub'
     node: sbt
     targets: compile test assembly
     wrappers:
@@ -26,8 +27,7 @@
       - git:
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/a/apps/{name}
-                credentials-id: gerrit.googlesource.com
+                url: https://github.com/{organization}/{repo}
           branches:
             - origin/{branch}
           submodule:
@@ -47,7 +47,9 @@
 
 - project:
     name: analytics-etl
+    repo: analytics-etl
+    organization: GerritForge
     jobs:
-      - 'app-{name}-sbt-{branch}':
+      - 'app-{name}-gh-sbt-{branch}':
           branch:
             - master
