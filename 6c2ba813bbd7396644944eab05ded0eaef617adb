@@ -22,6 +22,30 @@
       },
       "revId": "6c2ba813bbd7396644944eab05ded0eaef617adb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03b0d6f0_d259afc5",
+        "filename": "jenkins/gerrit-sbt-plugin-template.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T20:24:56Z",
+      "side": 1,
+      "message": "It is actually related: without a shorter description, the Code-Style would have failed.",
+      "parentUuid": "88fadef4_e201e219",
+      "range": {
+        "startLine": 53,
+        "startChar": 1,
+        "endLine": 54,
+        "endChar": 83
+      },
+      "revId": "6c2ba813bbd7396644944eab05ded0eaef617adb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
