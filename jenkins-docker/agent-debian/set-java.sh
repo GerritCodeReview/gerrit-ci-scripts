@@ -17,7 +17,7 @@ if [ "$1" == "--branch" ]
 then
   shift
   case "$1" in
-    master|stable-3.11|stable-3.12)
+    master|stable-3.11|stable-3.12|stable-3.13)
       JAVA_VERSION=21
       ;;
 
