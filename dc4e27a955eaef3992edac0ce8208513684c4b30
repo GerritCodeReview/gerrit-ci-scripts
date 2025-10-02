@@ -22,6 +22,30 @@
       },
       "revId": "dc4e27a955eaef3992edac0ce8208513684c4b30",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16230d2e_9272b495",
+        "filename": "jenkins/gerrit-app-analytics-etl.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T14:23:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d7683ce_d5d7fdae",
+      "range": {
+        "startLine": 31,
+        "startChar": 16,
+        "endLine": 31,
+        "endChar": 55
+      },
+      "revId": "dc4e27a955eaef3992edac0ce8208513684c4b30",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
