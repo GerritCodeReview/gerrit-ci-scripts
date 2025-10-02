@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1cb9258_4bbfab24",
+        "filename": "jenkins/gerrit-bazel-module-cached-refdb.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-10-02T18:00:45Z",
+      "side": 1,
+      "message": "We are going to build the community master branch against 3.11, which makes sense.\n\nHowever this *master* is not necessarily going to be the same *master* from gh: is that something that needs highlighting?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "562163971f78360d33e0ef69632e601aa583920b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
