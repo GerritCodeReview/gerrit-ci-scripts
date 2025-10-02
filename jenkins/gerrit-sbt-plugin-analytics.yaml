@@ -3,5 +3,7 @@
     jobs:
       - 'plugin-{name}-sbt-{branch}':
           branch:
-            - master
             - stable-3.10
+      - 'plugin-{name}-gh-sbt-{branch}':
+          branch:
+            - master
