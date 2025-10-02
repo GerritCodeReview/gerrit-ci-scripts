@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99a4439b_e7b6a040",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T20:20:15Z",
+      "side": 1,
+      "message": "Would be best to have this as the default option.",
+      "range": {
+        "startLine": 20,
+        "startChar": 4,
+        "endLine": 20,
+        "endChar": 47
+      },
+      "revId": "083a170673a74ed5166a57172ea18847c971bc66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "895d5340_e836996c",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T20:20:15Z",
+      "side": 1,
+      "message": "Unrelated: `stable-3.9` is EOL, so we don\u0027t need this anymore.",
+      "range": {
+        "startLine": 24,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "083a170673a74ed5166a57172ea18847c971bc66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc1e4b0c_6810f2c2",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T20:20:15Z",
+      "side": 1,
+      "message": "We don\u0027t release anything on Java 11 anymore.",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 21
+      },
+      "revId": "083a170673a74ed5166a57172ea18847c971bc66",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
