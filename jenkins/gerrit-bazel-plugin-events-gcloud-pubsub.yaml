@@ -1,7 +1,9 @@
 - project:
     name: events-gcloud-pubsub
+    repo: events-gcloud-pubsub
+    organization: GerritForge
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-gh-bazel-{branch}':
           extra-modules: 'events-broker'
           branch:
             - master
@@ -12,3 +14,4 @@
           gerrit-branch:
             - stable-3.10
       - 'plugin-{name}-verifier'
+      - 'plugin-{name}-verifier-gh'
