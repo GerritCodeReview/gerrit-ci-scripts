@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e859cf0e_bea7e741",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-10-02T11:56:37Z",
+      "side": 1,
+      "message": "Couldn\u0027t gerrit core be fixed to incorporate some of the accounts plugin?",
+      "revId": "72bdcdfe391ad778f2f77c9d441ba0666023c2a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
