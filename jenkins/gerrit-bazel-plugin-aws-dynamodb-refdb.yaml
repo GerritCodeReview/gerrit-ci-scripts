@@ -1,11 +1,16 @@
 - project:
     name: aws-dynamodb-refdb
+    repo: aws-dynamodb-refdb
+    organization: GerritForge
+    extra-modules: 'global-refdb'
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          extra-modules: 'global-refdb'
           branch:
-            - master
             - stable-3.12
             - stable-3.11
             - stable-3.10
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
       - 'plugin-{name}-verifier'
+      - 'plugin-{name}-verifier-gh'
