@@ -1,6 +1,6 @@
 - job-template:
-    name: 'plugin-account-bazel-{branch}'
-    description: 'Plugin account {branch} branch build with Bazel'
+    name: 'plugin-account-gh-bazel-{branch}'
+    description: 'Plugin account {branch} branch build with Bazel owned by {organization} and hosted on GitHub'
     defaults: plugin-template-bazel
     node: bazel-debian
     class: plugins
@@ -9,8 +9,7 @@
       - git:
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/a/plugins/{name}
-                credentials-id: gerrit.googlesource.com
+                url: https://github.com/{organization}/{repo}
             - gerrit:
                 url: https://gerrit.googlesource.com/a/gerrit
                 credentials-id: gerrit.googlesource.com
@@ -38,7 +37,9 @@
 
 - project:
     name: account
+    repo: account
+    organization: GerritForge
     jobs:
-      - 'plugin-account-bazel-{branch}':
+      - 'plugin-account-gh-bazel-{branch}':
           branch:
             - master
