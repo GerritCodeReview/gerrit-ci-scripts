@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c178e5dc_3ce5e7fc",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T11:21:48Z",
+      "side": 1,
+      "message": "```suggestion\n  echo \"* GITCOOKIES:\"\n```",
+      "range": {
+        "startLine": 17,
+        "startChar": 8,
+        "endLine": 17,
+        "endChar": 10
+      },
+      "revId": "68287e18913b32029a9256688353e2d92cb21a91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
