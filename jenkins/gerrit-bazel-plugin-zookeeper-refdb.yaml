@@ -1,12 +1,17 @@
 - project:
     name: zookeeper-refdb
+    repo: zookeeper-refdb
+    organization: GerritForge
+    extra-modules: 'global-refdb'
+    targets: "plugins/{name}:{name}"
     jobs:
       - 'plugin-{name}-bazel-{branch}':
-          targets: "plugins/{name}:{name}"
           branch:
-            - master
             - stable-3.12
             - stable-3.11
             - stable-3.10
-          extra-modules: 'global-refdb'
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
       - 'plugin-{name}-verifier'
+      - 'plugin-{name}-verifier-gh'
