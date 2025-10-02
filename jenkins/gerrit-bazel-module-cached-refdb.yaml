@@ -1,13 +1,14 @@
 - project:
     name: cached-refdb
+    repo: cached-refdb
+    organization: GerritForge
     jobs:
-      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - stable-3.11
+            - stable-3.10
+      - 'module-{name}-gh-bazel-{branch}':
           branch:
             - master
-          gerrit-branch:
-            - stable-3.11
-      - 'module-{name}-bazel-{branch}':
-          gerrit-branch:
-            - master
-            - stable-3.10
       - 'module-{name}-verifier'
+      - 'module-{name}-verifier-gh'
