@@ -1,8 +1,13 @@
 - project:
     name: git-refs-filter
+    repo: git-refs-filter
+    organization: GerritForge
     jobs:
       - 'module-{name}-bazel-{branch}':
           branch:
             - master
             - stable-3.11
             - stable-3.10
+      - 'module-{name}-gh-bazel-{branch}':
+          branch:
+            - master
