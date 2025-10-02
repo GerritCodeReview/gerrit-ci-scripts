@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a784f613_fce2057e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T11:35:09Z",
+      "side": 1,
+      "message": "```suggestion\nrelease: add Jenkins job for Gerrit release pipeline w/ manual trigger\n```",
+      "range": {
+        "startLine": 7,
+        "startChar": 29,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "c5921b7d1c180fd2c1ab41eb42f635684568b021",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30a84d96_dcb18ad7",
+        "filename": "jenkins-internal/gerrit-release.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T11:35:09Z",
+      "side": 1,
+      "message": "```suggestion\n    description: \"Manually-triggered pipeline for Gerrit release\"\n```",
+      "range": {
+        "startLine": 18,
+        "startChar": 27,
+        "endLine": 18,
+        "endChar": 34
+      },
+      "revId": "c5921b7d1c180fd2c1ab41eb42f635684568b021",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
