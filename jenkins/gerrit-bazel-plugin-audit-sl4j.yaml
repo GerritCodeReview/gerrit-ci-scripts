@@ -1,7 +1,9 @@
 - project:
     name: audit-sl4j
+    repo: audit-sl4j
+    organization: GerritForge
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
+      - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
