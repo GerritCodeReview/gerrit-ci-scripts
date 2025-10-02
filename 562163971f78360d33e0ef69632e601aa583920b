@@ -22,6 +22,30 @@
       },
       "revId": "562163971f78360d33e0ef69632e601aa583920b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed85f6ce_1a7e803d",
+        "filename": "jenkins/gerrit-bazel-module-cached-refdb.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-02T20:26:35Z",
+      "side": 1,
+      "message": "Good point, let me create the stable-3.11 branch on top master and let\u0027s build on that one instead.",
+      "parentUuid": "a1cb9258_4bbfab24",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "562163971f78360d33e0ef69632e601aa583920b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
