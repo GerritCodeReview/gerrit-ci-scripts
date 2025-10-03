@@ -33,11 +33,3 @@ export JAVA_HOME=/usr/lib/jvm/temurin-$JAVA_VERSION-jdk-amd64
 export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
 
 echo "Java set to: $(which java)"
-
-if [ "$JAVA_VERSION" == "11" ] || [ "$JAVA_VERSION" == "17" ] || \
-    [ "$JAVA_VERSION" == "21" ]
-then
-  # See Bazel Issue 3236 with Java 11/17/21 [https://github.com/bazelbuild/bazel/issues/3236]
-  export BAZEL_OPTS="$BAZEL_OPTS --sandbox_tmpfs_path=/tmp"
-fi
-
