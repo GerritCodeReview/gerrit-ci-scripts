@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e60f8dd_fff67419",
+        "filename": "jenkins/gerrit-bazel-plugin-websession-broker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-06T07:13:26Z",
+      "side": 1,
+      "message": "Who will maintain the master version of websession-broker?\nIs SAP volunteering to take over the development and support for it?",
+      "range": {
+        "startLine": 9,
+        "startChar": 14,
+        "endLine": 9,
+        "endChar": 20
+      },
+      "revId": "6743614ad3a827aa90747a8d5725777288cbe3ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
