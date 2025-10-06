@@ -15,9 +15,6 @@ case $TARGET_BRANCH$MODE in
   masternotedb|stable-3.10notedb|stable-3.11notedb|stable-3.12notedb|stable-3.13notedb)
     TEST_TAG_FILTER="-flaky,elastic,no_rbe"
     ;;
-  stable-2.*)
-    TEST_TAG_FILTER="-flaky,-elastic"
-    ;;
   *)
     TEST_TAG_FILTER="-flaky"
 esac
