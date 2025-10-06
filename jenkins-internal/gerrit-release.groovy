@@ -65,7 +65,6 @@ EOF
                                 passwordVariable: 'OSSHR_TOKEN'
                         ),
                         file(credentialsId: 'gitcookies',      variable: 'GITCOOKIES'),
-                        file(credentialsId: 'gitconfig',       variable: 'GITCONFIG_TMPL'),
                         file(credentialsId: 'gpg_private',     variable: 'GPG_KEY'),
                         file(credentialsId: 'gpg_passphrase',  variable: 'GPG_PASSPHRASE_FILE')
                 ]) {
