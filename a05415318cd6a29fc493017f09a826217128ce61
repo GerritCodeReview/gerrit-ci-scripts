@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85ec1c6b_0030ec33",
+        "filename": "jenkins-internal/gerrit-release.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-06T10:33:40Z",
+      "side": 1,
+      "message": "Post-merge -1: this should be `gerrit` and not `gatling`.",
+      "range": {
+        "startLine": 16,
+        "startChar": 10,
+        "endLine": 16,
+        "endChar": 17
+      },
+      "revId": "a05415318cd6a29fc493017f09a826217128ce61",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
