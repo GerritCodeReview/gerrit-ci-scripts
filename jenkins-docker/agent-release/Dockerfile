@@ -10,7 +10,7 @@ RUN apt-get update --allow-releaseinfo-change && \
 
 COPY gerrit-release.sh /usr/local/bin
 COPY gerrit-upgrade-test.sh /usr/local/bin
-COPY gpg-loopback /usr/local/bin/gpg-loopback
+COPY --chmod=555 gpg-loopback /usr/local/bin/gpg-loopback
 
 USER jenkins
 
