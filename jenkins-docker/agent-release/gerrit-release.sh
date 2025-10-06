@@ -16,8 +16,6 @@ then
   echo "Environment variables:"
   echo "* GCLOUD_AUTH_TOKEN:"
   echo "     OAuth2 access token, used to upload artifacts and documentation to gcloud"
-  echo "* GITCONFIG_TMPL:"
-  echo "     Path to a gitconfig template to be installed to \$HOME/.gitconfig for git client configuration"
   echo "* GITCOOKIES:"
   echo "     Path to a .gitcookies file that will be installed to \$HOME/.gitcookies enabling git authentication"
   echo "* GPG_KEY:"
@@ -52,12 +50,6 @@ then
   rm -Rf gerrit
 fi
 
-if [ -f "$GITCONFIG_TMPL" ]
-then
-  echo "Installing $GITCONFIG_TMPL..."
-  install -m 600 "$GITCONFIG_TMPL" "$HOME/.gitconfig"
-fi
-
 if [ -f "$GITCOOKIES" ]
 then
   echo "Configuring cookiefile..."
@@ -82,6 +74,10 @@ then
   echo "Configuring git to read GPG passphrase from file..."
   git config --global gpg.program /usr/local/bin/gpg-loopback
 fi
+
+GPG_USER=$(gpg -K --with-colons | grep uid | cut -d ':' -f 10)
+git config --global user.name $(echo "$GPG_USER" | sed 's/ *<.*>//')
+git config --global user.email $(echo "$GPG_USER" | sed 's/.*<//' | sed 's/>//')
 
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
 git config --global credential.helper cache
