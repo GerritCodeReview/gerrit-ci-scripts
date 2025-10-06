@@ -13,7 +13,7 @@
 # limitations under the License.
 
 - job:
-    name: gatling-release
+    name: gerrit-release
     project-type: pipeline
     description: "Manually-triggered pipeline for Gerrit release"
     concurrent: false
