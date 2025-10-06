@@ -1,6 +1,0 @@
-- project:
-    name: analytics-wizard
-    jobs:
-      - 'plugin-{name}-gh-sbt-{branch}':
-          branch:
-            - master
