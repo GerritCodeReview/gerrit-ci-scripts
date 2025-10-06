@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed65ffbd_af2b6d67",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-06T23:23:17Z",
+      "side": 0,
+      "message": "How is the `$HOME/.m2/settings.xml` file going to be generated?\nThe deploy steps at L127/L128 were failing: I had to create the `$HOME/.m2/settings.xml` to complete the release and publish to Maven.\n\nI believe we have to generate the `$HOME/.m2/settings.xml` based on the environment variables passed.",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 0
+      },
+      "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
