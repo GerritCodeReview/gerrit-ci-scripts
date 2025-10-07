@@ -70,6 +70,30 @@
       },
       "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0457fc92_4c784c5a",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-10-07T07:21:47Z",
+      "side": 0,
+      "message": "Yep, we can discuss it. I thought you saw this during review.\nI still don\u0027t understand why you had to generate one manually?",
+      "parentUuid": "e4ca4a93_abb93eea",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 0
+      },
+      "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
