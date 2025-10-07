@@ -9,3 +9,4 @@
       - 'plugin-{name}-gh-sbt-{branch}':
           branch:
             - master
+            - stable-3.13
