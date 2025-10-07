@@ -142,6 +142,30 @@
       },
       "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7573cc13_c546466b",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-07T17:40:22Z",
+      "side": 0,
+      "message": "\u003e \u003e \u003e Yep, we can discuss it. I thought you saw this during review.\n\u003e \u003e \n\u003e \u003e I admit I didn’t pay too much attention in why you were generating it there.\n\u003e \n\u003e Ack\n\u003e \n\u003e \u003e \n\u003e \u003e \u003e I still don\u0027t understand why you had to generate one manually?\n\u003e \u003e \n\u003e \u003e When you run the script outside the pipeline it doesn’t get generated.\n\u003e \n\u003e I thought the exercise was to stop running the script manually and to automate it via the Jenkins pipeline. Do we still want to run the script outside the pipeline?\n\nWhen the pipeline doesn\u0027t work, you have no other options.\n\n\u003e \u003e I believe we either go back and use it externally as XML or request the variables. We need to give both is just an over complication and makes the release more brittle.\n\u003e \n\u003e AFAIU, the variables are the only input needed; we are just deriving the XML from it.\n\u003e I am not fully onboard on why you think this is brittle, but let\u0027s discuss 😊\n\nNo really, the script needs *both* the variables *and* the XML, with the same values in there.\n\nI am happy to either keep the XML only and derive the variables from it *OR* to keep only the variables and generate the XML.\n\nHaving both, it\u0027s confusing and prone to problems.",
+      "parentUuid": "a7621ef2_a8e47087",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 0
+      },
+      "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
