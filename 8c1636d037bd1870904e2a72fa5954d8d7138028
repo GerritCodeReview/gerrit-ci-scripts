@@ -94,6 +94,30 @@
       },
       "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c1e40dc_ae5c26f0",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-07T07:32:00Z",
+      "side": 0,
+      "message": "\u003e Yep, we can discuss it. I thought you saw this during review.\n\nI admit I didn’t pay too much attention in why you were generating it there.\n\n\u003e I still don\u0027t understand why you had to generate one manually?\n\nWhen you run the script outside the pipeline it doesn’t get generated.\n\nI believe we either go back and use it externally as XML or request the variables. We need to give both is just an over complication and makes the release more brittle.",
+      "parentUuid": "0457fc92_4c784c5a",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 0
+      },
+      "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
