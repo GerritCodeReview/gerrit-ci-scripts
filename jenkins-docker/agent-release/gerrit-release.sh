@@ -50,6 +50,11 @@ then
   rm -Rf gerrit
 fi
 
+echo "Installing maven credentials"
+mkdir -p "$HOME/.m2"
+# shellcheck disable=SC2016
+envsubst '$OSSHR_USER $OSSHR_TOKEN' < /tmp/m2.settings.xml.template > "$HOME/.m2/settings.xml"
+
 if [ -f "$GITCOOKIES" ]
 then
   echo "Configuring cookiefile..."

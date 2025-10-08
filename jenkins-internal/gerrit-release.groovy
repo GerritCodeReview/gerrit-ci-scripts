@@ -36,33 +36,6 @@ pipeline {
                                 credentialsId: 'ossrh-staging-api.central.sonatype.com',
                                 usernameVariable: 'OSSHR_USER',
                                 passwordVariable: 'OSSHR_TOKEN'
-                        )
-                ]) {
-                    sh '''
-                        umask 077
-                        mkdir -p "$HOME/.m2"
-                        cat > "$HOME/.m2/settings.xml" <<EOF
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  <servers>
-    <server>
-      <id>OSSRH-staging</id>
-      <username>${OSSHR_USER}</username>
-      <password>${OSSHR_TOKEN}</password>
-    </server>
-  </servers>
-</settings>
-EOF
-          '''
-                }
-
-                withCredentials([
-                        usernamePassword(
-                                credentialsId: 'ossrh-staging-api.central.sonatype.com',
-                                usernameVariable: 'OSSHR_USER',
-                                passwordVariable: 'OSSHR_TOKEN'
                         ),
                         file(credentialsId: 'gitcookies',      variable: 'GITCOOKIES'),
                         file(credentialsId: 'gpg_private',     variable: 'GPG_KEY'),
