@@ -19,6 +19,7 @@ pipeline {
 
     parameters {
         password(name: 'GCLOUD_AUTH_TOKEN', defaultValue: '', description: "Gcloud Auth token obtained via 'gcloud auth login' and then 'gcloud auth print-access-token'")
+        password(name: 'GPG_PASSPHRASE', defaultValue: '', description: "GPG key passphrase")
         string(name: 'VERSION',           defaultValue: '', description: 'Gerrit semantic release number')
         string(name: 'BRANCH',            defaultValue: '', description: 'Gerrit branch name where the release must be cut')
         string(name: 'NEXT_VERSION',      defaultValue: '', description: 'Next SNAPSHOT version after release')
@@ -26,6 +27,7 @@ pipeline {
     }
     environment {
         GCLOUD_AUTH_TOKEN = "${params.GCLOUD_AUTH_TOKEN}"
+        GPG_PASSPHRASE = "${params.GPG_PASSPHRASE}"
     }
     stages {
 
@@ -43,7 +45,6 @@ pipeline {
                                 passwordVariable: 'GS_GIT_PASS'
                         ),
                         string(credentialsId: 'gpg-key',     variable: 'GPG_KEY'),
-                        file(credentialsId: 'gpg_passphrase',  variable: 'GPG_PASSPHRASE_FILE')
                 ]) {
                     sh "gerrit-release.sh ${params.BRANCH} ${params.VERSION} ${params.NEXT_VERSION} ${params.MIGRATION_VERSION}"
                 }
