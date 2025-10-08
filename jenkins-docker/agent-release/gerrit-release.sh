@@ -16,8 +16,10 @@ then
   echo "Environment variables:"
   echo "* GCLOUD_AUTH_TOKEN:"
   echo "     OAuth2 access token, used to upload artifacts and documentation to gcloud"
-  echo "* GITCOOKIES:"
-  echo "     Path to a .gitcookies file that will be installed to \$HOME/.gitcookies enabling git authentication"
+  echo "* GS_GIT_USER:"
+  echo "     User for accessing the Gerrit repository @Google"
+  echo "* GS_GIT_PASS:"
+  echo "     Password for accessing the Gerrit repository @Google"
   echo "* GPG_KEY:"
   echo "     Path to private GPG key to be imported for signing"
   echo "* GPG_PASSPHRASE_FILE:"
@@ -50,11 +52,11 @@ then
   rm -Rf gerrit
 fi
 
-if [ -f "$GITCOOKIES" ]
+if [[ "$GS_GIT_USER" != "" ]] && [[ "$GS_GIT_PASS" != "" ]]
 then
-  echo "Configuring cookiefile..."
-  install -m 600 "$GITCOOKIES" "$HOME/.gitcookies"
-  git config --global http.cookiefile $HOME/.gitcookies
+  echo "Configuring .netrc credentials for accessing Gerrit @Google ..."
+  install -m 600 "$HOME/.netrc"
+  echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc
 fi
 
 if [ -f "$GPG_KEY" ]
