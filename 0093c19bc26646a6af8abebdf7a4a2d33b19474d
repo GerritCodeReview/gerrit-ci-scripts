@@ -70,6 +70,30 @@
       },
       "revId": "0093c19bc26646a6af8abebdf7a4a2d33b19474d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6eb02c4_ed33643a",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2025-10-08T07:43:13Z",
+      "side": 1,
+      "message": "I am aware of that and that is why I will not look at any code of the BSL version. So fixes that look the same will be completely by chance, e.g. if it is a oneliner. there might of course be by chance the same code to some degree.\n\nI would prefer not to take over ownership of the stable branches, because we are not using those at all.",
+      "parentUuid": "cdc43665_b85566b2",
+      "range": {
+        "startLine": 10,
+        "startChar": 14,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "0093c19bc26646a6af8abebdf7a4a2d33b19474d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
