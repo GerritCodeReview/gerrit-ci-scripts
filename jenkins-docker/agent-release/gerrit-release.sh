@@ -98,7 +98,7 @@ git clean -fdx
 git commit -a -m 'Set version to '$version'
 
 Release-Notes: skip'
-git push origin HEAD:refs/for/"$branch"
+# git push origin HEAD:refs/for/"$branch"
 
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
@@ -171,7 +171,7 @@ git clean -fdx
 git commit -a -m 'Set version to '$nextversion'
 
 Release-Notes: skip'
-git push origin HEAD:refs/for/"$branch"
+# git push origin HEAD:refs/for/"$branch"
 popd
 
 echo "Release completed"
