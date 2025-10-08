@@ -94,6 +94,30 @@
       },
       "revId": "0093c19bc26646a6af8abebdf7a4a2d33b19474d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39e4ebcc_ce51b33b",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-08T08:08:48Z",
+      "side": 1,
+      "message": "\u003e I am aware of that and that is why I will not look at any code of the BSL version. So fixes that look the same will be completely by chance, e.g. if it is a oneliner. there might of course be by chance the same code to some degree.\n\u003e \n\u003e I would prefer not to take over ownership of the stable branches, because we are not using those at all.\n\nIf don\u0027t use the NoOpRefDb instead? That\u0027s OS and it is part of the global-refdb library and working E2E. If that\u0027s just for testing with k8s-gerrit, that would work.",
+      "parentUuid": "e6eb02c4_ed33643a",
+      "range": {
+        "startLine": 10,
+        "startChar": 14,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "0093c19bc26646a6af8abebdf7a4a2d33b19474d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
