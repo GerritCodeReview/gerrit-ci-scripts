@@ -17,7 +17,7 @@ then
   echo "* GCLOUD_AUTH_TOKEN:"
   echo "     OAuth2 access token, used to upload artifacts and documentation to gcloud"
   echo "* GPG_KEY:"
-  echo "     Path to private GPG key to be imported for signing"
+  echo "     GPG key to be imported for signing"
   echo "* GPG_PASSPHRASE_FILE:"
   echo "     Path to file containing the GPG passphrase"
   echo "* GS_GIT_USER:"
@@ -61,7 +61,7 @@ echo "Installing git credentials..."
 echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS" > "$HOME/.netrc"
 chmod 600 "$HOME/.netrc"
 
-if [ -f "$GPG_KEY" ]
+if [ -n "$GPG_KEY" ]
 then
   echo "Configuring GPG keys..."
   mkdir -p "$HOME/.gnupg"
@@ -73,7 +73,10 @@ then
   gpgconf --kill gpg-agent || true
 
   echo "Import private key..."
-  gpg --batch --yes --import "$GPG_KEY"
+
+  # The use of 'envsubst' allows to avoid the accidental display of the GPG key in the output
+  echo '$GPG_KEY' | envsubst '$GPG_KEY' > "/tmp/gpg-key"
+  gpg --batch --yes --import /tmp/gpg-key && rm -f /tmp/gpg-key
 
   echo "Configuring git to read GPG passphrase from file..."
   git config --global gpg.program /usr/local/bin/gpg-loopback
