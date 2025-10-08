@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1a5b2a5_afe2bb39",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-08T21:28:22Z",
+      "side": 1,
+      "message": "I have verified that I can set the key in the credentials, they are loaded into the Jenkins vault automatically and imported into the GPG keystore automatically upon execution of the gerrit-release.sh script.",
+      "revId": "da252b0b154fd4f95ac9f7d61cd60f4d7182e82c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
