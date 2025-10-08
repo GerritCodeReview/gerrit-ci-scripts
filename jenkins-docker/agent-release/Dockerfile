@@ -11,6 +11,7 @@ RUN apt-get update --allow-releaseinfo-change && \
 COPY gerrit-release.sh /usr/local/bin
 COPY gerrit-upgrade-test.sh /usr/local/bin
 COPY --chmod=555 gpg-loopback /usr/local/bin/gpg-loopback
+COPY m2.settings.xml.template /tmp/m2.settings.xml.template
 
 USER jenkins
 
