@@ -37,7 +37,11 @@ pipeline {
                                 usernameVariable: 'OSSHR_USER',
                                 passwordVariable: 'OSSHR_TOKEN'
                         ),
-                        file(credentialsId: 'gitcookies',      variable: 'GITCOOKIES'),
+                        usernamePassword(
+                                credentialsId: 'gerrit.googlesource.com',
+                                usernameVariable: 'GS_GIT_USER',
+                                passwordVariable: 'GS_GIT_PASS'
+                        ),
                         file(credentialsId: 'gpg_private',     variable: 'GPG_KEY'),
                         file(credentialsId: 'gpg_passphrase',  variable: 'GPG_PASSPHRASE_FILE')
                 ]) {

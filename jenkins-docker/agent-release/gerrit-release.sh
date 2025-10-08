@@ -16,12 +16,14 @@ then
   echo "Environment variables:"
   echo "* GCLOUD_AUTH_TOKEN:"
   echo "     OAuth2 access token, used to upload artifacts and documentation to gcloud"
-  echo "* GITCOOKIES:"
-  echo "     Path to a .gitcookies file that will be installed to \$HOME/.gitcookies enabling git authentication"
   echo "* GPG_KEY:"
   echo "     Path to private GPG key to be imported for signing"
   echo "* GPG_PASSPHRASE_FILE:"
   echo "     Path to file containing the GPG passphrase"
+  echo "* GS_GIT_USER:"
+  echo "     Username for git operations targeting gerrit.googlesource.com"
+  echo "* GS_GIT_PASS:"
+  echo "     Password for git operations targeting gerrit.googlesource.com"
   echo "* OSSHR_USER:"
   echo "     Username used to upload artifacts to Maven Central"
   echo "* OSSHR_TOKEN:"
@@ -55,12 +57,9 @@ mkdir -p "$HOME/.m2"
 # shellcheck disable=SC2016
 envsubst '$OSSHR_USER $OSSHR_TOKEN' < /tmp/m2.settings.xml.template > "$HOME/.m2/settings.xml"
 
-if [ -f "$GITCOOKIES" ]
-then
-  echo "Configuring cookiefile..."
-  install -m 600 "$GITCOOKIES" "$HOME/.gitcookies"
-  git config --global http.cookiefile $HOME/.gitcookies
-fi
+echo "Installing git credentials..."
+echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS" > "$HOME/.netrc"
+chmod 600 "$HOME/.netrc"
 
 if [ -f "$GPG_KEY" ]
 then
