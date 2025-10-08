@@ -42,7 +42,7 @@ pipeline {
                                 usernameVariable: 'GS_GIT_USER',
                                 passwordVariable: 'GS_GIT_PASS'
                         ),
-                        file(credentialsId: 'gpg_private',     variable: 'GPG_KEY'),
+                        string(credentialsId: 'gpg-key',     variable: 'GPG_KEY'),
                         file(credentialsId: 'gpg_passphrase',  variable: 'GPG_PASSPHRASE_FILE')
                 ]) {
                     sh "gerrit-release.sh ${params.BRANCH} ${params.VERSION} ${params.NEXT_VERSION} ${params.MIGRATION_VERSION}"
