@@ -46,6 +46,30 @@
       },
       "revId": "0093c19bc26646a6af8abebdf7a4a2d33b19474d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdc43665_b85566b2",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-08T07:29:53Z",
+      "side": 1,
+      "message": "\u003e For zookeeper-refdb, we at SAP would take over minimal maintenance. Since we are not actively using it (only for running tests on k8sgerrit), we would not take care of adding new features, but keep it in a state that it will build with the current state of master and look into bugs until somebody else will take over the maintainer role.\n\nCool, will you also take care of the maintenance on the stable branches?\n\nOne note: as you may know, you won\u0027t be able to cherry-pick the fixes of the BSL version; all the code must be your unique invention and authorship.",
+      "parentUuid": "4c12a408_f081e9b2",
+      "range": {
+        "startLine": 10,
+        "startChar": 14,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "0093c19bc26646a6af8abebdf7a4a2d33b19474d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
