@@ -18,8 +18,8 @@ then
   echo "     OAuth2 access token, used to upload artifacts and documentation to gcloud"
   echo "* GPG_KEY:"
   echo "     GPG key to be imported for signing"
-  echo "* GPG_PASSPHRASE_FILE:"
-  echo "     Path to file containing the GPG passphrase"
+  echo "* GPG_PASSPHRASE:"
+  echo "     GPG passphrase"
   echo "* GS_GIT_USER:"
   echo "     Username for git operations targeting gerrit.googlesource.com"
   echo "* GS_GIT_PASS:"
@@ -79,6 +79,8 @@ then
   gpg --batch --yes --import /tmp/gpg-key && rm -f /tmp/gpg-key
 
   echo "Configuring git to read GPG passphrase from file..."
+  export GPG_PASSPHRASE_FILE="$HOME/.gnupg/gpg-passphrase"
+  echo '$GPG_PASSPHRASE' | envsubst '$GPG_PASSPHRASE' > $GPG_PASSPHRASE_FILE
   git config --global gpg.program /usr/local/bin/gpg-loopback
 fi
 
