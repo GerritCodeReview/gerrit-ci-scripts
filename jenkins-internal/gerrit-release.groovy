@@ -18,7 +18,7 @@ pipeline {
     agent { label 'gerrit-release-bazel' }
 
     parameters {
-        password(name: 'GCLOUD_AUTH_TOKEN', defaultValue: '', description: "Gcloud Auth token obtained via 'gcloud auth login' and then 'gcloud print-access-token'")
+        password(name: 'GCLOUD_AUTH_TOKEN', defaultValue: '', description: "Gcloud Auth token obtained via 'gcloud auth login' and then 'gcloud auth print-access-token'")
         string(name: 'VERSION',           defaultValue: '', description: 'Gerrit semantic release number')
         string(name: 'BRANCH',            defaultValue: '', description: 'Gerrit branch name where the release must be cut')
         string(name: 'NEXT_VERSION',      defaultValue: '', description: 'Next SNAPSHOT version after release')
