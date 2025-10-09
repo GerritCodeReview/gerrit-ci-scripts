@@ -22,6 +22,30 @@
       },
       "revId": "951cee899b6cd8d87e59355e2655ea86097275ee",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97207feb_2073266e",
+        "filename": "jenkins/gerrit-bazel-plugin-healthcheck-enterprise.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-09T15:00:04Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "3b352c5e_c3534045",
+      "range": {
+        "startLine": 9,
+        "startChar": 22,
+        "endLine": 9,
+        "endChar": 28
+      },
+      "revId": "951cee899b6cd8d87e59355e2655ea86097275ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
