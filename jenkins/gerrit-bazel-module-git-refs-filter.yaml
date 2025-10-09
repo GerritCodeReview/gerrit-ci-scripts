@@ -10,3 +10,8 @@
       - 'module-{name}-gh-bazel-{branch}':
           branch:
             - master
+      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.13
