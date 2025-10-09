@@ -22,6 +22,47 @@
       },
       "revId": "5cdc33806c9e030c0b001167f45aa92b8a55ed55",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2ab8dac_bba6495c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-09T19:15:09Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "51b903ea_91ea79c6",
+      "range": {
+        "startLine": 7,
+        "startChar": 32,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "5cdc33806c9e030c0b001167f45aa92b8a55ed55",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6937561c_02cd85f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-09T19:15:09Z",
+      "side": 1,
+      "message": "What an irony, I had a typo in a commit that fixes typos 😂",
+      "revId": "5cdc33806c9e030c0b001167f45aa92b8a55ed55",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
