@@ -6,6 +6,11 @@
       - 'plugin-scripting-{name}-gh-bazel-{branch}':
           branch:
             - master
+      - 'plugin-scripting-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.13
       - 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
