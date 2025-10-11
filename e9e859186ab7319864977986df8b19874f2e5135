@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce2ccc0c_5464e00d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-11T20:28:54Z",
+      "side": 1,
+      "message": "```suggestion\nBuild zookeeper-refdb plugin on stable-3.13\n```",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 48
+      },
+      "revId": "e9e859186ab7319864977986df8b19874f2e5135",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c7d52f6_7302bb8d",
+        "filename": "jenkins/gerrit-bazel-plugin-zookeeper-refdb.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-11T20:28:54Z",
+      "side": 1,
+      "message": "```suggestion\n      - \u0027plugin-{name}-gh-bazel-{branch}\u0027:\n          branch:\n            - master\n            - stable-3.13\n```\n\nI have created the stable-3.13 branch.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 25
+      },
+      "revId": "e9e859186ab7319864977986df8b19874f2e5135",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
