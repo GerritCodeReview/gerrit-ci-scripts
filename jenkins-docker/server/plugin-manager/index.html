@@ -54,6 +54,7 @@
           <tr>
             <th>Plugin Name</th>
             <th>Version</th>
+            <th>Source</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -65,6 +66,9 @@
               <div ng-if="prop.update_version">
               <span class="glyphicon glyphicon-save"></span><b>&nbsp;{{prop.update_version}}</b>
               </div>
+            </td>
+            <td>
+              <p class="{{prop.source}}">{{prop.source}}</p>
             </td>
             <td>
               <h4>
