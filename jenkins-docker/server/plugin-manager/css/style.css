@@ -62,3 +62,13 @@ div.top-header {
 .navbar-form input.searchbox {
   width: 400px;
 }
+
+span.text-bg-warning {
+  background-color: RGBA(255, 193, 7, 1);
+  color: #000!important;
+}
+
+span.text-bg-primary {
+  background-color: RGBA(13, 110, 253, 1);
+  color: #fff!important;
+}
