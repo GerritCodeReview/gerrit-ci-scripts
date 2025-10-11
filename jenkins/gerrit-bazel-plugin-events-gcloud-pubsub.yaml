@@ -7,6 +7,11 @@
           extra-modules: 'events-broker'
           branch:
             - master
+      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.13
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           extra-modules: 'events-broker'
           branch:
