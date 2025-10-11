@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2c73439_5ab9890c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-11T20:23:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f76f92c_90ab5da7",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 52
+      },
+      "revId": "490b043855b033b2f56e7fab205f21b735da740c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "47f2531f_219d3422",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-10-11T08:47:40Z",
       "side": 1,
       "message": "```suggestion\n      - \u0027plugin-{name}-gh-bazel-{branch}\u0027:\n          branch:\n            - master\n            - stable-3.13\n```\n\nI have created the stable-3.13 branch.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "490b043855b033b2f56e7fab205f21b735da740c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1adeba35_7b9e59d5",
+        "filename": "jenkins/gerrit-bazel-plugin-events-kafka.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-11T20:23:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "47f2531f_219d3422",
       "range": {
         "startLine": 12,
         "startChar": 0,
