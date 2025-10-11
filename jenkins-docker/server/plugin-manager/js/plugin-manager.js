@@ -60,7 +60,11 @@ var app = angular.module('PluginManager', []).controller(
                     if (!pluginNameMatches) {
                        return;
                     }
-                    var pluginName = pluginNameMatches[2];
+
+                    var isGitHub = pluginNameMatches[2].endsWith("-gh");
+                    var source =  isGitHub ? "github" : "gerrit";
+                    var css = isGitHub ? "text-bg-warning" : "text-bg-primary";
+                    var pluginName = pluginNameMatches[2].replace("-gh", "");
                     $http.get($scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + '.json', plugins.httpConfig)
                          .then(function successCallback(pluginResponse) {
                       var currRow = $scope.pluginIndexOf(pluginName);
@@ -79,6 +83,8 @@ var app = angular.module('PluginManager', []).controller(
                       var fileEnding = plugin.name.match(uiPluginRegex) ? '.js' : '.jar';
                       currPlugin.url = $scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + fileEnding;
                       currPlugin.description = pluginResponse.data.description;
+                      currPlugin.source = source;
+                      currPlugin.css = css;
 
                       if (currRow < 0) {
                         plugins.list.push(currPlugin);
