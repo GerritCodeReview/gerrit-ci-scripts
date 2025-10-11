@@ -52,14 +52,14 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Plugin Name</th>
+            <th>Plugin Name | Source</th>
             <th>Version</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="prop in plugins.list | filter:searchPlugin">
-            <td><h4>{{prop.id}}<br/><small>{{prop.description.split('.')[0]}}</small></h4></td>
+            <td><h4>{{prop.id}} <span class="badge {{prop.css}}">{{prop.source}}</span><br/><small>{{prop.description.split('.')[0]}}</small></h4></td>
             <td>
               <p>{{prop.version}}</p>
               <div ng-if="prop.update_version">
