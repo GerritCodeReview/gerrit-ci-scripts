@@ -60,7 +60,7 @@ var app = angular.module('PluginManager', []).controller(
                     if (!pluginNameMatches) {
                        return;
                     }
-                    var pluginName = pluginNameMatches[2];
+                    var pluginName = pluginNameMatches[2].replace("-gh", "");
                     $http.get($scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + '.json', plugins.httpConfig)
                          .then(function successCallback(pluginResponse) {
                       var currRow = $scope.pluginIndexOf(pluginName);
