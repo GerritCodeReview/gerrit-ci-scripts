@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8f99450_35ef3c1d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-11T20:26:24Z",
+      "side": 1,
+      "message": "```suggestion\nBuild aws-dynamodb-refdb plugin on stable-3.13\n```",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 54
+      },
+      "revId": "44eb5f6ece8672aea04d289c00e3e0ea1bf9fec1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56892597_ce9a7a34",
+        "filename": "jenkins/gerrit-bazel-plugin-aws-dynamodb-refdb.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-11T20:26:24Z",
+      "side": 1,
+      "message": "```suggestion\n      - \u0027plugin-{name}-gh-bazel-{branch}\u0027:\n          branch:\n            - master\n            - stable-3.13\n```\n\nI have created the stable-3.13 branch.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "44eb5f6ece8672aea04d289c00e3e0ea1bf9fec1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
