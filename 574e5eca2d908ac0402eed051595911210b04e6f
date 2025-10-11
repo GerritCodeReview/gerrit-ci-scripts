@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6845a58d_f119ad27",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-11T20:22:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "08700a0c_c192f3ea",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 56
+      },
+      "revId": "574e5eca2d908ac0402eed051595911210b04e6f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bc3260d3_a5f0540f",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-10-11T09:06:55Z",
       "side": 1,
       "message": "```suggestion\n      - \u0027plugin-{name}-gh-bazel-{branch}\u0027:\n          branch:\n            - master\n            - stable-3.13\n```\n\nI have created the stable-3.13 branch.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 25
+      },
+      "revId": "574e5eca2d908ac0402eed051595911210b04e6f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b052609_61b447ab",
+        "filename": "jenkins/gerrit-bazel-plugin-pull-replication.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-11T20:22:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bc3260d3_a5f0540f",
       "range": {
         "startLine": 13,
         "startChar": 0,
