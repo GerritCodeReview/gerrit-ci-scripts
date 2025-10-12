@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Define repo status popup Angular methods within the controller
+// and expose to the $scope for use in HTML
+var repoStatusPopup = null;
+
 var app = angular.module('PluginManager', []).controller(
     'LoadInstalledPlugins',
     function($scope, $http, $location, $window) {
@@ -81,6 +85,7 @@ var app = angular.module('PluginManager', []).controller(
                       currPlugin.sha1 = plugin.sha1;
                       var uiPluginRegex = /(ui-plugin-)(.*)-bazel.*/;
                       var fileEnding = plugin.name.match(uiPluginRegex) ? '.js' : '.jar';
+                      currPlugin.jobUrl = $scope.getBaseUrl() + '/job/' + plugin.name;
                       currPlugin.url = $scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + fileEnding;
                       currPlugin.description = pluginResponse.data.description;
                       currPlugin.source = source;
@@ -103,6 +108,50 @@ var app = angular.module('PluginManager', []).controller(
 
       plugins.login = function () {
         $window.location.href = 'https://gerrit-ci.gerritforge.com/securityRealm/commenceLogin?from=%2F';
+      };
+
+      $scope.showRepoStatus = function(e, pluginJobUrl) {
+        if (!repoStatusPopup) {
+          repoStatusPopup = document.getElementById('repo-status-popup');
+        }
+        fetch(pluginJobUrl + '/lastSuccessfulBuild/api/json')
+          .then(
+            function successCallback(response) {
+              if (!repoStatusPopup) return;
+              repoStatusPopup.style.display = 'block';
+              repoStatusPopup.textContent = 'Repo status: ' + response.data.actions;
+              // Place popup near mouse, offset for cursor
+              var x = e.pageX + 12;
+              var y = e.pageY + 12;
+              repoStatusPopup.style.left = x + 'px';
+              repoStatusPopup.style.top = y + 'px';
+            }, function errorCallback(response) {
+              if (!repoStatusPopup) return;
+              repoStatusPopup.style.display = 'block';
+              repoStatusPopup.textContent = 'Repo status: unavailable';
+              var x = e.pageX + 12;
+              var y = e.pageY + 12;
+              repoStatusPopup.style.left = x + 'px';
+              repoStatusPopup.style.top = y + 'px';
+            }
+          );
+
+        // Follow mouse as it moves over the element
+        e.currentTarget.onmousemove = function(ev) {
+          if (!repoStatusPopup) return;
+          repoStatusPopup.style.left = (ev.pageX + 12) + 'px';
+          repoStatusPopup.style.top = (ev.pageY + 12) + 'px';
+        }
+      };
+
+      $scope.hideRepoStatus = function() {
+        if (!repoStatusPopup) {
+          repoStatusPopup = document.getElementById('repo-status-popup');
+        }
+        if (repoStatusPopup) {
+          repoStatusPopup.style.display = 'none';
+          repoStatusPopup.textContent = '';
+        }
       };
 
       $scope.refreshAvailable();
