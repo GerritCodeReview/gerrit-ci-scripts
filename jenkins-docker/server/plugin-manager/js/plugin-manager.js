@@ -12,6 +12,54 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Define repo status popup Angular methods within the controller
+// and expose to the $scope for use in HTML
+var repoStatusPopup = null;
+
+$scope.showRepoStatus = function(e, pluginJobUrl) {
+  if (!repoStatusPopup) {
+    repoStatusPopup = document.getElementById('repo-status-popup');
+  }
+  fetch(pluginJobUrl + '/lastSuccessfulBuild/api/json')
+    .then(function(response) { return response.text(); })
+    .then(function(statusText) {
+      if (!repoStatusPopup) return;
+      repoStatusPopup.style.display = 'block';
+      repoStatusPopup.textContent = 'Repo status: ' + statusText;
+      // Place popup near mouse, offset for cursor
+      var x = e.pageX + 12;
+      var y = e.pageY + 12;
+      repoStatusPopup.style.left = x + 'px';
+      repoStatusPopup.style.top = y + 'px';
+    })
+    .catch(function() {
+      if (!repoStatusPopup) return;
+      repoStatusPopup.style.display = 'block';
+      repoStatusPopup.textContent = 'Repo status: unavailable';
+      var x = e.pageX + 12;
+      var y = e.pageY + 12;
+      repoStatusPopup.style.left = x + 'px';
+      repoStatusPopup.style.top = y + 'px';
+    });
+
+  // Follow mouse as it moves over the element
+  e.currentTarget.onmousemove = function(ev) {
+    if (!repoStatusPopup) return;
+    repoStatusPopup.style.left = (ev.pageX + 12) + 'px';
+    repoStatusPopup.style.top = (ev.pageY + 12) + 'px';
+  }
+};
+
+$scope.hideRepoStatus = function() {
+  if (!repoStatusPopup) {
+    repoStatusPopup = document.getElementById('repo-status-popup');
+  }
+  if (repoStatusPopup) {
+    repoStatusPopup.style.display = 'none';
+    repoStatusPopup.textContent = '';
+  }
+};
+
 var app = angular.module('PluginManager', []).controller(
     'LoadInstalledPlugins',
     function($scope, $http, $location, $window) {
