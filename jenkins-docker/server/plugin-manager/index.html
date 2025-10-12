@@ -59,7 +59,19 @@
         </thead>
         <tbody>
           <tr ng-repeat="prop in plugins.list | filter:searchPlugin">
-            <td><h4>{{prop.id}} <span class="badge {{prop.css}}">{{prop.source}}</span><br/><small>{{prop.description.split('.')[0]}}</small></h4></td>
+            <td>
+              <h4 
+                ng-mouseover="showRepoStatus($event, prop.url)"
+                ng-mouseout="hideRepoStatus()"
+                style="position:relative;"
+              >
+                {{prop.id}}
+                <span class="badge {{prop.css}}">{{prop.source}}</span>
+                <br/>
+                <small>{{prop.description.split('.')[0]}}</small>
+              </h4>
+              <div id="repo-status-popup" style="display:none; position:fixed; z-index:9999; padding:8px; background:#222; color:#fff; border-radius:4px; font-size:13px; pointer-events:none;"></div>
+            </td>
             <td>
               <p>{{prop.version}}</p>
               <div ng-if="prop.update_version">
