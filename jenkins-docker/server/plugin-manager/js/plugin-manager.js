@@ -81,6 +81,7 @@ var app = angular.module('PluginManager', []).controller(
                       currPlugin.sha1 = plugin.sha1;
                       var uiPluginRegex = /(ui-plugin-)(.*)-bazel.*/;
                       var fileEnding = plugin.name.match(uiPluginRegex) ? '.js' : '.jar';
+                      currPlugin.jobUrl = $scope.getBaseUrl() + '/job/' + plugin.name;
                       currPlugin.url = $scope.getBaseUrl() + '/job/' + plugin.name + '/lastSuccessfulBuild/artifact/bazel-bin/plugins/' + pluginName + '/' + pluginName + fileEnding;
                       currPlugin.description = pluginResponse.data.description;
                       currPlugin.source = source;
@@ -103,6 +104,47 @@ var app = angular.module('PluginManager', []).controller(
 
       plugins.login = function () {
         $window.location.href = 'https://gerrit-ci.gerritforge.com/securityRealm/commenceLogin?from=%2F';
+      };
+
+      $scope.showRepoStatus = function(e, pluginId, pluginJobUrl) {
+
+        $http.get(pluginJobUrl + '/lastSuccessfulBuild/api/json', plugins.httpConfig)
+          .then(
+            function successCallback(response) {
+              var repoStatusPopup = document.getElementById('repo-status-popup-' + pluginId);
+              var repoStatusPopupAnchor = document.getElementById('repo-status-popup-a-' + pluginId);
+              if (!repoStatusPopup) return;
+
+              angular.forEach(response.data.actions, function(action) {
+                  if (action._class == "hudson.plugins.git.util.BuildData") {
+
+                    var sourceUrl = action.remoteUrls.filter(function(url) {
+                          return url.indexOf("gerrit.googlesource.com/a/gerrit") === -1;
+                        });
+
+                    if (sourceUrl) {
+                      repoStatusPopup.style.display = 'block';
+                      repoStatusPopupAnchor.href = sourceUrl;
+
+                      // Place popup near mouse, offset for cursor
+                      var x = e.pageX;
+                      var y = e.pageY;
+                      repoStatusPopup.style.left = x + 'px';
+                      repoStatusPopup.style.top = y + 'px';
+                    }
+                  }
+              });
+            }, function errorCallback(response) {}
+          );
+      };
+
+      $scope.hideRepoStatus = function(pluginId) {
+        var repoStatusPopup = document.getElementById('repo-status-popup-' + pluginId);
+        if (repoStatusPopup) {
+          setTimeout(function() {
+            repoStatusPopup.style.display = 'none';
+          }, 1000);
+        }
       };
 
       $scope.refreshAvailable();
