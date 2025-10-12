@@ -72,3 +72,11 @@ span.text-bg-primary {
   background-color: RGBA(13, 110, 253, 1);
   color: #fff!important;
 }
+
+div.repo-status-popup {
+  box-shadow: 0 0 16px 4px rgba(52,152,219,0.3),
+              0 0 32px 8px rgba(202,169,255,0.3),
+              0 1px 6px 0 rgba(0,0,0,0.12);
+  background: linear-gradient(135deg, #bbbbbb 0%, #e2e6ef 40%, #a4a4a4 100%);
+  border: 1px solid #cfd8e0;
+}
