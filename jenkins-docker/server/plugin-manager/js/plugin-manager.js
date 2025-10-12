@@ -53,7 +53,10 @@ var app = angular.module('PluginManager', []).controller(
                 function successCallback(response) {
                   plugins.list = [];
 
-                  angular.forEach(response.data.jobs, function(plugin) {
+                  var sortedJobs = response.data.jobs.slice().sort(function(a, b) {
+                    return a.name.localeCompare(b.name);
+                  });
+                  angular.forEach(sortedJobs, function(plugin) {
 
                     const pluginNameRegex = /(module-|plugin-|ui-plugin-)(.*)-bazel.*/;
                     var pluginNameMatches = plugin.name.match(pluginNameRegex);
