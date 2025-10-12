@@ -51,11 +51,17 @@ var app = angular.module('PluginManager', []).controller(
         $http.get($scope.getBaseUrl() + '/view/' + pluginsBranch + '/api/json', plugins.httpConfig)
             .then(
                 function successCallback(response) {
-                  plugins.list = [];
-
-                  angular.forEach(response.data.jobs, function(plugin) {
-
+                    plugins.list = [];
                     const pluginNameRegex = /(module-|plugin-|ui-plugin-)(.*)-bazel.*/;
+
+                    var sortedJobs = response.data.jobs.sort(function(a, b) {
+                      var aName = a.name.match(pluginNameRegex);
+                      var bName = b.name.match(pluginNameRegex);
+                      if (!aName || !bName) return 0;
+                      return aName[2].localeCompare(bName[2]);
+                    });
+                    angular.forEach(sortedJobs, function(plugin) {
+
                     var pluginNameMatches = plugin.name.match(pluginNameRegex);
                     if (!pluginNameMatches) {
                        return;
