@@ -166,6 +166,30 @@
       },
       "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41fffa64_9ba747ad",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-10-13T06:52:37Z",
+      "side": 0,
+      "message": "Fixed with: https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/514205",
+      "parentUuid": "7573cc13_c546466b",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 0
+      },
+      "revId": "8c1636d037bd1870904e2a72fa5954d8d7138028",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
