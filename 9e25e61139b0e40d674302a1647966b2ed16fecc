@@ -69,6 +69,30 @@
       },
       "revId": "9e25e61139b0e40d674302a1647966b2ed16fecc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0230b3e4_5ba766de",
+        "filename": "jenkins/gerrit-bazel-plugin-groovy-provider.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-13T13:55:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "43a6806e_4f557e8f",
+      "range": {
+        "startLine": 9,
+        "startChar": 9,
+        "endLine": 9,
+        "endChar": 66
+      },
+      "revId": "9e25e61139b0e40d674302a1647966b2ed16fecc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
