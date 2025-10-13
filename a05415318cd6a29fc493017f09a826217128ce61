@@ -22,6 +22,30 @@
       },
       "revId": "a05415318cd6a29fc493017f09a826217128ce61",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e6f52f4_1e5448c3",
+        "filename": "jenkins-internal/gerrit-release.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-10-13T06:51:54Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "85ec1c6b_0030ec33",
+      "range": {
+        "startLine": 16,
+        "startChar": 10,
+        "endLine": 16,
+        "endChar": 17
+      },
+      "revId": "a05415318cd6a29fc493017f09a826217128ce61",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
