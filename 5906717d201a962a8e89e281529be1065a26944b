@@ -22,6 +22,30 @@
       },
       "revId": "5906717d201a962a8e89e281529be1065a26944b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fd6eadd_08992717",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-14T18:29:13Z",
+      "side": 1,
+      "message": "Yes, it is still unclear why the `start-stop-daemon` is unable to send the signal in some cases.",
+      "parentUuid": "fecfaa3f_6ca610f2",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "5906717d201a962a8e89e281529be1065a26944b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
