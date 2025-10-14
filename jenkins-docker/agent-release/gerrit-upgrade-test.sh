@@ -23,6 +23,11 @@ export gerritReleasesUrl=https://gerrit-releases.storage.googleapis.com
 export previousVersionWar=gerrit-$1.war
 export nextVersionWar=gerrit-$2.war
 
+# Disable the use of start-stop-daemon because of the inability to stop
+# Gerrit gracefully when running it on Docker.
+# See Issue 450577969
+export START_STOP_DAEMON=0
+
 function downloadGerritWar
 {
   if checkWar $1
