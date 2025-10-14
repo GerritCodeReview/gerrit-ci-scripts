@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fecfaa3f_6ca610f2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-10-14T17:38:01Z",
+      "side": 1,
+      "message": "Yes, this is indeed the case.\nHowever, this only happens when the agent is executed by gerrit.\n\nIf I:\n\n```\ndocker run --rm -ti  --entrypoint\u003dbash docker.io/gerritforge/gerrit-release-bazel:debian-bookworm\ngerrit-upgrade-test.sh 3.12.2 3.12.2\n```\n\nThe test is successful even *without the workaround*.\n\nSo let\u0027s put it this way: there are some cases in which START_STOP_DAEMON does not work in Docker (and I am still not sure why tbh), while the kill SIGTERM approach always works.\n\nHaving said that, I think this workaround works fine for the purpose of testing the release.\n\nWDYT?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "5906717d201a962a8e89e281529be1065a26944b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
