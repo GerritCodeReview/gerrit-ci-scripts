@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "31572fc9_e2f0a67b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-15T07:29:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ec59861_d492d599",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 47
+      },
+      "revId": "f4dbe0c8d7ef0f70c8aad31414f8ddc716a674b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6593822f_c15c88b1",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-10-11T08:46:13Z",
       "side": 1,
       "message": "```suggestion\n      - \u0027plugin-{name}-gh-bazel-{branch}\u0027:\n          branch:\n            - master\n            - stable-3.13\n```\n\nI have created the stable-3.13 branch.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "f4dbe0c8d7ef0f70c8aad31414f8ddc716a674b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be11c162_628f2584",
+        "filename": "jenkins/gerrit-bazel-plugin-events-aws-kinesis.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-15T07:29:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6593822f_c15c88b1",
       "range": {
         "startLine": 12,
         "startChar": 0,
