@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "375884d6_76c66959",
+        "filename": "jenkins/gerrit-bazel-plugin-multi-site.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-16T15:27:59Z",
+      "side": 1,
+      "message": "Multi site, and probably other plugins, will need a way of cloning extra plugins/modules from gh. What about adding a new `extra-gh-plugins` and `extra-gh-modules`? @syntonyze@gmail.com @luca.milanesio@gmail.com WDYT?",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 6,
+        "endChar": 47
+      },
+      "revId": "8e3e018fde96434616cda569894a5bd10f4e4aaf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
