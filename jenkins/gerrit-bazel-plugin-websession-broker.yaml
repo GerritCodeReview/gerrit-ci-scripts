@@ -12,3 +12,4 @@
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
+            - stable-3.13
