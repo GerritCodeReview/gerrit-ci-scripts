@@ -49,6 +49,27 @@ do
     popd
 done
 
+GH_PLUGIN_SCM_BASE_URL="https://github.com/{organization}"
+for extraGhPlugin in {extra-gh-plugins}
+do
+    pushd ..
+    git clone -b {branch} $GH_PLUGIN_SCM_BASE_URL/$extraGhPlugin.git
+    popd
+    pushd plugins
+    ln -s ../../$extraGhPlugin .
+    popd
+done
+for extraGhModule in {extra-gh-modules}
+do
+    pushd ..
+    git clone -b {branch} $GH_PLUGIN_SCM_BASE_URL/$extraGhModule.git
+    popd
+    pushd plugins
+    ln -s ../../$extraGhModule .
+    popd
+done
+
+
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 java -fullversion

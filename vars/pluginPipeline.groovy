@@ -36,7 +36,11 @@ def call(Map parm = [:]) {
     def buildCheck = parm.buildCheckId
     def extraPlugins = parm.extraPlugins ?: []
     def extraModules = parm.extraModules ?: []
+    def extraGhPlugins = parm.extraGhPlugins ?: []
+    def extraGhModules = parm.extraGhModules ?: []
     def gerritReviewBaseUrl = "https://gerrit.googlesource.com/a"
+    def githubBaseUrl = "https://github.com/"
+    def organization = "GerritForge"
     def gerritReviewHostname = "gerrit.googlesource.com"
     def gjfVersion = parm.gjfVersion ?: '1.24.0'
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
@@ -72,6 +76,8 @@ def call(Map parm = [:]) {
                         script {
                             extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/plugins/${plugin}" }
                             extraModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/modules/${module}" }
+                            extraGhPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${githubBaseUrl}/${organization}/${plugin}.git" }
+                            extraGhModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${githubBaseUrl}/${organization}/${module}.git" }
                         }
                     }
                 }
