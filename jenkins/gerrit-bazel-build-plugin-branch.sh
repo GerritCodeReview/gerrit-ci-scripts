@@ -49,6 +49,16 @@ do
     ln -s ../../$extraModule .
     popd
 done
+GH_PLUGIN_SCM_BASE_URL="https://github.com/{organization}"
+for extraGhRepos in {extra-gh-repos}
+do
+    pushd ..
+    git clone -b {branch} $GH_PLUGIN_SCM_BASE_URL/$extraGhRepos.git
+    popd
+    pushd plugins
+    ln -s ../../$extraGhRepos .
+    popd
+done
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 java -fullversion
