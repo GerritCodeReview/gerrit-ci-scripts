@@ -36,6 +36,7 @@ def call(Map parm = [:]) {
     def buildCheck = parm.buildCheckId
     def extraPlugins = parm.extraPlugins ?: []
     def extraModules = parm.extraModules ?: []
+    def extraGhRepos = parm.extraGhRepos ?: []
     def gerritReviewBaseUrl = "https://gerrit.googlesource.com/a"
     def gerritReviewHostname = "gerrit.googlesource.com"
     def gjfVersion = parm.gjfVersion ?: '1.24.0'
@@ -54,10 +55,11 @@ def call(Map parm = [:]) {
             stage('Checkout') {
                 steps {
                     checkout scm
+                    def scmUrl = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
+                    def githubBaseUrl = s.substring(0, scmUrl.lastIndexOf("/"))
 
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
                         script {
-                            def scmUrl = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
                             def pluginScmHostname = new java.net.URI(scmUrl).getHost()
 
                             sh 'echo "machine ' + pluginScmHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
@@ -72,6 +74,7 @@ def call(Map parm = [:]) {
                         script {
                             extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/plugins/${plugin}" }
                             extraModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/modules/${module}" }
+                            extraGhRepos.each { repo -> sh "git clone -b ${GERRIT_BRANCH} ${githubBaseUrl}/${repo}.git" }
                         }
                     }
                 }
@@ -114,7 +117,7 @@ def call(Map parm = [:]) {
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
                         sh "if [ -f ../${pluginName}/external_package.json ]; then cd plugins && ln -sf ../../${pluginName}/external_package.json package.json; fi"
                         script {
-                            (extraPlugins + extraModules).each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
+                            (extraPlugins + extraModules + extraGhRepos).each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
                         }
                         sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}/..."
                         sh "${bazeliskCmd} test ${bazeliskOptions} --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
