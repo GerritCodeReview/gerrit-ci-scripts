@@ -22,6 +22,30 @@
       },
       "revId": "8e3e018fde96434616cda569894a5bd10f4e4aaf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b047fc9a_9291f670",
+        "filename": "jenkins/gerrit-bazel-plugin-multi-site.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-19T18:02:57Z",
+      "side": 1,
+      "message": "Well, only `pull-replication` needs to be taken from GitHub, the others are on `gerrit-review` and are still OS.",
+      "parentUuid": "375884d6_76c66959",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 6,
+        "endChar": 47
+      },
+      "revId": "8e3e018fde96434616cda569894a5bd10f4e4aaf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
