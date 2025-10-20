@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c191044_452498b7",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-20T07:39:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "484b45f7_75fb4809",
+      "revId": "6107772e5a1baff99747e705f043c0f45ba83e16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "88cecee5_d18f7603",
@@ -31,6 +49,30 @@
       "writtenOn": "2025-10-20T07:24:52Z",
       "side": 1,
       "message": "You have the `scmUrl` at L63, why not reusing that one instead?",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 36
+      },
+      "revId": "6107772e5a1baff99747e705f043c0f45ba83e16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48c7d7a2_dce543fc",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-20T07:39:55Z",
+      "side": 1,
+      "message": "I\u0027m folowing the same pattern as `gerritReviewBaseUrl`. I am happy to refactor it together with the `gerritReviewBaseUrl`.\n\nI would have to figure out how `remote.origin.url` is set.",
+      "parentUuid": "88cecee5_d18f7603",
       "range": {
         "startLine": 41,
         "startChar": 0,
