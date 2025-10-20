@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * Declarative pipeline for building and testing JGit servlet-4 branch against Gerrit stable-3.12 and Gerrit master.
+ * Declarative pipeline for building and testing JGit servlet-4 branch against Gerrit stable-3.13 and Gerrit master.
  *  Parameters: None
  * Usage in a Jenkinsfile:
  *   gerritJGitServlet4Pipeline()
@@ -64,15 +64,15 @@ def call(Map cfg = [:]) {
         }
       }
 
-      stage('Checkout Gerrit stable-3.12') {
+      stage('Checkout Gerrit stable-3.13') {
         steps {
           sh '''
-            git clone -b stable-3.12 --recursive https://gerrit.googlesource.com/gerrit
+            git clone -b stable-3.13 --recursive https://gerrit.googlesource.com/gerrit
           '''
         }
       }
 
-      stage('Build Gerrit stable-3.12') {
+      stage('Build Gerrit stable-3.13') {
         steps {
           script {
             def jgitSourceDir = "${env.WORKSPACE}/jgit"
@@ -81,7 +81,7 @@ def call(Map cfg = [:]) {
 
             sh """
                 echo "${jgitSourceDir} -> ${jgitTargetDir}"
-                mv ${jgitTargetDir} /tmp/jgit-3.12
+                mv ${jgitTargetDir} /tmp/jgit-3.13
                 ln -sfn ${jgitSourceDir} ${jgitTargetDir}
             """
 
@@ -94,12 +94,12 @@ def call(Map cfg = [:]) {
           }
         }
       }
-      stage('Test Gerrit stable-3.12') {
+      stage('Test Gerrit stable-3.13') {
         steps {
           dir('gerrit') {
             sh '''
               . set-java.sh 21
-              echo "running gerrit stable-3.12 tests..."
+              echo "running gerrit stable-3.13 tests..."
               bazelisk test \
                 --test_tag_filters=-flaky \
                 --flaky_test_attempts 3 \
