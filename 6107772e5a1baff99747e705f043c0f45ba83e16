@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "484b45f7_75fb4809",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-20T07:24:52Z",
+      "side": 1,
+      "message": "nit: add extra space before the line.\n\n\n\n```suggestion\n\nGH_PLUGIN_SCM_BASE_URL\u003d\"https://github.com/{organization}\"\n```",
+      "revId": "6107772e5a1baff99747e705f043c0f45ba83e16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88cecee5_d18f7603",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-20T07:24:52Z",
+      "side": 1,
+      "message": "You have the `scmUrl` at L63, why not reusing that one instead?",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 36
+      },
+      "revId": "6107772e5a1baff99747e705f043c0f45ba83e16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
