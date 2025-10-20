@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "992badd7_be061873",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-20T10:16:45Z",
+      "side": 1,
+      "message": "```suggestion\nBuild admin-console plugin on master against Gerrit stable 3.1{1,2,3}\n```",
+      "range": {
+        "startLine": 7,
+        "startChar": 20,
+        "endLine": 7,
+        "endChar": 53
+      },
+      "revId": "95d02822009a727da73c529de37b64f03289ef74",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
