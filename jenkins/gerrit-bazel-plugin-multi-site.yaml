@@ -2,8 +2,9 @@
     name: multi-site
     repo: multi-site
     organization: GerritForge
-    extra-plugins: 'pull-replication healthcheck'
+    extra-plugins: 'healthcheck'
     extra-modules: 'events-broker global-refdb'
+    extra-gh-repos: 'pull-replication'
     jobs:
       - 'plugin-{name}-bazel-{branch}':
           branch:
@@ -13,5 +14,6 @@
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
+            - stable-3.13
       - 'plugin-{name}-verifier'
       - 'plugin-{name}-verifier-gh'
