@@ -70,6 +70,30 @@
       },
       "revId": "57ff529f6c58067cbe89bc32ef94e67d55c026f5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1363824b_2f66c82d",
+        "filename": "jenkins/gerrit-bazel-plugin-pull-replication.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-20T07:32:54Z",
+      "side": 1,
+      "message": "\u003e `events-broker` ok, my bad. But shouldn\u0027t we depend from `healthcheck-enterprise`, at least from 3.13?\n\nAll the health-check API are exposes by the OS plugin; the `healthcheck-enterprise` plugin only adds extra checks, but doesn\u0027t change the API.",
+      "parentUuid": "ada7d12e_879b375f",
+      "range": {
+        "startLine": 5,
+        "startChar": 3,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "57ff529f6c58067cbe89bc32ef94e67d55c026f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
