@@ -22,6 +22,30 @@
       },
       "revId": "91ea9d18e0a25c1e4b07a85ea80007f51074cebe",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a6c3515_f13dbec3",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-21T16:53:27Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "09e6b8f1_9d98ae79",
+      "range": {
+        "startLine": 59,
+        "startChar": 20,
+        "endLine": 59,
+        "endChar": 26
+      },
+      "revId": "91ea9d18e0a25c1e4b07a85ea80007f51074cebe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
