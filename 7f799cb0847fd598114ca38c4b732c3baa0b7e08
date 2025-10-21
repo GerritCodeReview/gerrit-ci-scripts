@@ -46,6 +46,30 @@
       },
       "revId": "7f799cb0847fd598114ca38c4b732c3baa0b7e08",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf2aa47c_a504a582",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-21T16:24:36Z",
+      "side": 1,
+      "message": "Ah, gotcha. Then if you want to avoid calculating it, why not storing into a global variable at L61?",
+      "parentUuid": "d87c8075_f5b8f5e8",
+      "range": {
+        "startLine": 76,
+        "startChar": 28,
+        "endLine": 76,
+        "endChar": 47
+      },
+      "revId": "7f799cb0847fd598114ca38c4b732c3baa0b7e08",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
