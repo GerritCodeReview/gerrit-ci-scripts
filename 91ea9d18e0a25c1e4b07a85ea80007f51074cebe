@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "09e6b8f1_9d98ae79",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 8
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-21T16:52:26Z",
+      "side": 1,
+      "message": "nit: you can use the Groovy syntax here.\n\n\n\n```suggestion\n                    def githubBaseUrl \u003d s.substring(0, scmUrl.lastIndexOf(\"/\"))\n```",
+      "range": {
+        "startLine": 59,
+        "startChar": 20,
+        "endLine": 59,
+        "endChar": 26
+      },
+      "revId": "91ea9d18e0a25c1e4b07a85ea80007f51074cebe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
