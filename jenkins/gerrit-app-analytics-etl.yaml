@@ -49,6 +49,8 @@
     name: analytics-etl
     repo: analytics-etl
     organization: GerritForge
+    java:
+      version: 17
     jobs:
       - 'app-{name}-gh-sbt-{branch}':
           branch:
