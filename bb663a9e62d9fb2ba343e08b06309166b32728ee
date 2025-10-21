@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ba3031d_32f41a10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-10-21T11:42:38Z",
+      "side": 1,
+      "message": "This now works: https://gerrit-ci.gerritforge.com/job/plugin-github-gh-bazel-master/6/",
+      "revId": "bb663a9e62d9fb2ba343e08b06309166b32728ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
