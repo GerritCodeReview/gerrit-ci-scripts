@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7076ef26_e68c724c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-21T13:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15480c30_e34dde6c",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 4
+      },
+      "revId": "30af5474ad984b32ff0e4e83fda5976719a6c24f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1a81a283_ed96a6ca",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-10-21T12:10:32Z",
       "side": 1,
       "message": "Should this be a choice of the YAML file? \n\n\n\n```suggestion\n. set-java.sh {java.version}\n```",
+      "range": {
+        "startLine": 3,
+        "startChar": 14,
+        "endLine": 3,
+        "endChar": 16
+      },
+      "revId": "30af5474ad984b32ff0e4e83fda5976719a6c24f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87c00e79_b941c988",
+        "filename": "jenkins/gerrit-sbt-build-app.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-21T13:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a81a283_ed96a6ca",
       "range": {
         "startLine": 3,
         "startChar": 14,
