@@ -41,6 +41,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e105f8c0_70fe2313",
+        "filename": "jenkins/gerrit-bazel-plugin-multi-site.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-21T16:30:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "252cec61_47323d9a",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 5,
+        "endChar": 32
+      },
+      "revId": "7cbac8158a57286e96128bbe941c5fc2785e0874",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5ffed174_bb421610",
@@ -54,6 +78,30 @@
       "writtenOn": "2025-10-21T15:41:23Z",
       "side": 1,
       "message": "This needs to go into the `plugin-{name}-gh-bazel-{branch}` section",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 38
+      },
+      "revId": "7cbac8158a57286e96128bbe941c5fc2785e0874",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f181e52_8835149b",
+        "filename": "jenkins/gerrit-bazel-plugin-multi-site.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-21T16:30:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5ffed174_bb421610",
       "range": {
         "startLine": 7,
         "startChar": 4,

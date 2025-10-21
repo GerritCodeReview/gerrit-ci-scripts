@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9581ad7_879c7cc7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-21T16:30:22Z",
+      "side": 1,
+      "message": "Verified here: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.13/job/plugin-multi-site-gh-bazel-stable-3.13/2/",
+      "revId": "75b89e436df5332c231e556d6632bfe52548f54b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
