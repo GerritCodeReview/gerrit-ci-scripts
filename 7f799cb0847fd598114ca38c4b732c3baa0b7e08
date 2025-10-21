@@ -70,6 +70,30 @@
       },
       "revId": "7f799cb0847fd598114ca38c4b732c3baa0b7e08",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d536c613_e00c3956",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-21T16:52:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cf2aa47c_a504a582",
+      "range": {
+        "startLine": 76,
+        "startChar": 28,
+        "endLine": 76,
+        "endChar": 47
+      },
+      "revId": "7f799cb0847fd598114ca38c4b732c3baa0b7e08",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
