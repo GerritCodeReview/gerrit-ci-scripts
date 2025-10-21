@@ -6,7 +6,8 @@ RUN apt-get update --allow-releaseinfo-change && \
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" > /etc/apt/sources.list.d/google-cloud-sdk.list && \
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
     apt-get update --allow-releaseinfo-change && apt-get install -y google-cloud-sdk && \
-    apt-get clean
+    apt-get clean && \
+    bash -c 'curl -s "https://get.sdkman.io" | bash && source "$HOME/.sdkman/bin/sdkman-init.sh" && sdk install jreleaser'
 
 COPY gerrit-release.sh /usr/local/bin
 COPY gerrit-upgrade-test.sh /usr/local/bin
