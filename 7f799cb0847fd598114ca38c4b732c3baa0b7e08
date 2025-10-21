@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e3c8a53_b00adf8d",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-21T15:39:50Z",
+      "side": 1,
+      "message": "Don\u0027t need the `if()` here, because if that\u0027s `null` is going to be initialised with an empty list.",
+      "range": {
+        "startLine": 76,
+        "startChar": 28,
+        "endLine": 76,
+        "endChar": 47
+      },
+      "revId": "7f799cb0847fd598114ca38c4b732c3baa0b7e08",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
