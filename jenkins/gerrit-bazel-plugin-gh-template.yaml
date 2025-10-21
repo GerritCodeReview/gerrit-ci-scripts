@@ -53,6 +53,7 @@
       - archive:
           artifacts: >
             bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
+            {extra-artifacts}
           follow-symlinks: true
 
 - job-template:
