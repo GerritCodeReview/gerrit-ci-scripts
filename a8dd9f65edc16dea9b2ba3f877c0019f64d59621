@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d897ee9_44c05294",
+        "filename": "jenkins-docker/agent-release/Dockerfile",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-23T18:16:00Z",
+      "side": 1,
+      "message": "It would be best to make this a separate `RUN` step, for improving cacheability.\n\nUnrelated: possibly we should do the same as the other `curl` above for importing the keys.",
+      "range": {
+        "startLine": 10,
+        "startChar": 18,
+        "endLine": 15,
+        "endChar": 21
+      },
+      "revId": "a8dd9f65edc16dea9b2ba3f877c0019f64d59621",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
