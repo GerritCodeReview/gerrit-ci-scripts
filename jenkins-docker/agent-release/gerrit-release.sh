@@ -24,9 +24,9 @@ then
   echo "     Username for git operations targeting gerrit.googlesource.com"
   echo "* GS_GIT_PASS:"
   echo "     Password for git operations targeting gerrit.googlesource.com"
-  echo "* OSSHR_USER:"
+  echo "* MAVENCENTRAL_USERNAME:"
   echo "     Username used to upload artifacts to Maven Central"
-  echo "* OSSHR_TOKEN:"
+  echo "* MAVENCENTRAL_TOKEN:"
   echo "     API Token used to upload artifacts to Maven Central"
   echo "* DRY_RUN:"
   echo "     When set do any value, dry-run of the release process, without pushing changes or tags"
@@ -41,6 +41,9 @@ export migrationversion=$4
 
 export CLOUDSDK_AUTH_ACCESS_TOKEN="$GCLOUD_AUTH_TOKEN"
 
+isOldStyleMaven=true
+grep -q "gpg:sign-and-deploy-file" tools/maven/mvn.py || isOldStyleMaven=false
+
 bazel_config=""
 if [ "$branch" == "stable-3.11" ]; then
   bazel_config="--config=java21"
@@ -53,11 +56,6 @@ if [ -d gerrit ]
 then
   rm -Rf gerrit
 fi
-
-echo "Installing maven credentials"
-mkdir -p "$HOME/.m2"
-# shellcheck disable=SC2016
-envsubst '$OSSHR_USER $OSSHR_TOKEN' < /tmp/m2.settings.xml.template > "$HOME/.m2/settings.xml"
 
 echo "Installing git credentials..."
 echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS" > "$HOME/.netrc"
@@ -94,6 +92,22 @@ fi
 GPG_USER=$(gpg -K --with-colons | grep uid | cut -d ':' -f 10)
 git config --global user.name "$(echo "$GPG_USER" | awk '{print $1" "$2}')"
 git config --global user.email $(echo "$GPG_USER" | sed 's/.*<//' | sed 's/>//')
+
+if [[ "$isOldStyleMaven" == "true" ]]
+then
+  echo "LEGACY deployment  - Installing maven credentials"
+  mkdir -p "$HOME/.m2"
+  # shellcheck disable=SC2016
+  envsubst '$MAVENCENTRAL_USERNAME $MAVENCENTRAL_TOKEN' < /tmp/m2.settings.xml.template > "$HOME/.m2/settings.xml"
+else
+  echo "Setting up Jrelease environment"
+  export JRELEASER_MAVENCENTRAL_USERNAME="$MAVENCENTRAL_USERNAME"
+  export JRELEASER_MAVENCENTRAL_TOKEN="$MAVENCENTRAL_TOKEN"
+  export GPG_KEY_ID=$(gpg --list-keys --with-colons | grep -A1 '^pub:' | grep fpr | cut -d':' -f10)
+  export JRELEASER_GPG_PUBLIC_KEY=$(gpg-loopback --armor --export $GPG_KEY_ID)
+  export JRELEASER_GPG_SECRET_KEY=$(gpg-loopback --armor --export-secret-key $GPG_KEY_ID)
+  export JRELEASER_GPG_PASSPHRASE="$GPG_PASSPHRASE"
+fi
 
 echo "Cloning and building Gerrit Code Review on branch $branch ..."
 git config --global credential.helper cache
@@ -144,18 +158,24 @@ export VERBOSE=1
 ./tools/maven/api.sh war_deploy $bazel_config
 ./tools/maven/api.sh deploy $bazel_config
 
-bearer_token=$(echo -n "$OSSHR_USER:$OSSHR_TOKEN" | base64)
+if [[ "$isOldStyleMaven" == "true" ]]
+then
+  echo "LEGACY deployment, deploying to ossrh-staging"
 
-# Manually upload to Maven Central
-# https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/#post-to-manualuploaddefaultrepositorynamespace
-curl -X POST \
-  'https://ossrh-staging-api.central.sonatype.com/manual/upload/defaultRepository/com.google.gerrit' \
-  -H 'accept: */*' \
-  -H "Authorization: Bearer $bearer_token" \
-  -d "''" || {
-    echo "manual upload endpoint failed. Aborting release."
-    exit 4
-  }
+  bearer_token=$(echo -n "$MAVENCENTRAL_USERNAME:$MAVENCENTRAL_TOKEN" | base64)
+
+  # Manually upload to Maven Central
+  # https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/#post-to-manualuploaddefaultrepositorynamespace
+  curl -X POST \
+    'https://ossrh-staging-api.central.sonatype.com/manual/upload/defaultRepository/com.google.gerrit' \
+    -H 'accept: */*' \
+    -H "Authorization: Bearer $bearer_token" \
+    -d "''" || {
+      echo "manual upload endpoint failed. Aborting release."
+      exit 4
+    }
+fi
+
 popd
 
 cp -f gerrit/bazel-bin/Documentation/searchfree.zip .
