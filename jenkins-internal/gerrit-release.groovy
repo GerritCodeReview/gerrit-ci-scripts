@@ -35,9 +35,9 @@ pipeline {
             steps {
                 withCredentials([
                         usernamePassword(
-                                credentialsId: 'ossrh-staging-api.central.sonatype.com',
-                                usernameVariable: 'OSSHR_USER',
-                                passwordVariable: 'OSSHR_TOKEN'
+                                credentialsId: 'central.sonatype.com',
+                                usernameVariable: 'JRELEASER_MAVENCENTRAL_USERNAME',
+                                passwordVariable: 'JRELEASER_MAVENCENTRAL_TOKEN'
                         ),
                         usernamePassword(
                                 credentialsId: 'gerrit.googlesource.com',
