@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff81cb7b_60a88eb5",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-26T13:34:26Z",
+      "side": 1,
+      "message": "I believe this also should be skipped in case of a dry-run",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 9
+      },
+      "revId": "6075ad5836db9fbc4630828e520934a33c21b843",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
