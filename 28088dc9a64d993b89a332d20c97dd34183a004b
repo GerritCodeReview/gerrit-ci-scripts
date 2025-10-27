@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f47de64_26bb6104",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-27T15:39:06Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "f12ab2e3_a384c031",
+      "range": {
+        "startLine": 146,
+        "startChar": 0,
+        "endLine": 154,
+        "endChar": 4
+      },
+      "revId": "28088dc9a64d993b89a332d20c97dd34183a004b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d2a0a6d9_8e607813",
@@ -83,6 +107,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4415a61c_0f608f6d",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-27T15:39:06Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "fd9124aa_2b2705e1",
+      "revId": "28088dc9a64d993b89a332d20c97dd34183a004b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "26b910d0_500fbf94",
@@ -114,6 +156,24 @@
       "side": 1,
       "message": "Same as above: the only thing we want to avoid is creating the Gerrit changes.",
       "parentUuid": "26b910d0_500fbf94",
+      "revId": "28088dc9a64d993b89a332d20c97dd34183a004b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17151532_d9f4ee15",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-27T15:39:06Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "74294ad0_dd6f25b0",
       "revId": "28088dc9a64d993b89a332d20c97dd34183a004b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
