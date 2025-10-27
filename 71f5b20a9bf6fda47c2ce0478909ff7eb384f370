@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7399551b_670df211",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-27T15:11:55Z",
+      "side": 1,
+      "message": "GPG is the tool, PGP is the format of the key",
+      "parentUuid": "6c825002_fdcba3ef",
+      "range": {
+        "startLine": 7,
+        "startChar": 37,
+        "endLine": 7,
+        "endChar": 40
+      },
+      "revId": "71f5b20a9bf6fda47c2ce0478909ff7eb384f370",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b42606c9_dff6b568",
@@ -47,6 +71,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "85443293_2116bdab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-27T15:11:55Z",
+      "side": 1,
+      "message": "GPG is the tool, PGP is the format of the signature",
+      "parentUuid": "b42606c9_dff6b568",
+      "range": {
+        "startLine": 10,
+        "startChar": 15,
+        "endLine": 10,
+        "endChar": 18
+      },
+      "revId": "71f5b20a9bf6fda47c2ce0478909ff7eb384f370",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df3c38bc_1e0d331e",
@@ -60,6 +108,30 @@
       "writtenOn": "2025-10-27T14:26:08Z",
       "side": 1,
       "message": "Should be `/usr/local/bin/gpg-loopback` ?",
+      "range": {
+        "startLine": 91,
+        "startChar": 2,
+        "endLine": 91,
+        "endChar": 14
+      },
+      "revId": "71f5b20a9bf6fda47c2ce0478909ff7eb384f370",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97219c1f_674a40c3",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-27T15:11:55Z",
+      "side": 1,
+      "message": "It should be in the path, but let me add it to make sure that it is found.",
+      "parentUuid": "df3c38bc_1e0d331e",
       "range": {
         "startLine": 91,
         "startChar": 2,
