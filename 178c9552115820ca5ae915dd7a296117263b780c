@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ca57f0c_d7a52b91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-27T15:57:13Z",
+      "side": 1,
+      "message": "Tested, works as expected:\n\n```\nTesting if GPG signature works\ngpg: Signature made Mon Oct 27 15:54:47 2025 UTC\ngpg:                using EDDSA key B2611D9BAB22681AD726EB491DD767F490CD2E2A\ngpg: Good signature from \"GerritForge Release \u003cinfo@gerritforge.com\u003e\" [unknown]\ngpg: WARNING: This key is not certified with a trusted signature!\ngpg:          There is no indication that the signature belongs to the owner.\nPrimary key fingerprint: B261 1D9B AB22 681A D726  EB49 1DD7 67F4 90CD 2E2A\n```",
+      "revId": "178c9552115820ca5ae915dd7a296117263b780c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
