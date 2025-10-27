@@ -84,6 +84,11 @@ then
   export GPG_PASSPHRASE_FILE="$HOME/.gnupg/gpg-passphrase"
   echo '$GPG_PASSPHRASE' | envsubst '$GPG_PASSPHRASE' > $GPG_PASSPHRASE_FILE
   git config --global gpg.program /usr/local/bin/gpg-loopback
+
+
+  echo "Testing if GPG signature works"
+  echo foo > /tmp/foo
+  gpg-loopback --sign /tmp/foo && gpg-loopback --verify /tmp/foo.gpg
 fi
 
 GPG_USER=$(gpg -K --with-colons | grep uid | cut -d ':' -f 10)
