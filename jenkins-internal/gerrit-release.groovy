@@ -54,7 +54,7 @@ pipeline {
 
         stage('Confirm and push tag') {
             when {
-                expression { $params.DRY_RUN == false }
+                expression { params.DRY_RUN == false }
             }
             steps {
                 dir('gerrit') {
