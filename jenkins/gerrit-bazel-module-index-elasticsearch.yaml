@@ -4,4 +4,9 @@
       - 'module-{name}-bazel-{branch}':
           branch:
             - master
+      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.13
       - 'module-{name}-verifier'
