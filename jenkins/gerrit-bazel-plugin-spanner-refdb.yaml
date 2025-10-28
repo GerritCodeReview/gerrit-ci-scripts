@@ -6,4 +6,5 @@
             - master
           gerrit-branch:
             - master
+            - stable-3.13
       - 'plugin-{name}-verifier'
