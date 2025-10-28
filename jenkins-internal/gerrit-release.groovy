@@ -29,6 +29,7 @@ pipeline {
     environment {
         GCLOUD_AUTH_TOKEN = "${params.GCLOUD_AUTH_TOKEN}"
         GPG_PASSPHRASE = "${params.GPG_PASSPHRASE}"
+        DRY_RUN = "${params.DRY_RUN}"
     }
     stages {
 
