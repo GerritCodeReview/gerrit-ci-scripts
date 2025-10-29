@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47fd3495_5142e290",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-29T15:24:06Z",
+      "side": 1,
+      "message": "Verified here: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.13/job/module-index-elasticsearch-bazel-master-stable-3.13/1/",
+      "revId": "c975df6abe9aaed3d3cd2cbabfd22af386f803a0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
