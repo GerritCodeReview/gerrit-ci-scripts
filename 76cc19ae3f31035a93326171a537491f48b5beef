@@ -16,6 +16,52 @@
       "message": "Verified here: https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.13/job/plugin-spanner-refdb-bazel-master-stable-3.13/2/",
       "revId": "76cc19ae3f31035a93326171a537491f48b5beef",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "676491e0_b46015bf",
+        "filename": "jenkins/gerrit-bazel-plugin-spanner-refdb.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-29T18:41:25Z",
+      "side": 1,
+      "message": "Unrelated: why wasn\u0027t needed before?",
+      "range": {
+        "startLine": 3,
+        "startChar": 4,
+        "endLine": 3,
+        "endChar": 33
+      },
+      "revId": "76cc19ae3f31035a93326171a537491f48b5beef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70a4a92f_0797d0b1",
+        "filename": "jenkins/gerrit-bazel-plugin-spanner-refdb.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-29T18:41:25Z",
+      "side": 1,
+      "message": "When building a global-refdb implementation on a stable branch, you *have to* use a stable branch otherwise the build won\u0027t know which is the equivalent branch to use on the dependant modules.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "76cc19ae3f31035a93326171a537491f48b5beef",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
