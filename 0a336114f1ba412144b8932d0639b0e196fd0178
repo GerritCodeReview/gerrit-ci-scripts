@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "579b94d7_5d2867fe",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-30T19:19:44Z",
+      "side": 1,
+      "message": "```suggestion\nif [[ \"$isOldStyleMaven\"\u003d\u003d\"true\"]]\nthen\n```",
+      "range": {
+        "startLine": 142,
+        "startChar": 0,
+        "endLine": 142,
+        "endChar": 39
+      },
+      "revId": "0a336114f1ba412144b8932d0639b0e196fd0178",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
