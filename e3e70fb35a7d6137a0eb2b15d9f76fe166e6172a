@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2865732_962f91fa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-30T12:32:45Z",
+      "side": 1,
+      "message": "Also mention the addition of the global-refdb module to obtain a green build",
+      "revId": "e3e70fb35a7d6137a0eb2b15d9f76fe166e6172a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
