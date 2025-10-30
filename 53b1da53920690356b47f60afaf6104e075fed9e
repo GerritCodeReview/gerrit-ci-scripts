@@ -46,6 +46,30 @@
       },
       "revId": "53b1da53920690356b47f60afaf6104e075fed9e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4995e1a4_c2bd01aa",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2025-10-30T20:23:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1371feb3_49d2afcd",
+      "range": {
+        "startLine": 40,
+        "startChar": 32,
+        "endLine": 42,
+        "endChar": 80
+      },
+      "revId": "53b1da53920690356b47f60afaf6104e075fed9e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
