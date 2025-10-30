@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7381e00c_7873d4f4",
+        "filename": "jenkins-docker/agent-release/Dockerfile",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-30T14:57:51Z",
+      "side": 1,
+      "message": "Might be worth checking the integrity/authenticity of the zip file by checking the sha256 of the downloaded file.",
+      "range": {
+        "startLine": 12,
+        "startChar": 128,
+        "endLine": 12,
+        "endChar": 145
+      },
+      "revId": "88d068d99386894840b100a43d0ee445500e5d83",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
