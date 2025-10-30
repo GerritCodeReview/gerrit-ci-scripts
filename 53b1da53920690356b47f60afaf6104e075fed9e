@@ -22,6 +22,30 @@
       },
       "revId": "53b1da53920690356b47f60afaf6104e075fed9e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1371feb3_49d2afcd",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-30T19:10:05Z",
+      "side": 1,
+      "message": "I would just call them `MAVENCENTRAL_USERNAME` and `MAVENCENTRAL_TOKEN` as we don\u0027t know yet if they will be used for an old-style mvn deploy or jreleaser.",
+      "parentUuid": "74444956_066cb822",
+      "range": {
+        "startLine": 40,
+        "startChar": 32,
+        "endLine": 42,
+        "endChar": 80
+      },
+      "revId": "53b1da53920690356b47f60afaf6104e075fed9e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

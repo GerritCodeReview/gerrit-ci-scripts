@@ -46,6 +46,30 @@
       },
       "revId": "a584c8ea4ea438497a7e2979020b45863ccee5c4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6bc1bbd_d5ca57c0",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-10-30T19:10:05Z",
+      "side": 1,
+      "message": "Sure, but those are the variables required by `jreleaser` whilst here we\u0027re just asking for the Maven credentials.\n\nIt would make more sense to call them `MAVENCENTRAL_USERNAME` and `MAVENCENTRAL_TOKEN`.",
+      "parentUuid": "f7054534_556437a0",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 40
+      },
+      "revId": "a584c8ea4ea438497a7e2979020b45863ccee5c4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
