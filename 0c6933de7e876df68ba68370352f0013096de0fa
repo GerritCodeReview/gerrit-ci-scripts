@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8a3c8eb_1ed1fe7e",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2025-10-30T18:35:29Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "050aef6e_7ac54383",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 0
+      },
+      "revId": "0c6933de7e876df68ba68370352f0013096de0fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e28b93ee_67bb78c2",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-10-30T15:19:46Z",
       "side": 0,
       "message": "We should check if we are using the jreleaser-style or the good-old `mvn deploy` and then call it accordingly.",
+      "range": {
+        "startLine": 147,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 3
+      },
+      "revId": "0c6933de7e876df68ba68370352f0013096de0fa",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42c16d26_63f41010",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2025-10-30T18:35:29Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "e28b93ee_67bb78c2",
       "range": {
         "startLine": 147,
         "startChar": 0,
