@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c26db63_e63f0392",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2025-10-30T13:34:05Z",
+      "side": 1,
+      "message": "```suggestion\nshell script as a variable therefore the DRY_RUN was\n```",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 5
+      },
+      "revId": "3d38bf661107e3ac8b23927863e59a355a5d1dd7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
