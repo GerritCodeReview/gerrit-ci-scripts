@@ -16,6 +16,24 @@
       "message": "For unblocking the merge of this change, we could keep the \"old\" mechanism as well, which is harmless when we use jreleaser. Then, once the relevant changes in Gerrit are merged, we can get rid of them.",
       "revId": "0c8318177b106d0cb2005c2b1fbd8b5d00d55b04",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "addcdd30_c2b09ced",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-10-30T15:00:00Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "22e4d91a_482af286",
+      "revId": "0c8318177b106d0cb2005c2b1fbd8b5d00d55b04",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
