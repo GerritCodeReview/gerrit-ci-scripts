@@ -22,6 +22,30 @@
       },
       "revId": "a584c8ea4ea438497a7e2979020b45863ccee5c4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7054534_556437a0",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2025-10-30T14:03:37Z",
+      "side": 1,
+      "message": "According to jreleaser[1] those are the username you should use when logging in maven central.\n\n[1] https://jreleaser.org/guide/latest/examples/maven/maven-central.html",
+      "parentUuid": "2cee87c7_327b36dc",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 40
+      },
+      "revId": "a584c8ea4ea438497a7e2979020b45863ccee5c4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
