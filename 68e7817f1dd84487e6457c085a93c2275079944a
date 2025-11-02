@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "391f7fc4_e52309fe",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-02T04:56:46Z",
+      "side": 1,
+      "message": "This should now be changed using MAVENCENTRAL_USERNAME / MAVENCENTRAL_TOKEN\n\n\n\n```suggestion\nenvsubst \u0027$MAVENCENTRAL_USERNAME $MAVENCENTRAL_TOKEN\u0027 \u003c /tmp/m2.settings.xml.template \u003e \"$HOME/.m2/settings.xml\"\n```",
+      "range": {
+        "startLine": 60,
+        "startChar": 10,
+        "endLine": 60,
+        "endChar": 34
+      },
+      "revId": "68e7817f1dd84487e6457c085a93c2275079944a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59136717_787b4b30",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 18
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-02T04:56:46Z",
+      "side": 1,
+      "message": "This should now be changed using MAVENCENTRAL_USERNAME / MAVENCENTRAL_TOKEN\n\n\n\n```suggestion\n  bearer_token\u003d$(echo -n \"$MAVENCENTRAL_USERNAME:$MAVENCENTRAL_TOKEN\" | base64)\n```",
+      "range": {
+        "startLine": 158,
+        "startChar": 26,
+        "endLine": 158,
+        "endChar": 50
+      },
+      "revId": "68e7817f1dd84487e6457c085a93c2275079944a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78c9300b_c798c868",
+        "filename": "jenkins-docker/agent-release/m2.settings.xml.template",
+        "patchSetId": 18
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-02T04:56:46Z",
+      "side": 1,
+      "message": "This needs changing to MAVENCENTRAL_USER",
+      "range": {
+        "startLine": 6,
+        "startChar": 16,
+        "endLine": 6,
+        "endChar": 27
+      },
+      "revId": "68e7817f1dd84487e6457c085a93c2275079944a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "357bc0d1_ea85cc05",
+        "filename": "jenkins-docker/agent-release/m2.settings.xml.template",
+        "patchSetId": 18
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-02T04:56:46Z",
+      "side": 1,
+      "message": "```suggestion\n      \u003cusername\u003e$MAVENCENTRAL_USER\u003c/username\u003e\n      \u003cpassword\u003e$MAVENCETNRAL_TOKEN\u003c/password\u003e\n```",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "68e7817f1dd84487e6457c085a93c2275079944a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d51fa2e7_98796f34",
+        "filename": "jenkins-docker/agent-release/m2.settings.xml.template",
+        "patchSetId": 18
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-02T04:56:46Z",
+      "side": 1,
+      "message": "This needs changing to MAVENCENTRAL_TOKEN",
+      "range": {
+        "startLine": 7,
+        "startChar": 16,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "68e7817f1dd84487e6457c085a93c2275079944a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
