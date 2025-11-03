@@ -46,6 +46,47 @@
       },
       "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e44a51d_54b26c1f",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-03T13:20:07Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "c3bae716_01faa6a8",
+      "range": {
+        "startLine": 27,
+        "startChar": 8,
+        "endLine": 27,
+        "endChar": 138
+      },
+      "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07cbd65d_793464a9",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-03T13:20:07Z",
+      "side": 1,
+      "message": "Why is this needed?",
+      "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
