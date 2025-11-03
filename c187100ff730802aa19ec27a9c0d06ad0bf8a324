@@ -123,6 +123,24 @@
       "parentUuid": "b7147926_509fca72",
       "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c505b73_8d39654e",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-03T14:00:04Z",
+      "side": 1,
+      "message": "My initial instinct was to fix the `gerrit-release.sh` too.\nBut then I realised this behaviour had been added intentionally.\nThe script explicitly documents that:\n\n```\nWhen set to any value, dry-run of the release process, without pushing changes or tags\n```\nIt says, \"any value\", explicitly, and I think that\u0027 OK tbh.\n\nExpecting the `DRY_RUN` variable to have a particular value is _also_ quite fragile to me, as we would need to handle many truthful variances such as \"true\", \"TRUE\", \"1\", etc.",
+      "parentUuid": "dd0b2597_9544e8b4",
+      "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
