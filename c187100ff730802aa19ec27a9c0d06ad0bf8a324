@@ -87,6 +87,24 @@
       "message": "Why is this needed?",
       "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7147926_509fca72",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-03T13:28:45Z",
+      "side": 1,
+      "message": "The gerrit-release.sh checks for the DRY_RUN variable having **any** value [1].\nThat\u0027s why it didn\u0027t matter if it was set to \"true\" or \"false\", the script was always running in dry-run mode.\n\nSo here, when `false`, we set it an empty string in accordance to [1].\n\n[1] https://gerrit.googlesource.com/gerrit-ci-scripts/+/refs/heads/master/jenkins-docker/agent-release/gerrit-release.sh#32",
+      "parentUuid": "07cbd65d_793464a9",
+      "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
