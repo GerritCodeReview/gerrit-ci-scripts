@@ -29,7 +29,13 @@ then
   echo "* OSSHR_TOKEN:"
   echo "     API Token used to upload artifacts to Maven Central"
   echo "* DRY_RUN:"
+<<<<<<< PATCH SET (3e8d3d2c4bc6421a44db8a0f48329cd8e5c961e4 Fix typo in gerrit-release.sh documentation)
+  echo "     When set to any value, dry-run of the release process, without pushing changes or tags"
+||||||| BASE      (c187100ff730802aa19ec27a9c0d06ad0bf8a324 Fix DRY_RUN variable always being set to literal "true"/"fal)
+  echo "     When set do any value, dry-run of the release process, without pushing changes or tags"
+=======
   echo "     When set to 'true' or 'TRUE', dry-run of the release process, without pushing changes or tags"
+>>>>>>> BASE      (6ebb7bad39ee1b9322321e3093eeb672b15885c0 Fix DRY_RUN variable always being set to literal "true"/"fal)
   echo ""
   exit 1
 fi
