@@ -29,7 +29,7 @@ then
   echo "* OSSHR_TOKEN:"
   echo "     API Token used to upload artifacts to Maven Central"
   echo "* DRY_RUN:"
-  echo "     When set do any value, dry-run of the release process, without pushing changes or tags"
+  echo "     When set to any value, dry-run of the release process, without pushing changes or tags"
   echo ""
   exit 1
 fi
