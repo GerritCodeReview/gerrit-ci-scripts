@@ -24,12 +24,12 @@ pipeline {
         string(name: 'BRANCH',            defaultValue: '', description: 'Gerrit branch name where the release must be cut')
         string(name: 'NEXT_VERSION',      defaultValue: '', description: 'Next SNAPSHOT version after release')
         string(name: 'MIGRATION_VERSION', defaultValue: '', description: 'Test migration from an earlier Gerrit version')
-        booleanParam(name: 'DRY_RUN',          defaultValue: '', description: 'Dry-run of the release without pushing changes or tags')
+        booleanParam(name: 'DRY_RUN',          defaultValue: false, description: 'Dry-run of the release without pushing changes or tags')
     }
     environment {
         GCLOUD_AUTH_TOKEN = "${params.GCLOUD_AUTH_TOKEN}"
         GPG_PASSPHRASE = "${params.GPG_PASSPHRASE}"
-        DRY_RUN = "${params.DRY_RUN}"
+        DRY_RUN = "${params.DRY_RUN ? '1' : ''}"
     }
     stages {
 
