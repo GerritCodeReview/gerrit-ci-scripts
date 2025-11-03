@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fad31b7a_2f06a432",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2025-11-03T12:50:16Z",
+      "side": 1,
+      "message": "Won\u0027t this have the effect of enabling the dry-run by default?",
+      "range": {
+        "startLine": 27,
+        "startChar": 8,
+        "endLine": 27,
+        "endChar": 138
+      },
+      "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
