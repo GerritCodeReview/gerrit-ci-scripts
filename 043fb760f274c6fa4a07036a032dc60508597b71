@@ -22,6 +22,30 @@
       },
       "revId": "043fb760f274c6fa4a07036a032dc60508597b71",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58f9ca62_28f55cf4",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-03T12:45:47Z",
+      "side": 1,
+      "message": "Fixed with: https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/523881",
+      "parentUuid": "5e0bbc40_32857988",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 37
+      },
+      "revId": "043fb760f274c6fa4a07036a032dc60508597b71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
