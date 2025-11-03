@@ -1,5 +1,29 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e0bbc40_32857988",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-03T12:03:28Z",
+      "side": 1,
+      "message": "Post merge -1.\n\nThe DRY_RUN parameter is a boolean, which means the environment variable will contain the literal string \"true\" or the string \"false\".\n\nThe value will be used by [1] as \n\n```\ntest $DRY_RUN || git push origin HEAD:refs/for/\"$branch\"\n```\n\nNow, because `DRY_RUN` is never an empty string, the release script will *always* run in dry-run mode.\n\n[1] https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/521201",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 37
+      },
+      "revId": "043fb760f274c6fa4a07036a032dc60508597b71",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
