@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28a194cf_8bd43a20",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-04T17:48:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "391f7fc4_e52309fe",
+      "range": {
+        "startLine": 60,
+        "startChar": 10,
+        "endLine": 60,
+        "endChar": 34
+      },
+      "revId": "68e7817f1dd84487e6457c085a93c2275079944a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "59136717_787b4b30",
@@ -84,6 +108,30 @@
       "writtenOn": "2025-11-04T16:48:58Z",
       "side": 1,
       "message": "Fix applied.",
+      "parentUuid": "59136717_787b4b30",
+      "range": {
+        "startLine": 158,
+        "startChar": 26,
+        "endLine": 158,
+        "endChar": 50
+      },
+      "revId": "68e7817f1dd84487e6457c085a93c2275079944a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9123f4ed_3ea9db47",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 18
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-04T17:48:24Z",
+      "side": 1,
+      "message": "Done",
       "parentUuid": "59136717_787b4b30",
       "range": {
         "startLine": 158,
