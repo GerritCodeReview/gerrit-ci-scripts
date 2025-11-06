@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "254f670d_2c67b478",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2025-11-06T18:39:30Z",
+      "side": 1,
+      "message": "@luca.milanesio@gmail.com I have locally verified that bazel-node built out of this version properly resolves bazel version (to `7.6.1`) for I769e4a8b",
+      "revId": "e7a1efc570671bd05fa861d7e9101c54c89cf779",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
