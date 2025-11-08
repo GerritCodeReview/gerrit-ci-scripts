@@ -43,6 +43,7 @@ def call(Map parm = [:]) {
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
     def gerritReviewCredentialsId = "gerrit.googlesource.com"
+    def githubBaseUrl = ""
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')
     echo "Change : ${env.GERRIT_CHANGE_NUMBER}/${GERRIT_PATCHSET_NUMBER} '${env.GERRIT_CHANGE_SUBJECT}'"
@@ -55,12 +56,11 @@ def call(Map parm = [:]) {
             stage('Checkout') {
                 steps {
                     checkout scm
-                    def scmUrl = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
-                    def githubBaseUrl = s.substring(0, scmUrl.lastIndexOf("/"))
-
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
                         script {
+                            def scmUrl = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
                             def pluginScmHostname = new java.net.URI(scmUrl).getHost()
+                            githubBaseUrl = s.substring(0, scmUrl.lastIndexOf("/"))
 
                             sh 'echo "machine ' + pluginScmHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
                             sh 'chmod 600 ~/.netrc'
