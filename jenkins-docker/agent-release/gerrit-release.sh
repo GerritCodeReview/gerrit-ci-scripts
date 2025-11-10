@@ -29,7 +29,7 @@ then
   echo "* OSSHR_TOKEN:"
   echo "     API Token used to upload artifacts to Maven Central"
   echo "* DRY_RUN:"
-  echo "     When set do any value, dry-run of the release process, without pushing changes or tags"
+  echo "     When set to 'true' or 'TRUE', dry-run of the release process, without pushing changes or tags"
   echo ""
   exit 1
 fi
@@ -110,7 +110,7 @@ git clean -fdx
 git commit -a -m 'Set version to '$version'
 
 Release-Notes: skip'
-test $DRY_RUN || git push origin HEAD:refs/for/"$branch"
+test $DRY_RUN = true || test $DRY_RUN = TRUE || git push origin HEAD:refs/for/"$branch"
 
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
@@ -183,7 +183,7 @@ git clean -fdx
 git commit -a -m 'Set version to '$nextversion'
 
 Release-Notes: skip'
-test $DRY_RUN || git push origin HEAD:refs/for/"$branch"
+test $DRY_RUN = true || test $DRY_RUN = TRUE || git push origin HEAD:refs/for/"$branch"
 popd
 
 echo "Release completed"
