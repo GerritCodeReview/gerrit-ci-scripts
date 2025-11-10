@@ -159,6 +159,24 @@
       "parentUuid": "6c505b73_8d39654e",
       "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41390050_2d293eaf",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-10T09:47:05Z",
+      "side": 1,
+      "message": "After the fix Ic042aed6, this change isn\u0027t needed.",
+      "parentUuid": "da29b077_f5bf7d44",
+      "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
