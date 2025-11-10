@@ -177,6 +177,24 @@
       "parentUuid": "da29b077_f5bf7d44",
       "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b4cca2e_64a74f72",
+        "filename": "jenkins-internal/gerrit-release.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-10T11:50:49Z",
+      "side": 1,
+      "message": "Done, this change is only needed to adapt the default value now.",
+      "parentUuid": "41390050_2d293eaf",
+      "revId": "c187100ff730802aa19ec27a9c0d06ad0bf8a324",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
