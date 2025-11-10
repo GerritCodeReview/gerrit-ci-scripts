@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9503219_429f7ff9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-10T16:32:24Z",
+      "side": 1,
+      "message": "Verified at:\n- https://gerrit-ci.gerritforge.com/job/plugin-events-log-bazel-master-stable-3.11/1/\n- https://gerrit-ci.gerritforge.com/job/plugin-events-log-bazel-master-stable-3.12/1/\n- https://gerrit-ci.gerritforge.com/job/plugin-events-log-bazel-master-stable-3.13/1/\n- https://gerrit-ci.gerritforge.com/job/plugin-events-log-bazel-master/1/",
+      "revId": "efdaa4d3b335d6a8a8763572e58d9128cb7a8723",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
