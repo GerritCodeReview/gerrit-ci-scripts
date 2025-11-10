@@ -1,9 +1,13 @@
 - project:
     name: events-log
     jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
           branch:
             - master
           gerrit-branch:
-            - master
-            - stable-3.10
+            - stable-3.13
+            - stable-3.12
+            - stable-3.11
