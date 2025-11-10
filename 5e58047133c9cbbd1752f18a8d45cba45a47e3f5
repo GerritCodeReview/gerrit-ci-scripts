@@ -16,6 +16,24 @@
       "message": "Doesn\u0027t look like this change does anything? it\u0027s empty.",
       "revId": "5e58047133c9cbbd1752f18a8d45cba45a47e3f5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cf14205_a7182b52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-10T12:00:52Z",
+      "side": 1,
+      "message": "Yes, you\u0027re right.\nLuca changed the description as part of https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/525561/1?usp\u003drelated-change",
+      "parentUuid": "dc1f3bca_e456c279",
+      "revId": "5e58047133c9cbbd1752f18a8d45cba45a47e3f5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
