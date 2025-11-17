@@ -3,9 +3,6 @@
     repo: gerrit-eca-plugin
     organization: GerritForge
     jobs:
-      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
-          gerrit-branch:
-            - master
-            - stable-3.10

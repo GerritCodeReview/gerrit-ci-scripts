@@ -1,7 +1,0 @@
-- project:
-    name: github-mvn
-    repo: github
-    branch:
-      - stable-3.10
-    jobs:
-      - 'plugin-{repo}-mvn-{branch}'

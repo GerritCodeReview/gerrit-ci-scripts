@@ -7,7 +7,6 @@
           gerrit-branch:
             - stable-3.12
             - stable-3.11
-            - stable-3.10
           targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'
       - 'plugin-its-{name}-bazel-{branch}':
           branch:

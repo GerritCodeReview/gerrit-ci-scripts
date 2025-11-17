@@ -4,8 +4,6 @@
     organization: GerritForge
     setup: make -f plugins/{name}/Makefile
     jobs:
-      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
-          gerrit-branch:
-            - stable-3.10
