@@ -3,9 +3,6 @@
     repo: analytics
     organization: GerritForge
     jobs:
-      - 'plugin-{name}-sbt-{branch}':
-          branch:
-            - stable-3.10
       - 'plugin-{name}-gh-sbt-{branch}':
           branch:
             - master
