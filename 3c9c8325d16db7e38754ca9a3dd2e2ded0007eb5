@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "885bd486_65481816",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-11-17T12:29:52Z",
+      "side": 1,
+      "message": "The quota plugin builds are now all green after this change.",
+      "revId": "3c9c8325d16db7e38754ca9a3dd2e2ded0007eb5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
