@@ -3,6 +3,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "649567ca_c247e120",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 32
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-20T10:43:22Z",
+      "side": 1,
+      "message": "Verified the pipeline via jreleaser:\n- https://ibb.co/7xw7mcY4\n- https://ibb.co/CKty0qsM\n\nVerified the pipeline in legacy mode (no jreleaser):\n- https://ibb.co/6cSf36gS",
+      "revId": "a4f9ef12324646efabf554b1a712bfb0a999014d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "da3bda0d_fbc39b0b",
         "filename": "jenkins-docker/agent-release/gerrit-release.sh",
         "patchSetId": 32
