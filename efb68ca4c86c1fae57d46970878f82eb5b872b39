@@ -16,6 +16,24 @@
       "message": "@syntonyze@gmail.com could you merge / deploy please 😊\n\n(I would merge, but i can\u0027t deploy, so feel like someone with the power to do both, should do it)",
       "revId": "efb68ca4c86c1fae57d46970878f82eb5b872b39",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "225b7dfe_0ac16a5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-11-20T16:39:48Z",
+      "side": 1,
+      "message": "\u003e @syntonyze@gmail.com could you merge / deploy please 😊\n\u003e \n\u003e (I would merge, but i can\u0027t deploy, so feel like someone with the power to do both, should do it)\n\nUnfortunately, I am not that powerful either. 😊\nDeployment is usually done by @luca.milanesio@gmail.com. Perhaps I can ask him to look over his shoulder when he does it, so I can do it next time.",
+      "parentUuid": "fd88c85e_592be8e1",
+      "revId": "efb68ca4c86c1fae57d46970878f82eb5b872b39",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
