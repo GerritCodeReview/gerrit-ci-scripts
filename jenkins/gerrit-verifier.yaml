@@ -99,8 +99,8 @@
       - raw:
           xml: |
             <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.16">
-              <strategy class="hudson.plugins.build_timeout.impl.NoActivityTimeOutStrategy">
-                 <timeoutSecondsString>750</timeoutSecondsString>
+              <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
+                <timeoutMinutes>60</timeoutMinutes>
               </strategy>
               <operationList>
                  <hudson.plugins.build__timeout.operations.AbortOperation/>
