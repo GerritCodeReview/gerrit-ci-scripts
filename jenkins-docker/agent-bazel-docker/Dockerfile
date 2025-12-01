@@ -6,7 +6,7 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
       bookworm \
       stable" && \
     apt-get update --allow-releaseinfo-change && \
-    apt-get install -y docker-ce git-
+    apt-get install -y docker-ce-cli=5:24.0.9-1~debian.12~bookworm git-
 
 # Restore the Git executables after the removal caused by docker-ce
 RUN ln -sf /usr/libexec/git-core/* /usr/bin/
