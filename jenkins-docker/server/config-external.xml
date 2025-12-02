@@ -11,12 +11,9 @@
     <permission>hudson.model.Hudson.Administer:barbasa</permission>
     <permission>hudson.model.Hudson.Administer:bro314</permission>
     <permission>hudson.model.Hudson.Administer:davido</permission>
-    <permission>hudson.model.Hudson.Administer:dpursehouse</permission>
     <permission>hudson.model.Hudson.Administer:EdwinKempin</permission>
     <permission>hudson.model.Hudson.Administer:lucamilanesio</permission>
     <permission>hudson.model.Hudson.Administer:msohn</permission>
-    <permission>hudson.model.Hudson.Administer:phiesel</permission>
-    <permission>hudson.model.Hudson.Administer:poucet</permission>
     <permission>hudson.model.Hudson.Administer:quic-nasserg</permission>
     <permission>hudson.model.Hudson.Administer:sselberg</permission>
     <permission>hudson.model.Hudson.Administer:zivkov</permission>
