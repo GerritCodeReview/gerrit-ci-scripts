@@ -16,6 +16,24 @@
       "message": "Can you explain the context of where you found the problem and what was the consequence?",
       "revId": "a1909bf42b88fad6163503e4f40f6be5aba89a82",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c32e32f_06ddb28c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2025-12-02T14:46:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8b54208f_a9e7f27d",
+      "revId": "a1909bf42b88fad6163503e4f40f6be5aba89a82",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
