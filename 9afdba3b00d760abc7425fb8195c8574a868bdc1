@@ -22,6 +22,30 @@
       },
       "revId": "9afdba3b00d760abc7425fb8195c8574a868bdc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de532632_5572ad69",
+        "filename": "jenkins-docker/server/config-external.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-12-02T15:24:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "34770a05_9bbca7ad",
+      "range": {
+        "startLine": 12,
+        "startChar": 47,
+        "endLine": 12,
+        "endChar": 53
+      },
+      "revId": "9afdba3b00d760abc7425fb8195c8574a868bdc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
