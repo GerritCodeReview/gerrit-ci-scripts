@@ -46,7 +46,7 @@ def call(Map parm = [:]) {
     def githubBaseUrl = ""
 
     echo "Starting pipeline for plugin '${pluginName}'" + (formatCheck ? " formatCheckId=${formatCheck}" : '') + (buildCheck ? " buildCheckId=${buildCheck}" : '')
-    echo "Change : ${env.GERRIT_CHANGE_NUMBER}/${GERRIT_PATCHSET_NUMBER} '${env.GERRIT_CHANGE_SUBJECT}'"
+    echo "Change : ${env.GERRIT_CHANGE_NUMBER}/${env.GERRIT_PATCHSET_NUMBER} '${env.GERRIT_CHANGE_SUBJECT}'"
     echo "Change URL: ${env.GERRIT_CHANGE_URL}"
 
     pipeline {
