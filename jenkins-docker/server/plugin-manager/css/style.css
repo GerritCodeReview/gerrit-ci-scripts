@@ -13,6 +13,10 @@ a.navbar-brand {
     font-weight: 500;
 }
 
+a.git-repo-url {
+  color: white;
+}
+
 .navbar-header {
   a.navbar-brand {
     color: white;
