@@ -115,7 +115,6 @@ var app = angular.module('PluginManager', []).controller(
       };
 
       $scope.showRepoStatus = function(e, pluginId, pluginJobUrl) {
-        setTimeout(function() {
           $http.get(pluginJobUrl + '/lastSuccessfulBuild/api/json', plugins.httpConfig)
             .then(
               function successCallback(response) {
@@ -133,20 +132,9 @@ var app = angular.module('PluginManager', []).controller(
                     });
                 if (!sourceUrl || sourceUrl.length == 0) return;
 
-                repoStatusPopup.style.display = 'block';
                 repoStatusPopupAnchor.href = sourceUrl[0].replace("/a", "");
               }, function errorCallback(response) {}
             );
-        }, 500);
-      };
-
-      $scope.hideRepoStatus = function(pluginId) {
-        var repoStatusPopup = document.getElementById('repo-status-popup-' + pluginId);
-        if (repoStatusPopup) {
-          setTimeout(function() {
-            repoStatusPopup.style.display = 'none';
-          }, 1000);
-        }
       };
 
       $scope.refreshAvailable();
