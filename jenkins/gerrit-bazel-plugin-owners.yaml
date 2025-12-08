@@ -72,3 +72,10 @@
           branch:
             - master
             - stable-3.11
+      - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
+          targets: 'plugins/owners plugins/owners-a*'
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.13
+            - stable-3.12
