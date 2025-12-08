@@ -13,6 +13,10 @@ a.navbar-brand {
     font-weight: 500;
 }
 
+a#repo-status-popup-a-checks {
+  color: white;
+}
+
 .navbar-header {
   a.navbar-brand {
     color: white;
