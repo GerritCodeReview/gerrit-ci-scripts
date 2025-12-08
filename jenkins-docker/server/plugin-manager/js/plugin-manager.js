@@ -131,7 +131,7 @@ var app = angular.module('PluginManager', []).controller(
                     });
                 if (!sourceUrl || sourceUrl.length == 0) return;
 
-                repoStatusPopupAnchor.href = sourceUrl[0].replace("/a", "");
+                repoStatusPopupAnchor.href = sourceUrl[0].replace("/a/", "");
               }, function errorCallback(response) {}
             );
       };
