@@ -65,10 +65,8 @@
                 <span
                   ng-mouseover="showRepoStatus($event, prop.id, prop.jobUrl)"
                   ng-mouseout="hideRepoStatus(prop.id)"
-                  class="badge {{prop.css}}">{{prop.source}}
-                  <div id="repo-status-popup-{{prop.id}}" style="display: none;" class="repo-status-popup">
-                    <a id="repo-status-popup-a-{{prop.id}}" target="_blank">Source Code</a>
-                  </div>
+                  class="badge {{prop.css}}">
+                    <a id="repo-status-popup-a-{{prop.id}}" style="color: white;" target="_blank">{{prop.source}}</a>
                 </span>
                 <br/>
                 <small>{{prop.description.split('.')[0]}}</small>
