@@ -141,7 +141,8 @@ def collectBuildModes() {
     def polygerritFiles = changedFiles.findAll { it.startsWith("polygerrit-ui") ||
         it.startsWith("lib/js") }
     def bazelFiles = changedFiles.findAll { it == "WORKSPACE" || it.endsWith("BUILD") ||
-        it.endsWith(".bzl") || it == ".bazelversion" }
+        it.endsWith(".bzl") || it.endsWith(".bazel") || it.endsWith(".bazel.lock") ||
+        it.endsWith(".bzlmod") || it == ".bazelversion" }
     if(isMerge) {
         println "Merge commit detected, adding 'polygerrit' validation..."
         Builds.modes += "polygerrit"
