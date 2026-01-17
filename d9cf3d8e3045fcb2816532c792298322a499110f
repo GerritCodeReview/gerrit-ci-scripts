@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea9e114b_3a7536c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4585753
+      },
+      "writtenOn": "2026-01-17T02:07:59Z",
+      "side": 1,
+      "message": "https://cs.android.com/android/platform/superproject/+/main:hardware/interfaces/security/rkp/aidl/android/hardware/security/keymint/DeviceInfoV3.cddl",
+      "revId": "d9cf3d8e3045fcb2816532c792298322a499110f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
