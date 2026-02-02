@@ -52,6 +52,24 @@
       "parentUuid": "b9f2878d_6811a428",
       "revId": "684bd0addae7473fa7768963ed9a272b62f0e1b5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2084e306_08b1aa08",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-02-02T22:14:18Z",
+      "side": 1,
+      "message": "I wish I could ... but the build validation would take at least 2h: Google throttles our calls and the publishing has a 30s delay between calls.\n\nWe could introduce a small validation, though, just ensuring that the bundler can be built and published, which is better than nothing.",
+      "parentUuid": "e4f79744_2b5d362c",
+      "revId": "684bd0addae7473fa7768963ed9a272b62f0e1b5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
