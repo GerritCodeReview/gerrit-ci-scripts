@@ -34,6 +34,24 @@
       "parentUuid": "1e166f08_ba04d057",
       "revId": "684bd0addae7473fa7768963ed9a272b62f0e1b5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4f79744_2b5d362c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2026-02-02T22:11:58Z",
+      "side": 1,
+      "message": "Should we maybe add a CI job validating if changes for the homepage can be built ?",
+      "parentUuid": "b9f2878d_6811a428",
+      "revId": "684bd0addae7473fa7768963ed9a272b62f0e1b5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
