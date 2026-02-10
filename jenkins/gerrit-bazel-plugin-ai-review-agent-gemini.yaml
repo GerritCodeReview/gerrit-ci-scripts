@@ -1,0 +1,8 @@
+- project:
+    name: ai-review-agent-gemini
+    repo: ai-review-agent-gemini
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
