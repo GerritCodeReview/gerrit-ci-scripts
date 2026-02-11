@@ -120,6 +120,7 @@ def call(Map parm = [:]) {
                             (extraPlugins + extraModules + extraGhRepos).each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
                         }
                         sh "${bazeliskCmd} build ${bazeliskOptions} gerrit"
+                        sh "./polygerrit-ui/app/api/publish.sh --pack"
                         sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}/..."
                         sh "${bazeliskCmd} test ${bazeliskOptions} --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }

@@ -13,7 +13,7 @@ for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/{name}-plugin/$file ]
   then
-    cp -f plugins/{name}-plugin/$file plugins/
+    cp -f plugins/{name}-plugin/$file plugins/$(echo $file | sed -e 's/external_package/package/g')
   fi
 done
 
@@ -21,6 +21,7 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 java -fullversion
 bazelisk version
+./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $TARGETS
 for target in $TARGETS
 do
