@@ -77,6 +77,7 @@ if [ "{gerrit-branch}" == "stable-3.11" ]; then
   echo -e "Build against Gerrit stable-3.11 on java21. BAZEL_OPTS = $BAZEL_OPTS"
 fi
 
+./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $BAZEL_OPTS $TARGETS
 
 BAZEL_OPTS="$BAZEL_OPTS --flaky_test_attempts 3 \
