@@ -28,6 +28,7 @@ TARGETS=$(echo "{targets}" | sed -e 's/its-{{name}}/its-{name}/g')
 
 java -fullversion
 bazelisk version
+./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $BAZEL_OPTS $TARGETS
 bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/its-{name}/...
 

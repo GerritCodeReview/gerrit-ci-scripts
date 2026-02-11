@@ -21,6 +21,7 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 
 java -fullversion
 bazelisk version
+./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $TARGETS
 for target in $TARGETS
 do
