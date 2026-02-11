@@ -16,7 +16,7 @@ for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/its-{name}/$file ]
   then
-    cp -f plugins/its-{name}/$file plugins/
+    cp -f plugins/its-{name}/$file plugins/$(echo $file | sed -e 's/external_package/package/g')
   fi
 done
 
@@ -24,6 +24,7 @@ TARGETS=$(echo "{targets}" | sed -e 's/its-{{name}}/its-{name}/g')
 
 java -fullversion
 bazelisk version
+./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $BAZEL_OPTS $TARGETS
 bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/its-{name}/...
 

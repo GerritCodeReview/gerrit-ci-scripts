@@ -11,7 +11,7 @@ for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/account/$file ]
   then
-    cp -f plugins/account/$file plugins/
+    cp -f plugins/account/$file plugins/$(echo $file | sed -e 's/external_package/package/g')
   fi
 done
 
@@ -24,6 +24,7 @@ popd
 
 java -fullversion
 bazelisk version
+./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $BAZEL_OPTS $TARGETS
 bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/account/...
 
