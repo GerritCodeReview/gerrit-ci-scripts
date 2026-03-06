@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "365e6033_fa05850b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-06T09:26:40Z",
+      "side": 1,
+      "message": "I don\u0027t see any stable-3.13 branch in the plugin:\nhttps://gerrit.googlesource.com/plugins/ai-code-review/",
+      "revId": "047fa58ca1e4803c020ba287e81925035bff3682",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
