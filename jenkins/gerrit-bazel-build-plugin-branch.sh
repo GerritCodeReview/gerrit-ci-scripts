@@ -22,7 +22,7 @@ if [ -n "{repo}" ] && [ -n "{sourcePath}" ]; then
   pushd plugins && ln -s {repo}/{sourcePath} . && popd
 fi
 
-for file in external_plugin_deps.bzl external_package.json
+for file in external_plugin_deps.bzl external_plugin_deps.MODULE.bazel external_package.json
 do
   if [ -f plugins/{name}/$file ]
   then
