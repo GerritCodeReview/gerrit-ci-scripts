@@ -16,6 +16,24 @@
       "message": "```suggestion\nfeasible. It might well be that we will need to maintain a non-bazelmod\n```",
       "revId": "f2d3d638b40924e42df6b4676f930e4772d95bcf",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92d4ac17_ab52c508",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-03-18T19:21:23Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "e288fe75_5f4e7869",
+      "revId": "f2d3d638b40924e42df6b4676f930e4772d95bcf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
