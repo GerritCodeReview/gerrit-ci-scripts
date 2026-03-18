@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * Declarative pipeline for building and testing JGit servlet-4 branch against Gerrit stable-3.13 and Gerrit master.
+ * Declarative pipeline for building and testing JGit servlet-4 branch against Gerrit master.
  *  Parameters: None
  * Usage in a Jenkinsfile:
  *   gerritJGitServlet4Pipeline()
@@ -64,51 +64,6 @@ def call(Map cfg = [:]) {
         }
       }
 
-      stage('Checkout Gerrit stable-3.13') {
-        steps {
-          sh '''
-            git clone -b stable-3.13 --recursive https://gerrit.googlesource.com/gerrit
-          '''
-        }
-      }
-
-      stage('Build Gerrit stable-3.13') {
-        steps {
-          script {
-            def jgitSourceDir = "${env.WORKSPACE}/jgit"
-            def jgitTargetDir = "${env.WORKSPACE}/gerrit/modules/jgit"
-            echo "Replacing gerrit jgit module with jgit change ${env.GERRIT_CHANGE_NUMBER}..."
-
-            sh """
-                echo "${jgitSourceDir} -> ${jgitTargetDir}"
-                mv ${jgitTargetDir} /tmp/jgit-3.13
-                ln -sfn ${jgitSourceDir} ${jgitTargetDir}
-            """
-
-            dir('gerrit') {
-              sh '''
-                . set-java.sh 21
-                  bazelisk build release
-              '''
-            }
-          }
-        }
-      }
-      stage('Test Gerrit stable-3.13') {
-        steps {
-          dir('gerrit') {
-            sh '''
-              . set-java.sh 21
-              echo "running gerrit stable-3.13 tests..."
-              bazelisk test \
-                --test_tag_filters=-flaky \
-                --flaky_test_attempts 3 \
-                --test_timeout 3600 \
-                //...
-            '''
-          }
-        }
-      }
       stage('Checkout Gerrit master') {
         steps {
           dir('gerrit') {
