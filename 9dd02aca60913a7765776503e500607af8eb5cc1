@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "771a5b21_ad9f00bd",
+        "filename": "jenkins/gerrit-bazel-module-index-opensearch.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-20T17:17:19Z",
+      "side": 1,
+      "message": "You also need to add the relevant `Jenkinsfile` in the `index-opensearch` repository.",
+      "range": {
+        "startLine": 12,
+        "startChar": 9,
+        "endLine": 12,
+        "endChar": 31
+      },
+      "revId": "9dd02aca60913a7765776503e500607af8eb5cc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
