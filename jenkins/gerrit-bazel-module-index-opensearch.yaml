@@ -1,0 +1,12 @@
+- project:
+    name: index-opensearch
+    jobs:
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - master
+      - 'module-{name}-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.13
+      - 'module-{name}-verifier'
