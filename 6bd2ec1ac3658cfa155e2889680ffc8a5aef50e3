@@ -16,6 +16,23 @@
       "message": "@luca.milanesio@gmail.com I am not sure, how to test it, because gerrit core changes are pending as well.",
       "revId": "6bd2ec1ac3658cfa155e2889680ffc8a5aef50e3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bba75ba1_6b3e111a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-03-21T11:46:51Z",
+      "side": 1,
+      "message": "VRFY+1. This is hard to fully verify in code review, but the change looks reasonable and will be confirmed in practice after merge.",
+      "revId": "6bd2ec1ac3658cfa155e2889680ffc8a5aef50e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
