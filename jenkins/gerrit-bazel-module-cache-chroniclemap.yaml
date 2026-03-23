@@ -11,5 +11,10 @@
           branch:
             - master
             - stable-3.13
+      - 'module-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.14
       - 'module-{name}-verifier'
       - 'module-{name}-verifier-gh'
