@@ -22,6 +22,30 @@
       },
       "revId": "1f29889d956fe2e91d1a60f1dcd0a25e145241c9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9752455c_eb99b928",
+        "filename": "jenkins/update_checker_definitions.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-23T14:17:42Z",
+      "side": 1,
+      "message": "No, we keep on building them until we release v3.14.0",
+      "parentUuid": "0662923c_a1b7e94b",
+      "range": {
+        "startLine": 7,
+        "startChar": 43,
+        "endLine": 7,
+        "endChar": 65
+      },
+      "revId": "1f29889d956fe2e91d1a60f1dcd0a25e145241c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
