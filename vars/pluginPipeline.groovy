@@ -115,6 +115,7 @@ def call(Map parm = [:]) {
                     dir ('gerrit') {
                         sh "cd plugins && ln -s ../../${pluginName} ."
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
+                        sh "if [ -f ../${pluginName}/external_plugin_deps.MODULE.bazel ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.MODULE.bazel .; fi"
                         sh "if [ -f ../${pluginName}/external_package.json ]; then cd plugins && ln -sf ../../${pluginName}/external_package.json package.json; fi"
                         script {
                             (extraPlugins + extraModules + extraGhRepos).each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
