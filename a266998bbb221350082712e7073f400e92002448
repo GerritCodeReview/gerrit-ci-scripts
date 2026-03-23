@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4e50b01_826dd601",
+        "filename": "jenkins/gerrit-bazel-module-cache-chroniclemap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-23T17:22:08Z",
+      "side": 1,
+      "message": "`plugin`?\n\n\n\n```suggestion\n      - \u0027module-{name}-gh-bazel-{branch}-{gerrit-branch}\u0027:\n```",
+      "range": {
+        "startLine": 14,
+        "startChar": 9,
+        "endLine": 14,
+        "endChar": 15
+      },
+      "revId": "a266998bbb221350082712e7073f400e92002448",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
