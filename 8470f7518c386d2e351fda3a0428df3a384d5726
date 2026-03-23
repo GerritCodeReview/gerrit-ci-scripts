@@ -16,6 +16,24 @@
       "message": "+ jenkins-jobs --allow-empty-variables update --delete-old jenkins\nINFO:jenkins_jobs.cli.subcommand.update:Updating jobs in [\u0027jenkins\u0027] ([])\nTraceback (most recent call last):\n  File \"/usr/local/bin/jenkins-jobs\", line 8, in \u003cmodule\u003e\n    sys.exit(main())\n             ^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/jenkins_jobs/cli/entry.py\", line 174, in main\n    jjb.execute()\n  File \"/usr/local/lib/python3.11/dist-packages/jenkins_jobs/cli/entry.py\", line 154, in execute\n    ext.obj.execute(self.options, self.jjb_config)\n  File \"/usr/local/lib/python3.11/dist-packages/jenkins_jobs/cli/subcommand/update.py\", line 142, in execute\n    builder, xml_jobs, xml_views \u003d self._generate_xmljobs(options, jjb_config)\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/jenkins_jobs/cli/subcommand/update.py\", line 125, in _generate_xmljobs\n    job_data_list, view_data_list \u003d parser.expandYaml(registry, options.names)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/jenkins_jobs/parser.py\", line 332, in expandYaml\n    raise JenkinsJobsException(\njenkins_jobs.errors.JenkinsJobsException: Failed to find suitable template named \u0027module-{name}-gh-bazel-{branch}-{gerrit-branch}\u0027\nBuild step \u0027Execute shell\u0027 marked build as failure\nFinished: FAILURE",
       "revId": "8470f7518c386d2e351fda3a0428df3a384d5726",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82e80d9e_91bcba82",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-03-23T22:24:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "102cb03d_954d8f5d",
+      "revId": "8470f7518c386d2e351fda3a0428df3a384d5726",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
