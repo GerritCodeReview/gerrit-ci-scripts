@@ -77,6 +77,26 @@
           follow-symlinks: true
 
 - job-template:
+    name: 'module-{name}-gh-bazel-{branch}-{gerrit-branch}'
+    class: modules
+    node: bazel-debian
+    description: >
+      Lib module {name} {branch} branch Bazel build owned by {organization} for Gerrit {gerrit-branch}
+    defaults: plugin-template-bazel
+    builders:
+      - set-git-credentials
+      - shell: !include-raw: gerrit-bazel-build-plugin-branch.sh
+      - shell: !include-raw: gerrit-bazel-gh-get-plugin-info.sh
+    publishers:
+      - archive:
+          artifacts: >
+            bazel-bin/plugins/{name}/{name}.jar,
+            bazel-bin/plugins/{name}/{name}.jar-version,
+            bazel-bin/plugins/{name}/{name}.json,
+            {extra-artifacts}
+          follow-symlinks: true
+
+- job-template:
     name: 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}'
     description: >
       Plugin {name} {branch} branch owned by {organization}
