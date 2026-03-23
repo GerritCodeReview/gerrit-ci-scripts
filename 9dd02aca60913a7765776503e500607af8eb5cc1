@@ -22,6 +22,30 @@
       },
       "revId": "9dd02aca60913a7765776503e500607af8eb5cc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0f4acd6_b14a77d9",
+        "filename": "jenkins/gerrit-bazel-module-index-opensearch.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004034
+      },
+      "writtenOn": "2026-03-23T08:18:03Z",
+      "side": 1,
+      "message": "Wendy already added a Jenkinsfile here: https://gerrit.googlesource.com/modules/index-opensearch/+/refs/heads/master/Jenkinsfile\n\nis that sufficient ?",
+      "parentUuid": "771a5b21_ad9f00bd",
+      "range": {
+        "startLine": 12,
+        "startChar": 9,
+        "endLine": 12,
+        "endChar": 31
+      },
+      "revId": "9dd02aca60913a7765776503e500607af8eb5cc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
