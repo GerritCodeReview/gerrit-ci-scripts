@@ -22,6 +22,30 @@
       },
       "revId": "a266998bbb221350082712e7073f400e92002448",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99cb25ba_eb2ea7d7",
+        "filename": "jenkins/gerrit-bazel-module-cache-chroniclemap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-03-23T17:25:50Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "e4e50b01_826dd601",
+      "range": {
+        "startLine": 14,
+        "startChar": 9,
+        "endLine": 14,
+        "endChar": 15
+      },
+      "revId": "a266998bbb221350082712e7073f400e92002448",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
