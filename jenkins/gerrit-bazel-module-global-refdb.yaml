@@ -7,4 +7,9 @@
             - stable-3.13
             - stable-3.12
             - stable-3.11
+      - 'module-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.14
       - 'module-{name}-verifier'
