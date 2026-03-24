@@ -12,5 +12,6 @@
           branch:
             - master
             - stable-3.13
+            - stable-3.14
       - 'plugin-{name}-verifier'
       - 'plugin-{name}-verifier-gh'
