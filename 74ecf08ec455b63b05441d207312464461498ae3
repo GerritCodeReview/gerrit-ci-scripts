@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b6b7be4_1f7756ae",
+        "filename": "jenkins/gerrit-bazel-module-global-refdb.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-24T08:23:50Z",
+      "side": 1,
+      "message": "We need a stable branch for global-refdb, otherwise the other plugins won\u0027t know which branch to track.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "74ecf08ec455b63b05441d207312464461498ae3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
