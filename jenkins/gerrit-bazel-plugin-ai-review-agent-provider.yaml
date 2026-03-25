@@ -1,0 +1,10 @@
+- project:
+    name: ai-review-agent-provider
+    repo: ai-review-agent-provider
+    organization: GerritForge
+    extra-plugins: 'secure-config'
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
+      - 'plugin-{name}-verifier-gh'
