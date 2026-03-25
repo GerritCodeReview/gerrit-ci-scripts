@@ -7,5 +7,6 @@
           extra-modules: 'events-broker'
           branch:
             - master
+            - stable-3.14
             - stable-3.13
       - 'plugin-{name}-verifier-gh'
