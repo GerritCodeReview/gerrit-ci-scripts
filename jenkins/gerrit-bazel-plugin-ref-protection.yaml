@@ -6,3 +6,7 @@
             - master
           gerrit-branch:
             - master
+            - stable-3.14
+            - stable-3.13
+            - stable-3.12
+            - stable-3.11
