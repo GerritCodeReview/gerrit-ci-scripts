@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88d531ca_e9c28a76",
+        "filename": "jenkins-docker/server/plugin-manager/js/plugin-manager.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-03-25T12:48:55Z",
+      "side": 0,
+      "message": "Any reason why we removed this debouncing of 500ms?\nAre we not now continuously issuing HTTP requests immediately on every mouseover?",
+      "range": {
+        "startLine": 140,
+        "startChar": 0,
+        "endLine": 140,
+        "endChar": 16
+      },
+      "revId": "8e389d0977f04aa3e0e2ec7b6a3cb543a231b0fd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

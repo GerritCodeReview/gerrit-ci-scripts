@@ -16,6 +16,75 @@
       "message": "Bump @thomasmulhall410@yahoo.com?",
       "revId": "f7ac15e89a8a2e3645a43cd2ce1ebbf0a339141d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b1fa343_1bcd3824",
+        "filename": "jenkins-docker/server/plugin-manager/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-03-25T12:48:55Z",
+      "side": 1,
+      "message": "this function has been deleted, and it should not be referred anymore",
+      "range": {
+        "startLine": 67,
+        "startChar": 31,
+        "endLine": 67,
+        "endChar": 54
+      },
+      "revId": "f7ac15e89a8a2e3645a43cd2ce1ebbf0a339141d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bcd8655e_0bb826be",
+        "filename": "jenkins-docker/server/plugin-manager/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-03-25T12:48:55Z",
+      "side": 1,
+      "message": "nit: this page loads `css/style.css`, styling of this link should go there.",
+      "range": {
+        "startLine": 69,
+        "startChar": 60,
+        "endLine": 69,
+        "endChar": 81
+      },
+      "revId": "f7ac15e89a8a2e3645a43cd2ce1ebbf0a339141d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "77d16197_b63a5311",
+        "filename": "jenkins-docker/server/plugin-manager/js/plugin-manager.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-03-25T12:48:55Z",
+      "side": 1,
+      "message": "We should probably guard for the element not being there, like the previous code did:\n\n```suggestion\n                if (!repoStatusPopupAnchor || repoStatusPopupAnchor.href) return;\n```",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 55
+      },
+      "revId": "f7ac15e89a8a2e3645a43cd2ce1ebbf0a339141d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
