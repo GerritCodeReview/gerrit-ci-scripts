@@ -7,5 +7,10 @@
           branch:
             - master
             - stable-3.13
+      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
+          branch:
+            - master
+          gerrit-branch:
+            - stable-3.14
       - 'plugin-{name}-verifier'
       - 'plugin-{name}-verifier-gh'
