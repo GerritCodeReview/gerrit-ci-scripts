@@ -88,6 +88,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc010e95_e7b4d86e",
+        "filename": "jenkins-docker/server/plugin-manager/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-25T14:40:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bcd8655e_0bb826be",
+      "range": {
+        "startLine": 69,
+        "startChar": 60,
+        "endLine": 69,
+        "endChar": 81
+      },
+      "revId": "f7ac15e89a8a2e3645a43cd2ce1ebbf0a339141d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "77d16197_b63a5311",
