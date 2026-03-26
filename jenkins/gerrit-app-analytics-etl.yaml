@@ -27,7 +27,8 @@
       - git:
           remotes:
             - origin:
-                url: https://github.com/{organization}/{repo}
+                url: https://review.gerrithub.io/{organization}/{repo}
+                credentials-id: eclipse.gerrithub.io
           branches:
             - origin/{branch}
           submodule:

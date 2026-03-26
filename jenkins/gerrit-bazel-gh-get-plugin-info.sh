@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-curl -L https://api.github.com/repos/{organization}/{repo} \
+curl https://review.gerrithub.io/projects/{organization}%2{repo}/config | tail -1 \
      > bazel-bin/plugins/{name}/{name}.json
 
