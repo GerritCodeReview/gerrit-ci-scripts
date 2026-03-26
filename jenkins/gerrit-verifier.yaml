@@ -4,6 +4,7 @@
       - shell: |
           #!/bin/bash -e
           echo "machine gerrit.googlesource.com login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc
+          [ ! -n "${GH_GIT_USER}" ] || echo "machine review.gerrithub.io login $GH_GIT_USER password $GH_GIT_PASS">> ~/.netrc
           chmod 600 ~/.netrc
 
 - builder:
