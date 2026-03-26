@@ -56,13 +56,13 @@ def call(Map parm = [:]) {
             stage('Checkout') {
                 steps {
                     checkout scm
-                    withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
+                    withCredentials([usernamePassword(usernameVariable: "GH_GIT_USER", passwordVariable: "GH_GIT_PASS", credentialsId: env.GERRIT_CREDENTIALS_ID)]) {
                         script {
                             def scmUrl = sh(returnStdout: true, script: 'git config remote.origin.url').trim()
                             def pluginScmHostname = new java.net.URI(scmUrl).getHost()
                             githubBaseUrl = scmUrl.substring(0, scmUrl.lastIndexOf("/"))
 
-                            sh 'echo "machine ' + pluginScmHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
+                            sh 'echo "machine ' + pluginScmHostname + ' login $GH_GIT_USER password $GH_GIT_PASS">> ~/.netrc'
                             sh 'chmod 600 ~/.netrc'
                             sh "git clone -b ${env.GERRIT_BRANCH} ${scmUrl}"
                             sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
