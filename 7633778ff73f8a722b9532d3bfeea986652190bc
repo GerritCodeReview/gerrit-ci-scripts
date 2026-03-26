@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e26e8e19_7547a505",
+        "filename": "jenkins/gerrit-app-analytics-etl.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-26T13:37:22Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "97a3c225_36679d6c",
+      "revId": "7633778ff73f8a722b9532d3bfeea986652190bc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f60bb218_b85dc38c",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-03-26T13:36:47Z",
       "side": 1,
       "message": "```suggestion\nGH_PLUGIN_SCM_BASE_URL\u003d\"https://review.gerrithub.io/a/{organization}\"\n```",
+      "revId": "7633778ff73f8a722b9532d3bfeea986652190bc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc4dc1fa_922f6ab6",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-26T13:37:22Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "f60bb218_b85dc38c",
       "revId": "7633778ff73f8a722b9532d3bfeea986652190bc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
@@ -52,6 +88,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b3fb035_40503473",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-26T13:37:22Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "d9d7ec35_8e26780d",
+      "revId": "7633778ff73f8a722b9532d3bfeea986652190bc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "32c6ca54_b2081f82",
@@ -65,6 +119,24 @@
       "writtenOn": "2026-03-26T13:36:47Z",
       "side": 1,
       "message": "```suggestion\n                url: https://review.gerrithub.io/a/{organization}/{repo}\n```",
+      "revId": "7633778ff73f8a722b9532d3bfeea986652190bc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2fb80ec7_ee6a57ca",
+        "filename": "jenkins/gerrit-bazel-plugin-account.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-26T13:37:22Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "32c6ca54_b2081f82",
       "revId": "7633778ff73f8a722b9532d3bfeea986652190bc",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
