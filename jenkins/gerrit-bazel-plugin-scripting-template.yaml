@@ -75,7 +75,8 @@
       - git:
           remotes:
             - origin:
-                url: https://github.com/{organization}/{repo}
+                url: https://review.gerrithub.io/a/{organization}/{repo}
+                credentials-id: eclipse.gerrithub.io
             - gerrit:
                 url: https://gerrit.googlesource.com/a/gerrit
                 credentials-id: gerrit.googlesource.com
@@ -100,8 +101,8 @@
       - git:
           remotes:
             - origin:
-                url: https://github.com/{organization}/{repo}
-                credentials-id: gerrit.googlesource.com
+                url: https://review.gerrithub.io/a/{organization}/{repo}
+                credentials-id: eclipse.gerrithub.io
           branches:
             - origin/{branch}
           skip-tag: true
