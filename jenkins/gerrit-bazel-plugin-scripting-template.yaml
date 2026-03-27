@@ -12,6 +12,10 @@
               credential-id: gerrit.googlesource.com
               username: GS_GIT_USER
               password: GS_GIT_PASS
+          - username-password-separated:
+              credential-id: eclipse.gerrithub.io
+              username: GH_GIT_USER
+              password: GH_GIT_PASS
     properties:
       - build-discarder:
           days-to-keep: 20
