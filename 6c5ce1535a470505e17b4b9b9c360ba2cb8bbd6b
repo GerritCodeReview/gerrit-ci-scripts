@@ -16,6 +16,23 @@
       "message": "I don\u0027t see the new Bazel 9 equivalent for `bazel sync`: what is the replacement for it?",
       "revId": "6c5ce1535a470505e17b4b9b9c360ba2cb8bbd6b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17545afc_74070d83",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-31T23:08:36Z",
+      "side": 1,
+      "message": "Also, these CI scripts are still building Gerrit v3.11/v3.12/v3.13 and v3.14 where we are not on Bazel 9",
+      "revId": "6c5ce1535a470505e17b4b9b9c360ba2cb8bbd6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
