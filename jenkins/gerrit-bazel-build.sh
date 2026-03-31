@@ -19,10 +19,18 @@ echo '----------------------------------------------'
 java -fullversion
 bazelisk version
 
-# Whilst all the rest of Gerrit is able to automatically sync the Bazel repositories
-# the PolyGerrit part fails to do so when the working directory is replaced with a
-# fresh clone from the remote Git repository
-bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
+BAZEL_VERSION=$(bazelisk version 2>/dev/null | awk -F': ' '/Build label/{print $2; exit}')
+BAZEL_MAJOR=${BAZEL_VERSION%%.*}
+
+if [[ -n "$BAZEL_MAJOR" && "$BAZEL_MAJOR" -ge 9 ]]; then
+  echo "Skipping bazel sync for Bazel $BAZEL_VERSION"
+else
+  echo "Running bazel sync for Bazel $BAZEL_VERSION"
+  # Whilst all the rest of Gerrit is able to automatically sync the Bazel repositories
+  # the PolyGerrit part fails to do so when the working directory is replaced with a
+  # fresh clone from the remote Git repository
+  bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
+fi
 
 if [[ "$MODE" == *"rbe"* ]]
 then

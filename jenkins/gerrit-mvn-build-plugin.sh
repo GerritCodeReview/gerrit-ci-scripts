@@ -17,11 +17,6 @@ then
   echo "build $BAZEL_OPTS" >> .bazelrc
 fi
 
-# Whilst all the rest of Gerrit is able to automatically sync the Bazel repositories
-# the PolyGerrit part fails to do so when the working directory is replaced with a
-# fresh clone from the remote Git repository
-bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
-
 bazelisk build api
 ./tools/maven/api.sh install
 
