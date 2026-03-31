@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e60eba8_d5c64f03",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-31T23:07:38Z",
+      "side": 1,
+      "message": "I don\u0027t see the new Bazel 9 equivalent for `bazel sync`: what is the replacement for it?",
+      "revId": "6c5ce1535a470505e17b4b9b9c360ba2cb8bbd6b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
