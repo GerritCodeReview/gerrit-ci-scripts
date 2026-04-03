@@ -22,6 +22,30 @@
       },
       "revId": "e7e98ae2bba06e38c07487c56a6f2eaf2512248b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a041e6ba_3a94f8c8",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-04-03T19:56:35Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "c7085ff1_3c72166b",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 0
+      },
+      "revId": "e7e98ae2bba06e38c07487c56a6f2eaf2512248b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
