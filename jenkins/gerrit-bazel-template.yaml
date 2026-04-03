@@ -85,6 +85,7 @@
             - stable-3.11
       - 'Gerrit-bazel-{branch}-java21':
           branch:
+            - master
             - stable-3.11
 
 - view:
