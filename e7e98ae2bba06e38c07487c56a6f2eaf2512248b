@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7085ff1_3c72166b",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-04-03T08:04:23Z",
+      "side": 0,
+      "message": "We need to apply the if/then/else here as well.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 0
+      },
+      "revId": "e7e98ae2bba06e38c07487c56a6f2eaf2512248b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}

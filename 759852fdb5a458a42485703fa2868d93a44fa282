@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbb3450b_9621b40b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-04-03T08:04:23Z",
+      "side": 1,
+      "message": "Reformat the comment.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 25
+      },
+      "revId": "759852fdb5a458a42485703fa2868d93a44fa282",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "c3173f72_b203d722",
@@ -14,6 +37,29 @@
       "writtenOn": "2026-04-02T11:49:18Z",
       "side": 1,
       "message": "PTAL.",
+      "revId": "759852fdb5a458a42485703fa2868d93a44fa282",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b10404a_89562442",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-04-03T08:04:23Z",
+      "side": 1,
+      "message": "Why not a simply regex matching?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 32
+      },
       "revId": "759852fdb5a458a42485703fa2868d93a44fa282",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
