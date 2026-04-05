@@ -34,7 +34,7 @@ curl -X POST -n -v https://gerrit-review.googlesource.com/a/plugins/checks/check
     "name": "PolyGerrit UI Tests",
     "description": "Executes unit/integration tests for PolyGerrit UI",
     "repository": "gerrit",
-    "query": "(dir:polygerrit-ui OR file:WORKSPACE) AND (branch:stable-3.11 OR branch:stable-3.12 OR branch:stable-3.13 OR branch:stable-3.14 OR branch:master)",
+    "query": "(dir:polygerrit-ui OR file:WORKSPACE OR file:WORKSPACE.bzlmod) AND (branch:stable-3.11 OR branch:stable-3.12 OR branch:stable-3.13 OR branch:stable-3.14 OR branch:master)",
     "blocking": []
   }'
 
