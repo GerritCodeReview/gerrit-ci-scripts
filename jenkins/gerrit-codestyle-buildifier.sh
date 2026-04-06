@@ -3,7 +3,7 @@ echo 'Running buildifier check...'
 buildifier --version
 cd gerrit
 EXITCODE=0
-for buildfile in $((git show --diff-filter=AM --name-only --pretty="" HEAD | grep --regex "WORKSPACE\|BUILD\|\.bzl$") || true)
+for buildfile in $((git show --diff-filter=AM --name-only --pretty="" HEAD | grep --regex "WORKSPACE\|BUILD\|\.bzl$|\.bzlmod$") || true)
 do
     BUILDIFIER_OUTPUT_FILE="$(mktemp)_buildifier_output.log"
     buildifier -format=text -v -mode=check $buildfile 2>&1 | tee $BUILDIFIER_OUTPUT_FILE
