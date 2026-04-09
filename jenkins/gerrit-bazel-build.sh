@@ -56,5 +56,6 @@ else
   bazelisk build plugins:core release api
   tools/maven/api.sh install
   tools/maven/api.sh war_install
+  polygerrit-ui/app/api/publish.sh --pack
   tools/eclipse/project.py --bazel bazelisk
 fi
