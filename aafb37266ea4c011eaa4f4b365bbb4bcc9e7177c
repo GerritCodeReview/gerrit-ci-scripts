@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61069ffd_c31fde12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-04-09T07:30:24Z",
+      "side": 1,
+      "message": "I believe @david.ostrovsky@gmail.com you really didn\u0027t test this locally with JJB ;-)",
+      "revId": "aafb37266ea4c011eaa4f4b365bbb4bcc9e7177c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0bd50ea_62131d83",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-04-09T07:30:24Z",
+      "side": 1,
+      "message": "the `{}` are a JJB expansion. If you really want to use them, you need to double them.",
+      "range": {
+        "startLine": 25,
+        "startChar": 7,
+        "endLine": 25,
+        "endChar": 23
+      },
+      "revId": "aafb37266ea4c011eaa4f4b365bbb4bcc9e7177c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe8e3df1_c4b3ee89",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-04-09T07:30:24Z",
+      "side": 1,
+      "message": "the `{}` are a JJB expansion. If you really want to use them, you need to double them.",
+      "range": {
+        "startLine": 23,
+        "startChar": 8,
+        "endLine": 23,
+        "endChar": 23
+      },
+      "revId": "aafb37266ea4c011eaa4f4b365bbb4bcc9e7177c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
