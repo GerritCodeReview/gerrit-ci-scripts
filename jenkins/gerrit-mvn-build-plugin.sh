@@ -20,7 +20,7 @@ then
 fi
 
 BAZEL_MAJOR=$(echo "$BAZEL_VERSION_OUTPUT" | sed -n 's/^Build label: \([0-9][0-9]*\).*/\1/p')
-if [ "${BAZEL_MAJOR:-0}" -ge 9 ]; then
+if [ "${{BAZEL_MAJOR:-0}}" -ge 9 ]; then
   echo "Skipping bazel sync for Bazel $BAZEL_MAJOR"
 else
   echo "Running bazel sync for Bazel $BAZEL_MAJOR"
