@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71c27e19_7e6dd8b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-04-09T03:58:09Z",
+      "side": 1,
+      "message": "I tested this locally. With Bazel \u003c 9, `bazel sync` still runs as before; with Bazel 9.0.1, it is skipped, which avoids the CI failure.",
+      "revId": "fb0e2a39a399d941725ab5900611cd650d8907a0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
