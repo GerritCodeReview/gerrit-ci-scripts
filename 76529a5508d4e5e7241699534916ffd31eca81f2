@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e6177c1_0410c73b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-04-21T17:27:42Z",
+      "side": 1,
+      "message": "Yes, this fixes the problem.\n\n* [BROKEN](https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.14/job/plugin-audit-sl4j-gh-bazel-master-stable-3.14/3/artifact/bazel-bin/plugins/audit-sl4j/audit-sl4j.json)\n* [FIXED](https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.14/job/plugin-audit-sl4j-gh-bazel-master-stable-3.14/4/artifact/bazel-bin/plugins/audit-sl4j/audit-sl4j.json)",
+      "revId": "76529a5508d4e5e7241699534916ffd31eca81f2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
