@@ -39,7 +39,7 @@ def call(Map parm = [:]) {
     def extraGhRepos = parm.extraGhRepos ?: []
     def gerritReviewBaseUrl = "https://gerrit.googlesource.com/a"
     def gerritReviewHostname = "gerrit.googlesource.com"
-    def gjfVersion = parm.gjfVersion ?: '1.24.0'
+    def gjfVersion = parm.gjfVersion ?: '1.35.0'
     def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
     def gerritReviewCredentialsId = "gerrit.googlesource.com"
@@ -86,13 +86,17 @@ def call(Map parm = [:]) {
                 steps {
                     gerritCheck (checks: ["${formatCheck}": 'RUNNING'], url: "${env.BUILD_URL}console")
                     script {
-                      if (gjfVersion != '1.7') {
-                        sh "git clone -b ${env.GERRIT_BRANCH} https://gerrit.googlesource.com/gerrit gerrit-tools"
-                        dir ('gerrit-tools') {
-                          sh "./tools/setup_gjf.sh ${gjfVersion}"
-                          sh "mv ./tools/format/google-java-format-${gjfVersion} ~/format/."
-                          sh "mv ./tools/format/google-java-format-${gjfVersion}-all-deps.jar ~/format/."
-                        }
+                      sh "git clone -b ${env.GERRIT_BRANCH} https://gerrit.googlesource.com/gerrit gerrit-tools"
+                      dir ('gerrit-tools') {
+                        sh """
+                          if [ -f ./tools/gjf.sh ]; then
+                            bash ./tools/gjf.sh setup ${gjfVersion}
+                          else
+                            bash ./tools/setup_gjf.sh ${gjfVersion}
+                          fi
+                        """
+                        sh "mv ./tools/format/google-java-format-${gjfVersion} ~/format/."
+                        sh "mv ./tools/format/google-java-format-${gjfVersion}-all-deps.jar ~/format/."
                       }
                     }
                     sh "find ${pluginName} -name '*.java' | xargs /home/jenkins/format/google-java-format-${gjfVersion} -i"
