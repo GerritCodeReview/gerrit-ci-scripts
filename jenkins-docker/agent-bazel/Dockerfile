@@ -40,15 +40,19 @@ RUN for REPO in $MODULES; do \
 RUN export GIT_DIR=$REF_REPO/modules/polymer-bridges && mkdir -p $GIT_DIR && git init --bare && \
     git fetch https://gerrit.googlesource.com/polymer-bridges +refs/heads/*:refs/heads/*
 
+# Install two currently supported versions of google-java-format:
+# stable-3.14: 1.24.0
+# master: 1.35.0
 RUN bash -c "mkdir -p /home/jenkins/workspace/Gerrit-verifier-chrome-latest && \
     cd /home/jenkins/workspace/Gerrit-verifier-chrome-latest && \
-    git clone -b stable-3.13 --recursive --reference $REF_REPO https://gerrit.googlesource.com/gerrit && \
+    git clone -b stable-3.14 --recursive --reference $REF_REPO https://gerrit.googlesource.com/gerrit && \
     cd gerrit && \
-    ./tools/setup_gjf.sh 1.7 && \
-    . set-java.sh --branch stable-3.13 && \
+    ./tools/gjf.sh setup 1.24.0 && \
+    . set-java.sh --branch stable-3.14 && \
     bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api && \
     git checkout -f master && \
     git submodule update --reference $REF_REPO --init && \
+    ./tools/gjf.sh setup 1.35.0 && \
     . set-java.sh --branch master && \
     bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --remote_download_all --noremote_upload_local_results plugins:core release api && \
     mv tools/format ~ && \
