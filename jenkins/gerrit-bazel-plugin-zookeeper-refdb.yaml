@@ -10,6 +10,7 @@
             - stable-3.12
             - stable-3.11
       - 'plugin-{name}-gh-bazel-{branch}':
+          extra-bazel-opts: '--config=java21'
           branch:
             - master
             - stable-3.13
