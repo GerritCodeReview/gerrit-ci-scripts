@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6973747_037e7c79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-04-23T18:01:16Z",
+      "side": 1,
+      "message": "I don\u0027t believe we need this: the zookeeper-refdb is green with Java 25, so we are happy keeping it.\n\nSee: https://gerrit-ci.gerritforge.com/job/plugin-zookeeper-refdb-gh-bazel-master/",
+      "revId": "9bfc50b233f0867cc0982acda0f3d3607f254761",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6c86d710_9ff527cb",
