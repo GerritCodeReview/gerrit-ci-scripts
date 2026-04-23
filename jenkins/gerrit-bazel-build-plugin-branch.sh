@@ -85,6 +85,13 @@ fi
 
 bazelisk version
 
+if test "{extraBazelOpts}" != ""
+then
+  echo -e "Setting extra Bazel options {extraBazelOpts}"
+  BAZEL_OPTS="$BAZEL_OPTS {extraBazelOpts}"
+  echo -e "BAZEL_OPTS = $BAZEL_OPTS"
+fi
+
 ./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $BAZEL_OPTS $TARGETS
 

@@ -84,6 +84,13 @@ then
   bash -c "{setup}"
 fi
 
+if test "{extraBazelOpts}" != ""
+then
+  echo -e "Setting extra Bazel options {extraBazelOpts}"
+  BAZEL_OPTS="$BAZEL_OPTS {extraBazelOpts}"
+  echo -e "BAZEL_OPTS = $BAZEL_OPTS"
+fi
+
 ./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $BAZEL_OPTS $TARGETS
 bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
