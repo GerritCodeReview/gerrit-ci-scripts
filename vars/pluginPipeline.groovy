@@ -44,7 +44,7 @@ def call(Map parm = [:]) {
     def gjfVersion = parm.gjfVersion ?: defaultGjfVersion
     def bashSetJavaCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH"
     def bazeliskCmd = "${bashSetJavaCmd} && bazelisk"
-    def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
+    def bazeliskOptions = "--sandbox_tmpfs_path=/tmp" + (parm.extraBazelOpts ? " ${parm.extraBazelOpts}" : "")
     def gerritReviewCredentialsId = "gerrit.googlesource.com"
     def githubBaseUrl = ""
 
