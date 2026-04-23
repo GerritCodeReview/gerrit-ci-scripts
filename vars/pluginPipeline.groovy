@@ -39,12 +39,22 @@ def call(Map parm = [:]) {
     def extraGhRepos = parm.extraGhRepos ?: []
     def gerritReviewBaseUrl = "https://gerrit.googlesource.com/a"
     def gerritReviewHostname = "gerrit.googlesource.com"
+<<<<<<< PATCH SET (ec6609b07adb6dff0258d810acc974ccce80d935 Allow passing extra Bazel options to plugin builds)
+    def gjfVersion = parm.gjfVersion ?: '1.24.0'
+    def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
+    def bazeliskOptions = "--sandbox_tmpfs_path=/tmp" + (parm.extraBazelOpts ? " ${parm.extraBazelOpts}" : "")
+||||||| BASE      (76529a5508d4e5e7241699534916ffd31eca81f2 Fix typo when retrieving project info for GH plugins)
+    def gjfVersion = parm.gjfVersion ?: '1.24.0'
+    def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
+    def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
+=======
     def defaultGjfVersion =
         env.GERRIT_BRANCH ==~ /stable-3\.(11|12|13|14)/ ? '1.24.0' : '1.35.0'
     def gjfVersion = parm.gjfVersion ?: defaultGjfVersion
     def bashSetJavaCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH"
     def bazeliskCmd = "${bashSetJavaCmd} && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
+>>>>>>> BASE      (9f0885bdc7140820a550f8dd136ad0c574538f2a Add gerrit-bsl-license as extra-gh-repo for the github plugi)
     def gerritReviewCredentialsId = "gerrit.googlesource.com"
     def githubBaseUrl = ""
 

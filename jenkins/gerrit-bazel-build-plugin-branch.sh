@@ -85,6 +85,27 @@ fi
 
 bazelisk version
 
+<<<<<<< PATCH SET (ec6609b07adb6dff0258d810acc974ccce80d935 Allow passing extra Bazel options to plugin builds)
+if [ "{gerrit-branch}" == "stable-3.11" ]; then
+  BAZEL_OPTS="$BAZEL_OPTS --config=java21"
+  echo -e "Build against Gerrit stable-3.11 on java21. BAZEL_OPTS = $BAZEL_OPTS"
+fi
+
+if test "{extraBazelOpts}" != ""
+then
+  echo -e "Setting extra Bazel options {extraBazelOpts}"
+  BAZEL_OPTS="$BAZEL_OPTS {extraBazelOpts}"
+  echo -e "BAZEL_OPTS = $BAZEL_OPTS"
+fi
+
+||||||| BASE      (76529a5508d4e5e7241699534916ffd31eca81f2 Fix typo when retrieving project info for GH plugins)
+if [ "{gerrit-branch}" == "stable-3.11" ]; then
+  BAZEL_OPTS="$BAZEL_OPTS --config=java21"
+  echo -e "Build against Gerrit stable-3.11 on java21. BAZEL_OPTS = $BAZEL_OPTS"
+fi
+
+=======
+>>>>>>> BASE      (9f0885bdc7140820a550f8dd136ad0c574538f2a Add gerrit-bsl-license as extra-gh-repo for the github plugi)
 ./polygerrit-ui/app/api/publish.sh --pack
 bazelisk build $BAZEL_OPTS $TARGETS
 
