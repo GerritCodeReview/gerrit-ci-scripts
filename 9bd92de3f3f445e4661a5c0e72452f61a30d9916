@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98683b87_cbd47f93",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-05-01T07:53:21Z",
+      "side": 1,
+      "message": "The clone of the `gerrit-tools` in the pipeline was made only for a temporary transition period, waiting for the image to be updated.\n\nDoes it make sense to just include the tools in the image instead of cloning yet another repository?\n\nBear in mind that Google is throttling us heavily and we should try to lower the workload to gerrit-review in the future.",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 103
+      },
+      "revId": "9bd92de3f3f445e4661a5c0e72452f61a30d9916",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
