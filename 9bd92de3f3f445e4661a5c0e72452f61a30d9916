@@ -22,6 +22,30 @@
       },
       "revId": "9bd92de3f3f445e4661a5c0e72452f61a30d9916",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "104f9c1b_d948aa77",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-05-01T08:18:03Z",
+      "side": 1,
+      "message": "We already install the right one in https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/575121/2, so this shouldn\u0027t be needed anymore.",
+      "parentUuid": "98683b87_cbd47f93",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 103
+      },
+      "revId": "9bd92de3f3f445e4661a5c0e72452f61a30d9916",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
