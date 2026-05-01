@@ -19,7 +19,7 @@ RUN echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION
 
 # Debian 12 does not include the Java 11/21 packages
 # therefore use the Eclipse Adoptium (Temurin) packages
-RUN apt-get update && apt-get install -y temurin-11-jdk temurin-17-jdk temurin-21-jdk
+RUN apt-get update && apt-get install -y temurin-11-jdk temurin-17-jdk temurin-21-jdk temurin-25-jdk
 
 COPY set-java.sh /usr/bin/
 
