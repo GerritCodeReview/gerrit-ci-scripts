@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbd56f48_f73e9e26",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-05-01T17:31:41Z",
+      "side": 1,
+      "message": "The `set-java.sh` needs to be amended for using Java 25 on master.",
+      "range": {
+        "startLine": 56,
+        "startChar": 6,
+        "endLine": 56,
+        "endChar": 17
+      },
+      "revId": "d08952ed9b62db83cab0f689ae40a84a9c9dcc28",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
