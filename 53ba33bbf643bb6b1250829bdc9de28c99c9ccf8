@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "68cd3aef_09450420",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-05-01T20:33:47Z",
+      "side": 1,
+      "message": "That\u0027s valid for all unit and IT tests, but not for general execution. I\u0027d prefer to use the local JVM that matches the one used for building Gerrit.\n\nLet me upload a change to also include Java 25.",
+      "parentUuid": "703822cf_06153b9d",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 61
+      },
+      "revId": "53ba33bbf643bb6b1250829bdc9de28c99c9ccf8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "93307bf4_151e8a5b",
         "filename": "jenkins-docker/agent-debian/set-java.sh",
         "patchSetId": 1
