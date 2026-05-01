@@ -17,12 +17,12 @@ if [ "$1" == "--branch" ]
 then
   shift
   case "$1" in
-    stable-3.10)
-      JAVA_VERSION=17
+    stable-3.1[1-4])
+      JAVA_VERSION=21
       ;;
 
     *)
-      JAVA_VERSION=21
+      JAVA_VERSION=25
       ;;
   esac
 else
@@ -35,9 +35,9 @@ export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
 echo "Java set to: $(which java)"
 
 if [ "$JAVA_VERSION" == "11" ] || [ "$JAVA_VERSION" == "17" ] || \
-    [ "$JAVA_VERSION" == "21" ]
+    [ "$JAVA_VERSION" == "21" ] || [ "$JAVA_VERSION" == "25" ]
 then
-  # See Bazel Issue 3236 with Java 11/17/21 [https://github.com/bazelbuild/bazel/issues/3236]
+  # See Bazel Issue 3236 [https://github.com/bazelbuild/bazel/issues/3236]
   export BAZEL_OPTS="$BAZEL_OPTS --sandbox_tmpfs_path=/tmp"
 fi
 
