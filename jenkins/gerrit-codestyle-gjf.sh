@@ -38,4 +38,5 @@ else
 fi
 
 echo 'Running google-java-format check...'
+. set-java.sh --branch "$TARGET_BRANCH"
 git show --diff-filter=AM --name-only --pretty="" HEAD | grep java$ | xargs -r $GJF -n --set-exit-if-changed
