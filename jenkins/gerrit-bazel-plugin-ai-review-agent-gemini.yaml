@@ -3,6 +3,7 @@
     repo: ai-review-agent-gemini
     organization: GerritForge
     extra-plugins: 'secure-config'
+    extra-gh-repos: 'ai-review-agent-provider'
     jobs:
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
