@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "383e0722_c8d6e9d2",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-05-14T12:29:41Z",
+      "side": 0,
+      "message": "The `git clone` should have been preserved. The reset at L116 failed after this change.\nFixed with https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/583441",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 9
+      },
+      "revId": "6bd2ec1ac3658cfa155e2889680ffc8a5aef50e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
