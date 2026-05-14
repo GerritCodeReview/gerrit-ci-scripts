@@ -66,13 +66,9 @@ def call(Map cfg = [:]) {
 
       stage('Checkout Gerrit master') {
         steps {
-          dir('gerrit') {
-            sh '''
-              git reset --hard origin/master
-              git checkout master
-              git submodule update --init --recursive
-            '''
-          }
+          sh '''
+            git clone -b master --recursive https://gerrit.googlesource.com/gerrit
+          '''
         }
       }
       stage('Build Gerrit master') {
