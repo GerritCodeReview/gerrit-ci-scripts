@@ -33,6 +33,24 @@
       "message": "Looks like this was a regression from https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/563181.",
       "revId": "2d4e866a78517796f798740454e2281b8c41d2d3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "497432a4_826acc77",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-05-14T12:33:24Z",
+      "side": 1,
+      "message": "Yes, that\u0027s already mentioned in the commit message.",
+      "parentUuid": "0a5802c1_b958efdb",
+      "revId": "2d4e866a78517796f798740454e2281b8c41d2d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
