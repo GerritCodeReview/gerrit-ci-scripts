@@ -51,6 +51,24 @@
       "parentUuid": "0a5802c1_b958efdb",
       "revId": "2d4e866a78517796f798740454e2281b8c41d2d3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a09009e0_3dad8109",
+        "filename": "vars/gerritJGitServlet4Pipeline.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-05-14T12:46:31Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "497432a4_826acc77",
+      "revId": "2d4e866a78517796f798740454e2281b8c41d2d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
