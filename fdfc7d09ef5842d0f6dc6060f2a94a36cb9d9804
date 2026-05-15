@@ -16,6 +16,24 @@
       "message": "How is this better than looking at the Submit Requirements?",
       "revId": "fdfc7d09ef5842d0f6dc6060f2a94a36cb9d9804",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01494d27_ebe8f11d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4069542
+      },
+      "writtenOn": "2026-05-15T21:13:11Z",
+      "side": 1,
+      "message": "Is it under there ? I only see these for change: https://gerrit-review.googlesource.com/c/gerrit/+/583241 Not sure if its only limited to Maintainers ?\n\n```\nSubmit Requirements\nCode-Review\tNo votes\nNo-Unresolved-Comments\tUnsatisfied\nCode-Style\t+1\nVerified\t+1\n```",
+      "parentUuid": "b94f3786_17ee54f0",
+      "revId": "fdfc7d09ef5842d0f6dc6060f2a94a36cb9d9804",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
