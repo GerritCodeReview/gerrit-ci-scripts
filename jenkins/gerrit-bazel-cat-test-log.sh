@@ -7,12 +7,9 @@ then
    echo "See test log below"
    echo "=============================="
    echo ""
-   if [ -f gerrit/polygerrit-ui/pnpm-lock.yaml ]
+   if [ -f gerrit/polygerrit-ui/web_test_runner.sh ]
    then
-     cat $(ls ~/.cache/bazel/_bazel_jenkins/*/execroot/_main/bazel-out/*/testlogs/polygerrit-ui/web_test_runner/test.log)
-   elif [ -f gerrit/polygerrit-ui/web_test_runner.sh ]
-   then
-     cat $(ls ~/.cache/bazel/_bazel_jenkins/*/execroot/gerrit/bazel-out/*/testlogs/polygerrit-ui/web_test_runner/test.log)
+     cat $(ls ~/.cache/bazel/_bazel_jenkins/*/execroot/*/bazel-out/*/testlogs/polygerrit-ui/web_test_runner/test.log)
    elif [ -f gerrit/polygerrit-ui/karma_test.sh ]
    then
      cat $(ls ~/.cache/bazel/_bazel_jenkins/*/execroot/gerrit/bazel-out/*/testlogs/polygerrit-ui/karma_test/test.log)
