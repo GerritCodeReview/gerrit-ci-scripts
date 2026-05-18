@@ -8,7 +8,6 @@
           extra-plugins: 'pull-replication healthcheck'
           branch:
             - stable-3.12
-            - stable-3.11
       - 'plugin-{name}-gh-bazel-{branch}':
           extra-gh-repos: 'pull-replication'
           extra-plugins: 'healthcheck'

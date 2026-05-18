@@ -3,9 +3,6 @@
     repo: git-refs-filter
     organization: GerritForge
     jobs:
-      - 'module-{name}-bazel-{branch}':
-          branch:
-            - stable-3.11
       - 'module-{name}-gh-bazel-{branch}':
           branch:
             - master
