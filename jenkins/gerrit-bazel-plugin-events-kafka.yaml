@@ -7,7 +7,6 @@
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - stable-3.12
-            - stable-3.11
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master

@@ -17,6 +17,5 @@
             - master
           gerrit-branch:
             - stable-3.12
-            - stable-3.11
       - 'plugin-{name}-verifier'
       - 'plugin-{name}-verifier-gh'

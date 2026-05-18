@@ -8,7 +8,6 @@
             - stable-3.14
             - stable-3.13
             - stable-3.12
-            - stable-3.11
           targets: 'plugins/its-base:its-base plugins/its-base:its_base_tests'
       - 'plugin-{name}-bazel-{branch}':
           branch:
