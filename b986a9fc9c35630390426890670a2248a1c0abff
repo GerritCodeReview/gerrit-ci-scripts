@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "954dade5_54c16571",
+        "filename": "jenkins/gerrit-bazel-plugin-quota.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-05-18T14:23:38Z",
+      "side": 1,
+      "message": "```suggestion\n            - stable-3.14\n```",
+      "range": {
+        "startLine": 14,
+        "startChar": 14,
+        "endLine": 14,
+        "endChar": 20
+      },
+      "revId": "b986a9fc9c35630390426890670a2248a1c0abff",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
