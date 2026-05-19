@@ -38,6 +38,13 @@
           follow-symlinks: true
 
 - project:
+    name: account-legacy
+    jobs:
+      - 'plugin-account-bazel-{branch}':
+          branch:
+            - stable-3.12
+
+- project:
     name: account
     repo: account
     organization: GerritForge
