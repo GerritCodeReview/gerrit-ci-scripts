@@ -39,6 +39,13 @@
 
 - project:
     name: account
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - stable-3.12
+
+- project:
+    name: account-gh
     repo: account
     organization: GerritForge
     jobs:
