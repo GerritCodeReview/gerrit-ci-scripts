@@ -55,4 +55,15 @@ then
 
   echo "Running local tests in $(google-chrome --version)"
   bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed
+
+  # Screenshot regression tests are a separate Bazel target introduced on
+  # master only for now; mirrors LUCI's existing master-only coverage. To
+  # extend to a stable branch later, add it to the condition below.
+  if [[ "$TARGET_BRANCH" == "master" ]]
+  then
+    echo "Running screenshot tests in $(google-chrome --version)"
+    bazelisk test $BAZEL_OPTS \
+      //polygerrit-ui:web_test_runner_screenshots \
+      || touch ~/polygerrit-failed
+  fi
 fi
