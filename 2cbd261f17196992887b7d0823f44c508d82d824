@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c393e6e_b3f7e5b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-05-26T07:10:50Z",
+      "side": 1,
+      "message": "This works when verifying the multi-site merge-ups builds: https://gerrit-review.googlesource.com/c/plugins/multi-site/+/586801/1",
+      "revId": "2cbd261f17196992887b7d0823f44c508d82d824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
