@@ -42,7 +42,8 @@ def call(Map parm = [:]) {
     def defaultGjfVersion =
         env.GERRIT_BRANCH ==~ /stable-3\.(11|12|13|14)/ ? '1.24.0' : '1.35.0'
     def gjfVersion = parm.gjfVersion ?: defaultGjfVersion
-    def bazeliskCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && bazelisk"
+    def bashSetJavaCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH"
+    def bazeliskCmd = "${bashSetJavaCmd} bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
     def gerritReviewCredentialsId = "gerrit.googlesource.com"
     def githubBaseUrl = ""
@@ -87,7 +88,7 @@ def call(Map parm = [:]) {
                 }
                 steps {
                     gerritCheck (checks: ["${formatCheck}": 'RUNNING'], url: "${env.BUILD_URL}console")
-                    sh "find ${pluginName} -name '*.java' | xargs /home/jenkins/format/google-java-format-${gjfVersion} -i"
+                    sh "${bashSetJavaCmd} && find ${pluginName} -name '*.java' | xargs /home/jenkins/format/google-java-format-${gjfVersion} -i"
                     script {
                         def formatOut = sh (script: "cd ${pluginName} && git status --porcelain", returnStdout: true)
                         if (formatOut.trim()) {
@@ -113,7 +114,7 @@ def call(Map parm = [:]) {
                             (extraPlugins + extraModules + extraGhRepos).each { plugin -> sh "cd plugins && ln -s ../../${plugin} ." }
                         }
                         sh "${bazeliskCmd} build ${bazeliskOptions} gerrit"
-                        sh "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH && ./polygerrit-ui/app/api/publish.sh --pack"
+                        sh "${bashSetJavaCmd} && ./polygerrit-ui/app/api/publish.sh --pack"
                         sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}/..."
                         sh "${bazeliskCmd} test ${bazeliskOptions} --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }
