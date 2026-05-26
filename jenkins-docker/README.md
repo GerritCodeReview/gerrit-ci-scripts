@@ -2,7 +2,7 @@
 
 This is a Docker image based on the Jenkins Docker image that allows users
 to build and test the Gerrit CI jobs automatically, based on the configuration
-at https://gerrit.googlesource.com/gerrit-ci-scripts/
+at https://github.com/GerritCodeReview/gerrit-ci-scripts/
 
 In turn, these CI scripts are based on
 http://docs.openstack.org/infra/jenkins-job-builder/ -- which builds Jenkins
