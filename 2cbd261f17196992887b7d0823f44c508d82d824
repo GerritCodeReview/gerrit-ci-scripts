@@ -16,6 +16,23 @@
       "message": "This works when verifying the multi-site merge-ups builds: https://gerrit-review.googlesource.com/c/plugins/multi-site/+/586801/1",
       "revId": "2cbd261f17196992887b7d0823f44c508d82d824",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0b37f78_377bde87",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-01T17:34:37Z",
+      "side": 1,
+      "message": "Missing `\u0026\u0026`.\n\n\n\n```suggestion\n    def bazeliskCmd \u003d \"${bashSetJavaCmd} \u0026\u0026 bazelisk\"\n```",
+      "revId": "2cbd261f17196992887b7d0823f44c508d82d824",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
