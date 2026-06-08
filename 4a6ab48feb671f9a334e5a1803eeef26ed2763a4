@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a4a087c_d3f45f06",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2026-06-08T22:08:20Z",
+      "side": 1,
+      "message": "@luca.milanesio@gmail.com do you have a specific way to verify this in CI?",
+      "revId": "4a6ab48feb671f9a334e5a1803eeef26ed2763a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
