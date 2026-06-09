@@ -36,6 +36,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c11d63ed_83f0a1a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-09T19:49:39Z",
+      "side": 1,
+      "message": "No, you can just test it locally. If it works locally, we can try it out on the CI and monitor the situation. Worst-case scenario, we\u0027ll revert it again.",
+      "parentUuid": "e9879b52_0bb92275",
+      "revId": "4a6ab48feb671f9a334e5a1803eeef26ed2763a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "43ac0a95_c78f623a",
