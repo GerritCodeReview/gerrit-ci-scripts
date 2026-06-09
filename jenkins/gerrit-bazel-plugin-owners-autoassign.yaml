@@ -1,0 +1,8 @@
+- project:
+    name: owners-autoassign
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: 'owners-common-api'
+          branch:
+            - master
+      - 'plugin-{name}-verifier'

@@ -31,52 +31,17 @@
             **/*non_stamped*
           follow-symlinks: true
 
-- job-template:
-    name: 'plugin-owners-bazel-{branch}-{gerrit-branch}'
-    class: plugins
-    description: 'Plugin owners {branch} branch Bazel build for Gerrit {gerrit-branch}'
-    defaults: plugin-template-bazel
-    scm:
-      - git:
-          remotes:
-            - origin:
-                url: https://gerrit.googlesource.com/a/plugins/{name}
-                credentials-id: gerrit.googlesource.com
-            - gerrit:
-                url: https://gerrit.googlesource.com/a/gerrit
-                credentials-id: gerrit.googlesource.com
-          branches:
-            - origin/{branch}
-          submodule:
-            recursive: true
-          skip-tag: true
-          do-not-fetch-tags: true
-    project-name: plugins%2Fowners
-    builders:
-      - set-git-credentials
-      - shell: !include-raw: gerrit-bazel-build-owners-plugin-branch.sh
-      - shell: !include-raw: gerrit-bazel-get-project-info.sh
-    publishers:
-      - archive:
-          artifacts: >
-            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*,bazel-bin/plugins/owners/owners.json
-          excludes: >
-            **/*non_stamped*
-          follow-symlinks: true
-
 - project:
     name: owners
     jobs:
       - 'plugin-owners-bazel-{branch}':
           targets: 'plugins/owners plugins/owners-a*'
           branch:
-            - master
             - stable-3.14
             - stable-3.13
             - stable-3.12
-      - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
-          targets: 'plugins/owners plugins/owners-a*'
+      - 'plugin-{name}-bazel-{branch}':
+          extra-plugins: 'owners-common-api'
           branch:
             - master
-          gerrit-branch:
-            - stable-3.13
+      - 'plugin-{name}-verifier'
