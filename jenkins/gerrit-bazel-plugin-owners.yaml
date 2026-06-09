@@ -70,13 +70,26 @@
       - 'plugin-owners-bazel-{branch}':
           targets: 'plugins/owners plugins/owners-a*'
           branch:
-            - master
             - stable-3.14
             - stable-3.13
             - stable-3.12
-      - 'plugin-owners-bazel-{branch}-{gerrit-branch}':
-          targets: 'plugins/owners plugins/owners-a*'
+      - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
-          gerrit-branch:
-            - stable-3.13
+      - 'plugin-{name}-verifier'
+
+- project:
+    name: owners-common-api
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+      - 'plugin-{name}-verifier'
+
+- project:
+    name: owners-autoassign
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
+            - master
+      - 'plugin-{name}-verifier'
