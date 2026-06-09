@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f29a754_8772a9f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-09T23:42:45Z",
+      "side": 1,
+      "message": "This is needed when having multiple plugins with external bzlmod dependencies. From your presentation I believe you mentioned that they have to be concat together.",
+      "revId": "d0bcb93cf4985e4cc7f3520a0c31e1d2b898fc98",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
