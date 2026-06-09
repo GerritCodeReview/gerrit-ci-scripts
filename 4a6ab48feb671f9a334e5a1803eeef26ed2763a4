@@ -16,6 +16,23 @@
       "message": "@luca.milanesio@gmail.com do you have a specific way to verify this in CI?",
       "revId": "4a6ab48feb671f9a334e5a1803eeef26ed2763a4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43ac0a95_c78f623a",
+        "filename": "jenkins-docker/agent-debian/set-java.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-09T05:52:02Z",
+      "side": 1,
+      "message": "We still build with Bazel 7 on older releases.",
+      "revId": "4a6ab48feb671f9a334e5a1803eeef26ed2763a4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
