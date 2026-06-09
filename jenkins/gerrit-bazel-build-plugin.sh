@@ -21,13 +21,18 @@ if [ -n "{repo}" ] && [ -n "{sourcePath}" ]; then
   pushd plugins && ln -s {repo}/{sourcePath} . && popd
 fi
 
-for file in external_plugin_deps.bzl external_plugin_deps.MODULE.bazel external_package.json
-do
-  if [ -f plugins/{name}/$file ]
-  then
-    cp -f plugins/{name}/$file plugins/$(echo $file | sed -e 's/external_package/package/g')
-  fi
-done
+setExternalDepsLinks() {
+  local pluginName=$1
+  for file in external_plugin_deps.bzl external_plugin_deps.MODULE.bazel external_package.json
+  do
+    if [ -f plugins/$pluginName/$file ]
+    then
+      cp -f plugins/$pluginName/$file plugins/$(echo $file | sed -e 's/external_package/package/g')
+    fi
+  done
+}
+
+setExternalDepsLinks {name}
 
 PLUGIN_SCM_BASE_URL="https://gerrit.googlesource.com/a"
 for extraPlugin in {extra-plugins}
@@ -35,6 +40,7 @@ do
     pushd ..
     git clone -b {branch} $PLUGIN_SCM_BASE_URL/plugins/$extraPlugin
     popd
+    setExternalDepsLinks $extraPlugin
     pushd plugins
     ln -s ../../$extraPlugin .
     popd
@@ -44,6 +50,7 @@ do
     pushd ..
     git clone -b {branch} $PLUGIN_SCM_BASE_URL/modules/$extraModule
     popd
+    setExternalDepsLinks $extraModule
     pushd plugins
     ln -s ../../$extraModule .
     popd
@@ -55,6 +62,7 @@ do
     pushd ..
     git clone -b {branch} $GH_PLUGIN_SCM_BASE_URL/$extraGhRepo.git
     popd
+    setExternalDepsLinks $extraGhRepo
     pushd plugins
     ln -s ../../$extraGhRepo .
     popd
