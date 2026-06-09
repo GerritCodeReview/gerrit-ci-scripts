@@ -80,3 +80,24 @@
             - master
           gerrit-branch:
             - stable-3.13
+
+- project:
+    name: owners-common-api
+    repo: owners-common-api
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-verifier-gh'
+
+- project:
+    name: owners
+    repo: owners
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-verifier-gh'
+
+- project:
+    name: owners-autoassign
+    repo: owners-autoassign
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-verifier-gh'
