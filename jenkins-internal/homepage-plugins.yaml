@@ -1,0 +1,18 @@
+- job:
+    name: homepage-plugins
+    project-type: pipeline
+    disabled: true
+    properties:
+      - build-discarder:
+          num-to-keep: 14
+          artifact-num-to-keep: 14
+    pipeline-scm:
+      scm:
+        - git:
+            credentials-id: gerrit.googlesource.com
+            url: https://gerrit.googlesource.com/a/homepage
+            branches:
+              - master
+      script-path: Jenkinsfile.plugins
+    triggers:
+      - timed: "H H(0-3) * * *"
