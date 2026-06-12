@@ -72,6 +72,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b81ca8be_26c9d03b",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-12T07:59:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "919534b0_9d85dd2b",
+      "range": {
+        "startLine": 112,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 175
+      },
+      "revId": "a8ddd33280e258c7fb16280397c617325fe8d01f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6285bbf0_aabff754",
@@ -119,6 +143,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "55b1926b_85e0d99e",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-12T07:59:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aab288e_9d963fe4",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 202
+      },
+      "revId": "a8ddd33280e258c7fb16280397c617325fe8d01f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8d3178c4_729820e4",
@@ -156,6 +204,30 @@
       "side": 1,
       "message": "Yes, I\u0027ve just overdone it: you can\u0027t concat JSON files.",
       "parentUuid": "8d3178c4_729820e4",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 157
+      },
+      "revId": "a8ddd33280e258c7fb16280397c617325fe8d01f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ca5a7db_eb941c14",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-12T07:59:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb9f4878_cc109a00",
       "range": {
         "startLine": 114,
         "startChar": 0,
