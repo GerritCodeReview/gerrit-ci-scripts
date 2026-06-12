@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "919534b0_9d85dd2b",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-12T07:25:21Z",
+      "side": 1,
+      "message": "Point taken, let me remove that part.",
+      "parentUuid": "36ebad2a_65ccc2e2",
+      "range": {
+        "startLine": 112,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 175
+      },
+      "revId": "a8ddd33280e258c7fb16280397c617325fe8d01f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6285bbf0_aabff754",
         "filename": "vars/pluginPipeline.groovy",
         "patchSetId": 3
@@ -73,6 +97,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9aab288e_9d963fe4",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-12T07:25:21Z",
+      "side": 1,
+      "message": "😎 That is useful information. Then we can use the same strategy for a single plugin, also, isn\u0027t it? So that the single or multiple plugins use case will be the same.",
+      "parentUuid": "6285bbf0_aabff754",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 202
+      },
+      "revId": "a8ddd33280e258c7fb16280397c617325fe8d01f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8d3178c4_729820e4",
         "filename": "vars/pluginPipeline.groovy",
         "patchSetId": 3
@@ -84,6 +132,30 @@
       "writtenOn": "2026-06-12T06:29:45Z",
       "side": 1,
       "message": "Does that work with package.json, i.e. just have multiple JSON entities in a single file?",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 157
+      },
+      "revId": "a8ddd33280e258c7fb16280397c617325fe8d01f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb9f4878_cc109a00",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-12T07:25:21Z",
+      "side": 1,
+      "message": "Yes, I\u0027ve just overdone it: you can\u0027t concat JSON files.",
+      "parentUuid": "8d3178c4_729820e4",
       "range": {
         "startLine": 114,
         "startChar": 0,
