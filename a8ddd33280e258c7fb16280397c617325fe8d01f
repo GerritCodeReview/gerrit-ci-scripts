@@ -26,6 +26,53 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "36ebad2a_65ccc2e2",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-06-12T06:56:41Z",
+      "side": 1,
+      "message": "+1, what Thomas said. Until today we never have had a use case, where CI is building one plugin with external dependencies, that depends on another plugin with external dependencies. We have removed WORKSPACE-based dependency management, and we don\u0027t expect/support any such use cases o stable branches.",
+      "parentUuid": "96b12c7a_eb8460de",
+      "range": {
+        "startLine": 112,
+        "startChar": 0,
+        "endLine": 112,
+        "endChar": 175
+      },
+      "revId": "a8ddd33280e258c7fb16280397c617325fe8d01f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6285bbf0_aabff754",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-06-12T06:56:41Z",
+      "side": 1,
+      "message": "This concatenation wouldn\u0027t work either, just tested for `javamelody` and `oauth` plugins.\n\nEach `external_plugin_deps.MODULE.bazel` declares:\n\n```python\nmaven \u003d use_extension(\"@rules_jvm_external//:extensions.bzl\", \"maven\")\n```\n\nIf two (or more) `external_plugin_deps.MODULE.bazel` are concatenated, then the build would fail:\n\n```\nERROR: /Users/Davido/projects/gerrit/plugins/external_plugin_deps.MODULE.bazel:30:1: \u0027maven\u0027 redeclared at top level\nERROR: /Users/Davido/projects/gerrit/plugins/external_plugin_deps.MODULE.bazel:11:1: \u0027maven\u0027 previously declared here\n```\n\nNote, that there is a documented way to build multiple plugins in gerrit tree with external dependencies, see `Documentation/dev-build-plugins.txt`, quoting:\n\nFor example, to import external dependencies for the `oauth` and `javamelody`\nplugins, add the following lines to `plugins/external_plugin_deps.MODULE.bazel`:\n\n```python\ninclude(\"//plugins/javamelody:external_plugin_deps.MODULE.bazel\")\ninclude(\"//plugins/oauth:external_plugin_deps.MODULE.bazel\")\n```\n\nIt should be easily doable to conduct new `plugins/external_plugin_deps.MODULE.bazel` with this content.",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 202
+      },
+      "revId": "a8ddd33280e258c7fb16280397c617325fe8d01f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8d3178c4_729820e4",
         "filename": "vars/pluginPipeline.groovy",
         "patchSetId": 3
