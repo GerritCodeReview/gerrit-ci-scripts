@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0302929_d248cbe0",
+        "filename": "jenkins/gerrit-bazel-plugin-its-jira.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-16T18:14:39Z",
+      "side": 1,
+      "message": "```suggestion\n          targets: \u0027plugins/its-jira:its-jira plugins/its-jira:its-jira_tests\u0027\n```",
+      "revId": "e7a9b1d9515f420ad538200d12b963e0ae6b9b8c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
