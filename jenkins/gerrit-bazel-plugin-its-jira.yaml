@@ -1,15 +1,10 @@
 - project:
     name: jira
     jobs:
-      - 'plugin-its-{name}-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
-            - stable-3.14
-            - stable-3.13
-            - stable-3.12
-          targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'
       - 'plugin-its-{name}-bazel-{branch}':
           branch:
             - master
-          targets: 'plugins/its-jira:its-jira plugins/its-jira:its_jira_tests'
+            - stable-3.14
+            - stable-3.13
+            - stable-3.12
+          targets: 'plugins/its-jira:its-jira plugins/its-jira:its-jira_tests'
