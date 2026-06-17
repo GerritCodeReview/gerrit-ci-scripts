@@ -1,6 +1,9 @@
 - defaults:
     name: plugin-gh-template
     targets: 'plugins/{name}:{name}'
+    project-info-host: gerrit-review.googlesource.com
+    project-info-name: '{class}%2F{name}'
+    project-info-output: '{name}'
     node: bazel-debian
     wrappers:
       - timeout:
