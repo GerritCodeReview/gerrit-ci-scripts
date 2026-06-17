@@ -30,7 +30,9 @@
     builders:
       - set-git-credentials
       - shell: !include-raw: gerrit-bazel-build-account-plugin.sh
-      - shell: !include-raw: gerrit-bazel-get-project-info.sh
+      - shell: |
+          curl https://review.gerrithub.io/projects/GerritForge%2Faccount/config \
+              | tail -1 > bazel-bin/plugins/account/account.json
     publishers:
       - archive:
           artifacts: >
