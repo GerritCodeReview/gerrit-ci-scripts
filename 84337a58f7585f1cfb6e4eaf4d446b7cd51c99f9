@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6476f28_42e64d1c",
+        "filename": "jenkins/gerrit-bazel-plugin-account.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-06-18T07:15:00Z",
+      "side": 0,
+      "message": "This fixes the immediate failure, but it duplicates the logic currently implemented in `gerrit-bazel-get-project-info.sh`.\n\nAs a first step toward a cleaner solution, could we make the helper script accept optional overrides for the project path, host, and output name/path while preserving the current `{class}/{name}` defaults? Then `account-gh` could reuse the shared implementation instead of carrying its own copy of the fetch logic.\n\nFor example, the helper could support something along the lines of:\n\n```bash\nhost\u003d\"${PROJECT_INFO_HOST:-gerrit-review.googlesource.com}\"\nproject_path\u003d\"${PROJECT_INFO_PATH:-{class}%2F{name}}\"\noutput_name\u003d\"${PROJECT_INFO_OUTPUT_NAME:-{name}}\"\n\ncurl -fsSL \"https://${host}/projects/${project_path}/config\" | \\\n    tail -n +2 \u003e \"bazel-bin/plugins/${output_name}/${output_name}.json\"\n```\n\nand this job could invoke it with overrides such as:\n\n```sh\nPROJECT_INFO_HOST\u003dreview.gerrithub.io\nPROJECT_INFO_PATH\u003dGerritForge%2Faccount\nPROJECT_INFO_OUTPUT_NAME\u003daccount\n```\n\nThat would keep the fetch logic in a single place and avoid the risk of the inline version drifting from the shared helper over time.\n\nSomething like this:\n\n```yaml\n- shell: |\n    PROJECT_INFO_HOST\u003d\u0027review.gerrithub.io\u0027 \\\n    PROJECT_INFO_PATH\u003d\u0027GerritForge%2Faccount\u0027 \\\n    PROJECT_INFO_OUTPUT_NAME\u003d\u0027account\u0027 \\\n    ./jenkins/gerrit-bazel-get-project-info.sh\n```",
+      "range": {
+        "startLine": 33,
+        "startChar": 29,
+        "endLine": 33,
+        "endChar": 58
+      },
+      "revId": "84337a58f7585f1cfb6e4eaf4d446b7cd51c99f9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
