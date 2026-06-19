@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efe49c0b_67a1c00c",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-19T22:56:11Z",
+      "side": 1,
+      "message": "```suggestion\n    project-info-host: review.gerrithub.io\n```",
+      "revId": "b43d587f25fb5297d8da39d2b13e6f7d2b583424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe2c5c9c_81e756ed",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-19T22:56:11Z",
+      "side": 1,
+      "message": "```suggestion\n    project-info-name: \u0027{organization}%2F{repo}\u0027\n```",
+      "revId": "b43d587f25fb5297d8da39d2b13e6f7d2b583424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8547b65_2f7efe99",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-19T22:56:11Z",
+      "side": 1,
+      "message": "```suggestion\n    project-info-output: \u0027{repo}\u0027\n```",
+      "revId": "b43d587f25fb5297d8da39d2b13e6f7d2b583424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
