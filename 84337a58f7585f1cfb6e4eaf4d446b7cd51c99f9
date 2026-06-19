@@ -16,6 +16,24 @@
       "message": "This needs to be kept.",
       "revId": "84337a58f7585f1cfb6e4eaf4d446b7cd51c99f9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f6195f0_ad6d99ee",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-19T22:59:21Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "a5fabf2b_b7ebafac",
+      "revId": "84337a58f7585f1cfb6e4eaf4d446b7cd51c99f9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
