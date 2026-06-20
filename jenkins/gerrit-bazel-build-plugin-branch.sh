@@ -22,13 +22,23 @@ if [ -n "{repo}" ] && [ -n "{sourcePath}" ]; then
   pushd plugins && ln -s {repo}/{sourcePath} . && popd
 fi
 
-for file in external_plugin_deps.bzl external_plugin_deps.MODULE.bazel external_package.json
+for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/{name}/$file ]
   then
     cp -f plugins/{name}/$file plugins/$(echo $file | sed -e 's/external_package/package/g')
   fi
 done
+
+addExternalBzlModImport() {{
+  local pluginName=$1
+  if [ -f plugins/$pluginName/external_plugin_deps.MODULE.bazel ]
+  then
+    echo 'include("//plugins/'$pluginName':external_plugin_deps.MODULE.bazel")' >> plugins/external_plugin_deps.MODULE.bazel
+  fi
+}}
+
+addExternalBzlModImport {name}
 
 PLUGIN_SCM_BASE_URL="https://gerrit.googlesource.com/a"
 for extraPlugin in {extra-plugins}
@@ -39,6 +49,7 @@ do
     pushd plugins
     ln -s ../../$extraPlugin .
     popd
+    addExternalBzlModImport $extraPlugin
 done
 for extraModule in {extra-modules}
 do
@@ -48,6 +59,7 @@ do
     pushd plugins
     ln -s ../../$extraModule .
     popd
+    addExternalBzlModImport $extraModule
 done
 
 GH_PLUGIN_SCM_BASE_URL="https://review.gerrithub.io/a/{organization}"
@@ -59,6 +71,7 @@ do
     pushd plugins
     ln -s ../../$extraGhRepo .
     popd
+    addExternalBzlModImport $extraGhRepo
 done
 
 TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
