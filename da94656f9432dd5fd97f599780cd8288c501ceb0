@@ -54,6 +54,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "21bc1584_e22ff1d7",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 13
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T15:54:44Z",
+      "side": 1,
+      "message": "@david.ostrovsky@gmail.com, your concerns are addressed in the follow-up change I5080f068287. Thanks for your feedback.",
+      "parentUuid": "b9f0ea96_12b53d8d",
+      "revId": "da94656f9432dd5fd97f599780cd8288c501ceb0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5bba8115_76fd101a",
