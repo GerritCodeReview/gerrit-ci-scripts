@@ -50,6 +50,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3ae1f563_9ab2f107",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-06-20T16:23:50Z",
+      "side": 1,
+      "message": "Same here:\n\n```suggestion\n    echo \u0027include(\"//plugins/\u0027$pluginName\u0027:external_plugin_deps.MODULE.bazel\")\u0027 \u003e\u003e plugins/external_plugin_deps.MODULE.bazel\n```",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 125
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9229fdf3_96182402",
         "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
         "patchSetId": 2

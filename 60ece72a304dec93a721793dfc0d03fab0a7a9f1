@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ed885ef_04780242",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-06-20T16:23:50Z",
+      "side": 1,
+      "message": "Shell-quoting bug. The \\\" at the end is inside a single-quoted bash string, so the backslash is emitted literally.\n\nLooks like it was copied from the Groovy version, where \\\" is a valid Groovy GString escape — but bash single quotes don\u0027t process escapes, so the backslash needs to go.\n\nThe resulting line in `plugins/external_plugin_deps.MODULE.bazel` is `include(\"//plugins/\u003cname\u003e:external_plugin_deps.MODULE.bazel\\\")` — Starlark treats \\\" as an escaped quote and never closes the string, so Bazel will fail to parse the file.\n\n```suggestion\n    echo \u0027include(\"//plugins/\u0027$pluginName\u0027:external_plugin_deps.MODULE.bazel\")\u0027 \u003e\u003e plugins/external_plugin_deps.MODULE.bazel\n```",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 125
+      },
+      "revId": "60ece72a304dec93a721793dfc0d03fab0a7a9f1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
