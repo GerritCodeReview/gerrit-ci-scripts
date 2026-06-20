@@ -16,6 +16,29 @@
       "message": "This patch does fundamentally different — and contradictory — things in `vars/pluginPipeline.groovy` and in `jenkins/gerrit-bazel-build-plugin*.sh`, under one commit message. They cannot both be right.\n\nThe Groovy change (correct): only `external_plugin_deps.MODULE.bazel` is aggregated across plugins, via `include(\"//plugins/\u003cname\u003e:external_plugin_deps.MODULE.bazel\")` append. `external_plugin_deps.bzl` and `external_package.json` are deliberately left as primary-only symlinks because those formats have no merge mechanism.\n\nThe bash change (wrong on all three counts):\n\n1. `setExternalDepsLinks` at line 24 lumps all three file formats together and calls it for every extra in the loop. It uses cp -f to a single fixed destination, so each iteration overwrites the previous.\n2. For `MODULE.bazel`: last-extra-wins instead of `include()` aggregation — does not solve the multi-plugin problem this commit claims to fix, and the bash pipeline still behaves as if only one plugin\u0027s `MODULE.bazel` exists.\n3. For `external_plugin_deps.bzl` and `external_package.json`: actively regresses correct previous behavior. Before this change, only the primary plugin\u0027s `.bzl` / `package.json` were ever placed in plugins/. Now any extra that ships either file overwrites the primary\u0027s — silently breaking builds that previously worked.\n\nI think what you want is for the bash function to mirror the Groovy logic — only `external_plugin_deps.MODULE.bazel` participates in the loop, and via echo `\u0027include(...)\u0027 \u003e\u003e` and not `cp -f`. The `external_plugin_deps.bzl` and `external_package.json` handling must stay outside the loop, scoped to the primary plugin only.",
       "revId": "da94656f9432dd5fd97f599780cd8288c501ceb0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bba8115_76fd101a",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 13
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T14:16:15Z",
+      "side": 1,
+      "message": "This should be combined differently.",
+      "range": {
+        "startLine": 26,
+        "startChar": 39,
+        "endLine": 26,
+        "endChar": 72
+      },
+      "revId": "da94656f9432dd5fd97f599780cd8288c501ceb0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
