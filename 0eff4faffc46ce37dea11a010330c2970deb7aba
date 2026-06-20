@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9866ea90_4a9b33e3",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "7f9a811c_61240cd4",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 23
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9229fdf3_96182402",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-06-20T16:11:47Z",
       "side": 1,
       "message": "```suggestion\nincludeExternalBzlModDeps {name}\n```",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 23
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3fd4a94_0073b23c",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "9229fdf3_96182402",
       "range": {
         "startLine": 41,
         "startChar": 0,
@@ -70,6 +118,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "96a6cff7_15941ec2",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "1db04dab_d057935f",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 27
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fccaab7b_4d646353",
@@ -83,6 +155,30 @@
       "writtenOn": "2026-06-20T16:11:47Z",
       "side": 1,
       "message": "```suggestion\n    includeExternalBzlModDeps $extraModule\n```",
+      "range": {
+        "startLine": 62,
+        "startChar": 4,
+        "endLine": 62,
+        "endChar": 27
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f69704e_40e79282",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "fccaab7b_4d646353",
       "range": {
         "startLine": 62,
         "startChar": 4,
@@ -116,6 +212,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4e09fe6_a8e78a24",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "f5a9f86b_fd49b908",
+      "range": {
+        "startLine": 74,
+        "startChar": 4,
+        "endLine": 74,
+        "endChar": 27
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6e301fab_8431d482",
@@ -129,6 +249,30 @@
       "writtenOn": "2026-06-20T16:11:47Z",
       "side": 1,
       "message": "```suggestion\nincludeExternalBzlModDeps() {{\n```",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 23
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2903bcf_ef663ebe",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "6e301fab_8431d482",
       "range": {
         "startLine": 32,
         "startChar": 0,
@@ -156,6 +300,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a7eeb8b_a444b829",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "273f400b_7a7aa1ad",
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "49657155_f34cfec7",
@@ -169,6 +331,30 @@
       "writtenOn": "2026-06-20T16:11:47Z",
       "side": 1,
       "message": "```suggestion\n    includeExternalBzlModDeps $extraPlugin\n```",
+      "range": {
+        "startLine": 51,
+        "startChar": 4,
+        "endLine": 51,
+        "endChar": 27
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a84524b8_dcb346e5",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "49657155_f34cfec7",
       "range": {
         "startLine": 51,
         "startChar": 4,
@@ -202,6 +388,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4067248_358c7dfa",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "cbc1895d_91eb6c4c",
+      "range": {
+        "startLine": 61,
+        "startChar": 4,
+        "endLine": 61,
+        "endChar": 27
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c4b1caec_4e817549",
@@ -215,6 +425,30 @@
       "writtenOn": "2026-06-20T16:11:47Z",
       "side": 1,
       "message": "```suggestion\n    includeExternalBzlModDeps $extraGhRepo\n```",
+      "range": {
+        "startLine": 73,
+        "startChar": 4,
+        "endLine": 73,
+        "endChar": 27
+      },
+      "revId": "0eff4faffc46ce37dea11a010330c2970deb7aba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de2d2075_a85e6a2d",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-20T16:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "c4b1caec_4e817549",
       "range": {
         "startLine": 73,
         "startChar": 4,
