@@ -18,6 +18,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c326190c_0bc849a3",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2026-06-21T11:31:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "efe49c0b_67a1c00c",
+      "revId": "b43d587f25fb5297d8da39d2b13e6f7d2b583424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fe2c5c9c_81e756ed",
@@ -35,6 +53,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f1f501b_0ee98382",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2026-06-21T11:31:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fe2c5c9c_81e756ed",
+      "revId": "b43d587f25fb5297d8da39d2b13e6f7d2b583424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8547b65_2f7efe99",
@@ -48,6 +84,24 @@
       "writtenOn": "2026-06-19T22:56:11Z",
       "side": 1,
       "message": "```suggestion\n    project-info-output: \u0027{repo}\u0027\n```",
+      "revId": "b43d587f25fb5297d8da39d2b13e6f7d2b583424",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "396b712b_c0e074f5",
+        "filename": "jenkins/gerrit-bazel-plugin-gh-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2026-06-21T11:31:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d8547b65_2f7efe99",
       "revId": "b43d587f25fb5297d8da39d2b13e6f7d2b583424",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
