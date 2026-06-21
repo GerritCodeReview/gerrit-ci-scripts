@@ -22,6 +22,30 @@
       },
       "revId": "60ece72a304dec93a721793dfc0d03fab0a7a9f1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce2b47f0_93222e78",
+        "filename": "jenkins/gerrit-bazel-build-plugin.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-21T10:12:08Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "1ed885ef_04780242",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 125
+      },
+      "revId": "60ece72a304dec93a721793dfc0d03fab0a7a9f1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
