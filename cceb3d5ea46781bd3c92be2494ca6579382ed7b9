@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9fdbf39_c9d7f333",
+        "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
+        "patchSetId": 18
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-06-22T04:39:20Z",
+      "side": 1,
+      "message": "Why these plugins included here? They are independent plugins now and must not be bundled any more (build wise) and could have their own yaml files:\n\n1. jenkins/gerrit-bazel-plugin-owners.yaml\n2. jenkins/gerrit-bazel-plugin-owners-commons-api.yaml\n3. jenkins/gerrit-bazel-plugin-owners-autoassign.yaml",
+      "revId": "cceb3d5ea46781bd3c92be2494ca6579382ed7b9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
