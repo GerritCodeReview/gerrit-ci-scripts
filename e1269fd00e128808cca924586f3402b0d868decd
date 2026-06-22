@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30f6bb25_ed37df83",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-06-22T10:43:17Z",
+      "side": 1,
+      "message": "All pass!\n\n- https://gerrit-ci.gerritforge.com/job/plugin-audit-sl4j-gh-bazel-stable-3.14/\n- https://gerrit-ci.gerritforge.com/job/plugin-audit-sl4j-gh-bazel-stable-3.13/\n- https://gerrit-ci.gerritforge.com/job/plugin-audit-sl4j-gh-bazel-stable-3.12/",
+      "revId": "e1269fd00e128808cca924586f3402b0d868decd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
