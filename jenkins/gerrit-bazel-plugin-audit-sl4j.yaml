@@ -6,9 +6,6 @@
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
-      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
-          branch:
-            - master
-          gerrit-branch:
             - stable-3.14
             - stable-3.13
+            - stable-3.12
