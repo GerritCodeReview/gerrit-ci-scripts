@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "edb48102_caf8f58c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-06-23T12:25:23Z",
+      "side": 1,
+      "message": "Works with:\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-metrics-reporter-graphite-bazel-stable-3.12/\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-metrics-reporter-graphite-bazel-stable-3.13/\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-metrics-reporter-graphite-bazel-stable-3.14/\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-metrics-reporter-graphite-bazel-master/",
+      "revId": "fbf50b9604cf085ccf8efaa3d1e11531f70d7d89",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
