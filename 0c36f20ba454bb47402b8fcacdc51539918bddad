@@ -16,6 +16,23 @@
       "message": "Some details on the failure can be found at [1]\n\n\n[1] https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/597441/comment/408d492d_c5e38fe7/",
       "revId": "0c36f20ba454bb47402b8fcacdc51539918bddad",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93662bc7_58484464",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-06-23T12:25:53Z",
+      "side": 1,
+      "message": "Verified builds pass without this commit: see followup change for example.",
+      "revId": "0c36f20ba454bb47402b8fcacdc51539918bddad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
