@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1facb9a_95151afd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-06-23T20:06:38Z",
+      "side": 1,
+      "message": "Verified, all builds are green:\n\n\n- master: https://gerrit-ci.gerritforge.com/job/plugin-websession-flatfile-bazel-master/\n- https://gerrit-ci.gerritforge.com/job/plugin-websession-flatfile-bazel-stable-3.12/\n- https://gerrit-ci.gerritforge.com/job/plugin-websession-flatfile-bazel-stable-3.13/\nhttps://gerrit-ci.gerritforge.com/job/plugin-websession-flatfile-bazel-stable-3.14/",
+      "revId": "fadb4bb6ca20fada6d6693092196f7a6ea0a08cc",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
