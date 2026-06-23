@@ -1,9 +1,6 @@
 - defaults:
     name: plugin-gh-template
     targets: 'plugins/{name}:{name}'
-    project-info-host: review.gerrithub.io
-    project-info-name: '{organization}%2F{repo}'
-    project-info-output: '{repo}'
     node: bazel-debian
     wrappers:
       - timeout:

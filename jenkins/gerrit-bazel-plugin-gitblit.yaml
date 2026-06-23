@@ -1,8 +1,5 @@
 - defaults:
     name: 'plugin-gitblit'
-    project-info-host: gerrit-review.googlesource.com
-    project-info-name: '{class}%2F{name}'
-    project-info-output: '{name}'
     wrappers:
       - timeout:
           timeout: 30

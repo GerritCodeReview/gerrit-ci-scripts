@@ -6,9 +6,6 @@
     node: bazel-debian
     class: plugins
     project-name: plugins%2Faccount
-    project-info-host: review.gerrithub.io
-    project-info-name: GerritForge%2Faccount
-    project-info-output: account
     scm:
       - git:
           remotes:
