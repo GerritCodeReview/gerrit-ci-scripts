@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "408d492d_c5e38fe7",
+        "filename": "jenkins/gerrit-bazel-get-project-info.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-06-23T12:11:45Z",
+      "side": 1,
+      "message": "This breaks builds unfortunately. An example [1].\n\nThe `jenkins/gerrit-bazel-get-project-info.sh` now uses `{project-infor-output}`, which defaults to `{repo}`.\nHowever Jenkins Job Builder expands {project-info-output} once, but it does not expand the resulting {name} again, so we are getting:\n\n```\n13:43:13 [plugin-metrics-reporter-graphite-bazel-stable-3.12] $ /bin/bash -e /tmp/jenkins16517889394170025624.sh\n13:43:13 /tmp/jenkins16517889394170025624.sh: line 4: bazel-bin/plugins/{name}/{name}.json: No such file or directory\n```\n\n[1] https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.12/job/plugin-metrics-reporter-graphite-bazel-stable-3.12/1/console",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 84
+      },
+      "revId": "693725dedb3baa06856a295ef559bd5d37b19335",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
