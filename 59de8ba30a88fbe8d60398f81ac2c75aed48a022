@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "438dcb11_f0e23e6e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4952735
+      },
+      "writtenOn": "2026-06-24T11:09:26Z",
+      "side": 1,
+      "message": "My phone is locked please me.",
+      "revId": "59de8ba30a88fbe8d60398f81ac2c75aed48a022",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
