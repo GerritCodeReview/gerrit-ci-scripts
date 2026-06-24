@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "94649405_e300a474",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2026-06-24T09:49:53Z",
+      "side": 1,
+      "message": "all 3 branches `stable-3.1[3|4` and `master` green with this fix e.g. https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.14/job/plugin-account-gh-bazel-stable-3.14/7/console",
+      "revId": "bfed67a8d343f4a45f1fbc624578b84f67f776bb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
