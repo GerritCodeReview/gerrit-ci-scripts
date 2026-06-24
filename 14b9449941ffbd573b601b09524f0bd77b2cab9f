@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "085b20a3_c9f66fa0",
+        "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
+        "patchSetId": 20
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-06-24T12:26:17Z",
+      "side": 1,
+      "message": "This is all stale now?",
+      "range": {
+        "startLine": 62,
+        "startChar": 12,
+        "endLine": 62,
+        "endChar": 125
+      },
+      "revId": "14b9449941ffbd573b601b09524f0bd77b2cab9f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3e2dbc07_4b0ec5c5",
         "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
         "patchSetId": 20
