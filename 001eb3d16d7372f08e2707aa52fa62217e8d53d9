@@ -22,6 +22,30 @@
       },
       "revId": "001eb3d16d7372f08e2707aa52fa62217e8d53d9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1543a92_0380aefe",
+        "filename": "jenkins/gerrit-bazel-plugin-owners.yaml",
+        "patchSetId": 21
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-06-24T19:39:11Z",
+      "side": 1,
+      "message": "This template is still used by the project at L37 to L42:\n\n```\n    jobs:\n      - \u0027plugin-owners-bazel-{branch}\u0027:\n          targets: \u0027plugins/owners plugins/owners-a*\u0027\n          branch:\n            - stable-3.14\n            - stable-3.13\n            - stable-3.12\n```",
+      "parentUuid": "cb902900_7c70031b",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 31
+      },
+      "revId": "001eb3d16d7372f08e2707aa52fa62217e8d53d9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
