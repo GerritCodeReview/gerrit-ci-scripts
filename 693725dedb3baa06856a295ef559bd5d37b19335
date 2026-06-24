@@ -22,6 +22,30 @@
       },
       "revId": "693725dedb3baa06856a295ef559bd5d37b19335",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e10ac571_fe59c5b8",
+        "filename": "jenkins/gerrit-bazel-get-project-info.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2026-06-24T09:41:18Z",
+      "side": 1,
+      "message": "Reverted in [599841](https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/599841) and then fixed again, for `account` only in [600661](https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/600661)",
+      "parentUuid": "408d492d_c5e38fe7",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 84
+      },
+      "revId": "693725dedb3baa06856a295ef559bd5d37b19335",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
