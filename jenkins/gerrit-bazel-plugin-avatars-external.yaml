@@ -1,8 +1,9 @@
 - project:
     name: avatars-external
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
-            - master
-          gerrit-branch:
+            - stable-3.12
+            - stable-3.13
+            - stable-3.14
             - master
