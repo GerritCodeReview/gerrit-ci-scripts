@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c6199e0_3d7b0ad4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-06-26T16:27:32Z",
+      "side": 1,
+      "message": "Correct, because of this bug: [1].\n\nRight now we only manually enforce those artifacts, see tools/java_deps.MODULE.bazel\n\n```\n# As a workaround, we explicitly force the root-selected versions here via\n# maven.amend_artifact(force_version \u003d \"true\") for GA coordinates that may also\n# be introduced transitively by JGit.\n#\n# Versions themselves are sourced from deps.toml and the pinned lockfile.\n#\n# TODO(davido): Remove this workaround once global root version enforcement is\n# supported in rules_jvm_external:\n# https://github.com/bazel-contrib/rules_jvm_external/issues/1549\n_GERRIT_FORCED_ARTIFACTS \u003d [\n    \"args4j:args4j\",\n    \"com.googlecode.javaewah:JavaEWAH\",\n    \"commons-codec:commons-codec\",\n    \"org.apache.commons:commons-lang3\",\n]\n[...]\n```\n\nMay be clarify this in the commit message?\n\n[1]: https://github.com/bazel-contrib/rules_jvm_external/issues/1549",
+      "range": {
+        "startLine": 16,
+        "startChar": 61,
+        "endLine": 17,
+        "endChar": 67
+      },
+      "revId": "7afe595a4e073c7663f18b48edcb3dcdf5459d4a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
