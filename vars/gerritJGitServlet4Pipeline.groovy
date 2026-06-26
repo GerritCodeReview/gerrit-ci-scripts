@@ -87,6 +87,7 @@ def call(Map cfg = [:]) {
             dir('gerrit') {
               sh """
                 . set-java.sh 21
+                REPIN=1 bazelisk run @external_deps//:pin
                 bazelisk build release
               """
             }
