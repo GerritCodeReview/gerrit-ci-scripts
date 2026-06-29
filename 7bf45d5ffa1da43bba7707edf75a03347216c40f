@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8cc5a0f_7a88654c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-06-29T17:11:20Z",
+      "side": 1,
+      "message": "https://gerrit-ci.gerritforge.com/job/plugin-replication-status-gh-bazel-stable-3.13/8/\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-replication-status-gh-bazel-stable-3.14/2",
+      "revId": "7bf45d5ffa1da43bba7707edf75a03347216c40f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
