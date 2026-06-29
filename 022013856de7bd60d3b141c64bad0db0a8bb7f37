@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3ec06e1_ae3a5f61",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-06-29T16:53:18Z",
+      "side": 1,
+      "message": "https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.13/job/module-cached-refdb-gh-bazel-stable-3.13/\n\nhttps://gerrit-ci.gerritforge.com/view/Plugins-stable-3.14/job/module-cached-refdb-gh-bazel-stable-3.14/",
+      "revId": "022013856de7bd60d3b141c64bad0db0a8bb7f37",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
