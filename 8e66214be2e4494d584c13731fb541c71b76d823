@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5387320d_e7e27a05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-06-30T09:04:24Z",
+      "side": 1,
+      "message": "Build for 3.14 is failing but at compile time, for issues related to 3.14 branch, which we\u0027re working on separately.\n\nhttps://gerrit-ci.gerritforge.com/job/module-git-refs-filter-gh-bazel-stable-3.14/1/console\n\n3.13 is passing\nhttps://gerrit-ci.gerritforge.com/job/module-git-refs-filter-gh-bazel-stable-3.13/1/console",
+      "revId": "8e66214be2e4494d584c13731fb541c71b76d823",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
