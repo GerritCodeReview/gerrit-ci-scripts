@@ -1,10 +1,8 @@
 - project:
     name: ref-protection
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
-            - master
-          gerrit-branch:
             - master
             - stable-3.14
             - stable-3.13
