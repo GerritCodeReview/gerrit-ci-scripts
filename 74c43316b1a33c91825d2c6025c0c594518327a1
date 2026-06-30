@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e682911_499a10ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-06-30T09:30:18Z",
+      "side": 1,
+      "message": "https://gerrit-ci.gerritforge.com/job/plugin-ref-protection-bazel-stable-3.14/1/console\n\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-ref-protection-bazel-stable-3.12/1/console\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-ref-protection-bazel-stable-3.13/1/console",
+      "revId": "74c43316b1a33c91825d2c6025c0c594518327a1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
