@@ -3,6 +3,7 @@
     repo: groovy-provider
     organization: GerritForge
     jobs:
+      - 'plugin-{name}-verifier-gh'
       - 'plugin-scripting-{name}-gh-bazel-{branch}':
           branch:
             - master
