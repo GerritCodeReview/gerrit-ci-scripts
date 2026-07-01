@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd88a0e6_39b77879",
+        "filename": "jenkins/gerrit-bazel-plugin-groovy-provider.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-07-01T20:37:23Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "f41625ef_e82227aa",
+      "range": {
+        "startLine": 8,
+        "startChar": 10,
+        "endLine": 8,
+        "endChar": 23
+      },
+      "revId": "ddc0f85977803df610aab815e029972bb7fc6277",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "261262cd_802f50f9",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-07-01T20:36:48Z",
       "side": 1,
       "message": "```suggestion\n          extra-gh-repos: \u0027gerrit-bsl-license\u0027\n```",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 23
+      },
+      "revId": "ddc0f85977803df610aab815e029972bb7fc6277",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b6379c6_75e0eec3",
+        "filename": "jenkins/gerrit-bazel-plugin-groovy-provider.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-07-01T20:37:23Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "261262cd_802f50f9",
       "range": {
         "startLine": 13,
         "startChar": 10,
