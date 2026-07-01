@@ -1,0 +1,9 @@
+- project:
+    name: gerrit-bsl-license
+    repo: gerrit-bsl-license
+    organization: GerritForge
+    jobs:
+      - 'plugin-{name}-gh-bazel-{branch}':
+          branch:
+            - master
+      - 'plugin-{name}-verifier-gh'
