@@ -6,4 +6,5 @@
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
             - master
+            - stable-3.14
       - 'plugin-{name}-verifier-gh'
