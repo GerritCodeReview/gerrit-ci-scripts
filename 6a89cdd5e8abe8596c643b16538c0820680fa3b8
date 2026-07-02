@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a66fcf4_e1e48942",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-07-02T20:52:51Z",
+      "side": 1,
+      "message": "I believe there is a simpler solution: why not set `env.GERRIT_BRANCH` if it is null?",
+      "revId": "6a89cdd5e8abe8596c643b16538c0820680fa3b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
