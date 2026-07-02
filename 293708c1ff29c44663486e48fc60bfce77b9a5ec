@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ceb5a772_80b59676",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-07-02T21:52:08Z",
+      "side": 1,
+      "message": "It would be best to approach each plugin separately.\nAlso, the BSL license awareness is for stable-3.14 and master only.",
+      "revId": "293708c1ff29c44663486e48fc60bfce77b9a5ec",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
