@@ -4,12 +4,12 @@
     organization: GerritForge
     jobs:
       - 'plugin-{name}-verifier-gh'
-      - 'plugin-scripting-{name}-gh-bazel-{branch}':
+      - 'plugin-{name}-gh-bazel-{branch}':
           extra-plugins: 'gerrit-bsl-license'
           branch:
             - master
             - stable-3.13
-      - 'plugin-scripting-{name}-gh-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-gh-bazel-{branch}-{gerrit-branch}':
           extra-plugins: 'gerrit-bsl-license'
           branch:
             - master
