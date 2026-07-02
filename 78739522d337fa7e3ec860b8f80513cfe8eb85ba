@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0384e2f0_97256870",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-07-02T09:03:58Z",
+      "side": 1,
+      "message": "Build passes\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-git-repo-metrics-gh-bazel-stable-3.14/",
+      "revId": "78739522d337fa7e3ec860b8f80513cfe8eb85ba",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
