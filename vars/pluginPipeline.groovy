@@ -42,7 +42,7 @@ def call(Map parm = [:]) {
     def defaultGjfVersion =
         env.GERRIT_BRANCH ==~ /stable-3\.(11|12|13|14)/ ? '1.24.0' : '1.35.0'
     def gjfVersion = parm.gjfVersion ?: defaultGjfVersion
-    def bashSetJavaCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH"
+    def bashSetJavaCmd = "#!/bin/bash\n" + ". set-java.sh --branch ${env.GERRIT_BRANCH}"
     def bazeliskCmd = "${bashSetJavaCmd} && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
     def gerritReviewCredentialsId = "gerrit.googlesource.com"
@@ -75,9 +75,9 @@ def call(Map parm = [:]) {
                         sh 'echo "machine ' + gerritReviewHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
                         sh 'chmod 600 ~/.netrc'
                         script {
-                            extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/plugins/${plugin}" }
-                            extraModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/modules/${module}" }
-                            extraGhRepos.each { repo -> sh "git clone -b ${GERRIT_BRANCH} ${githubBaseUrl}/${repo}.git" }
+                            extraPlugins.each { plugin -> sh "git clone -b ${env.GERRIT_BRANCH} ${gerritReviewBaseUrl}/plugins/${plugin}" }
+                            extraModules.each { module -> sh "git clone -b ${env.GERRIT_BRANCH} ${gerritReviewBaseUrl}/modules/${module}" }
+                            extraGhRepos.each { repo -> sh "git clone -b ${env.GERRIT_BRANCH} ${githubBaseUrl}/${repo}.git" }
                         }
                     }
                 }
