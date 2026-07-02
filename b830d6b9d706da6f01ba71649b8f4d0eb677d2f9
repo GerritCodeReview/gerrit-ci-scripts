@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e04ae58f_1f6d7b8f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-07-02T09:16:01Z",
+      "side": 1,
+      "message": "Build is now working\n\nhttps://gerrit-ci.gerritforge.com/job/module-cache-chroniclemap-gh-bazel-stable-3.14/1/console",
+      "revId": "b830d6b9d706da6f01ba71649b8f4d0eb677d2f9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
