@@ -39,10 +39,11 @@ def call(Map parm = [:]) {
     def extraGhRepos = parm.extraGhRepos ?: []
     def gerritReviewBaseUrl = "https://gerrit.googlesource.com/a"
     def gerritReviewHostname = "gerrit.googlesource.com"
+    def gerritBranch = env.GERRIT_BRANCH ?: env.BRANCH_NAME
     def defaultGjfVersion =
-        env.GERRIT_BRANCH ==~ /stable-3\.(11|12|13|14)/ ? '1.24.0' : '1.35.0'
+        gerritBranch ==~ /stable-3\.(11|12|13|14)/ ? '1.24.0' : '1.35.0'
     def gjfVersion = parm.gjfVersion ?: defaultGjfVersion
-    def bashSetJavaCmd = "#!/bin/bash\n" + ". set-java.sh --branch $GERRIT_BRANCH"
+    def bashSetJavaCmd = "#!/bin/bash\n" + ". set-java.sh --branch ${gerritBranch}"
     def bazeliskCmd = "${bashSetJavaCmd} && bazelisk"
     def bazeliskOptions = "--sandbox_tmpfs_path=/tmp"
     def gerritReviewCredentialsId = "gerrit.googlesource.com"
@@ -67,17 +68,19 @@ def call(Map parm = [:]) {
 
                             sh 'echo "machine ' + pluginScmHostname + ' login $GH_GIT_USER password $GH_GIT_PASS">> ~/.netrc'
                             sh 'chmod 600 ~/.netrc'
-                            sh "git clone -b ${env.GERRIT_BRANCH} ${scmUrl}"
-                            sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+                            sh "git clone -b ${gerritBranch} ${scmUrl}"
+                            if (env.GERRIT_CHANGE_NUMBER) {
+                                sh "cd ${pluginName} && git fetch origin refs/changes/${BRANCH_NAME} && git config user.name jenkins && git config user.email jenkins@gerritforge.com && git merge FETCH_HEAD"
+                            }
                         }
                     }
                     withCredentials([usernamePassword(usernameVariable: "GS_GIT_USER", passwordVariable: "GS_GIT_PASS", credentialsId: gerritReviewCredentialsId)]) {
                         sh 'echo "machine ' + gerritReviewHostname + ' login $GS_GIT_USER password $GS_GIT_PASS">> ~/.netrc'
                         sh 'chmod 600 ~/.netrc'
                         script {
-                            extraPlugins.each { plugin -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/plugins/${plugin}" }
-                            extraModules.each { module -> sh "git clone -b ${GERRIT_BRANCH} ${gerritReviewBaseUrl}/modules/${module}" }
-                            extraGhRepos.each { repo -> sh "git clone -b ${GERRIT_BRANCH} ${githubBaseUrl}/${repo}.git" }
+                            extraPlugins.each { plugin -> sh "git clone -b ${gerritBranch} ${gerritReviewBaseUrl}/plugins/${plugin}" }
+                            extraModules.each { module -> sh "git clone -b ${gerritBranch} ${gerritReviewBaseUrl}/modules/${module}" }
+                            extraGhRepos.each { repo -> sh "git clone -b ${gerritBranch} ${githubBaseUrl}/${repo}.git" }
                         }
                     }
                 }
@@ -104,7 +107,7 @@ def call(Map parm = [:]) {
             stage('build') {
                 steps {
                     script { if (buildCheck) { gerritCheck (checks: ["${buildCheck}": 'RUNNING'], url: "${env.BUILD_URL}console") } }
-                    sh 'git clone --recursive -b $GERRIT_BRANCH https://gerrit.googlesource.com/gerrit'
+                    sh "git clone --recursive -b ${gerritBranch} https://gerrit.googlesource.com/gerrit"
                     dir ('gerrit') {
                         script {
                             ([pluginName] + extraPlugins + extraModules + extraGhRepos).each { plugin ->
