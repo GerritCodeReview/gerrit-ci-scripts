@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "695400f2_700ebcbc",
+        "filename": "jenkins/gerrit-bazel-plugin-audit-sl4j.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2026-07-03T07:59:54Z",
+      "side": 1,
+      "message": "question: wouldn\u0027t it mean that 2.12 contains also BSL licence?",
+      "revId": "8893549f2a277b3ea59da99142784f4fb3c447c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
