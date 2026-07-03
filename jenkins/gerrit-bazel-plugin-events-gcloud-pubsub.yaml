@@ -6,7 +6,11 @@
       - 'plugin-{name}-gh-bazel-{branch}':
           extra-modules: 'events-broker'
           branch:
+            - stable-3.13
+      - 'plugin-{name}-gh-bazel-{branch}':
+          extra-modules: 'events-broker'
+          extra-gh-repos: 'gerrit-bsl-license'
+          branch:
             - master
             - stable-3.14
-            - stable-3.13
       - 'plugin-{name}-verifier-gh'
