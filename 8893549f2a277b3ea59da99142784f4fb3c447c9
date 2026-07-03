@@ -34,6 +34,24 @@
       "parentUuid": "695400f2_700ebcbc",
       "revId": "8893549f2a277b3ea59da99142784f4fb3c447c9",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddad620a_d2d9a19f",
+        "filename": "jenkins/gerrit-bazel-plugin-audit-sl4j.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-07-03T08:26:31Z",
+      "side": 1,
+      "message": "Anyway... branch for stable-3.13 for the bsl licence repo doesn\u0027t exist, so needing to udpate all the builds.",
+      "parentUuid": "105fc104_d1710111",
+      "revId": "8893549f2a277b3ea59da99142784f4fb3c447c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
