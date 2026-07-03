@@ -6,6 +6,10 @@
     jobs:
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
+            - stable-3.13
+      - 'plugin-{name}-gh-bazel-{branch}':
+          extra-gh-repos: 'gerrit-bsl-license'
+          branch:
             - master
             - stable-3.13
             - stable-3.14
