@@ -5,6 +5,7 @@
     jobs:
       - 'plugin-{name}-gh-bazel-{branch}':
           extra-modules: 'events-broker'
+          extra-gh-repos: 'gerrit-bsl-license'
           branch:
             - master
             - stable-3.14
