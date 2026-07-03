@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eaa1cad1_de0da2dc",
+        "filename": "jenkins/gerrit-bazel-plugin-groovy-provider.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-07-03T21:04:55Z",
+      "side": 1,
+      "message": "This is breaking the `stable-3.13` build",
+      "range": {
+        "startLine": 11,
+        "startChar": 12,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "066c390d37eeeafab08eb2fc06a8c84fc5ed7085",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
