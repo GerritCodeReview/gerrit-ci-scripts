@@ -16,6 +16,24 @@
       "message": "I believe there is a simpler solution: why not set `env.GERRIT_BRANCH` if it is null?",
       "revId": "6a89cdd5e8abe8596c643b16538c0820680fa3b8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e986792_7da1d603",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-07-03T09:58:08Z",
+      "side": 1,
+      "message": "I\u0027m a step before that, looks like the manual ci jobs doesn\u0027t actually redeploy these for some reason (although it says it does).\n\nBut the branch verifiers are kicking off with an older version of the gerrit-ci-script repos.",
+      "parentUuid": "7a66fcf4_e1e48942",
+      "revId": "6a89cdd5e8abe8596c643b16538c0820680fa3b8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
