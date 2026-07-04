@@ -88,7 +88,10 @@
     organization: GerritForge
     jobs:
       - 'plugin-account-gh-bazel-{branch}':
+          extra-gh-repos: 'gerrit-bsl-license'
           branch:
             - master
             - stable-3.14
+      - 'plugin-account-gh-bazel-{branch}':
+          branch:
             - stable-3.13

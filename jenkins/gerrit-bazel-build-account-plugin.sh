@@ -7,7 +7,29 @@ git submodule update --init
 rm -rf plugins/account
 git read-tree -u --prefix=plugins/account origin/{branch}
 
-for file in external_plugin_deps.bzl external_plugin_deps.MODULE.bazel external_package.json
+includeExternalBzlModDeps() {{
+  local pluginName=$1
+  if [ -f plugins/$pluginName/external_plugin_deps.MODULE.bazel ]
+  then
+    echo 'include("//plugins/'$pluginName':external_plugin_deps.MODULE.bazel")' >> plugins/external_plugin_deps.MODULE.bazel
+  fi
+}}
+
+includeExternalBzlModDeps account
+
+GH_PLUGIN_SCM_BASE_URL="https://review.gerrithub.io/a/{organization}"
+for extraGhRepo in {extra-gh-repos}
+do
+    pushd ..
+    git clone -b {branch} $GH_PLUGIN_SCM_BASE_URL/$extraGhRepo.git
+    popd
+    pushd plugins
+    ln -s ../../$extraGhRepo .
+    popd
+    includeExternalBzlModDeps $extraGhRepo
+done
+
+for file in external_plugin_deps.bzl external_package.json
 do
   if [ -f plugins/account/$file ]
   then
