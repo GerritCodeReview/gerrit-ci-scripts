@@ -3,6 +3,7 @@
     repo: ai-review-agent-provider
     organization: GerritForge
     extra-plugins: 'secure-config'
+    extra-gh-repos: 'gerrit-bsl-license'
     jobs:
       - 'plugin-{name}-gh-bazel-{branch}':
           branch:
