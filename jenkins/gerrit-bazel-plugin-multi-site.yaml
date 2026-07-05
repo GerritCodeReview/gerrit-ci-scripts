@@ -12,8 +12,12 @@
           extra-gh-repos: 'pull-replication'
           extra-plugins: 'healthcheck'
           branch:
+            - stable-3.13
+      - 'plugin-{name}-gh-bazel-{branch}':
+          extra-gh-repos: 'pull-replication gerrit-bsl-license'
+          extra-plugins: 'healthcheck'
+          branch:
             - master
             - stable-3.14
-            - stable-3.13
       - 'plugin-{name}-verifier'
       - 'plugin-{name}-verifier-gh'
