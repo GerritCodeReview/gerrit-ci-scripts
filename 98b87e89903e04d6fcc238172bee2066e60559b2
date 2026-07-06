@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdf21582_316320e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-07-06T11:24:06Z",
+      "side": 1,
+      "message": "Deployed this as part of [1] and the gemini job has been removed\n\nhttps://gerrit-ci.gerritforge.com/job/gerrit-ci-scripts-manual/474/console",
+      "revId": "98b87e89903e04d6fcc238172bee2066e60559b2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
