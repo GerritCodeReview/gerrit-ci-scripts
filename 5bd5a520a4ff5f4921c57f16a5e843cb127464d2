@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97957e49_c9a15589",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-07-06T11:28:08Z",
+      "side": 1,
+      "message": "Build is green [1]\n\nhttps://gerrit-ci.gerritforge.com/job/plugin-ai-review-agent-provider-gh-bazel-stable-3.14/24/console",
+      "revId": "5bd5a520a4ff5f4921c57f16a5e843cb127464d2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
