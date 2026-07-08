@@ -16,6 +16,29 @@
       "message": "Can you add stable-3.12 and so on here please and remove the blow. It no longer works so i\u0027ve had to create stable branches.",
       "revId": "a6fff838e4b7a842fc5809805af636f6dcca5340",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "840c26cb_cde0053a",
+        "filename": "jenkins/gerrit-bazel-plugin-lfs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2026-07-08T02:58:09Z",
+      "side": 1,
+      "message": "```suggestion\n      - \u0027plugin-{name}-bazel-{branch}\u0027:\n          branch:\n            - master\n            - stable-3.12\n            - stable-3.13\n            - stable-3.14\n```",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "a6fff838e4b7a842fc5809805af636f6dcca5340",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
