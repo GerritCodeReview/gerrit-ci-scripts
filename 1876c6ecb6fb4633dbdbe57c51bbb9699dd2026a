@@ -22,6 +22,30 @@
       },
       "revId": "1876c6ecb6fb4633dbdbe57c51bbb9699dd2026a",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e8693d4_181928ab",
+        "filename": "jenkins/gerrit-bazel-plugin-rename-project.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3809502
+      },
+      "writtenOn": "2026-07-08T08:00:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ea0c8d3_8bb7e063",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "1876c6ecb6fb4633dbdbe57c51bbb9699dd2026a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
