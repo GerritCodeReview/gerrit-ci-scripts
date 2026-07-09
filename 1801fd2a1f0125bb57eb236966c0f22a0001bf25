@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddf6db88_9dc1de09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3809502
+      },
+      "writtenOn": "2026-07-09T09:43:59Z",
+      "side": 1,
+      "message": "waiting for I6af9535c280a7a6a5f95503c5b4906586ef5ac5e to unlock the build",
+      "revId": "1801fd2a1f0125bb57eb236966c0f22a0001bf25",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
