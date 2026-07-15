@@ -6,7 +6,7 @@ IMAGE=${PREFIX}/gerrit-ci-agent-bazel:debian-bookworm-nocache
 BAZEL_VER=5.0.0
 BUILDIFIER_VER=4.0.0
 BAZELISK_VER=1.27.0
-NODE_VER=12
+NODE_VER=22
 
 # Targets
 
