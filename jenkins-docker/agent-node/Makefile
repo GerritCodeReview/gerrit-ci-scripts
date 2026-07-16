@@ -1,15 +1,14 @@
 include ../chrome-vers.mk
 
 NO_CACHE ?= false
-NODE_VER ?= 12
 PREFIX=gerritforge
-IMAGE=${PREFIX}/gerrit-ci-agent-node:$(NODE_VER)
+IMAGE=${PREFIX}/gerrit-ci-agent-node
 
 build:  Dockerfile Makefile
 	@for chrome_ver in $(CHROME_VERS); \
 	do \
-		cat Dockerfile | NODE_VER=$(NODE_VER) CHROME_VER=$$chrome_ver envsubst > Dockerfile-$(NODE_VER)-$$chrome_ver ; \
-		docker build --no-cache=$(NO_CACHE) -f Dockerfile-$(NODE_VER)-$$chrome_ver -t $(IMAGE)-$$chrome_ver . ; \
+		cat Dockerfile | CHROME_VER=$$chrome_ver envsubst > Dockerfile-$$chrome_ver ; \
+		docker build --no-cache=$(NO_CACHE) -f Dockerfile-$$chrome_ver -t $(IMAGE):$$chrome_ver . ; \
 	done
 
 publish: build
