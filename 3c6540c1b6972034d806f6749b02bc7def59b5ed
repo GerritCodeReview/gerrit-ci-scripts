@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2be9547f_dae964b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2026-07-16T03:19:47Z",
+      "side": 1,
+      "message": "I wonder if we should bring back installing nodejs from deb.nodesource.com again?\nWould not be tied it to a os version needing to be upgraded.",
+      "revId": "3c6540c1b6972034d806f6749b02bc7def59b5ed",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
