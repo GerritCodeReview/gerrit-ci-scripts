@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88cc0e42_7556b466",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5069420
+      },
+      "writtenOn": "2026-08-07T11:09:04Z",
+      "side": 1,
+      "message": "http://maven.apache.org/POM/4.0.0",
+      "revId": "9f0885bdc7140820a550f8dd136ad0c574538f2a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
