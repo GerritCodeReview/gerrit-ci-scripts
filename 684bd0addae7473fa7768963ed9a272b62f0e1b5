@@ -88,6 +88,23 @@
       "parentUuid": "2084e306_08b1aa08",
       "revId": "684bd0addae7473fa7768963ed9a272b62f0e1b5",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3ace9f7_9b52b8aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4239792
+      },
+      "writtenOn": "2026-08-24T04:15:21Z",
+      "side": 1,
+      "message": "https://eclipse.gerrithub.io/c/eclipse-jgit/jgit/+/201617",
+      "revId": "684bd0addae7473fa7768963ed9a272b62f0e1b5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
