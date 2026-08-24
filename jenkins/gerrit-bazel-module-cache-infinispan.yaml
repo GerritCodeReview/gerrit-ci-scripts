@@ -1,0 +1,8 @@
+- project:
+    name: cache-infinispan
+    jobs:
+      - 'module-{name}-bazel-{branch}':
+          branch:
+            - master
+            - stable-3.11
+      - 'module-{name}-verifier'
