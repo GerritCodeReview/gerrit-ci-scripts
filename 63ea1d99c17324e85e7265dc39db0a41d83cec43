@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc6ed29c_480c6f6e",
+        "filename": "jenkins/gerrit-bazel-module-cache-infinispan.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-08-24T07:50:27Z",
+      "side": 1,
+      "message": "stable-3.11 is EOL; we should not build it on CI. Why not add 3.12, 3.13 and 3.14 instead?",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "63ea1d99c17324e85e7265dc39db0a41d83cec43",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
