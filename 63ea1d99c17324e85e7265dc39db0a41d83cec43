@@ -22,6 +22,30 @@
       },
       "revId": "63ea1d99c17324e85e7265dc39db0a41d83cec43",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f798a6f6_238f5db9",
+        "filename": "jenkins/gerrit-bazel-module-cache-infinispan.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2026-08-25T17:06:21Z",
+      "side": 1,
+      "message": "We\u0027re stuck on 3.11 until we solve the cache issue with 3.12 and we\u0027ll want to deploy the new cache solution separately from a 3.12 upgrade, so it becomes a pre-req.\n\nWe\u0027ll definitely add 3.12+ once we\u0027re happy with how it\u0027s working on 3.11.\n\nAre you ok with keeping 3.11 here despite it being EOL? I think we can EOL it once it works well enough for our production deployment and then future work can happen on stable-3.12.",
+      "parentUuid": "bc6ed29c_480c6f6e",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "63ea1d99c17324e85e7265dc39db0a41d83cec43",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
