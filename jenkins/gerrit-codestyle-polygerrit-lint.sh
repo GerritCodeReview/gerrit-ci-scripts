@@ -15,9 +15,9 @@ if ((git show --diff-filter=AM --name-only --pretty="" HEAD | grep -q polygerrit
 then
   echo 'Running PolyGerrit lint check...'
   java -fullversion
-  bazelisk test //polygerrit-ui/app:lint_test
+  GIT_TERMINAL_PROMPT=1 bazelisk test //polygerrit-ui/app:lint_test
   if [[ "$TARGET_BRANCH" == "master" ]]
   then
-    bazelisk test //polygerrit-ui/app:lit_analysis
+    GIT_TERMINAL_PROMPT=1 bazelisk test //polygerrit-ui/app:lit_analysis
   fi
 fi

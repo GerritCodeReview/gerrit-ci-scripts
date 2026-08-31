@@ -86,13 +86,13 @@ fi
 bazelisk version
 
 ./polygerrit-ui/app/api/publish.sh --pack
-bazelisk build $BAZEL_OPTS $TARGETS
+GIT_TERMINAL_PROMPT=1 bazelisk build $BAZEL_OPTS $TARGETS
 
 BAZEL_OPTS="$BAZEL_OPTS --flaky_test_attempts 3 \
                    --test_timeout 3600 \
                    --test_tag_filters=-flaky \
                    --test_env DOCKER_HOST=$DOCKER_HOST"
-bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test plugins/{name}/...
+GIT_TERMINAL_PROMPT=1 bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test plugins/{name}/...
 
 for JAR in $(find bazel-bin/plugins/{name} -maxdepth 1 -name {name}*.jar)
 do

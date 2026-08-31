@@ -24,7 +24,7 @@ bazelisk version
 
 echo 'Test in NoteDb mode'
 echo '----------------------------------------------'
-bazelisk test $BAZEL_OPTS //...
+GIT_TERMINAL_PROMPT=1 bazelisk test $BAZEL_OPTS //...
 
 echo "Test PolyGerrit locally in $(google-chrome --version)"
 echo '----------------------------------------------'
