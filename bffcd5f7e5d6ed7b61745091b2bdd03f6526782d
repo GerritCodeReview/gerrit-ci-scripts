@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c63c873_8b5598f1",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-08-31T11:33:39Z",
+      "side": 1,
+      "message": "Can you define it once in the file?",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 23
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b1bd006_6845b918",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin-branch.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-08-31T11:33:39Z",
+      "side": 1,
+      "message": "Can you define it once in the file?",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 19
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a4748ba_e3b76cb6",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-08-31T11:33:39Z",
+      "side": 1,
+      "message": "Can you define it once in the file?",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 19
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c1b9044_ba7ee501",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-08-31T11:33:39Z",
+      "side": 1,
+      "message": "Can you just define it once in the file?",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 19
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1896fded_15bde95f",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-08-31T11:33:39Z",
+      "side": 1,
+      "message": "Can you define it once in the file?",
+      "range": {
+        "startLine": 33,
+        "startChar": 2,
+        "endLine": 33,
+        "endChar": 21
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04475144_2cef44d1",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-08-31T11:33:39Z",
+      "side": 1,
+      "message": "Can you define it once in the file similarly to WCT_HEADLESS_MODE ?",
+      "range": {
+        "startLine": 33,
+        "startChar": 2,
+        "endLine": 33,
+        "endChar": 21
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73e3ca45_843f8574",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-08-31T11:33:39Z",
+      "side": 1,
+      "message": "Can you define it once in the file?",
+      "range": {
+        "startLine": 18,
+        "startChar": 2,
+        "endLine": 18,
+        "endChar": 21
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7843ceb_6b939003",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2026-08-31T11:33:39Z",
+      "side": 1,
+      "message": "Can you define it once in the file?",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 19
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
