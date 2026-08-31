@@ -22,10 +22,10 @@ TARGETS=$(echo "{targets}" | sed -e 's/{{name}}/{name}/g')
 java -fullversion
 bazelisk version
 ./polygerrit-ui/app/api/publish.sh --pack
-bazelisk build $TARGETS
+GIT_TERMINAL_PROMPT=1 bazelisk build $TARGETS
 for target in $TARGETS
 do
-    bazelisk test $target/... //tools/bzl:always_pass_test
+    GIT_TERMINAL_PROMPT=1 bazelisk test $target/... //tools/bzl:always_pass_test
 done
 
 for JAR in $(find bazel-bin/plugins/ -name {name}*.jar | egrep -e '(stamped|tests|header)' -v)

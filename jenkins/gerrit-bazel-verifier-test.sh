@@ -30,12 +30,12 @@ bazelisk version
 
 if [[ "$MODE" == *"notedb"* ]]
 then
-  bazelisk test $BAZEL_OPTS //...
+  GIT_TERMINAL_PROMPT=1 bazelisk test $BAZEL_OPTS //...
 fi
 
 if [[ "$MODE" == *"rbe"* ]]
 then
-  bazelisk test $BAZEL_OPTS //...
+  GIT_TERMINAL_PROMPT=1 bazelisk test $BAZEL_OPTS //...
   export BAZEL_OPTS_WITH_LUCENE="$BAZEL_OPTS \
                  --flaky_test_attempts 3 \
                  --test_timeout 3600 \
@@ -43,7 +43,7 @@ then
                  --test_tag_filters=lucene"
   if git grep lucene | grep BUILD | grep labels
   then
-    bazelisk test $BAZEL_OPTS_WITH_LUCENE //...
+    GIT_TERMINAL_PROMPT=1 bazelisk test $BAZEL_OPTS_WITH_LUCENE //...
   fi
 fi
 
@@ -51,7 +51,7 @@ if [[ "$MODE" == *"polygerrit"* ]]
 then
 
   echo 'Running Documentation tests...'
-  bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
+  GIT_TERMINAL_PROMPT=1 bazelisk test $BAZEL_OPTS //tools/bzl:always_pass_test Documentation/...
 
   echo "Running local tests in $(google-chrome --version)"
   bash ./polygerrit-ui/app/run_test.sh || touch ~/polygerrit-failed

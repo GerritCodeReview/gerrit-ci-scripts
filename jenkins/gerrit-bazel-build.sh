@@ -30,12 +30,12 @@ else
   # Whilst all the rest of Gerrit is able to automatically sync the Bazel repositories
   # the PolyGerrit part fails to do so when the working directory is replaced with a
   # fresh clone from the remote Git repository
-  bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
+  GIT_TERMINAL_PROMPT=1 bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
 fi
 
 if [[ "$MODE" == *"rbe"* ]]
 then
-  bazelisk build --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY plugins:core release api
+  GIT_TERMINAL_PROMPT=1 bazelisk build --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY plugins:core release api
 elif [[ "$MODE" == *"polygerrit"* ]]
 then
   echo "Skipping building eclipse and maven"
@@ -53,8 +53,8 @@ else
     done
   fi
 
-  bazelisk build plugins:core release api
+  GIT_TERMINAL_PROMPT=1 bazelisk build plugins:core release api
   tools/maven/api.sh install
   tools/maven/api.sh war_install
-  tools/eclipse/project.py --bazel bazelisk
+  tools/eclipse/project.py --bazel GIT_TERMINAL_PROMPT=1 bazelisk
 fi
