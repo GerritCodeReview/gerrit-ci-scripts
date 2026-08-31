@@ -85,8 +85,8 @@ then
 fi
 
 ./polygerrit-ui/app/api/publish.sh --pack
-bazelisk build $BAZEL_OPTS $TARGETS
-bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
+GIT_TERMINAL_PROMPT=1 bazelisk build $BAZEL_OPTS $TARGETS
+GIT_TERMINAL_PROMPT=1 bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
 
 for JAR in $(find bazel-bin/plugins/{name} -maxdepth 1 -name {name}*.jar)
 do

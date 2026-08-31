@@ -49,12 +49,12 @@ RUN bash -c "mkdir -p /home/jenkins/workspace/Gerrit-verifier-chrome-latest && \
     cd gerrit && \
     ./tools/gjf.sh setup 1.24.0 && \
     . set-java.sh --branch stable-3.14 && \
-    bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api && \
+    GIT_TERMINAL_PROMPT=1 bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --noremote_upload_local_results plugins:core release api && \
     git checkout -f master && \
     git submodule update --reference $REF_REPO --init && \
     ./tools/gjf.sh setup 1.35.0 && \
     . set-java.sh --branch master && \
-    bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --remote_download_all --noremote_upload_local_results plugins:core release api && \
+    GIT_TERMINAL_PROMPT=1 bazelisk build --remote_cache=https://gerrit-ci.gerritforge.com/cache --remote_download_all --noremote_upload_local_results plugins:core release api && \
     mv tools/format ~ && \
     rm -Rf /home/jenkins/workspace"
 
