@@ -5,5 +5,5 @@
 git checkout {branch}
 
 java -fullversion
-bazelisk version
-bazelisk build all
+GIT_TERMINAL_PROMPT=1 bazelisk version
+GIT_TERMINAL_PROMPT=1 bazelisk build all
