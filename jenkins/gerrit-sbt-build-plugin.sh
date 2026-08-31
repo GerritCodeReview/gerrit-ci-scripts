@@ -7,7 +7,7 @@ bazelisk version
 
 git checkout -f -b gerrit-master gerrit/{branch}
 git submodule update --init
-bazelisk build api
+GIT_TERMINAL_PROMPT=1 bazelisk build api
 ./tools/maven/api.sh install
 
 git checkout -f origin/{branch}

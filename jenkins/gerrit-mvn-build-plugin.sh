@@ -28,10 +28,10 @@ else
   # Whilst all the rest of Gerrit is able to automatically sync the Bazel repositories
   # the PolyGerrit part fails to do so when the working directory is replaced with a
   # fresh clone from the remote Git repository
-  bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
+  GIT_TERMINAL_PROMPT=1 bazelisk sync --only=npm --only=tools_npm --only=ui_npm --only=plugins_npm
 fi
 
-bazelisk build api
+GIT_TERMINAL_PROMPT=1 bazelisk build api
 ./tools/maven/api.sh install
 
 git checkout -f origin/{branch}

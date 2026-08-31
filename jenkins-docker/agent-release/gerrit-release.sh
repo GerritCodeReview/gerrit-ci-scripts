@@ -110,7 +110,7 @@ test $DRY_RUN = true || test $DRY_RUN = TRUE || git push origin HEAD:refs/for/"$
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
 
-bazelisk build $bazel_config release Documentation:searchfree
+GIT_TERMINAL_PROMPT=1 bazelisk build $bazel_config release Documentation:searchfree
 ./tools/maven/api.sh install $bazel_config
 
 echo -n "Checking Gerrit version ... "

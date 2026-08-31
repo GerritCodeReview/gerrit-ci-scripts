@@ -34,8 +34,8 @@
           echo 'Building jgit on master'
           echo '======================='
           bazelisk version
-          bazelisk build all
-          bazelisk test //...
+          GIT_TERMINAL_PROMPT=1 bazelisk build all
+          GIT_TERMINAL_PROMPT=1 bazelisk test //...
     publishers:
       - archive:
           artifacts: 'bazel-bin/all.zip'

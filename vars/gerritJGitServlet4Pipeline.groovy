@@ -46,7 +46,7 @@ def call(Map cfg = [:]) {
             sh '''
               . set-java.sh 21
               java -version
-              bazelisk build all
+              GIT_TERMINAL_PROMPT=1 bazelisk build all
             '''
           }
         }
@@ -58,7 +58,7 @@ def call(Map cfg = [:]) {
             sh '''
               echo "Running JGit tests..."
               . set-java.sh 21
-              bazelisk test //...
+              GIT_TERMINAL_PROMPT=1 bazelisk test //...
             '''
           }
         }
@@ -87,8 +87,8 @@ def call(Map cfg = [:]) {
             dir('gerrit') {
               sh """
                 . set-java.sh 21
-                REPIN=1 bazelisk run @external_deps//:pin
-                bazelisk build release
+                REPIN=1 GIT_TERMINAL_PROMPT=1 bazelisk run @external_deps//:pin
+                GIT_TERMINAL_PROMPT=1 bazelisk build release
               """
             }
           }
@@ -100,7 +100,7 @@ def call(Map cfg = [:]) {
             sh '''
               . set-java.sh 21
               echo "running gerrit master tests..."
-              bazelisk test \
+              GIT_TERMINAL_PROMPT=1 bazelisk test \
                 --test_tag_filters=-flaky \
                 --flaky_test_attempts 3 \
                 --test_timeout 3600 \
