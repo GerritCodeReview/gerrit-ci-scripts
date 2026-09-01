@@ -46,6 +46,30 @@
       },
       "revId": "63ea1d99c17324e85e7265dc39db0a41d83cec43",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc7744e1_94dba107",
+        "filename": "jenkins/gerrit-bazel-module-cache-infinispan.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-01T10:01:15Z",
+      "side": 1,
+      "message": "All the stable-3.11 builds are redirected to the https://archive-ci.gerritforge.com, so that means that even if we merge this change, you won\u0027t be able to access it on the UI.\n\nIf we do the opposite and cancel the redirection of the stable-3.11, nobody will be able to access the archived artifacts.\n\nIf you only care about the validation, just keep the `-verifier` bit and remove the `stable-3.11` part of the CI job configuration.",
+      "parentUuid": "f798a6f6_238f5db9",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "63ea1d99c17324e85e7265dc39db0a41d83cec43",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
