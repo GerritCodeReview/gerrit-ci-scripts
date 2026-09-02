@@ -24,6 +24,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "542d4a55_69f7da4e",
+        "filename": "jenkins-docker/agent-bazel/Dockerfile",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-02T15:51:17Z",
+      "side": 1,
+      "message": "This script is going to be included as-is inside a job; it doesn\u0027t allow for a reference to other resources.",
+      "parentUuid": "8c63c873_8b5598f1",
+      "range": {
+        "startLine": 52,
+        "startChar": 4,
+        "endLine": 52,
+        "endChar": 23
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b1bd006_6845b918",
@@ -37,6 +61,30 @@
       "writtenOn": "2026-08-31T11:33:39Z",
       "side": 1,
       "message": "Can you define it once in the file?",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 19
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "923a4328_2232e89d",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin-branch.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-02T15:51:17Z",
+      "side": 1,
+      "message": "This script is going to be included as-is inside a job; it doesn\u0027t allow for a reference to other resources.",
+      "parentUuid": "4b1bd006_6845b918",
       "range": {
         "startLine": 25,
         "startChar": 0,
@@ -70,6 +118,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d040d16a_45f330ae",
+        "filename": "jenkins/gerrit-bazel-build-owners-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-02T15:51:17Z",
+      "side": 1,
+      "message": "This script is going to be included as-is inside a job; it doesn\u0027t allow for a reference to other resources.",
+      "parentUuid": "1a4748ba_e3b76cb6",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 19
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0c1b9044_ba7ee501",
@@ -83,6 +155,30 @@
       "writtenOn": "2026-08-31T11:33:39Z",
       "side": 1,
       "message": "Can you just define it once in the file?",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 19
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c366387b_34f93906",
+        "filename": "jenkins/gerrit-bazel-build-plugin-branch.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-02T15:51:17Z",
+      "side": 1,
+      "message": "This script is going to be included as-is inside a job; it doesn\u0027t allow for a reference to other resources.",
+      "parentUuid": "0c1b9044_ba7ee501",
       "range": {
         "startLine": 89,
         "startChar": 0,
@@ -116,6 +212,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "64bd1fbc_3fa2aaac",
+        "filename": "jenkins/gerrit-bazel-build.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-02T15:51:17Z",
+      "side": 1,
+      "message": "This script is going to be included as-is inside a job; it doesn\u0027t allow for a reference to other resources.",
+      "parentUuid": "1896fded_15bde95f",
+      "range": {
+        "startLine": 33,
+        "startChar": 2,
+        "endLine": 33,
+        "endChar": 21
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "04475144_2cef44d1",
@@ -129,6 +249,30 @@
       "writtenOn": "2026-08-31T11:33:39Z",
       "side": 1,
       "message": "Can you define it once in the file similarly to WCT_HEADLESS_MODE ?",
+      "range": {
+        "startLine": 33,
+        "startChar": 2,
+        "endLine": 33,
+        "endChar": 21
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2213e25_681fcc1c",
+        "filename": "jenkins/gerrit-bazel-verifier-test.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-02T15:51:17Z",
+      "side": 1,
+      "message": "This script is going to be included as-is inside a job; it doesn\u0027t allow for a reference to other resources.\n\nThe WCT_HEADLINESS_MODE isn\u0027t defined in a single place but duplicated in more than one place.",
+      "parentUuid": "04475144_2cef44d1",
       "range": {
         "startLine": 33,
         "startChar": 2,
@@ -162,6 +306,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e36ff701_8b9db0ba",
+        "filename": "jenkins/gerrit-codestyle-polygerrit-lint.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-02T15:51:17Z",
+      "side": 1,
+      "message": "This script is going to be included as-is inside a job; it doesn\u0027t allow for a reference to other resources.",
+      "parentUuid": "73e3ca45_843f8574",
+      "range": {
+        "startLine": 18,
+        "startChar": 2,
+        "endLine": 18,
+        "endChar": 21
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c7843ceb_6b939003",
@@ -175,6 +343,30 @@
       "writtenOn": "2026-08-31T11:33:39Z",
       "side": 1,
       "message": "Can you define it once in the file?",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 19
+      },
+      "revId": "bffcd5f7e5d6ed7b61745091b2bdd03f6526782d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91884ca8_4dfbe837",
+        "filename": "jenkins/gerrit-mvn-build-plugin.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-09-02T15:51:17Z",
+      "side": 1,
+      "message": "This script is going to be included as-is inside a job; it doesn\u0027t allow for a reference to other resources.",
+      "parentUuid": "c7843ceb_6b939003",
       "range": {
         "startLine": 34,
         "startChar": 0,
