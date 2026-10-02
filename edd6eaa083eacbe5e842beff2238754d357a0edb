@@ -39,6 +39,30 @@
       },
       "revId": "edd6eaa083eacbe5e842beff2238754d357a0edb",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c02f027_2aa92acd",
+        "filename": "jenkins-internal/gerrit-ci-scripts.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-02T14:26:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c3931fdc_1b74045c",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 45
+      },
+      "revId": "edd6eaa083eacbe5e842beff2238754d357a0edb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
