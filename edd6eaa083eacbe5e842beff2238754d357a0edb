@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3931fdc_1b74045c",
+        "filename": "jenkins-internal/gerrit-ci-scripts.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-10-02T13:57:13Z",
+      "side": 1,
+      "message": "Do we want to disable validation for changes that include `Jenkinsfile` at any level? As in, `Jenkinsfile`, `ci/Jenkinsfile`, `examples/Jenkinsfile`, `foo/bar/Jenkinsfile`, etc?\n\nJenkins Multibranch Pipeline looks for `Jenkinsfile` only at the repository root, right?\nIn this case, would we want to disable changes that include a Jenkinsfile at the root level (`-path:Jenkinsfile`).",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 45
+      },
+      "revId": "edd6eaa083eacbe5e842beff2238754d357a0edb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
