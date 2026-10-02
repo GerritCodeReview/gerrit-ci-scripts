@@ -83,22 +83,3 @@
           else
             jenkins-jobs update --delete-old jenkins-internal
           fi
-
-- job:
-    name: gerrit-ci-scripts-pipeline
-    description: Multi-branch pipeline to validate Gerrit's Jenkins Job Builder Scripts
-    project-type: multibranch
-    node: server
-    disabled: true
-    scm:
-      - gerrit:
-          url: https://gerrit-review.googlesource.com/a/gerrit-ci-scripts
-          credentials-id: gerrit.googlesource.com
-          refspecs:
-            - '+refs/heads/*:refs/remotes/@{remote}/*'
-            - '+refs/changes/*:refs/remotes/@{remote}/*'
-          property-strategies:
-            all-branches:
-              - suppress-scm-triggering: false
-              - pipeline-branch-durability-override: max-survivability
-    periodic-folder-trigger: 10m
