@@ -170,6 +170,7 @@
           url: https://gerrit-review.googlesource.com/a/gerrit
           reference-repo: /home/jenkins/gerrit-reference.git
           credentials-id: gerrit.googlesource.com
+          change-discovery: '-file:Jenkinsfile'
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
           filter-checks:
