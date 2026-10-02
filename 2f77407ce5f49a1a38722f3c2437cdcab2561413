@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99f2740a_2a32faff",
+        "filename": "jenkins-internal/gerrit-ci-scripts.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-02T09:47:16Z",
+      "side": 0,
+      "message": "This should stay and need to be adapted for the `change-discovery`",
+      "range": {
+        "startLine": 87,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 32
+      },
+      "revId": "2f77407ce5f49a1a38722f3c2437cdcab2561413",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
