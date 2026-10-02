@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5648ceca_9e4d4b0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-02T16:45:54Z",
+      "side": 1,
+      "message": "No more patches were executed on the CI after https://gerrit-review.googlesource.com/c/gerrit/+/631821/16",
+      "revId": "e3b8484730dace16b71d69c3164c39721e983318",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
