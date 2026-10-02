@@ -94,6 +94,8 @@
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/gerrit-ci-scripts
           credentials-id: gerrit.googlesource.com
+          change-discovery:
+            query-string: '-file:Jenkinsfile'
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
             - '+refs/changes/*:refs/remotes/@{remote}/*'

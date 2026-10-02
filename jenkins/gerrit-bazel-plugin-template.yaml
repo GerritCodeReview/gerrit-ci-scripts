@@ -42,6 +42,8 @@
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/plugins/{name}
           credentials-id: gerrit.googlesource.com
+          change-discovery:
+            query-string: '-file:Jenkinsfile'
           refspecs:
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
@@ -61,6 +63,8 @@
       - gerrit:
           url: https://review.gerrithub.io/a/{organization}/{name}
           credentials-id: eclipse.gerrithub.io
+          change-discovery:
+            query-string: '-file:Jenkinsfile'
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false
@@ -75,6 +79,8 @@
       - gerrit:
           url: https://gerrit-review.googlesource.com/a/modules/{name}
           credentials-id: gerrit.googlesource.com
+          change-discovery:
+            query-string: '-file:Jenkinsfile'
           refspecs:
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
@@ -94,6 +100,8 @@
       - gerrit:
           url: https://review.gerrithub.io/a/{organization}/{name}
           credentials-id: eclipse.gerrithub.io
+          change-discovery:
+            query-string: '-file:Jenkinsfile'
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false
