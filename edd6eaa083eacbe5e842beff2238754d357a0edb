@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f04575d_a0bbf1eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-02T14:15:31Z",
+      "side": 1,
+      "message": "After this change, the pipeline for Change 631821 does not trigger automatically anymore.",
+      "revId": "edd6eaa083eacbe5e842beff2238754d357a0edb",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c3931fdc_1b74045c",
