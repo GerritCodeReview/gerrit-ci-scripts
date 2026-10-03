@@ -1,0 +1,8 @@
+- project:
+    name: high-availability-aws
+    jobs:
+      - 'plugin-{name}-bazel-{branch}':
+          extra-modules: 'global-refdb'
+          branch:
+            - master
+      - plugin-{name}-verifier
