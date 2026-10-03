@@ -35,12 +35,7 @@ fi
 
 if [[ "$MODE" == *"rbe"* ]]
 then
-  # Workaround to Docker executor pull issue:
-  # error getting credentials - err: exit status 1, out: `docker-credential-gcr/helper: could not retrieve GCR's access token:
-  # docker-credential-gcr/helper: failed to detect default credentials: credentials: could not find default credentials.
-  export BB_GCR_WORKAROUND="--remote_exec_header=x-buildbuddy-platform.container-registry-username=_dcgcloud_token --remote_exec_header=x-buildbuddy-platform.container-registry-password=foo"
-
-  bazelisk build --config=remote_bb $BB_GCR_WORKAROUND --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY plugins:core release api
+  bazelisk build --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY plugins:core release api
 elif [[ "$MODE" == *"polygerrit"* ]]
 then
   echo "Skipping building eclipse and maven"
