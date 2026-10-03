@@ -10,7 +10,13 @@ echo '----------------------------------------------'
 case $TARGET_BRANCH$MODE in
   masterrbe|stable-3.12rbe|stable-3.13rbe|stable-3.14rbe)
     TEST_TAG_FILTER="-flaky,-elastic,-no_rbe,-lucene"
-    BAZEL_OPTS="$BAZEL_OPTS --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
+
+    # Workaround to Docker executor pull issue:
+    # error getting credentials - err: exit status 1, out: `docker-credential-gcr/helper: could not retrieve GCR's access token:
+    # docker-credential-gcr/helper: failed to detect default credentials: credentials: could not find default credentials.
+    export BB_GCR_WORKAROUND="--remote_exec_header=x-buildbuddy-platform.container-registry-username=_dcgcloud_token --remote_exec_header=x-buildbuddy-platform.container-registry-password=foo"
+
+    BAZEL_OPTS="$BAZEL_OPTS --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY $BB_GCR_WORKAROUND"
     ;;
   masternotedb|stable-3.12notedb|stable-3.13notedb|stable-3.14notedb)
     TEST_TAG_FILTER="-flaky,elastic,no_rbe"
