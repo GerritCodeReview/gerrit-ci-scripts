@@ -1,9 +1,9 @@
 - project:
     name: zuul-results-summary
     jobs:
-      - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
+      - 'plugin-{name}-bazel-{branch}':
           branch:
             - main
-          gerrit-branch:
-            - master
+            - stable-3.14
+            - stable-3.13
             - stable-3.12
