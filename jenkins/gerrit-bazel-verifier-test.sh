@@ -7,12 +7,12 @@ cd gerrit
 echo "Test with mode=$MODE"
 echo '----------------------------------------------'
 
-case $TARGET_BRANCH$MODE in
-  masterrbe|stable-3.12rbe|stable-3.13rbe|stable-3.14rbe)
+case $MODE in
+  rbe)
     TEST_TAG_FILTER="-flaky,-elastic,-no_rbe,-lucene"
     BAZEL_OPTS="$BAZEL_OPTS --config=remote_bb --jobs=50 --remote_header=x-buildbuddy-api-key=$BB_API_KEY"
     ;;
-  masternotedb|stable-3.12notedb|stable-3.13notedb|stable-3.14notedb)
+  notedb)
     TEST_TAG_FILTER="-flaky,elastic,no_rbe"
     ;;
   *)
