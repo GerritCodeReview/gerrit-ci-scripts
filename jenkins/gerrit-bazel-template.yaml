@@ -62,16 +62,6 @@
     defaults: gerrit-bazel-defaults
     node: 'bazel-debian-{browser}'
 
-- job-template:
-    name: 'Gerrit-bazel-{branch}-java21'
-    description: '{name} {branch} branch build with Bazel on Java 21'
-    defaults: gerrit-bazel-defaults
-    node: 'bazel-debian-{browser}'
-    properties:
-      - inject:
-          properties-content: >
-            BAZEL_OPTS="--config=java21"
-
 - project:
     name: Gerrit-bazel-chrome-latest
     browser: chrome-latest
@@ -82,9 +72,6 @@
             - stable-3.14
             - stable-3.13
             - stable-3.12
-      - 'Gerrit-bazel-{branch}-java21':
-          branch:
-            - master
 
 - view:
     name: Gerrit
