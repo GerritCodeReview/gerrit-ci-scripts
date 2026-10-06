@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56f2497d_2bcf4dd5",
+        "filename": "jenkins/gerrit-bazel-module-virtualhost.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2026-10-06T19:39:56Z",
+      "side": 0,
+      "message": "Why remove this? Since you haven\u0027t removed -{gerrit-branch}",
+      "revId": "f32cb8f9fa28de9db3c9ae1d7f94199ebac919e3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
