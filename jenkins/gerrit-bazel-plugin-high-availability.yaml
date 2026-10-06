@@ -5,6 +5,8 @@
           extra-modules: 'global-refdb'
           branch:
             - master
+            - stable-3.15
+            - master
             - stable-3.14
             - stable-3.13
             - stable-3.12
