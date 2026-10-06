@@ -18,6 +18,7 @@
           extra-plugins: 'healthcheck'
           branch:
             - master
+            - stable-3.15
             - stable-3.14
       - 'plugin-{name}-verifier'
       - 'plugin-{name}-verifier-gh'
