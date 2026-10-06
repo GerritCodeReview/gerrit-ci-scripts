@@ -5,4 +5,5 @@
           extra-plugins: 'owners-common-api'
           branch:
             - master
+            - stable-3.15
       - 'plugin-{name}-verifier'
