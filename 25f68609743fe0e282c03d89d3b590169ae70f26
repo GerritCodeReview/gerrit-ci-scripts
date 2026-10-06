@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61425847_1865da73",
+        "filename": "jenkins/gerrit-bazel-plugin-high-availability.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2026-10-06T19:00:13Z",
+      "side": 1,
+      "message": "This is duplicate of line 7.",
+      "revId": "25f68609743fe0e282c03d89d3b590169ae70f26",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
