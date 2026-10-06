@@ -16,6 +16,24 @@
       "message": "Why remove this? As you\u0027ve not removed -{gerrit-branch}",
       "revId": "d9fc21d823af3d82c0b512592b3ed0e6d5535063",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0e21c4b_7b51c932",
+        "filename": "jenkins/gerrit-bazel-plugin-groovy-provider.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-06T20:13:02Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "aab6fece_ee0d799c",
+      "revId": "d9fc21d823af3d82c0b512592b3ed0e6d5535063",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
