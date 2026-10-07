@@ -1,0 +1,19 @@
+- job:
+    name: "Gerrit-bazel-jgit-master"
+    node: server
+    display-name: "Gerrit-bazel-jgit-master"
+    description: "Build and test JGit changes targeting master with Bazel"
+    project-type: multibranch
+    disabled: false
+    periodic-folder-trigger: "5m"
+    prune-dead-branches: true
+    days-to-keep: 30
+    number-to-keep: 20
+    abort-builds: false
+    script-path: "Jenkinsfile"
+    scm:
+      - gerrit:
+          url: "https://eclipse.gerrithub.io/a/eclipse-jgit/jgit"
+          credentials-id: eclipse.gerrithub.io
+          change-discovery:
+            query-string: "branch:master AND -path:Jenkinsfile"
