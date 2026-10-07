@@ -67,8 +67,7 @@
       - git:
           remotes:
             - origin:
-                url: https://gerrit.googlesource.com/a/gerrit
-                credentials-id: gerrit.googlesource.com
+                url: https://github.com/{organization}/{repo}
             - gerrit:
                 url: https://gerrit.googlesource.com/a/gerrit
                 credentials-id: gerrit.googlesource.com
@@ -102,8 +101,7 @@
       - git:
           remotes:
             - origin:
-                url: https://review.gerrithub.io/a/{organization}/{repo}
-                credentials-id: eclipse.gerrithub.io
+                url: https://github.com/{organization}/{repo}
             - gerrit:
                 url: https://gerrit.googlesource.com/a/gerrit
                 credentials-id: gerrit.googlesource.com

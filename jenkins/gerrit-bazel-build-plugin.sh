@@ -61,7 +61,7 @@ do
     includeExternalBzlModDeps $extraModule
 done
 
-GH_PLUGIN_SCM_BASE_URL="https://review.gerrithub.io/a/{organization}"
+GH_PLUGIN_SCM_BASE_URL="https://github.com/{organization}"
 for extraGhRepo in {extra-gh-repos}
 do
     pushd ..
