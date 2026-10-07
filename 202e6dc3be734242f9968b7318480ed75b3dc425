@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9ebbb264_f017634c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-07T18:25:03Z",
+      "side": 1,
+      "message": "Add `Depends-On: https://review.gerrithub.io/c/eclipse-jgit/jgit/+/1253618`",
+      "revId": "202e6dc3be734242f9968b7318480ed75b3dc425",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a080885d_833d1d90",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
