@@ -4,7 +4,7 @@ docker-plugin:1.6
 embeddable-build-status:467.v4a_954796e45d
 envinject:2.908.v66a_774b_31d93
 gatling:1.3.0
-gerrit-code-review:0.4.9
+gerrit-code-review:0.7.0
 git:5.2.1
 github-oauth:597.ve0c3480fcb_d0
 http_request:1.18
