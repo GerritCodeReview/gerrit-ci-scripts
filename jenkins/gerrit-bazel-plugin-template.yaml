@@ -140,6 +140,7 @@
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
+            LICENSE,
             {extra-artifacts}
           follow-symlinks: true
 
@@ -177,6 +178,7 @@
             bazel-bin/plugins/{name}/{name}.js-version,
             bazel-bin/plugins/{name}/{name}.html,
             bazel-bin/plugins/{name}/{name}.json,
+            LICENSE,
             {extra-artifacts}
           follow-symlinks: true
 
@@ -211,6 +213,7 @@
             bazel-bin/plugins/{name}/{name}.js-version,
             bazel-bin/plugins/{name}/{name}.html,
             bazel-bin/plugins/{name}/{name}.json,
+            LICENSE,
             {extra-artifacts}
           follow-symlinks: true
 
@@ -239,6 +242,7 @@
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
+            LICENSE,
             {extra-artifacts}
           follow-symlinks: true
 
@@ -267,6 +271,7 @@
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
+            LICENSE,
             {extra-artifacts}
           follow-symlinks: true
 
@@ -299,6 +304,7 @@
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
+            LICENSE,
             {extra-artifacts}
           follow-symlinks: true
 

@@ -45,7 +45,7 @@
           done
     publishers:
       - archive:
-          artifacts: '**/target/**/gatling-git-extension.jar*'
+          artifacts: '**/target/**/gatling-git-extension.jar*,LICENSE'
           follow-symlinks: true
 
 - project:

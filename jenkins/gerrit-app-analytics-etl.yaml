@@ -43,7 +43,7 @@
       - shell: !include-raw: gerrit-sbt-build-app.sh
     publishers:
       - archive:
-          artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json'
+          artifacts: '**/target/**/*{name}*.jar*,**/target/**/*{name}*.json,LICENSE'
           follow-symlinks: true
 
 - project:
