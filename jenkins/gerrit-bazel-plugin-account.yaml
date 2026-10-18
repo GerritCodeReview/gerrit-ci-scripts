@@ -36,7 +36,8 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/account/account.jar*,bazel-bin/plugins/account/account.json
+            bazel-bin/plugins/account/account.jar*,bazel-bin/plugins/account/account.json,
+            LICENSE
           follow-symlinks: true
 
 - job-template:
@@ -72,6 +73,7 @@
             bazel-bin/plugins/{name}/{name}.jar,
             bazel-bin/plugins/{name}/{name}.jar-version,
             bazel-bin/plugins/{name}/{name}.json,
+            LICENSE,
             {extra-artifacts}
           follow-symlinks: true
 

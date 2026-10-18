@@ -24,7 +24,8 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/javamelody/javamelody.jar*,bazel-bin/plugins/javamelody/javamelody-deps_deploy.jar
+            bazel-bin/plugins/javamelody/javamelody.jar*,bazel-bin/plugins/javamelody/javamelody-deps_deploy.jar,
+            LICENSE
           follow-symlinks: true
 
 - project:

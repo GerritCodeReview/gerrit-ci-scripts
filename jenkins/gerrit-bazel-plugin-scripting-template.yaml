@@ -67,7 +67,8 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json,
+            LICENSE
           follow-symlinks: true
 
 - job-template:
@@ -94,7 +95,8 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json,
+            LICENSE
           follow-symlinks: true
 - job-template:
     name: 'plugin-scripting-{name}-gh-bazel-{branch}-{gerrit-branch}'
@@ -117,7 +119,8 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json,
+            LICENSE
           follow-symlinks: true
 - job-template:
     name: 'plugin-scripting-{name}-bazel-{branch}-{gerrit-branch}'
@@ -139,5 +142,6 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json
+            bazel-bin/plugins/{name}/{name}.jar*,bazel-bin/plugins/{name}/{name}.json,
+            LICENSE
           follow-symlinks: true
