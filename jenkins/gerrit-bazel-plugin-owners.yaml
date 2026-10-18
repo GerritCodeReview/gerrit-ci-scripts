@@ -26,7 +26,8 @@
     publishers:
       - archive:
           artifacts: >
-            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*,bazel-bin/plugins/owners/owners.json
+            bazel-bin/plugins/owners/owners.jar*,bazel-bin/plugins/owners/owners-a*.jar*,bazel-bin/plugins/owners/owners.json,
+            plugins/owners/LICENSE
           excludes: >
             **/*non_stamped*
           follow-symlinks: true

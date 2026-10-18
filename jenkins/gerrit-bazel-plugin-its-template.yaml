@@ -56,7 +56,8 @@
       - archive:
           artifacts: >
             bazel-bin/plugins/its-{name}/its-{name}.jar*,
-            bazel-bin/plugins/its-{name}/its-{name}.json
+            bazel-bin/plugins/its-{name}/its-{name}.json,
+            plugins/its-{name}/LICENSE
           follow-symlinks: true
 
 - job-template:
@@ -85,5 +86,6 @@
       - archive:
           artifacts: >
             bazel-bin/plugins/its-{name}/its-{name}.jar*,
-            bazel-bin/plugins/its-{name}/its-{name}.json
+            bazel-bin/plugins/its-{name}/its-{name}.json,
+            plugins/its-{name}/LICENSE
           follow-symlinks: true
