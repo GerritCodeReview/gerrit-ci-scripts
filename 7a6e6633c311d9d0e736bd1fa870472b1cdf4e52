@@ -33,6 +33,24 @@
       "message": "It\u0027s broken and discontinued since 10 years. Should we remove it?",
       "revId": "7a6e6633c311d9d0e736bd1fa870472b1cdf4e52",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec7c0afa_f6ac92ee",
+        "filename": "jenkins/gerrit-bazel-plugin-gitblit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-19T07:04:23Z",
+      "side": 1,
+      "message": "Sure, let me upload a follow-up change.",
+      "parentUuid": "37ad29e4_62272d46",
+      "revId": "7a6e6633c311d9d0e736bd1fa870472b1cdf4e52",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
