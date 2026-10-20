@@ -114,8 +114,14 @@ def call(Map parm = [:]) {
                         }
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
                         sh "if [ -f ../${pluginName}/external_package.json ]; then cd plugins && ln -sf ../../${pluginName}/external_package.json package.json; fi"
-                        sh "${bazeliskCmd} build ${bazeliskOptions} gerrit"
                         sh "${bashSetJavaCmd} && ./polygerrit-ui/app/api/publish.sh --pack"
+                        script {
+                            if (sh(returnStatus: true, script: "[ -f ../${pluginName}/external_package.json ] && [ -f plugins/pnpm-lock.yaml ]") == 0) {
+                                sh "${bazeliskCmd} run -- @pnpm//:pnpm --dir \$PWD/plugins import"
+                                env.ASPECT_RULES_JS_DISABLE_UPDATE_PNPM_LOCK = '1'
+                            }
+                        }
+                        sh "${bazeliskCmd} build ${bazeliskOptions} gerrit"
                         sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}/..."
                         sh "${bazeliskCmd} test ${bazeliskOptions} --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }

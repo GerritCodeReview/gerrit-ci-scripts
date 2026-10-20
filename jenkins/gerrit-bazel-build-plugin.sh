@@ -85,6 +85,11 @@ then
 fi
 
 ./polygerrit-ui/app/api/publish.sh --pack
+if [ -f plugins/{name}/external_package.json ] && [ -f plugins/pnpm-lock.yaml ]
+then
+  bazelisk run -- @pnpm//:pnpm --dir "$PWD/plugins" import
+  export ASPECT_RULES_JS_DISABLE_UPDATE_PNPM_LOCK=1
+fi
 bazelisk build $BAZEL_OPTS $TARGETS
 bazelisk test $BAZEL_OPTS --test_env DOCKER_HOST=$DOCKER_HOST //tools/bzl:always_pass_test plugins/{name}/...
 
