@@ -16,6 +16,24 @@
       "message": "Does this work for all releases? Or should it be conditioned on the version?",
       "revId": "d6af74732756af33c6f6a8c07c02e52713a707ac",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be14071d_39bb7668",
+        "filename": "jenkins-docker/agent-release/gerrit-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-21T13:43:55Z",
+      "side": 1,
+      "message": "Right. It works only for releases that were migrated to `bzlmod`, so no 3.12 and no 3.13. Done.",
+      "parentUuid": "054f2ac6_c3ae99af",
+      "revId": "d6af74732756af33c6f6a8c07c02e52713a707ac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
