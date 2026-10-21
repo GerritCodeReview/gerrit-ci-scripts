@@ -110,7 +110,16 @@ test $DRY_RUN = true || test $DRY_RUN = TRUE || git push origin HEAD:refs/for/"$
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
 
-bazelisk build $bazel_config release Documentation:searchfree
+# The SBOM target needs bzlmod and rules_jvm_external, available from 3.14
+# on. 3.12 and 3.13 still use WORKSPACE and do not have the target.
+major=$(echo "$version" | cut -d. -f1)
+minor=$(echo "$version" | cut -d. -f2)
+sbom_target=""
+if [ "$major" -gt 3 ] || { [ "$major" -eq 3 ] && [ "$minor" -ge 14 ]; }; then
+  sbom_target="Documentation:release_sbom"
+fi
+
+bazelisk build $bazel_config release Documentation:searchfree $sbom_target
 ./tools/maven/api.sh install $bazel_config
 
 echo -n "Checking Gerrit version ... "
@@ -189,6 +198,9 @@ popd
 
 cp -f gerrit/bazel-bin/Documentation/searchfree.zip .
 cp -f gerrit/bazel-bin/release.war gerrit-"$version".war
+if [ -n "$sbom_target" ]; then
+  cp -f gerrit/bazel-bin/Documentation/release_sbom.cyclonedx.json gerrit-"$version".cyclonedx.json
+fi
 
 echo "gerrit.war checksums"
 shasum gerrit-"$version".war
@@ -197,6 +209,11 @@ md5sum gerrit-"$version".war
 
 echo "Pushing gerrit.war to gerrit-releases ..."
 gcloud storage cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
+
+if [ -n "$sbom_target" ]; then
+  echo "Pushing SBOM to gerrit-releases ..."
+  gcloud storage cp gerrit-"$version".cyclonedx.json gs://gerrit-releases/gerrit-"$version".cyclonedx.json
+fi
 
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
