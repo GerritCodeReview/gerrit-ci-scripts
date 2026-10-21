@@ -1,9 +1,15 @@
 - project:
     name: saml
     jobs:
+      # master builds the saml_sbom target (the bazlets sbom rule is only
+      # pinned on master), so archive its CycloneDX SBOM next to saml.jar.
       - 'plugin-{name}-bazel-{branch}':
           branch:
             - master
+          targets: 'plugins/saml:saml plugins/saml:saml_sbom'
+          extra-artifacts: 'bazel-bin/plugins/saml/saml_sbom.cyclonedx.json'
+      - 'plugin-{name}-bazel-{branch}':
+          branch:
             - stable-3.13
             - stable-3.12
       - 'plugin-{name}-bazel-{branch}-{gerrit-branch}':
