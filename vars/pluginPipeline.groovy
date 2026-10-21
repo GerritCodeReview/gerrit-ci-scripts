@@ -115,7 +115,6 @@ def call(Map parm = [:]) {
                         sh "if [ -f ../${pluginName}/external_plugin_deps.bzl ]; then cd plugins && ln -sf ../../${pluginName}/external_plugin_deps.bzl .; fi"
                         sh "if [ -f ../${pluginName}/external_package.json ]; then cd plugins && ln -sf ../../${pluginName}/external_package.json package.json; fi"
                         sh "${bazeliskCmd} build ${bazeliskOptions} gerrit"
-                        sh "${bashSetJavaCmd} && ./polygerrit-ui/app/api/publish.sh --pack"
                         sh "${bazeliskCmd} build ${bazeliskOptions} plugins/${pluginName}/..."
                         sh "${bazeliskCmd} test ${bazeliskOptions} --test_env DOCKER_HOST=" + '$DOCKER_HOST' + " plugins/${pluginName}/..."
                     }
