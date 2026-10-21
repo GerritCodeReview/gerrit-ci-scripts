@@ -110,7 +110,7 @@ test $DRY_RUN = true || test $DRY_RUN = TRUE || git push origin HEAD:refs/for/"$
 git tag -f -s -m "v$version" "v$version"
 git submodule foreach 'if [ "$path" != "modules/jgit" ]; then git tag -f -s -m "v$version" "v$version"; fi'
 
-bazelisk build $bazel_config release Documentation:searchfree
+bazelisk build $bazel_config release Documentation:searchfree Documentation:release_sbom
 ./tools/maven/api.sh install $bazel_config
 
 echo -n "Checking Gerrit version ... "
@@ -189,6 +189,7 @@ popd
 
 cp -f gerrit/bazel-bin/Documentation/searchfree.zip .
 cp -f gerrit/bazel-bin/release.war gerrit-"$version".war
+cp -f gerrit/bazel-bin/Documentation/release_sbom.cyclonedx.json gerrit-"$version".cyclonedx.json
 
 echo "gerrit.war checksums"
 shasum gerrit-"$version".war
@@ -197,6 +198,9 @@ md5sum gerrit-"$version".war
 
 echo "Pushing gerrit.war to gerrit-releases ..."
 gcloud storage cp gerrit-"$version".war gs://gerrit-releases/gerrit-"$version".war
+
+echo "Pushing SBOM to gerrit-releases ..."
+gcloud storage cp gerrit-"$version".cyclonedx.json gs://gerrit-releases/gerrit-"$version".cyclonedx.json
 
 echo "Pushing gerrit documentation to gerrit-documentation ..."
 unzip searchfree.zip
