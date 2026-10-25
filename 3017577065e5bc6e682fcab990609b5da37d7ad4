@@ -22,6 +22,30 @@
       },
       "revId": "3017577065e5bc6e682fcab990609b5da37d7ad4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fc3c046_9ee2da0d",
+        "filename": "vars/pluginPipeline.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2026-10-25T04:36:15Z",
+      "side": 0,
+      "message": "I cherry-picked change 646943 to stable-3.15 branch, but we still need the manual publishing of Typescript API for older branches.",
+      "parentUuid": "513632c5_a9976a71",
+      "range": {
+        "startLine": 118,
+        "startChar": 24,
+        "endLine": 118,
+        "endChar": 91
+      },
+      "revId": "3017577065e5bc6e682fcab990609b5da37d7ad4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
