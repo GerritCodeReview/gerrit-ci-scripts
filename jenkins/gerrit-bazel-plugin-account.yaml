@@ -95,6 +95,4 @@
             - master
             - stable-3.15
             - stable-3.14
-      - 'plugin-account-gh-bazel-{branch}':
-          branch:
             - stable-3.13
