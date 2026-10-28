@@ -47,6 +47,20 @@ Images available are:
 
 * gerritforge/gerrit-ci-agent-mvn - Setups maven for plugins that use maven.
 
+## Homepage browser-test agent
+
+The `jekyll` image adds Node 22 and Chromium system packages to the existing
+Python/Java/Ruby agent. `PLAYWRIGHT_VERSION` in
+`jenkins-docker/agent-jekyll/Dockerfile` must match the Playwright version in
+the homepage lockfile when updating dependencies. The image installs system
+packages only; homepage jobs run `npm ci` and download the matching Chromium
+build as `jenkins`, using its writable home cache.
+
+From the repository root, build with
+`make -C jenkins-docker/agent-jekyll build`. The
+`browser-dependencies` Docker target can be built separately to validate the
+Node/system-package layer without the existing Ruby/gem prewarming steps.
+
 ## Running the container
 
 * docker run --privileged -it <image_name> bash
