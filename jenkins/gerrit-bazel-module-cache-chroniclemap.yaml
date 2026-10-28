@@ -7,13 +7,11 @@
           branch:
             - stable-3.12
       - 'module-{name}-gh-bazel-{branch}':
-          branch:
-            - stable-3.13
-      - 'module-{name}-gh-bazel-{branch}':
           extra-gh-repos: 'gerrit-bsl-license'
           branch:
             - master
             - stable-3.15
             - stable-3.14
+            - stable-3.13
       - 'module-{name}-verifier'
       - 'module-{name}-verifier-gh'
