@@ -41,7 +41,7 @@ Content-Type: text/html
         <div class="login-container">
             <p>You can  browse the list of Gerrit plugins artifacts published by Gerrit-CI
                by using the<br><a href="/plugin-manager/">Plugin-Manager page</a></p>
-            <p>In order to browse Gerrit-CI, you need to login as a gerrit maintainer</p>
+            <p>In order to browse Gerrit-CI, you need to login with a GitHub account registered as a Gerrit-CI maintainer</p>
             <form id="loginForm" action="/securityRealm/commenceLogin" method="get">
                 <input type="hidden" name="from" value="/">
                 <button type="submit" class="btn btn-primary">Login as Gerrit Maintainer</button>
