@@ -22,6 +22,30 @@
       },
       "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93b73345_be3178a2",
+        "filename": "jenkins/gerrit-bazel-plugin-supermanifest.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4395292
+      },
+      "writtenOn": "2026-10-31T11:45:10Z",
+      "side": 1,
+      "message": "Actually, I want branches from the current master and the CI config. Once I have that I will submit Bazel fixes to get master CI working again. And from that fix we can start stable-3.14 and stable-3.15 branches. Do you have the powers to create branches or know who to ask?",
+      "parentUuid": "621ec1a3_2255dd72",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
