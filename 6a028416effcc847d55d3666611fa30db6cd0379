@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "621ec1a3_2255dd72",
+        "filename": "jenkins/gerrit-bazel-plugin-supermanifest.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-10-31T10:48:05Z",
+      "side": 1,
+      "message": "These branches do not exist. Are you willing to just merge the master branch of the plugin into Gerrit stable-3.12 and stable-3.13? Why not stable-3.14 and stable-3.15 as well?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
