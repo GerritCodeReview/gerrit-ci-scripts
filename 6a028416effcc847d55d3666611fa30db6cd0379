@@ -70,6 +70,30 @@
       },
       "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cb8f1ff_ce373fcf",
+        "filename": "jenkins/gerrit-bazel-plugin-supermanifest.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4395292
+      },
+      "writtenOn": "2026-10-31T16:12:51Z",
+      "side": 1,
+      "message": "I am still on 3.12, so I need that first. And it’s easier to ask for a branch from current master than a specific commit. But if you’d rather create all the branches in one go I can do that too.",
+      "parentUuid": "01f66cf5_dda8387a",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
