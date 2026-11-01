@@ -94,6 +94,30 @@
       },
       "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f8e8f45_3fbfdcac",
+        "filename": "jenkins/gerrit-bazel-plugin-supermanifest.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-11-01T10:13:57Z",
+      "side": 1,
+      "message": "\u003e And it’s easier to ask for a branch from the current master than a specific commit.\n\nThere is really no difference.",
+      "parentUuid": "5cb8f1ff_ce373fcf",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
