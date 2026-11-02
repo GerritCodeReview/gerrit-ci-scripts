@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c65fcfd2_93353add",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4395292
+      },
+      "writtenOn": "2026-11-02T11:09:17Z",
+      "side": 1,
+      "message": "Is there a process of asking a maintainer for a branch to be created that I can follow?",
+      "parentUuid": "bf6c4337_ed5eb739",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 54
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "621ec1a3_2255dd72",
         "filename": "jenkins/gerrit-bazel-plugin-supermanifest.yaml",
         "patchSetId": 1
