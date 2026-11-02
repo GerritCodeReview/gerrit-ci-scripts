@@ -37,7 +37,7 @@ start: build create_env ${GERRIT_CI_PEM}
 	docker compose -f docker-compose.yaml up -d
 
 log: create_env
-	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} PLUGIN_MANAGER_PATH=${PLUGIN_MANAGER_PATH} \
 	docker compose -f docker-compose.yaml logs --follow
 
 start_osx: create_env ${GERRIT_CI_PEM}
@@ -51,7 +51,7 @@ start_osx: create_env ${GERRIT_CI_PEM}
           docker compose -f docker-compose.osx.yaml up -d
 
 log_osx: create_env
-	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} \
+	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} PLUGIN_MANAGER_PATH=${PLUGIN_MANAGER_PATH} \
 	docker compose -f docker-compose.osx.yaml logs --follow
 
 create_env:
