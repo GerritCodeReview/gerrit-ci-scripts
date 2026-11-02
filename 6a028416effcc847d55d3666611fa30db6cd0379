@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bf6c4337_ed5eb739",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-11-02T10:47:04Z",
+      "side": 1,
+      "message": "It\u0027ll need to be a Gerrit maintainer.\n\nThis will need to be removed from the commit message before this is merged. (Assuming Luca is happy to go ahead with it).",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 54
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "621ec1a3_2255dd72",
         "filename": "jenkins/gerrit-bazel-plugin-supermanifest.yaml",
         "patchSetId": 1
