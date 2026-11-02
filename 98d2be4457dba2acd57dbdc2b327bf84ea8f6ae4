@@ -22,6 +22,30 @@
       },
       "revId": "98d2be4457dba2acd57dbdc2b327bf84ea8f6ae4",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3adff699_71bae7bf",
+        "filename": "jenkins-docker/server/haproxy/haproxy.cfg",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-11-02T13:42:13Z",
+      "side": 1,
+      "message": "Those permissions are granted to members of the `Administer` group, as specified in `config-external.zml`.\n\nI\u0027ve updated commit message and comment to specify this.\n\nAnd yes, I managed to test that anonymous users can\u0027t run POST requests locally.",
+      "parentUuid": "1d74fc91_a5258bd7",
+      "range": {
+        "startLine": 51,
+        "startChar": 46,
+        "endLine": 51,
+        "endChar": 55
+      },
+      "revId": "98d2be4457dba2acd57dbdc2b327bf84ea8f6ae4",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
