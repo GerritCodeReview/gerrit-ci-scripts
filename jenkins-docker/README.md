@@ -53,3 +53,67 @@ Images available are:
 
 If your not familar with docker please follow https://docs.docker.com/get-started/
 
+## Running Gerrit-CI locally
+
+The Gerrit-CI server runs as a Docker Compose stack: Jenkins, haproxy in front
+of it, and nginx serving the theme and the plugin manager. All commands below
+are run from the `server` directory.
+
+On Linux, `make start` builds the image and starts the stack:
+
+    make start
+
+On macOS, use `make start_osx` instead. It does not build the image, so build
+it first:
+
+    make build
+    make start_osx
+
+`start_osx` also starts a `gerrit-ci-socat` container that exposes the host
+Docker socket on `127.0.0.1:1234`.
+
+### arm64 hosts (Apple Silicon)
+
+`requirements.txt` pins the hashes of the x86_64 Python wheels only, so a
+native arm64 build fails at the `pip install` step. Build the image for
+linux/amd64 instead; Docker Desktop provides the emulation this needs:
+
+    DOCKER_DEFAULT_PLATFORM=linux/amd64 make build
+    make start_osx
+
+Set `DOCKER_DEFAULT_PLATFORM` for the build only, so that haproxy and nginx
+keep running natively.
+
+### Accessing Jenkins
+
+Jenkins is served by haproxy at https://localhost/; plain HTTP on port 80
+redirects to HTTPS. On the first start a self-signed certificate is generated
+in `server/tls/gerrit-ci.pem`, so expect a browser warning.
+
+The Jenkins URL is set to https://gerrit-ci.gerritforge.com/ in
+`jenkins.model.JenkinsLocationConfiguration.xml`, so absolute links generated
+by Jenkins point to production.
+
+Follow the logs with `make log` (`make log_osx` on macOS) and stop the stack
+with `make stop`. `make clean` removes the image and `JENKINS_HOME`.
+
+### Configuration
+
+The `Makefile` variables can be overridden on the command line, for example
+`make start_osx JENKINS_HOME=/tmp/gerrit-ci`:
+
+| Variable | Default | Purpose |
+|----------|---------|---------|
+| `JENKINS_HOME` | `~/jenkins_home` | Host directory holding `jobs`, `.netrc` and `.secrets`, mounted into Jenkins. The rest of the Jenkins configuration lives in the container. |
+| `USE_SECURITY` | `false` | With `false`, Jenkins security is disabled and haproxy lets every request through. |
+| `OAUTH_ID`, `OAUTH_SECRET` | `clientid`, `secret` | GitHub OAuth app used to log in when `USE_SECURITY=true`. |
+
+To log in with GitHub, create a GitHub OAuth app with the callback URL
+`https://localhost/securityRealm/finishLogin` and start the stack with:
+
+    make start_osx USE_SECURITY=true OAUTH_ID=<client-id> OAUTH_SECRET=<client-secret>
+
+At startup Jenkins loads its credentials from `$JENKINS_HOME/.netrc` and
+`$JENKINS_HOME/.secrets` (JSON, format described in `setCredentials.groovy`).
+If they don't exist, Docker creates them as empty directories and Jenkins
+starts without any credentials.
