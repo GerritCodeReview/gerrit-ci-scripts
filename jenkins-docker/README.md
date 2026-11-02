@@ -17,18 +17,6 @@ legacy Change ID number and a particular revision to build: Jenkins will fetch
 this particular change and load any job configurations changed in this revision.
 Note that it will not inhibit the main gerrit-ci-scripts trigger from polling.
 
-## Notes for users of boot2docker
-
-If you're using boot2docker, the stock drive image and memory will not be enough.
-I would recommend growing your boot2docker volume to at least 40GB, and perhaps
-adding an extra 2-4GB swap space at the end of the volume.  Additionally, you
-may wish to increase the amount of memory allocated to your boot2docker VM to
-at least 3GB (4GB+ preferred).  Failing to do this may result in unusual
-failures of the VM or build errors.
-
-For more information on enlarging the boot2docker volume, please see:
-https://docs.docker.com/articles/b2d_volume_resize/
-
 ## Building all the images with one command
 
 make build
