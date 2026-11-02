@@ -78,7 +78,7 @@ ${GERRIT_CI_PEM}:
 	rm -f key.pem cert.pem
 
 build:
-	docker build --no-cache=$(NO_CACHE) \
+	docker build --no-cache=$(NO_CACHE) --platform linux/amd64 \
           --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
           --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
           --build-arg PLUGIN_FILE=$(PLUGIN_FILE) \
@@ -86,7 +86,7 @@ build:
           -t ${IMAGE} .
 
 build_internal:
-	docker build --no-cache=$(NO_CACHE) \
+	docker build --no-cache=$(NO_CACHE) --platform linux/amd64 \
           --build-arg JENKINS_WAR_VER=${JENKINS_WAR_VER} \
           --build-arg JENKINS_WAR_SHA=${JENKINS_WAR_SHA} \
           --build-arg PLUGIN_FILE=$(PLUGIN_FILE) \
