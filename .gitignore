@@ -5,3 +5,4 @@ chrome-vers.mk
 .vscode/
 *.iml
 **/jenkins-container.env
+jenkins/docker/server/tls/*
