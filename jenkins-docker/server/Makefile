@@ -46,7 +46,7 @@ start_osx: create_env ${GERRIT_CI_PEM}
 	docker run -d --name ${NAME}-socat \
           -v /var/run/docker.sock:/var/run/docker.sock \
           -p 127.0.0.1:1234:1234 \
-          bobrik/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
+          alpine/socat TCP-LISTEN:1234,fork UNIX-CONNECT:/var/run/docker.sock
 	JENKINS_HOME=${JENKINS_HOME} IMAGE=${IMAGE} NAME=${NAME} GERRIT_CI_PEM=${GERRIT_CI_PEM} JENKINS_CSS_PATH=${JENKINS_CSS_PATH} PLUGIN_MANAGER_PATH=${PLUGIN_MANAGER_PATH} \
           docker compose -f docker-compose.osx.yaml up -d
 
