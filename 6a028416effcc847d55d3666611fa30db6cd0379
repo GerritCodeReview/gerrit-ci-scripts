@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d95d07db_34ffa95a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1155599
+      },
+      "writtenOn": "2026-11-02T11:15:02Z",
+      "side": 1,
+      "message": "Not really, I would either message in the discord server[1] or email the mailing list[2]. You can find more details of the various community channels at [3].\n\n[1] https://discord.gg/eEZQrtzAwV\n[2] https://groups.google.com/g/repo-discuss\n[3] https://www.gerritcodereview.com/contact.html",
+      "parentUuid": "c65fcfd2_93353add",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 54
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "621ec1a3_2255dd72",
         "filename": "jenkins/gerrit-bazel-plugin-supermanifest.yaml",
         "patchSetId": 1
