@@ -17,7 +17,6 @@
     <permission>hudson.model.Hudson.Administer:sselberg</permission>
     <permission>hudson.model.Hudson.Administer:zivkov</permission>
     <permission>hudson.model.Hudson.Administer:syntonyze</permission>
-    <permission>hudson.model.Hudson.Administer:maczech</permission>
     <permission>hudson.model.Hudson.Administer:geminicaprograms</permission>
     <permission>hudson.model.Hudson.Administer:paladox</permission>
     <permission>hudson.model.Hudson.Administer:danielesassoli</permission>
