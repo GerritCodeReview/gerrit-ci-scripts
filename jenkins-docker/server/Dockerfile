@@ -33,15 +33,15 @@ RUN pip install --break-system-packages --require-hashes -r /tmp/requirements.tx
 
 COPY jenkins_jobs.ini /etc/jenkins_jobs/jenkins_jobs.ini
 
-ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.ParametersAction.keepUndefinedParameters=true
-ENV JENKINS_REF /usr/share/jenkins/ref
-ENV USE_SECURITY false
-ENV OAUTH_ID clientid
-ENV OAUTH_SECRET secret
-ENV JENKINS_API_USER user
-ENV JENKINS_API_PASSWORD pass
-ENV REMOTE_DOCKER_HOST unix:///var/run/docker.sock
-ENV BINTRAY_URL https://dl.bintray.com/lucamilanesio
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false -Dhudson.model.ParametersAction.keepUndefinedParameters=true"
+ENV JENKINS_REF=/usr/share/jenkins/ref
+ENV USE_SECURITY=false
+ENV OAUTH_ID=clientid
+ENV OAUTH_SECRET=secret
+ENV JENKINS_API_USER=user
+ENV JENKINS_API_PASSWORD=pass
+ENV REMOTE_DOCKER_HOST=unix:///var/run/docker.sock
+ENV BINTRAY_URL=https://dl.bintray.com/lucamilanesio
 
 
 ARG SERVER_TYPE
@@ -87,7 +87,7 @@ RUN apt-get update && apt-get install -y \
 COPY config.sh /usr/local/bin/
 
 # Install gosu
-ENV GOSU_VERSION 1.14
+ENV GOSU_VERSION=1.14
 RUN set -x \
     && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
     && wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch" \
