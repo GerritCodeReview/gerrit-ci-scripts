@@ -72,6 +72,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "105e2c7a_be9eca97",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-11-03T21:39:23Z",
+      "side": 1,
+      "message": "All the stable branches have been created.",
+      "parentUuid": "d95d07db_34ffa95a",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 54
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "621ec1a3_2255dd72",
@@ -205,6 +229,30 @@
       "side": 1,
       "message": "Should we go ahead with the change then?",
       "parentUuid": "1f8e8f45_3fbfdcac",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "6a028416effcc847d55d3666611fa30db6cd0379",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b69fb4a6_def3d52b",
+        "filename": "jenkins/gerrit-bazel-plugin-supermanifest.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-11-03T21:39:23Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "7e2c71ea_74177538",
       "range": {
         "startLine": 7,
         "startChar": 0,
