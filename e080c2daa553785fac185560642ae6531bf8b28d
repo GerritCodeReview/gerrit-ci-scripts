@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ce57e50_9675a5ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-11-05T06:01:10Z",
+      "side": 1,
+      "message": "This won\u0027t work: the `stable-3.11` branch is automatically redirected to https://archive-ci.gerritforge.com",
+      "revId": "e080c2daa553785fac185560642ae6531bf8b28d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
