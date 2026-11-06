@@ -16,6 +16,24 @@
       "message": "This won\u0027t work: the `stable-3.11` branch is automatically redirected to https://archive-ci.gerritforge.com",
       "revId": "e080c2daa553785fac185560642ae6531bf8b28d",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "025d2e4d_72ab9f3b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2026-11-06T21:55:03Z",
+      "side": 1,
+      "message": "Oh right, sorry, I remember that now from https://gerrit-review.googlesource.com/c/gerrit-ci-scripts/+/621682/comment/bc6ed29c_480c6f6e/\n\nIt doesn\u0027t seem like the verifier jobs have support for `{branch}` and `{gerrit-branch}` so I guess I\u0027ll just wait on this until master works with a non-EOL branch.",
+      "parentUuid": "0ce57e50_9675a5ff",
+      "revId": "e080c2daa553785fac185560642ae6531bf8b28d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
