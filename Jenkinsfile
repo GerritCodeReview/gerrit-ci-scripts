@@ -20,6 +20,8 @@ node ('python3') {
   gerritReview labels: ['Code-Style': 0]
 
   stage('YAML lint') {
+    echo "setup-2296 " + env.NODE_NAME + sh(script: 'id; hostname', returnStdout: true)
+
     checkout scm
     def lintOut = sh(script: 'yamllint -c yamllint-config.yaml jenkins/*.yaml || true', returnStdout: true)
     lintOutTrimmed = lintOut.trim()
