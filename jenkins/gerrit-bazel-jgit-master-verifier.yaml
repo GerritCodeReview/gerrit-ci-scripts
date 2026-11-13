@@ -16,4 +16,4 @@
           url: "https://eclipse.gerrithub.io/a/eclipse-jgit/jgit"
           credentials-id: eclipse.gerrithub.io
           change-discovery:
-            query-string: "branch:master AND -path:Jenkinsfile"
+            query-string: "branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR ownerin:gerrit-trusted-contributors OR ownerin:google/gerritcodereview-maintainers@googlegroups.com)"
