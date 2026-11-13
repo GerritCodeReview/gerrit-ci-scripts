@@ -43,7 +43,10 @@
           url: https://gerrit-review.googlesource.com/a/plugins/{name}
           credentials-id: gerrit.googlesource.com
           change-discovery:
-            query-string: '-path:Jenkinsfile'
+            query-string: >-
+              branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
+              ownerin:gerrit-trusted-contributors OR
+              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
           refspecs:
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
@@ -64,7 +67,10 @@
           url: https://review.gerrithub.io/a/{organization}/{name}
           credentials-id: eclipse.gerrithub.io
           change-discovery:
-            query-string: '-path:Jenkinsfile'
+            query-string: >-
+              branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
+              ownerin:gerrit-trusted-contributors OR
+              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false
@@ -80,7 +86,10 @@
           url: https://gerrit-review.googlesource.com/a/modules/{name}
           credentials-id: gerrit.googlesource.com
           change-discovery:
-            query-string: '-path:Jenkinsfile'
+            query-string: >-
+              branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
+              ownerin:gerrit-trusted-contributors OR
+              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
           refspecs:
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
@@ -101,7 +110,10 @@
           url: https://review.gerrithub.io/a/{organization}/{name}
           credentials-id: eclipse.gerrithub.io
           change-discovery:
-            query-string: '-path:Jenkinsfile'
+            query-string: >-
+              branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
+              ownerin:gerrit-trusted-contributors OR
+              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false
