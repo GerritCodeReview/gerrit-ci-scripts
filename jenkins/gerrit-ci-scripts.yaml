@@ -86,7 +86,7 @@
           url: https://gerrit-review.googlesource.com/a/gerrit-ci-scripts
           credentials-id: gerrit.googlesource.com
           change-discovery:
-            query-string: '-path:Jenkinsfile'
+            query-string: '-path:Jenkinsfile AND (label:Ready-For-CI+1 OR ownerin:gerrit-trusted-contributors OR ownerin:google/gerritcodereview-maintainers@googlegroups.com)'
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
             - '+refs/changes/*:refs/remotes/@{remote}/*'
