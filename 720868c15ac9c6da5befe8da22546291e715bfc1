@@ -1,5 +1,144 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96d3ead4_e984e8d0",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-11-14T01:01:49Z",
+      "side": 1,
+      "message": "Same here, we should not filter master branch only.",
+      "range": {
+        "startLine": 47,
+        "startChar": 14,
+        "endLine": 47,
+        "endChar": 32
+      },
+      "revId": "720868c15ac9c6da5befe8da22546291e715bfc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9775218c_3f47f1b8",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-11-14T01:01:49Z",
+      "side": 1,
+      "message": "Same here, we should not filter master branch only.",
+      "range": {
+        "startLine": 71,
+        "startChar": 14,
+        "endLine": 71,
+        "endChar": 32
+      },
+      "revId": "720868c15ac9c6da5befe8da22546291e715bfc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d617261e_a2acac86",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-11-14T01:01:49Z",
+      "side": 1,
+      "message": "Same here, we should not filter master branch only.",
+      "range": {
+        "startLine": 90,
+        "startChar": 14,
+        "endLine": 90,
+        "endChar": 31
+      },
+      "revId": "720868c15ac9c6da5befe8da22546291e715bfc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05f1006f_f5391541",
+        "filename": "jenkins/gerrit-bazel-plugin-template.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-11-14T01:01:49Z",
+      "side": 1,
+      "message": "Same here, we should not filter master branch only.",
+      "range": {
+        "startLine": 114,
+        "startChar": 15,
+        "endLine": 114,
+        "endChar": 32
+      },
+      "revId": "720868c15ac9c6da5befe8da22546291e715bfc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f848793c_a537de02",
+        "filename": "jenkins/gerrit-ci-scripts.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-11-14T01:01:49Z",
+      "side": 1,
+      "message": "We should not filter by the master branch here; otherwise, nothing on the stable branch will be discovered.\nThis is getting in the way of running 3.15, for example.",
+      "range": {
+        "startLine": 90,
+        "startChar": 14,
+        "endLine": 90,
+        "endChar": 32
+      },
+      "revId": "720868c15ac9c6da5befe8da22546291e715bfc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f869220_d2e14d55",
+        "filename": "jenkins/gerrit-verifier.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2026-11-14T01:01:49Z",
+      "side": 1,
+      "message": "Same here, we should not filter master branch only.",
+      "range": {
+        "startLine": 175,
+        "startChar": 14,
+        "endLine": 175,
+        "endChar": 32
+      },
+      "revId": "720868c15ac9c6da5befe8da22546291e715bfc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
