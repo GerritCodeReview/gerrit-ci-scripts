@@ -44,7 +44,7 @@
           credentials-id: gerrit.googlesource.com
           change-discovery:
             query-string: >-
-              branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
+              -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
               ownerin:gerrit-trusted-contributors OR
               ownerin:google/gerritcodereview-maintainers@googlegroups.com)
           refspecs:
@@ -68,7 +68,7 @@
           credentials-id: eclipse.gerrithub.io
           change-discovery:
             query-string: >-
-              branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
+              -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
               ownerin:gerrit-trusted-contributors OR
               ownerin:google/gerritcodereview-maintainers@googlegroups.com)
           property-strategies:
@@ -87,7 +87,7 @@
           credentials-id: gerrit.googlesource.com
           change-discovery:
             query-string: >-
-              branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
+              -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
               ownerin:gerrit-trusted-contributors OR
               ownerin:google/gerritcodereview-maintainers@googlegroups.com)
           refspecs:
@@ -111,7 +111,7 @@
           credentials-id: eclipse.gerrithub.io
           change-discovery:
             query-string: >-
-              branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
+              -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
               ownerin:gerrit-trusted-contributors OR
               ownerin:google/gerritcodereview-maintainers@googlegroups.com)
           property-strategies:
