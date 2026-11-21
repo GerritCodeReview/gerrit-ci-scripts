@@ -18,5 +18,4 @@
           change-discovery:
             query-string: >-
               branch:master AND -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
-              ownerin:gerrit-trusted-contributors OR
-              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
+              ownerin:gerrit-trusted-contributors)
