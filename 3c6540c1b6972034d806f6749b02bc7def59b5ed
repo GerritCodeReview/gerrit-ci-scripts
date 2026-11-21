@@ -16,6 +16,24 @@
       "message": "I wonder if we should bring back installing nodejs from deb.nodesource.com again?\nWould not be tied it to a os version needing to be upgraded.",
       "revId": "3c6540c1b6972034d806f6749b02bc7def59b5ed",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "137239e9_6b1672de",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-11-21T10:37:42Z",
+      "side": 1,
+      "message": "That\u0027s a good point, actually, so we have control over it.\nLet me experiment and see how easy or complex it would be.",
+      "parentUuid": "2be9547f_dae964b6",
+      "revId": "3c6540c1b6972034d806f6749b02bc7def59b5ed",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
