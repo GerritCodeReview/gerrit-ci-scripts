@@ -173,8 +173,7 @@
           change-discovery:
             query-string: >-
               -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
-              ownerin:gerrit-trusted-contributors OR
-              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
+              ownerin:gerrit-trusted-contributors)
           refspecs:
             - '+refs/heads/*:refs/remotes/@{remote}/*'
           filter-checks:

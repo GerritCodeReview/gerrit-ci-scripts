@@ -45,8 +45,7 @@
           change-discovery:
             query-string: >-
               -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
-              ownerin:gerrit-trusted-contributors OR
-              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
+              ownerin:gerrit-trusted-contributors)
           refspecs:
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
@@ -69,8 +68,7 @@
           change-discovery:
             query-string: >-
               -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
-              ownerin:gerrit-trusted-contributors OR
-              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
+              ownerin:gerrit-trusted-contributors)
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false
@@ -88,8 +86,7 @@
           change-discovery:
             query-string: >-
               -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
-              ownerin:gerrit-trusted-contributors OR
-              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
+              ownerin:gerrit-trusted-contributors)
           refspecs:
             - '+refs/heads/*:refs/remotes/origin/*'
           filter-checks:
@@ -112,8 +109,7 @@
           change-discovery:
             query-string: >-
               -path:Jenkinsfile AND (label:Ready-For-CI+1 OR
-              ownerin:gerrit-trusted-contributors OR
-              ownerin:google/gerritcodereview-maintainers@googlegroups.com)
+              ownerin:gerrit-trusted-contributors)
           property-strategies:
             all-branches:
               - suppress-scm-triggering: false
