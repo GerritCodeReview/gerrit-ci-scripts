@@ -5,9 +5,6 @@
     extra-plugins: 'healthcheck'
     extra-modules: 'events-broker'
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - stable-3.12
       - 'plugin-{name}-gh-bazel-{branch}':
           extra-gh-repos: 'gerrit-bsl-license'
           branch:

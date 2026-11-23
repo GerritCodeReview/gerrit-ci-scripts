@@ -77,13 +77,6 @@
           follow-symlinks: true
 
 - project:
-    name: account
-    jobs:
-      - 'plugin-account-bazel-{branch}':
-          branch:
-            - stable-3.12
-
-- project:
     name: account-gh
     repo: account
     organization: GerritForge

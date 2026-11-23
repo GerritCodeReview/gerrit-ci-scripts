@@ -11,5 +11,4 @@
             - master
             - stable-3.14
             - stable-3.13
-            - stable-3.12
       - 'plugin-{name}-verifier'

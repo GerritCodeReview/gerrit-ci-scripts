@@ -4,10 +4,6 @@
     organization: GerritForge
     extra-modules: 'events-broker global-refdb'
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          extra-plugins: 'pull-replication healthcheck'
-          branch:
-            - stable-3.12
       - 'plugin-{name}-gh-bazel-{branch}':
           extra-gh-repos: 'pull-replication'
           extra-plugins: 'healthcheck'

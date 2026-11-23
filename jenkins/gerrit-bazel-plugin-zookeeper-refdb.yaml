@@ -5,9 +5,6 @@
     extra-modules: 'global-refdb'
     targets: "plugins/{name}:{name}"
     jobs:
-      - 'plugin-{name}-bazel-{branch}':
-          branch:
-            - stable-3.12
       - 'plugin-{name}-gh-bazel-{branch}':
           extra-gh-repos: 'gerrit-bsl-license'
           branch:

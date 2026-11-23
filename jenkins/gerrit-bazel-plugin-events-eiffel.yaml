@@ -1,11 +1,8 @@
 - project:
     name: events-eiffel
     jobs:
-      - "plugin-{name}-bazel-{branch}-{gerrit-branch}":
+      - "plugin-{name}-bazel-{branch}":
           extra-modules: 'events-broker'
           branch:
             - master
-          gerrit-branch:
-            - master
-            - stable-3.12
       - 'plugin-{name}-verifier'

@@ -4,9 +4,6 @@
     organization: GerritForge
     jobs:
       - 'plugin-{name}-gh-bazel-{branch}':
-          branch:
-            - stable-3.12
-      - 'plugin-{name}-gh-bazel-{branch}':
           extra-gh-repos: 'gerrit-bsl-license'
           branch:
             - master
